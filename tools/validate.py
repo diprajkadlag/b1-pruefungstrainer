@@ -229,6 +229,14 @@ def lemma_variants(entry: dict[str, Any]) -> list[str]:
         perfekt = forms.get("perfekt", "")
         if " " in perfekt:
             out.add(perfekt.split(" ", 1)[1])
+        # The stem, for the person forms nobody lists in stammformen. A
+        # glossary gives "bestreiten" with its 3rd-person and past forms, but
+        # the paper may well say "bestreite ich nicht". Five characters is the
+        # floor: shorter stems like "geh" would match "gehört" and let a bogus
+        # entry through.
+        if len(bare) > 6 and bare.endswith(("en", "ln", "rn")):
+            out.add(bare[:-2])
+
         if entry.get("trennbar"):
             # A separable verb keeps its prefix in a subordinate clause
             # ("...dass die Firma ankündigte") but loses it in a main clause

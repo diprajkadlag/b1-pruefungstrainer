@@ -159,9 +159,13 @@ DEFAULT_NARRATOR = "de_DE-thorsten-high"
 
 # Character voices, tried in order. The narrator's voice is skipped for
 # characters wherever an alternative is still free.
+# mls-medium sits late deliberately. It reads far slower than the others and
+# needs a length_scale near the floor to reach examination pace, so any part it
+# appears in drifts slow. It stays available — it is the only way to cast a
+# third male character — but it is chosen last.
 POOL: dict[str, list[str]] = {
-    "m": ["de_DE-karlsson-low", "de_DE-mls-medium", "de_DE-thorsten_emotional-medium",
-          "de_DE-thorsten-high"],
+    "m": ["de_DE-karlsson-low", "de_DE-thorsten_emotional-medium",
+          "de_DE-mls-medium", "de_DE-thorsten-high"],
     "f": ["de_DE-kerstin-low", "de_DE-ramona-low", "de_DE-eva_k-x_low"],
 }
 
