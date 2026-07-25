@@ -9,13 +9,11 @@ every voice sound comical).
 
 from __future__ import annotations
 
+import audio_dsp as dsp
 import numpy as np
 import pytest
-
-import audio_dsp as dsp
 from build_pdf import folientext, tex, texpar, zeilen
 from validate import lemma_variants, normalise
-
 
 # --------------------------------------------------------------------------
 # Glossary matching
@@ -90,13 +88,21 @@ class TestLemmaVariants:
 
 class TestNormalise:
     def test_collapses_whitespace_and_case(self):
-        assert normalise("  Der   GARTEN\nist groß ") == "der garten ist groß"
+        assert normalise("  Der   GARTEN\nist gut ") == "der garten ist gut"
 
     def test_unifies_the_dashes_and_quotes_editors_produce(self):
         assert normalise("„Test“ – ok") == normalise('"Test" - ok')
 
     def test_keeps_umlauts_because_they_change_meaning(self):
         assert normalise("schön") != normalise("schon")
+
+    def test_folds_eszett_to_ss(self):
+        # str.casefold() maps ß to ss. That is fine and in fact useful here:
+        # both the glossary lemma and the paper's prose go through the same
+        # function, so they still match, and the Swiss spelling "Strasse"
+        # matches "Straße" too.
+        assert normalise("Straße") == "strasse"
+        assert normalise("Straße") == normalise("Strasse")
 
 
 # --------------------------------------------------------------------------
@@ -186,7 +192,7 @@ class TestResample:
         assert dsp.resample(np.zeros(0, dtype=np.float32), 16000, 22050).size == 0
 
 
-class TestNormalise:
+class TestPegelNormalisierung:
     def test_hits_the_target_level(self):
         loud = dsp.normalise(ton() * 10)
         ziel = 10 ** (dsp.TARGET_RMS_DBFS / 20)

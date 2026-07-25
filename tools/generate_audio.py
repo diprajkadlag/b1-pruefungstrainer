@@ -67,11 +67,37 @@ ZIELDAUER_MIN, ZIELDAUER_MAX = 27.0, 36.0
 # closer to 200 wpm, which would make every paper unrealistically hard, so each
 # voice is calibrated against this target instead of nudged relative to itself.
 ZIEL_WPM = 135.0
-KALIBRIER_SATZ = (
+
+# Duration is modelled per *character*, not per word.
+#
+# Words are not a stable unit of speech time in German: a narrated sentence
+# ("Veranstaltung", "Obergeschoss") carries far more syllables per word than a
+# line of dialogue ("Und das machst du allein?"). Calibrating on words made the
+# conversation part run 25 % fast while the monologue was on target. Measured
+# over the same utterances, characters per second stayed within a few per cent
+# where words per minute ranged from 129 to 187.
+#
+# Words per minute remains the human-facing target because it is what exam
+# guidance is written in; this constant converts it, and is the mean word
+# length over the papers in content/exams including the following space.
+ZEICHEN_PRO_WORT = 6.4
+
+# Acceptable deviation from the target pace, per part.
+PACE_TOLERANZ = 0.15
+
+# Two calibration texts of very different lengths, measured at two speeds each.
+# One text cannot separate the fixed padding around an utterance from the part
+# that actually scales with length, and getting that split wrong makes either
+# the short dialogue turns or the long narrated texts land at the wrong pace.
+KALIBRIER_KURZ = "Und wo schläfst du?"
+KALIBRIER_LANG = (
     "Sehr geehrte Damen und Herren, wir begrüßen Sie herzlich zu dieser "
-    "Veranstaltung und wünschen Ihnen einen angenehmen Aufenthalt in unserem Haus."
+    "Veranstaltung und wünschen Ihnen einen angenehmen Aufenthalt in unserem Haus. "
+    "Bitte beachten Sie, dass der Vortrag im großen Saal im ersten Obergeschoss "
+    "stattfindet und pünktlich um neunzehn Uhr dreißig beginnt."
 )
-KALIBRIER_WOERTER = len(KALIBRIER_SATZ.split())
+KALIBRIER_WOERTER = len(KALIBRIER_LANG.split())
+KALIBRIER_ZEICHEN = len(KALIBRIER_LANG)
 
 
 # ---------------------------------------------------------------------------
@@ -166,7 +192,7 @@ class PiperProvider:
         self.voice_dir.mkdir(parents=True, exist_ok=True)
         self._loaded: dict[str, Any] = {}
         self._warned: set[tuple[str, frozenset[str]]] = set()
-        self._calibration: dict[str, float] = {}
+        self._calibration: dict[str, tuple[float, float]] = {}
 
     def _voice(self, model_name: str):
         if model_name in self._loaded:
@@ -200,18 +226,26 @@ class PiperProvider:
         """
         return list(unicodedata.normalize("NFC", "".join(phonemes)))
 
-    def calibration(self, voice_key: str) -> float:
-        """length_scale that makes this voice read at ZIEL_WPM.
+    def _modell(self, voice_key: str) -> tuple[float, float, float]:
+        """Fit this voice's duration model, returning (pad, c0, c1).
 
         Every Piper voice has its own natural tempo, and all of them are faster
         than an examination recording — thorsten runs at 185 wpm untouched.
+        Correcting that needs a model of how duration actually behaves, because
+        two separate effects break the obvious single-factor approach.
 
-        length_scale is *not* proportional to duration: it stretches phoneme
-        durations while a fixed overhead stays put, so doubling it does not
-        halve the pace. Measuring at a single point and dividing therefore
-        undershoots badly. Instead, measure at two points, fit the line
-        duration = a + b · length_scale, and solve it for the duration that
-        gives the target words per minute. Two syntheses per voice, once.
+        First, `length_scale` is not proportional to duration: it stretches
+        phoneme durations while the silence around the utterance stays put.
+        Second, that fixed silence is a large share of a five-word line of
+        dialogue and a negligible share of an eighty-word narrated text.
+
+        So the model is
+
+            duration(words, scale) = pad + (c0 + c1 · scale) · words
+
+        fitted from four measurements: a short and a long text, each at scale
+        1.0 and 1.5. Solving it per utterance keeps short turns and long texts
+        at the same delivered pace. Four syntheses per voice, once.
         """
         if voice_key in self._calibration:
             return self._calibration[voice_key]
@@ -222,25 +256,45 @@ class PiperProvider:
         voice = self._voice(spec.model_name)
         src_sr = int(voice.config.sample_rate)
 
-        def duration_at(scale: float) -> float:
+        def dauer(text: str, scale: float) -> float:
             cfg = SynthesisConfig(length_scale=scale, normalize_audio=True,
                                   speaker_id=spec.speaker_id)
-            audio = self._render(voice, KALIBRIER_SATZ, cfg, spec.model_name)
-            return len(audio) / src_sr
+            return len(self._render(voice, text, cfg, spec.model_name)) / src_sr
 
-        d_low, d_high = duration_at(1.0), duration_at(1.5)
-        ziel = KALIBRIER_WOERTER / (ZIEL_WPM / 60.0)
+        n_kurz = len(KALIBRIER_KURZ)
+        n_lang = len(KALIBRIER_LANG)
+        spanne = n_lang - n_kurz
 
-        slope = (d_high - d_low) / 0.5
-        if slope <= 1e-6:
-            scale = 1.0
-        else:
-            intercept = d_low - slope
-            scale = (ziel - intercept) / slope
+        # Per-character seconds and padding at each of the two speeds.
+        pro_wort: dict[float, float] = {}
+        pads: list[float] = []
+        for scale in (1.0, 1.5):
+            d_kurz, d_lang = dauer(KALIBRIER_KURZ, scale), dauer(KALIBRIER_LANG, scale)
+            k = (d_lang - d_kurz) / spanne
+            pro_wort[scale] = k
+            pads.append(d_kurz - k * n_kurz)
 
-        scale = float(np.clip(scale, 0.7, 3.0))
-        self._calibration[voice_key] = scale
-        return scale
+        pad = max(0.0, sum(pads) / len(pads))
+        c1 = (pro_wort[1.5] - pro_wort[1.0]) / 0.5
+        c0 = pro_wort[1.0] - c1
+
+        modell = (pad, c0, c1)
+        self._calibration[voice_key] = modell
+        return modell
+
+    def calibration(self, voice_key: str, zeichen: int = KALIBRIER_ZEICHEN) -> float:
+        """length_scale that reads `zeichen` characters at the target pace."""
+        pad, c0, c1 = self._modell(voice_key)
+        if zeichen <= 0 or abs(c1) < 1e-9:
+            return 1.0
+        ziel_zps = ZIEL_WPM * ZEICHEN_PRO_WORT / 60.0
+        ziel_sek = zeichen / ziel_zps
+        # The floor matters: de_DE-mls-medium reads markedly slower than the
+        # other voices and needs a scale well below 1 to reach exam pace. A
+        # floor of 0.6 clipped it, leaving every part it appeared in noticeably
+        # slow. Below about 0.45 Piper's output starts to slur, so that is the
+        # real limit.
+        return float(np.clip(((ziel_sek - pad) / zeichen - c0) / c1, 0.45, 3.0))
 
     def _render(self, voice, text: str, cfg, label: str = "voice") -> np.ndarray:
         id_map = voice.config.phoneme_id_map
@@ -266,11 +320,11 @@ class PiperProvider:
         spec = VOICES[voice_key]
         voice = self._voice(spec.model_name)
 
-        # Start from the calibrated exam pace, then apply the paper's own
+        # Calibrate for this utterance's own length, then apply the paper's
         # offset: -8 % on the gentlest paper, 0 % at full examination speed.
         # `deliberate` lends a little extra weight to the line carrying an
         # answer, as a real reader would.
-        factor = self.calibration(voice_key) / (1.0 + rate_percent / 100.0)
+        factor = self.calibration(voice_key, len(text)) / (1.0 + rate_percent / 100.0)
         if deliberate:
             factor *= 1.04
 
@@ -429,11 +483,17 @@ class RenderedTeil:
     sample_rate: int
     cues: list[Cue] = field(default_factory=list)
     woerter: int = 0
+    zeichen: int = 0
     sprechsekunden: float = 0.0
 
     @property
     def duration(self) -> float:
         return len(self.audio) / self.sample_rate
+
+    @property
+    def zps(self) -> float:
+        """Characters per second — the unit the pace check actually uses."""
+        return self.zeichen / self.sprechsekunden if self.sprechsekunden else 0.0
 
     @property
     def wpm(self) -> float:
@@ -455,8 +515,12 @@ def render_line(provider, line: dict[str, Any], voices: dict[str, str],
         return raw
     staged = dsp.apply_akustik(raw, sr, line.get("akustik", "studio"))
     if tally is not None:
+        # Measure the raw voice, not the staged audio: the mailbox beep and the
+        # station chime are not speech, and counting them made a part look
+        # slower than it is actually delivered.
         tally["woerter"] += len(line["text"].split())
-        tally["sekunden"] += len(staged) / sr
+        tally["zeichen"] += len(line["text"])
+        tally["sekunden"] += len(raw) / sr
     pause = dsp.silence(sr, float(line.get("pauseDanachSek", 0.4)))
     return dsp.concat([staged, pause])
 
@@ -500,7 +564,7 @@ def render_teil(provider, teil: dict[str, Any], voices: dict[str, str],
     cues: list[Cue] = []
     body: list[np.ndarray] = []
     clock = 0.0
-    tally = {"woerter": 0.0, "sekunden": 0.0}
+    tally = {"woerter": 0.0, "zeichen": 0.0, "sekunden": 0.0}
 
     def emit(audio: np.ndarray, label: str, kind: str) -> None:
         nonlocal clock
@@ -552,6 +616,7 @@ def render_teil(provider, teil: dict[str, Any], voices: dict[str, str],
     audio = dsp.normalise(dsp.concat(parts))
     return RenderedTeil(teil["nummer"], audio, sr, cues,
                         woerter=int(tally["woerter"]),
+                        zeichen=int(tally["zeichen"]),
                         sprechsekunden=tally["sekunden"])
 
 
@@ -624,6 +689,7 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
     # sprechtempoProzent is an offset on the delivered pace: -8 means eight per
     # cent slower than examination speed, so the target wpm drops accordingly.
     ziel_wpm = ZIEL_WPM * (1.0 + rate / 100.0)
+    ziel_zps = ziel_wpm * ZEICHEN_PRO_WORT / 60.0
 
     print(f"\n{exam_id}  ({exam['meta']['niveau']}, Sprechtempo {rate:+d}%, "
           f"Ziel {ziel_wpm:.0f} wpm, {sr} Hz, {fmt})")
@@ -632,7 +698,7 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
         detail = f"{spec.quality}, {spec.licence}" if spec else "external"
         pace = ""
         if hasattr(provider, "calibration"):
-            pace = f"  ×{provider.calibration(key):.2f}"
+            pace = f"  ×{provider.calibration(key):.2f}"  # at reference length
         print(f"    {role:24} → {key}  ({detail}){pace}")
 
     manifest: dict[str, Any] = {
@@ -660,10 +726,14 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
         full.append(rendered.audio)
         print(f"    Teil {teil['nummer']}: {rendered.duration / 60:5.2f} min  "
               f"{rendered.woerter:4d} Wörter  {rendered.wpm:5.0f} wpm  "
+              f"{rendered.zps:4.1f} Z/s  "
               f"→ {path.name}  ({time.time() - started:.0f}s)")
-        if rendered.wpm and abs(rendered.wpm - ziel_wpm) > 20:
-            print(f"      ! Teil {teil['nummer']} reads at {rendered.wpm:.0f} wpm, "
-                  f"target {ziel_wpm:.0f}")
+        # Some spread between parts is realistic and wanted: a station
+        # announcement is not delivered like a conversation between friends.
+        # This gate is for a part that is plainly wrong, not for texture.
+        if rendered.zps and abs(rendered.zps - ziel_zps) / ziel_zps > PACE_TOLERANZ:
+            print(f"      ! Teil {teil['nummer']} reads at {rendered.zps:.1f} "
+                  f"Zeichen/s, target {ziel_zps:.1f}")
         manifest["hoeren"].append({
             "teil": teil["nummer"],
             "datei": path.name,
@@ -671,7 +741,8 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
             "wiederholungen": teil["wiederholungen"],
             "woerter": rendered.woerter,
             "wpm": round(rendered.wpm, 1),
-            "zielWpm": round(ziel_wpm, 1),
+            "zeichenProSek": round(rendered.zps, 2),
+            "zielZeichenProSek": round(ziel_zps, 2),
             "cues": [c.__dict__ for c in rendered.cues],
         })
 
