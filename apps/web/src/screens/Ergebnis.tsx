@@ -70,7 +70,8 @@ export function Ergebnis({ pruefung, schluessel, versuch, onNeustart }: Props) {
     const ordner = `${versuch.name || 'kandidat'}_${pruefung.meta.id}_${stamp}`;
 
     for (const [nr, text] of Object.entries(versuch.schreiben)) {
-      if (text.trim()) dateien.push({ name: `${ordner}/schreiben_aufgabe${nr}.txt`, data: text });
+      if (text.trim())
+        dateien.push({ name: `${ordner}/schreiben_aufgabe${nr}.txt`, data: text });
     }
     for (const [nr, blob] of Object.entries(versuch.sprechen)) {
       dateien.push({
@@ -163,7 +164,8 @@ export function Ergebnis({ pruefung, schluessel, versuch, onNeustart }: Props) {
               </article>
             ))}
 
-            {(versuch.module.includes('schreiben') || versuch.module.includes('sprechen')) && (
+            {(versuch.module.includes('schreiben') ||
+              versuch.module.includes('sprechen')) && (
               <article className="karte karte--offen">
                 <h3>Schreiben &amp; Sprechen</h3>
                 <p className="karte__note">wird von einer Lehrkraft bewertet</p>
@@ -183,14 +185,21 @@ export function Ergebnis({ pruefung, schluessel, versuch, onNeustart }: Props) {
                     {KOMPETENZ_NAME[s.kompetenz] ?? s.kompetenz} — {s.verloren} von{' '}
                     {s.gesamt} falsch
                   </h4>
-                  <p>{KOMPETENZ_RAT[s.kompetenz] ?? 'Sehen Sie sich diese Aufgaben noch einmal an.'}</p>
+                  <p>
+                    {KOMPETENZ_RAT[s.kompetenz] ??
+                      'Sehen Sie sich diese Aufgaben noch einmal an.'}
+                  </p>
                 </article>
               ))}
             </section>
           )}
 
           <div className="aktionen">
-            <button type="button" className="knopf knopf--gross" onClick={abgabeHerunterladen}>
+            <button
+              type="button"
+              className="knopf knopf--gross"
+              onClick={abgabeHerunterladen}
+            >
               ⬇ Abgabe herunterladen (ZIP)
             </button>
             <button type="button" className="knopf" onClick={ankiHerunterladen}>

@@ -2,7 +2,8 @@
   "name": "b1-pruefungstrainer",
   "version": "0.1.0",
   "private": true,
-  "description": "Open-source practice examinations for German B1 certificate exams — timed mock papers, generated listening audio, auto-grading, speaking recorder.",
+  "description": "Open-source practice examinations for German B1 certificate exams \u2014 timed mock papers, generated listening audio, auto-grading, speaking recorder.",
+  "type": "module",
   "license": "MIT",
   "author": "Dipraj Kadlag",
   "repository": {
@@ -23,7 +24,7 @@
     "serve": "npm run start --workspace=@b1/server",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --build --force",
+    "typecheck": "tsc -p packages/core/tsconfig.json && tsc -p apps/web/tsconfig.json && tsc -p apps/server/tsconfig.json",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

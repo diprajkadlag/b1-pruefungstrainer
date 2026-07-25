@@ -61,6 +61,9 @@ export async function abgabeSenden(
   } catch {
     // A failed upload is not fatal: everything is still on the device and the
     // ZIP download remains available.
-    return { ok: false, fehler: 'Die Abgabe konnte nicht an den Server gesendet werden.' };
+    return {
+      ok: false,
+      fehler: 'Die Abgabe konnte nicht an den Server gesendet werden.',
+    };
   }
 }

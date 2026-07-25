@@ -30,7 +30,7 @@ export function Rekorder({ maxSekunden, vorhanden, onFertig }: Props) {
   const sicher = window.isSecureContext;
 
   const stoppen = useCallback(() => {
-    recorder.current?.state === 'recording' && recorder.current.stop();
+    if (recorder.current?.state === 'recording') recorder.current.stop();
   }, []);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ export function Rekorder({ maxSekunden, vorhanden, onFertig }: Props) {
       setFehler(
         err instanceof DOMException && err.name === 'NotAllowedError'
           ? 'Der Zugriff auf das Mikrofon wurde abgelehnt. Ohne Mikrofon können Sie ' +
-            'die anderen Module trotzdem bearbeiten.'
+              'die anderen Module trotzdem bearbeiten.'
           : 'Das Mikrofon konnte nicht gestartet werden.',
       );
     }

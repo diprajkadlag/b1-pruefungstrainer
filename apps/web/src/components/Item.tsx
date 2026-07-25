@@ -48,7 +48,9 @@ export function Item({ item, wert, onChange, disabled }: Props) {
         <span>{item.frage}</span>
       </legend>
 
-      <div className={kompakt ? 'item__optionen item__optionen--kompakt' : 'item__optionen'}>
+      <div
+        className={kompakt ? 'item__optionen item__optionen--kompakt' : 'item__optionen'}
+      >
         {optionen.map((opt) => (
           <label
             key={opt.value}
@@ -78,7 +80,8 @@ export function BeispielItem({ beispiel }: { beispiel: Beispiel }) {
       <p className="beispiel__frage">{beispiel.frage}</p>
       <p className="beispiel__loesung">
         Lösung: <strong>{beispiel.loesung}</strong>
-        {beispiel.optionen && ` — ${beispiel.optionen[beispiel.loesung as 'a' | 'b' | 'c']}`}
+        {beispiel.optionen &&
+          ` — ${beispiel.optionen[beispiel.loesung as 'a' | 'b' | 'c']}`}
       </p>
       <p className="beispiel__grund">{beispiel.begruendung.de}</p>
     </div>

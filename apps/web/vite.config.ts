@@ -11,7 +11,9 @@ export default defineConfig({
   base,
   resolve: {
     alias: {
-      '@b1/core': fileURLToPath(new URL('../../packages/core/src/index.ts', import.meta.url)),
+      '@b1/core': fileURLToPath(
+        new URL('../../packages/core/src/index.ts', import.meta.url),
+      ),
     },
   },
   build: { outDir: 'dist', sourcemap: true, target: 'es2022' },
@@ -34,7 +36,12 @@ export default defineConfig({
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          {
+            src: 'icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
         ],
       },
       workbox: {

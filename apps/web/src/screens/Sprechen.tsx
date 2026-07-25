@@ -21,7 +21,9 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
       <section className="teil">
         <header className="teil__kopf">
           <h2>Vorbereitung</h2>
-          <span className="teil__meta">{pruefung.sprechen.vorbereitungMinuten} Minuten</span>
+          <span className="teil__meta">
+            {pruefung.sprechen.vorbereitungMinuten} Minuten
+          </span>
         </header>
         <p className="teil__anweisung">
           Lesen Sie zuerst alle Aufgaben und machen Sie sich Stichworte. Ganze Sätze

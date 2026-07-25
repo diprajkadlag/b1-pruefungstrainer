@@ -40,7 +40,10 @@ export function HoerPlayer({ src, teil, gesperrt, onStart, onEnde }: Props) {
     const onTime = () => {
       // Guard against a seek: only ever move forward, and only by about as
       // much as real playback could have advanced.
-      if (el.currentTime > zuletzt.current + 1.5 || el.currentTime < zuletzt.current - 0.3) {
+      if (
+        el.currentTime > zuletzt.current + 1.5 ||
+        el.currentTime < zuletzt.current - 0.3
+      ) {
         el.currentTime = zuletzt.current;
         return;
       }

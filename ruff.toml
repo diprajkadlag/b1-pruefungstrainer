@@ -1,0 +1,13 @@
+# Python 3.11+ is the floor; developed and run on 3.14.
+target-version = "py311"
+line-length = 96
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = [
+    "E501",   # long lines are caught by the formatter, and German prose is long
+    "SIM108", # ternaries are not always clearer than an if
+]
+
+[lint.per-file-ignores]
+"tools/audio_dsp.py" = ["N803", "N806"]

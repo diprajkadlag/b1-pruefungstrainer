@@ -68,7 +68,9 @@ test.describe('Prüfung ablegen', () => {
     await expect(karte).toContainText(`${items.length} von ${items.length}`);
   });
 
-  test('scores a deliberately wrong sheet exactly as hand-calculated', async ({ page }) => {
+  test('scores a deliberately wrong sheet exactly as hand-calculated', async ({
+    page,
+  }) => {
     const items = itemsVon('lesen');
     // 6 wrong out of 30 -> 24 correct -> round(24 * 100 / 30) = 80 -> "gut".
     const falsch = new Set([1, 5, 9, 14, 20, 27]);
@@ -101,7 +103,9 @@ test.describe('Prüfung ablegen', () => {
     await expect(page.locator('.karte--gefallen')).toHaveCount(1);
   });
 
-  test('never ships the answer key to the browser before submission', async ({ page }) => {
+  test('never ships the answer key to the browser before submission', async ({
+    page,
+  }) => {
     const geladen: string[] = [];
     page.on('response', (r) => geladen.push(r.url()));
 

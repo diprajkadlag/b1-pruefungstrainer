@@ -44,7 +44,9 @@ export function Schreiben({ pruefung, texte, onText, abgelaufen }: Props) {
             </header>
 
             <p className="situation">{aufgabe.situation}</p>
-            {aufgabe.impuls && <blockquote className="impuls">{aufgabe.impuls}</blockquote>}
+            {aufgabe.impuls && (
+              <blockquote className="impuls">{aufgabe.impuls}</blockquote>
+            )}
             <p className="teil__anweisung">{aufgabe.aufgabenstellung}</p>
 
             <ul className="leitpunkte">

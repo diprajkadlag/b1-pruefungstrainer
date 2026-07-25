@@ -61,8 +61,8 @@ export function Start({ onStart, onWeiter, onErgebnis }: Props) {
     <div className="start">
       <section className="hinweis-box">
         <strong>Keine offizielle Prüfung.</strong> Dieses Übungsmaterial steht in keiner
-        Verbindung zum Goethe-Institut e.&nbsp;V., zur telc gGmbH oder zum ÖSD. Alle
-        Texte und Aufgaben sind eigens für dieses Projekt verfasst.
+        Verbindung zum Goethe-Institut e.&nbsp;V., zur telc gGmbH oder zum ÖSD. Alle Texte
+        und Aufgaben sind eigens für dieses Projekt verfasst.
       </section>
 
       {fehler && <p className="fehler">{fehler}</p>}
@@ -85,7 +85,9 @@ export function Start({ onStart, onWeiter, onErgebnis }: Props) {
                   <button
                     type="button"
                     className="knopf knopf--sekundaer"
-                    onClick={() => void loeschen(v.id).then(() => alleVersuche().then(setVersuche))}
+                    onClick={() =>
+                      void loeschen(v.id).then(() => alleVersuche().then(setVersuche))
+                    }
                   >
                     Löschen
                   </button>

@@ -1,0 +1,46 @@
+name: Content
+
+# Every paper is checked against the examination specification. A new exam is
+# merge-blocked until its item counts, point totals, answer keys, rationales
+# and glossary all hold up — which is what makes "add an exam, change no code"
+# safe to offer contributors.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'packages/schema/**'
+      - 'tools/validate.py'
+      - 'tools/export_web.py'
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'packages/schema/**'
+      - 'tools/validate.py'
+      - 'tools/export_web.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate every exam
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install jsonschema Jinja2
+
+      - name: Specification check (warnings are failures)
+        run: python tools/validate.py --strict
+
+      - name: Export the public half
+        run: python tools/export_web.py --no-audio
+
+      # export_web.py already refuses to write a leaking export, but the check
+      # is repeated here against the files that were actually produced.
+      - name: Assert no answer data reaches the browser
+        run: python tools/check_no_leak.py

@@ -29,7 +29,10 @@ function crc32(data: Uint8Array<ArrayBuffer>): number {
 /** MS-DOS date and time, which is what the ZIP format still stores. */
 function dosStamp(d: Date): { time: number; date: number } {
   return {
-    time: (d.getHours() << 11) | (d.getMinutes() << 5) | (Math.floor(d.getSeconds() / 2) & 0x1f),
+    time:
+      (d.getHours() << 11) |
+      (d.getMinutes() << 5) |
+      (Math.floor(d.getSeconds() / 2) & 0x1f),
     date: ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate(),
   };
 }

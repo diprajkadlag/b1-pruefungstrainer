@@ -11,6 +11,7 @@
  */
 
 import { generateKeyPairSync, createSign, randomBytes } from 'node:crypto';
+import { networkInterfaces } from 'node:os';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -111,9 +112,8 @@ function zertifikatBauen(privateKey: string, publicKeyPem: string): string {
 }
 
 function lokaleAdressen(): number[][] {
-  const os = require('node:os') as typeof import('node:os');
   const out: number[][] = [];
-  for (const netz of Object.values(os.networkInterfaces())) {
+  for (const netz of Object.values(networkInterfaces())) {
     for (const adresse of netz ?? []) {
       if (adresse.family === 'IPv4' && !adresse.internal) {
         out.push(adresse.address.split('.').map(Number));

@@ -70,7 +70,9 @@ export function neuerVersuch(
   return {
     // crypto.randomUUID needs a secure context; the app already requires one
     // for the microphone, but fall back so the written modules still work.
-    id: globalThis.crypto?.randomUUID?.() ?? `v-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+    id:
+      globalThis.crypto?.randomUUID?.() ??
+      `v-${Date.now()}-${Math.random().toString(36).slice(2)}`,
     examId,
     name,
     gestartet: new Date().toISOString(),

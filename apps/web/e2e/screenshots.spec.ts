@@ -11,7 +11,9 @@ import { fileURLToPath, URL } from 'node:url';
 
 const exam = JSON.parse(
   readFileSync(
-    fileURLToPath(new URL('../../../content/exams/pruefung-01/exam.json', import.meta.url)),
+    fileURLToPath(
+      new URL('../../../content/exams/pruefung-01/exam.json', import.meta.url),
+    ),
     'utf-8',
   ),
 );

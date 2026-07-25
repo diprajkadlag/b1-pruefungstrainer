@@ -7,11 +7,7 @@
  * tools/export_web.py produces the split and fails the build if a key leaks.
  */
 
-import type {
-  AudioManifest,
-  OeffentlichePruefung,
-  Schluesseldaten,
-} from '@b1/core';
+import type { AudioManifest, OeffentlichePruefung, Schluesseldaten } from '@b1/core';
 
 export interface RegistryEintrag {
   id: string;

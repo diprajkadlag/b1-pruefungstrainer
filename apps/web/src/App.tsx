@@ -1,20 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type {
-  AudioManifest,
-  OeffentlichePruefung,
-  Schluesseldaten,
-} from '@b1/core';
-import {
-  audioManifestLaden,
-  pruefungLaden,
-  schluesselLaden,
-} from './lib/content';
-import {
-  laden,
-  neuerVersuch,
-  speichern,
-  type GespeicherterVersuch,
-} from './lib/db';
+import type { AudioManifest, OeffentlichePruefung, Schluesseldaten } from '@b1/core';
+import { audioManifestLaden, pruefungLaden, schluesselLaden } from './lib/content';
+import { laden, neuerVersuch, speichern, type GespeicherterVersuch } from './lib/db';
 import { abgabeSenden } from './lib/server';
 import { Timer, useCountdown } from './components/Timer';
 import { Start, type ModulWahl } from './screens/Start';
@@ -145,7 +132,9 @@ export default function App() {
       setModulIndex(0);
       setPhase('pruefung');
     } catch (e) {
-      setFehler(e instanceof Error ? e.message : 'Die Prüfung konnte nicht geladen werden.');
+      setFehler(
+        e instanceof Error ? e.message : 'Die Prüfung konnte nicht geladen werden.',
+      );
       setPhase('start');
     }
   }

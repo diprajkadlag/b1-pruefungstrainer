@@ -1,0 +1,39 @@
+name: Exam content problem
+description: A wrong answer key, an ambiguous item, or a language mistake
+labels: [content]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you — content errors matter more than bugs here. A wrong key
+        teaches somebody the wrong thing.
+  - type: input
+    id: pruefung
+    attributes:
+      label: Which exam?
+      placeholder: pruefung-01
+    validations: { required: true }
+  - type: input
+    id: stelle
+    attributes:
+      label: Which module, part and item?
+      placeholder: Lesen Teil 4, Aufgabe 24
+    validations: { required: true }
+  - type: dropdown
+    id: art
+    attributes:
+      label: What kind of problem?
+      options:
+        - The answer key is wrong
+        - More than one answer is defensible
+        - The German is incorrect or unnatural
+        - The item is above or below B1
+        - The audio does not match the transcript
+        - Something else
+    validations: { required: true }
+  - type: textarea
+    id: begruendung
+    attributes:
+      label: Why?
+      description: Quote the sentence you think supports a different answer.
+    validations: { required: true }

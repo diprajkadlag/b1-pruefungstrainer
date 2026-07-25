@@ -19,9 +19,10 @@ import json
 import re
 import sys
 import unicodedata
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
@@ -80,7 +81,7 @@ SEPARABLE_PREFIXES = sorted(
         "auseinander", "gegenüber", "zusammen", "entgegen", "zurecht", "zurück",
         "voraus", "vorbei", "weiter", "herunter", "hinunter", "herein", "hinein",
         "davon", "dabei", "durch", "empor", "statt", "unter", "wieder", "hoch",
-        "fest", "fort", "heim", "über", "voran", "vorbei", "weg", "her", "hin",
+        "fest", "fort", "heim", "über", "voran", "weg", "her", "hin",
         "los", "mit", "nach", "teil", "vor", "zu", "ab", "an", "auf", "aus",
         "bei", "ein", "um",
     },
@@ -515,7 +516,7 @@ def check_schreiben(exam: dict[str, Any], rep: Report) -> None:
 
     for idx, auf in enumerate(aufgaben):
         w = f"schreiben/aufgabe{idx + 1}"
-        for feld, erwartet, liste in (
+        for feld, erwartet, _liste in (
             ("typ", SCHREIBEN_TYP[idx], SCHREIBEN_TYP),
             ("punkte", SCHREIBEN_PUNKTE[idx], SCHREIBEN_PUNKTE),
             ("zeitMinuten", SCHREIBEN_ZEIT[idx], SCHREIBEN_ZEIT),

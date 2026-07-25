@@ -25,8 +25,9 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"

@@ -16,11 +16,7 @@ export const BESTEHENSGRENZE = 60;
 
 export type Modul = 'lesen' | 'hoeren' | 'schreiben' | 'sprechen';
 export type Note =
-  | 'sehr gut'
-  | 'gut'
-  | 'befriedigend'
-  | 'ausreichend'
-  | 'nicht bestanden';
+  'sehr gut' | 'gut' | 'befriedigend' | 'ausreichend' | 'nicht bestanden';
 
 /**
  * Grade bands. Ordered high to low; the first band whose floor is met wins.
@@ -50,10 +46,7 @@ export function bestanden(punkte: number): boolean {
  * decision. Round half up on the exact 10/3 ratio: 18/30 becomes 60 and passes,
  * 17/30 becomes 57 and does not. Getting this wrong moves the pass boundary.
  */
-export function rohZuPunkten(
-  richtig: number,
-  gesamt: number = ITEMS_PRO_MODUL,
-): number {
+export function rohZuPunkten(richtig: number, gesamt: number = ITEMS_PRO_MODUL): number {
   if (gesamt <= 0) return 0;
   const geklemmt = Math.max(0, Math.min(richtig, gesamt));
   return Math.round((geklemmt * PUNKTE_PRO_MODUL) / gesamt);
@@ -204,12 +197,8 @@ export interface Gesamtergebnis {
  * a candidate passes each module or does not. The average is reported for
  * orientation only, and only once all four marks exist.
  */
-export function gesamtergebnis(
-  module: Partial<Record<Modul, number>>,
-): Gesamtergebnis {
-  const werte = Object.values(module).filter(
-    (v): v is number => typeof v === 'number',
-  );
+export function gesamtergebnis(module: Partial<Record<Modul, number>>): Gesamtergebnis {
+  const werte = Object.values(module).filter((v): v is number => typeof v === 'number');
   const vollstaendig = (['lesen', 'hoeren', 'schreiben', 'sprechen'] as const).every(
     (m) => typeof module[m] === 'number',
   );

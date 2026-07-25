@@ -19,12 +19,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import {
-  bewerteModul,
-  gesamtergebnis,
-  type Modul,
-  type Schluessel,
-} from '@b1/core';
+import { bewerteModul, gesamtergebnis, type Modul, type Schluessel } from '@b1/core';
 import { selbstsigniertesZertifikat } from './tls.js';
 
 const HIER = dirname(fileURLToPath(import.meta.url));
@@ -43,7 +38,10 @@ app.use(express.json({ limit: '2mb' }));
 
 /** Reject anything that could climb out of the submissions directory. */
 const sichererName = (s: string): string =>
-  s.replace(/[^\p{L}\p{N} _.-]/gu, '_').replace(/^\.+/, '').slice(0, 80) || 'unbenannt';
+  s
+    .replace(/[^\p{L}\p{N} _.-]/gu, '_')
+    .replace(/^\.+/, '')
+    .slice(0, 80) || 'unbenannt';
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -114,7 +112,11 @@ app.post('/api/abgabe', upload.array('aufnahmen'), async (req, res) => {
 
     for (const [nr, text] of Object.entries(daten.schreiben ?? {})) {
       if (text?.trim()) {
-        await writeFile(join(ordner, `schreiben_aufgabe${sichererName(nr)}.txt`), text, 'utf-8');
+        await writeFile(
+          join(ordner, `schreiben_aufgabe${sichererName(nr)}.txt`),
+          text,
+          'utf-8',
+        );
       }
     }
 
@@ -141,7 +143,9 @@ app.post('/api/abgabe', upload.array('aufnahmen'), async (req, res) => {
     res.json({ ok: true, ordner: ordner.replace(ABGABEN, '').replaceAll('\\', '/') });
   } catch (err) {
     console.error('Abgabe fehlgeschlagen:', err);
-    res.status(400).json({ ok: false, fehler: 'Die Abgabe konnte nicht gespeichert werden.' });
+    res
+      .status(400)
+      .json({ ok: false, fehler: 'Die Abgabe konnte nicht gespeichert werden.' });
   }
 });
 
@@ -173,7 +177,9 @@ app.get('/api/abgaben', async (_req, res) => {
 });
 
 app.get('/api/abgabe/:pfad(*)/datei/:name', async (req, res) => {
-  const teile = String(req.params['pfad'] ?? '').split('/').map(sichererName);
+  const teile = String(req.params['pfad'] ?? '')
+    .split('/')
+    .map(sichererName);
   const ordner = join(ABGABEN, ...teile);
   const datei = join(ordner, sichererName(String(req.params['name'] ?? '')));
   if (!datei.startsWith(ABGABEN)) {
@@ -185,7 +191,9 @@ app.get('/api/abgabe/:pfad(*)/datei/:name', async (req, res) => {
 
 app.post('/api/abgabe/:pfad(*)/bewertung', async (req, res) => {
   try {
-    const teile = String(req.params['pfad'] ?? '').split('/').map(sichererName);
+    const teile = String(req.params['pfad'] ?? '')
+      .split('/')
+      .map(sichererName);
     const ordner = join(ABGABEN, ...teile);
     const pfad = join(ordner, 'abgabe.json');
     const daten = JSON.parse(await readFile(pfad, 'utf-8')) as Abgabe;
@@ -252,7 +260,9 @@ async function start() {
       );
     }
     if (HOST === '0.0.0.0') {
-      console.log(`\n  !! Der Server ist im Netzwerk erreichbar und hat keine Anmeldung.`);
+      console.log(
+        `\n  !! Der Server ist im Netzwerk erreichbar und hat keine Anmeldung.`,
+      );
     }
     console.log();
   };

@@ -153,7 +153,12 @@ describe('gesamtergebnis', () => {
   it('fails overall if a single module is below the pass mark', () => {
     // Modules are certified separately: a strong average cannot rescue one
     // module that fell short.
-    const voll = gesamtergebnis({ lesen: 100, hoeren: 100, schreiben: 100, sprechen: 59 });
+    const voll = gesamtergebnis({
+      lesen: 100,
+      hoeren: 100,
+      schreiben: 100,
+      sprechen: 59,
+    });
     expect(voll.alleBestanden).toBe(false);
     expect(voll.durchschnitt).toBe(90);
   });

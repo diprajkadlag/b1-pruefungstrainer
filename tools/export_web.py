@@ -21,15 +21,21 @@ import argparse
 import json
 import shutil
 import sys
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
 TARGET = ROOT / "apps" / "web" / "public" / "content"
 
-# Anything that would reveal or justify an answer.
-GEHEIM = {"loesung", "beleg", "begruendung", "musterloesungen", "musterantwort"}
+# Anything that reveals or justifies an answer, plus metadata the app does not
+# need before submission. "kompetenz" gives nothing away, but the weak-spot
+# report reads it from the keyed half anyway, so there is no reason to ship it.
+GEHEIM = {
+    "loesung", "beleg", "begruendung", "musterloesungen", "musterantwort",
+    "kompetenz",
+}
 
 
 def strip_item(item: dict[str, Any]) -> dict[str, Any]:
@@ -112,26 +118,23 @@ def keyed_half(exam: dict[str, Any]) -> dict[str, Any]:
 
 
 def leak_check(public: dict[str, Any], exam: dict[str, Any]) -> list[str]:
-    """Fail loudly if an answer survived into the public half.
+    """Fail loudly if answer data survived into the public half.
 
-    Cheap insurance against a future schema change quietly re-exposing keys.
+    Cheap insurance against a schema change quietly re-exposing keys. The same
+    rules run again in CI over the written files, via tools/check_no_leak.py.
+    Worked examples are exempt: showing their answer is the point of them.
     """
-    blob = json.dumps(public, ensure_ascii=False)
-    problems = []
+    del exam
+    problems: list[str] = []
     for modul in ("lesen", "hoeren"):
-        for teil in exam[modul]["teile"]:
+        for teil in public[modul]["teile"]:
             for item in teil["items"]:
-                marker = f'"loesung": "{item["loesung"]}"'
-                if marker in blob and f'"nr": {item["nr"]}' in blob:
-                    # Beispiel items legitimately keep their key.
-                    pass
-    for key in ("begruendung", "beleg", "musterloesungen", "musterantwort"):
-        # Beispiel items keep a begruendung, so only flag scored items.
-        for modul in ("lesen", "hoeren"):
-            for teil in public[modul]["teile"]:
-                for item in teil["items"]:
+                for key in GEHEIM:
                     if key in item:
-                        problems.append(f"{modul} item {item['nr']} still carries {key!r}")
+                        problems.append(
+                            f"{modul} Teil {teil['nummer']} item {item['nr']} "
+                            f"still carries {key!r}"
+                        )
     return problems
 
 

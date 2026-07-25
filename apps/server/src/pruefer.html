@@ -6,71 +6,173 @@
     <title>Prüfer-Ansicht — B1-Prüfungstrainer</title>
     <style>
       :root {
-        --rule: #2f3e4e; --soft: #f4f6f8; --edge: #ccd3da; --mute: #5b6672;
-        --mark: #0f6c4a; --bad: #a4262c; --warn: #8a5a00; --text: #1b2026; --bg: #fff;
+        --rule: #2f3e4e;
+        --soft: #f4f6f8;
+        --edge: #ccd3da;
+        --mute: #5b6672;
+        --mark: #0f6c4a;
+        --bad: #a4262c;
+        --warn: #8a5a00;
+        --text: #1b2026;
+        --bg: #fff;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --rule: #9db4cd; --soft: #1b2027; --edge: #333c46; --mute: #9aa5b1;
-          --mark: #56c596; --bad: #ef6b73; --warn: #e0a83a; --text: #e6eaee; --bg: #12161b;
+          --rule: #9db4cd;
+          --soft: #1b2027;
+          --edge: #333c46;
+          --mute: #9aa5b1;
+          --mark: #56c596;
+          --bad: #ef6b73;
+          --warn: #e0a83a;
+          --text: #e6eaee;
+          --bg: #12161b;
         }
       }
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       body {
-        margin: 0; background: var(--bg); color: var(--text);
-        font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          16px/1.6 system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
       }
       header {
-        border-bottom: 1px solid var(--edge); padding: 0.8rem 1.2rem;
-        display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+        border-bottom: 1px solid var(--edge);
+        padding: 0.8rem 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
         flex-wrap: wrap;
       }
-      main { max-width: 62rem; margin: 0 auto; padding: 1.2rem; }
-      h1 { font-size: 1.15rem; margin: 0; }
+      main {
+        max-width: 62rem;
+        margin: 0 auto;
+        padding: 1.2rem;
+      }
+      h1 {
+        font-size: 1.15rem;
+        margin: 0;
+      }
       .abgabe {
-        border: 1px solid var(--edge); border-radius: 8px;
-        padding: 1rem; margin-bottom: 1rem;
+        border: 1px solid var(--edge);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
       }
       .abgabe__kopf {
-        display: flex; justify-content: space-between; gap: 1rem;
-        flex-wrap: wrap; align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: baseline;
       }
-      .abgabe__meta { color: var(--mute); font-size: 0.85rem; }
-      .punkte { display: flex; gap: 0.8rem; flex-wrap: wrap; margin: 0.6rem 0; }
+      .abgabe__meta {
+        color: var(--mute);
+        font-size: 0.85rem;
+      }
+      .punkte {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin: 0.6rem 0;
+      }
       .chip {
-        border: 1px solid var(--edge); border-radius: 99px;
-        padding: 0.2rem 0.7rem; font-size: 0.85rem;
+        border: 1px solid var(--edge);
+        border-radius: 99px;
+        padding: 0.2rem 0.7rem;
+        font-size: 0.85rem;
       }
-      .chip--gut { border-color: var(--mark); color: var(--mark); }
-      .chip--schlecht { border-color: var(--bad); color: var(--bad); }
-      .chip--offen { border-color: var(--warn); color: var(--warn); }
-      details { margin-top: 0.7rem; }
-      summary { cursor: pointer; font-weight: 600; }
+      .chip--gut {
+        border-color: var(--mark);
+        color: var(--mark);
+      }
+      .chip--schlecht {
+        border-color: var(--bad);
+        color: var(--bad);
+      }
+      .chip--offen {
+        border-color: var(--warn);
+        color: var(--warn);
+      }
+      details {
+        margin-top: 0.7rem;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
       pre {
-        white-space: pre-wrap; background: var(--soft); padding: 0.8rem;
-        border-radius: 6px; font: inherit; margin: 0.5rem 0;
+        white-space: pre-wrap;
+        background: var(--soft);
+        padding: 0.8rem;
+        border-radius: 6px;
+        font: inherit;
+        margin: 0.5rem 0;
       }
-      audio { width: 100%; max-width: 28rem; display: block; margin: 0.4rem 0; }
-      .raster { display: grid; gap: 0.8rem; grid-template-columns: 1fr 1fr; margin-top: 0.6rem; }
-      label { display: block; font-size: 0.85rem; color: var(--mute); }
-      input, textarea {
-        width: 100%; padding: 0.5rem; font: inherit; border: 1px solid var(--edge);
-        border-radius: 6px; background: var(--bg); color: var(--text);
+      audio {
+        width: 100%;
+        max-width: 28rem;
+        display: block;
+        margin: 0.4rem 0;
+      }
+      .raster {
+        display: grid;
+        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0.6rem;
+      }
+      label {
+        display: block;
+        font-size: 0.85rem;
+        color: var(--mute);
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        font: inherit;
+        border: 1px solid var(--edge);
+        border-radius: 6px;
+        background: var(--bg);
+        color: var(--text);
       }
       button {
-        font: inherit; padding: 0.55rem 1rem; border: 1px solid var(--rule);
-        border-radius: 6px; background: var(--rule); color: var(--bg); cursor: pointer;
+        font: inherit;
+        padding: 0.55rem 1rem;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        background: var(--rule);
+        color: var(--bg);
+        cursor: pointer;
       }
-      .kriterien { font-size: 0.82rem; color: var(--mute); margin: 0.4rem 0; }
-      .leer { color: var(--mute); }
-      .gesamt { font-weight: 700; margin-top: 0.5rem; }
+      .kriterien {
+        font-size: 0.82rem;
+        color: var(--mute);
+        margin: 0.4rem 0;
+      }
+      .leer {
+        color: var(--mute);
+      }
+      .gesamt {
+        font-weight: 700;
+        margin-top: 0.5rem;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Prüfer-Ansicht</h1>
       <span class="abgabe__meta">
-        Lesen und Hören sind bereits ausgewertet. Schreiben und Sprechen bewerten Sie hier.
+        Lesen und Hören sind bereits ausgewertet. Schreiben und Sprechen bewerten Sie
+        hier.
       </span>
     </header>
 
@@ -78,8 +180,15 @@
 
     <script type="module">
       const NOTE = (p) =>
-        p >= 90 ? 'sehr gut' : p >= 80 ? 'gut' : p >= 70 ? 'befriedigend'
-        : p >= 60 ? 'ausreichend' : 'nicht bestanden';
+        p >= 90
+          ? 'sehr gut'
+          : p >= 80
+            ? 'gut'
+            : p >= 70
+              ? 'befriedigend'
+              : p >= 60
+                ? 'ausreichend'
+                : 'nicht bestanden';
 
       const chip = (label, punkte) => {
         if (typeof punkte !== 'number' || Number.isNaN(punkte))
@@ -89,8 +198,9 @@
       };
 
       const escape = (s) =>
-        String(s ?? '').replace(/[&<>"]/g, (c) =>
-          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
+        String(s ?? '').replace(
+          /[&<>"]/g,
+          (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
         );
 
       const { abgaben } = await (await fetch('/api/abgaben')).json();
@@ -114,14 +224,15 @@
           )
           .join('');
 
-        const texte = Object.entries(a.schreiben ?? {})
-          .filter(([, t]) => t && t.trim())
-          .map(
-            ([nr, t]) =>
-              `<h4>Aufgabe ${escape(nr)} — ${t.trim().split(/\s+/).length} Wörter</h4>
+        const texte =
+          Object.entries(a.schreiben ?? {})
+            .filter(([, t]) => t && t.trim())
+            .map(
+              ([nr, t]) =>
+                `<h4>Aufgabe ${escape(nr)} — ${t.trim().split(/\s+/).length} Wörter</h4>
                <pre>${escape(t)}</pre>`,
-          )
-          .join('') || '<p class="leer">Kein Text abgegeben.</p>';
+            )
+            .join('') || '<p class="leer">Kein Text abgegeben.</p>';
 
         return `
         <article class="abgabe" data-pfad="${escape(a.pfad)}">

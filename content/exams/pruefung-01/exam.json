@@ -8,7 +8,14 @@
     "niveau": "mittel-leicht",
     "contentVersion": "1.0.0",
     "sprechtempoProzent": -8,
-    "themen": ["Arbeit und Beruf", "Wohnen und Umzug", "Mobilität", "Nachhaltigkeit", "Weiterbildung", "Ehrenamt"],
+    "themen": [
+      "Arbeit und Beruf",
+      "Wohnen und Umzug",
+      "Mobilität",
+      "Nachhaltigkeit",
+      "Weiterbildung",
+      "Ehrenamt"
+    ],
     "autor": "b1-pruefungstrainer",
     "lizenz": "CC-BY-4.0",
     "originalitaet": true
@@ -625,11 +632,31 @@
         "anweisung": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal.",
         "wiederholungen": 2,
         "sprecher": [
-          { "rolle": "Carla", "geschlecht": "f", "beschreibung": "Freundin, spricht auf die Mailbox" },
-          { "rolle": "Bahnhofsansage", "geschlecht": "f", "beschreibung": "Durchsage im Bahnhof" },
-          { "rolle": "Radiosprecher", "geschlecht": "m", "beschreibung": "Wetterbericht im Radio" },
-          { "rolle": "Werkstatt", "geschlecht": "m", "beschreibung": "Mitarbeiter der Autowerkstatt" },
-          { "rolle": "Ansage VHS", "geschlecht": "f", "beschreibung": "Durchsage in der Volkshochschule" }
+          {
+            "rolle": "Carla",
+            "geschlecht": "f",
+            "beschreibung": "Freundin, spricht auf die Mailbox"
+          },
+          {
+            "rolle": "Bahnhofsansage",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage im Bahnhof"
+          },
+          {
+            "rolle": "Radiosprecher",
+            "geschlecht": "m",
+            "beschreibung": "Wetterbericht im Radio"
+          },
+          {
+            "rolle": "Werkstatt",
+            "geschlecht": "m",
+            "beschreibung": "Mitarbeiter der Autowerkstatt"
+          },
+          {
+            "rolle": "Ansage VHS",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage in der Volkshochschule"
+          }
         ],
         "beispiel": {
           "nr": 0,
@@ -642,21 +669,111 @@
           }
         },
         "skript": [
-          { "rolle": "Sprecher", "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal. Lesen Sie jetzt das Beispiel und die Aufgaben eins und zwei.", "pauseDanachSek": 22, "akustik": "studio" },
-          { "rolle": "Sprecher", "text": "Text eins.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_1" },
-          { "rolle": "Carla", "text": "Hallo, hier ist Carla. Du, es hat sich leider etwas geändert. Der Transporter ist erst ab zwei Uhr frei, nicht schon um neun, wie ich gesagt hatte. Das heißt, wir fangen am Samstag erst am Nachmittag an. Wäre das für dich in Ordnung? Und noch etwas: Kartons brauchst du keine mitzubringen, die hat mir mein Nachbar alle geliehen. Falls du doch nicht kannst, ruf mich bitte bis Freitagabend an, dann frage ich meinen Bruder. Danke dir!", "pauseDanachSek": 2, "akustik": "mailbox", "abschnitt": "text_1", "betont": true },
-          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben drei und vier.", "pauseDanachSek": 16, "akustik": "studio" },
-          { "rolle": "Sprecher", "text": "Text zwei.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_2" },
-          { "rolle": "Bahnhofsansage", "text": "Sehr geehrte Fahrgäste, wir informieren Sie über eine Änderung. Der Regionalexpress nach Kassel, planmäßige Abfahrt vierzehn Uhr zweiundzwanzig, fährt heute von Gleis sieben statt von Gleis drei. Grund dafür ist eine Störung an der Weiche. Der Zug verkehrt außerdem nur bis Bad Hersfeld. Reisende nach Kassel steigen dort bitte in den bereitstehenden Bus um. Wir bitten Sie, die zusätzliche Fahrzeit von etwa vierzig Minuten einzuplanen.", "pauseDanachSek": 2, "akustik": "durchsage", "abschnitt": "text_2", "betont": true },
-          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben fünf und sechs.", "pauseDanachSek": 16, "akustik": "studio" },
-          { "rolle": "Sprecher", "text": "Text drei.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_3" },
-          { "rolle": "Radiosprecher", "text": "Und damit zum Wetter für morgen, Mittwoch. Der Tag beginnt in weiten Teilen des Landes neblig, örtlich mit Sichtweiten unter hundert Metern. Bis zum Mittag löst sich der Nebel auf, danach scheint verbreitet die Sonne bei Höchstwerten zwischen achtzehn und zweiundzwanzig Grad. Am Abend ziehen von Westen her Wolken auf, trocken bleibt es aber überall. Autofahrer sollten am frühen Morgen besonders vorsichtig sein.", "pauseDanachSek": 2, "akustik": "radio", "abschnitt": "text_3", "betont": true },
-          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben sieben und acht.", "pauseDanachSek": 16, "akustik": "studio" },
-          { "rolle": "Sprecher", "text": "Text vier.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_4" },
-          { "rolle": "Werkstatt", "text": "Guten Tag, Frau Reinhardt, hier ist die Autowerkstatt Kowalski. Wir haben uns Ihren Wagen angesehen. Die Bremsen sind in Ordnung, das Geräusch kam von der Radaufhängung. Die Reparatur kostet dreihundertzwanzig Euro, also deutlich weniger als im Kostenvoranschlag von letzter Woche. Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen. Das Ersatzteil ist bestellt und kommt morgen früh. Wenn Sie sich heute noch melden, ist der Wagen am Donnerstag fertig.", "pauseDanachSek": 2, "akustik": "telefon", "abschnitt": "text_4", "betont": true },
-          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben neun und zehn.", "pauseDanachSek": 16, "akustik": "studio" },
-          { "rolle": "Sprecher", "text": "Text fünf.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_5" },
-          { "rolle": "Ansage VHS", "text": "Liebe Kursteilnehmerinnen und Kursteilnehmer, eine Information für alle, die heute Abend den Kurs Digitale Fotografie besuchen wollten. Der Kurs muss leider ausfallen, da der Dozent erkrankt ist. Der Termin wird am kommenden Montag zur gewohnten Zeit nachgeholt. Wer an diesem Ersatztermin nicht teilnehmen kann, wendet sich bitte an das Sekretariat im Erdgeschoss. Die Kursgebühr wird in diesem Fall anteilig zurückerstattet.", "pauseDanachSek": 2, "akustik": "durchsage", "abschnitt": "text_5", "betont": true }
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal. Lesen Sie jetzt das Beispiel und die Aufgaben eins und zwei.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Carla",
+            "text": "Hallo, hier ist Carla. Du, es hat sich leider etwas geändert. Der Transporter ist erst ab zwei Uhr frei, nicht schon um neun, wie ich gesagt hatte. Das heißt, wir fangen am Samstag erst am Nachmittag an. Wäre das für dich in Ordnung? Und noch etwas: Kartons brauchst du keine mitzubringen, die hat mir mein Nachbar alle geliehen. Falls du doch nicht kannst, ruf mich bitte bis Freitagabend an, dann frage ich meinen Bruder. Danke dir!",
+            "pauseDanachSek": 2,
+            "akustik": "mailbox",
+            "abschnitt": "text_1",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben drei und vier.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Bahnhofsansage",
+            "text": "Sehr geehrte Fahrgäste, wir informieren Sie über eine Änderung. Der Regionalexpress nach Kassel, planmäßige Abfahrt vierzehn Uhr zweiundzwanzig, fährt heute von Gleis sieben statt von Gleis drei. Grund dafür ist eine Störung an der Weiche. Der Zug verkehrt außerdem nur bis Bad Hersfeld. Reisende nach Kassel steigen dort bitte in den bereitstehenden Bus um. Wir bitten Sie, die zusätzliche Fahrzeit von etwa vierzig Minuten einzuplanen.",
+            "pauseDanachSek": 2,
+            "akustik": "durchsage",
+            "abschnitt": "text_2",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben fünf und sechs.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Radiosprecher",
+            "text": "Und damit zum Wetter für morgen, Mittwoch. Der Tag beginnt in weiten Teilen des Landes neblig, örtlich mit Sichtweiten unter hundert Metern. Bis zum Mittag löst sich der Nebel auf, danach scheint verbreitet die Sonne bei Höchstwerten zwischen achtzehn und zweiundzwanzig Grad. Am Abend ziehen von Westen her Wolken auf, trocken bleibt es aber überall. Autofahrer sollten am frühen Morgen besonders vorsichtig sein.",
+            "pauseDanachSek": 2,
+            "akustik": "radio",
+            "abschnitt": "text_3",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben sieben und acht.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Werkstatt",
+            "text": "Guten Tag, Frau Reinhardt, hier ist die Autowerkstatt Kowalski. Wir haben uns Ihren Wagen angesehen. Die Bremsen sind in Ordnung, das Geräusch kam von der Radaufhängung. Die Reparatur kostet dreihundertzwanzig Euro, also deutlich weniger als im Kostenvoranschlag von letzter Woche. Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen. Das Ersatzteil ist bestellt und kommt morgen früh. Wenn Sie sich heute noch melden, ist der Wagen am Donnerstag fertig.",
+            "pauseDanachSek": 2,
+            "akustik": "telefon",
+            "abschnitt": "text_4",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben neun und zehn.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Ansage VHS",
+            "text": "Liebe Kursteilnehmerinnen und Kursteilnehmer, eine Information für alle, die heute Abend den Kurs Digitale Fotografie besuchen wollten. Der Kurs muss leider ausfallen, da der Dozent erkrankt ist. Der Termin wird am kommenden Montag zur gewohnten Zeit nachgeholt. Wer an diesem Ersatztermin nicht teilnehmen kann, wendet sich bitte an das Sekretariat im Erdgeschoss. Die Kursgebühr wird in diesem Fall anteilig zurückerstattet.",
+            "pauseDanachSek": 2,
+            "akustik": "durchsage",
+            "abschnitt": "text_5",
+            "betont": true
+          }
         ],
         "items": [
           {
@@ -824,20 +941,84 @@
         "wiederholungen": 1,
         "situation": "Sie machen eine Führung durch ein Freilichtmuseum. Am Eingang begrüßt Sie die Museumsführerin.",
         "sprecher": [
-          { "rolle": "Museumsführerin", "geschlecht": "f", "beschreibung": "Ulrike Hoffmann, führt durch das Museum" }
+          {
+            "rolle": "Museumsführerin",
+            "geschlecht": "f",
+            "beschreibung": "Ulrike Hoffmann, führt durch das Museum"
+          }
         ],
         "skript": [
-          { "rolle": "Sprecher", "text": "Teil zwei. Sie hören einen Text. Sie hören diesen Text einmal. Lesen Sie jetzt die Aufgaben elf bis fünfzehn.", "pauseDanachSek": 40, "akustik": "studio" },
-          { "rolle": "Museumsführerin", "text": "Herzlich willkommen im Freilichtmuseum Hohenrode. Mein Name ist Ulrike Hoffmann, und ich begleite Sie in den nächsten neunzig Minuten. Bevor wir starten, noch ein paar organisatorische Hinweise.", "pauseDanachSek": 0.8, "akustik": "raum" },
-          { "rolle": "Museumsführerin", "text": "Zunächst einige Worte zur Geschichte. Unser Museum wurde neunzehnhundertsiebenundsechzig gegründet, damals mit gerade einmal drei Gebäuden. Heute erstreckt sich das Gelände über achtzehn Hektar. Wenn Sie wirklich alles sehen möchten, sollten Sie mindestens einen halben Tag einplanen. Unsere Führung zeigt Ihnen nur den älteren, westlichen Teil.", "pauseDanachSek": 0.9, "akustik": "raum" },
-          { "rolle": "Museumsführerin", "text": "Wir gehen ausschließlich im Freien. Deshalb kann ich Ihnen nur raten: Wer keine festen Schuhe anhat, sollte sich am Eingang ein Paar Gummistiefel ausleihen. Das ist kostenlos. Die Wiesen sind nach dem Regen der letzten Tage aber wirklich sehr weich.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
-          { "rolle": "Museumsführerin", "text": "Zum Museum selbst: Sie sehen hier vierzig historische Gebäude aus ganz Norddeutschland. Alle wurden an ihrem ursprünglichen Ort abgebaut, Balken für Balken nummeriert und hier wieder aufgebaut. Das älteste Haus stammt aus dem Jahr sechzehnhundertzweiundvierzig.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
-          { "rolle": "Museumsführerin", "text": "Besonders stolz sind wir auf das kleine Schulhaus, das Sie gleich rechts sehen werden. Der Wiederaufbau hat allein bei diesem einen Gebäude fast vier Jahre gedauert, weil sehr viele Balken ersetzt werden mussten. Die Klassenzimmer sind bis heute so eingerichtet, wie sie um neunzehnhundert ausgesehen haben.", "pauseDanachSek": 0.9, "akustik": "raum" },
-          { "rolle": "Museumsführerin", "text": "Das Besondere an unserem Museum ist aber nicht das Alter der Häuser, sondern dass fast alle bewohnt beziehungsweise benutzt werden. In der Schmiede wird täglich gearbeitet, in der Bäckerei wird Brot gebacken, und das können Sie hinterher natürlich auch kaufen.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
-          { "rolle": "Museumsführerin", "text": "Dazu gehören auch unsere Tiere. Wir halten alte Haustierrassen, die es sonst kaum noch gibt: Schafe, Gänse und zwei ausgesprochen neugierige Ziegen. Im Gemüsegarten hinter dem Pfarrhaus wachsen ausschließlich Sorten, die vor hundert Jahren üblich waren. Was dort geerntet wird, verwenden wir anschließend in unserer eigenen Küche.", "pauseDanachSek": 0.9, "akustik": "raum" },
-          { "rolle": "Museumsführerin", "text": "Fotografieren ist überall erlaubt, auch in den Innenräumen. Nur eine Bitte: Fassen Sie die Möbel und Geräte bitte nicht an. Wir haben bewusst keine Absperrungen, weil wir möchten, dass Sie den Räumen nahekommen. Das funktioniert aber nur, wenn alle mitmachen.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
-          { "rolle": "Museumsführerin", "text": "Dann noch zwei praktische Hinweise. Hunde dürfen mit auf das Gelände, müssen aber überall angeleint bleiben. Und falls Sie unterwegs den Anschluss an die Gruppe verlieren: Auf jedem Wegweiser steht eine Telefonnummer. Rufen Sie einfach dort an, dann holt Sie jemand ab. Das kommt häufiger vor, als Sie vielleicht denken.", "pauseDanachSek": 0.9, "akustik": "raum" },
-          { "rolle": "Museumsführerin", "text": "Am Ende der Führung treffen wir uns wieder am Gasthaus. Dort gibt es für alle Teilnehmer dieser Führung einen Kaffee, den Sie mit Ihrer Eintrittskarte bereits bezahlt haben. So, dann gehen wir jetzt los.", "pauseDanachSek": 3, "akustik": "raum", "betont": true }
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören einen Text. Sie hören diesen Text einmal. Lesen Sie jetzt die Aufgaben elf bis fünfzehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Herzlich willkommen im Freilichtmuseum Hohenrode. Mein Name ist Ulrike Hoffmann, und ich begleite Sie in den nächsten neunzig Minuten. Bevor wir starten, noch ein paar organisatorische Hinweise.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Zunächst einige Worte zur Geschichte. Unser Museum wurde neunzehnhundertsiebenundsechzig gegründet, damals mit gerade einmal drei Gebäuden. Heute erstreckt sich das Gelände über achtzehn Hektar. Wenn Sie wirklich alles sehen möchten, sollten Sie mindestens einen halben Tag einplanen. Unsere Führung zeigt Ihnen nur den älteren, westlichen Teil.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Wir gehen ausschließlich im Freien. Deshalb kann ich Ihnen nur raten: Wer keine festen Schuhe anhat, sollte sich am Eingang ein Paar Gummistiefel ausleihen. Das ist kostenlos. Die Wiesen sind nach dem Regen der letzten Tage aber wirklich sehr weich.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Zum Museum selbst: Sie sehen hier vierzig historische Gebäude aus ganz Norddeutschland. Alle wurden an ihrem ursprünglichen Ort abgebaut, Balken für Balken nummeriert und hier wieder aufgebaut. Das älteste Haus stammt aus dem Jahr sechzehnhundertzweiundvierzig.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Besonders stolz sind wir auf das kleine Schulhaus, das Sie gleich rechts sehen werden. Der Wiederaufbau hat allein bei diesem einen Gebäude fast vier Jahre gedauert, weil sehr viele Balken ersetzt werden mussten. Die Klassenzimmer sind bis heute so eingerichtet, wie sie um neunzehnhundert ausgesehen haben.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Das Besondere an unserem Museum ist aber nicht das Alter der Häuser, sondern dass fast alle bewohnt beziehungsweise benutzt werden. In der Schmiede wird täglich gearbeitet, in der Bäckerei wird Brot gebacken, und das können Sie hinterher natürlich auch kaufen.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Dazu gehören auch unsere Tiere. Wir halten alte Haustierrassen, die es sonst kaum noch gibt: Schafe, Gänse und zwei ausgesprochen neugierige Ziegen. Im Gemüsegarten hinter dem Pfarrhaus wachsen ausschließlich Sorten, die vor hundert Jahren üblich waren. Was dort geerntet wird, verwenden wir anschließend in unserer eigenen Küche.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Fotografieren ist überall erlaubt, auch in den Innenräumen. Nur eine Bitte: Fassen Sie die Möbel und Geräte bitte nicht an. Wir haben bewusst keine Absperrungen, weil wir möchten, dass Sie den Räumen nahekommen. Das funktioniert aber nur, wenn alle mitmachen.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Dann noch zwei praktische Hinweise. Hunde dürfen mit auf das Gelände, müssen aber überall angeleint bleiben. Und falls Sie unterwegs den Anschluss an die Gruppe verlieren: Auf jedem Wegweiser steht eine Telefonnummer. Rufen Sie einfach dort an, dann holt Sie jemand ab. Das kommt häufiger vor, als Sie vielleicht denken.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Museumsführerin",
+            "text": "Am Ende der Führung treffen wir uns wieder am Gasthaus. Dort gibt es für alle Teilnehmer dieser Führung einen Kaffee, den Sie mit Ihrer Eintrittskarte bereits bezahlt haben. So, dann gehen wir jetzt los.",
+            "pauseDanachSek": 3,
+            "akustik": "raum",
+            "betont": true
+          }
         ],
         "items": [
           {
@@ -936,32 +1117,158 @@
         "situation": "Nadine und Tobias arbeiten in derselben Firma. Sie treffen sich in der Kantine.",
         "sprecher": [
           { "rolle": "Nadine", "geschlecht": "f", "beschreibung": "Kollegin" },
-          { "rolle": "Tobias", "geschlecht": "m", "beschreibung": "Kollege, sucht eine Wohnung" }
+          {
+            "rolle": "Tobias",
+            "geschlecht": "m",
+            "beschreibung": "Kollege, sucht eine Wohnung"
+          }
         ],
         "skript": [
-          { "rolle": "Sprecher", "text": "Teil drei. Sie hören ein Gespräch zwischen zwei Personen. Sie hören das Gespräch einmal. Lesen Sie jetzt die Aufgaben sechzehn bis zweiundzwanzig.", "pauseDanachSek": 55, "akustik": "studio" },
-          { "rolle": "Nadine", "text": "Tobias, du siehst müde aus. Bist du immer noch auf Wohnungssuche?", "pauseDanachSek": 0.5, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Frag lieber nicht. Ich war jetzt bei vierzehn Besichtigungen. Vierzehn!", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Nadine", "text": "Und es war nichts dabei?", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Doch, zwei waren richtig gut. Aber bei der einen standen achtzig Leute im Treppenhaus. Da brauchst du gar nicht erst eine Bewerbung abzugeben.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Nadine", "text": "Achtzig? Das ist ja noch schlimmer geworden als letztes Jahr.", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Deutlich. Und die Mieten sind auch noch einmal gestiegen. Für sechzig Quadratmeter zahlst du hier inzwischen locker neunhundert Euro kalt.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Nadine", "text": "Und was suchst du überhaupt? Zwei Zimmer? Drei?", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Zwei würden mir reichen. Am liebsten hätte ich noch ein kleines Arbeitszimmer, weil ich zweimal pro Woche von zu Hause arbeite. Aber ehrlich gesagt nehme ich inzwischen fast alles, was sauber und trocken ist.", "pauseDanachSek": 0.5, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Und über einen Makler? Hast du das schon versucht?", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Habe ich. Bei zwei Wohnungen sollte ich zwei Monatsmieten Provision zahlen, und zwar für eine Wohnung, die ich noch nicht einmal von innen gesehen hatte. Das war mir dann doch zu viel.", "pauseDanachSek": 0.5, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Das kann ich gut verstehen. Suchst du eigentlich nur in der Innenstadt?", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Am Anfang schon, aber das habe ich aufgegeben. Ich schaue jetzt auch in den Vororten. Mit der Straßenbahn bin ich von Rehberg aus in zwanzig Minuten im Büro, das ist völlig in Ordnung.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Nadine", "text": "Rehberg ist doch schön. Da war ich letzten Sommer beim Seefest.", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Und die Mieten liegen dort ungefähr zwanzig Prozent niedriger. Der einzige Nachteil ist, dass abends nur alle zwanzig Minuten eine Bahn fährt.", "pauseDanachSek": 0.5, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Hast du es einmal über Bekannte versucht? Bei mir hat das damals funktioniert. Meine jetzige Wohnung stand nie in einer Anzeige.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Tobias", "text": "Das sagen alle. Ich habe im Kollegenkreis herumgefragt, bisher ohne Ergebnis.", "pauseDanachSek": 0.5, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Und ein Aushang? Bei uns im Supermarkt hängen ständig solche Zettel am schwarzen Brett.", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Tobias", "text": "Einen Zettel aufhängen? Daran hätte ich ehrlich gesagt nie gedacht.", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Kostet nichts. Probier es einfach mal aus. Ach, warte einmal – die Schwester von meinem Mann zieht im Februar nach Leipzig. Ihre Wohnung ist in Rehberg, drei Zimmer, mit Balkon. Soll ich fragen, ob der Vermieter schon jemanden hat?", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Tobias", "text": "Im Ernst? Ja, unbedingt!", "pauseDanachSek": 0.4, "akustik": "raum" },
-          { "rolle": "Nadine", "text": "Ich schreibe ihr heute Abend. Aber versprich mir eines: Wenn es klappt, hilfst du mir beim Streichen meines Arbeitszimmers.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
-          { "rolle": "Tobias", "text": "Wenn ich dadurch eine Wohnung bekomme, streiche ich dir die ganze Wohnung.", "pauseDanachSek": 3, "akustik": "raum" }
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch zwischen zwei Personen. Sie hören das Gespräch einmal. Lesen Sie jetzt die Aufgaben sechzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 55,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Tobias, du siehst müde aus. Bist du immer noch auf Wohnungssuche?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Frag lieber nicht. Ich war jetzt bei vierzehn Besichtigungen. Vierzehn!",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Und es war nichts dabei?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Doch, zwei waren richtig gut. Aber bei der einen standen achtzig Leute im Treppenhaus. Da brauchst du gar nicht erst eine Bewerbung abzugeben.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Achtzig? Das ist ja noch schlimmer geworden als letztes Jahr.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Deutlich. Und die Mieten sind auch noch einmal gestiegen. Für sechzig Quadratmeter zahlst du hier inzwischen locker neunhundert Euro kalt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Und was suchst du überhaupt? Zwei Zimmer? Drei?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Zwei würden mir reichen. Am liebsten hätte ich noch ein kleines Arbeitszimmer, weil ich zweimal pro Woche von zu Hause arbeite. Aber ehrlich gesagt nehme ich inzwischen fast alles, was sauber und trocken ist.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Und über einen Makler? Hast du das schon versucht?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Habe ich. Bei zwei Wohnungen sollte ich zwei Monatsmieten Provision zahlen, und zwar für eine Wohnung, die ich noch nicht einmal von innen gesehen hatte. Das war mir dann doch zu viel.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Das kann ich gut verstehen. Suchst du eigentlich nur in der Innenstadt?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Am Anfang schon, aber das habe ich aufgegeben. Ich schaue jetzt auch in den Vororten. Mit der Straßenbahn bin ich von Rehberg aus in zwanzig Minuten im Büro, das ist völlig in Ordnung.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Rehberg ist doch schön. Da war ich letzten Sommer beim Seefest.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Und die Mieten liegen dort ungefähr zwanzig Prozent niedriger. Der einzige Nachteil ist, dass abends nur alle zwanzig Minuten eine Bahn fährt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Hast du es einmal über Bekannte versucht? Bei mir hat das damals funktioniert. Meine jetzige Wohnung stand nie in einer Anzeige.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Das sagen alle. Ich habe im Kollegenkreis herumgefragt, bisher ohne Ergebnis.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Und ein Aushang? Bei uns im Supermarkt hängen ständig solche Zettel am schwarzen Brett.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Einen Zettel aufhängen? Daran hätte ich ehrlich gesagt nie gedacht.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Kostet nichts. Probier es einfach mal aus. Ach, warte einmal – die Schwester von meinem Mann zieht im Februar nach Leipzig. Ihre Wohnung ist in Rehberg, drei Zimmer, mit Balkon. Soll ich fragen, ob der Vermieter schon jemanden hat?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Im Ernst? Ja, unbedingt!",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Nadine",
+            "text": "Ich schreibe ihr heute Abend. Aber versprich mir eines: Wenn es klappt, hilfst du mir beim Streichen meines Arbeitszimmers.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tobias",
+            "text": "Wenn ich dadurch eine Wohnung bekomme, streiche ich dir die ganze Wohnung.",
+            "pauseDanachSek": 3,
+            "akustik": "raum"
+          }
         ],
         "items": [
           {
@@ -1058,37 +1365,156 @@
         "wiederholungen": 2,
         "situation": "In der Radiosendung „Standpunkte“ diskutieren zwei Gäste über die Frage, ob ehrenamtliche Arbeit bezahlt werden sollte.",
         "sprecher": [
-          { "rolle": "Moderatorin", "geschlecht": "f", "beschreibung": "Dr. Sabine Reuter, moderiert die Sendung" },
-          { "rolle": "Ammann", "geschlecht": "m", "beschreibung": "Gregor Ammann, Vorsitzender eines Sportvereins" },
-          { "rolle": "Bartholomäus", "geschlecht": "f", "beschreibung": "Ines Bartholomäus, Sozialwissenschaftlerin" }
+          {
+            "rolle": "Moderatorin",
+            "geschlecht": "f",
+            "beschreibung": "Dr. Sabine Reuter, moderiert die Sendung"
+          },
+          {
+            "rolle": "Ammann",
+            "geschlecht": "m",
+            "beschreibung": "Gregor Ammann, Vorsitzender eines Sportvereins"
+          },
+          {
+            "rolle": "Bartholomäus",
+            "geschlecht": "f",
+            "beschreibung": "Ines Bartholomäus, Sozialwissenschaftlerin"
+          }
         ],
         "skript": [
-          { "rolle": "Sprecher", "text": "Teil vier. Sie hören eine Diskussion im Radio. Sie hören die Diskussion zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.", "pauseDanachSek": 55, "akustik": "studio" },
-          { "rolle": "Moderatorin", "text": "Guten Abend und willkommen zu Standpunkte. Über vierzehn Millionen Menschen in Deutschland engagieren sich ehrenamtlich – in Sportvereinen, bei der Feuerwehr, in der Nachbarschaftshilfe. Doch immer weniger junge Leute machen mit. Unsere Frage heute Abend: Sollte man freiwilliges Engagement bezahlen? Bei mir im Studio sind Gregor Ammann, Vorsitzender eines Sportvereins mit vierhundert Mitgliedern, und die Sozialwissenschaftlerin Ines Bartholomäus. Frau Bartholomäus, Sie fordern eine Bezahlung. Warum?", "pauseDanachSek": 0.6, "akustik": "radio" },
-          { "rolle": "Bartholomäus", "text": "Ich fordere keine Bezahlung, ich fordere eine faire Aufwandsentschädigung – das ist ein Unterschied. Wer jeden Samstag vier Stunden lang Kinder trainiert, dafür Benzin bezahlt und sich Ausrüstung kauft, der legt am Ende Geld drauf. Ehrenamt darf kein Luxus sein, den sich nur leisten kann, wer ohnehin genug verdient.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Ammann", "text": "Da bin ich völlig bei Ihnen, was die Kosten angeht. Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet, das ist selbstverständlich. Aber sobald Sie anfangen, Stunden zu vergüten, verändern Sie den Charakter der Sache. Dann sitzen Sie plötzlich in Sitzungen über Stundensätze, und die Leute rechnen nach, wer mehr bekommt.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Moderatorin", "text": "Herr Ammann, aber Sie finden doch selbst kaum noch Nachwuchs, oder?", "pauseDanachSek": 0.5, "akustik": "radio" },
-          { "rolle": "Ammann", "text": "Das stimmt, und es ärgert mich. Nur liegt das nach meiner Erfahrung nicht am Geld. Die jungen Leute haben Angst vor der Verpflichtung. Wer sich bei uns als Trainer meldet, bindet sich für eine ganze Saison. Genau davor schrecken viele zurück.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Bartholomäus", "text": "Diese Erfahrung teile ich nicht ganz. In unseren Befragungen nennen unter Dreißigjährige zwar die Zeit als größtes Hindernis, aber direkt danach kommen die eigenen Kosten. Und interessanterweise steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird. Das ist gut belegt.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Moderatorin", "text": "Ich möchte an dieser Stelle einwerfen, dass es die steuerfreie Übungsleiterpauschale ja bereits gibt – bis zu dreitausend Euro im Jahr. Reicht das denn nicht?", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Bartholomäus", "text": "Auf dem Papier ist das großzügig. In der Praxis nutzen sie vor allem Vereine, die gut organisiert sind und jemanden haben, der sich mit Formularen auskennt. Die kleine Nachbarschaftsinitiative ohne Buchhaltung profitiert davon überhaupt nicht.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Ammann", "text": "Und trotzdem warne ich davor, alles über Geld zu regeln. Was unsere Leute wirklich hält, ist die Anerkennung. Wir machen einmal im Jahr ein großes Sommerfest nur für die Ehrenamtlichen, und die Gemeinde stellt uns kostenlos die Sporthalle. Das kostet fast nichts und wirkt mehr als jede Pauschale.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Moderatorin", "text": "Herr Ammann, man hört oft das Argument: Wer bezahlt wird, übernimmt auch mehr Verantwortung. Sehen Sie das anders?", "pauseDanachSek": 0.5, "akustik": "radio" },
-          { "rolle": "Ammann", "text": "Ganz anders sogar. Verantwortung entsteht bei uns dadurch, dass jemand gefragt wird und Ja sagt. Wir haben Übungsleiter, die seit über zwanzig Jahren jede Woche in der Halle stehen. Kein Einziger von ihnen ist damals wegen des Geldes gekommen.", "pauseDanachSek": 0.6, "akustik": "radio" },
-          { "rolle": "Moderatorin", "text": "Frau Bartholomäus, Herr Ammann beschreibt einen gewachsenen Verein. Gilt Ihr Argument für solche Vereine überhaupt?", "pauseDanachSek": 0.5, "akustik": "radio" },
-          { "rolle": "Bartholomäus", "text": "Nur eingeschränkt, das gebe ich gern zu. Ein Verein mit vierhundert Mitgliedern und festen Strukturen trägt sich oft selbst. Mir geht es um die vielen kleinen Gruppen, die gerade erst entstehen, etwa in der Nachbarschaftshilfe. Dort kennt sich niemand seit zwanzig Jahren, und dort schläft das Engagement nach wenigen Monaten wieder ein.", "pauseDanachSek": 0.6, "akustik": "radio" },
-          { "rolle": "Ammann", "text": "Einen Punkt möchte ich noch ergänzen, der in dieser Debatte fast immer fehlt: die Ausbildung. Ein Trainerschein kostet je nach Sportart zwischen zweihundert und sechshundert Euro. Diese Kosten übernehmen wir vollständig. Ohne das würde bei uns überhaupt niemand mehr anfangen.", "pauseDanachSek": 0.6, "akustik": "radio" },
-          { "rolle": "Bartholomäus", "text": "Da sind wir uns einig. Unsere Untersuchung zeigt übrigens noch etwas: Frauen übernehmen deutlich häufiger die unsichtbaren Aufgaben – Kuchen backen, Telefonlisten führen, Fahrdienste organisieren. Bezahlt oder öffentlich gelobt werden dagegen meist die sichtbaren Rollen. Auch das gehört zu diesem Thema.", "pauseDanachSek": 0.6, "akustik": "radio" },
-          { "rolle": "Moderatorin", "text": "Frau Bartholomäus, ein letzter Punkt an Sie: Was müsste sich morgen ändern?", "pauseDanachSek": 0.5, "akustik": "radio" },
-          { "rolle": "Bartholomäus", "text": "Die Auszahlung müsste einfacher werden. Ein Formular, eine Stelle, fertig. Solange ein Verein einen Steuerberater braucht, um dreihundert Euro auszuzahlen, ändert sich gar nichts.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
-          { "rolle": "Moderatorin", "text": "Damit sind wir leider am Ende der Sendung. Vielen Dank Ihnen beiden.", "pauseDanachSek": 3, "akustik": "radio" }
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören eine Diskussion im Radio. Sie hören die Diskussion zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 55,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Guten Abend und willkommen zu Standpunkte. Über vierzehn Millionen Menschen in Deutschland engagieren sich ehrenamtlich – in Sportvereinen, bei der Feuerwehr, in der Nachbarschaftshilfe. Doch immer weniger junge Leute machen mit. Unsere Frage heute Abend: Sollte man freiwilliges Engagement bezahlen? Bei mir im Studio sind Gregor Ammann, Vorsitzender eines Sportvereins mit vierhundert Mitgliedern, und die Sozialwissenschaftlerin Ines Bartholomäus. Frau Bartholomäus, Sie fordern eine Bezahlung. Warum?",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Ich fordere keine Bezahlung, ich fordere eine faire Aufwandsentschädigung – das ist ein Unterschied. Wer jeden Samstag vier Stunden lang Kinder trainiert, dafür Benzin bezahlt und sich Ausrüstung kauft, der legt am Ende Geld drauf. Ehrenamt darf kein Luxus sein, den sich nur leisten kann, wer ohnehin genug verdient.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Ammann",
+            "text": "Da bin ich völlig bei Ihnen, was die Kosten angeht. Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet, das ist selbstverständlich. Aber sobald Sie anfangen, Stunden zu vergüten, verändern Sie den Charakter der Sache. Dann sitzen Sie plötzlich in Sitzungen über Stundensätze, und die Leute rechnen nach, wer mehr bekommt.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Ammann, aber Sie finden doch selbst kaum noch Nachwuchs, oder?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ammann",
+            "text": "Das stimmt, und es ärgert mich. Nur liegt das nach meiner Erfahrung nicht am Geld. Die jungen Leute haben Angst vor der Verpflichtung. Wer sich bei uns als Trainer meldet, bindet sich für eine ganze Saison. Genau davor schrecken viele zurück.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Diese Erfahrung teile ich nicht ganz. In unseren Befragungen nennen unter Dreißigjährige zwar die Zeit als größtes Hindernis, aber direkt danach kommen die eigenen Kosten. Und interessanterweise steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird. Das ist gut belegt.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Ich möchte an dieser Stelle einwerfen, dass es die steuerfreie Übungsleiterpauschale ja bereits gibt – bis zu dreitausend Euro im Jahr. Reicht das denn nicht?",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Auf dem Papier ist das großzügig. In der Praxis nutzen sie vor allem Vereine, die gut organisiert sind und jemanden haben, der sich mit Formularen auskennt. Die kleine Nachbarschaftsinitiative ohne Buchhaltung profitiert davon überhaupt nicht.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Ammann",
+            "text": "Und trotzdem warne ich davor, alles über Geld zu regeln. Was unsere Leute wirklich hält, ist die Anerkennung. Wir machen einmal im Jahr ein großes Sommerfest nur für die Ehrenamtlichen, und die Gemeinde stellt uns kostenlos die Sporthalle. Das kostet fast nichts und wirkt mehr als jede Pauschale.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Ammann, man hört oft das Argument: Wer bezahlt wird, übernimmt auch mehr Verantwortung. Sehen Sie das anders?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ammann",
+            "text": "Ganz anders sogar. Verantwortung entsteht bei uns dadurch, dass jemand gefragt wird und Ja sagt. Wir haben Übungsleiter, die seit über zwanzig Jahren jede Woche in der Halle stehen. Kein Einziger von ihnen ist damals wegen des Geldes gekommen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Bartholomäus, Herr Ammann beschreibt einen gewachsenen Verein. Gilt Ihr Argument für solche Vereine überhaupt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Nur eingeschränkt, das gebe ich gern zu. Ein Verein mit vierhundert Mitgliedern und festen Strukturen trägt sich oft selbst. Mir geht es um die vielen kleinen Gruppen, die gerade erst entstehen, etwa in der Nachbarschaftshilfe. Dort kennt sich niemand seit zwanzig Jahren, und dort schläft das Engagement nach wenigen Monaten wieder ein.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ammann",
+            "text": "Einen Punkt möchte ich noch ergänzen, der in dieser Debatte fast immer fehlt: die Ausbildung. Ein Trainerschein kostet je nach Sportart zwischen zweihundert und sechshundert Euro. Diese Kosten übernehmen wir vollständig. Ohne das würde bei uns überhaupt niemand mehr anfangen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Da sind wir uns einig. Unsere Untersuchung zeigt übrigens noch etwas: Frauen übernehmen deutlich häufiger die unsichtbaren Aufgaben – Kuchen backen, Telefonlisten führen, Fahrdienste organisieren. Bezahlt oder öffentlich gelobt werden dagegen meist die sichtbaren Rollen. Auch das gehört zu diesem Thema.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Bartholomäus, ein letzter Punkt an Sie: Was müsste sich morgen ändern?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bartholomäus",
+            "text": "Die Auszahlung müsste einfacher werden. Ein Formular, eine Stelle, fertig. Solange ein Verein einen Steuerberater braucht, um dreihundert Euro auszuzahlen, ändert sich gar nichts.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Damit sind wir leider am Ende der Sendung. Vielen Dank Ihnen beiden.",
+            "pauseDanachSek": 3,
+            "akustik": "radio"
+          }
         ],
         "items": [
           {
             "nr": 23,
             "typ": "zuordnung_person",
             "frage": "Ehrenamtliches Engagement darf nicht davon abhängen, wie viel jemand verdient.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "c",
             "beleg": "Ehrenamt darf kein Luxus sein, den sich nur leisten kann, wer ohnehin genug verdient.",
             "kompetenz": "zuordnen",
@@ -1101,7 +1527,11 @@
             "nr": 24,
             "typ": "zuordnung_person",
             "frage": "In meiner Organisation werden Fahrtkosten bereits zurückgezahlt.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "b",
             "beleg": "Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet, das ist selbstverständlich.",
             "kompetenz": "zuordnen",
@@ -1114,7 +1544,11 @@
             "nr": 25,
             "typ": "zuordnung_person",
             "frage": "Eine steuerfreie Pauschale für Übungsleiter existiert bereits.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "a",
             "beleg": "Ich möchte an dieser Stelle einwerfen, dass es die steuerfreie Übungsleiterpauschale ja bereits gibt – bis zu dreitausend Euro im Jahr.",
             "kompetenz": "zuordnen",
@@ -1127,7 +1561,11 @@
             "nr": 26,
             "typ": "zuordnung_person",
             "frage": "Junge Menschen scheuen vor allem die lange Bindung.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "b",
             "beleg": "Die jungen Leute haben Angst vor der Verpflichtung.",
             "kompetenz": "zuordnen",
@@ -1140,7 +1578,11 @@
             "nr": 27,
             "typ": "zuordnung_person",
             "frage": "Eine kleine Zahlung erhöht nachweislich die Bereitschaft mitzumachen.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "c",
             "beleg": "Und interessanterweise steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird. Das ist gut belegt.",
             "kompetenz": "zuordnen",
@@ -1153,7 +1595,11 @@
             "nr": 28,
             "typ": "zuordnung_person",
             "frage": "Kleine Gruppen ohne eigene Verwaltung haben von der bestehenden Regelung nichts.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "c",
             "beleg": "Die kleine Nachbarschaftsinitiative ohne Buchhaltung profitiert davon überhaupt nicht.",
             "kompetenz": "zuordnen",
@@ -1166,7 +1612,11 @@
             "nr": 29,
             "typ": "zuordnung_person",
             "frage": "Anerkennung wirkt stärker als eine Geldzahlung.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "b",
             "beleg": "Das kostet fast nichts und wirkt mehr als jede Pauschale.",
             "kompetenz": "zuordnen",
@@ -1179,7 +1629,11 @@
             "nr": 30,
             "typ": "zuordnung_person",
             "frage": "Die Auszahlung muss unbürokratischer werden.",
-            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "Gregor Ammann",
+              "c": "Ines Bartholomäus"
+            },
             "loesung": "c",
             "beleg": "Die Auszahlung müsste einfacher werden. Ein Formular, eine Stelle, fertig.",
             "kompetenz": "zuordnen",

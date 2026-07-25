@@ -27,9 +27,10 @@ import os
 import sys
 import time
 import unicodedata
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 import numpy as np
 import soundfile as sf
@@ -328,6 +329,7 @@ class EdgeProvider:
               deliberate: bool = False) -> np.ndarray:
         import asyncio
         import io
+
         import edge_tts
 
         rate = f"{rate_percent:+d}%" if rate_percent else "+0%"
@@ -640,7 +642,7 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
         "format": ext,
         "sampleRate": sr,
         "sprechtempoProzent": rate,
-        "voices": {r: k for r, k in voices.items()},
+        "voices": dict(voices),
         "voiceLicences": {k: VOICES[k].licence for k in set(voices.values()) if k in VOICES},
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "hoeren": [],
