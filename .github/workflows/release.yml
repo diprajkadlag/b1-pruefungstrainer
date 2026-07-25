@@ -29,9 +29,14 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
+          # lmodern and pgf are separate packages on Ubuntu and are not pulled
+          # in by texlive-fonts-recommended or texlive-latex-extra, although
+          # b1pruefung.sty needs both: lmodern for the type, pgffor for the
+          # ruled writing lines.
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-recommended texlive-latex-extra \
-            texlive-lang-german texlive-fonts-recommended
+            texlive-lang-german texlive-fonts-recommended \
+            texlive-pictures lmodern
 
       - name: Validate content
         run: python tools/validate.py --strict
