@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage{b1pruefung}
+
+\pruefungstitel{<< meta.titel >>}
+\modulname{Antwortbogen}
+\niveaustufe{<< meta.niveau >>}
+
+\newcommand{\bogenzeile}[2]{%
+  \noindent\makebox[2.4em][l]{\bfseries #1}#2\par\vspace{3pt}%
+}
+\newcommand{\rfpaar}{\antwortkasten\ R\quad\antwortkasten\ F}
+\newcommand{\jnpaar}{\antwortkasten\ Ja\quad\antwortkasten\ Nein}
+\newcommand{\abcdrei}{\antwortkasten\ a\quad\antwortkasten\ b\quad\antwortkasten\ c}
+\newcommand{\kastenfeld}{\framebox[3em][c]{\rule{0pt}{1.3em}}}
+
+\begin{document}
+
+\modulkopf{Antwortbogen}{}{Name: \rule{6cm}{0.4pt}\qquad Datum: \rule{3cm}{0.4pt}}
+\hinweisblock
+
+{\small Übertragen Sie Ihre Lösungen hier. Nur dieser Bogen wird bewertet.
+Kreuzen Sie eindeutig an. Bei Teil 3 des Moduls Lesen tragen Sie den
+Buchstaben der passenden Anzeige ein, oder \textbf{0}, wenn keine Anzeige passt.}
+
+\vspace{0.8em}
+\begin{minipage}[t]{0.48\linewidth}
+{\large\bfseries Lesen}\par
+{\color{b1edge}\hrule height 0.8pt}\vspace{0.5em}
+
+{\bfseries\small Teil 1 — richtig / falsch}\par\vspace{2pt}
+<% for n in range(1, 7) %>\bogenzeile{<< n >>}{\rfpaar}
+<% endfor %>
+\vspace{0.4em}
+{\bfseries\small Teil 2 — a / b / c}\par\vspace{2pt}
+<% for n in range(7, 13) %>\bogenzeile{<< n >>}{\abcdrei}
+<% endfor %>
+\vspace{0.4em}
+{\bfseries\small Teil 3 — Anzeige a–j oder 0}\par\vspace{2pt}
+<% for n in range(13, 20) %>\bogenzeile{<< n >>}{\kastenfeld}
+<% endfor %>
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+{\large\bfseries\phantom{Lesen}}\par
+{\color{white}\hrule height 0.8pt}\vspace{0.5em}
+
+{\bfseries\small Teil 4 — dafür / dagegen}\par\vspace{2pt}
+<% for n in range(20, 27) %>\bogenzeile{<< n >>}{\jnpaar}
+<% endfor %>
+\vspace{0.4em}
+{\bfseries\small Teil 5 — a / b / c}\par\vspace{2pt}
+<% for n in range(27, 31) %>\bogenzeile{<< n >>}{\abcdrei}
+<% endfor %>
+
+\vspace{1.2em}
+\noindent\fbox{\begin{minipage}{0.9\linewidth}\small
+Punkte Lesen: \rule{1.5cm}{0.4pt} / 30 Aufgaben\\[2pt]
+Ergebnis: \rule{1.5cm}{0.4pt} / 100 Punkte
+\end{minipage}}
+\end{minipage}
+
+\vspace{1.4em}
+{\color{b1rule}\hrule height 1pt}
+\vspace{0.8em}
+
+\begin{minipage}[t]{0.48\linewidth}
+{\large\bfseries Hören}\par
+{\color{b1edge}\hrule height 0.8pt}\vspace{0.5em}
+
+{\bfseries\small Teil 1}\par\vspace{2pt}
+<% for n in range(1, 11) %>\bogenzeile{<< n >>}{<% if n % 2 == 1 %>\rfpaar<% else %>\abcdrei<% endif %>}
+<% endfor %>
+\vspace{0.4em}
+{\bfseries\small Teil 2 — a / b / c}\par\vspace{2pt}
+<% for n in range(11, 16) %>\bogenzeile{<< n >>}{\abcdrei}
+<% endfor %>
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+{\large\bfseries\phantom{Hören}}\par
+{\color{white}\hrule height 0.8pt}\vspace{0.5em}
+
+{\bfseries\small Teil 3 — richtig / falsch}\par\vspace{2pt}
+<% for n in range(16, 23) %>\bogenzeile{<< n >>}{\rfpaar}
+<% endfor %>
+\vspace{0.4em}
+{\bfseries\small Teil 4 — wer sagt das?}\par\vspace{2pt}
+<% for n in range(23, 31) %>\bogenzeile{<< n >>}{\abcdrei}
+<% endfor %>
+
+\vspace{0.8em}
+\noindent\fbox{\begin{minipage}{0.9\linewidth}\small
+Punkte Hören: \rule{1.5cm}{0.4pt} / 30 Aufgaben\\[2pt]
+Ergebnis: \rule{1.5cm}{0.4pt} / 100 Punkte
+\end{minipage}}
+\end{minipage}
+
+\clearpage
+
+\modulkopf{Antwortbogen — Schreiben}{60 Minuten}{100 Punkte}
+
+{\small Schreiben Sie hier Ihre Texte. Bitte gut lesbar.}
+
+<% for a in schreiben.aufgaben %>
+\vspace{0.5em}
+{\large\bfseries Aufgabe << a.nummer >>}\hfill{\small\color{b1mute}ca. << a.woerter >> Wörter · << a.punkte >> Punkte}\par
+{\color{b1edge}\hrule height 0.8pt}
+\schreiblinien{<< a.woerter | zeilen >>}
+<% if not loop.last %>\clearpage<% endif %>
+<% endfor %>
+
+\end{document}

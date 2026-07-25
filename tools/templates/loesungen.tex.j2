@@ -1,0 +1,228 @@
+\documentclass[11pt]{article}
+\usepackage{b1pruefung}
+\usepackage{longtable}
+
+\pruefungstitel{<< meta.titel >>}
+\modulname{Lösungen}
+\niveaustufe{<< meta.niveau >>}
+
+\begin{document}
+
+\modulkopf{Lösungen und Lernzusammenfassung}{}{Schlüssel · Transkripte · Glossar · Grammatik}
+\hinweisblock
+
+{\small Zu jeder Aufgabe finden Sie die Lösung, den Beleg im Text, eine
+Begründung auf Deutsch und eine englische Erklärung dazu, warum die anderen
+Optionen falsch sind. Danach folgen Musterlösungen, ein Wortschatz-Glossar mit
+allen Wortformen und ein Grammatik-Teil mit Übungen.}
+
+\vspace{0.6em}
+\noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\small\textbf{Bewertung.} Lesen und Hören: je 30 Aufgaben, jede Aufgabe
+1 Punkt. Die Rohpunkte werden auf 100 Punkte umgerechnet
+(Punkte $=$ richtige Aufgaben $\times\ 10/3$). Bestanden ab \textbf{60 Punkten}
+pro Modul.\\[3pt]
+\textbf{sehr gut} 100–90 \quad \textbf{gut} 89–80 \quad
+\textbf{befriedigend} 79–70 \quad \textbf{ausreichend} 69–60 \quad
+\textbf{nicht bestanden} unter 60
+\end{minipage}}
+
+%% ---------------- Schnellübersicht ----------------
+\vspace{0.9em}
+{\large\bfseries Lösungsschlüssel auf einen Blick}\par
+{\color{b1edge}\hrule height 0.8pt}\vspace{0.5em}
+
+\begin{minipage}[t]{0.48\linewidth}
+{\bfseries Lesen}\par\vspace{3pt}
+{\ttfamily\small
+<% for item in lesen | alle_items %><< "%2d" | format(item.nr) >>  << item.loesung | kurz >>\quad<% if loop.index % 3 == 0 %>\par<% endif %><% endfor %>
+}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+{\bfseries Hören}\par\vspace{3pt}
+{\ttfamily\small
+<% for item in hoeren | alle_items %><< "%2d" | format(item.nr) >>  << item.loesung | kurz >>\quad<% if loop.index % 3 == 0 %>\par<% endif %><% endfor %>
+}
+\end{minipage}
+
+%% ---------------- Lesen ----------------
+\clearpage
+{\Large\bfseries Modul Lesen}\par
+{\color{b1rule}\hrule height 1pt}
+
+<% for teil in lesen.teile %>
+\vspace{0.7em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil | teilname | tex >>}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+<% for item in teil['items'] %>
+\loesungszeile{<< item.nr >>}{<< item.loesung | kurz >>}{%
+  << item.frage | tex >>%
+}
+<% if item.get('beleg') %>\beleg{<< item.get('beleg') | tex >>}<% endif %>
+\warum{<< item.begruendung.de | tex >>}
+\warumen{<< item.begruendung.en | tex >>}
+<% endfor %>
+<% endfor %>
+
+%% ---------------- Hören ----------------
+\clearpage
+{\Large\bfseries Modul Hören}\par
+{\color{b1rule}\hrule height 1pt}
+
+<% for teil in hoeren.teile %>
+\vspace{0.7em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil | teilname | tex >>}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+<% for item in teil['items'] %>
+\loesungszeile{<< item.nr >>}{<< item.loesung | kurz >>}{%
+  << item.frage | tex >>%
+}
+<% if item.get('beleg') %>\beleg{<< item.get('beleg') | tex >>}<% endif %>
+\warum{<< item.begruendung.de | tex >>}
+\warumen{<< item.begruendung.en | tex >>}
+<% endfor %>
+<% endfor %>
+
+%% ---------------- Hörtexte ----------------
+\clearpage
+{\Large\bfseries Hörtexte — Transkription}\par
+{\color{b1rule}\hrule height 1pt}
+
+{\small Die Sätze, die eine Lösung tragen, sind \textbf{fett} gedruckt.}
+
+<% for teil in hoeren.teile %>
+\vspace{0.7em}
+{\large\bfseries Teil << teil.nummer >>}\hfill{\small\color{b1mute}<< teil.wiederholungen >>× zu hören}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+<% for line in teil.skript %>
+\noindent\makebox[7.5em][l]{\small\bfseries\color{b1mute}<< line.rolle | tex >>}%
+\begin{minipage}[t]{\dimexpr\linewidth-7.5em\relax}<% if line.get('betont') %>\bfseries{}<% endif %><< line.text | tex >>\end{minipage}\par\vspace{2pt}
+<% endfor %>
+<% endfor %>
+
+%% ---------------- Schreiben ----------------
+\clearpage
+{\Large\bfseries Modul Schreiben — Musterlösungen}\par
+{\color{b1rule}\hrule height 1pt}
+
+<% for a in schreiben.aufgaben %>
+\vspace{0.7em}
+{\large\bfseries Aufgabe << a.nummer >>}\quad{\color{b1mute}\small << a | aufgabenname | tex >> · ca. << a.woerter >> Wörter · << a.punkte >> Punkte}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+
+<% if a.get('redemittel') %>
+{\bfseries\small Nützliche Redemittel}
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=3pt,label=\textbullet]
+<% for r in a.get('redemittel') %>\item << r | tex >>
+<% endfor %>
+\end{itemize}
+<% endif %>
+
+<% for m in a.musterloesungen | sort(attribute='niveau') %>
+\vspace{0.3em}
+\pruefungstext{Musterlösung — << m.niveau | tex >>}{}{<< m.text | texpar >>}
+\warum{\textbf{Kommentar:} << m.kommentar | tex >>}
+<% endfor %>
+<% endfor %>
+
+\vspace{0.8em}
+\noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\small\textbf{Bewertungsraster Schreiben.} Aufgaben 1 und 2: je 10 Punkte für
+Erfüllung, Kohärenz, Wortschatz und Strukturen (40 Punkte).
+Aufgabe 3: 4 Punkte für Erfüllung, 4 für Kohärenz, 6 für Wortschatz,
+6 für Strukturen (20 Punkte). Zusammen 100 Punkte.\\[3pt]
+\textbf{Wichtig:} Fehlt ein Leitpunkt vollständig, kann die Aufgabe bei
+„Erfüllung“ nicht mehr als die Hälfte der Punkte bekommen.
+\end{minipage}}
+
+%% ---------------- Sprechen ----------------
+\clearpage
+{\Large\bfseries Modul Sprechen — Musterantworten}\par
+{\color{b1rule}\hrule height 1pt}
+
+<% for teil in sprechen.teile %>
+\vspace{0.7em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil.titel | tex >> · << teil.punkte >> Punkte}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+
+<% for thema in teil.get('themen') or [] %>
+{\bfseries << thema.titel | tex >>}\par
+<% if thema.get('redemittel') %>
+{\small\color{b1mute}Redemittel: <% for r in thema.get('redemittel') %><< r | tex >><% if not loop.last %> · <% endif %><% endfor %>}\par
+<% endif %>
+\pruefungstext{Musterantwort}{}{<< thema.musterantwort | texpar >>}
+<% endfor %>
+
+<% for p in teil.get('partnerSkript') or [] %>
+\noindent\makebox[6em][l]{\small\bfseries\color{b1mute}Partner}%
+\begin{minipage}[t]{\dimexpr\linewidth-6em\relax}<< p.text | tex >>\par
+{\small\color{b1mute}$
+ightarrow$ << p.get('hinweis') | default('') | tex >> (ca. << p.wartenSek >> Sekunden)}\end{minipage}\par\vspace{3pt}
+<% endfor %>
+<% endfor %>
+
+\vspace{0.6em}
+\noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\small\textbf{Bewertungsraster Sprechen.}
+Teil 1 (28): Erfüllung 8, Interaktion 4, Wortschatz 8, Strukturen 8.
+Teil 2 (40): Erfüllung 12, Interaktion 4, Wortschatz 12, Strukturen 12.
+Teil 3 (16): Erfüllung 16.
+Aussprache über alle Teile: 16. Zusammen 100 Punkte.
+\end{minipage}}
+
+%% ---------------- Glossar ----------------
+\clearpage
+{\Large\bfseries Wortschatz aus dieser Prüfung}\par
+{\color{b1rule}\hrule height 1pt}
+
+{\small Alle Wörter stammen aus den Texten dieser Prüfung. Nomen stehen mit
+Artikel und Plural, Verben mit allen Stammformen. Lernen Sie Verben immer
+zusammen mit ihrer Präposition und deren Kasus.}
+
+\vspace{0.4em}
+{\small\begin{longtable}{@{}p{0.32\linewidth}p{0.30\linewidth}p{0.30\linewidth}@{}}
+\textbf{Wort / Formen} & \textbf{Bedeutung} & \textbf{Im Text} \\
+\hline
+\endhead
+<% for g in glossar | sort(attribute='lemma') %>
+<< g | glossarformen >> & << g.bedeutung_en | tex >> & \textit{<< g.get('beispiel') | tex | kuerzen >>}\newline{\scriptsize\color{b1mute}<< g.fundstelle | tex >>} \\[3pt]
+<% endfor %>
+\end{longtable}}
+
+<% if redewendungen %>
+\vspace{0.5em}
+{\large\bfseries Redewendungen und feste Wendungen}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\small\begin{longtable}{@{}p{0.26\linewidth}p{0.36\linewidth}p{0.32\linewidth}@{}}
+<% for r in redewendungen %>
+\textbf{<< r.wendung | tex >>} & << r.bedeutung_en | tex >> & \textit{<< r.get('beispiel') | tex | kuerzen >>} \\[3pt]
+<% endfor %>
+\end{longtable}}
+<% endif %>
+
+%% ---------------- Grammatik ----------------
+\clearpage
+{\Large\bfseries Grammatik aus dieser Prüfung}\par
+{\color{b1rule}\hrule height 1pt}
+
+{\small Diese Strukturen wurden in dieser Prüfung tatsächlich geprüft. Jeder
+Punkt zeigt den echten Satz aus dem Text und hat drei Übungen.}
+
+<% for g in grammatik %>
+\vspace{0.7em}
+{\large\bfseries << g.phaenomen | tex >>}\hfill{\small\color{b1mute}<< g.fundstelle | tex >>}\par
+{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+\warum{<< g.erklaerung_de | tex >>}
+\warumen{<< g.erklaerung_en | tex >>}
+\pruefungstext{}{}{\textbf{Beispiel aus der Prüfung:} „<< g.belegSatz | tex >>“}
+{\bfseries\small Übungen}
+\begin{enumerate}[leftmargin=1.6em,itemsep=3pt,topsep=3pt]
+<% for u in g.uebungen %>
+\item << u.aufgabe | tex >>%
+<% if u.hinweis %>\newline{\scriptsize\color{b1mute}Tipp: << u.hinweis | tex >>}<% endif %>%
+\newline{\small\color{b1mark}Lösung: << u.loesung | tex >>}
+<% endfor %>
+\end{enumerate}
+<% endfor %>
+
+\end{document}

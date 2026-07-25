@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{b1pruefung}
+
+\pruefungstitel{<< meta.titel >>}
+\modulname{Kandidatenblätter}
+\niveaustufe{<< meta.niveau >>}
+
+\begin{document}
+
+%% ===================== LESEN =====================
+\modulname{Lesen}
+\modulkopf{Modul Lesen}{65 Minuten}{30 Aufgaben · 100 Punkte}
+\hinweisblock
+
+Das Modul Lesen hat fünf Teile. Sie lesen mehrere Texte und lösen dazu
+Aufgaben. Schreiben Sie Ihre Lösungen am Ende auf den Antwortbogen.
+Wörterbücher und Mobiltelefone sind nicht erlaubt.
+
+<% for teil in lesen.teile %>
+\teil{<< teil.nummer >>}{<< teil | teilname | tex >>}{<< teil.anweisung | tex >>}{<< teil.richtzeitMinuten >> Min.}
+
+<% if teil.get('these') %>\pruefungstext{}{}{\textbf{<< teil.get('these') | tex >>}}<% endif %>
+
+<% if teil.nummer != 3 %>
+<% for t in teil.get('texte') or [] %>
+\pruefungstext{<< t.titel | default('') | tex >>}{<< t.quelle | default('') | tex >>}{<< t.inhalt | texpar >>}
+<% endfor %>
+<% endif %>
+
+<% if teil.get('beispiel') %>
+\beispielkasten{<< teil.get('beispiel') | itemmacro >>}
+<% endif %>
+
+<% if teil.nummer == 3 %>
+<% for item in teil['items'] %>
+\itemzuordnung{<< item.nr >>}{<< item.frage | tex >>}
+<% endfor %>
+
+\vspace{0.6em}
+{\bfseries Anzeigen}
+\vspace{0.2em}
+<% for a in teil.get('anzeigen') %>
+\anzeige{<< a.buchstabe >>}{<< a.titel | tex >>}{<< a.inhalt | tex >>}
+<% endfor %>
+<% else %>
+<% for item in teil['items'] %>
+<< item | itemmacro >>
+<% endfor %>
+<% endif %>
+<% endfor %>
+
+\clearpage
+
+%% ===================== HÖREN =====================
+\modulname{Hören}
+\modulkopf{Modul Hören}{ca. 40 Minuten}{30 Aufgaben · 100 Punkte}
+
+Das Modul Hören hat vier Teile. Sie hören mehrere Texte und lösen dazu
+Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
+
+<% for teil in hoeren.teile %>
+\teil{<< teil.nummer >>}{<< teil | teilname | tex >>}{<< teil.anweisung | tex >>}{<< teil.wiederholungen >>× hören}
+
+<% if teil.get('situation') %>\textit{<< teil.get('situation') | tex >>}\par<% endif %>
+
+<% if teil.get('beispiel') %>
+\beispielkasten{<< teil.get('beispiel') | itemmacro >>}
+<% endif %>
+
+<% if teil.nummer == 4 %>
+{\small Wer sagt das? Kreuzen Sie an: \textbf{a} die Moderatorin,
+\textbf{b} <<  teil.get('sprecher')[1].rolle | tex >>, \textbf{c} << teil.get('sprecher')[2].rolle | tex >>.}
+<% endif %>
+
+<% for item in teil['items'] %>
+<< item | itemmacro >>
+<% endfor %>
+<% endfor %>
+
+\clearpage
+
+%% ===================== SCHREIBEN =====================
+\modulname{Schreiben}
+\modulkopf{Modul Schreiben}{60 Minuten}{3 Aufgaben · 100 Punkte}
+
+Das Modul Schreiben hat drei Aufgaben. Schreiben Sie Ihre Texte auf den
+Antwortbogen. Achten Sie auf Anrede, Gruß und die vorgegebene Länge.
+
+<% for a in schreiben.aufgaben %>
+\schreibaufgabe{<< a.nummer >>}{<< a | aufgabenname | tex >>}{<< a.zeitMinuten >> Min.}{<< a.punkte >>}{<< a.woerter >>}{<< a.get('situation') | tex >>}{<< a.aufgabenstellung | tex >>}
+
+<% if a.get('impuls') %>
+\pruefungstext{}{}{<< a.get('impuls') | texpar >>}
+<% endif %>
+
+\leitpunkte{<% for p in a.leitpunkte %>\item << p | tex >>
+<% endfor %>}
+
+<% if a.get('anrede') %>{\small\color{b1mute}Beginnen Sie zum Beispiel mit:
+\textit{<< a.get('anrede') | tex >>,}}\par<% endif %>
+
+\schreiblinien{<< a.woerter | zeilen >>}
+<% endfor %>
+
+\end{document}

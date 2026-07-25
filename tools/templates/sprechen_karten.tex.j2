@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{b1pruefung}
+
+\pruefungstitel{<< meta.titel >>}
+\modulname{Sprechen}
+\niveaustufe{<< meta.niveau >>}
+
+\begin{document}
+
+\modulkopf{Modul Sprechen}{ca. 15 Minuten · 15 Minuten Vorbereitung}{100 Punkte}
+\hinweisblock
+
+Das Modul Sprechen hat drei Teile und wird normalerweise zu zweit abgelegt.
+Sie haben 15 Minuten Zeit, sich vorzubereiten. Notizen dürfen Sie machen und
+in die Prüfung mitnehmen; vorformulierte Sätze vorlesen dürfen Sie nicht.
+
+{\small\color{b1mute}\textbf{Ohne Partner:} Die Web-App spielt in Teil 1 und
+Teil 3 einen simulierten Partner ein und lässt Ihnen Zeit zum Antworten.
+Ihre Antworten werden aufgezeichnet.}
+
+<% for teil in sprechen.teile %>
+\teil{<< teil.nummer >>}{<< teil.titel | tex >>}{<< teil.anweisung | tex >>}{ca. << teil.dauerMinuten >> Min. · << teil.punkte >> Punkte}
+
+<% if teil.get('situation') %>
+\pruefungstext{Situation}{}{<< teil.get('situation') | texpar >>}
+<% endif %>
+
+<% if teil.get('planungspunkte') %>
+\leitpunkte{<% for p in teil.get('planungspunkte') %>\item << p | tex >>
+<% endfor %>}
+{\small\color{b1mute}Machen Sie Vorschläge, reagieren Sie auf die Vorschläge
+Ihres Partners und einigen Sie sich am Ende auf eine gemeinsame Lösung.}
+<% endif %>
+
+<% if teil.get('themen') %>
+<% for thema in teil.get('themen') %>
+\needspace{10\baselineskip}
+\vspace{0.6em}
+{\bfseries Thema << loop.index >>: << thema.titel | tex >>}\par
+\vspace{0.3em}
+<% for f in thema.folien %>
+\folie{Folie << loop.index >>}{<< f | tex | folientext >>}
+<% endfor %>
+<% if not loop.last %>\vspace{0.5em}{\color{b1edge}\hrule height 0.5pt}<% endif %>
+<% endfor %>
+{\small\color{b1mute}Wählen Sie \textbf{eines} der beiden Themen.}
+<% endif %>
+
+<% if teil.get('fragen') %>
+\leitpunkte{<% for f in teil.get('fragen') %>\item << f | tex >>
+<% endfor %>}
+<% endif %>
+<% endfor %>
+
+\clearpage
+
+\modulkopf{Notizblatt}{15 Minuten Vorbereitung}{wird nicht bewertet}
+
+{\small Notieren Sie hier Stichworte — keine ganzen Sätze. Sie dürfen dieses
+Blatt in die Prüfung mitnehmen.}
+
+\vspace{0.5em}
+{\bfseries Teil 1 — Planung}
+\schreiblinien{8}
+
+\vspace{0.5em}
+{\bfseries Teil 2 — Präsentation (5 Folien)}
+\schreiblinien{16}
+
+\end{document}
