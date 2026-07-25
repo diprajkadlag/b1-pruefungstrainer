@@ -1,0 +1,43 @@
+# License for exam content
+
+Copyright (c) 2026 Dipraj Kadlag
+
+The **exam content** of this project is licensed under a
+**Creative Commons Attribution 4.0 International License** (CC BY 4.0).
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+## What this covers
+
+- Everything under `content/` — all exam texts, items, distractors, answer
+  keys, rationales, writing tasks, speaking cards, glossaries and grammar notes
+- The generated listening audio tracks
+- The generated PDF papers and solution booklets
+
+It does **not** cover the source code, which is MIT licensed. See `LICENSE`.
+
+## What you may do
+
+Share and adapt this material for any purpose, including commercially —
+teachers, tutoring centres and other learners are explicitly welcome to use it.
+
+## What you must do
+
+Give appropriate credit, link to this license, and indicate if changes were
+made. A sufficient attribution:
+
+> Exam content from **b1-pruefungstrainer** by Dipraj Kadlag,
+> https://github.com/diprajkadlag/b1-pruefungstrainer — licensed under CC BY 4.0.
+
+## Originality statement
+
+All exam content in this repository is **original work** created for this
+project. No text, item, audio script or illustration has been copied from
+official examination materials or from any commercial preparation textbook.
+The exam *format* that this content follows — the number of parts, item counts,
+time limits and point weightings — consists of published factual specifications
+and is not itself subject to copyright.
+
+See `docs/DISCLAIMER.md` for the trademark position and `docs/AUTHORING.md` for
+the rules every contributed exam must follow.

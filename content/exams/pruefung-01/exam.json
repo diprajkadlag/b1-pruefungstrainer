@@ -1,0 +1,2107 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+
+  "meta": {
+    "id": "pruefung-01",
+    "titel": "Übungsprüfung 1 — Arbeit, Wohnen und Engagement",
+    "variante": "erwachsene",
+    "niveau": "mittel-leicht",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": -8,
+    "themen": ["Arbeit und Beruf", "Wohnen und Umzug", "Mobilität", "Nachhaltigkeit", "Weiterbildung", "Ehrenamt"],
+    "autor": "b1-pruefungstrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "richtig_falsch",
+        "anweisung": "Lesen Sie den Text aus einem Internet-Blog. Kreuzen Sie bei den Aufgaben 1 bis 6 an: Sind die Aussagen richtig oder falsch?",
+        "richtzeitMinuten": 10,
+        "texte": [
+          {
+            "id": "blog_landleben",
+            "titel": "Vom Großstadtbüro aufs Dorf – mein erstes Jahr im Homeoffice",
+            "quelle": "aus dem Blog „Umgezogen“",
+            "inhalt": "Vor genau einem Jahr habe ich Hamburg verlassen. Meine Freunde haben damals gesagt, ich sei verrückt. Ich hatte eine gute Stelle in einer Werbeagentur, eine kleine Wohnung in einem beliebten Viertel und jeden Abend die Wahl zwischen zehn Restaurants. Trotzdem war ich unzufrieden. Jeden Morgen stand ich fünfzig Minuten in der überfüllten S-Bahn, und abends war ich zu müde, um noch etwas zu unternehmen.\n\nAls meine Firma ankündigte, dass alle Mitarbeiter dauerhaft von zu Hause arbeiten dürfen, habe ich nicht lange überlegt. Innerhalb von drei Monaten habe ich ein altes Bauernhaus in einem Dorf in Mecklenburg gemietet – für weniger als die Hälfte meiner Hamburger Miete. Der Garten allein ist größer als meine ganze alte Wohnung.\n\nEhrlich gesagt war der Anfang schwieriger als erwartet. Das Internet fiel in den ersten Wochen ständig aus, und ich musste eine teure Spezialantenne installieren lassen. Außerdem hatte ich die Stille unterschätzt. In der Stadt hatte ich mich nie einsam gefühlt, aber hier saß ich plötzlich allein am Küchentisch und sprach den ganzen Tag nur mit meinem Laptop.\n\nGeholfen hat mir schließlich der Sportverein. Ich spiele jetzt jeden Donnerstag Volleyball, obwohl ich das früher nie getan hätte. Dort habe ich die meisten Leute kennengelernt, die ich heute meine Nachbarn nenne.\n\nWürde ich es wieder tun? Auf jeden Fall. Aber ich sage inzwischen niemandem mehr, dass das Landleben automatisch entspannter ist. Man tauscht nur die einen Probleme gegen andere. Wer glaubt, er könne allen Schwierigkeiten davonlaufen, wird auch auf dem Dorf enttäuscht."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der Autor wohnt seit einem Jahr nicht mehr in Hamburg.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Gleich im ersten Satz: „Vor genau einem Jahr habe ich Hamburg verlassen.“",
+            "en": "The opening sentence states it directly. This worked example shows how to mark your answer."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "frage": "Die Freunde des Autors hielten seinen Umzug für eine vernünftige Entscheidung.",
+            "loesung": "falsch",
+            "beleg": "Meine Freunde haben damals gesagt, ich sei verrückt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Ich sei verrückt“ ist das Gegenteil von „vernünftig“. Die Freunde waren also nicht einverstanden.",
+              "en": "„verrückt“ (crazy) is the opposite of „vernünftig“ (sensible), so the statement is false. Note the Konjunktiv I „sei“ — reported speech, not the author's own view."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "richtig_falsch",
+            "frage": "Der Autor war mit seiner Arbeitsstelle in Hamburg unzufrieden.",
+            "loesung": "falsch",
+            "beleg": "Ich hatte eine gute Stelle in einer Werbeagentur, eine kleine Wohnung in einem beliebten Viertel und jeden Abend die Wahl zwischen zehn Restaurants.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Autor nennt die Stelle ausdrücklich „gut“. Unzufrieden war er wegen des langen Wegs zur Arbeit, nicht wegen der Arbeit selbst.",
+              "en": "A classic trap: the word „unzufrieden“ does appear in the text, but it refers to his life overall, not his job. The job is described as „eine gute Stelle“."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "frage": "Der Autor zahlt auf dem Land weniger Miete als in Hamburg.",
+            "loesung": "richtig",
+            "beleg": "für weniger als die Hälfte meiner Hamburger Miete",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Weniger als die Hälfte“ bedeutet eindeutig weniger als vorher.",
+              "en": "„die Hälfte“ = half. Less than half of the old rent is clearly less."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "richtig_falsch",
+            "frage": "Die Internetverbindung funktionierte von Anfang an gut.",
+            "loesung": "falsch",
+            "beleg": "Das Internet fiel in den ersten Wochen ständig aus, und ich musste eine teure Spezialantenne installieren lassen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„fiel ständig aus“ heißt, es funktionierte immer wieder nicht.",
+              "en": "„ausfallen“ = to fail / break down. „ständig“ = constantly. He also had to install an expensive antenna, further proof it did not work."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "frage": "Über den Sportverein hat der Autor neue Leute kennengelernt.",
+            "loesung": "richtig",
+            "beleg": "Dort habe ich die meisten Leute kennengelernt, die ich heute meine Nachbarn nenne.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Dort“ bezieht sich auf den Sportverein, der im Satz davor genannt wird.",
+              "en": "The pronoun „Dort“ refers back to the sports club mentioned in the previous sentence. Tracking such references is a core B1 reading skill."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "richtig_falsch",
+            "frage": "Der Autor empfiehlt allen Menschen, aufs Land zu ziehen.",
+            "loesung": "falsch",
+            "beleg": "Aber ich sage inzwischen niemandem mehr, dass das Landleben automatisch entspannter ist.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er ist mit seiner eigenen Entscheidung zufrieden („Auf jeden Fall“), warnt aber ausdrücklich davor, das Landleben allgemein zu empfehlen.",
+              "en": "He is happy for himself but explicitly refuses to generalise. „niemandem mehr“ = to nobody any more. The final sentence reinforces this."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 2,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die beiden Texte aus einer Zeitung. Wählen Sie bei den Aufgaben 7 bis 12 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 20,
+        "texte": [
+          {
+            "id": "artikel_fahrradstrassen",
+            "titel": "Wenn die Straße den Radfahrern gehört",
+            "quelle": "Lindenauer Anzeiger",
+            "inhalt": "In immer mehr deutschen Städten entstehen sogenannte Fahrradstraßen. Auf ihnen haben Radfahrer Vorrang, Autos dürfen nur ausnahmsweise fahren und höchstens dreißig Stundenkilometer schnell. Die Stadt Freiburg hat inzwischen über zwanzig solcher Straßen eingerichtet, Bremen und Münster ziehen nach.\n\nDer Verkehrsforscher Dr. Andreas Wieland hält die Entwicklung für richtig, warnt aber vor zu großen Erwartungen. „Eine einzelne Fahrradstraße bringt fast nichts“, sagt er. „Erst wenn daraus ein durchgehendes Netz wird, steigen die Menschen wirklich um.“ In Städten, in denen nur einzelne Abschnitte umgebaut wurden, sei die Zahl der Radfahrer kaum gestiegen.\n\nKritik kommt vor allem von Gewerbetreibenden. Viele Ladenbesitzer befürchten, dass ihnen Kunden verloren gehen, wenn Parkplätze wegfallen. Untersuchungen aus den Niederlanden zeigen allerdings das Gegenteil: Dort geben Kunden, die mit dem Rad kommen, pro Monat mehr Geld aus als Autofahrer, weil sie häufiger einkaufen.\n\nUnklar ist bislang, wie die Regeln durchgesetzt werden sollen. In der Praxis halten sich viele Autofahrer nicht an das Tempolimit, und Kontrollen sind selten. Die Stadt Freiburg setzt deshalb auf bauliche Lösungen: Wo Poller und Blumenkübel stehen, muss niemand kontrollieren."
+          },
+          {
+            "id": "artikel_repaircafe",
+            "titel": "Reparieren statt wegwerfen",
+            "quelle": "Lindenauer Anzeiger",
+            "inhalt": "An jedem zweiten Samstag im Monat verwandelt sich das Gemeindehaus in Ostheim in eine Werkstatt. Zwischen Kaffeetassen liegen Schraubenzieher, Lötkolben und kaputte Toaster. Das Repair-Café Ostheim gibt es seit sechs Jahren, und es ist jedes Mal voll.\n\nGegründet hat es die Elektrotechnikerin Berit Sanders. Ihr ging es allerdings nie in erster Linie um die Umwelt. „Mich hat geärgert, dass die Leute das Gefühl verloren haben, selbst etwas reparieren zu können“, erzählt sie. Deshalb gilt bei ihr eine strenge Regel: Die Helfer nehmen den Besuchern das Werkzeug nicht aus der Hand. Wer kommt, muss mitarbeiten.\n\nEtwa zwei Drittel der mitgebrachten Geräte werden wieder funktionsfähig. Am häufigsten scheitern die Reparaturen nicht an den Helfern, sondern an fehlenden Ersatzteilen. Manche Hersteller verkaufen einzelne Bauteile grundsätzlich nicht.\n\nDer Erfolg hat auch die Stadtverwaltung überzeugt. Sie stellt seit zwei Jahren die Räume kostenlos zur Verfügung. Geld für Material bekommt das Café dagegen nicht; es finanziert sich ausschließlich über Spenden. Berit Sanders stört das nicht. „Sobald Geld fließt, kommen Vorschriften“, meint sie. „Bisher sind wir gut ohne ausgekommen.“"
+          }
+        ],
+        "items": [
+          {
+            "nr": 7,
+            "typ": "multiple_choice",
+            "textId": "artikel_fahrradstrassen",
+            "frage": "Was sagt der Verkehrsforscher Dr. Wieland über Fahrradstraßen?",
+            "optionen": {
+              "a": "Sie wirken erst, wenn sie miteinander verbunden sind.",
+              "b": "Sie sind für kleinere Städte nicht geeignet.",
+              "c": "Sie müssten deutlich breiter gebaut werden."
+            },
+            "loesung": "a",
+            "beleg": "Erst wenn daraus ein durchgehendes Netz wird, steigen die Menschen wirklich um.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Ein durchgehendes Netz“ ist genau das, was „miteinander verbunden“ bedeutet.",
+              "en": "✗ b — the article never mentions city size; Freiburg, Bremen and Münster are all named without any size argument. ✗ c — width is never discussed at all. Watch for options that sound plausible but appear nowhere in the text."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "textId": "artikel_fahrradstrassen",
+            "frage": "Was zeigen die Untersuchungen aus den Niederlanden?",
+            "optionen": {
+              "a": "Radfahrer kaufen seltener ein als Autofahrer.",
+              "b": "Kunden mit dem Rad geben insgesamt mehr Geld aus.",
+              "c": "Ladenbesitzer verlieren durch Fahrradstraßen Kunden."
+            },
+            "loesung": "b",
+            "beleg": "Dort geben Kunden, die mit dem Rad kommen, pro Monat mehr Geld aus als Autofahrer, weil sie häufiger einkaufen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Pro Monat geben Radfahrer mehr Geld aus, weil sie öfter kommen.",
+              "en": "✗ a — the exact reverse: they shop MORE often („häufiger“). ✗ c — that is what shopkeepers FEAR („befürchten“), and the Dutch study shows „das Gegenteil“. Distinguishing what someone fears from what is actually the case is the whole point of this item."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "multiple_choice",
+            "textId": "artikel_fahrradstrassen",
+            "frage": "Wie geht die Stadt Freiburg mit dem Problem der Kontrolle um?",
+            "optionen": {
+              "a": "Sie beschäftigt mehr Polizisten.",
+              "b": "Sie erhöht die Strafen für zu schnelles Fahren.",
+              "c": "Sie baut Hindernisse auf die Straße."
+            },
+            "loesung": "c",
+            "beleg": "Wo Poller und Blumenkübel stehen, muss niemand kontrollieren.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "„Poller und Blumenkübel“ sind bauliche Hindernisse. Die Stadt setzt auf „bauliche Lösungen“ statt auf Kontrollen.",
+              "en": "You do not need to know „Poller“ (bollard) or „Blumenkübel“ (planter): „bauliche Lösungen“ (structural solutions) in the sentence before tells you it is something physical. ✗ a and ✗ b both describe enforcement, which is exactly what the text says Freiburg is avoiding."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "textId": "artikel_repaircafe",
+            "frage": "Warum hat Berit Sanders das Repair-Café gegründet?",
+            "optionen": {
+              "a": "Sie wollte in erster Linie Müll vermeiden.",
+              "b": "Sie wollte, dass Menschen wieder selbst reparieren.",
+              "c": "Sie suchte nach dem Berufsende eine neue Aufgabe."
+            },
+            "loesung": "b",
+            "beleg": "Mich hat geärgert, dass die Leute das Gefühl verloren haben, selbst etwas reparieren zu können",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ihr Motiv war, dass die Menschen sich das Reparieren wieder zutrauen.",
+              "en": "✗ a — explicitly ruled out: „Ihr ging es allerdings nie in erster Linie um die Umwelt.“ The word „nie“ negates it. ✗ c — she is described as an active „Elektrotechnikerin“; retirement is never mentioned."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "textId": "artikel_repaircafe",
+            "frage": "Woran scheitern die Reparaturen am häufigsten?",
+            "optionen": {
+              "a": "Es fehlen Ersatzteile.",
+              "b": "Die Helfer haben zu wenig Zeit.",
+              "c": "Die Geräte sind zu alt."
+            },
+            "loesung": "a",
+            "beleg": "Am häufigsten scheitern die Reparaturen nicht an den Helfern, sondern an fehlenden Ersatzteilen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt den Grund direkt und schließt die Helfer ausdrücklich aus.",
+              "en": "The „nicht … sondern …“ construction does the work: it rules out b and states a. Learn to read „nicht A, sondern B“ as a signpost — it almost always marks the key sentence."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "textId": "artikel_repaircafe",
+            "frage": "Wie finanziert sich das Repair-Café?",
+            "optionen": {
+              "a": "Die Stadtverwaltung bezahlt das Material.",
+              "b": "Die Besucher zahlen einen festen Beitrag.",
+              "c": "Es lebt von freiwilligen Spenden."
+            },
+            "loesung": "c",
+            "beleg": "Geld für Material bekommt das Café dagegen nicht; es finanziert sich ausschließlich über Spenden.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Ausschließlich über Spenden“ ist eindeutig. Die Stadt gibt nur die Räume, kein Geld.",
+              "en": "✗ a is the trap: the city does help, but with rooms, not money — „Geld für Material bekommt das Café dagegen nicht“. The word „dagegen“ signals the contrast. ✗ b — a fixed fee is never mentioned."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 3,
+        "typ": "zuordnung_anzeigen",
+        "anweisung": "Lesen Sie die Situationen 13 bis 19 und die Anzeigen a bis j. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal verwenden. Für eine Situation gibt es keine passende Anzeige. Schreiben Sie in diesem Fall 0.",
+        "richtzeitMinuten": 10,
+        "anzeigen": [
+          {
+            "buchstabe": "a",
+            "titel": "Sprachcafé Español",
+            "inhalt": "Jeden Dienstag ab 19 Uhr treffen wir uns in der Stadtbibliothek und unterhalten uns auf Spanisch – über Reisen, Filme, das Leben. Kein Unterricht, kein Lehrbuch, keine Anmeldung, keine Gebühr. Grundkenntnisse ab Niveau A2 sollten Sie mitbringen. Einfach vorbeikommen."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Gitarrenunterricht für Erwachsene",
+            "inhalt": "Sie wollten schon immer Gitarre spielen? Einzelunterricht bei erfahrenem Musiklehrer, auch für absolute Anfänger. Termine flexibel nach Absprache, auf Wunsch auch bei Ihnen zu Hause. Erste Stunde kostenlos zum Kennenlernen. Leihinstrument vorhanden."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Offene Nähwerkstatt",
+            "inhalt": "Samstags von 10 bis 16 Uhr steht unsere Werkstatt allen offen. Zehn Maschinen und Schnittmuster sind vorhanden, Stoffe bringen Sie bitte selbst mit. Materialkosten werden nach Verbrauch abgerechnet. Anmeldung bis Donnerstag erforderlich, da die Plätze begrenzt sind."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Smartphone und Tablet – Kurs für Senioren",
+            "inhalt": "Schritt für Schritt und in aller Ruhe: Wir zeigen Ihnen, wie Sie Nachrichten schreiben, Fotos verschicken und Apps installieren. Acht Vormittagstermine, Gruppen mit höchstens sechs Personen. Bringen Sie Ihr eigenes Gerät mit. Kursgebühr 40 Euro."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Laufgruppe Waldstadt",
+            "inhalt": "Jeden Sonntag um 9 Uhr, Treffpunkt Parkplatz am Waldrand. Wir laufen in zwei Gruppen, damit wirklich alle mitkommen – von Anfängern bis Fortgeschrittenen. Die Teilnahme ist kostenlos, eine Anmeldung ist nicht nötig. Bei Dauerregen fällt der Termin aus."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Bewerbungstraining",
+            "inhalt": "Wie schreibe ich einen überzeugenden Lebenslauf? Wie verhalte ich mich im Vorstellungsgespräch? An zwei Tagen üben wir beides, mit Videoaufnahme und persönlicher Rückmeldung. Für Arbeitssuchende kostenlos. Anmeldung über die Agentur für Arbeit."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Kochkurs Indische Küche",
+            "inhalt": "Vier Freitagabende lang kochen wir gemeinsam: Currys, Brot, Süßspeisen. Alle Zutaten sind im Preis enthalten, gegessen wird zusammen am großen Tisch. Höchstens zehn Personen. 95 Euro für alle vier Termine."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Fahrradwerkstatt zum Selbermachen",
+            "inhalt": "Mittwochs von 16 bis 20 Uhr können Sie bei uns Ihr Rad selbst reparieren. Werkzeug leihen wir Ihnen, und wenn Sie nicht weiterwissen, helfen unsere Ehrenamtlichen. Ersatzteile gibt es günstig vor Ort. Wir bitten um eine kleine Spende."
+          },
+          {
+            "buchstabe": "i",
+            "titel": "Yoga in der Mittagspause",
+            "inhalt": "30 Minuten Übungen für Rücken und Nacken, jeden Werktag von 12.00 bis 12.30 Uhr, mitten in der Innenstadt. Duschen sind vorhanden, Matten stellen wir. Zehnerkarte 75 Euro, Einzelstunde 9 Euro. Bitte bequeme Kleidung mitbringen."
+          },
+          {
+            "buchstabe": "j",
+            "titel": "Hundebetreuung Sonnenhof",
+            "inhalt": "Sie müssen beruflich verreisen? Wir betreuen Ihren Hund tageweise oder über das ganze Wochenende, mit großem Auslauf und täglich zwei langen Spaziergängen. Auch kurzfristige Anfragen sind meist möglich. Preise auf Anfrage."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_anzeigen",
+          "frage": "Ihr Nachbar fährt zwei Wochen auf Dienstreise und weiß nicht, wohin mit seinem Hund.",
+          "loesung": "j",
+          "begruendung": {
+            "de": "Anzeige j bietet genau diese Betreuung an.",
+            "en": "Worked example. Match the key need — someone to look after a dog during a work trip — to the one ad that offers it."
+          }
+        },
+        "items": [
+          {
+            "nr": 13,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Özdemir hat früher in Spanien gelebt und möchte ihr Spanisch nicht verlernen. Sie sucht eine Möglichkeit, regelmäßig zu sprechen, ohne dafür zu bezahlen.",
+            "loesung": "a",
+            "beleg": "Kein Unterricht, kein Lehrbuch, keine Anmeldung, keine Gebühr.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige a ist ein kostenloser Gesprächskreis auf Spanisch, und Vorkenntnisse hat Frau Özdemir.",
+              "en": "Two conditions must both be met: speaking practice and free of charge. Ad a satisfies both, and her prior experience covers the A2 requirement."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Klein ist seit drei Monaten ohne Arbeit. Er möchte üben, wie man sich in einem Gespräch bei einer Firma richtig vorstellt.",
+            "loesung": "f",
+            "beleg": "Wie verhalte ich mich im Vorstellungsgespräch?",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige f übt genau das Vorstellungsgespräch und ist für Arbeitssuchende kostenlos.",
+              "en": "„sich vorstellen“ in the situation and „Vorstellungsgespräch“ in the ad are the same idea. His unemployment also matches „Für Arbeitssuchende kostenlos“."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ihre Kollegin sitzt den ganzen Tag am Schreibtisch und hat Rückenschmerzen. In der Mittagspause hat sie höchstens eine halbe Stunde Zeit.",
+            "loesung": "i",
+            "beleg": "30 Minuten Übungen für Rücken und Nacken, jeden Werktag von 12.00 bis 12.30 Uhr, mitten in der Innenstadt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige i dauert genau 30 Minuten, findet in der Mittagspause statt und ist für den Rücken.",
+              "en": "Three details line up exactly: back, 30 minutes, lunchtime. When an ad matches on three points it is almost certainly the key."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ein Freund hat ein altes Fahrrad geschenkt bekommen und möchte es gern selbst wieder in Ordnung bringen. Werkzeug besitzt er allerdings nicht.",
+            "loesung": "h",
+            "beleg": "Werkzeug leihen wir Ihnen, und wenn Sie nicht weiterwissen, helfen unsere Ehrenamtlichen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige h bietet Werkzeug zum Leihen und Hilfe beim Selbstreparieren.",
+              "en": "„selbst wieder in Ordnung bringen“ = repair it himself. The missing tools are the second condition, and the ad lends them."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ihre Mutter ist 72 Jahre alt und hat zum Geburtstag ein Smartphone bekommen. Sie kommt damit überhaupt nicht zurecht und traut sich nicht, es auszuprobieren.",
+            "loesung": "d",
+            "beleg": "Schritt für Schritt und in aller Ruhe: Wir zeigen Ihnen, wie Sie Nachrichten schreiben, Fotos verschicken und Apps installieren.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige d ist ein Smartphone-Kurs für Senioren in kleinen Gruppen und in ruhigem Tempo.",
+              "en": "Her age matches „für Senioren“, and „in aller Ruhe“ plus groups of six answers her lack of confidence."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Brandt sucht für seine achtjährige Tochter einen Schwimmkurs, der am Nachmittag stattfindet.",
+            "loesung": "0",
+            "beleg": "Keine der Anzeigen a bis j bietet einen Schwimmkurs an.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Es gibt keine Anzeige für Schwimmen und keine für Kinder. Hier ist 0 richtig.",
+              "en": "Every paper has exactly one situation with no matching ad. Two things rule out all ten ads here: swimming, and a child. Do not force a near-match — if nothing fits, 0 is the answer."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Sie möchten am Wochenende gemeinsam mit anderen etwas für Ihre Kondition tun und dabei kein Geld ausgeben.",
+            "loesung": "e",
+            "beleg": "Die Teilnahme ist kostenlos, eine Anmeldung ist nicht nötig.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige e ist eine kostenlose Laufgruppe, die sonntags – also am Wochenende – läuft.",
+              "en": "Sunday satisfies „am Wochenende“, running satisfies „Kondition“ (fitness/stamina), and it is free. Ad i also involves exercise but costs money and runs on weekdays."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 4,
+        "typ": "ja_nein",
+        "anweisung": "Sieben Personen schreiben in einem Online-Forum über die Vier-Tage-Woche. Lesen Sie die Beiträge 20 bis 26. Ist die Person dafür oder dagegen? Kreuzen Sie an: ja (dafür) oder nein (dagegen).",
+        "richtzeitMinuten": 15,
+        "these": "Immer mehr Betriebe diskutieren über die Vier-Tage-Woche: Sollen Unternehmen ihren Beschäftigten anbieten, bei gleichem Lohn nur an vier Tagen pro Woche zu arbeiten?",
+        "texte": [
+          {
+            "id": "forum_vier_tage",
+            "titel": "Lesermeinungen: Vier Tage arbeiten – reicht das?",
+            "quelle": "Online-Forum",
+            "inhalt": "Beispiel: Jürgen, 44 — Ich arbeite seit acht Monaten vier Tage und würde nie wieder zurückwechseln. Man ist am Montag wirklich ausgeruht.\n\n20. Tanja, 34 — Wir haben es ein Jahr lang ausprobiert. Am Anfang war ich skeptisch, weil ich dachte, wir schaffen die Arbeit gar nicht. Inzwischen sind bei uns weniger Leute krank als vorher, und niemand möchte zurück.\n\n21. Werner, 58 — Schön für Büroangestellte. Ich arbeite in der Pflege. Wenn ich einen Tag weniger da bin, muss jemand anderes diesen Tag übernehmen – und diesen Jemand gibt es nicht. Solange das nicht geklärt ist, halte ich die ganze Diskussion für Träumerei.\n\n22. Ayla, 29 — Man darf nicht so tun, als wäre das ein Geschenk. Die gleiche Arbeit in weniger Zeit bedeutet einfach mehr Druck an den übrigen Tagen. Meine Mittagspause habe ich seitdem gestrichen. So kann die Lösung nicht aussehen.\n\n23. Milan, 41 — Als Arbeitgeber war ich lange dagegen. Dann haben wir es getestet, weil wir keine Bewerber mehr fanden. Heute bekomme ich auf jede Stelle dreimal so viele Bewerbungen. Rein wirtschaftlich hat es sich für uns gelohnt.\n\n24. Steffi, 47 — Ich verstehe die Begeisterung ehrlich gesagt nicht ganz. Mir persönlich ist wichtiger, wann ich arbeite, nicht an wie vielen Tagen. Aber wenn Kollegen dadurch mehr Zeit für ihre Kinder haben, soll man es ihnen ermöglichen. Warum denn nicht?\n\n25. Hendrik, 36 — Vier Tage, fünf Tage – entscheidend ist doch, dass am Ende genug Geld auf dem Konto ist. Bei uns hieß es zuerst vier Tage, und ein halbes Jahr später wurde der Lohn gesenkt. Auf so ein Angebot würde ich nie wieder eingehen.\n\n26. Bea, 52 — Bei uns läuft es seit zwei Jahren, und die Kundschaft merkt gar nichts davon, weil wir die Tage untereinander aufteilen. Man muss es eben ordentlich organisieren. Andere Betriebe sollten sich das ruhig abschauen."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "ja_nein",
+          "frage": "Jürgen, 44",
+          "loesung": "ja",
+          "begruendung": {
+            "de": "„Ich würde nie wieder zurückwechseln“ zeigt klare Zustimmung.",
+            "en": "Worked example. Decide only whether the person is FOR (ja) or AGAINST (nein) the proposition."
+          }
+        },
+        "items": [
+          {
+            "nr": 20,
+            "typ": "ja_nein",
+            "frage": "Tanja, 34",
+            "loesung": "ja",
+            "beleg": "Inzwischen sind bei uns weniger Leute krank als vorher, und niemand möchte zurück.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie war anfangs skeptisch, berichtet aber von einem klar positiven Ergebnis. Entscheidend ist die Meinung am Ende.",
+              "en": "The opening „ich war skeptisch“ is a decoy. B1 opinion texts very often begin with the opposite view before turning. Read to the end: „niemand möchte zurück“ is the verdict."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "ja_nein",
+            "frage": "Werner, 58",
+            "loesung": "nein",
+            "beleg": "Solange das nicht geklärt ist, halte ich die ganze Diskussion für Träumerei.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "„Träumerei“ bedeutet, dass er die Idee für unrealistisch hält. „Schön für Büroangestellte“ ist ironisch gemeint.",
+              "en": "„Träumerei“ = wishful thinking. The opening „Schön für …“ is ironic, not approving — a common German rhetorical move you should learn to spot."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "ja_nein",
+            "frage": "Ayla, 29",
+            "loesung": "nein",
+            "beleg": "So kann die Lösung nicht aussehen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie beschreibt mehr Druck und eine gestrichene Mittagspause und lehnt das Modell in der letzten Zeile ab.",
+              "en": "She rejects it not in principle but because of how it works in practice — still a „nein“. The task asks whether she is for or against, not why."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "ja_nein",
+            "frage": "Milan, 41",
+            "loesung": "ja",
+            "beleg": "Rein wirtschaftlich hat es sich für uns gelohnt.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er sagt selbst, er war „lange dagegen“ – inzwischen aber überzeugt.",
+              "en": "„war lange dagegen“ is past tense. The tense change signals he has changed his mind. Present-tense evidence („Heute bekomme ich …“) carries the answer."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "ja_nein",
+            "frage": "Steffi, 47",
+            "loesung": "ja",
+            "beleg": "Aber wenn Kollegen dadurch mehr Zeit für ihre Kinder haben, soll man es ihnen ermöglichen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Für sie selbst ist das Modell unwichtig, aber sie ist dafür, dass Betriebe es anbieten – und genau danach fragt die These.",
+              "en": "The hardest item in this part. She is personally indifferent, yet she supports offering it („soll man es ihnen ermöglichen“, „Warum denn nicht?“). Always check the answer against the exact proposition, which here is whether companies should OFFER it."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "ja_nein",
+            "frage": "Hendrik, 36",
+            "loesung": "nein",
+            "beleg": "Auf so ein Angebot würde ich nie wieder eingehen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er hat schlechte Erfahrungen gemacht, weil bei ihm der Lohn gesenkt wurde, und lehnt solche Angebote ab.",
+              "en": "„nie wieder“ = never again. The proposition specifies „bei gleichem Lohn“ (same pay), but his experience was a pay cut, and he generalises from it to reject the offer."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "ja_nein",
+            "frage": "Bea, 52",
+            "loesung": "ja",
+            "beleg": "Andere Betriebe sollten sich das ruhig abschauen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie empfiehlt das Modell ausdrücklich weiter.",
+              "en": "„sich etwas abschauen“ = to copy / learn from someone. Recommending that others copy it is unambiguous support."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 5,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die Benutzungsordnung. Wählen Sie bei den Aufgaben 27 bis 30 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 10,
+        "texte": [
+          {
+            "id": "ordnung_buecherei",
+            "titel": "Benutzungsordnung der Stadtbücherei Lindenau",
+            "quelle": "Aushang",
+            "inhalt": "§ 1 Anmeldung\nDie Benutzung der Stadtbücherei ist kostenlos. Für die Ausleihe wird ein Büchereiausweis benötigt. Diesen erhalten Sie bei der Anmeldung gegen Vorlage eines gültigen Personalausweises. Personen unter 18 Jahren benötigen zusätzlich die Unterschrift eines Erziehungsberechtigten.\n\n§ 2 Leihfristen\nBücher und Zeitschriften können vier Wochen ausgeliehen werden, DVDs und Spiele zwei Wochen. Neuerscheinungen, die mit einem roten Punkt gekennzeichnet sind, sind von der Ausleihe ausgenommen und dürfen nur in den Räumen der Bücherei gelesen werden.\n\n§ 3 Verlängerung\nDie Leihfrist kann zweimal um jeweils zwei Wochen verlängert werden, sofern das Medium nicht von einer anderen Person vorgemerkt wurde. Verlängerungen sind persönlich, telefonisch oder über unsere Internetseite möglich.\n\n§ 4 Versäumnisgebühren\nWird ein Medium zu spät zurückgegeben, wird für jedes Medium und jede angefangene Woche eine Gebühr von 0,50 Euro erhoben. Eine Mahnung wird nicht verschickt; die Leihfristen sind selbst zu beachten.\n\n§ 5 Internetplätze\nDie vier Internetplätze im Lesesaal stehen angemeldeten Benutzern täglich für eine Stunde kostenlos zur Verfügung. Eine Reservierung ist nur für denselben Tag möglich.\n\n§ 6 Verhalten in den Räumen\nEssen ist in allen Räumen untersagt. Getränke dürfen nur in verschließbaren Flaschen mitgebracht werden. Mobiltelefone sind stumm zu schalten; Gespräche führen Sie bitte im Eingangsbereich."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Was kostet die Benutzung der Bücherei?",
+          "optionen": {
+            "a": "Sie ist kostenlos.",
+            "b": "Sie kostet 0,50 Euro pro Woche.",
+            "c": "Sie kostet einmalig eine Anmeldegebühr."
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "§ 1, erster Satz: „Die Benutzung der Stadtbücherei ist kostenlos.“",
+            "en": "Worked example. In this part each question maps to one numbered paragraph — find the paragraph first, then read closely."
+          }
+        },
+        "items": [
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Was muss eine erwachsene Person zur Anmeldung mitbringen?",
+            "optionen": {
+              "a": "einen gültigen Personalausweis",
+              "b": "eine Gebühr von 0,50 Euro",
+              "c": "die Unterschrift einer zweiten Person"
+            },
+            "loesung": "a",
+            "beleg": "Diesen erhalten Sie bei der Anmeldung gegen Vorlage eines gültigen Personalausweises.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "§ 1 verlangt einen gültigen Personalausweis.",
+              "en": "✗ c applies only to under-18s („Personen unter 18 Jahren benötigen zusätzlich …“) and the question says „eine erwachsene Person“. ✗ b — the 0.50 € in § 4 is a late fee, not a registration charge. Regulations reward careful reading of who a rule applies to."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Was gilt für Bücher mit einem roten Punkt?",
+            "optionen": {
+              "a": "Sie dürfen nur zwei Wochen ausgeliehen werden.",
+              "b": "Sie müssen in der Bücherei bleiben.",
+              "c": "Für sie wird eine zusätzliche Gebühr verlangt."
+            },
+            "loesung": "b",
+            "beleg": "Neuerscheinungen, die mit einem roten Punkt gekennzeichnet sind, sind von der Ausleihe ausgenommen und dürfen nur in den Räumen der Bücherei gelesen werden.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "„Von der Ausleihe ausgenommen“ heißt, man darf sie nicht mitnehmen.",
+              "en": "„ausgenommen von“ = excluded from. ✗ a takes the two-week figure from the DVD rule in the same paragraph — a very typical distractor built from a real number in the wrong place."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Was passiert, wenn ein Buch zu spät zurückgebracht wird?",
+            "optionen": {
+              "a": "Man erhält zuerst eine schriftliche Mahnung.",
+              "b": "Man zahlt für jede angefangene Woche.",
+              "c": "Der Büchereiausweis wird gesperrt."
+            },
+            "loesung": "b",
+            "beleg": "Wird ein Medium zu spät zurückgegeben, wird für jedes Medium und jede angefangene Woche eine Gebühr von 0,50 Euro erhoben.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "§ 4 nennt die Gebühr pro Medium und pro angefangener Woche.",
+              "en": "✗ a is explicitly denied in the very next sentence: „Eine Mahnung wird nicht verschickt.“ ✗ c is never mentioned. „angefangene Woche“ = any week begun, so even one day late costs a full 0.50 €."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Was ist in den Räumen der Bücherei erlaubt?",
+            "optionen": {
+              "a": "Getränke in verschließbaren Flaschen",
+              "b": "eine Kleinigkeit im Lesesaal essen",
+              "c": "am Internetplatz telefonieren"
+            },
+            "loesung": "a",
+            "beleg": "Getränke dürfen nur in verschließbaren Flaschen mitgebracht werden.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "§ 6 erlaubt Getränke, wenn die Flasche verschließbar ist.",
+              "en": "✗ b — „Essen ist in allen Räumen untersagt“; „untersagt“ = forbidden. ✗ c — calls must be taken „im Eingangsbereich“. Note the question asks what IS allowed, while the paragraph mostly lists prohibitions."
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          { "rolle": "Carla", "geschlecht": "f", "beschreibung": "Freundin, spricht auf die Mailbox" },
+          { "rolle": "Bahnhofsansage", "geschlecht": "f", "beschreibung": "Durchsage im Bahnhof" },
+          { "rolle": "Radiosprecher", "geschlecht": "m", "beschreibung": "Wetterbericht im Radio" },
+          { "rolle": "Werkstatt", "geschlecht": "m", "beschreibung": "Mitarbeiter der Autowerkstatt" },
+          { "rolle": "Ansage VHS", "geschlecht": "f", "beschreibung": "Durchsage in der Volkshochschule" }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Carla ruft wegen eines Umzugs an.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Sie spricht über einen Transporter und über Kartons – es geht also um einen Umzug.",
+            "en": "Worked example. You are not told the word „Umzug“ directly; you infer it from „Transporter“ and „Kartons“."
+          }
+        },
+        "skript": [
+          { "rolle": "Sprecher", "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal. Lesen Sie jetzt das Beispiel und die Aufgaben eins und zwei.", "pauseDanachSek": 12, "akustik": "studio" },
+          { "rolle": "Sprecher", "text": "Text eins.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_1" },
+          { "rolle": "Carla", "text": "Hallo, hier ist Carla. Du, es hat sich leider etwas geändert. Der Transporter ist erst ab zwei Uhr frei, nicht schon um neun, wie ich gesagt hatte. Das heißt, wir fangen am Samstag erst am Nachmittag an. Wäre das für dich in Ordnung? Und noch etwas: Kartons brauchst du keine mitzubringen, die hat mir mein Nachbar alle geliehen. Falls du doch nicht kannst, ruf mich bitte bis Freitagabend an, dann frage ich meinen Bruder. Danke dir!", "pauseDanachSek": 2, "akustik": "mailbox", "abschnitt": "text_1", "betont": true },
+          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben drei und vier.", "pauseDanachSek": 10, "akustik": "studio" },
+          { "rolle": "Sprecher", "text": "Text zwei.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_2" },
+          { "rolle": "Bahnhofsansage", "text": "Sehr geehrte Fahrgäste, wir informieren Sie über eine Änderung. Der Regionalexpress nach Kassel, planmäßige Abfahrt vierzehn Uhr zweiundzwanzig, fährt heute von Gleis sieben statt von Gleis drei. Grund dafür ist eine Störung an der Weiche. Der Zug verkehrt außerdem nur bis Bad Hersfeld. Reisende nach Kassel steigen dort bitte in den bereitstehenden Bus um. Wir bitten Sie, die zusätzliche Fahrzeit von etwa vierzig Minuten einzuplanen.", "pauseDanachSek": 2, "akustik": "durchsage", "abschnitt": "text_2", "betont": true },
+          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben fünf und sechs.", "pauseDanachSek": 10, "akustik": "studio" },
+          { "rolle": "Sprecher", "text": "Text drei.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_3" },
+          { "rolle": "Radiosprecher", "text": "Und damit zum Wetter für morgen, Mittwoch. Der Tag beginnt in weiten Teilen des Landes neblig, örtlich mit Sichtweiten unter hundert Metern. Bis zum Mittag löst sich der Nebel auf, danach scheint verbreitet die Sonne bei Höchstwerten zwischen achtzehn und zweiundzwanzig Grad. Am Abend ziehen von Westen her Wolken auf, trocken bleibt es aber überall. Autofahrer sollten am frühen Morgen besonders vorsichtig sein.", "pauseDanachSek": 2, "akustik": "radio", "abschnitt": "text_3", "betont": true },
+          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben sieben und acht.", "pauseDanachSek": 10, "akustik": "studio" },
+          { "rolle": "Sprecher", "text": "Text vier.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_4" },
+          { "rolle": "Werkstatt", "text": "Guten Tag, Frau Reinhardt, hier ist die Autowerkstatt Kowalski. Wir haben uns Ihren Wagen angesehen. Die Bremsen sind in Ordnung, das Geräusch kam von der Radaufhängung. Die Reparatur kostet dreihundertzwanzig Euro, also deutlich weniger als im Kostenvoranschlag von letzter Woche. Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen. Das Ersatzteil ist bestellt und kommt morgen früh. Wenn Sie sich heute noch melden, ist der Wagen am Donnerstag fertig.", "pauseDanachSek": 2, "akustik": "telefon", "abschnitt": "text_4", "betont": true },
+          { "rolle": "Sprecher", "text": "Lesen Sie jetzt die Aufgaben neun und zehn.", "pauseDanachSek": 10, "akustik": "studio" },
+          { "rolle": "Sprecher", "text": "Text fünf.", "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": "text_5" },
+          { "rolle": "Ansage VHS", "text": "Liebe Kursteilnehmerinnen und Kursteilnehmer, eine Information für alle, die heute Abend den Kurs Digitale Fotografie besuchen wollten. Der Kurs muss leider ausfallen, da der Dozent erkrankt ist. Der Termin wird am kommenden Montag zur gewohnten Zeit nachgeholt. Wer an diesem Ersatztermin nicht teilnehmen kann, wendet sich bitte an das Sekretariat im Erdgeschoss. Die Kursgebühr wird in diesem Fall anteilig zurückerstattet.", "pauseDanachSek": 2, "akustik": "durchsage", "abschnitt": "text_5", "betont": true }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Der Umzug beginnt später als ursprünglich geplant.",
+            "loesung": "richtig",
+            "beleg": "Der Transporter ist erst ab zwei Uhr frei, nicht schon um neun, wie ich gesagt hatte.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Statt um neun Uhr geht es erst um vierzehn Uhr los – also später.",
+              "en": "Two times are given. „erst ab zwei Uhr … nicht schon um neun“ tells you the new time is later. „erst“ and „schon“ are the signal words."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was soll der Angerufene tun, wenn er keine Zeit hat?",
+            "optionen": {
+              "a": "Carlas Bruder anrufen",
+              "b": "sich bis Freitagabend melden",
+              "c": "am Sonntag helfen"
+            },
+            "loesung": "b",
+            "beleg": "Falls du doch nicht kannst, ruf mich bitte bis Freitagabend an, dann frage ich meinen Bruder.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er soll Carla anrufen. Den Bruder fragt dann Carla selbst.",
+              "en": "✗ a — Carla will ask her brother herself („dann frage ich meinen Bruder“); the listener is not asked to. This is the classic distractor built from a word you definitely heard."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Der Zug fährt heute von einem anderen Gleis ab.",
+            "loesung": "richtig",
+            "beleg": "fährt heute von Gleis sieben statt von Gleis drei",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Gleis sieben statt Gleis drei“ ist eine Gleisänderung.",
+              "en": "„statt“ = instead of. Numbers in announcements are a frequent B1 listening focus — note them down as you hear them."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was müssen Reisende nach Kassel tun?",
+            "optionen": {
+              "a": "in Bad Hersfeld in einen Bus umsteigen",
+              "b": "einen späteren Zug nehmen",
+              "c": "die Fahrkarte am Schalter umtauschen"
+            },
+            "loesung": "a",
+            "beleg": "Reisende nach Kassel steigen dort bitte in den bereitstehenden Bus um.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Zug fährt nur bis Bad Hersfeld; dort steht ein Bus bereit.",
+              "en": "„dort“ refers back to Bad Hersfeld in the previous sentence. Neither b nor c is mentioned anywhere."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Am Nachmittag wird es regnen.",
+            "loesung": "falsch",
+            "beleg": "Am Abend ziehen von Westen her Wolken auf, trocken bleibt es aber überall.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Am Nachmittag scheint die Sonne, und auch am Abend bleibt es trocken.",
+              "en": "Clouds („Wolken“) are not rain. The word „trocken“ settles it. Weather reports often mention clouds precisely to tempt you into answering „rain“."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Wann ist die Sicht am schlechtesten?",
+            "optionen": {
+              "a": "am frühen Morgen",
+              "b": "gegen Mittag",
+              "c": "am Abend"
+            },
+            "loesung": "a",
+            "beleg": "Der Tag beginnt in weiten Teilen des Landes neblig, örtlich mit Sichtweiten unter hundert Metern.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Nebel ist am Morgen; bis zum Mittag löst er sich auf. Auch die Warnung an die Autofahrer nennt den frühen Morgen.",
+              "en": "„Sichtweite“ = visibility. „Bis zum Mittag löst sich der Nebel auf“ means the fog is gone BY midday, so midday is not the worst time."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Die Reparatur wird teurer als zunächst angenommen.",
+            "loesung": "falsch",
+            "beleg": "Die Reparatur kostet dreihundertzwanzig Euro, also deutlich weniger als im Kostenvoranschlag von letzter Woche.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Es wird billiger, nicht teurer: „deutlich weniger“ als der Kostenvoranschlag.",
+              "en": "„Kostenvoranschlag“ = cost estimate. Hearing a large number (320 €) can tempt you to answer „richtig“; the comparison „deutlich weniger“ is what matters."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Warum ruft die Werkstatt an?",
+            "optionen": {
+              "a": "Der Wagen kann abgeholt werden.",
+              "b": "Sie braucht das Einverständnis der Kundin.",
+              "c": "Ein Ersatzteil ist nicht lieferbar."
+            },
+            "loesung": "b",
+            "beleg": "Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "„Zustimmung“ und „Einverständnis“ bedeuten dasselbe. Die Reparatur hat noch nicht begonnen.",
+              "en": "The item tests a synonym: „Zustimmung“ = „Einverständnis“ = consent. ✗ c is the reverse — the part IS ordered and arrives tomorrow morning."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Der Kurs findet an einem anderen Tag statt.",
+            "loesung": "richtig",
+            "beleg": "Der Termin wird am kommenden Montag zur gewohnten Zeit nachgeholt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Kurs fällt heute aus, wird aber am Montag nachgeholt.",
+              "en": "„nachholen“ = to make up / reschedule. The lesson is not cancelled outright, only moved — so the statement is true."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was sollen Teilnehmer tun, die am Ersatztermin keine Zeit haben?",
+            "optionen": {
+              "a": "sich direkt beim Dozenten melden",
+              "b": "zum Sekretariat gehen",
+              "c": "den Kurs im nächsten Semester wiederholen"
+            },
+            "loesung": "b",
+            "beleg": "Wer an diesem Ersatztermin nicht teilnehmen kann, wendet sich bitte an das Sekretariat im Erdgeschoss.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Sich an jemanden wenden“ heißt, dorthin zu gehen oder Kontakt aufzunehmen.",
+              "en": "„sich wenden an“ = to turn to / contact. ✗ a is impossible — the tutor is ill („erkrankt“), which is why the class was cancelled."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 2,
+        "typ": "monolog",
+        "anweisung": "Sie hören einen Text. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Sie machen eine Führung durch ein Freilichtmuseum. Am Eingang begrüßt Sie die Museumsführerin.",
+        "sprecher": [
+          { "rolle": "Museumsführerin", "geschlecht": "f", "beschreibung": "Ulrike Hoffmann, führt durch das Museum" }
+        ],
+        "skript": [
+          { "rolle": "Sprecher", "text": "Teil zwei. Sie hören einen Text. Sie hören diesen Text einmal. Lesen Sie jetzt die Aufgaben elf bis fünfzehn.", "pauseDanachSek": 25, "akustik": "studio" },
+          { "rolle": "Museumsführerin", "text": "Herzlich willkommen im Freilichtmuseum Hohenrode. Mein Name ist Ulrike Hoffmann, und ich begleite Sie in den nächsten neunzig Minuten. Bevor wir starten, noch ein paar organisatorische Hinweise.", "pauseDanachSek": 0.8, "akustik": "raum" },
+          { "rolle": "Museumsführerin", "text": "Wir gehen ausschließlich im Freien. Deshalb kann ich Ihnen nur raten: Wer keine festen Schuhe anhat, sollte sich am Eingang ein Paar Gummistiefel ausleihen. Das ist kostenlos. Die Wiesen sind nach dem Regen der letzten Tage aber wirklich sehr weich.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
+          { "rolle": "Museumsführerin", "text": "Zum Museum selbst: Sie sehen hier vierzig historische Gebäude aus ganz Norddeutschland. Alle wurden an ihrem ursprünglichen Ort abgebaut, Balken für Balken nummeriert und hier wieder aufgebaut. Das älteste Haus stammt aus dem Jahr sechzehnhundertzweiundvierzig.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
+          { "rolle": "Museumsführerin", "text": "Das Besondere an unserem Museum ist aber nicht das Alter der Häuser, sondern dass fast alle bewohnt beziehungsweise benutzt werden. In der Schmiede wird täglich gearbeitet, in der Bäckerei wird Brot gebacken, und das können Sie hinterher natürlich auch kaufen.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
+          { "rolle": "Museumsführerin", "text": "Fotografieren ist überall erlaubt, auch in den Innenräumen. Nur eine Bitte: Fassen Sie die Möbel und Geräte bitte nicht an. Wir haben bewusst keine Absperrungen, weil wir möchten, dass Sie den Räumen nahekommen. Das funktioniert aber nur, wenn alle mitmachen.", "pauseDanachSek": 0.9, "akustik": "raum", "betont": true },
+          { "rolle": "Museumsführerin", "text": "Am Ende der Führung treffen wir uns wieder am Gasthaus. Dort gibt es für alle Teilnehmer dieser Führung einen Kaffee, den Sie mit Ihrer Eintrittskarte bereits bezahlt haben. So, dann gehen wir jetzt los.", "pauseDanachSek": 3, "akustik": "raum", "betont": true }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Was empfiehlt die Museumsführerin den Besuchern?",
+            "optionen": {
+              "a": "am Eingang Gummistiefel auszuleihen",
+              "b": "vor der Führung feste Schuhe zu kaufen",
+              "c": "die Führung bei Regen zu verschieben"
+            },
+            "loesung": "a",
+            "beleg": "Wer keine festen Schuhe anhat, sollte sich am Eingang ein Paar Gummistiefel ausleihen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie rät zum kostenlosen Ausleihen von Gummistiefeln, weil die Wiesen weich sind.",
+              "en": "„ausleihen“ (borrow) is not „kaufen“ (buy) — that difference alone rules out b. It is not raining now; it rained in previous days."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Wie sind die Gebäude in das Museum gekommen?",
+            "optionen": {
+              "a": "Sie wurden nach alten Plänen nachgebaut.",
+              "b": "Sie haben schon immer an dieser Stelle gestanden.",
+              "c": "Sie wurden abgebaut und hier neu errichtet."
+            },
+            "loesung": "c",
+            "beleg": "Alle wurden an ihrem ursprünglichen Ort abgebaut, Balken für Balken nummeriert und hier wieder aufgebaut.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Häuser wurden woanders abgebaut und hier wieder aufgebaut – „errichten“ ist ein Synonym für „aufbauen“.",
+              "en": "✗ a — „nachbauen“ means building a copy; these are the original buildings, moved. The detail „Balken für Balken nummeriert“ (each beam numbered) proves they are originals."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was ist nach Aussage der Führerin das Besondere an diesem Museum?",
+            "optionen": {
+              "a": "Alle Gebäude stammen aus derselben Region.",
+              "b": "Die Gebäude werden tatsächlich benutzt.",
+              "c": "Die Gebäude sind besonders alt."
+            },
+            "loesung": "b",
+            "beleg": "Das Besondere an unserem Museum ist aber nicht das Alter der Häuser, sondern dass fast alle bewohnt beziehungsweise benutzt werden.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Sie sagt ausdrücklich „nicht das Alter … sondern“ und nennt dann die Nutzung.",
+              "en": "Again the „nicht A, sondern B“ signpost. ✗ c is explicitly the thing she says is NOT special, even though she did mention the year 1642."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Was dürfen die Besucher nicht tun?",
+            "optionen": {
+              "a": "in den Innenräumen fotografieren",
+              "b": "die Gegenstände berühren",
+              "c": "das Brot aus der Bäckerei kaufen"
+            },
+            "loesung": "b",
+            "beleg": "Fassen Sie die Möbel und Geräte bitte nicht an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Anfassen“ ist verboten. Fotografieren und Brotkaufen sind dagegen ausdrücklich erlaubt.",
+              "en": "„anfassen“ = „berühren“ = to touch. Both a and c are stated as permitted, so the negative question makes b the answer."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Was gilt für den Kaffee am Ende der Führung?",
+            "optionen": {
+              "a": "Er ist im Eintrittspreis enthalten.",
+              "b": "Er muss im Gasthaus extra bezahlt werden.",
+              "c": "Er wird nur an größere Gruppen ausgegeben."
+            },
+            "loesung": "a",
+            "beleg": "Dort gibt es für alle Teilnehmer dieser Führung einen Kaffee, den Sie mit Ihrer Eintrittskarte bereits bezahlt haben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Bereits bezahlt“ mit der Eintrittskarte heißt: im Preis enthalten.",
+              "en": "„bereits bezahlt“ = already paid. The paraphrase „im Eintrittspreis enthalten“ (included in the entry price) says the same thing differently — recognising paraphrase is what this item tests."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören ein Gespräch zwischen zwei Personen. Kreuzen Sie bei den Aufgaben 16 bis 22 an: richtig oder falsch. Sie hören das Gespräch einmal.",
+        "wiederholungen": 1,
+        "situation": "Nadine und Tobias arbeiten in derselben Firma. Sie treffen sich in der Kantine.",
+        "sprecher": [
+          { "rolle": "Nadine", "geschlecht": "f", "beschreibung": "Kollegin" },
+          { "rolle": "Tobias", "geschlecht": "m", "beschreibung": "Kollege, sucht eine Wohnung" }
+        ],
+        "skript": [
+          { "rolle": "Sprecher", "text": "Teil drei. Sie hören ein Gespräch zwischen zwei Personen. Sie hören das Gespräch einmal. Lesen Sie jetzt die Aufgaben sechzehn bis zweiundzwanzig.", "pauseDanachSek": 30, "akustik": "studio" },
+          { "rolle": "Nadine", "text": "Tobias, du siehst müde aus. Bist du immer noch auf Wohnungssuche?", "pauseDanachSek": 0.5, "akustik": "raum" },
+          { "rolle": "Tobias", "text": "Frag lieber nicht. Ich war jetzt bei vierzehn Besichtigungen. Vierzehn!", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Nadine", "text": "Und es war nichts dabei?", "pauseDanachSek": 0.4, "akustik": "raum" },
+          { "rolle": "Tobias", "text": "Doch, zwei waren richtig gut. Aber bei der einen standen achtzig Leute im Treppenhaus. Da brauchst du gar nicht erst eine Bewerbung abzugeben.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Nadine", "text": "Achtzig? Das ist ja noch schlimmer geworden als letztes Jahr.", "pauseDanachSek": 0.4, "akustik": "raum" },
+          { "rolle": "Tobias", "text": "Deutlich. Und die Mieten sind auch noch einmal gestiegen. Für sechzig Quadratmeter zahlst du hier inzwischen locker neunhundert Euro kalt.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Nadine", "text": "Suchst du eigentlich nur in der Innenstadt?", "pauseDanachSek": 0.4, "akustik": "raum" },
+          { "rolle": "Tobias", "text": "Am Anfang schon, aber das habe ich aufgegeben. Ich schaue jetzt auch in den Vororten. Mit der Straßenbahn bin ich von Rehberg aus in zwanzig Minuten im Büro, das ist völlig in Ordnung.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Nadine", "text": "Hast du es einmal über Bekannte versucht? Bei mir hat das damals funktioniert. Meine jetzige Wohnung stand nie in einer Anzeige.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Tobias", "text": "Das sagen alle. Ich habe im Kollegenkreis herumgefragt, bisher ohne Ergebnis.", "pauseDanachSek": 0.5, "akustik": "raum" },
+          { "rolle": "Nadine", "text": "Warte einmal – die Schwester von meinem Mann zieht im Februar nach Leipzig. Ihre Wohnung ist in Rehberg, drei Zimmer, mit Balkon. Soll ich fragen, ob der Vermieter schon jemanden hat?", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Tobias", "text": "Im Ernst? Ja, unbedingt!", "pauseDanachSek": 0.4, "akustik": "raum" },
+          { "rolle": "Nadine", "text": "Ich schreibe ihr heute Abend. Aber versprich mir eines: Wenn es klappt, hilfst du mir beim Streichen meines Arbeitszimmers.", "pauseDanachSek": 0.5, "akustik": "raum", "betont": true },
+          { "rolle": "Tobias", "text": "Wenn ich dadurch eine Wohnung bekomme, streiche ich dir die ganze Wohnung.", "pauseDanachSek": 3, "akustik": "raum" }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "richtig_falsch",
+            "frage": "Tobias hat bisher nur wenige Wohnungen besichtigt.",
+            "loesung": "falsch",
+            "beleg": "Ich war jetzt bei vierzehn Besichtigungen. Vierzehn!",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Vierzehn Besichtigungen sind viele – er wiederholt die Zahl sogar, um das zu betonen.",
+              "en": "The repetition „Vierzehn!“ is the emotional cue: he thinks it is a lot. Tone carries meaning in listening tasks, not just the words."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "richtig_falsch",
+            "frage": "Bei einer Besichtigung waren sehr viele Interessenten anwesend.",
+            "loesung": "richtig",
+            "beleg": "Aber bei der einen standen achtzig Leute im Treppenhaus.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Achtzig Leute im Treppenhaus sind sehr viele Interessenten.",
+              "en": "„Interessenten“ = interested parties / applicants. The text does not use that word, so you must match the concept, not the vocabulary."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "richtig_falsch",
+            "frage": "Die Mieten sind im Vergleich zum Vorjahr gestiegen.",
+            "loesung": "richtig",
+            "beleg": "Und die Mieten sind auch noch einmal gestiegen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Noch einmal gestiegen“ nach Nadines Hinweis auf „letztes Jahr“ bestätigt den Vergleich zum Vorjahr.",
+              "en": "„noch einmal“ = once again, i.e. on top of a previous increase. Nadine's „als letztes Jahr“ supplies the comparison point."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "richtig_falsch",
+            "frage": "Tobias sucht inzwischen auch außerhalb des Stadtzentrums.",
+            "loesung": "richtig",
+            "beleg": "Ich schaue jetzt auch in den Vororten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Vororte“ liegen außerhalb des Zentrums. Am Anfang suchte er nur in der Innenstadt, das hat er aufgegeben.",
+              "en": "„der Vorort“ = suburb. Note the time contrast: „Am Anfang schon, aber … jetzt auch“ marks a change, and the question asks about „inzwischen“ (by now)."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "richtig_falsch",
+            "frage": "Nadine hat ihre Wohnung über eine Zeitungsanzeige gefunden.",
+            "loesung": "falsch",
+            "beleg": "Meine jetzige Wohnung stand nie in einer Anzeige.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt ausdrücklich, ihre Wohnung stand nie in einer Anzeige – sie hat sie über Bekannte gefunden.",
+              "en": "The word „Anzeige“ appears in both the question and the script, but with „nie“ in front of it. Listen for negation; it flips the whole meaning."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "richtig_falsch",
+            "frage": "Nadine kennt jemanden, der demnächst aus einer Wohnung auszieht.",
+            "loesung": "richtig",
+            "beleg": "die Schwester von meinem Mann zieht im Februar nach Leipzig",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ihre Schwägerin zieht im Februar weg, ihre Wohnung in Rehberg wird also frei.",
+              "en": "„nach Leipzig ziehen“ implies moving out of the current flat. „demnächst“ (soon) matches „im Februar“."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "richtig_falsch",
+            "frage": "Tobias soll Nadine beim Umzug helfen.",
+            "loesung": "falsch",
+            "beleg": "Wenn es klappt, hilfst du mir beim Streichen meines Arbeitszimmers.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er soll beim Streichen helfen, nicht beim Umzug. Nadine zieht ja gar nicht um.",
+              "en": "The topic of the whole conversation is moving house, which makes „Umzug“ feel right — but the actual favour asked is painting („Streichen“) her study. The last item of a listening part is often this kind of near-miss."
+            }
+          }
+        ]
+      },
+
+      {
+        "nummer": 4,
+        "typ": "diskussion",
+        "anweisung": "Sie hören eine Diskussion im Radio. Wer sagt das? Ordnen Sie bei den Aufgaben 23 bis 30 zu. Sie hören die Diskussion zweimal.",
+        "wiederholungen": 2,
+        "situation": "In der Radiosendung „Standpunkte“ diskutieren zwei Gäste über die Frage, ob ehrenamtliche Arbeit bezahlt werden sollte.",
+        "sprecher": [
+          { "rolle": "Moderatorin", "geschlecht": "f", "beschreibung": "Dr. Sabine Reuter, moderiert die Sendung" },
+          { "rolle": "Ammann", "geschlecht": "m", "beschreibung": "Gregor Ammann, Vorsitzender eines Sportvereins" },
+          { "rolle": "Bartholomäus", "geschlecht": "f", "beschreibung": "Ines Bartholomäus, Sozialwissenschaftlerin" }
+        ],
+        "skript": [
+          { "rolle": "Sprecher", "text": "Teil vier. Sie hören eine Diskussion im Radio. Sie hören die Diskussion zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.", "pauseDanachSek": 35, "akustik": "studio" },
+          { "rolle": "Moderatorin", "text": "Guten Abend und willkommen zu Standpunkte. Über vierzehn Millionen Menschen in Deutschland engagieren sich ehrenamtlich – in Sportvereinen, bei der Feuerwehr, in der Nachbarschaftshilfe. Doch immer weniger junge Leute machen mit. Unsere Frage heute Abend: Sollte man freiwilliges Engagement bezahlen? Bei mir im Studio sind Gregor Ammann, Vorsitzender eines Sportvereins mit vierhundert Mitgliedern, und die Sozialwissenschaftlerin Ines Bartholomäus. Frau Bartholomäus, Sie fordern eine Bezahlung. Warum?", "pauseDanachSek": 0.6, "akustik": "radio" },
+          { "rolle": "Bartholomäus", "text": "Ich fordere keine Bezahlung, ich fordere eine faire Aufwandsentschädigung – das ist ein Unterschied. Wer jeden Samstag vier Stunden lang Kinder trainiert, dafür Benzin bezahlt und sich Ausrüstung kauft, der legt am Ende Geld drauf. Ehrenamt darf kein Luxus sein, den sich nur leisten kann, wer ohnehin genug verdient.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Ammann", "text": "Da bin ich völlig bei Ihnen, was die Kosten angeht. Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet, das ist selbstverständlich. Aber sobald Sie anfangen, Stunden zu vergüten, verändern Sie den Charakter der Sache. Dann sitzen Sie plötzlich in Sitzungen über Stundensätze, und die Leute rechnen nach, wer mehr bekommt.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Moderatorin", "text": "Herr Ammann, aber Sie finden doch selbst kaum noch Nachwuchs, oder?", "pauseDanachSek": 0.5, "akustik": "radio" },
+          { "rolle": "Ammann", "text": "Das stimmt, und es ärgert mich. Nur liegt das nach meiner Erfahrung nicht am Geld. Die jungen Leute haben Angst vor der Verpflichtung. Wer sich bei uns als Trainer meldet, bindet sich für eine ganze Saison. Genau davor schrecken viele zurück.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Bartholomäus", "text": "Diese Erfahrung teile ich nicht ganz. In unseren Befragungen nennen unter Dreißigjährige zwar die Zeit als größtes Hindernis, aber direkt danach kommen die eigenen Kosten. Und interessanterweise steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird. Das ist gut belegt.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Moderatorin", "text": "Ich möchte an dieser Stelle einwerfen, dass es die steuerfreie Übungsleiterpauschale ja bereits gibt – bis zu dreitausend Euro im Jahr. Reicht das denn nicht?", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Bartholomäus", "text": "Auf dem Papier ist das großzügig. In der Praxis nutzen sie vor allem Vereine, die gut organisiert sind und jemanden haben, der sich mit Formularen auskennt. Die kleine Nachbarschaftsinitiative ohne Buchhaltung profitiert davon überhaupt nicht.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Ammann", "text": "Und trotzdem warne ich davor, alles über Geld zu regeln. Was unsere Leute wirklich hält, ist die Anerkennung. Wir machen einmal im Jahr ein großes Sommerfest nur für die Ehrenamtlichen, und die Gemeinde stellt uns kostenlos die Sporthalle. Das kostet fast nichts und wirkt mehr als jede Pauschale.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Moderatorin", "text": "Frau Bartholomäus, ein letzter Punkt an Sie: Was müsste sich morgen ändern?", "pauseDanachSek": 0.5, "akustik": "radio" },
+          { "rolle": "Bartholomäus", "text": "Die Auszahlung müsste einfacher werden. Ein Formular, eine Stelle, fertig. Solange ein Verein einen Steuerberater braucht, um dreihundert Euro auszuzahlen, ändert sich gar nichts.", "pauseDanachSek": 0.6, "akustik": "radio", "betont": true },
+          { "rolle": "Moderatorin", "text": "Damit sind wir leider am Ende der Sendung. Vielen Dank Ihnen beiden.", "pauseDanachSek": 3, "akustik": "radio" }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "zuordnung_person",
+            "frage": "Ehrenamtliches Engagement darf nicht davon abhängen, wie viel jemand verdient.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "c",
+            "beleg": "Ehrenamt darf kein Luxus sein, den sich nur leisten kann, wer ohnehin genug verdient.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Frau Bartholomäus sagt, das Ehrenamt dürfe kein Luxus für Gutverdienende sein.",
+              "en": "„sich etwas leisten können“ = to be able to afford something. Her point is exactly that income should not decide who can volunteer."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_person",
+            "frage": "In meiner Organisation werden Fahrtkosten bereits zurückgezahlt.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "b",
+            "beleg": "Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet, das ist selbstverständlich.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Bei uns“ meint Ammanns Sportverein. „Erstatten“ heißt zurückzahlen.",
+              "en": "„erstatten“ = to reimburse. „Bei uns“ identifies the speaker's own organisation, and Ammann is the club chairman."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_person",
+            "frage": "Eine steuerfreie Pauschale für Übungsleiter existiert bereits.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "a",
+            "beleg": "Ich möchte an dieser Stelle einwerfen, dass es die steuerfreie Übungsleiterpauschale ja bereits gibt – bis zu dreitausend Euro im Jahr.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Moderatorin bringt diese Information selbst ein („Ich möchte einwerfen“).",
+              "en": "Do not assume the moderator only asks questions. Here she contributes a fact of her own — „einwerfen“ = to interject. Always keep the moderator as a live option."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_person",
+            "frage": "Junge Menschen scheuen vor allem die lange Bindung.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "b",
+            "beleg": "Die jungen Leute haben Angst vor der Verpflichtung.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Ammann nennt die Verpflichtung für eine ganze Saison als Hauptgrund, nicht das Geld.",
+              "en": "„scheuen“ = to shy away from, matching „Angst haben vor“ and „davor zurückschrecken“. Bartholomäus directly contradicts this („Diese Erfahrung teile ich nicht ganz“), which confirms it is his view."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_person",
+            "frage": "Eine kleine Zahlung erhöht nachweislich die Bereitschaft mitzumachen.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "c",
+            "beleg": "Und interessanterweise steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird. Das ist gut belegt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Das ist gut belegt“ entspricht „nachweislich“. Sie stützt sich auf Befragungen.",
+              "en": "„nachweislich“ = demonstrably, matching „gut belegt“ (well documented). As the social scientist, she is the one citing survey evidence."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "zuordnung_person",
+            "frage": "Kleine Gruppen ohne eigene Verwaltung haben von der bestehenden Regelung nichts.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "c",
+            "beleg": "Die kleine Nachbarschaftsinitiative ohne Buchhaltung profitiert davon überhaupt nicht.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie antwortet damit direkt auf die Frage der Moderatorin nach der Übungsleiterpauschale.",
+              "en": "„Buchhaltung“ = bookkeeping, i.e. „eigene Verwaltung“. Careful: the moderator raised the allowance, but it is Bartholomäus who criticises it."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_person",
+            "frage": "Anerkennung wirkt stärker als eine Geldzahlung.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "b",
+            "beleg": "Das kostet fast nichts und wirkt mehr als jede Pauschale.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Ammann nennt das Sommerfest und die Anerkennung als wirksamer als Geld.",
+              "en": "„wirkt mehr als jede Pauschale“ = works better than any flat payment. This is the core of his position throughout the discussion."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_person",
+            "frage": "Die Auszahlung muss unbürokratischer werden.",
+            "optionen": { "a": "die Moderatorin", "b": "Gregor Ammann", "c": "Ines Bartholomäus" },
+            "loesung": "c",
+            "beleg": "Die Auszahlung müsste einfacher werden. Ein Formular, eine Stelle, fertig.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Auf die Schlussfrage der Moderatorin fordert Frau Bartholomäus ein einfacheres Verfahren.",
+              "en": "„unbürokratisch“ = with less red tape, matching „einfacher“ and „Ein Formular, eine Stelle, fertig“. The moderator asked the question; Bartholomäus gives the answer."
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "schreiben": {
+    "zeitMinuten": 60,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "email_informell",
+        "situation": "Sie sind vor vier Wochen in eine andere Stadt gezogen. Ihre Freundin Miriam hat Ihnen geschrieben und gefragt, wie es Ihnen dort geht.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an Miriam. Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf Anrede und Gruß. Schreiben Sie ungefähr 80 Wörter.",
+        "leitpunkte": [
+          "Beschreiben Sie Ihre neue Wohnung.",
+          "Erklären Sie, was Ihnen an der neuen Stadt gefällt und was nicht.",
+          "Laden Sie Miriam ein und schlagen Sie einen Termin vor."
+        ],
+        "anrede": "Liebe Miriam",
+        "woerter": 80,
+        "zeitMinuten": 20,
+        "punkte": 40,
+        "redemittel": [
+          "Vielen Dank für deine E-Mail! / Schön, dass du dich meldest.",
+          "Inzwischen habe ich mich gut eingelebt.",
+          "Die Wohnung ist zwar …, aber dafür …",
+          "Was mir hier besonders gefällt, ist …",
+          "Nur eines stört mich: …",
+          "Hast du Lust, mich zu besuchen?",
+          "Wie wäre es mit dem ersten Wochenende im März?",
+          "Ich freue mich auf deine Antwort. Liebe Grüße, …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Liebe Miriam,\n\ndanke für deine E-Mail. Mir geht es gut. Meine neue Wohnung ist klein, aber schön. Sie hat zwei Zimmer und einen Balkon. Die Küche ist neu.\n\nDie Stadt gefällt mir. Es gibt viele Cafés und einen großen Park. Nicht gut ist der Verkehr. Am Morgen ist es sehr laut.\n\nWillst du mich besuchen? Vielleicht im März. Bitte schreib mir.\n\nViele Grüße\nSandra",
+            "kommentar": "Alle drei Leitpunkte sind da, und der Text ist verständlich – das reicht für „ausreichend“. Was fehlt, ist Verbindung: fast jeder Satz ist ein kurzer Hauptsatz, und es gibt kaum Konnektoren außer „aber“. Der Terminvorschlag „Vielleicht im März“ ist zu vage. Für eine bessere Note bräuchte es Nebensätze (weil, obwohl, dass), einen konkreten Termin und etwas mehr persönlichen Ton."
+          },
+          {
+            "niveau": "gut",
+            "text": "Liebe Miriam,\n\nvielen Dank für deine E-Mail – schön, dass du an mich denkst! Inzwischen habe ich mich hier ganz gut eingelebt.\n\nMeine neue Wohnung liegt im dritten Stock und ist zwar kleiner als die alte, dafür habe ich endlich einen Balkon, auf dem ich morgens frühstücken kann. Die Stadt gefällt mir gut, weil alles zu Fuß erreichbar ist. Nur der Lärm auf der Hauptstraße stört mich manchmal.\n\nHast du Lust, mich zu besuchen? Am ersten Wochenende im März hätte ich Zeit. Melde dich einfach!\n\nLiebe Grüße\nSandra",
+            "kommentar": "Deutlich besser verbunden: „zwar … dafür …“, ein Relativsatz („auf dem ich frühstücken kann“), ein Kausalsatz mit „weil“ und ein Komparativ („kleiner als“). Der Terminvorschlag ist konkret, die Einladung höflich formuliert. Anrede und Gruß passen zum informellen Register. Genau diese Bandbreite an Strukturen unterscheidet „gut“ von „ausreichend“."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "forumsbeitrag",
+        "situation": "Sie lesen in einem Online-Forum einen Beitrag zum Thema Sprachenlernen.",
+        "impuls": "Ich überlege, Spanisch zu lernen, und finde online hunderte Kurse – viele davon sogar kostenlos. Meine Schwester sagt, ich solle lieber zur Volkshochschule gehen, dort lerne man richtig. Aber warum soll ich Geld ausgeben und jede Woche abends aus dem Haus, wenn ich das Gleiche am Laptop haben kann? Wie seht ihr das? — Ferdi_92",
+        "aufgabenstellung": "Schreiben Sie eine Antwort im Forum. Begründen Sie Ihre Meinung. Schreiben Sie etwas zu allen drei Punkten. Schreiben Sie ungefähr 80 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie persönlich von Online-Sprachkursen halten.",
+          "Nennen Sie einen Vorteil und einen Nachteil.",
+          "Geben Sie Ferdi_92 einen Rat."
+        ],
+        "woerter": 80,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "Ich finde die Frage interessant, weil …",
+          "Meiner Meinung nach / Ich bin der Meinung, dass …",
+          "Einerseits … andererseits …",
+          "Ein großer Vorteil ist, dass …",
+          "Allerdings darf man nicht vergessen, dass …",
+          "Aus eigener Erfahrung kann ich sagen, …",
+          "An deiner Stelle würde ich …",
+          "Ich würde dir raten, … zu …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo Ferdi,\n\nich finde Online-Kurse gut. Ich habe auch einen Kurs online gemacht. Man kann lernen, wann man will. Das ist praktisch.\n\nAber es gibt auch ein Problem. Man spricht nicht mit anderen Menschen. Sprechen ist aber sehr wichtig.\n\nIch rate dir: Mach beides. Online lernen und in einem Kurs sprechen. Dann lernst du am besten.\n\nViele Grüße\nKarim",
+            "kommentar": "Der Beitrag beantwortet alle drei Punkte und ist klar gegliedert. Die Sätze sind aber sehr kurz und stehen unverbunden nebeneinander; es fehlen Konnektoren wie „weil“, „obwohl“ oder „denn“. Auch die Begründungen bleiben knapp („Sprechen ist aber sehr wichtig“ – warum?). Für „gut“ müssten Vorteil und Nachteil ausgeführt und der Rat höflicher formuliert werden."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo Ferdi,\n\nich kann deine Frage gut verstehen, denn ich habe vor zwei Jahren genau davor gestanden. Meiner Meinung nach sind Online-Kurse eine gute Sache, aber nicht die ganze Lösung.\n\nDer größte Vorteil ist, dass du lernen kannst, wann und wo du willst – das spart Zeit und Geld. Der Nachteil ist allerdings, dass dir niemand zuhört und dich korrigiert. Genau das braucht man aber beim Sprechen.\n\nAn deiner Stelle würde ich mit einem Onlinekurs anfangen und später zusätzlich eine Sprachgruppe besuchen.\n\nViele Grüße\nKarim",
+            "kommentar": "Hier stimmt die Textsorte: eigene Meinung, klar begründet, mit persönlicher Erfahrung eingeleitet. Gute Konnektoren („denn“, „aber“, „allerdings“, „genau das“), ein Konjunktiv-II-Rat („An deiner Stelle würde ich …“) und eine differenzierte Position statt eines einfachen Ja oder Nein. Die Länge liegt im Zielbereich."
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "email_halbformell",
+        "situation": "Sie besuchen an der Volkshochschule einen Kurs. Nächste Woche findet ein zusätzlicher Termin am Samstagvormittag statt. Sie können daran nicht teilnehmen.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an Ihre Kursleiterin, Frau Dr. Wegener. Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf die passende Anrede und den passenden Gruß. Schreiben Sie ungefähr 40 Wörter.",
+        "leitpunkte": [
+          "Entschuldigen Sie sich für Ihr Fehlen.",
+          "Nennen Sie den Grund.",
+          "Fragen Sie nach den Materialien des Termins."
+        ],
+        "anrede": "Sehr geehrte Frau Dr. Wegener",
+        "woerter": 40,
+        "zeitMinuten": 15,
+        "punkte": 20,
+        "redemittel": [
+          "Sehr geehrte Frau Dr. Wegener, …",
+          "leider kann ich am Samstag nicht am Zusatztermin teilnehmen.",
+          "Der Grund dafür ist, dass …",
+          "Ich muss an diesem Tag …",
+          "Könnten Sie mir bitte die Unterlagen zuschicken?",
+          "Wäre es möglich, dass …?",
+          "Vielen Dank im Voraus.",
+          "Mit freundlichen Grüßen, …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Frau Dr. Wegener,\n\nam Samstag kann ich leider nicht zum Kurs kommen. Ich muss an diesem Tag arbeiten, das geht nicht anders. Können Sie mir die Materialien von der Stunde schicken? Danke.\n\nMit freundlichen Grüßen\nPaulo Mendes",
+            "kommentar": "Anrede und Gruß sind korrekt und formell, und alle drei Punkte sind angesprochen. Es fehlt allerdings eine echte Entschuldigung („Es tut mir leid“, „Ich bitte um Verständnis“), und die Bitte ist sehr direkt formuliert – „Können Sie …?“ statt „Könnten Sie …?“. Bei nur 40 Wörtern zählt jedes Wort: Ein höflicher Konjunktiv kostet kaum Platz und bringt Punkte."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Frau Dr. Wegener,\n\nleider kann ich am Zusatztermin am Samstag nicht teilnehmen, da ich an diesem Tag arbeiten muss. Das tut mir sehr leid.\n\nKönnten Sie mir bitte die Unterlagen der Stunde per E-Mail zuschicken? Vielen Dank im Voraus.\n\nMit freundlichen Grüßen\nPaulo Mendes",
+            "kommentar": "Register und Umfang passen genau. „da“ statt „weil“ wirkt schriftsprachlicher, „Könnten Sie …?“ ist die höfliche Konjunktiv-II-Form, und „Vielen Dank im Voraus“ schließt die Bitte korrekt ab. Beachten Sie, dass die Entschuldigung explizit ausgesprochen wird – das ist der Leitpunkt, den Lernende am häufigsten vergessen."
+          }
+        ]
+      }
+    ]
+  },
+
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "gemeinsam_planen",
+        "titel": "Gemeinsam etwas planen",
+        "anweisung": "Sie und Ihr Partner / Ihre Partnerin sollen gemeinsam eine Abschiedsfeier organisieren. Sprechen Sie über die fünf Punkte, machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihres Partners / Ihrer Partnerin und kommen Sie am Ende zu einer Entscheidung.",
+        "dauerMinuten": 3,
+        "punkte": 28,
+        "situation": "Ihre Kollegin Frau Sundermann geht nach zwölf Jahren in der Firma in Rente. Die Abteilung möchte sie mit einer kleinen Feier verabschieden. Sie und Ihr Partner / Ihre Partnerin sollen die Feier organisieren.",
+        "planungspunkte": [
+          "Wann und wo soll die Feier stattfinden?",
+          "Wen laden Sie ein?",
+          "Was soll es zu essen und zu trinken geben?",
+          "Welches Geschenk kaufen Sie?",
+          "Wer übernimmt welche Aufgabe?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Also, fangen wir am besten mit dem Termin an. Ich würde die Feier gern am letzten Freitag im Monat machen, so gegen sechzehn Uhr. Was hältst du davon?",
+            "wartenSek": 25,
+            "hinweis": "Reagieren Sie auf den Vorschlag: zustimmen oder einen anderen Termin vorschlagen. Sagen Sie auch, wo die Feier stattfinden soll."
+          },
+          {
+            "text": "Gut, das können wir so machen. Und wen laden wir ein? Nur unsere Abteilung oder auch Leute aus anderen Bereichen?",
+            "wartenSek": 25,
+            "hinweis": "Machen Sie einen Vorschlag und begründen Sie ihn."
+          },
+          {
+            "text": "Einverstanden. Beim Essen bin ich unsicher. Sollen wir etwas bestellen oder bringt jeder etwas mit?",
+            "wartenSek": 25,
+            "hinweis": "Äußern Sie Ihre Meinung und schlagen Sie etwas Konkretes vor."
+          },
+          {
+            "text": "Das klingt gut. Jetzt fehlt noch das Geschenk. Frau Sundermann reist sehr gern. Hast du eine Idee?",
+            "wartenSek": 25,
+            "hinweis": "Schlagen Sie ein Geschenk vor und sagen Sie, warum es passt."
+          },
+          {
+            "text": "Schöne Idee, das nehmen wir. Zum Schluss: Wer macht was? Ich könnte die Einladung schreiben.",
+            "wartenSek": 30,
+            "hinweis": "Verteilen Sie die restlichen Aufgaben und fassen Sie das Ergebnis kurz zusammen."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "praesentation",
+        "titel": "Ein Thema präsentieren",
+        "anweisung": "Wählen Sie eines der beiden Themen. Halten Sie eine kurze Präsentation von etwa drei Minuten. Die fünf Folien helfen Ihnen beim Aufbau. Sprechen Sie zu allen fünf Punkten.",
+        "dauerMinuten": 3,
+        "punkte": 40,
+        "themen": [
+          {
+            "titel": "Sollte man im Urlaub für die Arbeit erreichbar sein?",
+            "folien": [
+              "Folie 1 — Nennen Sie das Thema Ihrer Präsentation und erklären Sie kurz, worum es geht.",
+              "Folie 2 — Berichten Sie von Ihren eigenen Erfahrungen oder von einem Erlebnis, das Sie mit dem Thema verbinden.",
+              "Folie 3 — Beschreiben Sie die Situation in Ihrem Heimatland. Geben Sie konkrete Beispiele.",
+              "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie dazu Ihre eigene Meinung.",
+              "Folie 5 — Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern."
+            ],
+            "redemittel": [
+              "In meiner Präsentation geht es um die Frage, ob …",
+              "Ich habe dieses Thema gewählt, weil …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Bei uns in … ist es üblich, dass …",
+              "Ein Vorteil ist sicher, dass … Auf der anderen Seite …",
+              "Persönlich bin ich der Meinung, dass …",
+              "Damit komme ich zum Schluss. Vielen Dank für Ihre Aufmerksamkeit."
+            ],
+            "musterantwort": "In meiner Präsentation geht es um die Frage, ob man im Urlaub für die Arbeit erreichbar sein sollte. Ich habe dieses Thema gewählt, weil es fast alle Berufstätigen betrifft.\n\nAus eigener Erfahrung kann ich sagen, dass es schwierig ist, das Handy wirklich auszuschalten. Letztes Jahr war ich zwei Wochen am Meer und habe trotzdem jeden Morgen meine E-Mails gelesen. Erholt habe ich mich erst in der zweiten Woche, als ich damit aufgehört habe.\n\nIn meinem Heimatland ist es leider ganz normal, im Urlaub erreichbar zu sein. Viele Kollegen beantworten Nachrichten am Abend, und niemand findet das merkwürdig. In größeren Firmen gibt es aber inzwischen erste Regeln dagegen.\n\nEin Vorteil ist sicher, dass dringende Probleme schnell gelöst werden können und man nach dem Urlaub weniger Arbeit vorfindet. Auf der anderen Seite kann man sich nicht richtig erholen, wenn man ständig an die Arbeit denkt. Persönlich bin ich der Meinung, dass Erreichbarkeit die Ausnahme bleiben sollte und vorher klar vereinbart werden muss.\n\nDamit komme ich zum Schluss. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Muss man heute sein Leben lang weiterlernen?",
+            "folien": [
+              "Folie 1 — Nennen Sie das Thema Ihrer Präsentation und erklären Sie kurz, worum es geht.",
+              "Folie 2 — Berichten Sie von Ihren eigenen Erfahrungen oder von einem Erlebnis, das Sie mit dem Thema verbinden.",
+              "Folie 3 — Beschreiben Sie die Situation in Ihrem Heimatland. Geben Sie konkrete Beispiele.",
+              "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie dazu Ihre eigene Meinung.",
+              "Folie 5 — Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern."
+            ],
+            "redemittel": [
+              "Ich möchte heute über … sprechen.",
+              "Das Thema ist mir wichtig, weil …",
+              "Ich erinnere mich an eine Situation, in der …",
+              "In meinem Heimatland ist Weiterbildung …",
+              "Dafür spricht, dass … Dagegen spricht allerdings, dass …",
+              "Zusammenfassend würde ich sagen, dass …",
+              "Vielen Dank fürs Zuhören. Haben Sie noch Fragen?"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob man sein ganzes Leben lang weiterlernen muss. Damit ist gemeint, dass man auch nach der Ausbildung immer wieder Neues lernt.\n\nIch erinnere mich an eine Situation vor drei Jahren: In meiner Firma wurde ein neues Computerprogramm eingeführt, und plötzlich konnte niemand mehr seine Arbeit wie gewohnt machen. Ich habe damals einen Abendkurs besucht und war danach froh darüber.\n\nIn meinem Heimatland ist Weiterbildung noch nicht selbstverständlich. Viele Betriebe bieten zwar Kurse an, aber die Teilnahme findet oft in der Freizeit statt. Junge Leute nutzen dafür immer häufiger Onlineangebote.\n\nDafür spricht, dass man beruflich flexibel bleibt und länger interessante Aufgaben bekommt. Dagegen spricht allerdings, dass ständiges Lernen auch Druck erzeugt, besonders für Menschen mit Familie. Meiner Meinung nach sollte Weiterbildung deshalb zur Arbeitszeit gehören und nicht zur Freizeit.\n\nZusammenfassend würde ich sagen, dass Lernen heute wirklich nicht mit dem Abschluss endet. Vielen Dank fürs Zuhören."
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "rueckmeldung",
+        "titel": "Über ein Thema sprechen",
+        "anweisung": "Geben Sie Ihrem Partner / Ihrer Partnerin eine kurze Rückmeldung zu seiner / ihrer Präsentation und stellen Sie eine Frage dazu. Beantworten Sie anschließend die Frage Ihres Partners / Ihrer Partnerin zu Ihrer eigenen Präsentation.",
+        "dauerMinuten": 2,
+        "punkte": 16,
+        "fragen": [
+          "Wie hat Ihnen die Präsentation gefallen? Was fanden Sie besonders interessant?",
+          "Stellen Sie eine Frage zum Inhalt der Präsentation.",
+          "Beantworten Sie die Frage Ihres Partners / Ihrer Partnerin zu Ihrer eigenen Präsentation."
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihre Präsentation, das war wirklich interessant. Besonders gut gefallen hat mir das Beispiel aus Ihrem eigenen Alltag. Ich habe eine Frage dazu: Glauben Sie, dass sich die Situation in den nächsten Jahren verändern wird?",
+            "wartenSek": 40,
+            "hinweis": "Bedanken Sie sich kurz und beantworten Sie die Frage ausführlich. Begründen Sie Ihre Antwort."
+          },
+          {
+            "text": "Danke für Ihre Antwort. Und was würden Sie jemandem raten, der gerade vor dieser Entscheidung steht?",
+            "wartenSek": 35,
+            "hinweis": "Geben Sie einen konkreten Rat und begründen Sie ihn."
+          }
+        ]
+      }
+    ]
+  },
+
+  "glossar": [
+    {
+      "lemma": "die Werbeagentur",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Werbeagenturen",
+      "bedeutung_de": "Firma, die Werbung für andere Unternehmen macht",
+      "bedeutung_en": "advertising agency",
+      "beispiel": "Ich hatte eine gute Stelle in einer Werbeagentur",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "unzufrieden",
+      "wortart": "adjektiv",
+      "bedeutung_de": "nicht zufrieden; man wünscht sich etwas anderes",
+      "bedeutung_en": "dissatisfied, unhappy (with a situation)",
+      "beispiel": "Trotzdem war ich unzufrieden.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "ankündigen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "kündigt an",
+        "praeteritum": "kündigte an",
+        "perfekt": "hat angekündigt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "vorher sagen, dass etwas passieren wird",
+      "bedeutung_en": "to announce",
+      "beispiel": "Als meine Firma ankündigte, dass alle Mitarbeiter dauerhaft von zu Hause arbeiten dürfen",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "dauerhaft",
+      "wortart": "adjektiv",
+      "bedeutung_de": "für immer, nicht nur vorübergehend",
+      "bedeutung_en": "permanent(ly), long-term",
+      "beispiel": "dass alle Mitarbeiter dauerhaft von zu Hause arbeiten dürfen",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "mieten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "mietet",
+        "praeteritum": "mietete",
+        "perfekt": "hat gemietet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "gegen Geld benutzen dürfen, ohne es zu besitzen",
+      "bedeutung_en": "to rent (as the tenant). Careful: „vermieten“ = to let out, the landlord's side.",
+      "beispiel": "habe ich ein altes Bauernhaus in einem Dorf in Mecklenburg gemietet",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "unterschätzen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "unterschätzt",
+        "praeteritum": "unterschätzte",
+        "perfekt": "hat unterschätzt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "etwas für kleiner oder leichter halten, als es ist",
+      "bedeutung_en": "to underestimate. Opposite: „überschätzen“.",
+      "beispiel": "Außerdem hatte ich die Stille unterschätzt.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "einsam",
+      "wortart": "adjektiv",
+      "bedeutung_de": "allein und traurig darüber",
+      "bedeutung_en": "lonely. Not the same as „allein“ (alone), which is neutral.",
+      "beispiel": "In der Stadt hatte ich mich nie einsam gefühlt",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Sportverein",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Sportvereine",
+      "bedeutung_de": "Gruppe von Menschen, die gemeinsam Sport treibt",
+      "bedeutung_en": "sports club",
+      "beispiel": "Geholfen hat mir schließlich der Sportverein.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "der Vorrang",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "das Recht, zuerst zu fahren oder zu gehen",
+      "bedeutung_en": "right of way, priority",
+      "beispiel": "Auf ihnen haben Radfahrer Vorrang",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "einrichten",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "richtet ein",
+        "praeteritum": "richtete ein",
+        "perfekt": "hat eingerichtet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "neu schaffen, aufbauen; auch: eine Wohnung möblieren",
+      "bedeutung_en": "to set up, establish (also: to furnish a flat)",
+      "beispiel": "Die Stadt Freiburg hat inzwischen über zwanzig solcher Straßen eingerichtet",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "befürchten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "befürchtet",
+        "praeteritum": "befürchtete",
+        "perfekt": "hat befürchtet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "Angst haben, dass etwas Schlechtes passiert",
+      "bedeutung_en": "to fear, to be afraid that something bad will happen",
+      "beispiel": "Viele Ladenbesitzer befürchten, dass ihnen Kunden verloren gehen",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "durchsetzen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "setzt durch",
+        "praeteritum": "setzte durch",
+        "perfekt": "hat durchgesetzt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "dafür sorgen, dass eine Regel wirklich befolgt wird",
+      "bedeutung_en": "to enforce; reflexive „sich durchsetzen“ = to prevail, get one's way",
+      "beispiel": "Unklar ist bislang, wie die Regeln durchgesetzt werden sollen.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "das Ersatzteil",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Ersatzteile",
+      "bedeutung_de": "neues Teil, das ein kaputtes Teil ersetzt",
+      "bedeutung_en": "spare part, replacement part",
+      "beispiel": "sondern an fehlenden Ersatzteilen",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Spende",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Spenden",
+      "bedeutung_de": "Geld, das man freiwillig gibt, ohne etwas dafür zu bekommen",
+      "bedeutung_en": "donation. Verb: „spenden“.",
+      "beispiel": "es finanziert sich ausschließlich über Spenden",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "gültig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "noch wirksam, noch nicht abgelaufen",
+      "bedeutung_en": "valid (not expired)",
+      "beispiel": "gegen Vorlage eines gültigen Personalausweises",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "verlängern",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verlängert",
+        "praeteritum": "verlängerte",
+        "perfekt": "hat verlängert",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "länger machen; mehr Zeit geben",
+      "bedeutung_en": "to extend, to renew (a deadline, a contract, a loan)",
+      "beispiel": "Die Leihfrist kann zweimal um jeweils zwei Wochen verlängert werden",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Gebühr",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Gebühren",
+      "bedeutung_de": "Geld, das man für eine offizielle Leistung bezahlen muss",
+      "bedeutung_en": "fee, charge (typically official or administrative)",
+      "beispiel": "eine Gebühr von 0,50 Euro erhoben",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "untersagen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "untersagt",
+        "praeteritum": "untersagte",
+        "perfekt": "hat untersagt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "offiziell verbieten",
+      "bedeutung_en": "to prohibit. Formal register — you meet it on signs and in regulations far more often than „verbieten“.",
+      "beispiel": "Essen ist in allen Räumen untersagt.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Besichtigung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Besichtigungen",
+      "bedeutung_de": "Termin, bei dem man sich etwas ansieht, z. B. eine Wohnung",
+      "bedeutung_en": "viewing, inspection (of a flat, a building)",
+      "beispiel": "Ich war jetzt bei vierzehn Besichtigungen.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Vorort",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Vororte",
+      "bedeutung_de": "Ort am Rand einer großen Stadt",
+      "bedeutung_en": "suburb",
+      "beispiel": "Ich schaue jetzt auch in den Vororten.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Vermieter",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Vermieter",
+      "bedeutung_de": "Person, der die Wohnung gehört und die sie vermietet",
+      "bedeutung_en": "landlord. The tenant is „der Mieter“ — one letter's difference, opposite roles.",
+      "beispiel": "Soll ich fragen, ob der Vermieter schon jemanden hat?",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "streichen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "streicht",
+        "praeteritum": "strich",
+        "perfekt": "hat gestrichen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "mit Farbe anmalen; auch: etwas aus einer Liste entfernen",
+      "bedeutung_en": "to paint (a wall); also to cancel / delete. Both senses appear in this paper.",
+      "beispiel": "hilfst du mir beim Streichen meines Arbeitszimmers",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Zustimmung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Zustimmungen",
+      "bedeutung_de": "das Einverständnis; wenn jemand Ja sagt",
+      "bedeutung_en": "consent, approval. Verb: „zustimmen“ (+ Dativ).",
+      "beispiel": "Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "ausfallen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "fällt aus",
+        "praeteritum": "fiel aus",
+        "perfekt": "ist ausgefallen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "nicht stattfinden; nicht funktionieren",
+      "bedeutung_en": "to be cancelled; (of a device) to fail. Takes „sein“ in the perfect.",
+      "beispiel": "Der Kurs muss leider ausfallen, da der Dozent erkrankt ist.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "sich auflösen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "löst sich auf",
+        "praeteritum": "löste sich auf",
+        "perfekt": "hat sich aufgelöst",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "langsam verschwinden",
+      "bedeutung_en": "to dissolve, to clear (fog, a crowd)",
+      "beispiel": "Bis zum Mittag löst sich der Nebel auf",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "ausleihen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "leiht aus",
+        "praeteritum": "lieh aus",
+        "perfekt": "hat ausgeliehen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "etwas für eine bestimmte Zeit von jemandem nehmen",
+      "bedeutung_en": "to borrow („sich etwas ausleihen“) or to lend out. Context decides which.",
+      "beispiel": "sollte sich am Eingang ein Paar Gummistiefel ausleihen",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "das Ehrenamt",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Ehrenämter",
+      "bedeutung_de": "freiwillige Arbeit, für die man kein Gehalt bekommt",
+      "bedeutung_en": "voluntary work, honorary office",
+      "beispiel": "Ehrenamt darf kein Luxus sein",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Aufwandsentschädigung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Aufwandsentschädigungen",
+      "bedeutung_de": "Geld als Ausgleich für Kosten und Mühe, kein richtiger Lohn",
+      "bedeutung_en": "expense allowance — compensation for costs, deliberately distinguished from a wage",
+      "beispiel": "ich fordere eine faire Aufwandsentschädigung",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "erstatten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "erstattet",
+        "praeteritum": "erstattete",
+        "perfekt": "hat erstattet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "ausgegebenes Geld zurückzahlen",
+      "bedeutung_en": "to reimburse, to refund",
+      "beispiel": "Bei uns bekommt jeder Übungsleiter die Fahrtkosten erstattet",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Verpflichtung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Verpflichtungen",
+      "bedeutung_de": "etwas, das man tun muss, weil man es versprochen hat",
+      "bedeutung_en": "obligation, commitment",
+      "beispiel": "Die jungen Leute haben Angst vor der Verpflichtung.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Anerkennung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "Lob und Respekt für das, was jemand leistet",
+      "bedeutung_en": "recognition, appreciation",
+      "beispiel": "Was unsere Leute wirklich hält, ist die Anerkennung.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Bereitschaft",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "wenn man bereit ist, etwas zu tun",
+      "bedeutung_en": "willingness, readiness",
+      "beispiel": "steigt die Bereitschaft deutlich, sobald eine kleine Pauschale gezahlt wird",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "sich einleben",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "lebt sich ein",
+        "praeteritum": "lebte sich ein",
+        "perfekt": "hat sich eingelebt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "sich an einem neuen Ort zu Hause fühlen",
+      "bedeutung_en": "to settle in, to get used to a new place",
+      "beispiel": "Inzwischen habe ich mich hier ganz gut eingelebt.",
+      "fundstelle": "Schreiben Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Unterlagen",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Unterlagen",
+      "bedeutung_de": "Papiere und Dokumente zu einem Thema",
+      "bedeutung_en": "documents, paperwork, course materials. Used almost only in the plural.",
+      "beispiel": "Könnten Sie mir bitte die Unterlagen der Stunde per E-Mail zuschicken?",
+      "fundstelle": "Schreiben Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "erreichbar",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man jemanden anrufen oder erreichen kann",
+      "bedeutung_en": "reachable, available (by phone or e-mail)",
+      "beispiel": "In meinem Heimatland ist es leider ganz normal, im Urlaub erreichbar zu sein.",
+      "fundstelle": "Sprechen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Weiterbildung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Weiterbildungen",
+      "bedeutung_de": "Lernen und Kurse nach der Ausbildung oder neben dem Beruf",
+      "bedeutung_en": "further training, continuing education",
+      "beispiel": "In meinem Heimatland ist Weiterbildung noch nicht selbstverständlich.",
+      "fundstelle": "Sprechen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "sich etwas abschauen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "schaut sich ab",
+        "praeteritum": "schaute sich ab",
+        "perfekt": "hat sich abgeschaut",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "etwas von jemandem lernen, indem man es nachmacht",
+      "bedeutung_en": "to copy something from someone, to take a leaf out of their book",
+      "beispiel": "Andere Betriebe sollten sich das ruhig abschauen.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "verabschieden",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verabschiedet",
+        "praeteritum": "verabschiedete",
+        "perfekt": "hat verabschiedet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "Auf Wiedersehen sagen, jemanden offiziell gehen lassen",
+      "bedeutung_en": "to say goodbye to someone, to see someone off",
+      "beispiel": "Die Abteilung möchte sie mit einer kleinen Feier verabschieden.",
+      "fundstelle": "Sprechen Teil 1",
+      "niveau": "B1"
+    }
+  ],
+
+  "redewendungen": [
+    {
+      "wendung": "in erster Linie",
+      "typ": "redewendung",
+      "bedeutung_de": "vor allem, hauptsächlich",
+      "bedeutung_en": "primarily, first and foremost",
+      "beispiel": "Ihr ging es allerdings nie in erster Linie um die Umwelt.",
+      "fundstelle": "Lesen Teil 2"
+    },
+    {
+      "wendung": "auf jeden Fall",
+      "typ": "redewendung",
+      "bedeutung_de": "ganz sicher, auf alle Fälle",
+      "bedeutung_en": "definitely, in any case. Opposite: „auf keinen Fall“.",
+      "beispiel": "Würde ich es wieder tun? Auf jeden Fall.",
+      "fundstelle": "Lesen Teil 1"
+    },
+    {
+      "wendung": "ehrlich gesagt",
+      "typ": "redewendung",
+      "bedeutung_de": "wenn ich ehrlich bin",
+      "bedeutung_en": "to be honest, frankly. Very useful as a softener in the speaking exam.",
+      "beispiel": "Ehrlich gesagt war der Anfang schwieriger als erwartet.",
+      "fundstelle": "Lesen Teil 1"
+    },
+    {
+      "wendung": "in Ordnung",
+      "typ": "redewendung",
+      "bedeutung_de": "gut so, akzeptabel; auch: funktionsfähig",
+      "bedeutung_en": "fine, okay; also „in working order“. Both senses occur in this paper.",
+      "beispiel": "Die Bremsen sind in Ordnung, das Geräusch kam von der Radaufhängung.",
+      "fundstelle": "Hören Teil 1"
+    },
+    {
+      "wendung": "auf dem Papier",
+      "typ": "redewendung",
+      "bedeutung_de": "in der Theorie, aber nicht in der Wirklichkeit",
+      "bedeutung_en": "on paper, in theory (implying reality differs)",
+      "beispiel": "Auf dem Papier ist das großzügig.",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "nach meiner Erfahrung",
+      "typ": "redewendung",
+      "bedeutung_de": "so, wie ich es selbst erlebt habe",
+      "bedeutung_en": "in my experience. A high-value phrase for Sprechen Teil 2.",
+      "beispiel": "Nur liegt das nach meiner Erfahrung nicht am Geld.",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "Angst vor",
+      "typ": "nomen_verb_verbindung",
+      "bedeutung_de": "Angst haben vor etwas (+ Dativ)",
+      "bedeutung_en": "fear of something. Always „Angst vor + Dativ“, never „Angst von“.",
+      "beispiel": "Die jungen Leute haben Angst vor der Verpflichtung.",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "zur Verfügung",
+      "typ": "nomen_verb_verbindung",
+      "bedeutung_de": "in den Wendungen „zur Verfügung stehen“ (verfügbar sein) und „zur Verfügung stellen“ (geben)",
+      "bedeutung_en": "„zur Verfügung stehen“ = to be available; „zur Verfügung stellen“ = to make available. Both appear in this paper.",
+      "beispiel": "Sie stellt seit zwei Jahren die Räume kostenlos zur Verfügung.",
+      "fundstelle": "Lesen Teil 2"
+    },
+    {
+      "wendung": "im Ernst",
+      "typ": "redewendung",
+      "bedeutung_de": "wirklich?, meinst du das wirklich?",
+      "bedeutung_en": "seriously?, really? Spoken register.",
+      "beispiel": "Im Ernst? Ja, unbedingt!",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "Geld ausgeben",
+      "typ": "kollokation",
+      "bedeutung_de": "Geld für etwas bezahlen",
+      "bedeutung_en": "to spend money. „Geld ausgeben für + Akkusativ“; note it is „ausgeben“, never „verbringen“ — that is only for time.",
+      "beispiel": "Aber warum soll ich Geld ausgeben und jede Woche abends aus dem Haus, wenn ich das Gleiche am Laptop haben kann?",
+      "fundstelle": "Schreiben Teil 2"
+    }
+  ],
+
+  "grammatik": [
+    {
+      "phaenomen": "Konjunktiv II der Höflichkeit",
+      "erklaerung_de": "Mit dem Konjunktiv II klingen Bitten und Aussagen höflicher und vorsichtiger. Sehr häufig sind die Formen „wäre“, „hätte“, „könnte“, „würde“ und „bräuchte“. Im Alltag und besonders am Telefon oder in E-Mails an Vorgesetzte ist diese Form fast Pflicht.",
+      "erklaerung_en": "Konjunktiv II softens requests and statements. „Wir bräuchten Ihre Zustimmung“ is far more polite than „Wir brauchen Ihre Zustimmung“, which would sound like a demand. Learn „wäre / hätte / könnte / würde / müsste“ as a set — they carry most of the polite register you need at B1, and they earn marks in Schreiben Aufgabe 3 and Sprechen Teil 1.",
+      "belegSatz": "Wir bräuchten allerdings Ihre Zustimmung, bevor wir anfangen.",
+      "fundstelle": "Hören Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Höflicher formulieren: „Schicken Sie mir die Unterlagen.“",
+          "loesung": "Könnten Sie mir bitte die Unterlagen schicken?",
+          "hinweis": "Verwenden Sie „könnten“ und „bitte“."
+        },
+        {
+          "aufgabe": "Höflicher formulieren: „Ich will einen Termin am Montag.“",
+          "loesung": "Ich hätte gern einen Termin am Montag.",
+          "hinweis": "„hätte gern“ statt „will“."
+        },
+        {
+          "aufgabe": "Höflicher formulieren: „Ist das für dich okay?“ (im Gespräch)",
+          "loesung": "Wäre das für dich in Ordnung?",
+          "hinweis": "Diese Form kommt genau so in Hören Teil 1 vor."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Passiv mit Modalverb",
+      "erklaerung_de": "Das Passiv betont die Handlung, nicht die handelnde Person. Mit einem Modalverb lautet die Form: Modalverb + Partizip II + „werden“. Beispiel: „Die Frist kann verlängert werden.“ Diese Konstruktion steht in fast jeder Hausordnung, Benutzungsordnung und Betriebsanweisung – also genau in den Texten von Lesen Teil 5.",
+      "erklaerung_en": "Passive with a modal: modal verb + past participle + „werden“ at the end. „Die Leihfrist kann verlängert werden“ = the loan period can be extended. Regulations use it constantly because the rule matters, not who applies it. Recognising it instantly is worth real marks in Lesen Teil 5.",
+      "belegSatz": "Die Leihfrist kann zweimal um jeweils zwei Wochen verlängert werden",
+      "fundstelle": "Lesen Teil 5",
+      "uebungen": [
+        {
+          "aufgabe": "Ins Passiv setzen: „Man darf die Bücher vier Wochen ausleihen.“",
+          "loesung": "Die Bücher dürfen vier Wochen ausgeliehen werden.",
+          "hinweis": "„man darf“ → „dürfen … werden“."
+        },
+        {
+          "aufgabe": "Ins Passiv setzen: „Man muss die Leihfristen selbst beachten.“",
+          "loesung": "Die Leihfristen müssen selbst beachtet werden.",
+          "hinweis": "Achten Sie auf den Plural."
+        },
+        {
+          "aufgabe": "Ins Passiv setzen: „Man kann die Reservierung nur für denselben Tag machen.“",
+          "loesung": "Die Reservierung kann nur für denselben Tag gemacht werden.",
+          "hinweis": "Partizip II von „machen“ ist „gemacht“."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Konzessivsatz mit „obwohl“",
+      "erklaerung_de": "„Obwohl“ leitet einen Nebensatz ein und drückt einen unerwarteten Gegensatz aus: Etwas passiert, obwohl man etwas anderes erwarten würde. Das konjugierte Verb steht am Ende des Nebensatzes. Verwechseln Sie „obwohl“ nicht mit „trotzdem“: „trotzdem“ ist ein Adverb im Hauptsatz und das Verb steht danach an Position zwei.",
+      "erklaerung_en": "„obwohl“ = although, and it sends the finite verb to the end of its clause. Contrast with „trotzdem“ (nevertheless), which sits in a main clause and keeps verb-second order. Both appear in this paper: „Trotzdem war ich unzufrieden“ versus the „obwohl“ sentence below. Mixing them up is one of the most common B1 errors.",
+      "belegSatz": "Ich spiele jetzt jeden Donnerstag Volleyball, obwohl ich das früher nie getan hätte.",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Verbinden Sie mit „obwohl“: „Die Wohnung ist klein. Ich fühle mich sehr wohl.“",
+          "loesung": "Ich fühle mich sehr wohl, obwohl die Wohnung klein ist.",
+          "hinweis": "Das Verb „ist“ steht am Ende."
+        },
+        {
+          "aufgabe": "Verbinden Sie mit „obwohl“: „Er hat vierzehn Wohnungen besichtigt. Er hat noch nichts gefunden.“",
+          "loesung": "Er hat noch nichts gefunden, obwohl er vierzehn Wohnungen besichtigt hat.",
+          "hinweis": "Im Perfekt steht das Hilfsverb „hat“ ganz am Ende."
+        },
+        {
+          "aufgabe": "Schreiben Sie denselben Inhalt mit „trotzdem“: „Obwohl es geregnet hat, sind wir gelaufen.“",
+          "loesung": "Es hat geregnet. Trotzdem sind wir gelaufen.",
+          "hinweis": "Nach „trotzdem“ folgt sofort das Verb."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Indirekte Rede mit Konjunktiv I",
+      "erklaerung_de": "Wenn man wiedergibt, was jemand anderes gesagt hat, benutzt man in geschriebenen Texten oft den Konjunktiv I: „sei“, „habe“, „könne“, „werde“. Damit macht der Schreiber deutlich, dass es nicht seine eigene Meinung ist. In Zeitungstexten und Berichten ist diese Form sehr häufig.",
+      "erklaerung_en": "Konjunktiv I marks reported speech and signals distance: the writer is relaying someone else's claim, not endorsing it. „Meine Freunde haben gesagt, ich sei verrückt“ — „sei“ shows this is their view. You rarely need to produce it at B1, but recognising it is essential in Lesen, because it often tells you WHOSE opinion a sentence expresses.",
+      "belegSatz": "Meine Freunde haben damals gesagt, ich sei verrückt.",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Welche Form ist Konjunktiv I? „Er sagt, er habe keine Zeit.“ — „habe“ oder „hat“?",
+          "loesung": "habe",
+          "hinweis": "Konjunktiv I von „haben“ in der 3. Person Singular."
+        },
+        {
+          "aufgabe": "In die indirekte Rede setzen: Sie sagt: „Ich bin müde.“",
+          "loesung": "Sie sagt, sie sei müde.",
+          "hinweis": "„bin“ → „sei“."
+        },
+        {
+          "aufgabe": "Wessen Meinung ist das? „In Städten mit einzelnen Abschnitten sei die Zahl der Radfahrer kaum gestiegen.“",
+          "loesung": "Die des Verkehrsforschers Dr. Wieland, nicht die der Zeitung.",
+          "hinweis": "Der Konjunktiv I „sei“ zeigt: Das ist eine wiedergegebene Aussage."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Nomen-Verb-Verbindungen und Verben mit Präposition",
+      "erklaerung_de": "Viele deutsche Ausdrücke bestehen aus einem festen Paar aus Nomen und Verb oder aus Verb und Präposition. Die Präposition bestimmt dabei auch den Kasus, und man kann sie nicht aus der Bedeutung ableiten – man muss sie mitlernen. Beispiele aus dieser Prüfung: „Angst haben vor + Dativ“, „sich wenden an + Akkusativ“, „zur Verfügung stellen“.",
+      "erklaerung_en": "Learn verb + preposition as a single unit, together with the case it governs: „Angst haben vor + Dativ“, „sich wenden an + Akkusativ“, „warnen vor + Dativ“, „sich bewerben um + Akkusativ“. There is no rule to derive them from — but they are heavily tested, and using them correctly lifts your Wortschatz mark in both Schreiben and Sprechen.",
+      "belegSatz": "Die jungen Leute haben Angst vor der Verpflichtung.",
+      "fundstelle": "Hören Teil 4",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: „Wer nicht teilnehmen kann, wendet sich bitte ___ das Sekretariat.“",
+          "loesung": "an",
+          "hinweis": "„sich wenden an“ + Akkusativ."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: „Der Forscher warnt ___ zu großen Erwartungen.“",
+          "loesung": "vor",
+          "hinweis": "„warnen vor“ + Dativ."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: „Die Stadt stellt die Räume kostenlos ___ Verfügung.“",
+          "loesung": "zur",
+          "hinweis": "Feste Wendung: „zur Verfügung stellen“."
+        }
+      ]
+    }
+  ]
+}

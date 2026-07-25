@@ -1,0 +1,523 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/diprajkadlag/b1-pruefungstrainer/packages/schema/exam.schema.json",
+  "title": "B1 Übungsprüfung",
+  "description": "Single source of truth for one complete B1 practice examination. Drives the PDF paper, the solution booklet, the listening audio script, the web app and the glossary.",
+  "type": "object",
+  "required": ["meta", "lesen", "hoeren", "schreiben", "sprechen", "glossar", "grammatik"],
+  "additionalProperties": false,
+
+  "properties": {
+    "$schema": { "type": "string" },
+
+    "meta": {
+      "type": "object",
+      "required": ["id", "titel", "variante", "niveau", "contentVersion", "themen", "lizenz"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^pruefung-[0-9]{2}$",
+          "description": "Folder name and stable identifier, e.g. pruefung-01."
+        },
+        "titel": { "type": "string", "minLength": 3 },
+        "variante": {
+          "enum": ["erwachsene", "jugendliche"],
+          "description": "Topic register. Identical structure, different subject matter."
+        },
+        "niveau": {
+          "enum": ["mittel-leicht", "mittel"],
+          "description": "Difficulty band. Drives speech rate and distractor transparency."
+        },
+        "contentVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Versioned independently of the application. Bump on any item change."
+        },
+        "sprechtempoProzent": {
+          "type": "integer",
+          "minimum": -15,
+          "maximum": 0,
+          "default": 0,
+          "description": "Listening speech-rate offset. -8 for the gentlest paper, 0 for exam speed."
+        },
+        "themen": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" },
+          "description": "Topic tags. The validator enforces that papers do not overlap heavily."
+        },
+        "autor": { "type": "string" },
+        "lizenz": { "const": "CC-BY-4.0" },
+        "originalitaet": {
+          "const": true,
+          "default": true,
+          "description": "Affirmation that all content here is original. See docs/AUTHORING.md."
+        }
+      }
+    },
+
+    "lesen": {
+      "type": "object",
+      "required": ["zeitMinuten", "teile"],
+      "additionalProperties": false,
+      "properties": {
+        "zeitMinuten": { "const": 65 },
+        "teile": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "$ref": "#/$defs/lesenTeil" }
+        }
+      }
+    },
+
+    "hoeren": {
+      "type": "object",
+      "required": ["zeitMinuten", "teile"],
+      "additionalProperties": false,
+      "properties": {
+        "zeitMinuten": { "const": 40 },
+        "teile": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/hoerenTeil" }
+        }
+      }
+    },
+
+    "schreiben": {
+      "type": "object",
+      "required": ["zeitMinuten", "aufgaben"],
+      "additionalProperties": false,
+      "properties": {
+        "zeitMinuten": { "const": 60 },
+        "aufgaben": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/schreibenAufgabe" }
+        }
+      }
+    },
+
+    "sprechen": {
+      "type": "object",
+      "required": ["vorbereitungMinuten", "teile"],
+      "additionalProperties": false,
+      "properties": {
+        "vorbereitungMinuten": { "const": 15 },
+        "teile": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/sprechenTeil" }
+        }
+      }
+    },
+
+    "glossar": {
+      "type": "array",
+      "minItems": 25,
+      "items": { "$ref": "#/$defs/glossarEintrag" },
+      "description": "Post-exam vocabulary. Every lemma must actually occur in this paper."
+    },
+
+    "redewendungen": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/redewendung" }
+    },
+
+    "grammatik": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "$ref": "#/$defs/grammatikFokus" }
+    }
+  },
+
+  "$defs": {
+
+    "begruendung": {
+      "type": "object",
+      "required": ["de", "en"],
+      "additionalProperties": false,
+      "properties": {
+        "de": { "type": "string", "minLength": 10, "description": "Why the key is correct, in German." },
+        "en": { "type": "string", "minLength": 10, "description": "Why the distractors are wrong, in English." }
+      }
+    },
+
+    "text": {
+      "type": "object",
+      "required": ["id", "inhalt"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "titel": { "type": "string" },
+        "quelle": {
+          "type": "string",
+          "description": "Fictional publication name for realism. Must NOT be a real outlet."
+        },
+        "inhalt": { "type": "string", "minLength": 100 }
+      }
+    },
+
+    "lesenTeil": {
+      "type": "object",
+      "required": ["nummer", "typ", "anweisung", "richtzeitMinuten", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "nummer": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "typ": {
+          "enum": ["richtig_falsch", "multiple_choice", "zuordnung_anzeigen", "ja_nein", "multiple_choice_ordnung"]
+        },
+        "anweisung": { "type": "string", "minLength": 20 },
+        "richtzeitMinuten": { "type": "integer", "minimum": 5, "maximum": 25 },
+        "these": { "type": "string", "description": "Teil 4 only: the proposition readers react to." },
+        "texte": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "anzeigen": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "description": "Teil 3 only: exactly ten classified ads, labelled a-j.",
+          "items": {
+            "type": "object",
+            "required": ["buchstabe", "titel", "inhalt"],
+            "additionalProperties": false,
+            "properties": {
+              "buchstabe": { "type": "string", "pattern": "^[a-j]$" },
+              "titel": { "type": "string" },
+              "inhalt": { "type": "string", "minLength": 30 }
+            }
+          }
+        },
+        "beispiel": { "$ref": "#/$defs/item" },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+      }
+    },
+
+    "hoerenTeil": {
+      "type": "object",
+      "required": ["nummer", "typ", "anweisung", "wiederholungen", "skript", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "nummer": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "typ": { "enum": ["kurztexte", "monolog", "gespraech", "diskussion"] },
+        "anweisung": { "type": "string", "minLength": 20 },
+        "wiederholungen": {
+          "type": "integer",
+          "enum": [1, 2],
+          "description": "Teile 1 and 4 are heard twice; Teile 2 and 3 once."
+        },
+        "situation": { "type": "string", "description": "Scene-setting line shown on the paper." },
+        "sprecher": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Role table. Each role is bound to one fixed voice for the whole paper.",
+          "items": {
+            "type": "object",
+            "required": ["rolle", "geschlecht"],
+            "additionalProperties": false,
+            "properties": {
+              "rolle": { "type": "string", "pattern": "^[A-Za-zÄÖÜäöüß0-9_ -]+$" },
+              "geschlecht": { "enum": ["m", "f"] },
+              "beschreibung": { "type": "string" },
+              "stimme": {
+                "type": "string",
+                "description": "Optional explicit Piper voice override, e.g. de_DE-thorsten-high."
+              }
+            }
+          }
+        },
+        "beispiel": { "$ref": "#/$defs/item" },
+        "skript": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/skriptZeile" }
+        },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+      }
+    },
+
+    "skriptZeile": {
+      "type": "object",
+      "required": ["rolle", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "rolle": {
+          "type": "string",
+          "description": "Must match a role in the Teil's sprecher table, or be 'Sprecher' for the exam narrator."
+        },
+        "text": { "type": "string", "minLength": 1 },
+        "abschnitt": {
+          "type": "string",
+          "description": "Groups lines into one sub-text, e.g. 'text_1'. Teil 1 has five of these."
+        },
+        "pauseDanachSek": { "type": "number", "minimum": 0, "maximum": 60, "default": 0.4 },
+        "akustik": {
+          "enum": ["studio", "telefon", "mailbox", "durchsage", "radio", "raum"],
+          "default": "studio",
+          "description": "Acoustic staging applied by the audio pipeline. See docs/AUDIO.md."
+        },
+        "betont": {
+          "type": "boolean",
+          "default": false,
+          "description": "Slightly slower and more deliberate; use for the line carrying an answer."
+        }
+      }
+    },
+
+    "item": {
+      "type": "object",
+      "required": ["nr", "typ", "frage", "loesung", "begruendung"],
+      "additionalProperties": false,
+      "properties": {
+        "nr": {
+          "oneOf": [
+            { "type": "integer", "minimum": 1, "maximum": 30 },
+            { "const": 0, "description": "Beispiel." }
+          ]
+        },
+        "typ": {
+          "enum": ["richtig_falsch", "multiple_choice", "zuordnung_anzeigen", "ja_nein", "zuordnung_person"]
+        },
+        "frage": { "type": "string", "minLength": 5 },
+        "textId": { "type": "string", "description": "Which text this item belongs to, for multi-text Teile." },
+        "abschnitt": { "type": "string", "description": "Which listening sub-text this item belongs to." },
+        "optionen": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Multiple choice only.",
+          "properties": {
+            "a": { "type": "string", "minLength": 1 },
+            "b": { "type": "string", "minLength": 1 },
+            "c": { "type": "string", "minLength": 1 }
+          },
+          "required": ["a", "b", "c"]
+        },
+        "loesung": {
+          "description": "Which key is legal depends on the item's typ; that pairing is enforced by tools/validate.py (VALID_LOESUNG), not here. anyOf, not oneOf: 'a'-'c' are legal both as multiple-choice keys and as ad letters, and oneOf would reject them for matching twice.",
+          "anyOf": [
+            { "enum": ["richtig", "falsch"] },
+            { "enum": ["ja", "nein"] },
+            { "enum": ["a", "b", "c"] },
+            { "type": "string", "pattern": "^[a-j0]$", "description": "Ad letter, or 0 for 'no suitable ad'." }
+          ]
+        },
+        "beleg": {
+          "type": "string",
+          "description": "The exact sentence in the text or script that proves the key. Required for every scored item."
+        },
+        "begruendung": { "$ref": "#/$defs/begruendung" },
+        "kompetenz": {
+          "enum": ["globalverstehen", "detailverstehen", "selektivverstehen", "meinung_haltung", "zuordnen"],
+          "description": "Skill tested. Drives the personalised weak-spot report."
+        }
+      }
+    },
+
+    "schreibenAufgabe": {
+      "type": "object",
+      "required": ["nummer", "typ", "situation", "aufgabenstellung", "leitpunkte", "woerter", "zeitMinuten", "punkte", "musterloesungen"],
+      "additionalProperties": false,
+      "properties": {
+        "nummer": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "typ": { "enum": ["email_informell", "forumsbeitrag", "email_halbformell"] },
+        "situation": { "type": "string", "minLength": 20 },
+        "impuls": { "type": "string", "description": "The forum post or message being responded to." },
+        "aufgabenstellung": { "type": "string", "minLength": 20 },
+        "leitpunkte": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "items": { "type": "string" },
+          "description": "The content points the candidate must cover."
+        },
+        "anrede": { "type": "string", "description": "Expected register cue, e.g. 'Liebe Sofia' vs 'Sehr geehrte Frau Berger'." },
+        "woerter": { "type": "integer", "enum": [40, 80] },
+        "zeitMinuten": { "type": "integer", "enum": [15, 20, 25] },
+        "punkte": { "type": "integer", "enum": [20, 40] },
+        "redemittel": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Useful phrases, shown only in the solution booklet."
+        },
+        "musterloesungen": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "One 'ausreichend' and one 'gut' answer, annotated so the difference is visible.",
+          "items": {
+            "type": "object",
+            "required": ["niveau", "text", "kommentar"],
+            "additionalProperties": false,
+            "properties": {
+              "niveau": { "enum": ["ausreichend", "gut"] },
+              "text": { "type": "string", "minLength": 40 },
+              "kommentar": { "type": "string", "minLength": 30 }
+            }
+          }
+        }
+      }
+    },
+
+    "sprechenTeil": {
+      "type": "object",
+      "required": ["nummer", "typ", "titel", "anweisung", "dauerMinuten", "punkte"],
+      "additionalProperties": false,
+      "properties": {
+        "nummer": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "typ": { "enum": ["gemeinsam_planen", "praesentation", "rueckmeldung"] },
+        "titel": { "type": "string" },
+        "anweisung": { "type": "string", "minLength": 20 },
+        "dauerMinuten": { "type": "number", "minimum": 1, "maximum": 4 },
+        "punkte": { "type": "integer", "enum": [16, 28, 40] },
+        "situation": { "type": "string" },
+        "planungspunkte": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Teil 1: the bullet points on the planning card."
+        },
+        "themen": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Teil 2: the candidate chooses one of exactly two topics.",
+          "items": {
+            "type": "object",
+            "required": ["titel", "folien"],
+            "additionalProperties": false,
+            "properties": {
+              "titel": { "type": "string" },
+              "folien": {
+                "type": "array",
+                "minItems": 5,
+                "maxItems": 5,
+                "items": { "type": "string" },
+                "description": "Thema nennen / eigene Erfahrung / Situation im Heimatland / Vor- und Nachteile / Abschluss."
+              },
+              "redemittel": { "type": "array", "items": { "type": "string" } },
+              "musterantwort": { "type": "string", "minLength": 100 }
+            }
+          }
+        },
+        "partnerSkript": {
+          "type": "array",
+          "description": "Solo mode: TTS partner turns, with gaps for the candidate to answer.",
+          "items": {
+            "type": "object",
+            "required": ["text", "wartenSek"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string", "minLength": 3 },
+              "wartenSek": { "type": "number", "minimum": 3, "maximum": 90 },
+              "hinweis": { "type": "string", "description": "On-screen cue shown while the candidate answers." }
+            }
+          }
+        },
+        "fragen": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Teil 3: feedback questions about the partner's presentation."
+        }
+      }
+    },
+
+    "glossarEintrag": {
+      "type": "object",
+      "required": ["lemma", "wortart", "bedeutung_en", "beispiel", "fundstelle"],
+      "additionalProperties": false,
+      "properties": {
+        "lemma": { "type": "string", "minLength": 2 },
+        "wortart": {
+          "enum": ["nomen", "verb", "adjektiv", "adverb", "praeposition", "konjunktion", "wendung"]
+        },
+        "artikel": { "enum": ["der", "die", "das"], "description": "Nouns only. Required by the validator." },
+        "plural": { "type": "string", "description": "Nouns only, e.g. 'die Verträge' or '-e'." },
+        "stammformen": {
+          "type": "object",
+          "description": "Verbs only. Required by the validator.",
+          "required": ["praesens_3sg", "praeteritum", "perfekt"],
+          "additionalProperties": false,
+          "properties": {
+            "praesens_3sg": { "type": "string" },
+            "praeteritum": { "type": "string" },
+            "perfekt": { "type": "string", "description": "With the auxiliary, e.g. 'hat beworben'." },
+            "unregelmaessig": { "type": "boolean", "default": false }
+          }
+        },
+        "trennbar": { "type": "boolean", "description": "Verbs only: separable prefix." },
+        "praeposition": {
+          "type": "object",
+          "description": "Verb or adjective governing a preposition, e.g. sich bewerben um + Akkusativ.",
+          "required": ["wort", "kasus"],
+          "additionalProperties": false,
+          "properties": {
+            "wort": { "type": "string" },
+            "kasus": { "enum": ["Akkusativ", "Dativ", "Genitiv"] }
+          }
+        },
+        "bedeutung_de": { "type": "string", "description": "German definition or synonym." },
+        "bedeutung_en": { "type": "string", "minLength": 2 },
+        "beispiel": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The sentence as it appears in this paper."
+        },
+        "fundstelle": {
+          "type": "string",
+          "pattern": "^(Lesen|Hören|Schreiben|Sprechen) Teil [1-5]$",
+          "description": "Where in the paper it occurred."
+        },
+        "niveau": { "enum": ["A2", "B1", "B1+"], "default": "B1" }
+      }
+    },
+
+    "redewendung": {
+      "type": "object",
+      "required": ["wendung", "bedeutung_de", "bedeutung_en", "beispiel", "fundstelle"],
+      "additionalProperties": false,
+      "properties": {
+        "wendung": { "type": "string", "minLength": 4 },
+        "typ": { "enum": ["redewendung", "kollokation", "nomen_verb_verbindung"], "default": "kollokation" },
+        "bedeutung_de": { "type": "string", "minLength": 5 },
+        "bedeutung_en": { "type": "string", "minLength": 5 },
+        "beispiel": { "type": "string", "minLength": 10 },
+        "fundstelle": { "type": "string", "pattern": "^(Lesen|Hören|Schreiben|Sprechen) Teil [1-5]$" }
+      }
+    },
+
+    "grammatikFokus": {
+      "type": "object",
+      "required": ["phaenomen", "erklaerung_de", "erklaerung_en", "belegSatz", "fundstelle", "uebungen"],
+      "additionalProperties": false,
+      "properties": {
+        "phaenomen": { "type": "string", "minLength": 3, "description": "e.g. 'Konjunktiv II der Höflichkeit'." },
+        "erklaerung_de": { "type": "string", "minLength": 30 },
+        "erklaerung_en": { "type": "string", "minLength": 30 },
+        "belegSatz": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The real sentence from this paper that exhibits the phenomenon."
+        },
+        "fundstelle": { "type": "string", "pattern": "^(Lesen|Hören|Schreiben|Sprechen) Teil [1-5]$" },
+        "uebungen": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["aufgabe", "loesung"],
+            "additionalProperties": false,
+            "properties": {
+              "aufgabe": { "type": "string", "minLength": 5 },
+              "loesung": { "type": "string", "minLength": 1 },
+              "hinweis": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

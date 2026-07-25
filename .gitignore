@@ -1,0 +1,54 @@
+# --- generated exam assets -------------------------------------------------
+# Audio and PDFs are built by tools/ and published as GitHub Release assets,
+# not committed. Five exams of listening audio is ~200 MB; git is the wrong
+# place for it. See docs/AUDIO.md.
+content/exams/*/audio/
+content/exams/*/pdf/
+loesungen/*.pdf
+build/
+dist/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Piper voice models, downloaded on first audio build.
+tools/.voices/
+
+# --- submissions (personal data) -------------------------------------------
+# Written work and voice recordings. Never commit these.
+apps/server/submissions/
+submissions/
+
+# --- node ------------------------------------------------------------------
+node_modules/
+.vite/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# --- python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# --- editors / os ----------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- secrets ---------------------------------------------------------------
+.env
+.env.local
+*.pem
+*.key

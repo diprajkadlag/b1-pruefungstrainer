@@ -1,0 +1,99 @@
+b1-pruefungstrainer
+Copyright (c) 2026 Dipraj Kadlag
+
+This product includes and/or depends on third-party components. Their licenses
+and required attributions are reproduced below.
+
+================================================================================
+1. PIPER TEXT-TO-SPEECH VOICE MODELS
+================================================================================
+
+Listening audio in this project is synthesised with Piper (https://github.com/
+rhasspy/piper), MIT licensed. Piper voice models are downloaded at build time
+from https://huggingface.co/rhasspy/piper-voices and are NOT redistributed in
+this repository. Generated audio tracks published in project releases are
+derived from the following models:
+
+  de_DE-thorsten-high            CC0 1.0 Universal (public domain)
+    Thorsten Müller / Thorsten-Voice. https://www.thorsten-voice.de/
+    No attribution legally required; given here as a courtesy.
+
+  de_DE-thorsten_emotional-medium  CC0 1.0 Universal (public domain)
+    Thorsten Müller / Thorsten-Voice.
+
+  de_DE-kerstin-low              CC0 1.0 Universal (public domain)
+    Kerstin Otto.
+
+  de_DE-eva_k-x_low              M-AILABS / BSD-style
+    The M-AILABS Speech Dataset. Copyright notice must be retained.
+    https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/
+
+  de_DE-karlsson-low             M-AILABS / BSD-style
+    The M-AILABS Speech Dataset. Copyright notice must be retained.
+
+  de_DE-ramona-low               M-AILABS / BSD-style
+    The M-AILABS Speech Dataset. Copyright notice must be retained.
+
+  de_DE-mls-medium               CC BY 4.0
+    Multilingual LibriSpeech (MLS), Pratap et al., 2020.
+    https://www.openslr.org/94/
+    Attribution required: derived audio credits the MLS corpus.
+
+DELIBERATELY EXCLUDED:
+
+  de_DE-pavoque-low              CC BY-NC-SA 4.0  --  NOT USED
+    The NonCommercial clause is incompatible with this project's CC BY 4.0
+    content license. tools/generate_audio.py refuses to use this voice.
+
+================================================================================
+2. SPEECH SYNTHESIS SUPPORT LIBRARIES
+================================================================================
+
+  espeak-ng                      GPL-3.0-or-later
+    Used at build time only, as a phonemiser invoked by Piper. Not linked into
+    or redistributed with this project's code. Audio output produced by a
+    program is not a derivative work of that program.
+    https://github.com/espeak-ng/espeak-ng
+
+  libsndfile                     LGPL-2.1-or-later
+    Used at build time for audio encoding, via the `soundfile` Python package.
+    Dynamically linked, unmodified, obtained from PyPI wheels.
+    https://github.com/libsndfile/libsndfile
+
+  onnxruntime                    MIT
+  numpy                          BSD-3-Clause
+  Jinja2                         BSD-3-Clause
+  genanki                        MIT
+
+================================================================================
+3. OPTIONAL, NON-DEFAULT TTS PROVIDERS
+================================================================================
+
+  edge-tts                       GPL-3.0 (the client library)
+
+    IMPORTANT: This provider is available for LOCAL, PERSONAL use only and is
+    disabled in CI. It reaches Microsoft's Edge "Read Aloud" endpoint. Microsoft
+    has stated that using that endpoint outside personal use, without a valid
+    Azure subscription, is not permitted. Audio generated with `--provider edge`
+    therefore MUST NOT be redistributed, published, or attached to a release of
+    this project. tools/generate_audio.py enforces this by refusing to run the
+    edge provider when CI=true and by tagging its output as non-redistributable.
+
+  Azure Speech / ElevenLabs      bring-your-own-key
+    Governed entirely by your own agreement with those vendors.
+
+================================================================================
+4. TRADEMARKS
+================================================================================
+
+"Goethe-Zertifikat" and "Goethe-Institut" are registered trademarks of
+Goethe-Institut e.V. "telc" is a registered trademark of telc gGmbH. "ÖSD" is a
+registered trademark of the Österreichisches Sprachdiplom Deutsch.
+
+This project is NOT affiliated with, endorsed by, sponsored by, or connected to
+any of those organisations. Those marks are used in this repository only to
+describe, accurately and nominatively, which examinations this tool helps
+learners prepare for. No logo, wordmark, typeface, colour scheme or page design
+belonging to any examination body is reproduced here.
+
+See docs/DISCLAIMER.md.
