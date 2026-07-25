@@ -15,6 +15,7 @@ import {
   speichern,
   type GespeicherterVersuch,
 } from './lib/db';
+import { abgabeSenden } from './lib/server';
 import { Timer, useCountdown } from './components/Timer';
 import { Start, type ModulWahl } from './screens/Start';
 import { Lesen } from './screens/Lesen';
@@ -50,6 +51,7 @@ export default function App() {
   const [deadline, setDeadline] = useState<number | null>(null);
   const [abgelaufen, setAbgelaufen] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
+  const [serverHinweis, setServerHinweis] = useState<string | null>(null);
 
   const aktuellesModul = versuch?.module[modulIndex] as ModulWahl | undefined;
 
@@ -68,6 +70,18 @@ export default function App() {
     const fertig = { ...versuch, abgegeben: new Date().toISOString() };
     await speichern(fertig);
     setVersuch(fertig);
+
+    // If a local server is hosting the app, hand the submission over so the
+    // examiner finds it on disk. On GitHub Pages this simply does nothing.
+    const gesendet = await abgabeSenden(fertig);
+    if (gesendet) {
+      setServerHinweis(
+        gesendet.ok
+          ? 'Die Abgabe wurde an den Prüfer-Server übermittelt.'
+          : (gesendet.fehler ?? 'Die Abgabe konnte nicht übermittelt werden.'),
+      );
+    }
+
     try {
       // Only now is the key material fetched — never while the exam is open.
       setSchluessel(await schluesselLaden(pruefung.meta.id));
@@ -289,6 +303,12 @@ export default function App() {
               </p>
             </div>
           </>
+        )}
+
+        {phase === 'ergebnis' && serverHinweis && (
+          <p className="notiz" role="status">
+            {serverHinweis}
+          </p>
         )}
 
         {phase === 'ergebnis' && pruefung && schluessel && versuch && (
