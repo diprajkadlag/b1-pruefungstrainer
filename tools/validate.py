@@ -83,7 +83,7 @@ SEPARABLE_PREFIXES = sorted(
         "davon", "dabei", "durch", "empor", "statt", "unter", "wieder", "hoch",
         "fest", "fort", "heim", "über", "voran", "weg", "her", "hin",
         "los", "mit", "nach", "teil", "vor", "zu", "ab", "an", "auf", "aus",
-        "bei", "ein", "um",
+        "bei", "ein", "um", "frei", "fern", "voll", "wahr", "leer",
     },
     key=len,
     reverse=True,
@@ -249,6 +249,8 @@ def lemma_variants(entry: dict[str, Any]) -> list[str]:
                     root = bare[len(prefix):]
                     out.add(root)
                     out.add(root[:-2])  # auflösen -> lösen -> lös
+                    # The zu-infinitive: freihalten -> freizuhalten.
+                    out.add(f"{prefix}zu{root}")
                     break
     elif entry["wortart"] == "nomen":
         plural = entry.get("plural", "")
@@ -618,8 +620,11 @@ def check_glossar(exam: dict[str, Any], rep: Report) -> None:
             rep.warn(w, "the example sentence is not taken verbatim from this paper")
 
     for r in exam.get("redewendungen", []):
-        if normalise(r["wendung"]) not in prose:
-            rep.error(f"redewendungen/{r['wendung']}", "does not occur in this paper")
+        wendung = normalise(r["wendung"])
+        ohne_reflexiv = re.sub(r"^sich\s+", "", wendung)
+        if wendung not in prose and ohne_reflexiv not in prose:
+            rep.error(f"redewendungen/{r['wendung']}",
+                      "does not occur in this paper")
 
     for g in exam["grammatik"]:
         if normalise(g["belegSatz"]) not in prose:
