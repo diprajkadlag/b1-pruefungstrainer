@@ -2,7 +2,7 @@
 # Python 3.11+ (developed on 3.14). All wheels are available for cp314/win_amd64.
 
 # --- validation -------------------------------------------------------------
-jsonschema>=4.23,<5
+jsonschema>=4.26.0,<5
 
 # --- PDF generation ---------------------------------------------------------
 Jinja2>=3.1,<4
