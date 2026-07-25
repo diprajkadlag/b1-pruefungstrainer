@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["vite/client", "vite-plugin-pwa/client"],
+    "paths": { "@b1/core": ["../../packages/core/src/index.ts"] }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

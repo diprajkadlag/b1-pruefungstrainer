@@ -1,0 +1,17 @@
+{
+  "name": "@b1/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scoring, grade bands and shared types for b1-pruefungstrainer.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

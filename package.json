@@ -1,0 +1,46 @@
+{
+  "name": "b1-pruefungstrainer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source practice examinations for German B1 certificate exams — timed mock papers, generated listening audio, auto-grading, speaking recorder.",
+  "license": "MIT",
+  "author": "Dipraj Kadlag",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diprajkadlag/b1-pruefungstrainer.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@b1/web",
+    "build": "npm run build --workspace=@b1/core && npm run build --workspace=@b1/web",
+    "preview": "npm run preview --workspace=@b1/web",
+    "serve": "npm run start --workspace=@b1/server",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --build --force",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "content:validate": "python tools/validate.py --strict",
+    "content:pdf": "python tools/build_pdf.py",
+    "content:audio": "python tools/generate_audio.py",
+    "content:export": "python tools/export_web.py",
+    "content:all": "npm run content:validate && npm run content:audio && npm run content:pdf && npm run content:export"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^22.10.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8"
+  }
+}
