@@ -1,0 +1,2551 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "pruefung-04",
+    "titel": "Übungsprüfung 4 — Familie, Stadt und Tiere",
+    "variante": "erwachsene",
+    "niveau": "mittel",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": 0,
+    "themen": [
+      "Familie und Generationen",
+      "Stadtleben",
+      "Tiere",
+      "Feste und Traditionen",
+      "Garten und Natur",
+      "Alltag"
+    ],
+    "autor": "b1-pruefungstrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "richtig_falsch",
+        "anweisung": "Lesen Sie den Text aus einem Internet-Blog. Kreuzen Sie bei den Aufgaben 1 bis 6 an: Sind die Aussagen richtig oder falsch?",
+        "richtzeitMinuten": 10,
+        "texte": [
+          {
+            "id": "blog_generationen",
+            "titel": "Drei Generationen, ein Haus — und eine Waschmaschine",
+            "quelle": "aus dem Blog „Wir vier plus zwei“",
+            "inhalt": "Als meine Eltern vorschlugen, das Haus umzubauen und gemeinsam einzuziehen, habe ich zwei Wochen lang nichts geantwortet. Nicht weil ich dagegen war, sondern weil ich wusste, dass ich schlecht Nein sagen kann.\n\nHeute wohnen wir seit anderthalb Jahren zu sechst unter einem Dach: meine Eltern unten, wir mit den Kindern oben. Gefragt werde ich meistens nach dem Streit. Den gibt es, aber nicht dort, wo alle ihn vermuten. Über Erziehung sind wir uns erstaunlich einig. Gestritten wird über Technik: darüber, wann die Waschmaschine laufen darf, und ob man abends die Heizung herunterdreht.\n\nWas wirklich hilft, ist nichts Großes. Wir haben von Anfang an vereinbart, dass niemand ohne Anmeldung in die andere Wohnung geht. Meine Mutter fand das am Anfang albern und hält sich heute strenger daran als ich.\n\nEhrlich gesagt hatte ich vor allem Angst vor einem Punkt, über den vorher niemand redet: dem Geld. Wer bezahlt das neue Dach? Wir haben es nach Wohnfläche aufgeteilt und alles aufgeschrieben. Das klingt kalt, hat uns aber wahrscheinlich mehr gerettet als jedes Gespräch über Gefühle.\n\nWürde ich es wieder tun? Ja, aber nicht wegen der eingesparten Miete. Sondern weil meine Tochter jeden Nachmittag eine Treppe hinunterläuft und dort jemanden findet. Das war vorher eine Autofahrt von vierzig Minuten.\n\nWem ich davon abraten würde? Allen, die hoffen, dass sich alte Konflikte durch Nähe von selbst lösen. Sie werden dadurch nur täglich."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Die Autorin wohnt zusammen mit ihren Eltern in einem Haus.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Sie schreibt, dass sechs Personen seit anderthalb Jahren unter einem Dach wohnen.",
+            "en": "Worked example. The title and the second paragraph both state it."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "frage": "Die Autorin war von der Idee ihrer Eltern sofort begeistert.",
+            "loesung": "falsch",
+            "beleg": "habe ich zwei Wochen lang nichts geantwortet",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie hat zwei Wochen geschwiegen, weil sie schlecht Nein sagen kann – das ist keine Begeisterung.",
+              "en": "„Nicht weil ich dagegen war“ rules out opposition, but silence is not enthusiasm either. Both halves of her sentence matter."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "richtig_falsch",
+            "frage": "Die Familie streitet vor allem über die Erziehung der Kinder.",
+            "loesung": "falsch",
+            "beleg": "Über Erziehung sind wir uns erstaunlich einig. Gestritten wird über Technik",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Bei der Erziehung sind sie sich einig; gestritten wird über Waschmaschine und Heizung.",
+              "en": "The text explicitly names what people assume („nicht dort, wo alle ihn vermuten“) before correcting it. That construction almost always signals an item."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "frage": "Die Familie hat eine Regel, dass man sich vor einem Besuch ankündigt.",
+            "loesung": "richtig",
+            "beleg": "Wir haben von Anfang an vereinbart, dass niemand ohne Anmeldung in die andere Wohnung geht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ohne Anmeldung geht niemand in die andere Wohnung.",
+              "en": "„vereinbaren“ = to agree on. The mother's change of heart in the next sentence confirms the rule is real and in force."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "richtig_falsch",
+            "frage": "Die Kosten für den Umbau wurden mündlich geregelt.",
+            "loesung": "falsch",
+            "beleg": "Wir haben es nach Wohnfläche aufgeteilt und alles aufgeschrieben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Es wurde nach Wohnfläche aufgeteilt und schriftlich festgehalten.",
+              "en": "„aufgeschrieben“ is the opposite of „mündlich“ (verbally). She adds that writing it down probably saved them, so the detail is emphasised, not incidental."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "frage": "Der wichtigste Grund für die Autorin ist, dass sie Miete spart.",
+            "loesung": "falsch",
+            "beleg": "Ja, aber nicht wegen der eingesparten Miete.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie nennt ausdrücklich einen anderen Grund: die Nähe zwischen Tochter und Großeltern.",
+              "en": "Money is mentioned twice in this text and is the right answer neither time. „nicht wegen … Sondern weil …“ names the real reason."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "richtig_falsch",
+            "frage": "Die Autorin rät Familien mit alten Konflikten von einem solchen Umzug ab.",
+            "loesung": "richtig",
+            "beleg": "Allen, die hoffen, dass sich alte Konflikte durch Nähe von selbst lösen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie warnt: Durch die Nähe werden solche Konflikte nicht gelöst, sondern täglich.",
+              "en": "The last sentence is short and easy to skip. „Sie werden dadurch nur täglich“ means the conflicts become daily — a warning, not a reassurance."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die beiden Texte aus einer Zeitung. Wählen Sie bei den Aufgaben 7 bis 12 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 20,
+        "texte": [
+          {
+            "id": "artikel_baeume",
+            "titel": "Der teuerste Schatten der Stadt",
+            "quelle": "Lindenauer Anzeiger",
+            "inhalt": "Vierzig neue Bäume hat die Stadt Lindenau im vergangenen Jahr in der Innenstadt gepflanzt. Achtzehn davon sind bereits wieder eingegangen. Das klingt nach einem Misserfolg, ist aber laut Gartenamt eingeplant gewesen.\n\n„Ein Straßenbaum steht in einem Loch von wenigen Kubikmetern, unter Asphalt, neben Leitungen“, erklärt die Leiterin Ines Grabowski. „Er hat es schwerer als jeder Baum im Wald.“ Entscheidend sei nicht die Zahl der gepflanzten Bäume, sondern das, was unter der Oberfläche passiert. In der Fußgängerzone wurde deshalb erstmals ein sogenanntes Pflanzsubstrat eingebaut, das Wasser speichert und trotzdem befahrbar bleibt.\n\nDie Kosten überraschen viele. Ein einzelner Baum kostet in der Anschaffung wenige hundert Euro; die Vorbereitung des Standorts kann das Zehnfache verschlingen. Zusätzlich muss in den ersten drei Jahren regelmäßig gewässert werden, im Sommer wöchentlich.\n\nHilfe kommt inzwischen von Anwohnern. Rund neunzig Haushalte haben eine Patenschaft für einen Baum übernommen und gießen selbst. Grabowski ist zurückhaltend optimistisch: „Das entlastet uns spürbar. Aber wir dürfen die Verantwortung nicht auf Freiwillige abschieben. Wenn jemand in Urlaub fährt, vertrocknet der Baum trotzdem.“"
+          },
+          {
+            "id": "artikel_tierheim",
+            "titel": "Ein Zuhause auf Zeit",
+            "quelle": "Lindenauer Anzeiger",
+            "inhalt": "Das Tierheim Ostheim sucht seit dem Frühjahr keine dauerhaften Besitzer mehr für seine Katzen, sondern zusätzlich etwas anderes: Menschen, die ein Tier für einige Wochen bei sich aufnehmen. Pflegestellen heißt das im Fachjargon.\n\nAusgelöst hat die Umstellung ein praktisches Problem. Junge Katzen, die im Heim aufwachsen, kennen weder Staubsauger noch Türklingel und tun sich später in einer Wohnung schwer. „Wir haben Tiere zweimal zurückbekommen, weil sie sich versteckt haben, sobald jemand die Tür öffnete“, sagt der Leiter Hendrik Palm.\n\nWer eine Pflegestelle übernimmt, zahlt nichts. Futter und Tierarztkosten trägt das Heim, das Tier bleibt rechtlich in dessen Verantwortung. Erwartet wird lediglich, dass man erreichbar ist und die Tiere zu vereinbarten Terminen vorstellt.\n\nDie größte Sorge der Interessenten ist immer dieselbe. „Alle fragen, ob man das Tier am Ende wieder hergeben kann“, sagt Palm. Er antwortet dann ehrlich: Für etwa jede fünfte Pflegestelle sei genau das der Grund, es kein zweites Mal zu tun. Andere behalten das Tier einfach — auch das komme vor und sei ausdrücklich erlaubt."
+          }
+        ],
+        "items": [
+          {
+            "nr": 7,
+            "typ": "multiple_choice",
+            "textId": "artikel_baeume",
+            "frage": "Wie bewertet das Gartenamt, dass viele Bäume eingegangen sind?",
+            "optionen": {
+              "a": "Es hatte damit gerechnet.",
+              "b": "Es war ein unerwarteter Rückschlag.",
+              "c": "Es lag am zu späten Pflanzen."
+            },
+            "loesung": "a",
+            "beleg": "Das klingt nach einem Misserfolg, ist aber laut Gartenamt eingeplant gewesen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Verlust war einkalkuliert; das Amt spricht ausdrücklich nicht von einem Misserfolg.",
+              "en": "„Das klingt nach …, ist aber …“ sets up exactly the wrong reading before correcting it. The correction is the answer."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "textId": "artikel_baeume",
+            "frage": "Was ist nach Aussage von Frau Grabowski entscheidend?",
+            "optionen": {
+              "a": "die Zahl der gepflanzten Bäume",
+              "b": "die Bedingungen im Boden",
+              "c": "die Wahl der richtigen Baumart"
+            },
+            "loesung": "b",
+            "beleg": "Entscheidend sei nicht die Zahl der gepflanzten Bäume, sondern das, was unter der Oberfläche passiert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Unter der Oberfläche“ meint den Boden und das neue Pflanzsubstrat.",
+              "en": "Note the Konjunktiv I „sei“ — this is reported speech, so it is her view, which is what the question asks for. ✗ c is never mentioned."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "multiple_choice",
+            "textId": "artikel_baeume",
+            "frage": "Was sagt Frau Grabowski über die Baumpatenschaften?",
+            "optionen": {
+              "a": "Sie helfen, ersetzen aber die Stadt nicht.",
+              "b": "Sie funktionieren in der Praxis kaum.",
+              "c": "Sie sind teurer als die eigene Bewässerung."
+            },
+            "loesung": "a",
+            "beleg": "Das entlastet uns spürbar. Aber wir dürfen die Verantwortung nicht auf Freiwillige abschieben.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie nennt die Entlastung spürbar, warnt aber davor, sich darauf zu verlassen.",
+              "en": "„zurückhaltend optimistisch“ prepares you for a two-sided answer. Both halves must be in the option, which is why a fits and b overstates the criticism."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "textId": "artikel_tierheim",
+            "frage": "Warum sucht das Tierheim Pflegestellen?",
+            "optionen": {
+              "a": "Im Heim ist zu wenig Platz.",
+              "b": "Tiere aus dem Heim kennen den Alltag einer Wohnung nicht.",
+              "c": "Es fehlt Geld für Futter und Tierarzt."
+            },
+            "loesung": "b",
+            "beleg": "Junge Katzen, die im Heim aufwachsen, kennen weder Staubsauger noch Türklingel und tun sich später in einer Wohnung schwer.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Grund ist, dass die Tiere den Wohnungsalltag nicht kennen und deshalb zurückkamen.",
+              "en": "✗ c is contradicted directly: the shelter itself pays for food and the vet. Lack of space is never mentioned at all."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "textId": "artikel_tierheim",
+            "frage": "Welche Kosten hat eine Pflegestelle?",
+            "optionen": {
+              "a": "nur die Kosten für Futter",
+              "b": "einen monatlichen Beitrag",
+              "c": "gar keine"
+            },
+            "loesung": "c",
+            "beleg": "Wer eine Pflegestelle übernimmt, zahlt nichts.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Futter und Tierarzt zahlt das Heim; die Pflegestelle zahlt nichts.",
+              "en": "The sentence answering this is short and blunt, and the following sentence lists what the shelter covers — read both before choosing a."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "textId": "artikel_tierheim",
+            "frage": "Was sagt Herr Palm über das Abgeben des Tieres am Ende?",
+            "optionen": {
+              "a": "Für manche ist es so schwer, dass sie es nicht wiederholen.",
+              "b": "Die meisten Pflegestellen behalten das Tier.",
+              "c": "Es ist vertraglich verboten, das Tier zu behalten."
+            },
+            "loesung": "a",
+            "beleg": "Für etwa jede fünfte Pflegestelle sei genau das der Grund, es kein zweites Mal zu tun.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Etwa jede fünfte Pflegestelle macht es deswegen kein zweites Mal.",
+              "en": "„jede fünfte“ = one in five, so ✗ b („die meisten“) overstates it badly. ✗ c is the reverse: keeping the animal is „ausdrücklich erlaubt“."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "zuordnung_anzeigen",
+        "anweisung": "Lesen Sie die Situationen 13 bis 19 und die Anzeigen a bis j. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal verwenden. Für eine Situation gibt es keine passende Anzeige. Schreiben Sie in diesem Fall 0.",
+        "richtzeitMinuten": 10,
+        "anzeigen": [
+          {
+            "buchstabe": "a",
+            "titel": "Leihgroßeltern gesucht",
+            "inhalt": "Sie haben Zeit und Lust auf Kinder, aber keine eigenen Enkel in der Nähe? Wir bringen Familien und ältere Menschen zusammen. Ein Nachmittag pro Woche genügt. Wir begleiten das erste Kennenlernen und bleiben Ansprechpartner, falls es einmal nicht passt."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Hundeschule Wiesengrund",
+            "inhalt": "Gruppenkurse für junge Hunde und Einzelstunden bei Problemen wie Ziehen an der Leine oder Bellen an der Tür. Wir arbeiten ohne Strafen. Das erste Gespräch führen wir am Telefon und kostenlos, damit Sie den passenden Kurs finden."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Kleingartenverein Sonnenhang",
+            "inhalt": "Zwei Parzellen mit je dreihundert Quadratmetern werden frei. Laube und Wasseranschluss vorhanden. Vier Arbeitseinsätze im Jahr sind Pflicht. Bewerbungen bitte schriftlich; die Warteliste ist lang, kurzfristig können wir leider nichts anbieten."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Ferienbetreuung in den Sommerferien",
+            "inhalt": "Zwei Wochen Programm für Kinder von sechs bis zwölf Jahren, täglich von acht bis sechzehn Uhr. Ausflüge, Werkstatt, viel draußen. Mittagessen inklusive. Anmeldung nur für ganze Wochen möglich, Ermäßigung für Geschwisterkinder."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Tierpension Am Waldrand",
+            "inhalt": "Wir betreuen Katzen und Kleintiere, während Sie verreist sind. Jedes Tier hat einen eigenen Raum mit Fenster. Bitte bringen Sie das gewohnte Futter mit. Buchung in den Ferienmonaten möglichst drei Monate im Voraus."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Nachbarschaftshilfe Lindenau",
+            "inhalt": "Einkaufen, ein Formular ausfüllen, eine Glühbirne wechseln: Für kleine Handgriffe vermitteln wir Freiwillige aus dem eigenen Viertel. Kostenlos, aber nur für Dinge, die höchstens eine Stunde dauern. Erreichbar montags bis freitags vormittags."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Erste Hilfe am Kind",
+            "inhalt": "Ein Kurs für Eltern, Großeltern und alle, die regelmäßig auf Kinder aufpassen. An einem Samstag lernen Sie, was bei Fieberkrampf, Verschlucken und Stürzen zu tun ist. Keine Vorkenntnisse nötig, Wiederholung nach zwei Jahren empfohlen."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Straßenfest Rehberg — Helfer gesucht",
+            "inhalt": "Am zweiten Septemberwochenende feiert unser Viertel. Wir suchen Leute für Aufbau, Kuchentheke und Abbau, jeweils in Schichten von zwei Stunden. Wer mitmacht, bekommt Essen und Getränke frei. Bitte melden Sie sich bis Ende Juli."
+          },
+          {
+            "buchstabe": "i",
+            "titel": "Baumpatenschaft übernehmen",
+            "inhalt": "Übernehmen Sie einen jungen Straßenbaum vor Ihrer Tür. Sie gießen von Mai bis September etwa einmal pro Woche; Gießsäcke und eine kurze Einweisung stellen wir. Wer in Urlaub fährt, sucht sich bitte eine Vertretung in der Nachbarschaft."
+          },
+          {
+            "buchstabe": "j",
+            "titel": "Repair-Werkstatt für Fahrräder und Kinderwagen",
+            "inhalt": "Jeden zweiten Donnerstag von sechzehn bis zwanzig Uhr. Werkzeug und Rat sind kostenlos, Ersatzteile berechnen wir zum Einkaufspreis. Auch Anhänger und Roller reparieren wir gern. Kommen Sie ohne Anmeldung vorbei."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_anzeigen",
+          "frage": "Ihre Nachbarin ist achtzig und kommt an die Glühbirne im Flur nicht heran.",
+          "loesung": "f",
+          "begruendung": {
+            "de": "Anzeige f vermittelt Freiwillige für genau solche kleinen Handgriffe.",
+            "en": "Worked example. The ad even names changing a light bulb as an example."
+          }
+        },
+        "items": [
+          {
+            "nr": 13,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Talberg ist siebzig, ihre Enkel wohnen weit weg. Sie hätte gern regelmäßig Kontakt zu einem Kind in ihrer Nähe.",
+            "loesung": "a",
+            "beleg": "Sie haben Zeit und Lust auf Kinder, aber keine eigenen Enkel in der Nähe?",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige a bringt genau solche älteren Menschen und Familien zusammen.",
+              "en": "The ad's opening question restates her situation almost word for word — the clearest kind of match in this task."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ein Kollege hat einen jungen Hund, der an der Leine stark zieht. Er möchte vorher wissen, welcher Kurs überhaupt sinnvoll wäre.",
+            "loesung": "b",
+            "beleg": "Das erste Gespräch führen wir am Telefon und kostenlos, damit Sie den passenden Kurs finden.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige b nennt das Ziehen an der Leine ausdrücklich und berät vorher kostenlos.",
+              "en": "Both conditions again: the specific problem, and wanting advice before committing. Only one ad offers both."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Berufstätige Eltern suchen für ihre neunjährige Tochter eine Betreuung in den Sommerferien, tagsüber und mit Essen.",
+            "loesung": "d",
+            "beleg": "Zwei Wochen Programm für Kinder von sechs bis zwölf Jahren, täglich von acht bis sechzehn Uhr.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige d passt beim Alter, bei der Zeit und beim Mittagessen.",
+              "en": "Check the age band against the child's age: nine falls inside six to twelve. Ads often exclude on exactly that detail."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Sie fahren drei Wochen weg und suchen jemanden, der Ihre beiden Katzen versorgt. Zu Hause soll das nicht passieren.",
+            "loesung": "e",
+            "beleg": "Wir betreuen Katzen und Kleintiere, während Sie verreist sind.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige e ist eine Pension, in der die Tiere untergebracht werden – nicht zu Hause.",
+              "en": "„Zu Hause soll das nicht passieren“ is the condition that decides it: a pension takes the animals in, which is what she wants."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ein frisch gebackener Großvater möchte lernen, was er tun muss, wenn sich sein Enkel verschluckt.",
+            "loesung": "g",
+            "beleg": "An einem Samstag lernen Sie, was bei Fieberkrampf, Verschlucken und Stürzen zu tun ist.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige g richtet sich ausdrücklich auch an Großeltern und nennt genau diesen Fall.",
+              "en": "„frisch gebacken“ is an idiom meaning newly minted. The ad names both the audience (grandparents) and the exact emergency."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Kestner sucht kurzfristig einen Schrebergarten, den er noch in dieser Saison übernehmen kann.",
+            "loesung": "0",
+            "beleg": "die Warteliste ist lang, kurzfristig können wir leider nichts anbieten",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige c bietet zwar Parzellen an, schließt kurzfristige Vergabe aber ausdrücklich aus. Damit passt keine Anzeige.",
+              "en": "The hardest item here, and a deliberate near miss: the topic matches perfectly and the ad still rules him out. When an ad excludes the deciding condition, the answer is 0 — not that ad."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Ihre Nachbarn möchten etwas für das Grün in der Straße tun, sind im August aber drei Wochen verreist.",
+            "loesung": "i",
+            "beleg": "Wer in Urlaub fährt, sucht sich bitte eine Vertretung in der Nachbarschaft.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige i ist möglich, weil für die Urlaubszeit ausdrücklich eine Vertretung vorgesehen ist.",
+              "en": "Compare with item 18: there the holiday would have been a blocker, here the ad has a rule for exactly that case. Read the small print in both directions."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "ja_nein",
+        "anweisung": "Sieben Personen schreiben in einem Online-Forum über Hunde in Cafés und Restaurants. Lesen Sie die Beiträge 20 bis 26. Ist die Person dafür oder dagegen? Kreuzen Sie an: ja (dafür) oder nein (dagegen).",
+        "richtzeitMinuten": 15,
+        "these": "In vielen Lokalen hängt ein Schild: Hunde willkommen. Andere verbieten Tiere im Gastraum ganz. Sollen Hunde in Cafés und Restaurants erlaubt sein?",
+        "texte": [
+          {
+            "id": "forum_hunde",
+            "titel": "Lesermeinungen: Hunde im Lokal — willkommen oder nicht?",
+            "quelle": "Online-Forum",
+            "inhalt": "Beispiel: Uwe, 58 — Ich sitze seit dreißig Jahren mit meinem Hund im Café um die Ecke, und noch nie hat sich jemand beschwert. Das soll ruhig so bleiben.\n\n20. Fenja, 34 — Ich bin selbst Hundehalterin und trotzdem dagegen. Nicht wegen der Hunde, sondern wegen der Menschen. Zwei Tische weiter sitzt jemand mit einer echten Angst, und der geht dann eben nach Hause. Ein Lokal muss für alle da sein, nicht nur für die, die am lautesten sind.\n\n21. Bernd, 47 — Ich betreibe ein kleines Restaurant. Seit wir Hunde erlauben, sind unsere Mittage voll, weil wir die Einzigen in der Fußgängerzone sind. Probleme gab es in vier Jahren zweimal, und beide Male lag es am Halter. Ich würde die Entscheidung sofort wieder so treffen.\n\n22. Sanja, 29 — Ich habe eine Tierhaarallergie, die nicht harmlos ist. Mir wird gesagt, ich solle mir eben ein anderes Lokal suchen. Nur gibt es in unserem Ort inzwischen kaum noch eines ohne Hunde. Für mich ist das keine Wahlfreiheit mehr.\n\n23. Kolja, 41 — Man muss doch nicht alles regeln. Wer sein Lokal für Hunde öffnen will, macht das, und wer nicht, hängt ein Schild an die Tür. Genau so funktioniert es bei uns seit Jahren, und ich sehe keinen Grund, daran etwas zu ändern.\n\n24. Almut, 62 — Als Kellnerin sage ich Ihnen: Das Problem ist nicht das Tier, das unter dem Tisch schläft. Das Problem ist die Leine quer durch den Gang, wenn ich mit vier Tellern komme. Solange das niemand ernst nimmt, halte ich Hunde im Gastraum für keine gute Idee.\n\n25. Ravi, 36 — Ich war anfangs skeptisch, ehrlich gesagt vor allem aus hygienischen Gründen. Dann habe ich gelesen, dass in vielen Ländern Tiere im Lokal völlig normal sind, ohne dass dort jemand krank wird. Seitdem finde ich meine damalige Sorge übertrieben.\n\n26. Steffen, 51 — Wir haben zu Hause zwei Hunde und lassen sie beim Essengehen trotzdem daheim. Nicht weil ich es anderen verbieten möchte — es soll jeder selbst wissen. Aber ein Restaurant ist für mich der eine Ort, an dem ich mich einmal um nichts kümmern will."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "ja_nein",
+          "frage": "Uwe, 58",
+          "loesung": "ja",
+          "begruendung": {
+            "de": "„Das soll ruhig so bleiben“ ist klare Zustimmung.",
+            "en": "Worked example. Decide only whether the person is FOR (ja) or AGAINST (nein) the proposition."
+          }
+        },
+        "items": [
+          {
+            "nr": 20,
+            "typ": "ja_nein",
+            "frage": "Fenja, 34",
+            "loesung": "nein",
+            "beleg": "Ich bin selbst Hundehalterin und trotzdem dagegen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie ist dagegen, obwohl sie selbst einen Hund hat, und begründet das mit Rücksicht auf andere Gäste.",
+              "en": "She states her position in the first sentence, which is unusual in this task and makes the rest an explanation rather than a turn."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "ja_nein",
+            "frage": "Bernd, 47",
+            "loesung": "ja",
+            "beleg": "Ich würde die Entscheidung sofort wieder so treffen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Als Wirt berichtet er von vollen Mittagen und würde es wieder so machen.",
+              "en": "„Probleme gab es … zweimal“ sounds negative in isolation, but he immediately attributes them to owners and confirms his decision."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "ja_nein",
+            "frage": "Sanja, 29",
+            "loesung": "nein",
+            "beleg": "Für mich ist das keine Wahlfreiheit mehr.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Wegen ihrer Allergie bleibt ihr kaum ein Lokal; sie lehnt die allgemeine Erlaubnis ab.",
+              "en": "She never uses the word „dagegen“. The rejection is in the closing sentence, which says the supposed free choice does not exist for her."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "ja_nein",
+            "frage": "Kolja, 41",
+            "loesung": "ja",
+            "beleg": "Genau so funktioniert es bei uns seit Jahren, und ich sehe keinen Grund, daran etwas zu ändern.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er ist dafür, dass Lokale Hunde erlauben dürfen, und will die bestehende Freiheit behalten.",
+              "en": "The subtlest item here. He argues against *regulation*, which in practice means keeping permission — the proposition asks whether dogs should be allowed, and he says yes, per venue."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "ja_nein",
+            "frage": "Almut, 62",
+            "loesung": "nein",
+            "beleg": "Solange das niemand ernst nimmt, halte ich Hunde im Gastraum für keine gute Idee.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Ihre Sorge gilt der Sicherheit im Gang; deshalb hält sie es für keine gute Idee.",
+              "en": "She distinguishes the sleeping dog from the lead across the aisle. The concession does not soften the verdict in the last sentence."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "ja_nein",
+            "frage": "Ravi, 36",
+            "loesung": "ja",
+            "beleg": "Seitdem finde ich meine damalige Sorge übertrieben.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er hat seine Meinung geändert und hält seine frühere Sorge inzwischen für übertrieben.",
+              "en": "„Ich war anfangs skeptisch“ is a decoy opening. „damalig“ marks the worry as belonging to the past."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "ja_nein",
+            "frage": "Steffen, 51",
+            "loesung": "ja",
+            "beleg": "Nicht weil ich es anderen verbieten möchte — es soll jeder selbst wissen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er selbst lässt seine Hunde zu Hause, will es aber niemandem verbieten. Gefragt ist die Haltung zur Erlaubnis, nicht das eigene Verhalten.",
+              "en": "Personal preference and position on the rule point in opposite directions. Always check the answer against the exact proposition — here, whether dogs should be *allowed*."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 5,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die Gartenordnung. Wählen Sie bei den Aufgaben 27 bis 30 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 10,
+        "texte": [
+          {
+            "id": "ordnung_garten",
+            "titel": "Gartenordnung des Kleingartenvereins Sonnenhang",
+            "quelle": "Aushang am Vereinshaus",
+            "inhalt": "§ 1 Nutzung\nJede Parzelle ist zu mindestens einem Drittel gärtnerisch zu nutzen, das heißt für Obst, Gemüse oder Kräuter. Reine Rasenflächen zählen dabei nicht mit. Die Vorstandschaft prüft dies einmal jährlich im Juni.\n\n§ 2 Arbeitseinsätze\nJedes Mitglied leistet vier Arbeitseinsätze zu je drei Stunden pro Jahr. Wer nicht teilnehmen kann, zahlt für jeden versäumten Einsatz fünfundzwanzig Euro. Eine Vertretung durch Familienangehörige ist zulässig und muss vorher nicht angemeldet werden.\n\n§ 3 Ruhezeiten\nMotorgeräte dürfen werktags von neun bis zwölf und von fünfzehn bis achtzehn Uhr betrieben werden. An Sonn- und Feiertagen sind sie ganztägig untersagt. Handbetriebene Geräte sind von dieser Regelung nicht betroffen.\n\n§ 4 Tiere\nHunde sind auf den Wegen an der Leine zu führen. Die Haltung von Tieren auf der Parzelle ist nicht gestattet; ausgenommen sind Bienenvölker nach Absprache mit der Vorstandschaft.\n\n§ 5 Wasser\nDie Wasserleitung wird jeweils Anfang April geöffnet und Ende Oktober geschlossen. Das Sammeln von Regenwasser ist ausdrücklich erwünscht. Das Befüllen von Planschbecken über die Vereinsleitung ist nicht erlaubt."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Wie viel der Parzelle muss gärtnerisch genutzt werden?",
+          "optionen": {
+            "a": "mindestens ein Drittel",
+            "b": "die Hälfte",
+            "c": "die gesamte Fläche"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "§ 1, erster Satz nennt mindestens ein Drittel.",
+            "en": "Worked example. Each question maps to one numbered paragraph — find the paragraph first, then read closely."
+          }
+        },
+        "items": [
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Was passiert, wenn ein Mitglied einen Arbeitseinsatz versäumt?",
+            "optionen": {
+              "a": "Es muss einen Ersatztermin nachholen.",
+              "b": "Es zahlt einen Betrag pro versäumtem Einsatz.",
+              "c": "Es verliert die Parzelle."
+            },
+            "loesung": "b",
+            "beleg": "Wer nicht teilnehmen kann, zahlt für jeden versäumten Einsatz fünfundzwanzig Euro.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Für jeden versäumten Einsatz werden fünfundzwanzig Euro fällig.",
+              "en": "Note „für jeden“ — the amount is per missed session, not a single flat fee. Regulations are precise about this and so are the items."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Wann darf am Sonntag der Rasen mit einem Motormäher gemäht werden?",
+            "optionen": {
+              "a": "vormittags zwischen neun und zwölf",
+              "b": "gar nicht",
+              "c": "nur nach Absprache mit dem Vorstand"
+            },
+            "loesung": "b",
+            "beleg": "An Sonn- und Feiertagen sind sie ganztägig untersagt.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Motorgeräte sind sonntags ganztägig verboten; die Zeiten in § 3 gelten nur werktags.",
+              "en": "✗ a takes the times from the previous sentence, which is explicitly limited to „werktags“. Reusing a real number from the wrong sentence is the standard distractor here."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Welche Tiere darf man auf der Parzelle halten?",
+            "optionen": {
+              "a": "keine, außer Bienen nach Absprache",
+              "b": "Hunde, wenn sie angeleint sind",
+              "c": "alle Kleintiere"
+            },
+            "loesung": "a",
+            "beleg": "Die Haltung von Tieren auf der Parzelle ist nicht gestattet; ausgenommen sind Bienenvölker nach Absprache mit der Vorstandschaft.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Tierhaltung ist verboten, nur Bienen sind nach Absprache erlaubt.",
+              "en": "✗ b confuses two different things: the lead rule is about walking a dog on the paths, not about keeping animals on a plot."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Was gilt für das Wasser?",
+            "optionen": {
+              "a": "Die Leitung ist das ganze Jahr geöffnet.",
+              "b": "Regenwasser darf nicht gesammelt werden.",
+              "c": "Planschbecken dürfen nicht aus der Leitung befüllt werden."
+            },
+            "loesung": "c",
+            "beleg": "Das Befüllen von Planschbecken über die Vereinsleitung ist nicht erlaubt.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Planschbecken dürfen nicht über die Leitung befüllt werden; Regenwasser ist dagegen erwünscht.",
+              "en": "✗ b inverts the text („ausdrücklich erwünscht“). ✗ a ignores the April-to-October window. Both distractors here are simple reversals — check the direction of each statement."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          {
+            "rolle": "Kita",
+            "geschlecht": "f",
+            "beschreibung": "Leiterin der Kita, spricht auf die Mailbox"
+          },
+          {
+            "rolle": "Zooansage",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage im Tierpark"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "geschlecht": "f",
+            "beschreibung": "Meldung im Radio"
+          },
+          {
+            "rolle": "Tierarztpraxis",
+            "geschlecht": "m",
+            "beschreibung": "Mitarbeiter der Tierarztpraxis am Telefon"
+          },
+          {
+            "rolle": "Festansage",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage auf dem Straßenfest"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der Anruf kommt aus einer Kita.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Die Sprecherin nennt die Kita gleich zu Beginn.",
+            "en": "Worked example. Phone messages nearly always name the caller first."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text zweimal. Lesen Sie jetzt das Beispiel und die Aufgaben eins und zwei.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Kita",
+            "text": "Guten Tag, Frau Wieland, hier ist die Kita Regenbogen. Es geht um den Ausflug am Freitag. Wir fahren doch nicht in den Tierpark, sondern gehen zum Bauernhof am Ortsrand, weil der Bus ausgefallen ist. Wir laufen also, das dauert etwa zwanzig Minuten. Bitte geben Sie Ihrer Tochter deshalb feste Schuhe mit und eine Regenjacke, falls es doch nass wird. Am Essen ändert sich nichts, das bekommen die Kinder wie immer von uns.",
+            "pauseDanachSek": 2,
+            "akustik": "mailbox",
+            "abschnitt": "text_1",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben drei und vier.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Zooansage",
+            "text": "Liebe Besucherinnen und Besucher, ein Hinweis für alle, die heute die Fütterung der Seehunde sehen möchten. Diese findet ausnahmsweise nicht um vierzehn Uhr statt, sondern bereits um dreizehn Uhr dreißig, weil im Anschluss eine tierärztliche Untersuchung ansteht. Die Fütterung der Affen bleibt bei sechzehn Uhr. Der Weg zum Seehundbecken ist derzeit gesperrt; folgen Sie bitte der Ausschilderung über den Spielplatz.",
+            "pauseDanachSek": 2,
+            "akustik": "durchsage",
+            "abschnitt": "text_2",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben fünf und sechs.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "text": "Und noch eine Meldung aus der Region. Die Stadt Lindenau sucht ab sofort Menschen, die im Sommer einen Straßenbaum vor ihrer Haustür gießen. Wer mitmacht, bekommt einen Gießsack und eine kurze Einweisung. Anmelden kann man sich im Rathaus oder online. Nach Angaben der Stadt haben sich bereits über neunzig Haushalte gemeldet, gebraucht werden aber deutlich mehr, vor allem in den Neubaugebieten im Osten.",
+            "pauseDanachSek": 2,
+            "akustik": "radio",
+            "abschnitt": "text_3",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben sieben und acht.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Tierarztpraxis",
+            "text": "Guten Tag, Herr Bergmann, hier ist die Tierarztpraxis Dr. Ohlert. Die Blutwerte Ihrer Katze sind da, und sie sind unauffällig. Sie müssen sich also keine Sorgen machen. Die Tabletten können Sie trotzdem noch bis Ende der Woche weitergeben, danach ist die Behandlung abgeschlossen. Einen neuen Termin brauchen wir erst in einem halben Jahr zur Kontrolle. Falls Ihnen vorher etwas auffällt, melden Sie sich einfach.",
+            "pauseDanachSek": 2,
+            "akustik": "telefon",
+            "abschnitt": "text_4",
+            "betont": true
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Lesen Sie jetzt die Aufgaben neun und zehn.",
+            "pauseDanachSek": 16,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Festansage",
+            "text": "Liebe Nachbarinnen und Nachbarn, wir starten gleich mit dem Programm. Die Musik auf der Bühne beginnt um siebzehn Uhr, eine halbe Stunde später als im Programmheft angekündigt, weil der Aufbau länger gedauert hat. Bis dahin sind alle Stände geöffnet. Wer noch beim Abbau helfen möchte: Wir treffen uns morgen früh um neun am Zelt. Und bitte denken Sie daran, Ihre Autos heute nicht in der Bergstraße zu parken.",
+            "pauseDanachSek": 2,
+            "akustik": "durchsage",
+            "abschnitt": "text_5",
+            "betont": true
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Der Ausflug führt zu einem anderen Ziel als geplant.",
+            "loesung": "richtig",
+            "beleg": "Wir fahren doch nicht in den Tierpark, sondern gehen zum Bauernhof am Ortsrand",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Statt in den Tierpark geht es zum Bauernhof.",
+              "en": "„doch nicht … sondern …“ signals a change of plan. „doch“ here means „after all“, not „but“."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was soll das Kind mitbringen?",
+            "optionen": {
+              "a": "festes Schuhwerk und eine Regenjacke",
+              "b": "ein Lunchpaket",
+              "c": "Geld für den Eintritt"
+            },
+            "loesung": "a",
+            "beleg": "Bitte geben Sie Ihrer Tochter deshalb feste Schuhe mit und eine Regenjacke, falls es doch nass wird.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Wegen des Fußwegs braucht das Kind feste Schuhe und eine Regenjacke.",
+              "en": "✗ b is explicitly ruled out at the end: „Am Essen ändert sich nichts, das bekommen die Kinder wie immer von uns.“"
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Die Fütterung der Seehunde beginnt früher als sonst.",
+            "loesung": "richtig",
+            "beleg": "sondern bereits um dreizehn Uhr dreißig",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Statt um vierzehn Uhr beginnt sie schon um halb zwei.",
+              "en": "„bereits“ = already, which tells you the direction of the change even before you compare the two times."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was gilt für den Weg zum Seehundbecken?",
+            "optionen": {
+              "a": "Er ist gesperrt.",
+              "b": "Er ist nur für Gruppen offen.",
+              "c": "Er führt am Affenhaus vorbei."
+            },
+            "loesung": "a",
+            "beleg": "Der Weg zum Seehundbecken ist derzeit gesperrt; folgen Sie bitte der Ausschilderung über den Spielplatz.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der direkte Weg ist gesperrt; man geht über den Spielplatz.",
+              "en": "The monkeys and the playground both appear in the announcement, which is what makes ✗ c tempting — but the detour runs over the playground."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Es haben sich bereits genug Freiwillige gemeldet.",
+            "loesung": "falsch",
+            "beleg": "gebraucht werden aber deutlich mehr, vor allem in den Neubaugebieten im Osten",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Über neunzig Haushalte haben sich gemeldet, gebraucht werden aber deutlich mehr.",
+              "en": "Hearing a large number (ninety) tempts you to answer „richtig“. The clause after „aber“ is what settles it."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was bekommen die Freiwilligen?",
+            "optionen": {
+              "a": "eine kleine Bezahlung",
+              "b": "einen Gießsack und eine Einweisung",
+              "c": "einen eigenen Baum im Garten"
+            },
+            "loesung": "b",
+            "beleg": "Wer mitmacht, bekommt einen Gießsack und eine kurze Einweisung.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Es gibt einen Gießsack und eine Einweisung, kein Geld.",
+              "en": "„Einweisung“ = briefing or instruction. Nothing in the report mentions payment, and the tree stays on the street."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Die Untersuchungsergebnisse geben Anlass zur Sorge.",
+            "loesung": "falsch",
+            "beleg": "Die Blutwerte Ihrer Katze sind da, und sie sind unauffällig.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Unauffällig“ heißt: nichts Ungewöhnliches. Der Sprecher sagt ausdrücklich, es gebe keinen Grund zur Sorge.",
+              "en": "„unauffällig“ literally means „not conspicuous“ and is the standard medical word for a normal result. The next sentence spells it out."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was soll Herr Bergmann jetzt tun?",
+            "optionen": {
+              "a": "sofort einen neuen Termin machen",
+              "b": "die Tabletten bis Ende der Woche weitergeben",
+              "c": "die Behandlung sofort beenden"
+            },
+            "loesung": "b",
+            "beleg": "Die Tabletten können Sie trotzdem noch bis Ende der Woche weitergeben, danach ist die Behandlung abgeschlossen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Tabletten laufen noch bis Ende der Woche; erst danach ist die Behandlung zu Ende.",
+              "en": "✗ c is a near miss: the treatment does end, but not immediately. „danach“ places the end after the week, not now."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Die Musik beginnt später als im Programm angekündigt.",
+            "loesung": "richtig",
+            "beleg": "eine halbe Stunde später als im Programmheft angekündigt, weil der Aufbau länger gedauert hat",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Bühne startet eine halbe Stunde später als geplant.",
+              "en": "The comparison „später als im Programmheft angekündigt“ answers the item directly; you do not need the original time."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Worum werden die Gäste gebeten?",
+            "optionen": {
+              "a": "nicht in der Bergstraße zu parken",
+              "b": "beim Aufbau der Bühne zu helfen",
+              "c": "die Stände früher zu schließen"
+            },
+            "loesung": "a",
+            "beleg": "Und bitte denken Sie daran, Ihre Autos heute nicht in der Bergstraße zu parken.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Bitte am Ende betrifft das Parken in der Bergstraße.",
+              "en": "✗ b refers to dismantling („Abbau“) tomorrow, not building up („Aufbau“) — two words one letter apart, and the announcement uses both."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "monolog",
+        "anweisung": "Sie hören einen Text. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Sie besuchen einen Informationsabend im Tierheim. Der Leiter begrüßt die Gäste.",
+        "sprecher": [
+          {
+            "rolle": "Tierheimleiter",
+            "geschlecht": "m",
+            "beschreibung": "Hendrik Palm, Leiter des Tierheims"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören einen Text. Sie hören diesen Text einmal. Lesen Sie jetzt die Aufgaben elf bis fünfzehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Schön, dass Sie gekommen sind. Mein Name ist Hendrik Palm, ich leite dieses Haus seit elf Jahren. Ich halte mich kurz, weil Sie danach zu den Tieren gehen. Eines möchte ich aber vorweg sagen, und es ist der Grund für diesen Abend: Wir suchen heute keine Käufer. Wir suchen Menschen, die verstehen, worauf sie sich einlassen.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Zu den Zahlen. Wir haben Platz für hundertzwanzig Tiere und sind seit dem Frühjahr durchgehend voll. Das liegt nicht an mehr Fundtieren, wie viele denken. Die Zahl der abgegebenen Tiere ist gestiegen, und der häufigste Grund, den wir hören, ist der Umzug in eine Wohnung, in der Tiere nicht erlaubt sind.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Bei den Hunden sieht es anders aus als bei den Katzen. Hunde vermitteln wir im Schnitt nach knapp drei Wochen. Bei Katzen dauert es deutlich länger, und bei schwarzen Katzen am längsten. Warum das so ist, kann Ihnen niemand seriös erklären. Es ist aber in jedem Tierheim dasselbe.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Wenn Sie ein Tier bei uns übernehmen möchten, läuft das immer gleich ab. Sie kommen mindestens dreimal her und gehen mit dem Tier spazieren oder sitzen einfach dabei. Danach besuchen wir Sie zu Hause. Das ist keine Prüfung Ihrer Wohnung, sondern ein Gespräch über den Alltag: Wer ist tagsüber da, was passiert im Urlaub. Erst danach entscheiden wir gemeinsam.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Bringen Sie zu diesen Besuchen bitte alle mit, die später im Haushalt leben. Auch die Kinder, und wenn Sie schon ein Tier haben, möglichst auch dieses. Wir haben es zu oft erlebt, dass zu Hause zwei Tiere aufeinandertreffen, die sich vorher nie gesehen haben. Das geht manchmal gut und manchmal gar nicht.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Zu den Kosten, weil danach immer gefragt wird. Die Schutzgebühr liegt je nach Tier zwischen achtzig und dreihundert Euro. Damit finanzieren wir nicht das einzelne Tier — das kostet uns ein Vielfaches. Wir wollen damit erreichen, dass die Entscheidung etwas kostet und deshalb überlegt wird.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Was viele nicht wissen: Jedes Tier verlässt uns geimpft, gechipt und kastriert. Allein diese drei Dinge kosten beim Tierarzt mehr als die höchste Schutzgebühr. Wer bei uns ein Tier holt, macht also finanziell kein schlechtes Geschäft — nur ist das nicht der Grund, aus dem man herkommen sollte.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Noch etwas, das regelmäßig für Enttäuschung sorgt: Wir geben keine Tiere als Überraschung ab. Wenn Sie Ihrem Kind oder Ihrer Mutter ein Tier schenken möchten, muss die Person selbst herkommen und selbst entscheiden. Das klingt streng, aber genau diese Geschenke stehen ein halbes Jahr später wieder bei uns vor der Tür.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "Ein Wort zu den Pflegestellen, die wir seit dem Frühjahr aufbauen. Dabei nehmen Sie ein Tier für einige Wochen zu sich, ohne es zu behalten. Das ist besonders für junge Katzen wichtig, die bei uns weder Staubsauger noch Türklingel kennenlernen. Wenn Sie unsicher sind, ob ein Tier zu Ihrem Leben passt, ist das der ehrlichste Weg, es herauszufinden.",
+            "pauseDanachSek": 0.9,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Tierheimleiter",
+            "text": "So, das war es von mir. Meine Kolleginnen stehen gleich draußen und teilen die Gruppen ein. Bitte fassen Sie heute keine Tiere durch das Gitter an, auch wenn sie noch so freundlich schauen. Fragen können Sie unterwegs jederzeit stellen; dafür sind wir da.",
+            "pauseDanachSek": 3,
+            "akustik": "raum",
+            "betont": true
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Was ist das Ziel des Abends?",
+            "optionen": {
+              "a": "möglichst viele Tiere zu vermitteln",
+              "b": "Menschen zu finden, die die Verantwortung verstehen",
+              "c": "Spenden für das Tierheim zu sammeln"
+            },
+            "loesung": "b",
+            "beleg": "Wir suchen Menschen, die verstehen, worauf sie sich einlassen.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Er stellt das gleich am Anfang klar: keine Käufer, sondern Menschen, die die Verantwortung verstehen.",
+              "en": "„sich auf etwas einlassen“ = to take something on. He announces this as the reason for the evening, which makes it the global point."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Warum ist das Tierheim zurzeit voll?",
+            "optionen": {
+              "a": "Es werden mehr Tiere gefunden.",
+              "b": "Es werden mehr Tiere abgegeben.",
+              "c": "Es wurden Plätze abgebaut."
+            },
+            "loesung": "b",
+            "beleg": "Die Zahl der abgegebenen Tiere ist gestiegen, und der häufigste Grund, den wir hören, ist der Umzug in eine Wohnung, in der Tiere nicht erlaubt sind.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Nicht Fundtiere, sondern abgegebene Tiere sind der Grund.",
+              "en": "He names and rejects the common assumption („Das liegt nicht an mehr Fundtieren, wie viele denken“) before giving the real reason."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was passiert bei einem Hausbesuch?",
+            "optionen": {
+              "a": "Die Wohnung wird geprüft.",
+              "b": "Es wird über den Alltag gesprochen.",
+              "c": "Der Vertrag wird unterschrieben."
+            },
+            "loesung": "b",
+            "beleg": "Das ist keine Prüfung Ihrer Wohnung, sondern ein Gespräch über den Alltag: Wer ist tagsüber da, was passiert im Urlaub.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Es geht um den Alltag, ausdrücklich nicht um eine Prüfung der Wohnung.",
+              "en": "„nicht … sondern …“ again, and here it exists precisely to correct the expectation that ✗ a describes."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Wozu dient die Schutzgebühr?",
+            "optionen": {
+              "a": "Sie deckt die Kosten des Tieres.",
+              "b": "Sie soll zu einer überlegten Entscheidung führen.",
+              "c": "Sie finanziert den Umbau des Tierheims."
+            },
+            "loesung": "b",
+            "beleg": "Wir wollen damit erreichen, dass die Entscheidung etwas kostet und deshalb überlegt wird.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Gebühr deckt die Kosten gerade nicht – sie soll zum Nachdenken führen.",
+              "en": "✗ a is explicitly denied: „das kostet uns ein Vielfaches“. The fee has a purpose, not a budget function."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Für wen ist eine Pflegestelle laut Herrn Palm besonders geeignet?",
+            "optionen": {
+              "a": "für Menschen, die sich noch unsicher sind",
+              "b": "für Familien mit kleinen Kindern",
+              "c": "für Menschen ohne eigene Wohnung"
+            },
+            "loesung": "a",
+            "beleg": "Wenn Sie unsicher sind, ob ein Tier zu Ihrem Leben passt, ist das der ehrlichste Weg, es herauszufinden.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er empfiehlt die Pflegestelle ausdrücklich denen, die unsicher sind.",
+              "en": "The paragraph starts with what fostering is for the animals and ends with who it suits. The item asks about the second half."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören ein Gespräch zwischen zwei Personen. Kreuzen Sie bei den Aufgaben 16 bis 22 an: richtig oder falsch. Sie hören das Gespräch einmal.",
+        "wiederholungen": 1,
+        "situation": "Marisa und Konrad arbeiten zusammen. Sie sprechen in der Mittagspause.",
+        "sprecher": [
+          {
+            "rolle": "Marisa",
+            "geschlecht": "f",
+            "beschreibung": "Kollegin, sucht Ferienbetreuung"
+          },
+          {
+            "rolle": "Konrad",
+            "geschlecht": "m",
+            "beschreibung": "Kollege"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch zwischen zwei Personen. Sie hören das Gespräch einmal. Lesen Sie jetzt die Aufgaben sechzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 55,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Marisa, du siehst gestresst aus. Alles in Ordnung?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Die Sommerferien. Sechs Wochen, und ich habe genau zwei Wochen Urlaub. Mein Mann hat drei, aber im August, und das passt hinten und vorne nicht zusammen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Und deine Schwiegereltern? Die wohnen doch in der Nähe.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Die nehmen Lea eine Woche, mehr geht nicht. Meine Schwiegermutter ist gerade am Knie operiert worden. Ich bin ihnen ehrlich dankbar, dass sie überhaupt eine Woche machen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Und deine Eltern?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Die wohnen vierhundert Kilometer weg. Lea war letztes Jahr eine Woche allein dort, das hat gut geklappt. Nur fahre ich dann zweimal acht Stunden, und das an einem Wochenende. Das mache ich nicht noch einmal.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Bleiben also zwei Wochen. Habt ihr mal die Ferienbetreuung von der Stadt angeschaut?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Da habe ich vorletzte Woche angerufen. Voll. Man hätte sich im Februar anmelden müssen, im Februar!",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Das ist bei uns damals genauso gewesen. Wir haben es dann über den Sportverein gelöst. Die machen eine Woche Sportcamp, und man muss nicht Mitglied sein.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Und wie habt ihr die restlichen Wochen überbrückt?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Mit Tauschen. Zwei Familien aus der Klasse, jede nimmt zwei Tage alle drei Kinder. Klingt anstrengend, ist es an dem Tag auch. Dafür hat man vier Tage frei, an denen jemand anderes zuständig ist.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Das setzt aber voraus, dass man die anderen Eltern gut genug kennt.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Am Anfang kannten wir sie überhaupt nicht. Ich habe im Elternchat gefragt, ob jemand dasselbe Problem hat, und innerhalb einer Stunde hatten sich vier Familien gemeldet.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Sportcamp? Lea ist acht und hat gerade beschlossen, dass sie Sport furchtbar findet.",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Meine war in dem Alter genauso, und nach drei Tagen war es das Beste des Jahres. Da geht es weniger um Sport als darum, dass zwanzig Kinder zusammen draußen sind.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Und wenn es ihr nach zwei Tagen trotzdem nicht gefällt?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Dann holst du sie ab, das ist kein Drama. Die nehmen darauf Rücksicht, weil sie das jedes Jahr erleben. Nur anmelden solltest du früh, die Plätze sind meistens im Mai weg.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Hm. Und was kostet das?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Hundertzwanzig für die Woche, glaube ich, mit Mittagessen. Warte, ich schicke dir nachher den Link, dann siehst du es genau.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Das wäre lieb. Und die letzte Woche nehme ich mir unbezahlt frei, das habe ich schon mit dem Chef besprochen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Konrad",
+            "text": "Hat er sofort Ja gesagt?",
+            "pauseDanachSek": 0.4,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Marisa",
+            "text": "Erstaunlich schnell sogar. Ich hatte mir eine ganze Rede zurechtgelegt und habe sie gar nicht gebraucht.",
+            "pauseDanachSek": 3,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "richtig_falsch",
+            "frage": "Marisa und ihr Mann haben zusammen genug Urlaub für die Ferien.",
+            "loesung": "falsch",
+            "beleg": "Sechs Wochen, und ich habe genau zwei Wochen Urlaub.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Zwei plus drei Wochen decken sechs Wochen nicht ab, und die Zeiten passen zudem nicht zusammen.",
+              "en": "Two figures against six weeks, plus „das passt hinten und vorne nicht zusammen“ — an idiom meaning it does not add up at all."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "richtig_falsch",
+            "frage": "Die Schwiegereltern können eine Woche übernehmen.",
+            "loesung": "richtig",
+            "beleg": "Die nehmen Lea eine Woche, mehr geht nicht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Eine Woche ist möglich, mehr nicht, weil die Schwiegermutter operiert wurde.",
+              "en": "„mehr geht nicht“ limits it, but the one week is confirmed. The item asks only about that."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "richtig_falsch",
+            "frage": "Marisa ärgert sich über die Schwiegereltern.",
+            "loesung": "falsch",
+            "beleg": "Ich bin ihnen ehrlich dankbar, dass sie überhaupt eine Woche machen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie ist ausdrücklich dankbar, nicht verärgert.",
+              "en": "The surrounding stress makes annoyance plausible, but she says the opposite. Listen for the speaker's attitude, not the situation."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "richtig_falsch",
+            "frage": "In der städtischen Ferienbetreuung ist noch ein Platz frei.",
+            "loesung": "falsch",
+            "beleg": "Da habe ich vorletzte Woche angerufen. Voll.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Betreuung ist voll; man hätte sich im Februar anmelden müssen.",
+              "en": "The one-word answer „Voll.“ is easy to miss at speed. Short replies often carry the whole item."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "richtig_falsch",
+            "frage": "Für das Sportcamp muss man Mitglied im Verein sein.",
+            "loesung": "falsch",
+            "beleg": "Die machen eine Woche Sportcamp, und man muss nicht Mitglied sein.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Eine Mitgliedschaft ist ausdrücklich nicht nötig.",
+              "en": "„man muss nicht“ = one need not. Do not confuse it with „man darf nicht“ (one must not) — the two are opposites."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "richtig_falsch",
+            "frage": "Konrad will Marisa weitere Informationen schicken.",
+            "loesung": "richtig",
+            "beleg": "Warte, ich schicke dir nachher den Link, dann siehst du es genau.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er will ihr den Link schicken, damit sie die genauen Angaben sieht.",
+              "en": "He is unsure of the price („glaube ich“) and offers the link for that reason — the offer is the answer, not the figure."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "richtig_falsch",
+            "frage": "Marisa muss mit ihrem Chef noch über den unbezahlten Urlaub sprechen.",
+            "loesung": "falsch",
+            "beleg": "das habe ich schon mit dem Chef besprochen",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Gespräch hat schon stattgefunden, und der Chef hat schnell zugestimmt.",
+              "en": "The final item is a near miss again: the conversation is a real topic, but it has already happened. „schon“ is the word that settles it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "diskussion",
+        "anweisung": "Sie hören eine Diskussion im Radio. Wer sagt das? Ordnen Sie bei den Aufgaben 23 bis 30 zu. Sie hören die Diskussion zweimal.",
+        "wiederholungen": 2,
+        "situation": "In der Radiosendung „Standpunkte“ diskutieren zwei Gäste darüber, ob Parkplätze in der Innenstadt Bäumen weichen sollen.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "Ulf Sattler, moderiert die Sendung"
+          },
+          {
+            "rolle": "Grabowski",
+            "geschlecht": "f",
+            "beschreibung": "Ines Grabowski, Leiterin des Gartenamts"
+          },
+          {
+            "rolle": "Reimers",
+            "geschlecht": "m",
+            "beschreibung": "Kai Reimers, Einzelhandelsverband"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören eine Diskussion im Radio. Sie hören die Diskussion zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 55,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Guten Abend zu Standpunkte. Die Stadt Lindenau will in der Innenstadt sechzig Parkplätze streichen und dort Bäume pflanzen. Im vergangenen Sommer wurden in der Fußgängerzone an mehreren Tagen über vierzig Grad gemessen. Bei mir sind Ines Grabowski, die Leiterin des Gartenamts, und Kai Reimers vom Einzelhandelsverband. Frau Grabowski, warum ausgerechnet Parkplätze?",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Grabowski",
+            "text": "Weil dort der Platz ist, den ein Baum braucht. Ein Straßenbaum stirbt nicht an der Hitze, sondern am fehlenden Wurzelraum. Unter einem Parkplatz liegen selten Leitungen, unter dem Gehweg fast immer. Das klingt technisch, entscheidet aber darüber, ob ein Baum zwanzig Jahre alt wird oder drei.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Reimers",
+            "text": "Gegen Bäume sagt niemand etwas, auch wir nicht. Nur trifft es immer dieselben. Sechzig Plätze klingen wenig, es sind aber die letzten in Laufweite zur Buchhandlung und zum Schuhgeschäft. Wer schwer trägt oder schlecht laufen kann, fährt dann eben ins Zentrum vor der Stadt, und dort steht kein einziger Baum.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Grabowski, gibt es denn eine Alternative? Man könnte doch auch auf den Plätzen und in den Höfen pflanzen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Grabowski",
+            "text": "Machen wir längst, nur wirkt es dort kaum. Die Hitze entsteht auf den Flächen, über die den ganzen Tag die Sonne wandert, und das sind die Straßen. Ein Baum im Hinterhof kühlt den Hinterhof. Uns geht es um die Wege, auf denen die Leute unterwegs sind.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Herr Reimers, es gibt inzwischen mehrere Untersuchungen, nach denen der Umsatz in begrünten Straßen eher steigt. Überzeugt Sie das nicht?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Reimers",
+            "text": "Diese Untersuchungen kenne ich, und für Cafés stimmen sie sicher. Ein Café lebt davon, dass man sitzen bleibt. Ein Elektrofachgeschäft lebt davon, dass jemand einen Karton ins Auto trägt. Man kann die Innenstadt nicht behandeln, als bestünde sie nur aus Gastronomie.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Grabowski",
+            "text": "Diesen Einwand nehme ich ernst, und deshalb bleiben alle Ladezonen erhalten. Was wegfällt, sind Dauerparkplätze, auf denen zu achtzig Prozent Autos stehen, die den ganzen Tag nicht bewegt werden. Wir haben das drei Wochen lang gezählt.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Reimers",
+            "text": "Achtzig Prozent — das mag im Schnitt stimmen. In der Woche vor Weihnachten stimmt es garantiert nicht, und genau in diesen drei Wochen verdienen viele meiner Mitglieder das Geld für das halbe Jahr.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Grabowski",
+            "text": "Deshalb schlagen wir für diese Wochen zusätzliche Busse vor, so wie es andere Städte auch machen. Ob die Stadt das bezahlt, ist eine andere Frage, aber vorgeschlagen haben wir es.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Einen Punkt möchte ich einwerfen, der in dieser Debatte fast immer fehlt: Die Bäume, die jetzt gepflanzt werden, spenden erst in fünfzehn Jahren nennenswert Schatten. Für die Hitze im nächsten Sommer bringen sie gar nichts.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Grabowski",
+            "text": "Das ist völlig richtig, und genau deshalb ist jedes Jahr Verzögerung teuer. Wer heute nicht pflanzt, hat in fünfzehn Jahren nichts. Zusätzlich arbeiten wir kurzfristig mit Sonnensegeln und Trinkbrunnen — die helfen sofort, aber eben nur, solange jemand sie aufstellt und wartet.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Reimers",
+            "text": "Wenn ich eines vorschlagen dürfte: Beginnen Sie mit den Straßen, in denen ohnehin kaum jemand parkt. Es gibt drei davon. Damit hätten Sie Ihre Bäume, und niemand müsste sich streiten. Stattdessen fängt die Stadt in der Straße an, in der die meisten Geschäfte liegen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Damit sind wir am Ende der Sendung. Vielen Dank Ihnen beiden.",
+            "pauseDanachSek": 3,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "zuordnung_person",
+            "frage": "Im letzten Sommer wurden in der Fußgängerzone über vierzig Grad gemessen.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "a",
+            "beleg": "Im vergangenen Sommer wurden in der Fußgängerzone an mehreren Tagen über vierzig Grad gemessen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Moderator nennt die Zahl in seiner Einführung.",
+              "en": "The opening of a discussion is the moderator's, and it usually carries facts rather than opinions."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_person",
+            "frage": "Bäume sterben nicht an der Hitze, sondern am fehlenden Platz für die Wurzeln.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "b",
+            "beleg": "Ein Straßenbaum stirbt nicht an der Hitze, sondern am fehlenden Wurzelraum.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Das ist ihre fachliche Begründung dafür, warum Parkplätze der richtige Ort sind.",
+              "en": "As head of the parks department she is the one supplying the technical reasoning. The „nicht … sondern …“ marks it as her key claim."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_person",
+            "frage": "Es fallen gerade die Parkplätze weg, die am nächsten an den Geschäften liegen.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "c",
+            "beleg": "es sind aber die letzten in Laufweite zur Buchhandlung und zum Schuhgeschäft",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er spricht für den Einzelhandel und nennt die Nähe zu den Läden.",
+              "en": "„Gegen Bäume sagt niemand etwas“ is a concession before the objection. The objection is what the item states."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_person",
+            "frage": "Untersuchungen zeigen, dass der Umsatz in grünen Straßen eher steigt.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "a",
+            "beleg": "es gibt inzwischen mehrere Untersuchungen, nach denen der Umsatz in begrünten Straßen eher steigt",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Moderator bringt die Untersuchungen ein und fragt Herrn Reimers dazu.",
+              "en": "Careful: Reimers answers about these studies, but the moderator introduces them. Attribute the statement, not the reply."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_person",
+            "frage": "Was für ein Café gilt, gilt nicht für jedes Geschäft.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "c",
+            "beleg": "Man kann die Innenstadt nicht behandeln, als bestünde sie nur aus Gastronomie.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er unterscheidet zwischen Café und Fachgeschäft und schränkt die Studien so ein.",
+              "en": "„als bestünde sie“ is Konjunktiv II in a comparison. He accepts the studies for one case and denies they generalise."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "zuordnung_person",
+            "frage": "Die meisten der betroffenen Autos stehen den ganzen Tag unbewegt.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "b",
+            "beleg": "auf denen zu achtzig Prozent Autos stehen, die den ganzen Tag nicht bewegt werden",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie stützt sich auf eine eigene Zählung über drei Wochen.",
+              "en": "„Wir haben das drei Wochen lang gezählt“ identifies the speaker as the one with the data — the parks department, not the retail association."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_person",
+            "frage": "Neue Bäume helfen gegen die Hitze des nächsten Sommers noch nicht.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "a",
+            "beleg": "Die Bäume, die jetzt gepflanzt werden, spenden erst in fünfzehn Jahren nennenswert Schatten.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Moderator bringt diesen Einwand selbst ein.",
+              "en": "The third item keyed to the moderator in this paper. „Einen Punkt möchte ich einwerfen“ flags it — he is contributing, not asking."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_person",
+            "frage": "Man sollte dort anfangen, wo kaum jemand parkt.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "Ines Grabowski",
+              "c": "Kai Reimers"
+            },
+            "loesung": "c",
+            "beleg": "Beginnen Sie mit den Straßen, in denen ohnehin kaum jemand parkt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Das ist sein Kompromissvorschlag am Ende der Sendung.",
+              "en": "„Wenn ich eines vorschlagen dürfte“ in Konjunktiv II is a polite way to introduce a proposal, and marks the sentence the item is built on."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 60,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "email_informell",
+        "situation": "Ihr Freund Timo war zwei Wochen im Ausland. In dieser Zeit haben Sie seine Katze in seiner Wohnung versorgt. Timo ist gestern zurückgekommen.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an Timo. Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf Anrede und Gruß. Schreiben Sie ungefähr 80 Wörter.",
+        "leitpunkte": [
+          "Berichten Sie, wie es der Katze gegangen ist.",
+          "Erzählen Sie von einem kleinen Problem, das es gab.",
+          "Fragen Sie, wann Sie den Schlüssel zurückbringen können."
+        ],
+        "anrede": "Lieber Timo",
+        "woerter": 80,
+        "zeitMinuten": 20,
+        "punkte": 40,
+        "redemittel": [
+          "willkommen zurück! Wie war es?",
+          "Mit Mira hat alles gut geklappt.",
+          "Sie hat jeden Abend am Fenster auf mich gewartet.",
+          "Eine Kleinigkeit muss ich dir allerdings erzählen: …",
+          "Zum Glück ist nichts passiert.",
+          "Ich habe es dir ersetzt / neu gekauft.",
+          "Wann passt es dir, dass ich den Schlüssel vorbeibringe?",
+          "Melde dich einfach. Liebe Grüße, …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Lieber Timo,\n\nwillkommen zurück. Mit deiner Katze war alles gut. Sie hat jeden Tag gefressen. Sie war auch nicht traurig. Am Abend hat sie am Fenster gewartet.\n\nEs gab ein kleines Problem. Sie hat eine Pflanze umgeworfen. Der Topf ist kaputt. Ich habe einen neuen Topf gekauft.\n\nWann kann ich den Schlüssel bringen? Vielleicht morgen.\n\nViele Grüße\nElif",
+            "kommentar": "Alle drei Leitpunkte sind da und der Text ist gut verständlich – das reicht für „ausreichend“. Auffällig sind die vielen kurzen Hauptsätze ohne Verbindung; es fehlen Konnektoren wie „weil“, „aber“ oder „deshalb“. „Vielleicht morgen“ ist außerdem kein richtiger Terminvorschlag. Für eine bessere Note bräuchte es Nebensätze und eine konkrete Uhrzeit."
+          },
+          {
+            "niveau": "gut",
+            "text": "Lieber Timo,\n\nwillkommen zurück! Ich hoffe, du hattest eine gute Zeit. Mit Mira hat alles wunderbar geklappt: Sie hat gut gefressen und saß jeden Abend schon am Fenster, wenn ich kam.\n\nEine Kleinigkeit muss ich dir allerdings erzählen. Am zweiten Tag hat sie die große Pflanze im Flur umgeworfen, und der Topf ist dabei zerbrochen. Passiert ist ihr zum Glück nichts. Ich habe schon einen neuen gekauft, er steht bei dir in der Küche.\n\nWann passt es dir, dass ich den Schlüssel vorbeibringe?\n\nLiebe Grüße\nElif",
+            "kommentar": "Deutlich besser verbunden: ein Doppelpunkt statt eines neuen Satzes, ein Temporalsatz mit „wenn“, ein Kontrast mit „allerdings“ und ein Perfekt, das die Reihenfolge der Ereignisse klar macht. Der Schaden wird benannt, gleich beruhigt und schon gelöst — genau die Reihenfolge, die eine solche Nachricht braucht."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "forumsbeitrag",
+        "situation": "Sie lesen in einem Online-Forum einen Beitrag zum Thema Haustiere und Kinder.",
+        "impuls": "Meine Tochter ist neun und wünscht sich seit einem Jahr einen Hund. Sie verspricht hoch und heilig, jeden Tag rauszugehen. Meine Mutter sagt, am Ende mache ich sowieso alles allein — und ehrlich gesagt glaube ich ihr. Trotzdem finde ich, ein Tier gehört zum Aufwachsen dazu. Was meint ihr? — Yara_L",
+        "aufgabenstellung": "Schreiben Sie eine Antwort im Forum. Begründen Sie Ihre Meinung. Schreiben Sie etwas zu allen drei Punkten. Schreiben Sie ungefähr 80 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie von Haustieren für Kinder halten.",
+          "Nennen Sie einen Vorteil und einen Nachteil.",
+          "Geben Sie Yara_L einen Rat."
+        ],
+        "woerter": 80,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "Ich finde die Frage interessant, weil …",
+          "Meiner Meinung nach / Ich bin der Meinung, dass …",
+          "Einerseits … andererseits …",
+          "Ein großer Vorteil ist sicher, dass …",
+          "Man darf aber nicht vergessen, dass …",
+          "Aus eigener Erfahrung kann ich sagen, …",
+          "An deiner Stelle würde ich …",
+          "Vielleicht wäre es eine Idee, … zu …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo Yara,\n\nich finde Haustiere für Kinder gut. Wir hatten früher einen Hund. Ich habe viel gelernt.\n\nEin Vorteil ist: Das Kind lernt Verantwortung. Es geht auch mehr nach draußen. Ein Nachteil ist die Zeit. Ein Hund braucht jeden Tag Zeit. Deine Mutter hat da recht.\n\nMein Rat: Passt erst mal auf einen fremden Hund auf. Dann seht ihr, wie es ist.\n\nViele Grüße\nBoris",
+            "kommentar": "Der Beitrag beantwortet alle drei Punkte und ist klar gegliedert. Die Sätze sind aber sehr kurz und stehen unverbunden nebeneinander; es fehlen Konnektoren wie „weil“, „denn“ oder „allerdings“. Der Rat ist brauchbar, aber im Befehlston formuliert. Für „gut“ müssten Vorteil und Nachteil begründet und der Rat höflicher ausgedrückt werden."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo Yara,\n\ndeine Frage kenne ich gut, denn bei uns lief es vor drei Jahren genauso. Meiner Meinung nach lernen Kinder mit einem Tier tatsächlich viel, aber selten das, was die Eltern sich erhoffen.\n\nEin großer Vorteil ist, dass ein Hund jeden Tag nach draußen muss — auch bei Regen, auch wenn niemand Lust hat. Man darf aber nicht vergessen, dass diese Pflicht am Ende meistens bei den Erwachsenen landet.\n\nAn deiner Stelle würde ich es erst einmal mit einem Hund aus der Nachbarschaft ausprobieren.\n\nViele Grüße\nBoris",
+            "kommentar": "Hier stimmt die Textsorte: eigene Position, klar begründet, mit persönlicher Erfahrung eingeleitet. Gute Konnektoren („denn“, „aber“, aber auch der Gedankenstrich als Betonung), ein Relativsatz („das, was die Eltern sich erhoffen“) und ein höflicher Rat im Konjunktiv II. Der Beitrag greift außerdem die Mutter aus dem Impuls auf, statt sie zu ignorieren."
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "email_halbformell",
+        "situation": "Sie haben einen Garten im Kleingartenverein Sonnenhang. Am kommenden Samstag ist ein Arbeitseinsatz, an dem Sie nicht teilnehmen können.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an die Vorstandschaft des Vereins. Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf die passende Anrede und den passenden Gruß. Schreiben Sie ungefähr 40 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie ab und nennen Sie den Grund.",
+          "Bieten Sie einen Ersatz an.",
+          "Fragen Sie nach dem nächsten Termin."
+        ],
+        "anrede": "Sehr geehrte Damen und Herren",
+        "woerter": 40,
+        "zeitMinuten": 15,
+        "punkte": 20,
+        "redemittel": [
+          "Sehr geehrte Damen und Herren, …",
+          "leider kann ich am Arbeitseinsatz nicht teilnehmen.",
+          "Ich bin an diesem Wochenende beruflich unterwegs.",
+          "Mein Sohn würde mich gern vertreten.",
+          "Wäre das für Sie in Ordnung?",
+          "Könnten Sie mir bitte mitteilen, wann der nächste Termin stattfindet?",
+          "Vielen Dank im Voraus.",
+          "Mit freundlichen Grüßen, …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Damen und Herren,\n\nam Samstag kann ich leider nicht kommen. Ich muss arbeiten. Mein Sohn kommt für mich. Er ist zwanzig Jahre alt. Wann ist der nächste Arbeitseinsatz?\n\nMit freundlichen Grüßen\nDaniel Kovacs",
+            "kommentar": "Anrede und Gruß sind korrekt, und alle drei Punkte sind angesprochen. Die Absage ist aber sehr knapp, und „Mein Sohn kommt für mich“ ist eher eine Ankündigung als ein Angebot — höflicher wäre eine Frage. Bei nur 40 Wörtern zählt jedes Wort: Ein Konjunktiv kostet kaum Platz und bringt Punkte."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Damen und Herren,\n\nleider kann ich am Arbeitseinsatz diesen Samstag nicht teilnehmen, da ich beruflich unterwegs bin. Mein Sohn würde mich gern vertreten — wäre das für Sie in Ordnung? Könnten Sie mir außerdem mitteilen, wann der nächste Termin stattfindet?\n\nMit freundlichen Grüßen\nDaniel Kovacs",
+            "kommentar": "Register und Umfang passen genau. „da“ statt „weil“ wirkt schriftsprachlicher, und beide Anliegen stehen im höflichen Konjunktiv II („würde … vertreten“, „wäre das … in Ordnung“, „Könnten Sie …“). Beachten Sie den indirekten Fragesatz am Ende: Das Verb „stattfindet“ steht am Satzende."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "gemeinsam_planen",
+        "titel": "Gemeinsam etwas planen",
+        "anweisung": "Sie und Ihr Partner / Ihre Partnerin sollen gemeinsam ein Straßenfest planen. Sprechen Sie über die fünf Punkte, machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihres Partners / Ihrer Partnerin und kommen Sie am Ende zu einer gemeinsamen Entscheidung.",
+        "dauerMinuten": 3,
+        "punkte": 28,
+        "situation": "In Ihrer Straße wohnen viele neue Familien, die sich noch nicht kennen. Sie und Ihr Partner / Ihre Partnerin möchten deshalb ein Straßenfest organisieren.",
+        "planungspunkte": [
+          "Wann und wo soll das Fest stattfinden?",
+          "Wie laden Sie die Nachbarn ein?",
+          "Was gibt es zu essen und zu trinken?",
+          "Was können Sie für die Kinder anbieten?",
+          "Wer übernimmt welche Aufgabe?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Fangen wir mit dem Termin an. Ich würde einen Samstagnachmittag im Juni vorschlagen, dann ist es lange hell. Und feiern könnten wir einfach auf dem Platz vor den Garagen. Was meinst du?",
+            "wartenSek": 25,
+            "hinweis": "Reagieren Sie auf den Vorschlag: zustimmen oder einen anderen Termin und Ort vorschlagen."
+          },
+          {
+            "text": "Gut, dann machen wir das so. Und wie erreichen wir die Nachbarn? Nicht alle sind in der Gruppe im Netz.",
+            "wartenSek": 25,
+            "hinweis": "Machen Sie einen Vorschlag und begründen Sie ihn."
+          },
+          {
+            "text": "Einverstanden. Beim Essen bin ich unsicher. Sollen wir grillen oder bringt jeder etwas mit?",
+            "wartenSek": 25,
+            "hinweis": "Äußern Sie Ihre Meinung und schlagen Sie etwas Konkretes vor."
+          },
+          {
+            "text": "Das klingt gut. Und die Kinder? Wenn denen langweilig wird, gehen die Familien nach einer halben Stunde wieder.",
+            "wartenSek": 25,
+            "hinweis": "Schlagen Sie etwas für die Kinder vor und sagen Sie, warum es passt."
+          },
+          {
+            "text": "Schöne Idee. Zum Schluss: Wer macht was? Ich könnte mich um die Tische und Bänke kümmern.",
+            "wartenSek": 30,
+            "hinweis": "Verteilen Sie die restlichen Aufgaben und fassen Sie das Ergebnis kurz zusammen."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "praesentation",
+        "titel": "Ein Thema präsentieren",
+        "anweisung": "Wählen Sie eines der beiden Themen. Halten Sie eine kurze Präsentation von etwa drei Minuten. Die fünf Folien helfen Ihnen beim Aufbau. Sprechen Sie zu allen fünf Punkten.",
+        "dauerMinuten": 3,
+        "punkte": 40,
+        "themen": [
+          {
+            "titel": "Sollten Großeltern bei der Kinderbetreuung helfen?",
+            "folien": [
+              "Folie 1 — Nennen Sie das Thema Ihrer Präsentation und erklären Sie kurz, worum es geht.",
+              "Folie 2 — Berichten Sie von Ihren eigenen Erfahrungen oder von einem Erlebnis, das Sie mit dem Thema verbinden.",
+              "Folie 3 — Beschreiben Sie die Situation in Ihrem Heimatland. Geben Sie konkrete Beispiele.",
+              "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie dazu Ihre eigene Meinung.",
+              "Folie 5 — Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern."
+            ],
+            "redemittel": [
+              "In meiner Präsentation geht es um die Frage, ob …",
+              "Ich habe dieses Thema gewählt, weil …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Bei uns in … ist es üblich, dass …",
+              "Ein klarer Vorteil ist, dass … Auf der anderen Seite …",
+              "Persönlich bin ich der Meinung, dass …",
+              "Damit komme ich zum Schluss. Vielen Dank für Ihre Aufmerksamkeit."
+            ],
+            "musterantwort": "In meiner Präsentation geht es um die Frage, ob Großeltern bei der Kinderbetreuung helfen sollten. Ich habe dieses Thema gewählt, weil davon in fast jeder Familie einmal die Rede ist, meistens ohne dass jemand es offen ausspricht.\n\nAus eigener Erfahrung kann ich sagen, dass es sehr davon abhängt, wie es vereinbart wird. Meine Schwester holt ihre Tochter zweimal in der Woche bei unserer Mutter ab. Das funktioniert gut, weil beide Seiten von Anfang an über feste Tage gesprochen haben und nicht jede Woche neu gefragt wird.\n\nIn meinem Heimatland ist es sehr üblich, dass Großeltern regelmäßig auf die Enkel aufpassen. Viele Familien wohnen in derselben Stadt, und Betreuungsplätze sind teuer. Man erwartet die Hilfe fast, und genau das führt manchmal zu Streit.\n\nEin klarer Vorteil ist, dass Kinder eine enge Beziehung zu den Großeltern aufbauen und die Eltern entlastet werden. Auf der anderen Seite haben auch ältere Menschen ein eigenes Leben, und viele trauen sich nicht, Nein zu sagen. Persönlich bin ich der Meinung, dass Hilfe schön ist, solange sie freiwillig bleibt und nicht selbstverständlich wird.\n\nDamit komme ich zum Schluss. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Sollten Haustiere in Mietwohnungen immer erlaubt sein?",
+            "folien": [
+              "Folie 1 — Nennen Sie das Thema Ihrer Präsentation und erklären Sie kurz, worum es geht.",
+              "Folie 2 — Berichten Sie von Ihren eigenen Erfahrungen oder von einem Erlebnis, das Sie mit dem Thema verbinden.",
+              "Folie 3 — Beschreiben Sie die Situation in Ihrem Heimatland. Geben Sie konkrete Beispiele.",
+              "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie dazu Ihre eigene Meinung.",
+              "Folie 5 — Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern."
+            ],
+            "redemittel": [
+              "Ich möchte heute über die Frage sprechen, ob …",
+              "Das Thema ist mir wichtig, weil …",
+              "Ich erinnere mich an eine Situation, in der …",
+              "In meinem Heimatland ist es so, dass …",
+              "Dafür spricht, dass … Dagegen spricht allerdings, dass …",
+              "Zusammenfassend würde ich sagen, dass …",
+              "Vielen Dank fürs Zuhören. Haben Sie noch Fragen?"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob Haustiere in Mietwohnungen immer erlaubt sein sollten. Damit ist gemeint, ob ein Vermieter überhaupt Nein sagen darf.\n\nIch erinnere mich an eine Situation vor zwei Jahren. Eine Freundin von mir musste umziehen und hat vier Monate lang keine Wohnung gefunden, weil sie einen mittelgroßen Hund hat. Am Ende hat sie den Hund vorübergehend zu ihren Eltern gegeben, und das war für alle eine schwere Zeit.\n\nIn meinem Heimatland ist es so, dass in vielen Mietverträgen gar nichts dazu steht. Man fragt den Vermieter, und meistens ist es kein Problem. In den großen Städten wird das inzwischen strenger, vor allem bei großen Hunden.\n\nDafür spricht, dass ein Tier für viele Menschen zur Familie gehört und dass gerade ältere oder alleinstehende Menschen davon sehr profitieren. Dagegen spricht allerdings, dass Nachbarn unter Lärm leiden können und dass eine Wohnung tatsächlich Schaden nehmen kann. Meiner Meinung nach sollte ein Verbot begründet werden müssen, statt einfach im Vertrag zu stehen.\n\nZusammenfassend würde ich sagen, dass beide Seiten Rechte haben. Vielen Dank fürs Zuhören."
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "rueckmeldung",
+        "titel": "Über ein Thema sprechen",
+        "anweisung": "Geben Sie Ihrem Partner / Ihrer Partnerin eine kurze Rückmeldung zu seiner / ihrer Präsentation und stellen Sie eine Frage dazu. Beantworten Sie anschließend die Frage Ihres Partners / Ihrer Partnerin zu Ihrer eigenen Präsentation.",
+        "dauerMinuten": 2,
+        "punkte": 16,
+        "fragen": [
+          "Wie hat Ihnen die Präsentation gefallen? Was fanden Sie besonders interessant?",
+          "Stellen Sie eine Frage zum Inhalt der Präsentation.",
+          "Beantworten Sie die Frage Ihres Partners / Ihrer Partnerin zu Ihrer eigenen Präsentation."
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihre Präsentation, das war sehr anschaulich. Besonders interessant fand ich das Beispiel aus Ihrer Familie. Dazu hätte ich eine Frage: Was würden Sie sich denn wünschen, dass sich ändert?",
+            "wartenSek": 40,
+            "hinweis": "Bedanken Sie sich kurz und beantworten Sie die Frage ausführlich. Begründen Sie Ihre Antwort."
+          },
+          {
+            "text": "Das leuchtet mir ein. Und glauben Sie, dass die meisten Menschen das genauso sehen wie Sie?",
+            "wartenSek": 35,
+            "hinweis": "Antworten Sie und begründen Sie, warum Sie das glauben oder nicht."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "vereinbaren",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vereinbart",
+        "praeteritum": "vereinbarte",
+        "perfekt": "hat vereinbart",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "gemeinsam etwas festlegen",
+      "bedeutung_en": "to agree on, to arrange. „einen Termin vereinbaren“ = to make an appointment.",
+      "beispiel": "Wir haben von Anfang an vereinbart, dass niemand ohne Anmeldung in die andere Wohnung geht.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "albern",
+      "wortart": "adjektiv",
+      "bedeutung_de": "dumm und nicht ernst zu nehmen",
+      "bedeutung_en": "silly, daft",
+      "beispiel": "Meine Mutter fand das am Anfang albern und hält sich heute strenger daran als ich.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "aufteilen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "teilt auf",
+        "praeteritum": "teilte auf",
+        "perfekt": "hat aufgeteilt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "in Teile zerlegen und verteilen",
+      "bedeutung_en": "to divide up, to share out",
+      "beispiel": "Wir haben es nach Wohnfläche aufgeteilt und alles aufgeschrieben.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "abraten",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "rät ab",
+        "praeteritum": "riet ab",
+        "perfekt": "hat abgeraten",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "jemandem sagen, dass er etwas nicht tun soll",
+      "bedeutung_en": "to advise against. Opposite of „raten zu“; the person is Dativ.",
+      "praeposition": {
+        "wort": "von",
+        "kasus": "Dativ"
+      },
+      "beispiel": "Wem ich davon abraten würde?",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Misserfolg",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Misserfolge",
+      "bedeutung_de": "wenn etwas nicht gelingt",
+      "bedeutung_en": "failure, lack of success. Opposite: „der Erfolg“.",
+      "beispiel": "Das klingt nach einem Misserfolg, ist aber laut Gartenamt eingeplant gewesen.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Anschaffung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Anschaffungen",
+      "bedeutung_de": "der Kauf von etwas Größerem",
+      "bedeutung_en": "purchase, acquisition. Verb: „anschaffen“.",
+      "beispiel": "Ein einzelner Baum kostet in der Anschaffung wenige hundert Euro",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "entlasten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "entlastet",
+        "praeteritum": "entlastete",
+        "perfekt": "hat entlastet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "jemandem Arbeit oder Druck abnehmen",
+      "bedeutung_en": "to relieve, to take a burden off someone",
+      "beispiel": "Das entlastet uns spürbar.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "vertrocknen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vertrocknet",
+        "praeteritum": "vertrocknete",
+        "perfekt": "ist vertrocknet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "aus Wassermangel eingehen",
+      "bedeutung_en": "to dry out and die, of a plant. Takes „sein“ in the perfect.",
+      "beispiel": "Wenn jemand in Urlaub fährt, vertrocknet der Baum trotzdem.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "auslösen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "löst aus",
+        "praeteritum": "löste aus",
+        "perfekt": "hat ausgelöst",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "der Anlass für etwas sein",
+      "bedeutung_en": "to trigger, to set off. Also used of alarms and reactions.",
+      "beispiel": "Ausgelöst hat die Umstellung ein praktisches Problem.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Verantwortung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Verantwortungen",
+      "bedeutung_de": "die Pflicht, für etwas zu sorgen",
+      "bedeutung_en": "responsibility. „Verantwortung übernehmen für“ = to take responsibility for.",
+      "beispiel": "das Tier bleibt rechtlich in dessen Verantwortung",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "genügen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "genügt",
+        "praeteritum": "genügte",
+        "perfekt": "hat genügt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "ausreichen, reichen",
+      "bedeutung_en": "to suffice, to be enough. Slightly more formal than „reichen“.",
+      "beispiel": "Ein Nachmittag pro Woche genügt.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Ermäßigung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Ermäßigungen",
+      "bedeutung_de": "ein niedrigerer Preis für bestimmte Gruppen",
+      "bedeutung_en": "reduction, concession. Adjective: „ermäßigt“.",
+      "beispiel": "Ermäßigung für Geschwisterkinder",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Vertretung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Vertretungen",
+      "bedeutung_de": "eine Person, die jemanden ersetzt",
+      "bedeutung_en": "stand-in, cover. Verb: „vertreten“.",
+      "beispiel": "Wer in Urlaub fährt, sucht sich bitte eine Vertretung in der Nachbarschaft.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Wahlfreiheit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "die Möglichkeit, selbst zu wählen",
+      "bedeutung_en": "freedom of choice",
+      "beispiel": "Für mich ist das keine Wahlfreiheit mehr.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "übertrieben",
+      "wortart": "adjektiv",
+      "bedeutung_de": "stärker oder größer dargestellt, als es ist",
+      "bedeutung_en": "exaggerated, overdone. Verb: „übertreiben“.",
+      "beispiel": "Seitdem finde ich meine damalige Sorge übertrieben.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Gastraum",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Gasträume",
+      "bedeutung_de": "der Raum in einem Lokal, in dem die Gäste sitzen",
+      "bedeutung_en": "the dining area of a restaurant or café",
+      "beispiel": "halte ich Hunde im Gastraum für keine gute Idee",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "versäumen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "versäumt",
+        "praeteritum": "versäumte",
+        "perfekt": "hat versäumt",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "etwas verpassen oder nicht tun, obwohl man sollte",
+      "bedeutung_en": "to miss, to fail to do something",
+      "beispiel": "zahlt für jeden versäumten Einsatz fünfundzwanzig Euro",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "gestatten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "gestattet",
+        "praeteritum": "gestattete",
+        "perfekt": "hat gestattet",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "offiziell erlauben",
+      "bedeutung_en": "to permit. Formal register — the word you meet on signs and in regulations.",
+      "beispiel": "Die Haltung von Tieren auf der Parzelle ist nicht gestattet",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "erwünscht",
+      "wortart": "adjektiv",
+      "bedeutung_de": "gewollt, gern gesehen",
+      "bedeutung_en": "desired, welcome. Opposite: „unerwünscht“.",
+      "beispiel": "Das Sammeln von Regenwasser ist ausdrücklich erwünscht.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Ausschilderung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Ausschilderungen",
+      "bedeutung_de": "die Schilder, die den Weg zeigen",
+      "bedeutung_en": "signposting. „der Ausschilderung folgen“ = to follow the signs.",
+      "beispiel": "folgen Sie bitte der Ausschilderung über den Spielplatz",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "unauffällig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne Besonderheiten; bei Untersuchungen: ohne Befund",
+      "bedeutung_en": "unremarkable; in medical results it is the standard word for „normal“.",
+      "beispiel": "Die Blutwerte Ihrer Katze sind da, und sie sind unauffällig.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Einweisung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Einweisungen",
+      "bedeutung_de": "eine kurze Erklärung, wie etwas gemacht wird",
+      "bedeutung_en": "briefing, introduction to a task. Verb: „einweisen“.",
+      "beispiel": "Wer mitmacht, bekommt einen Gießsack und eine kurze Einweisung.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "der Aufbau",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "das Aufstellen von Zelten, Bühnen oder Möbeln",
+      "bedeutung_en": "setting up, assembly. Its opposite „der Abbau“ appears in the same announcement — one letter apart.",
+      "beispiel": "weil der Aufbau länger gedauert hat",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "abgeben",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "gibt ab",
+        "praeteritum": "gab ab",
+        "perfekt": "hat abgegeben",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "etwas oder jemanden an eine andere Stelle geben",
+      "bedeutung_en": "to hand over, to give up. Of an animal, to give it away.",
+      "beispiel": "Die Zahl der abgegebenen Tiere ist gestiegen",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Schutzgebühr",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Schutzgebühren",
+      "bedeutung_de": "ein kleiner Betrag, der nicht die Kosten deckt, sondern eine Hürde sein soll",
+      "bedeutung_en": "a nominal fee, charged to make a decision deliberate rather than to cover costs",
+      "beispiel": "Die Schutzgebühr liegt je nach Tier zwischen achtzig und dreihundert Euro.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "das Vielfache",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "(kein Plural)",
+      "bedeutung_de": "sehr viel mehr, mehrmals so viel",
+      "bedeutung_en": "a multiple of, many times as much",
+      "beispiel": "das kostet uns ein Vielfaches",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "das Fundtier",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Fundtiere",
+      "bedeutung_de": "ein Tier, das jemand gefunden und abgegeben hat",
+      "bedeutung_en": "a found or stray animal handed in to a shelter",
+      "beispiel": "Das liegt nicht an mehr Fundtieren, wie viele denken.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "gestresst",
+      "wortart": "adjektiv",
+      "bedeutung_de": "unter Druck und angespannt",
+      "bedeutung_en": "stressed",
+      "beispiel": "Marisa, du siehst gestresst aus.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "unbezahlt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne Bezahlung",
+      "bedeutung_en": "unpaid. „unbezahlter Urlaub“ = unpaid leave.",
+      "beispiel": "Und die letzte Woche nehme ich mir unbezahlt frei, das habe ich schon mit dem Chef besprochen.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "besprechen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "bespricht",
+        "praeteritum": "besprach",
+        "perfekt": "hat besprochen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "etwas gemeinsam durchsprechen",
+      "bedeutung_en": "to discuss something with someone, usually to reach a decision",
+      "beispiel": "das habe ich schon mit dem Chef besprochen",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Ladezone",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Ladezonen",
+      "bedeutung_de": "ein Bereich, in dem Waren ein- und ausgeladen werden dürfen",
+      "bedeutung_en": "loading bay",
+      "beispiel": "deshalb bleiben alle Ladezonen erhalten",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "der Einwand",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Einwände",
+      "bedeutung_de": "ein Argument gegen etwas",
+      "bedeutung_en": "objection. „einen Einwand ernst nehmen“ = to take an objection seriously.",
+      "beispiel": "Diesen Einwand nehme ich ernst, und deshalb bleiben alle Ladezonen erhalten.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Verzögerung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Verzögerungen",
+      "bedeutung_de": "wenn etwas später kommt als geplant",
+      "bedeutung_en": "delay",
+      "beispiel": "und genau deshalb ist jedes Jahr Verzögerung teuer",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "erhalten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "erhält",
+        "praeteritum": "erhielt",
+        "perfekt": "hat erhalten",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "bekommen; in „erhalten bleiben“: bestehen bleiben",
+      "bedeutung_en": "to receive; but „erhalten bleiben“ means to be preserved. Two senses, both common.",
+      "beispiel": "deshalb bleiben alle Ladezonen erhalten",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "umwerfen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "wirft um",
+        "praeteritum": "warf um",
+        "perfekt": "hat umgeworfen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "etwas umkippen lassen",
+      "bedeutung_en": "to knock over",
+      "beispiel": "Am zweiten Tag hat sie die große Pflanze im Flur umgeworfen, und der Topf ist dabei zerbrochen.",
+      "fundstelle": "Schreiben Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "zerbrechen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "zerbricht",
+        "praeteritum": "zerbrach",
+        "perfekt": "ist zerbrochen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "in Stücke gehen",
+      "bedeutung_en": "to break, to shatter. Takes „sein“ when it happens by itself.",
+      "beispiel": "und der Topf ist dabei zerbrochen",
+      "fundstelle": "Schreiben Teil 1",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "vertreten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vertritt",
+        "praeteritum": "vertrat",
+        "perfekt": "hat vertreten",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "jemandes Aufgabe für eine Zeit übernehmen",
+      "bedeutung_en": "to stand in for someone; also to represent (an organisation, a view)",
+      "beispiel": "Mein Sohn würde mich gern vertreten",
+      "fundstelle": "Schreiben Teil 3",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "selbstverständlich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so klar, dass man nicht darüber redet; als Adverb: natürlich",
+      "bedeutung_en": "self-evident, taken for granted; as an adverb, „of course“",
+      "beispiel": "Persönlich bin ich der Meinung, dass Hilfe schön ist, solange sie freiwillig bleibt und nicht selbstverständlich wird.",
+      "fundstelle": "Sprechen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "profitieren",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "profitiert",
+        "praeteritum": "profitierte",
+        "perfekt": "hat profitiert",
+        "unregelmaessig": false
+      },
+      "bedeutung_de": "einen Vorteil von etwas haben",
+      "bedeutung_en": "to benefit from. Always „profitieren von + Dativ“.",
+      "praeposition": {
+        "wort": "von",
+        "kasus": "Dativ"
+      },
+      "beispiel": "dass gerade ältere oder alleinstehende Menschen davon sehr profitieren",
+      "fundstelle": "Sprechen Teil 2",
+      "niveau": "B1+"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "ehrlich gesagt",
+      "typ": "redewendung",
+      "bedeutung_de": "wenn ich ehrlich bin",
+      "bedeutung_en": "to be honest. A useful softener before a critical remark in the speaking exam.",
+      "beispiel": "Ehrlich gesagt hatte ich vor allem Angst vor einem Punkt, über den vorher niemand redet: dem Geld.",
+      "fundstelle": "Lesen Teil 1"
+    },
+    {
+      "wendung": "von Anfang an",
+      "typ": "redewendung",
+      "bedeutung_de": "seit dem ersten Moment",
+      "bedeutung_en": "from the very beginning",
+      "beispiel": "Wir haben von Anfang an vereinbart, dass niemand ohne Anmeldung in die andere Wohnung geht.",
+      "fundstelle": "Lesen Teil 1"
+    },
+    {
+      "wendung": "im Voraus",
+      "typ": "redewendung",
+      "bedeutung_de": "vorher, bevor etwas passiert",
+      "bedeutung_en": "in advance",
+      "beispiel": "Buchung in den Ferienmonaten möglichst drei Monate im Voraus.",
+      "fundstelle": "Lesen Teil 3"
+    },
+    {
+      "wendung": "in Laufweite",
+      "typ": "redewendung",
+      "bedeutung_de": "so nah, dass man zu Fuß gehen kann",
+      "bedeutung_en": "within walking distance",
+      "beispiel": "es sind aber die letzten in Laufweite zur Buchhandlung und zum Schuhgeschäft",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "in Ordnung",
+      "typ": "redewendung",
+      "bedeutung_de": "gut so, akzeptabel; auch: alles ist gut",
+      "bedeutung_en": "fine, all right. Used both as a question („Alles in Ordnung?“) and as agreement.",
+      "beispiel": "Wäre das für Sie in Ordnung?",
+      "fundstelle": "Schreiben Teil 3"
+    },
+    {
+      "wendung": "zum Glück",
+      "typ": "redewendung",
+      "bedeutung_de": "glücklicherweise",
+      "bedeutung_en": "luckily, fortunately",
+      "beispiel": "Passiert ist ihr zum Glück nichts.",
+      "fundstelle": "Schreiben Teil 1"
+    },
+    {
+      "wendung": "an deiner Stelle",
+      "typ": "redewendung",
+      "bedeutung_de": "wenn ich du wäre",
+      "bedeutung_en": "if I were you. Always followed by Konjunktiv II.",
+      "beispiel": "An deiner Stelle würde ich es erst einmal mit einem Hund aus der Nachbarschaft ausprobieren.",
+      "fundstelle": "Schreiben Teil 2"
+    },
+    {
+      "wendung": "vor allem",
+      "typ": "redewendung",
+      "bedeutung_de": "besonders, hauptsächlich",
+      "bedeutung_en": "above all, especially. One of the most useful words for giving weight to an argument in Sprechen Teil 2.",
+      "beispiel": "gebraucht werden aber deutlich mehr, vor allem in den Neubaugebieten im Osten",
+      "fundstelle": "Hören Teil 1"
+    },
+    {
+      "wendung": "auf der anderen Seite",
+      "typ": "redewendung",
+      "bedeutung_de": "andererseits",
+      "bedeutung_en": "on the other hand. Pairs with „ein Vorteil ist …“ in a presentation.",
+      "beispiel": "Auf der anderen Seite haben auch ältere Menschen ein eigenes Leben, und viele trauen sich nicht, Nein zu sagen.",
+      "fundstelle": "Sprechen Teil 2"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Perfekt und Präteritum",
+      "erklaerung_de": "Beide Zeitformen bezeichnen die Vergangenheit. Gesprochen wird fast immer im Perfekt, geschrieben — vor allem in Zeitungen und Berichten — oft im Präteritum. Eine Ausnahme sind „sein“, „haben“ und die Modalverben: „war“, „hatte“, „musste“ klingen auch gesprochen völlig normal. Das Perfekt bildet man mit „haben“ oder „sein“; „sein“ nehmen Verben der Bewegung und der Zustandsänderung: gehen, fahren, aufstehen, sterben, zerbrechen.",
+      "erklaerung_en": "Perfekt is the spoken past; Präteritum dominates written narrative. The exception is „sein“, „haben“ and the modals, which use Präteritum even in speech — say „ich war“, not „ich bin gewesen“. For the perfect, verbs of motion and change of state take „sein“: „ich bin gefahren“, „der Topf ist zerbrochen“. Getting the auxiliary right is directly assessed under „Strukturen“.",
+      "belegSatz": "Am zweiten Tag hat sie die große Pflanze im Flur umgeworfen, und der Topf ist dabei zerbrochen.",
+      "fundstelle": "Schreiben Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "„haben“ oder „sein“? „Ich ___ gestern zum Tierheim gefahren.“",
+          "loesung": "bin",
+          "hinweis": "„fahren“ ist ein Verb der Bewegung."
+        },
+        {
+          "aufgabe": "„haben“ oder „sein“? „Wir ___ das Fest schon geplant.“",
+          "loesung": "haben",
+          "hinweis": "„planen“ ist kein Bewegungsverb und hat ein Objekt."
+        },
+        {
+          "aufgabe": "Setzen Sie ins Perfekt: „Die Katze warf die Pflanze um.“",
+          "loesung": "Die Katze hat die Pflanze umgeworfen.",
+          "hinweis": "Trennbares Verb: Das „ge“ steht in der Mitte."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Passiv im Präsens und Präteritum",
+      "erklaerung_de": "Das Passiv rückt die Handlung in den Mittelpunkt, nicht die handelnde Person. Es wird mit „werden“ und dem Partizip II gebildet: „Die Bäume werden gepflanzt“ (Präsens), „Die Bäume wurden gepflanzt“ (Präteritum). Wer handelt, kann mit „von + Dativ“ genannt werden, wird aber meistens weggelassen — genau deshalb steht das Passiv so oft in Nachrichten und Ordnungen.",
+      "erklaerung_en": "German passive is „werden“ + past participle: „werden gepflanzt“ (present), „wurden gepflanzt“ (past). Do not confuse the passive „werden“ with the future „werden“ + infinitive. The agent is optional and usually dropped, which is exactly why news reports and regulations are full of it — and why recognising it quickly helps in Lesen Teil 5 and Hören Teil 4.",
+      "belegSatz": "Im vergangenen Sommer wurden in der Fußgängerzone an mehreren Tagen über vierzig Grad gemessen.",
+      "fundstelle": "Hören Teil 4",
+      "uebungen": [
+        {
+          "aufgabe": "Ins Passiv setzen: „Die Stadt pflanzt vierzig Bäume.“",
+          "loesung": "Vierzig Bäume werden gepflanzt.",
+          "hinweis": "Das Objekt wird zum Subjekt; „werden“ + Partizip II."
+        },
+        {
+          "aufgabe": "Ins Passiv Präteritum setzen: „Man schloss die Wasserleitung.“",
+          "loesung": "Die Wasserleitung wurde geschlossen.",
+          "hinweis": "„man“ verschwindet im Passiv."
+        },
+        {
+          "aufgabe": "Aktiv oder Passiv? „Die Kinder werden morgen kommen.“",
+          "loesung": "Aktiv — das ist Futur, kein Passiv.",
+          "hinweis": "Nach „werden“ steht ein Infinitiv, kein Partizip II."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Wechselpräpositionen",
+      "erklaerung_de": "Neun Präpositionen können mit Akkusativ oder Dativ stehen: an, auf, hinter, in, neben, über, unter, vor, zwischen. Mit Akkusativ, wenn eine Bewegung an einen Ort führt (Wohin? — „Ich stelle die Pflanze in den Flur“), mit Dativ, wenn es um den Ort selbst geht (Wo? — „Die Pflanze steht im Flur“). Ein guter Test sind die Verbpaare: stellen/stehen, legen/liegen, setzen/sitzen, hängen/hängen.",
+      "erklaerung_en": "Nine prepositions take either case. Accusative answers „wohin?“ — movement towards a place. Dative answers „wo?“ — position. English gives you no clue, so use the verb pairs: „stellen“ (put, accusative) versus „stehen“ (stand, dative). Note „im“ = „in dem“ (dative) but „ins“ = „in das“ (accusative) — the contraction alone tells you which is meant.",
+      "belegSatz": "Am zweiten Tag hat sie die große Pflanze im Flur umgeworfen, und der Topf ist dabei zerbrochen.",
+      "fundstelle": "Schreiben Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Akkusativ oder Dativ? „Der Hund liegt unter ___ Tisch.“",
+          "loesung": "dem",
+          "hinweis": "„liegen“ beschreibt den Ort: Wo? → Dativ."
+        },
+        {
+          "aufgabe": "Akkusativ oder Dativ? „Ich stelle die Bank vor ___ Haus.“",
+          "loesung": "das",
+          "hinweis": "„stellen“ beschreibt eine Bewegung: Wohin? → Akkusativ."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: „Die Kinder spielen ___ dem Spielplatz.“",
+          "loesung": "auf",
+          "hinweis": "Ort, an dem gespielt wird — mit Dativ „auf dem“."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Konjunktiv II für Irreales",
+      "erklaerung_de": "Mit dem Konjunktiv II spricht man über etwas, das nicht wirklich so ist: „Wenn ich mehr Urlaub hätte, würde ich verreisen.“ Für die Gegenwart benutzt man „würde“ + Infinitiv, bei „sein“, „haben“ und den Modalverben aber die eigenen Formen: wäre, hätte, könnte, müsste. Für die Vergangenheit nimmt man „hätte“ oder „wäre“ + Partizip II: „Man hätte sich im Februar anmelden müssen.“",
+      "erklaerung_en": "Konjunktiv II covers hypotheticals and regrets. Present: „würde“ + infinitive, except for „sein“, „haben“ and modals, which have their own forms (wäre, hätte, könnte, müsste) and should always be used. Past: „hätte“ or „wäre“ + participle. „Man hätte sich anmelden müssen“ — should have registered — is exactly the structure for expressing a missed opportunity, and it is worth having ready for Sprechen.",
+      "belegSatz": "Man hätte sich im Februar anmelden müssen, im Februar!",
+      "fundstelle": "Hören Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "Bilden Sie den Konjunktiv II: „Ich habe keine Zeit.“ → Wenn ich Zeit ___, …",
+          "loesung": "hätte",
+          "hinweis": "„haben“ hat eine eigene Konjunktiv-II-Form."
+        },
+        {
+          "aufgabe": "Vergangenheit: „Wir haben uns nicht angemeldet.“ → Wir ___ uns anmelden ___.",
+          "loesung": "hätten … müssen",
+          "hinweis": "„hätten“ + Infinitiv + Modalverb im Infinitiv."
+        },
+        {
+          "aufgabe": "Höflicher formulieren: „Ich will einen Platz für meine Tochter.“",
+          "loesung": "Ich hätte gern einen Platz für meine Tochter.",
+          "hinweis": "„hätte gern“ statt „will“."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Die n-Deklination",
+      "erklaerung_de": "Eine kleine Gruppe maskuliner Nomen bekommt in allen Fällen außer dem Nominativ Singular ein -n oder -en: der Kollege — dem Kollegen, der Nachbar — den Nachbarn, der Mensch — dem Menschen. Dazu gehören viele Personenbezeichnungen auf -e sowie Wörter wie Herr, Student, Patient, Präsident. Man erkennt sie nicht am Klang; sie müssen mitgelernt werden.",
+      "erklaerung_en": "A closed group of masculine nouns adds -n or -en in every case except the nominative singular: „der Kollege“ but „mit dem Kollegen“, „der Nachbar“ but „den Nachbarn“. It covers most masculine person-nouns ending in -e, plus Herr, Student, Patient, Journalist. Nothing about the word signals it, so learn each one with its accusative. Missing the ending is a small error that examiners notice immediately.",
+      "belegSatz": "Liebe Nachbarinnen und Nachbarn, wir starten gleich mit dem Programm.",
+      "fundstelle": "Hören Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: „Ich habe mit meinem Kolleg___ gesprochen.“",
+          "loesung": "Kollegen",
+          "hinweis": "n-Deklination: Dativ Singular bekommt -n."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: „Kennst du den Nachbar___ aus dem dritten Stock?“",
+          "loesung": "Nachbarn",
+          "hinweis": "Akkusativ Singular, also mit -n."
+        },
+        {
+          "aufgabe": "Richtig oder falsch? „Der Kollege hat angerufen.“",
+          "loesung": "Richtig — im Nominativ Singular steht keine Endung.",
+          "hinweis": "Nur der Nominativ Singular bleibt endungslos."
+        }
+      ]
+    }
+  ]
+}
