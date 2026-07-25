@@ -17,11 +17,15 @@ export default defineConfig({
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: {
+    // Both halves must run inside the workspace: `vite preview` resolves its
+    // config and its dist/ relative to the working directory, and from the
+    // repo root it finds neither. Going through the workspace script keeps the
+    // two from drifting apart.
     command:
-      'npm run build --workspace=@b1/web && npx vite preview --port 4173 --strictPort',
+      'npm run build --workspace=@b1/web && npm run preview --workspace=@b1/web -- --port 4173 --strictPort',
     cwd: '.',
     url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
-    timeout: 180_000,
+    timeout: 240_000,
   },
 });
