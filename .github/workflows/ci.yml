@@ -58,10 +58,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm ci
-      - run: pip install jsonschema Jinja2
-      # The app needs exam content on disk. Audio is not exercised by these
-      # tests and is slow to synthesise, so it is skipped here.
-      - run: python tools/export_web.py --no-audio
+      - run: pip install jsonschema Jinja2 numpy soundfile
+      - name: Export exam content
+        run: python tools/export_web.py --no-audio
+      - name: Placeholder listening audio
+        # The real tracks need the Piper voice models: hundreds of megabytes
+        # and minutes of synthesis. The player tests care about the controls,
+        # not about the audio being speech, so a short tone stands in.
+        run: python tools/make_audio_fixture.py
       - run: npm run build --workspace=@b1/core
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --grep-invert Screenshots
