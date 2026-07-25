@@ -5,7 +5,7 @@
 jsonschema>=4.23,<5
 
 # --- PDF generation ---------------------------------------------------------
-Jinja2>=3.1,<4
+Jinja2>=3.1.6,<4
 
 # --- audio synthesis --------------------------------------------------------
 # Piper is the default TTS provider: offline, ONNX, redistributable voices.
