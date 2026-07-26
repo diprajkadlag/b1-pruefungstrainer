@@ -135,16 +135,56 @@
         }
       ],
       "fehlerliste": [
-        { "falsch": "Ich habe gegangen.", "richtig": "Ich bin gegangen.", "grund": "Bewegungsverben bilden das Perfekt mit „sein“." },
-        { "falsch": "Ich freue mich auf dich zu sehen.", "richtig": "Ich freue mich darauf, dich zu sehen.", "grund": "Vor einem Nebensatz steht das Präpositionaladverb „darauf“." },
-        { "falsch": "Weil ich habe keine Zeit.", "richtig": "Weil ich keine Zeit habe.", "grund": "Nach „weil“ steht das Verb am Ende." },
-        { "falsch": "Deshalb ich komme nicht.", "richtig": "Deshalb komme ich nicht.", "grund": "Nach „deshalb“ folgt sofort das Verb (Position 2)." },
-        { "falsch": "Ich bin interessiert für Musik.", "richtig": "Ich interessiere mich für Musik.", "grund": "Reflexives Verb mit fester Präposition." },
-        { "falsch": "Ich möchte zu gehen.", "richtig": "Ich möchte gehen.", "grund": "Nach Modalverben steht nie „zu“." },
-        { "falsch": "Er ist größer wie ich.", "richtig": "Er ist größer als ich.", "grund": "Komparativ immer mit „als“; „wie“ nur bei Gleichheit." },
-        { "falsch": "Ich danke dich.", "richtig": "Ich danke dir.", "grund": "„danken“ verlangt den Dativ." },
-        { "falsch": "Am Montag ich arbeite.", "richtig": "Am Montag arbeite ich.", "grund": "Das Verb bleibt auf Position 2, das Subjekt rückt dahinter." },
-        { "falsch": "Ich habe das Buch gelesen gestern.", "richtig": "Ich habe das Buch gestern gelesen.", "grund": "Das Partizip steht ganz am Ende." }
+        {
+          "falsch": "Ich habe gegangen.",
+          "richtig": "Ich bin gegangen.",
+          "grund": "Bewegungsverben bilden das Perfekt mit „sein“."
+        },
+        {
+          "falsch": "Ich freue mich auf dich zu sehen.",
+          "richtig": "Ich freue mich darauf, dich zu sehen.",
+          "grund": "Vor einem Nebensatz steht das Präpositionaladverb „darauf“."
+        },
+        {
+          "falsch": "Weil ich habe keine Zeit.",
+          "richtig": "Weil ich keine Zeit habe.",
+          "grund": "Nach „weil“ steht das Verb am Ende."
+        },
+        {
+          "falsch": "Deshalb ich komme nicht.",
+          "richtig": "Deshalb komme ich nicht.",
+          "grund": "Nach „deshalb“ folgt sofort das Verb (Position 2)."
+        },
+        {
+          "falsch": "Ich bin interessiert für Musik.",
+          "richtig": "Ich interessiere mich für Musik.",
+          "grund": "Reflexives Verb mit fester Präposition."
+        },
+        {
+          "falsch": "Ich möchte zu gehen.",
+          "richtig": "Ich möchte gehen.",
+          "grund": "Nach Modalverben steht nie „zu“."
+        },
+        {
+          "falsch": "Er ist größer wie ich.",
+          "richtig": "Er ist größer als ich.",
+          "grund": "Komparativ immer mit „als“; „wie“ nur bei Gleichheit."
+        },
+        {
+          "falsch": "Ich danke dich.",
+          "richtig": "Ich danke dir.",
+          "grund": "„danken“ verlangt den Dativ."
+        },
+        {
+          "falsch": "Am Montag ich arbeite.",
+          "richtig": "Am Montag arbeite ich.",
+          "grund": "Das Verb bleibt auf Position 2, das Subjekt rückt dahinter."
+        },
+        {
+          "falsch": "Ich habe das Buch gelesen gestern.",
+          "richtig": "Ich habe das Buch gestern gelesen.",
+          "grund": "Das Partizip steht ganz am Ende."
+        }
       ]
     },
     {
@@ -526,19 +566,45 @@
       "gruppen": [
         {
           "funktion": "Grund",
-          "phrasen": ["weil (Verb ans Ende)", "da (schriftlicher als „weil“)", "denn (Hauptsatz, normale Wortstellung)", "deshalb / deswegen / darum (Verb direkt danach)", "aus diesem Grund"]
+          "phrasen": [
+            "weil (Verb ans Ende)",
+            "da (schriftlicher als „weil“)",
+            "denn (Hauptsatz, normale Wortstellung)",
+            "deshalb / deswegen / darum (Verb direkt danach)",
+            "aus diesem Grund"
+          ]
         },
         {
           "funktion": "Gegensatz",
-          "phrasen": ["aber", "obwohl (Verb ans Ende)", "trotzdem (Verb direkt danach)", "allerdings", "dagegen", "zwar … aber"]
+          "phrasen": [
+            "aber",
+            "obwohl (Verb ans Ende)",
+            "trotzdem (Verb direkt danach)",
+            "allerdings",
+            "dagegen",
+            "zwar … aber"
+          ]
         },
         {
           "funktion": "Zeit",
-          "phrasen": ["wenn (Gegenwart/Wiederholung)", "als (einmal in der Vergangenheit)", "während", "bevor", "nachdem", "seitdem", "sobald"]
+          "phrasen": [
+            "wenn (Gegenwart/Wiederholung)",
+            "als (einmal in der Vergangenheit)",
+            "während",
+            "bevor",
+            "nachdem",
+            "seitdem",
+            "sobald"
+          ]
         },
         {
           "funktion": "Ziel und Folge",
-          "phrasen": ["um … zu (gleiches Subjekt)", "damit (verschiedene Subjekte)", "sodass", "also"]
+          "phrasen": [
+            "um … zu (gleiches Subjekt)",
+            "damit (verschiedene Subjekte)",
+            "sodass",
+            "also"
+          ]
         },
         {
           "funktion": "Bedingung",
@@ -546,7 +612,13 @@
         },
         {
           "funktion": "Reihenfolge und Ergänzung",
-          "phrasen": ["zuerst / zunächst", "dann / danach / anschließend", "außerdem / zusätzlich", "schließlich / zum Schluss", "übrigens"]
+          "phrasen": [
+            "zuerst / zunächst",
+            "dann / danach / anschließend",
+            "außerdem / zusätzlich",
+            "schließlich / zum Schluss",
+            "übrigens"
+          ]
         }
       ]
     }
@@ -560,12 +632,24 @@
         "kopf": ["Satztyp", "Beispiel", "Regel"],
         "zeilen": [
           ["Hauptsatz", "Ich **gehe** morgen ins Kino.", "Verb Position 2"],
-          ["Hauptsatz, anderer Anfang", "Morgen **gehe** ich ins Kino.", "Verb bleibt Position 2, Subjekt danach"],
+          [
+            "Hauptsatz, anderer Anfang",
+            "Morgen **gehe** ich ins Kino.",
+            "Verb bleibt Position 2, Subjekt danach"
+          ],
           ["Frage (W)", "Wann **gehst** du ins Kino?", "W-Wort, dann Verb"],
           ["Ja/Nein-Frage", "**Gehst** du ins Kino?", "Verb ganz vorn"],
           ["Nebensatz (weil, dass, …)", "…, weil ich ins Kino **gehe**.", "Verb am Ende"],
-          ["Perfekt / Modalverb", "Ich **bin** ins Kino **gegangen**.", "Klammer: Verb 2, Partizip Ende"],
-          ["Nebensatz + Perfekt", "…, weil ich ins Kino **gegangen bin**.", "Hilfsverb ganz am Ende"]
+          [
+            "Perfekt / Modalverb",
+            "Ich **bin** ins Kino **gegangen**.",
+            "Klammer: Verb 2, Partizip Ende"
+          ],
+          [
+            "Nebensatz + Perfekt",
+            "…, weil ich ins Kino **gegangen bin**.",
+            "Hilfsverb ganz am Ende"
+          ]
         ]
       }
     },
@@ -573,7 +657,15 @@
       "thema": "Präsens — Endungen",
       "erklaerung": "Die Endungen sind für fast alle Verben gleich. Bei einigen starken Verben ändert sich zusätzlich der Vokal in der 2. und 3. Person Singular: a→ä, e→i/ie.",
       "tabelle": {
-        "kopf": ["Person", "regelmäßig: lernen", "sein", "haben", "werden", "fahren (a→ä)", "sprechen (e→i)"],
+        "kopf": [
+          "Person",
+          "regelmäßig: lernen",
+          "sein",
+          "haben",
+          "werden",
+          "fahren (a→ä)",
+          "sprechen (e→i)"
+        ],
         "zeilen": [
           ["ich", "lerne", "bin", "habe", "werde", "fahre", "spreche"],
           ["du", "lernst", "bist", "hast", "wirst", "**fährst**", "**sprichst**"],
@@ -588,14 +680,30 @@
       "thema": "Modalverben",
       "erklaerung": "Im Singular unregelmäßig, im Plural regelmäßig. Nach einem Modalverb steht der Infinitiv am Satzende — niemals mit „zu“.",
       "tabelle": {
-        "kopf": ["Person", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchte"],
+        "kopf": [
+          "Person",
+          "können",
+          "müssen",
+          "wollen",
+          "sollen",
+          "dürfen",
+          "mögen / möchte"
+        ],
         "zeilen": [
           ["ich", "kann", "muss", "will", "soll", "darf", "mag / möchte"],
           ["du", "kannst", "musst", "willst", "sollst", "darfst", "magst / möchtest"],
           ["er/sie/es", "kann", "muss", "will", "soll", "darf", "mag / möchte"],
           ["wir", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchten"],
           ["ihr", "könnt", "müsst", "wollt", "sollt", "dürft", "mögt / möchtet"],
-          ["sie/Sie", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchten"],
+          [
+            "sie/Sie",
+            "können",
+            "müssen",
+            "wollen",
+            "sollen",
+            "dürfen",
+            "mögen / möchten"
+          ],
           ["Präteritum", "konnte", "musste", "wollte", "sollte", "durfte", "mochte"]
         ]
       }
@@ -606,12 +714,42 @@
       "tabelle": {
         "kopf": ["Zeit", "Bildung", "Beispiel", "Wann?"],
         "zeilen": [
-          ["Präsens", "Verbstamm + Endung", "Ich **arbeite** heute.", "Gegenwart und Zukunft"],
-          ["Perfekt", "haben/sein + Partizip II", "Ich **habe** gestern **gearbeitet**.", "gesprochene Vergangenheit"],
-          ["Präteritum", "Verbstamm + te / Sonderform", "Ich **arbeitete** damals dort.", "geschriebene Vergangenheit; immer bei war/hatte/musste"],
-          ["Plusquamperfekt", "hatte/war + Partizip II", "Ich **hatte** vorher **gearbeitet**.", "Vorvergangenheit, oft mit „nachdem“"],
-          ["Futur I", "werden + Infinitiv", "Ich **werde** morgen **arbeiten**.", "Zukunft mit Betonung, Vermutung, Versprechen"],
-          ["Zukunft (normal)", "Präsens + Zeitangabe", "Ich **arbeite** morgen.", "im Alltag üblicher als Futur I"]
+          [
+            "Präsens",
+            "Verbstamm + Endung",
+            "Ich **arbeite** heute.",
+            "Gegenwart und Zukunft"
+          ],
+          [
+            "Perfekt",
+            "haben/sein + Partizip II",
+            "Ich **habe** gestern **gearbeitet**.",
+            "gesprochene Vergangenheit"
+          ],
+          [
+            "Präteritum",
+            "Verbstamm + te / Sonderform",
+            "Ich **arbeitete** damals dort.",
+            "geschriebene Vergangenheit; immer bei war/hatte/musste"
+          ],
+          [
+            "Plusquamperfekt",
+            "hatte/war + Partizip II",
+            "Ich **hatte** vorher **gearbeitet**.",
+            "Vorvergangenheit, oft mit „nachdem“"
+          ],
+          [
+            "Futur I",
+            "werden + Infinitiv",
+            "Ich **werde** morgen **arbeiten**.",
+            "Zukunft mit Betonung, Vermutung, Versprechen"
+          ],
+          [
+            "Zukunft (normal)",
+            "Präsens + Zeitangabe",
+            "Ich **arbeite** morgen.",
+            "im Alltag üblicher als Futur I"
+          ]
         ]
       }
     },
@@ -621,9 +759,24 @@
       "tabelle": {
         "kopf": ["mit sein", "Beispiel", "mit haben", "Beispiel"],
         "zeilen": [
-          ["Bewegung: gehen, fahren, kommen, fliegen, laufen, reisen", "Ich **bin** nach Berlin **gefahren**.", "alle Verben mit Akkusativobjekt", "Ich **habe** ein Buch **gelesen**."],
-          ["Zustandsänderung: aufstehen, einschlafen, aufwachen, sterben, wachsen", "Er **ist** früh **aufgestanden**.", "reflexive Verben", "Ich **habe mich** **gefreut**."],
-          ["sein, bleiben, werden, passieren, gelingen", "Das **ist** gestern **passiert**.", "Modalverben", "Ich **habe** nicht **gekonnt**."]
+          [
+            "Bewegung: gehen, fahren, kommen, fliegen, laufen, reisen",
+            "Ich **bin** nach Berlin **gefahren**.",
+            "alle Verben mit Akkusativobjekt",
+            "Ich **habe** ein Buch **gelesen**."
+          ],
+          [
+            "Zustandsänderung: aufstehen, einschlafen, aufwachen, sterben, wachsen",
+            "Er **ist** früh **aufgestanden**.",
+            "reflexive Verben",
+            "Ich **habe mich** **gefreut**."
+          ],
+          [
+            "sein, bleiben, werden, passieren, gelingen",
+            "Das **ist** gestern **passiert**.",
+            "Modalverben",
+            "Ich **habe** nicht **gekonnt**."
+          ]
         ]
       }
     },
@@ -633,10 +786,34 @@
       "tabelle": {
         "kopf": ["Kasus", "maskulin", "neutrum", "feminin", "Plural"],
         "zeilen": [
-          ["Nominativ", "der / ein / mein", "das / ein / mein", "die / eine / meine", "die / — / meine"],
-          ["Akkusativ", "**den / einen / meinen**", "das / ein / mein", "die / eine / meine", "die / — / meine"],
-          ["Dativ", "**dem / einem / meinem**", "**dem / einem / meinem**", "**der / einer / meiner**", "**den … -n / — / meinen … -n**"],
-          ["Genitiv", "**des …-s / eines …-s**", "**des …-s / eines …-s**", "**der / einer**", "**der / — / meiner**"]
+          [
+            "Nominativ",
+            "der / ein / mein",
+            "das / ein / mein",
+            "die / eine / meine",
+            "die / — / meine"
+          ],
+          [
+            "Akkusativ",
+            "**den / einen / meinen**",
+            "das / ein / mein",
+            "die / eine / meine",
+            "die / — / meine"
+          ],
+          [
+            "Dativ",
+            "**dem / einem / meinem**",
+            "**dem / einem / meinem**",
+            "**der / einer / meiner**",
+            "**den … -n / — / meinen … -n**"
+          ],
+          [
+            "Genitiv",
+            "**des …-s / eines …-s**",
+            "**des …-s / eines …-s**",
+            "**der / einer**",
+            "**der / — / meiner**"
+          ]
         ]
       }
     },
@@ -651,8 +828,18 @@
           ["f. Nom.", "die gut**e** Frau", "eine gut**e** Frau", "gut**e** Milch"],
           ["Pl. Nom.", "die gut**en** Leute", "meine gut**en** Leute", "gut**e** Leute"],
           ["m. Akk.", "den gut**en** Mann", "einen gut**en** Mann", "gut**en** Wein"],
-          ["Dativ (alle)", "dem/der gut**en** …", "einem/einer gut**en** …", "gut**em / guter** …"],
-          ["Merksatz", "im Nom./Akk. Singular oft **-e**, sonst fast immer **-en**", "", ""]
+          [
+            "Dativ (alle)",
+            "dem/der gut**en** …",
+            "einem/einer gut**en** …",
+            "gut**em / guter** …"
+          ],
+          [
+            "Merksatz",
+            "im Nom./Akk. Singular oft **-e**, sonst fast immer **-en**",
+            "",
+            ""
+          ]
         ]
       }
     },
@@ -662,11 +849,31 @@
       "tabelle": {
         "kopf": ["Kasus", "Präpositionen", "Beispiel"],
         "zeilen": [
-          ["immer Akkusativ", "durch, für, gegen, ohne, um, bis, entlang", "Ich mache das **für dich**."],
-          ["immer Dativ", "aus, bei, mit, nach, seit, von, zu, gegenüber, ab", "Ich fahre **mit dem Bus**."],
-          ["Wechsel (Akk. bei wohin?)", "an, auf, hinter, in, neben, über, unter, vor, zwischen", "Ich stelle das Glas **auf den Tisch**."],
-          ["Wechsel (Dativ bei wo?)", "dieselben neun", "Das Glas steht **auf dem Tisch**."],
-          ["Genitiv", "wegen, trotz, während, statt, innerhalb, außerhalb, aufgrund", "**Wegen des Wetters** bleiben wir zu Hause."]
+          [
+            "immer Akkusativ",
+            "durch, für, gegen, ohne, um, bis, entlang",
+            "Ich mache das **für dich**."
+          ],
+          [
+            "immer Dativ",
+            "aus, bei, mit, nach, seit, von, zu, gegenüber, ab",
+            "Ich fahre **mit dem Bus**."
+          ],
+          [
+            "Wechsel (Akk. bei wohin?)",
+            "an, auf, hinter, in, neben, über, unter, vor, zwischen",
+            "Ich stelle das Glas **auf den Tisch**."
+          ],
+          [
+            "Wechsel (Dativ bei wo?)",
+            "dieselben neun",
+            "Das Glas steht **auf dem Tisch**."
+          ],
+          [
+            "Genitiv",
+            "wegen, trotz, während, statt, innerhalb, außerhalb, aufgrund",
+            "**Wegen des Wetters** bleiben wir zu Hause."
+          ]
         ]
       }
     },
@@ -677,14 +884,26 @@
         "kopf": ["Verb + Präposition", "Kasus", "Beispiel"],
         "zeilen": [
           ["warten auf", "Akkusativ", "Ich warte **auf den Bus**."],
-          ["sich freuen auf (Zukunft) / über (jetzt)", "Akkusativ", "Ich freue mich **auf das Wochenende**."],
+          [
+            "sich freuen auf (Zukunft) / über (jetzt)",
+            "Akkusativ",
+            "Ich freue mich **auf das Wochenende**."
+          ],
           ["sich interessieren für", "Akkusativ", "Sie interessiert sich **für Musik**."],
-          ["sich bewerben um / bei", "Akk. / Dat.", "Er bewirbt sich **um eine Stelle bei einer Firma**."],
+          [
+            "sich bewerben um / bei",
+            "Akk. / Dat.",
+            "Er bewirbt sich **um eine Stelle bei einer Firma**."
+          ],
           ["sich kümmern um", "Akkusativ", "Ich kümmere mich **um die Kinder**."],
           ["sich erinnern an", "Akkusativ", "Erinnerst du dich **an den Tag**?"],
           ["denken an", "Akkusativ", "Ich denke **an dich**."],
           ["sich ärgern über", "Akkusativ", "Er ärgert sich **über den Lärm**."],
-          ["sich beschweren über", "Akkusativ", "Sie beschwert sich **über den Nachbarn**."],
+          [
+            "sich beschweren über",
+            "Akkusativ",
+            "Sie beschwert sich **über den Nachbarn**."
+          ],
           ["bitten um", "Akkusativ", "Ich bitte **um Hilfe**."],
           ["Angst haben vor", "Dativ", "Ich habe Angst **vor der Prüfung**."],
           ["teilnehmen an", "Dativ", "Wir nehmen **am Kurs** teil."],
@@ -692,8 +911,16 @@
           ["sich treffen mit", "Dativ", "Ich treffe mich **mit Freunden**."],
           ["anfangen mit / aufhören mit", "Dativ", "Er fängt **mit der Arbeit** an."],
           ["helfen bei", "Dativ", "Kannst du mir **beim Umzug** helfen?"],
-          ["sprechen über (Thema) / mit (Person)", "Akk. / Dat.", "Ich spreche **mit ihr über das Problem**."],
-          ["sich entscheiden für", "Akkusativ", "Ich habe mich **für den Kurs** entschieden."]
+          [
+            "sprechen über (Thema) / mit (Person)",
+            "Akk. / Dat.",
+            "Ich spreche **mit ihr über das Problem**."
+          ],
+          [
+            "sich entscheiden für",
+            "Akkusativ",
+            "Ich habe mich **für den Kurs** entschieden."
+          ]
         ]
       }
     },
@@ -729,8 +956,16 @@
           ["können", "könnte", "**Könnten** Sie mir bitte helfen?"],
           ["müssen", "müsste", "Ich **müsste** eigentlich lernen."],
           ["werden", "würde", "Ich **würde** gern kommen."],
-          ["alle anderen", "würde + Infinitiv", "An deiner Stelle **würde** ich das **machen**."],
-          ["Vergangenheit", "hätte/wäre + Partizip II", "Ich **hätte** früher **anrufen sollen**."]
+          [
+            "alle anderen",
+            "würde + Infinitiv",
+            "An deiner Stelle **würde** ich das **machen**."
+          ],
+          [
+            "Vergangenheit",
+            "hätte/wäre + Partizip II",
+            "Ich **hätte** früher **anrufen sollen**."
+          ]
         ]
       }
     },
@@ -741,11 +976,23 @@
         "kopf": ["Form", "Bildung", "Beispiel"],
         "zeilen": [
           ["Präsens", "wird / werden + Partizip II", "Das Formular **wird ausgefüllt**."],
-          ["Präteritum", "wurde / wurden + Partizip II", "Das Formular **wurde ausgefüllt**."],
+          [
+            "Präteritum",
+            "wurde / wurden + Partizip II",
+            "Das Formular **wurde ausgefüllt**."
+          ],
           ["Perfekt", "ist … worden", "Das Formular **ist ausgefüllt worden**."],
-          ["mit Modalverb", "muss/kann + Partizip II + werden", "Das Formular **muss ausgefüllt werden**."],
+          [
+            "mit Modalverb",
+            "muss/kann + Partizip II + werden",
+            "Das Formular **muss ausgefüllt werden**."
+          ],
           ["Wer handelt?", "von + Dativ", "Das Formular wird **vom Amt** geprüft."],
-          ["Achtung", "werden + Infinitiv = Futur, kein Passiv", "Er **wird kommen**. (Zukunft)"]
+          [
+            "Achtung",
+            "werden + Infinitiv = Futur, kein Passiv",
+            "Er **wird kommen**. (Zukunft)"
+          ]
         ]
       }
     },
@@ -823,8 +1070,18 @@
         "zeilen": [
           ["du", "Komm! / Warte!", "Sei!", "**Komm** doch **mal** vorbei!"],
           ["ihr", "Kommt! / Wartet!", "Seid!", "**Wartet** bitte hier."],
-          ["Sie", "Kommen Sie! / Warten Sie!", "Seien Sie!", "**Seien Sie** bitte pünktlich."],
-          ["Vokalwechsel e→i bleibt", "sprechen → **Sprich!**", "", "**Nimm** dir Zeit! (nehmen)"],
+          [
+            "Sie",
+            "Kommen Sie! / Warten Sie!",
+            "Seien Sie!",
+            "**Seien Sie** bitte pünktlich."
+          ],
+          [
+            "Vokalwechsel e→i bleibt",
+            "sprechen → **Sprich!**",
+            "",
+            "**Nimm** dir Zeit! (nehmen)"
+          ],
           ["a→ä fällt weg", "fahren → **Fahr!**", "", "**Lauf** schneller! (laufen)"]
         ]
       }
