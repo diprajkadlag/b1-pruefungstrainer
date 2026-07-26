@@ -1,0 +1,849 @@
+{
+  "titel": "B1 Spickzettel — Strategie, Redemittel und Grammatik",
+  "untertitel": "Alles, was man am Tag vor der Prüfung noch einmal durchgehen sollte",
+  "version": "1.0.0",
+
+  "ueberblick": {
+    "einleitung": "Jedes Modul zählt 100 Punkte und wird einzeln bestanden. 60 Punkte reichen. Ein schwaches Modul lässt sich nicht durch ein starkes ausgleichen — deshalb lohnt es sich, überall auf 60 zu kommen, statt irgendwo auf 95.",
+    "module": [
+      {
+        "modul": "Lesen",
+        "zeit": "65 Min.",
+        "teile": "5 Teile, 30 Aufgaben",
+        "punkte": "100",
+        "kern": "Jede Aufgabe 1 Punkt. 18 richtige Aufgaben = 60 Punkte = bestanden."
+      },
+      {
+        "modul": "Hören",
+        "zeit": "40 Min.",
+        "teile": "4 Teile, 30 Aufgaben",
+        "punkte": "100",
+        "kern": "Teile 1 und 4 hören Sie zweimal, Teile 2 und 3 nur einmal."
+      },
+      {
+        "modul": "Schreiben",
+        "zeit": "60 Min.",
+        "teile": "3 Aufgaben",
+        "punkte": "40 + 40 + 20",
+        "kern": "Bewertet werden Erfüllung, Kohärenz, Wortschatz und Strukturen."
+      },
+      {
+        "modul": "Sprechen",
+        "zeit": "15 Min. + 15 Min. Vorbereitung",
+        "teile": "3 Teile",
+        "punkte": "28 + 40 + 16 + 16 Aussprache",
+        "kern": "Paarprüfung. Sie werden auch dafür bewertet, wie Sie auf den Partner reagieren."
+      }
+    ],
+    "noten": [
+      { "note": "sehr gut", "von": 100, "bis": 90 },
+      { "note": "gut", "von": 89, "bis": 80 },
+      { "note": "befriedigend", "von": 79, "bis": 70 },
+      { "note": "ausreichend", "von": 69, "bis": 60 },
+      { "note": "nicht bestanden", "von": 59, "bis": 0 }
+    ]
+  },
+
+  "strategie": [
+    {
+      "modul": "Lesen",
+      "zeitplan": "T1 10 · T2 20 · T3 10 · T4 15 · T5 10 Min. Die letzten 5 Minuten gehören dem Antwortbogen.",
+      "goldregeln": [
+        "Lesen Sie zuerst die Aufgabe, dann den Text. Sie suchen etwas Bestimmtes — Sie lesen nicht zum Vergnügen.",
+        "Unterstreichen Sie die Stelle, die Ihre Antwort beweist. Finden Sie keine, ist Ihre Antwort geraten.",
+        "Kleine Wörter drehen alles um: nicht, nie, kaum, nur, erst, schon, außer, ohne.",
+        "„nicht A, sondern B“ ist fast immer der Schlüsselsatz. Merken Sie sich diese Konstruktion.",
+        "Kein Feld leer lassen. Eine falsche Antwort kostet nichts, ein leeres Feld sicher einen Punkt."
+      ],
+      "tipps": [
+        {
+          "teil": "Teil 1 — Blog, richtig/falsch",
+          "text": "Die Aufgaben folgen der Reihenfolge des Textes. Wenn Sie bei Aufgabe 4 sind, liegt die Antwort im letzten Drittel. Achtung bei Aussagen über die Meinung des Autors: Entscheidend ist meist der letzte Absatz."
+        },
+        {
+          "teil": "Teil 2 — zwei Artikel, a/b/c",
+          "text": "Drei Aufgaben pro Text. Prüfen Sie jede Option einzeln gegen den Text. Typische Falle: Eine Option benutzt ein Wort aus dem Text, aber in der falschen Rolle — was jemand befürchtet, ist nicht das, was passiert."
+        },
+        {
+          "teil": "Teil 3 — Anzeigen zuordnen",
+          "text": "Jede Situation hat zwei oder drei Bedingungen. Prüfen Sie alle, nicht nur die erste. Genau eine Situation passt zu keiner Anzeige — trauen Sie sich zur 0. Streichen Sie benutzte Anzeigen durch."
+        },
+        {
+          "teil": "Teil 4 — Meinungen, ja/nein",
+          "text": "Lesen Sie jeden Beitrag zu Ende. Viele beginnen mit der Gegenposition („Ich war skeptisch …“) und drehen dann. Der letzte Satz zählt. Persönliches Verhalten ≠ Meinung zur These."
+        },
+        {
+          "teil": "Teil 5 — Ordnung, a/b/c",
+          "text": "Jede Frage gehört zu einem Paragrafen. Erst den Paragrafen finden, dann genau lesen. Prüfen Sie, für wen eine Regel gilt (unter 18? werktags? Mitglieder?). Distraktoren nehmen gern eine echte Zahl aus dem falschen Satz."
+        }
+      ]
+    },
+    {
+      "modul": "Hören",
+      "zeitplan": "Sie können das Tempo nicht steuern. Nutzen Sie jede Lesepause vollständig.",
+      "goldregeln": [
+        "In der Lesepause: Aufgaben lesen und die Schlüsselwörter unterstreichen. Nicht träumen.",
+        "Schreiben Sie Zahlen, Uhrzeiten und Namen sofort mit — Sie hören sie nur einmal.",
+        "Ein Wort zu hören heißt nicht, dass es die Antwort ist. Distraktoren nennen fast immer echte Wörter aus dem Text.",
+        "Verpasst? Sofort weiter. Wer einer Aufgabe nachtrauert, verliert die nächsten zwei.",
+        "Bei Teil 1 und 4 haben Sie einen zweiten Versuch. Beim ersten Hören grob ankreuzen, beim zweiten prüfen."
+      ],
+      "tipps": [
+        {
+          "teil": "Teil 1 — fünf kurze Texte (2×)",
+          "text": "Ansagen, Mailbox, Radio. Pro Text eine richtig/falsch- und eine a/b/c-Aufgabe. Achten Sie auf Änderungen: „nicht …, sondern …“, „statt“, „erst“, „bereits“."
+        },
+        {
+          "teil": "Teil 2 — Vortrag oder Führung (1×)",
+          "text": "Eine Person, langer Text, fünf Aufgaben in Textreihenfolge. Hinweise auf Antworten: „Das Wichtigste ist …“, „Was viele nicht wissen …“, „Eine Bitte noch …“."
+        },
+        {
+          "teil": "Teil 3 — Gespräch (1×)",
+          "text": "Unterscheiden Sie, wer was sagt und was nur vorgeschlagen wird. Häufigste Falle: A schlägt etwas vor, B macht etwas anderes. Die letzte Aufgabe ist oft ein Beinahe-Treffer."
+        },
+        {
+          "teil": "Teil 4 — Radiodiskussion (2×)",
+          "text": "Drei Stimmen: Moderation und zwei Gäste. Die Moderation sagt nicht nur Fragen — sie bringt oft eigene Punkte ein („Ich möchte einwerfen …“). Ordnen Sie die Antwort zu, nicht die Frage."
+        }
+      ]
+    },
+    {
+      "modul": "Schreiben",
+      "zeitplan": "A1 20 · A2 25 · A3 15 Min. Halten Sie sich daran, auch wenn ein Text noch nicht perfekt ist.",
+      "goldregeln": [
+        "Alle Leitpunkte behandeln. Ein vergessener Leitpunkt halbiert die Punkte für „Erfüllung“ — das ist der teuerste Fehler überhaupt.",
+        "Anrede und Gruß nicht vergessen. Du oder Sie konsequent durchhalten.",
+        "Verbinden Sie Sätze: weil, deshalb, obwohl, trotzdem, denn, allerdings. Zehn kurze Hauptsätze sind schlechter als fünf verbundene.",
+        "Die Wortzahl ist ein Ziel, keine Grenze. Deutlich zu kurz kostet Punkte, etwas länger nicht.",
+        "Fünf Minuten am Ende zum Prüfen: Verbposition, Groß-/Kleinschreibung, Verbendungen, Artikel."
+      ],
+      "aufgaben": [
+        {
+          "aufgabe": "Aufgabe 1 — informelle E-Mail (ca. 80 Wörter, 40 Punkte)",
+          "aufbau": "Anrede (Liebe/Lieber …) → kurzer Einstieg → Leitpunkt 1 → Leitpunkt 2 → Leitpunkt 3 → Gruß",
+          "hinweis": "An eine Freundin oder einen Freund: „du“. Ein persönlicher Satz am Anfang („Schön, dass du dich meldest!“) kostet fünf Wörter und wirkt sofort natürlicher."
+        },
+        {
+          "aufgabe": "Aufgabe 2 — Forumsbeitrag (ca. 80 Wörter, 40 Punkte)",
+          "aufbau": "Anrede an die Person → eigene Meinung → Begründung mit Beispiel → Vorteil und Nachteil → Rat → Gruß",
+          "hinweis": "Beziehen Sie sich auf den Impuls! Wer nur allgemein über das Thema schreibt, verliert bei „Erfüllung“. Nennen Sie die Person beim Namen."
+        },
+        {
+          "aufgabe": "Aufgabe 3 — halbformelle E-Mail (ca. 40 Wörter, 20 Punkte)",
+          "aufbau": "Sehr geehrte … → Anliegen in einem Satz → Grund → Bitte → Dank → Mit freundlichen Grüßen",
+          "hinweis": "Nur 40 Wörter — kein Platz für Einleitungen. Direkt zur Sache, aber im Konjunktiv II: „Könnten Sie …?“, „Wäre es möglich …?“"
+        }
+      ],
+      "fehlerliste": [
+        { "falsch": "Ich habe gegangen.", "richtig": "Ich bin gegangen.", "grund": "Bewegungsverben bilden das Perfekt mit „sein“." },
+        { "falsch": "Ich freue mich auf dich zu sehen.", "richtig": "Ich freue mich darauf, dich zu sehen.", "grund": "Vor einem Nebensatz steht das Präpositionaladverb „darauf“." },
+        { "falsch": "Weil ich habe keine Zeit.", "richtig": "Weil ich keine Zeit habe.", "grund": "Nach „weil“ steht das Verb am Ende." },
+        { "falsch": "Deshalb ich komme nicht.", "richtig": "Deshalb komme ich nicht.", "grund": "Nach „deshalb“ folgt sofort das Verb (Position 2)." },
+        { "falsch": "Ich bin interessiert für Musik.", "richtig": "Ich interessiere mich für Musik.", "grund": "Reflexives Verb mit fester Präposition." },
+        { "falsch": "Ich möchte zu gehen.", "richtig": "Ich möchte gehen.", "grund": "Nach Modalverben steht nie „zu“." },
+        { "falsch": "Er ist größer wie ich.", "richtig": "Er ist größer als ich.", "grund": "Komparativ immer mit „als“; „wie“ nur bei Gleichheit." },
+        { "falsch": "Ich danke dich.", "richtig": "Ich danke dir.", "grund": "„danken“ verlangt den Dativ." },
+        { "falsch": "Am Montag ich arbeite.", "richtig": "Am Montag arbeite ich.", "grund": "Das Verb bleibt auf Position 2, das Subjekt rückt dahinter." },
+        { "falsch": "Ich habe das Buch gelesen gestern.", "richtig": "Ich habe das Buch gestern gelesen.", "grund": "Das Partizip steht ganz am Ende." }
+      ]
+    },
+    {
+      "modul": "Sprechen",
+      "zeitplan": "15 Min. Vorbereitung für Teil 1 und 2 · dann T1 ca. 3 · T2 ca. 3 pro Person · T3 ca. 2 Min.",
+      "goldregeln": [
+        "Notieren Sie in der Vorbereitung nur Stichworte. Wer ganze Sätze aufschreibt, liest sie ab — und Ablesen kostet Punkte.",
+        "Sprechen ist kein Vortrag ins Leere: In Teil 1 und 3 wird bewertet, ob Sie auf Ihren Partner eingehen.",
+        "Bei einem Fehler nicht neu anfangen. Weitersprechen. Flüssigkeit zählt mehr als Perfektion.",
+        "Kein Wort parat? Umschreiben: „So ein Ding, mit dem man …“, „Ich meine das, was man macht, wenn …“",
+        "Langsam und deutlich schlägt schnell und undeutlich — Aussprache ist eigene 16 Punkte wert.",
+        "Zu kurz ist das größte Risiko. Auf jede Frage mindestens zwei bis drei Sätze."
+      ],
+      "teile": [
+        {
+          "teil": "Teil 1 — Gemeinsam etwas planen (ca. 3 Min., 28 Punkte)",
+          "ziel": "Zusammen etwas organisieren und am Ende zu einer gemeinsamen Entscheidung kommen.",
+          "ablauf": "Vorschlag machen → Reaktion abwarten → auf den Vorschlag des Partners reagieren → Alternative oder Zustimmung → am Ende zusammenfassen",
+          "achtung": "Nicht alle Punkte allein durchsprechen! Wer den Partner nicht zu Wort kommen lässt, verliert bei „Interaktion“. Stellen Sie Rückfragen: „Was meinst du?“, „Wärst du damit einverstanden?“"
+        },
+        {
+          "teil": "Teil 2 — Ein Thema präsentieren (ca. 3 Min., 40 Punkte)",
+          "ziel": "Eine kleine Präsentation über fünf Folien halten.",
+          "ablauf": "Folie 1 Thema nennen → Folie 2 eigene Erfahrung → Folie 3 Situation im Heimatland → Folie 4 Vor- und Nachteile + eigene Meinung → Folie 5 Abschluss und Dank",
+          "achtung": "Alle fünf Folien ansprechen — auch kurz. Wer Folie 3 vergisst, verliert sicher Punkte. Sagen Sie laut, wo Sie sind: „Nun zur Situation in meinem Heimatland.“"
+        },
+        {
+          "teil": "Teil 3 — Über ein Thema sprechen (ca. 2 Min., 16 Punkte)",
+          "ziel": "Rückmeldung zur Präsentation des Partners geben, eine Frage stellen, die Frage des Partners beantworten.",
+          "ablauf": "Danken → etwas Konkretes loben → eine echte Frage stellen → auf die eigene Frage ausführlich antworten",
+          "achtung": "„Das war gut“ reicht nicht. Nennen Sie etwas Konkretes: „Besonders interessant fand ich Ihr Beispiel mit …“ Die Frage sollte man nicht mit ja oder nein beantworten können."
+        }
+      ]
+    }
+  ],
+
+  "redemittel": [
+    {
+      "bereich": "Sprechen Teil 1 — Gemeinsam etwas planen",
+      "gruppen": [
+        {
+          "funktion": "Anfangen",
+          "phrasen": [
+            "Fangen wir doch mit … an.",
+            "Sollen wir zuerst über … sprechen?",
+            "Wo möchtest du anfangen?",
+            "Ich schlage vor, wir klären zuerst den Termin."
+          ]
+        },
+        {
+          "funktion": "Vorschlag machen",
+          "phrasen": [
+            "Ich würde vorschlagen, dass wir …",
+            "Wie wäre es, wenn wir …?",
+            "Was hältst du davon, … zu …?",
+            "Wir könnten … Was meinst du dazu?",
+            "Mein Vorschlag wäre …"
+          ]
+        },
+        {
+          "funktion": "Zustimmen",
+          "phrasen": [
+            "Das ist eine gute Idee.",
+            "Da bin ich ganz deiner Meinung.",
+            "Einverstanden, das machen wir so.",
+            "Das leuchtet mir ein.",
+            "Ja, das finde ich sinnvoll, weil …"
+          ]
+        },
+        {
+          "funktion": "Höflich ablehnen und Alternative anbieten",
+          "phrasen": [
+            "Das sehe ich ein bisschen anders.",
+            "Hm, ich bin mir nicht sicher, ob das klappt.",
+            "Das ist zwar eine gute Idee, aber …",
+            "Ich hätte da einen anderen Vorschlag: …",
+            "Wäre es nicht besser, wenn wir …?",
+            "Ich würde eher … vorschlagen, denn …"
+          ]
+        },
+        {
+          "funktion": "Nachfragen und den Partner einbeziehen",
+          "phrasen": [
+            "Was meinst du?",
+            "Wärst du damit einverstanden?",
+            "Wie siehst du das?",
+            "Hast du eine bessere Idee?",
+            "Können wir das so festhalten?"
+          ]
+        },
+        {
+          "funktion": "Zusammenfassen und abschließen",
+          "phrasen": [
+            "Dann halten wir fest: …",
+            "Fassen wir zusammen: Wir treffen uns am …, und du kümmerst dich um …",
+            "Gut, dann wäre alles geklärt.",
+            "Ich glaube, wir haben an alles gedacht."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 2 — Präsentation (die fünf Folien)",
+      "gruppen": [
+        {
+          "funktion": "Folie 1 — Thema nennen",
+          "phrasen": [
+            "In meiner Präsentation geht es um die Frage, ob …",
+            "Ich möchte heute über … sprechen.",
+            "Mein Thema lautet: …",
+            "Ich habe dieses Thema gewählt, weil …",
+            "Damit ist gemeint, dass …",
+            "Ich werde zuerst von meinen eigenen Erfahrungen berichten, dann …"
+          ]
+        },
+        {
+          "funktion": "Folie 2 — Eigene Erfahrung",
+          "phrasen": [
+            "Aus eigener Erfahrung kann ich sagen, dass …",
+            "Ich erinnere mich an eine Situation, in der …",
+            "Bei mir war das so: …",
+            "Vor einigen Jahren habe ich selbst erlebt, dass …",
+            "Persönlich habe ich damit gute / schlechte Erfahrungen gemacht.",
+            "Das hat mir gezeigt, wie wichtig es ist, …"
+          ]
+        },
+        {
+          "funktion": "Folie 3 — Situation im Heimatland",
+          "phrasen": [
+            "In meinem Heimatland ist es üblich, dass …",
+            "Bei uns in … ist die Situation etwas anders.",
+            "Im Vergleich zu Deutschland …",
+            "Ein konkretes Beispiel dafür ist …",
+            "In den großen Städten … , auf dem Land dagegen …",
+            "Früher war das anders, inzwischen ändert sich das."
+          ]
+        },
+        {
+          "funktion": "Folie 4 — Vor- und Nachteile + eigene Meinung",
+          "phrasen": [
+            "Ein klarer Vorteil ist, dass …",
+            "Dafür spricht, dass …",
+            "Auf der anderen Seite / Dagegen spricht allerdings, dass …",
+            "Man darf aber nicht vergessen, dass …",
+            "Einerseits … , andererseits …",
+            "Persönlich bin ich der Meinung, dass …",
+            "Meiner Meinung nach kommt es darauf an, ob …",
+            "Ich halte es für wichtig, dass …"
+          ]
+        },
+        {
+          "funktion": "Folie 5 — Abschluss",
+          "phrasen": [
+            "Damit komme ich zum Schluss.",
+            "Zusammenfassend würde ich sagen, dass …",
+            "Abschließend möchte ich sagen: …",
+            "Vielen Dank für Ihre Aufmerksamkeit.",
+            "Vielen Dank fürs Zuhören. Haben Sie noch Fragen?"
+          ]
+        },
+        {
+          "funktion": "Zeit gewinnen (wenn Ihnen ein Wort fehlt)",
+          "phrasen": [
+            "Also, wie soll ich sagen …",
+            "Moment, lassen Sie mich kurz überlegen.",
+            "Das ist eine interessante Frage.",
+            "Wie heißt das noch mal … ich meine so etwas wie …",
+            "Ich weiß nicht, wie man das auf Deutsch sagt, aber es ist …"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 3 — Rückmeldung und Fragen",
+      "gruppen": [
+        {
+          "funktion": "Rückmeldung geben",
+          "phrasen": [
+            "Vielen Dank für deine / Ihre Präsentation.",
+            "Mir hat besonders gut gefallen, dass …",
+            "Besonders interessant fand ich das Beispiel mit …",
+            "Ich fand deine Präsentation sehr anschaulich / klar aufgebaut.",
+            "Du hast das Thema gut strukturiert."
+          ]
+        },
+        {
+          "funktion": "Eine Frage stellen",
+          "phrasen": [
+            "Dazu hätte ich eine Frage: …",
+            "Mich würde interessieren, wie / warum / ob …",
+            "Wie ist das eigentlich, wenn …?",
+            "Was würdest du jemandem raten, der …?",
+            "Glaubst du, dass sich das in Zukunft ändern wird?"
+          ]
+        },
+        {
+          "funktion": "Auf eine Frage antworten",
+          "phrasen": [
+            "Danke für die Frage.",
+            "Das ist schwer zu sagen, aber ich denke, …",
+            "Meiner Erfahrung nach …",
+            "Ich glaube schon, und zwar deshalb: …",
+            "Da bin ich mir nicht ganz sicher. Ich vermute aber, dass …",
+            "Ein gutes Beispiel dafür ist …"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 1 — Informelle E-Mail",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Gruß",
+          "phrasen": [
+            "Liebe Anna, / Lieber Tom,   →   Liebe Grüße / Viele Grüße / Bis bald",
+            "Hallo Sara,   →   Liebe Grüße, dein/deine …",
+            "Achtung: nach der Anrede Komma, dann klein weiterschreiben."
+          ]
+        },
+        {
+          "funktion": "Einstieg",
+          "phrasen": [
+            "vielen Dank für deine E-Mail!",
+            "schön, dass du dich meldest.",
+            "entschuldige, dass ich mich erst jetzt melde.",
+            "wie geht es dir? Bei mir ist gerade viel los.",
+            "ich muss dir unbedingt etwas erzählen."
+          ]
+        },
+        {
+          "funktion": "Sich bedanken / entschuldigen",
+          "phrasen": [
+            "Vielen Dank, dass du mir geholfen hast.",
+            "Ohne dich hätte ich das nicht geschafft.",
+            "Es tut mir wirklich leid, dass ich nicht kommen konnte.",
+            "Ich hoffe, du bist mir nicht böse.",
+            "Das war nicht mit Absicht — ich hatte es einfach vergessen."
+          ]
+        },
+        {
+          "funktion": "Berichten und begründen",
+          "phrasen": [
+            "Stell dir vor, …",
+            "Inzwischen habe ich mich gut eingelebt.",
+            "Am schwersten war für mich …",
+            "Das lag daran, dass …",
+            "Zum Glück ist alles gut gegangen."
+          ]
+        },
+        {
+          "funktion": "Vorschlagen und einladen",
+          "phrasen": [
+            "Hast du Lust, mich zu besuchen?",
+            "Wollen wir uns nächste Woche treffen?",
+            "Wie wäre es mit Samstagnachmittag?",
+            "Hättest du am Freitag Zeit?",
+            "Sag mir einfach Bescheid, was dir besser passt."
+          ]
+        },
+        {
+          "funktion": "Schluss",
+          "phrasen": [
+            "Ich freue mich auf deine Antwort.",
+            "Melde dich einfach!",
+            "Bis bald und liebe Grüße",
+            "Ich hoffe, wir sehen uns bald."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 2 — Forumsbeitrag",
+      "gruppen": [
+        {
+          "funktion": "Auf den Impuls Bezug nehmen",
+          "phrasen": [
+            "Hallo Bruno, deine Frage finde ich interessant, weil …",
+            "Deine Situation kenne ich gut, denn bei mir war es genauso.",
+            "Ich kann dich gut verstehen.",
+            "Deine Mutter / Deine Kollegin hat da meiner Meinung nach nicht ganz unrecht."
+          ]
+        },
+        {
+          "funktion": "Meinung äußern",
+          "phrasen": [
+            "Meiner Meinung nach …",
+            "Ich bin der Meinung, dass …",
+            "Ich finde / Ich halte es für sinnvoll, dass …",
+            "Aus meiner Sicht …",
+            "Ehrlich gesagt sehe ich das anders."
+          ]
+        },
+        {
+          "funktion": "Begründen und Beispiel geben",
+          "phrasen": [
+            "Das liegt vor allem daran, dass …",
+            "Ein gutes Beispiel dafür ist …",
+            "Aus eigener Erfahrung kann ich sagen, dass …",
+            "Bei uns funktioniert das so: …",
+            "Deshalb glaube ich, dass …"
+          ]
+        },
+        {
+          "funktion": "Vorteil und Nachteil nennen",
+          "phrasen": [
+            "Der größte Vorteil ist sicher, dass …",
+            "Dafür spricht, dass …",
+            "Was mich allerdings stört, ist …",
+            "Man darf aber nicht vergessen, dass …",
+            "Einerseits … , andererseits …"
+          ]
+        },
+        {
+          "funktion": "Rat geben",
+          "phrasen": [
+            "An deiner Stelle würde ich …",
+            "Ich würde dir raten, … zu …",
+            "Vielleicht wäre es eine Idee, … zu …",
+            "Probier es doch einfach einmal aus.",
+            "Wichtig ist meiner Meinung nach vor allem, dass …"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 3 — Halbformelle E-Mail",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Gruß",
+          "phrasen": [
+            "Sehr geehrte Damen und Herren,   →   Mit freundlichen Grüßen",
+            "Sehr geehrte Frau Dr. Wegener,   →   Mit freundlichen Grüßen",
+            "Sehr geehrter Herr Kaya,   →   Mit freundlichen Grüßen",
+            "Niemals „Hallo“ oder „Liebe Grüße“ in einer E-Mail an eine Behörde oder Firma."
+          ]
+        },
+        {
+          "funktion": "Anliegen nennen",
+          "phrasen": [
+            "leider kann ich am … nicht teilnehmen.",
+            "hiermit möchte ich meinen Termin am … absagen.",
+            "hiermit kündige ich meine Mitgliedschaft zum …",
+            "ich habe bei Ihnen ein Zimmer vom … bis … gebucht.",
+            "ich schreibe Ihnen wegen …"
+          ]
+        },
+        {
+          "funktion": "Grund angeben",
+          "phrasen": [
+            "Der Grund dafür ist ein beruflich bedingter Umzug.",
+            "Ich muss an diesem Tag leider arbeiten.",
+            "Aus gesundheitlichen Gründen ist mir das nicht möglich.",
+            "…, da ich an diesem Tag beruflich unterwegs bin."
+          ]
+        },
+        {
+          "funktion": "Höflich bitten (immer Konjunktiv II!)",
+          "phrasen": [
+            "Könnten Sie mir bitte …?",
+            "Wäre es möglich, den Termin zu verschieben?",
+            "Ich würde Sie bitten, mir die Unterlagen zuzuschicken.",
+            "Dürfte ich Sie um eine kurze Bestätigung bitten?",
+            "Könnten Sie mir mitteilen, ob dadurch zusätzliche Kosten entstehen?"
+          ]
+        },
+        {
+          "funktion": "Schluss",
+          "phrasen": [
+            "Vielen Dank im Voraus.",
+            "Ich bedanke mich für Ihre Mühe.",
+            "Über eine kurze Rückmeldung würde ich mich freuen.",
+            "Für Rückfragen stehe ich Ihnen gern zur Verfügung."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Universell — Konnektoren, die überall Punkte bringen",
+      "gruppen": [
+        {
+          "funktion": "Grund",
+          "phrasen": ["weil (Verb ans Ende)", "da (schriftlicher als „weil“)", "denn (Hauptsatz, normale Wortstellung)", "deshalb / deswegen / darum (Verb direkt danach)", "aus diesem Grund"]
+        },
+        {
+          "funktion": "Gegensatz",
+          "phrasen": ["aber", "obwohl (Verb ans Ende)", "trotzdem (Verb direkt danach)", "allerdings", "dagegen", "zwar … aber"]
+        },
+        {
+          "funktion": "Zeit",
+          "phrasen": ["wenn (Gegenwart/Wiederholung)", "als (einmal in der Vergangenheit)", "während", "bevor", "nachdem", "seitdem", "sobald"]
+        },
+        {
+          "funktion": "Ziel und Folge",
+          "phrasen": ["um … zu (gleiches Subjekt)", "damit (verschiedene Subjekte)", "sodass", "also"]
+        },
+        {
+          "funktion": "Bedingung",
+          "phrasen": ["wenn", "falls", "sonst", "andernfalls"]
+        },
+        {
+          "funktion": "Reihenfolge und Ergänzung",
+          "phrasen": ["zuerst / zunächst", "dann / danach / anschließend", "außerdem / zusätzlich", "schließlich / zum Schluss", "übrigens"]
+        }
+      ]
+    }
+  ],
+
+  "grammatik": [
+    {
+      "thema": "Verbstellung — die wichtigste Regel überhaupt",
+      "erklaerung": "Im Hauptsatz steht das konjugierte Verb immer auf Position 2. Im Nebensatz steht es ganz am Ende. Alles andere in der deutschen Satzstellung ist Detail.",
+      "tabelle": {
+        "kopf": ["Satztyp", "Beispiel", "Regel"],
+        "zeilen": [
+          ["Hauptsatz", "Ich **gehe** morgen ins Kino.", "Verb Position 2"],
+          ["Hauptsatz, anderer Anfang", "Morgen **gehe** ich ins Kino.", "Verb bleibt Position 2, Subjekt danach"],
+          ["Frage (W)", "Wann **gehst** du ins Kino?", "W-Wort, dann Verb"],
+          ["Ja/Nein-Frage", "**Gehst** du ins Kino?", "Verb ganz vorn"],
+          ["Nebensatz (weil, dass, …)", "…, weil ich ins Kino **gehe**.", "Verb am Ende"],
+          ["Perfekt / Modalverb", "Ich **bin** ins Kino **gegangen**.", "Klammer: Verb 2, Partizip Ende"],
+          ["Nebensatz + Perfekt", "…, weil ich ins Kino **gegangen bin**.", "Hilfsverb ganz am Ende"]
+        ]
+      }
+    },
+    {
+      "thema": "Präsens — Endungen",
+      "erklaerung": "Die Endungen sind für fast alle Verben gleich. Bei einigen starken Verben ändert sich zusätzlich der Vokal in der 2. und 3. Person Singular: a→ä, e→i/ie.",
+      "tabelle": {
+        "kopf": ["Person", "regelmäßig: lernen", "sein", "haben", "werden", "fahren (a→ä)", "sprechen (e→i)"],
+        "zeilen": [
+          ["ich", "lerne", "bin", "habe", "werde", "fahre", "spreche"],
+          ["du", "lernst", "bist", "hast", "wirst", "**fährst**", "**sprichst**"],
+          ["er/sie/es", "lernt", "ist", "hat", "wird", "**fährt**", "**spricht**"],
+          ["wir", "lernen", "sind", "haben", "werden", "fahren", "sprechen"],
+          ["ihr", "lernt", "seid", "habt", "werdet", "fahrt", "sprecht"],
+          ["sie/Sie", "lernen", "sind", "haben", "werden", "fahren", "sprechen"]
+        ]
+      }
+    },
+    {
+      "thema": "Modalverben",
+      "erklaerung": "Im Singular unregelmäßig, im Plural regelmäßig. Nach einem Modalverb steht der Infinitiv am Satzende — niemals mit „zu“.",
+      "tabelle": {
+        "kopf": ["Person", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchte"],
+        "zeilen": [
+          ["ich", "kann", "muss", "will", "soll", "darf", "mag / möchte"],
+          ["du", "kannst", "musst", "willst", "sollst", "darfst", "magst / möchtest"],
+          ["er/sie/es", "kann", "muss", "will", "soll", "darf", "mag / möchte"],
+          ["wir", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchten"],
+          ["ihr", "könnt", "müsst", "wollt", "sollt", "dürft", "mögt / möchtet"],
+          ["sie/Sie", "können", "müssen", "wollen", "sollen", "dürfen", "mögen / möchten"],
+          ["Präteritum", "konnte", "musste", "wollte", "sollte", "durfte", "mochte"]
+        ]
+      }
+    },
+    {
+      "thema": "Zeitformen im Überblick",
+      "erklaerung": "Gesprochen wird die Vergangenheit fast immer im Perfekt. Ausnahme: sein, haben und die Modalverben — dort klingt das Präteritum auch gesprochen normal. Geschrieben (Zeitung, Bericht) überwiegt das Präteritum.",
+      "tabelle": {
+        "kopf": ["Zeit", "Bildung", "Beispiel", "Wann?"],
+        "zeilen": [
+          ["Präsens", "Verbstamm + Endung", "Ich **arbeite** heute.", "Gegenwart und Zukunft"],
+          ["Perfekt", "haben/sein + Partizip II", "Ich **habe** gestern **gearbeitet**.", "gesprochene Vergangenheit"],
+          ["Präteritum", "Verbstamm + te / Sonderform", "Ich **arbeitete** damals dort.", "geschriebene Vergangenheit; immer bei war/hatte/musste"],
+          ["Plusquamperfekt", "hatte/war + Partizip II", "Ich **hatte** vorher **gearbeitet**.", "Vorvergangenheit, oft mit „nachdem“"],
+          ["Futur I", "werden + Infinitiv", "Ich **werde** morgen **arbeiten**.", "Zukunft mit Betonung, Vermutung, Versprechen"],
+          ["Zukunft (normal)", "Präsens + Zeitangabe", "Ich **arbeite** morgen.", "im Alltag üblicher als Futur I"]
+        ]
+      }
+    },
+    {
+      "thema": "Perfekt: haben oder sein?",
+      "erklaerung": "Die meisten Verben nehmen „haben“. „sein“ nehmen Verben der Bewegung von A nach B, Verben der Zustandsänderung, sowie sein, bleiben und passieren.",
+      "tabelle": {
+        "kopf": ["mit sein", "Beispiel", "mit haben", "Beispiel"],
+        "zeilen": [
+          ["Bewegung: gehen, fahren, kommen, fliegen, laufen, reisen", "Ich **bin** nach Berlin **gefahren**.", "alle Verben mit Akkusativobjekt", "Ich **habe** ein Buch **gelesen**."],
+          ["Zustandsänderung: aufstehen, einschlafen, aufwachen, sterben, wachsen", "Er **ist** früh **aufgestanden**.", "reflexive Verben", "Ich **habe mich** **gefreut**."],
+          ["sein, bleiben, werden, passieren, gelingen", "Das **ist** gestern **passiert**.", "Modalverben", "Ich **habe** nicht **gekonnt**."]
+        ]
+      }
+    },
+    {
+      "thema": "Artikel und Kasus",
+      "erklaerung": "Die Kernfrage ist immer: Welchen Kasus verlangt das Verb oder die Präposition? Nominativ = wer? · Akkusativ = wen/was? · Dativ = wem? · Genitiv = wessen?",
+      "tabelle": {
+        "kopf": ["Kasus", "maskulin", "neutrum", "feminin", "Plural"],
+        "zeilen": [
+          ["Nominativ", "der / ein / mein", "das / ein / mein", "die / eine / meine", "die / — / meine"],
+          ["Akkusativ", "**den / einen / meinen**", "das / ein / mein", "die / eine / meine", "die / — / meine"],
+          ["Dativ", "**dem / einem / meinem**", "**dem / einem / meinem**", "**der / einer / meiner**", "**den … -n / — / meinen … -n**"],
+          ["Genitiv", "**des …-s / eines …-s**", "**des …-s / eines …-s**", "**der / einer**", "**der / — / meiner**"]
+        ]
+      }
+    },
+    {
+      "thema": "Adjektivendungen",
+      "erklaerung": "Merken Sie sich die Faustregel: Wenn der Artikel den Kasus schon zeigt, bekommt das Adjektiv nur -e oder -en. Zeigt der Artikel ihn nicht (ein, kein Artikel), muss das Adjektiv die Arbeit übernehmen.",
+      "tabelle": {
+        "kopf": ["", "nach der/die/das", "nach ein/kein/mein", "ohne Artikel"],
+        "zeilen": [
+          ["m. Nom.", "der gut**e** Mann", "ein gut**er** Mann", "gut**er** Wein"],
+          ["n. Nom.", "das gut**e** Kind", "ein gut**es** Kind", "gut**es** Brot"],
+          ["f. Nom.", "die gut**e** Frau", "eine gut**e** Frau", "gut**e** Milch"],
+          ["Pl. Nom.", "die gut**en** Leute", "meine gut**en** Leute", "gut**e** Leute"],
+          ["m. Akk.", "den gut**en** Mann", "einen gut**en** Mann", "gut**en** Wein"],
+          ["Dativ (alle)", "dem/der gut**en** …", "einem/einer gut**en** …", "gut**em / guter** …"],
+          ["Merksatz", "im Nom./Akk. Singular oft **-e**, sonst fast immer **-en**", "", ""]
+        ]
+      }
+    },
+    {
+      "thema": "Präpositionen",
+      "erklaerung": "Lernen Sie Präpositionen immer mit ihrem Kasus. Die neun Wechselpräpositionen stehen mit Akkusativ bei Bewegung (wohin?) und mit Dativ beim Ort (wo?).",
+      "tabelle": {
+        "kopf": ["Kasus", "Präpositionen", "Beispiel"],
+        "zeilen": [
+          ["immer Akkusativ", "durch, für, gegen, ohne, um, bis, entlang", "Ich mache das **für dich**."],
+          ["immer Dativ", "aus, bei, mit, nach, seit, von, zu, gegenüber, ab", "Ich fahre **mit dem Bus**."],
+          ["Wechsel (Akk. bei wohin?)", "an, auf, hinter, in, neben, über, unter, vor, zwischen", "Ich stelle das Glas **auf den Tisch**."],
+          ["Wechsel (Dativ bei wo?)", "dieselben neun", "Das Glas steht **auf dem Tisch**."],
+          ["Genitiv", "wegen, trotz, während, statt, innerhalb, außerhalb, aufgrund", "**Wegen des Wetters** bleiben wir zu Hause."]
+        ]
+      }
+    },
+    {
+      "thema": "Verben mit fester Präposition",
+      "erklaerung": "Diese Kombinationen kann man nicht ableiten — man muss sie mit Präposition und Kasus zusammen lernen. Sie kommen in jeder Prüfung vor.",
+      "tabelle": {
+        "kopf": ["Verb + Präposition", "Kasus", "Beispiel"],
+        "zeilen": [
+          ["warten auf", "Akkusativ", "Ich warte **auf den Bus**."],
+          ["sich freuen auf (Zukunft) / über (jetzt)", "Akkusativ", "Ich freue mich **auf das Wochenende**."],
+          ["sich interessieren für", "Akkusativ", "Sie interessiert sich **für Musik**."],
+          ["sich bewerben um / bei", "Akk. / Dat.", "Er bewirbt sich **um eine Stelle bei einer Firma**."],
+          ["sich kümmern um", "Akkusativ", "Ich kümmere mich **um die Kinder**."],
+          ["sich erinnern an", "Akkusativ", "Erinnerst du dich **an den Tag**?"],
+          ["denken an", "Akkusativ", "Ich denke **an dich**."],
+          ["sich ärgern über", "Akkusativ", "Er ärgert sich **über den Lärm**."],
+          ["sich beschweren über", "Akkusativ", "Sie beschwert sich **über den Nachbarn**."],
+          ["bitten um", "Akkusativ", "Ich bitte **um Hilfe**."],
+          ["Angst haben vor", "Dativ", "Ich habe Angst **vor der Prüfung**."],
+          ["teilnehmen an", "Dativ", "Wir nehmen **am Kurs** teil."],
+          ["gehören zu", "Dativ", "Das gehört **zu meinen Aufgaben**."],
+          ["sich treffen mit", "Dativ", "Ich treffe mich **mit Freunden**."],
+          ["anfangen mit / aufhören mit", "Dativ", "Er fängt **mit der Arbeit** an."],
+          ["helfen bei", "Dativ", "Kannst du mir **beim Umzug** helfen?"],
+          ["sprechen über (Thema) / mit (Person)", "Akk. / Dat.", "Ich spreche **mit ihr über das Problem**."],
+          ["sich entscheiden für", "Akkusativ", "Ich habe mich **für den Kurs** entschieden."]
+        ]
+      }
+    },
+    {
+      "thema": "Verben mit Dativ",
+      "erklaerung": "Eine kleine, aber sehr häufige Gruppe. Bei gefallen und schmecken dreht sich außerdem die Perspektive: Nicht ich mag es, sondern es gefällt mir.",
+      "tabelle": {
+        "kopf": ["Verb", "Beispiel", "Englisch"],
+        "zeilen": [
+          ["helfen", "Ich helfe **dir**.", "to help"],
+          ["danken", "Ich danke **Ihnen**.", "to thank"],
+          ["gefallen", "Das Bild gefällt **mir**.", "I like the picture"],
+          ["schmecken", "Der Kuchen schmeckt **uns**.", "we like the taste"],
+          ["gehören", "Das Buch gehört **ihm**.", "belongs to"],
+          ["passen", "Der Termin passt **mir** gut.", "suits me"],
+          ["antworten", "Ich antworte **dem Chef**.", "to answer someone"],
+          ["folgen", "Bitte folgen Sie **mir**.", "to follow"],
+          ["glauben", "Ich glaube **dir**.", "to believe someone"],
+          ["raten", "Ich rate **dir**, …", "to advise someone"],
+          ["gratulieren", "Wir gratulieren **dir**!", "to congratulate"],
+          ["fehlen", "Du fehlst **mir**.", "I miss you"]
+        ]
+      }
+    },
+    {
+      "thema": "Konjunktiv II — höflich und irreal",
+      "erklaerung": "Für Höflichkeit und für alles, was nicht wirklich so ist. Bei sein, haben und den Modalverben nimmt man die eigenen Formen, sonst „würde“ + Infinitiv.",
+      "tabelle": {
+        "kopf": ["Verb", "Konjunktiv II", "Beispiel"],
+        "zeilen": [
+          ["sein", "wäre", "**Wäre** das für Sie in Ordnung?"],
+          ["haben", "hätte", "Ich **hätte** gern einen Termin."],
+          ["können", "könnte", "**Könnten** Sie mir bitte helfen?"],
+          ["müssen", "müsste", "Ich **müsste** eigentlich lernen."],
+          ["werden", "würde", "Ich **würde** gern kommen."],
+          ["alle anderen", "würde + Infinitiv", "An deiner Stelle **würde** ich das **machen**."],
+          ["Vergangenheit", "hätte/wäre + Partizip II", "Ich **hätte** früher **anrufen sollen**."]
+        ]
+      }
+    },
+    {
+      "thema": "Passiv",
+      "erklaerung": "Das Passiv rückt die Handlung in den Mittelpunkt; wer handelt, wird oft weggelassen. Deshalb steht es überall in Nachrichten, Ordnungen und Formularen.",
+      "tabelle": {
+        "kopf": ["Form", "Bildung", "Beispiel"],
+        "zeilen": [
+          ["Präsens", "wird / werden + Partizip II", "Das Formular **wird ausgefüllt**."],
+          ["Präteritum", "wurde / wurden + Partizip II", "Das Formular **wurde ausgefüllt**."],
+          ["Perfekt", "ist … worden", "Das Formular **ist ausgefüllt worden**."],
+          ["mit Modalverb", "muss/kann + Partizip II + werden", "Das Formular **muss ausgefüllt werden**."],
+          ["Wer handelt?", "von + Dativ", "Das Formular wird **vom Amt** geprüft."],
+          ["Achtung", "werden + Infinitiv = Futur, kein Passiv", "Er **wird kommen**. (Zukunft)"]
+        ]
+      }
+    },
+    {
+      "thema": "Relativsätze",
+      "erklaerung": "Geschlecht und Zahl kommen vom Nomen davor, der Kasus von der Rolle im Relativsatz. Das Verb steht am Ende, und vor dem Relativsatz steht ein Komma.",
+      "tabelle": {
+        "kopf": ["Kasus", "maskulin", "neutrum", "feminin", "Plural"],
+        "zeilen": [
+          ["Nominativ", "der", "das", "die", "die"],
+          ["Akkusativ", "den", "das", "die", "die"],
+          ["Dativ", "dem", "dem", "der", "denen"],
+          ["Beispiel Nom.", "Der Mann, **der** dort steht, …", "", "", ""],
+          ["Beispiel Akk.", "Der Mann, **den** ich kenne, …", "", "", ""],
+          ["Beispiel Dat.", "Der Mann, **dem** ich geholfen habe, …", "", "", ""]
+        ]
+      }
+    },
+    {
+      "thema": "Komparativ und Superlativ",
+      "erklaerung": "Vergleich mit „als“ bei Unterschied, mit „so … wie“ bei Gleichheit. Niemals „größer wie“.",
+      "tabelle": {
+        "kopf": ["Grundform", "Komparativ", "Superlativ", "vor dem Nomen"],
+        "zeilen": [
+          ["schnell", "schneller", "am schnellsten", "der schnellste Zug"],
+          ["alt", "älter", "am ältesten", "das älteste Haus"],
+          ["gut", "**besser**", "**am besten**", "der beste Film"],
+          ["viel", "**mehr**", "**am meisten**", "die meisten Leute"],
+          ["gern", "**lieber**", "**am liebsten**", "—"],
+          ["hoch", "**höher**", "**am höchsten**", "der höchste Berg"],
+          ["nah", "**näher**", "**am nächsten**", "die nächste Station"],
+          ["groß", "größer", "**am größten**", "die größte Stadt"]
+        ]
+      }
+    },
+    {
+      "thema": "Reflexive Verben",
+      "erklaerung": "Das Reflexivpronomen steht im Akkusativ — außer wenn der Satz schon ein Objekt hat, dann im Dativ.",
+      "tabelle": {
+        "kopf": ["Person", "Akkusativ", "Dativ", "Beispiel"],
+        "zeilen": [
+          ["ich", "mich", "mir", "Ich wasche **mich**. / Ich wasche **mir** die Hände."],
+          ["du", "dich", "dir", "Freust du **dich**?"],
+          ["er/sie/es", "sich", "sich", "Er interessiert **sich** für Sport."],
+          ["wir", "uns", "uns", "Wir treffen **uns** um acht."],
+          ["ihr", "euch", "euch", "Setzt **euch** bitte."],
+          ["sie/Sie", "sich", "sich", "Sie erinnern **sich** an mich."]
+        ]
+      }
+    },
+    {
+      "thema": "n-Deklination",
+      "erklaerung": "Diese maskulinen Nomen bekommen in allen Fällen außer dem Nominativ Singular ein -n oder -en. Man erkennt sie nicht am Klang — mitlernen.",
+      "tabelle": {
+        "kopf": ["Nominativ", "Akkusativ / Dativ / Genitiv", "Englisch"],
+        "zeilen": [
+          ["der Kollege", "den/dem/des Kollegen", "colleague"],
+          ["der Nachbar", "den/dem/des Nachbarn", "neighbour"],
+          ["der Mensch", "den/dem/des Menschen", "human being"],
+          ["der Herr", "den/dem/des Herrn", "gentleman, Mr"],
+          ["der Student", "den/dem/des Studenten", "student"],
+          ["der Kunde", "den/dem/des Kunden", "customer"],
+          ["der Patient", "den/dem/des Patienten", "patient"],
+          ["der Praktikant", "den/dem/des Praktikanten", "intern"],
+          ["der Junge", "den/dem/des Jungen", "boy"],
+          ["der Name", "den/dem Namen, des Namens", "name (irregular)"]
+        ]
+      }
+    },
+    {
+      "thema": "Imperativ",
+      "erklaerung": "Für Bitten und Aufforderungen. Mit „bitte“ und „doch mal“ klingt es sofort freundlicher.",
+      "tabelle": {
+        "kopf": ["Form", "regelmäßig", "sein", "Beispiel"],
+        "zeilen": [
+          ["du", "Komm! / Warte!", "Sei!", "**Komm** doch **mal** vorbei!"],
+          ["ihr", "Kommt! / Wartet!", "Seid!", "**Wartet** bitte hier."],
+          ["Sie", "Kommen Sie! / Warten Sie!", "Seien Sie!", "**Seien Sie** bitte pünktlich."],
+          ["Vokalwechsel e→i bleibt", "sprechen → **Sprich!**", "", "**Nimm** dir Zeit! (nehmen)"],
+          ["a→ä fällt weg", "fahren → **Fahr!**", "", "**Lauf** schneller! (laufen)"]
+        ]
+      }
+    },
+    {
+      "thema": "Modalpartikeln — das kleine Extra",
+      "erklaerung": "Diese Wörter ändern nicht die Information, sondern den Ton. Wer sie richtig benutzt, klingt sofort natürlicher — das fällt in der mündlichen Prüfung auf.",
+      "tabelle": {
+        "kopf": ["Partikel", "Wirkung", "Beispiel"],
+        "zeilen": [
+          ["doch", "freundlicher, überzeugend", "Komm **doch** mit!"],
+          ["mal", "macht die Bitte kleiner", "Kannst du **mal** helfen?"],
+          ["ja", "„das weißt du doch“", "Das ist **ja** interessant!"],
+          ["denn", "in Fragen: freundlicher", "Was machst du **denn** hier?"],
+          ["eigentlich", "beiläufig nachfragen", "Wie spät ist es **eigentlich**?"],
+          ["ruhig", "Erlaubnis geben", "Frag **ruhig** nach."],
+          ["halt / eben", "„so ist es nun mal“", "Das ist **halt** so."]
+        ]
+      }
+    }
+  ]
+}

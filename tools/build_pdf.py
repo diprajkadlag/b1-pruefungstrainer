@@ -12,6 +12,10 @@ Four documents per exam, into content/exams/<id>/pdf/:
     sprechen_karten.pdf      speaking cards and notes page
     loesungen.pdf            keys, transcripts, model answers, glossary, grammar
 
+Plus one document that belongs to no single exam, into content/lernhilfe/pdf/:
+
+    spickzettel.pdf          strategy, Redemittel, grammar tables, core vocabulary
+
 Templates use << >> for variables and <% %> for blocks, so LaTeX's own braces
 pass through untouched.
 """
@@ -31,6 +35,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
+LERNHILFE = ROOT / "content" / "lernhilfe"
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 
 DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen"]
@@ -79,7 +84,10 @@ _UNICODE_TO_TEX = {
     "→": r"\ensuremath{\rightarrow}",
     "←": r"\ensuremath{\leftarrow}",
     "≥": r"\ensuremath{\geq}", "≤": r"\ensuremath{\leq}",
+    "≠": r"\ensuremath{\neq}",
     "×": r"\ensuremath{\times}",
+    "▲": r"\ensuremath{\blacktriangle}",
+    "·": r"\textperiodcentered{}",
     "…": r"\dots{}",
     " ": "~",       # non-breaking space
     " ": "~",       # narrow no-break space
@@ -107,6 +115,18 @@ def texpar(value: Any) -> str:
     # A single newline inside a paragraph is not meaningful in LaTeX; a double
     # one is. Regulations use single newlines as hard breaks, so keep those.
     return "\n\n".join(p.replace("\n", r"\\" + "\n") for p in paragraphs)
+
+
+def betont(value: Any) -> str:
+    """Escape, then turn **markers** into bold.
+
+    The cheat sheet marks the one word each row is actually about — the changed
+    vowel, the case that governs, the ending that gives it away. In a dense
+    grammar table that mark carries as much information as the row itself, so
+    the content authors it inline rather than splitting every table into a
+    "form" and a "what to notice" column.
+    """
+    return re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", tex(value))
 
 
 def kuerzen(value: str, limit: int = 90) -> str:
@@ -217,9 +237,10 @@ def environment():
         autoescape=False,
     )
     env.filters.update(
-        tex=tex, texpar=texpar, kuerzen=kuerzen, folientext=folientext,
-        zeilen=zeilen, kurz=kurz, teilname=teilname, aufgabenname=aufgabenname,
-        alle_items=alle_items, itemmacro=itemmacro, glossarformen=glossarformen,
+        tex=tex, texpar=texpar, betont=betont, kuerzen=kuerzen,
+        folientext=folientext, zeilen=zeilen, kurz=kurz, teilname=teilname,
+        aufgabenname=aufgabenname, alle_items=alle_items, itemmacro=itemmacro,
+        glossarformen=glossarformen,
     )
     return env
 
@@ -307,14 +328,48 @@ def build_exam(exam_id: str, keep_tex: bool, only: str | None) -> bool:
     return ok
 
 
+def build_lernhilfe(keep_tex: bool) -> bool:
+    """Build the cheat sheet.
+
+    It sits outside the per-exam loop on purpose: it belongs to no single paper
+    and is what the student takes to the café the evening before, so it is
+    built once from content/lernhilfe/ rather than five times.
+    """
+    if not (LERNHILFE / "lernhilfe.json").exists():
+        return True
+
+    daten = json.loads((LERNHILFE / "lernhilfe.json").read_text(encoding="utf-8"))
+    daten["wortschatz"] = json.loads(
+        (LERNHILFE / "wortschatz.json").read_text(encoding="utf-8")
+    )
+
+    print("\nlernhilfe")
+    try:
+        pdf, n_pages = build_document("spickzettel", daten, LERNHILFE / "pdf", keep_tex)
+        print(f"    {'spickzettel':22} {n_pages:3d} Seiten  "
+              f"{pdf.stat().st_size / 1024:6.0f} KB")
+        return True
+    except Exception as exc:  # noqa: BLE001 — report and continue
+        print(f"    {'spickzettel':22} FAILED\n{exc}")
+        return False
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("exam", nargs="?", help="exam id, e.g. pruefung-01")
     ap.add_argument("--keep-tex", action="store_true",
                     help="write the generated .tex next to the PDF")
-    ap.add_argument("--only", choices=DOKUMENTE, help="build a single document")
+    ap.add_argument("--only", choices=[*DOKUMENTE, "spickzettel"],
+                    help="build a single document")
     args = ap.parse_args(list(argv) if argv is not None else None)
+
+    # A LaTeX error quotes the offending source line back at us, so the failure
+    # path is exactly where non-cp1252 characters turn up — and a console that
+    # cannot print the error is worse than the error.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
     if shutil.which("pdflatex") is None:
         print("pdflatex not found. Install TeX Live or MiKTeX and retry.")
@@ -323,13 +378,23 @@ def main(argv: Iterable[str] | None = None) -> int:
         print("No content/exams directory.")
         return 1
 
+    if args.only == "spickzettel":
+        ok = build_lernhilfe(args.keep_tex)
+        print("\nDone." if ok else "\nSome documents failed.")
+        return 0 if ok else 1
+
     folders = [f for f in sorted(CONTENT.iterdir())
                if f.is_dir() and (not args.exam or f.name == args.exam)]
     if not folders:
         print(f"No exam matching {args.exam!r}.")
         return 1
 
-    ok = all(build_exam(f.name, args.keep_tex, args.only) for f in folders)
+    # all() short-circuits, and a failed exam must not stop the rest.
+    results = [build_exam(f.name, args.keep_tex, args.only) for f in folders]
+    if not args.exam and not args.only:
+        results.append(build_lernhilfe(args.keep_tex))
+
+    ok = all(results)
     print("\nDone." if ok else "\nSome documents failed.")
     return 0 if ok else 1
 

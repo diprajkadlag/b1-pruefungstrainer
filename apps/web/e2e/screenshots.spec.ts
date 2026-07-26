@@ -68,3 +68,18 @@ test('Screenshots erzeugen', async ({ page }) => {
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: `${OUT}06-grammatik.png`, fullPage: false });
 });
+
+test('Spickzettel-Screenshots erzeugen', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+
+  await page.getByRole('tab', { name: 'Redemittel' }).click();
+  await page.locator('.spick__karte').first().waitFor();
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: `${OUT}07-spickzettel.png`, fullPage: false });
+
+  await page.getByRole('tab', { name: 'Wortschatz' }).click();
+  await page.locator('.spick__tabelle').first().waitFor();
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: `${OUT}08-wortschatz.png`, fullPage: false });
+});

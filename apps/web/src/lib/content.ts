@@ -7,7 +7,12 @@
  * tools/export_web.py produces the split and fails the build if a key leaks.
  */
 
-import type { AudioManifest, OeffentlichePruefung, Schluesseldaten } from '@b1/core';
+import type {
+  AudioManifest,
+  Lernhilfe,
+  OeffentlichePruefung,
+  Schluesseldaten,
+} from '@b1/core';
 
 export interface RegistryEintrag {
   id: string;
@@ -31,8 +36,12 @@ async function holen<T>(pfad: string): Promise<T> {
   return (await res.json()) as T;
 }
 
-export const registryLaden = (): Promise<{ pruefungen: RegistryEintrag[] }> =>
-  holen(`${BASIS}/index.json`);
+export const registryLaden = (): Promise<{
+  pruefungen: RegistryEintrag[];
+  hatLernhilfe?: boolean;
+}> => holen(`${BASIS}/index.json`);
+
+export const lernhilfeLaden = (): Promise<Lernhilfe> => holen(`${BASIS}/lernhilfe.json`);
 
 export const pruefungLaden = (id: string): Promise<OeffentlichePruefung> =>
   holen(`${BASIS}/${id}/exam.public.json`);

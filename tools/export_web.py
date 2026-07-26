@@ -27,6 +27,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
+LERNHILFE = ROOT / "content" / "lernhilfe"
 TARGET = ROOT / "apps" / "web" / "public" / "content"
 
 # Anything that reveals or justifies an answer, plus metadata the app does not
@@ -182,6 +183,25 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool) -> dict[str, An
     }
 
 
+def export_lernhilfe() -> bool:
+    """Copy the cheat sheet into the app as one file.
+
+    No split is needed here — it belongs to no attempt and gives away no
+    answer, so it stays readable before, during preparation and after.
+    """
+    quelle = LERNHILFE / "lernhilfe.json"
+    if not quelle.exists():
+        return False
+
+    daten = json.loads(quelle.read_text(encoding="utf-8"))
+    daten["wortschatz"] = json.loads(
+        (LERNHILFE / "wortschatz.json").read_text(encoding="utf-8")
+    )
+    (TARGET / "lernhilfe.json").write_text(
+        json.dumps(daten, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return True
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -189,6 +209,13 @@ def main(argv: Iterable[str] | None = None) -> int:
     ap.add_argument("--no-audio", action="store_true",
                     help="skip copying audio (much faster while iterating on the app)")
     args = ap.parse_args(list(argv) if argv is not None else None)
+
+    # Exam titles and this summary contain German text and an arrow; a Windows
+    # console defaulting to cp1252 would otherwise crash on the last line, long
+    # after the files were written.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
     if not CONTENT.exists():
         print("No content/exams directory.")
@@ -206,10 +233,14 @@ def main(argv: Iterable[str] | None = None) -> int:
               f"{entry['audioDauerSek'] / 60:5.1f} min Audio, {entry['dateien']} Dateien")
 
     if not args.exam:
+        hat_lernhilfe = export_lernhilfe()
         (TARGET / "index.json").write_text(
-            json.dumps({"pruefungen": registry}, ensure_ascii=False, indent=2) + "\n",
+            json.dumps({"pruefungen": registry, "hatLernhilfe": hat_lernhilfe},
+                       ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8")
         print(f"\nRegistry: {len(registry)} Prüfung(en) → {TARGET / 'index.json'}")
+        if hat_lernhilfe:
+            print(f"Spickzettel → {TARGET / 'lernhilfe.json'}")
     return 0
 
 

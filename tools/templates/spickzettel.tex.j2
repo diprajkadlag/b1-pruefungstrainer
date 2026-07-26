@@ -1,0 +1,362 @@
+% spickzettel.tex — the cheat sheet, generated from content/lernhilfe/.
+%
+% Unlike the exam documents this one is meant to be read rather than sat, so it
+% runs narrower margins and a smaller body size: it is a reference the student
+% flicks through, and page turns cost more here than white space does.
+\documentclass[10pt,a4paper]{article}
+\usepackage{b1pruefung}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multicol}
+
+\geometry{top=2.1cm,bottom=1.9cm,left=1.6cm,right=1.6cm,headheight=22pt}
+
+\pruefungstitel{B1 Spickzettel}
+\modulname{Strategie · Redemittel · Grammatik · Wortschatz}
+\niveaustufe{B1}
+
+\setlength{\parskip}{0.4em}
+\linespread{1.02}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+
+% --- cheat-sheet furniture -------------------------------------------------
+% Numbered banner that opens each of the four big sections.
+\newcommand{\spickteil}[2]{%
+  \needspace{6\baselineskip}
+  \vspace{0.9em}
+  \begin{tcolorbox}[colback=b1rule,colframe=b1rule,boxrule=0pt,arc=2pt,
+                    left=9pt,right=9pt,top=5pt,bottom=5pt]
+    {\large\bfseries\color{white}#1}%
+    \hfill{\small\color{b1edge}#2}
+  \end{tcolorbox}
+  \vspace{0.2em}
+}
+
+\newcommand{\spickunter}[1]{%
+  \needspace{4\baselineskip}
+  \vspace{0.5em}
+  {\bfseries\color{b1rule}#1}\par
+  \vspace{0.1em}{\color{b1edge}\hrule height 0.7pt}\vspace{0.35em}
+}
+
+% \merke{body} — the rule worth carrying into the exam hall.
+\newcommand{\merke}[1]{%
+  \begin{tcolorbox}[colback=b1soft,colframe=b1mark,boxrule=0pt,arc=1pt,
+                    leftrule=2.5pt,left=8pt,right=8pt,top=5pt,bottom=5pt,
+                    before skip=5pt,after skip=6pt]
+    \small #1
+  \end{tcolorbox}
+}
+
+% One functional block of Redemittel: what you want to do, then how to say it.
+% No \needspace here or in \fehlerzeile — both are set inside multicols, where
+% needspace's page-breaking test does not apply and upsets column balancing.
+\newcommand{\redeblock}[2]{%
+  \par\vspace{0.35em}
+  {\small\bfseries\color{b1mark}#1}\par\vspace{0.1em}
+  \begin{list}{}{\leftmargin=0.9em\itemsep=1pt\parsep=0pt\topsep=1pt
+                 \labelsep=0.35em\labelwidth=0.55em}
+    #2
+  \end{list}
+}
+\newcommand{\redesatz}[1]{\item[\color{b1edge}\textbullet] \small #1}
+
+% Wrong-versus-right pair for the writing error list.
+\newcommand{\fehlerzeile}[3]{%
+  \par\vspace{0.3em}
+  {\small\color{b1mute}$\times$\ #1}\par
+  {\small\color{b1mark}$\checkmark$\ \textbf{#2}}\par
+  {\footnotesize\color{b1mute}#3}\par
+}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=b1soft,colframe=b1rule,boxrule=1pt,arc=2pt,
+                  left=10pt,right=10pt,top=9pt,bottom=9pt]
+  {\LARGE\bfseries << titel|tex >>}\\[3pt]
+  {\small\color{b1mute}<< untertitel|tex >>}
+\end{tcolorbox}
+
+\hinweisblock
+
+%% ==========================================================================
+%% 1 — Überblick
+%% ==========================================================================
+\spickteil{1 · Die Prüfung auf einen Blick}{Was zählt, wann}
+
+<< ueberblick.einleitung|tex >>
+
+\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{}p{1.9cm} p{3.2cm} p{3.0cm} p{3.3cm}
+                             >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Modul} & \textbf{Zeit} & \textbf{Umfang} & \textbf{Punkte} &
+  \textbf{Das Wichtigste} \\
+\midrule
+<% for m in ueberblick.module %>
+\textbf{<< m.modul|tex >>} & << m.zeit|tex >> & << m.teile|tex >> &
+  << m.punkte|tex >> & \footnotesize << m.kern|tex >> \\
+<% endfor %>
+\bottomrule
+\end{tabularx}
+
+\vspace{0.5em}
+\begin{minipage}[t]{0.46\linewidth}
+\spickunter{Notenskala (pro Modul)}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+\toprule
+<% for n in ueberblick.noten %>
+<< n.note|tex >> & << n.bis >>–<< n.von >> Punkte \\
+<% endfor %>
+\bottomrule
+\end{tabularx}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\spickunter{Die einzige Zahl, die wirklich zählt}
+\merke{\textbf{60 von 100} in \emph{jedem} Modul. Bei Lesen und Hören sind das
+  \textbf{18 von 30} richtigen Aufgaben. Ein starkes Modul rettet kein
+  schwaches — die Module werden einzeln bestanden und können einzeln
+  wiederholt werden.}
+\end{minipage}
+
+%% ==========================================================================
+%% 2 — Strategie
+%% ==========================================================================
+\spickteil{2 · Strategie für die vier Module}{Was man macht, bevor man kann}
+
+<% for s in strategie %>
+\spickunter{<< s.modul|tex >>  ·  {\normalfont\small\color{b1mute}<< s.zeitplan|tex >>}}
+
+\begin{list}{}{\leftmargin=1.2em\itemsep=2pt\parsep=0pt\topsep=2pt
+               \labelsep=0.4em\labelwidth=0.8em}
+<% for g in s.goldregeln %>
+  \item[\color{b1mark}\textbf{\textbullet}] \small << g|betont >>
+<% endfor %>
+\end{list}
+
+<% if s.get('tipps') %>
+\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{}p{4.6cm} >{\raggedright\arraybackslash}X@{}}
+\toprule
+<% for t in s.tipps %>
+\footnotesize\textbf{<< t.teil|tex >>} & \footnotesize << t.text|betont >> \\
+<% if not loop.last %>\addlinespace[2pt]<% endif %>
+<% endfor %>
+\bottomrule
+\end{tabularx}
+<% endif %>
+
+<% if s.get('aufgaben') %>
+\vspace{0.3em}
+<% for a in s.aufgaben %>
+\needspace{5\baselineskip}
+{\small\bfseries\color{b1mark}<< a.aufgabe|tex >>}\par
+{\footnotesize\textbf{Aufbau:} << a.aufbau|tex >>}\par
+{\footnotesize\color{b1mute}<< a.hinweis|betont >>}\par\vspace{0.35em}
+<% endfor %>
+<% endif %>
+
+<% if s.get('teile') %>
+\vspace{0.3em}
+<% for t in s.teile %>
+\needspace{6\baselineskip}
+{\small\bfseries\color{b1mark}<< t.teil|tex >>}\par
+{\footnotesize\textbf{Ziel:} << t.ziel|tex >>}\par
+{\footnotesize\textbf{Ablauf:} << t.ablauf|tex >>}\par
+{\footnotesize\color{b1mute}\textbf{Achtung:} << t.achtung|betont >>}\par\vspace{0.35em}
+<% endfor %>
+<% endif %>
+
+<% if s.get('fehlerliste') %>
+\vspace{0.4em}
+\spickunter{Die zehn Fehler, die am meisten Punkte kosten}
+\begin{multicols}{2}
+<% for f in s.fehlerliste %>
+\fehlerzeile{<< f.falsch|tex >>}{<< f.richtig|tex >>}{<< f.grund|tex >>}
+<% endfor %>
+\end{multicols}
+<% endif %>
+
+<% endfor %>
+
+%% ==========================================================================
+%% 3 — Redemittel
+%% ==========================================================================
+\spickteil{3 · Redemittel}{Sätze, die immer passen}
+
+\merke{Lernen Sie aus jedem Block \textbf{zwei} Wendungen richtig auswendig,
+  nicht alle zehn ungefähr. Zwei sichere Sätze, die Sie ohne Nachdenken
+  abrufen, bringen in der Prüfung mehr als eine lange Liste, bei der Sie
+  mitten im Satz überlegen müssen.}
+
+<% for r in redemittel %>
+\spickunter{<< r.bereich|tex >>}
+\begin{multicols}{2}
+<% for g in r.gruppen %>
+\redeblock{<< g.funktion|tex >>}{%
+<% for p in g.phrasen %>
+  \redesatz{<< p|tex >>}
+<% endfor %>
+}
+<% endfor %>
+\end{multicols}
+<% endfor %>
+
+%% ==========================================================================
+%% 4 — Grammatik
+%% ==========================================================================
+\spickteil{4 · Grammatik in Tabellen}{Fett = genau das, was man sich merken muss}
+
+<% for gr in grammatik %>
+\needspace{8\baselineskip}
+\spickunter{<< gr.thema|tex >>}
+{\small << gr.erklaerung|tex >>}\par\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{}<% for _ in gr.tabelle.kopf %>>{\raggedright\arraybackslash}X <% endfor %>@{}}
+\toprule
+<% for k in gr.tabelle.kopf %>
+\footnotesize\textbf{<< k|tex >>}<% if not loop.last %> & <% endif %>
+<% endfor %>
+ \\
+\midrule
+<% for z in gr.tabelle.zeilen %>
+<% for c in z %>
+\footnotesize << c|betont >><% if not loop.last %> & <% endif %>
+<% endfor %>
+ \\
+<% endfor %>
+\bottomrule
+\end{tabularx}
+\vspace{0.4em}
+<% endfor %>
+
+%% ==========================================================================
+%% 5 — Wortschatz
+%% ==========================================================================
+\spickteil{5 · Grundwortschatz}{<< wortschatz.titel|tex >>}
+
+\merke{<< wortschatz.hinweis|betont >>}
+
+<# Counts come from the data, so they cannot drift as words are added. #>
+<% set n_verben = wortschatz.verben|map(attribute='eintraege')|map('length')|sum %>
+<% set n_nomen = wortschatz.nomen|map(attribute='eintraege')|map('length')|sum %>
+\spickunter{<< n_verben >> Verben mit ihren Stammformen}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+% Ragged right throughout: these columns are too narrow to justify without
+% stretched word spacing and hyphenated English glosses.
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.5cm}
+                    >{\raggedright\arraybackslash}p{3.1cm}
+                    >{\raggedright\arraybackslash}p{1.6cm}
+                    >{\raggedright\arraybackslash}p{1.7cm}
+                    >{\raggedright\arraybackslash}p{2.4cm}
+                    >{\raggedright\arraybackslash}p{4.0cm}@{}}
+\toprule
+\textbf{Infinitiv} & \textbf{Englisch} & \textbf{er/sie/es} &
+  \textbf{Präteritum} & \textbf{Perfekt} & \textbf{Beispiel} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Infinitiv} & \textbf{Englisch} & \textbf{er/sie/es} &
+  \textbf{Präteritum} & \textbf{Perfekt} & \textbf{Beispiel} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+<% for g in wortschatz.verben %>
+\addlinespace[2pt]
+\multicolumn{6}{@{}l}{\color{b1mark}\bfseries << g.gruppe|tex >>} \\
+\addlinespace[1pt]
+\midrule
+<% for v in g.eintraege %>
+\textbf{<< v.inf|tex >>}<% if v.unreg %>\,$\blacktriangle$<% endif %> &
+  << v.en|tex >> & << v['er']|tex >> & << v['prät']|tex >> &
+  << v.perf|tex >> & << v.bsp|betont >> \\
+<% endfor %>
+<% endfor %>
+\end{longtable}
+}
+
+\merke{$\blacktriangle$ = unregelmäßig. Aus den vier Stammformen lässt sich
+  jede Zeitform bilden: \textbf{Präsens} aus dem Infinitiv (\emph{ich gehe}),
+  \textbf{Perfekt} aus Hilfsverb + Partizip (\emph{ich bin gegangen}),
+  \textbf{Präteritum} direkt (\emph{ich ging}), \textbf{Futur~I} aus
+  \emph{werden} + Infinitiv (\emph{ich werde gehen}) und
+  \textbf{Konjunktiv~II} aus \emph{würde} + Infinitiv (\emph{ich würde gehen}).}
+
+\spickunter{<< n_nomen >> Nomen mit Artikel und Plural}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.9cm}
+                    >{\raggedright\arraybackslash}p{4.2cm}
+                    >{\raggedright\arraybackslash}p{4.6cm}
+                    >{\raggedright\arraybackslash}p{6.5cm}@{}}
+\toprule
+\textbf{Art.} & \textbf{Nomen} & \textbf{Plural} & \textbf{Englisch} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Art.} & \textbf{Nomen} & \textbf{Plural} & \textbf{Englisch} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+<% for g in wortschatz.nomen %>
+\addlinespace[2pt]
+\multicolumn{4}{@{}l}{\color{b1mark}\bfseries << g.gruppe|tex >>} \\
+\addlinespace[1pt]
+\midrule
+<% for n in g.eintraege %>
+<< n.art|tex >> & \textbf{<< n.wort|tex >>} & << n.pl|tex >> & << n['en']|tex >> \\
+<% endfor %>
+<% endfor %>
+\end{longtable}
+}
+
+\merke{Den Artikel lernt man nur mit dem Wort zusammen. Drei Endungen sind
+  aber verlässlich: \textbf{-ung, -heit, -keit, -schaft, -tion} sind immer
+  \textbf{die}; \textbf{-chen} und \textbf{-lein} immer \textbf{das};
+  \textbf{-er} bei Personen und Geräten meist \textbf{der}.}
+
+\spickunter{Adjektive — immer als Gegensatzpaar lernen}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.6cm}
+                    >{\raggedright\arraybackslash}p{4.6cm}
+                    >{\raggedright\arraybackslash}p{8.0cm}@{}}
+\toprule
+\textbf{Adjektiv} & \textbf{Gegenteil} & \textbf{Englisch} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Adjektiv} & \textbf{Gegenteil} & \textbf{Englisch} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+<% for a in wortschatz.adjektive %>
+\textbf{<< a.wort|tex >>} & << a.gegenteil|tex >> & << a['en']|tex >> \\
+<% endfor %>
+\end{longtable}
+}
+
+\spickunter{Die kleinen Wörter, die den Unterschied machen}
+
+<% for k in wortschatz.kleineWoerter %>
+\needspace{3\baselineskip}
+{\small\bfseries\color{b1mark}<< k.gruppe|tex >>}\par
+{\small << k['woerter']|tex >>}\par\vspace{0.35em}
+<% endfor %>
+
+\vspace{1em}
+\merke{\textbf{Am Abend vor der Prüfung:} Abschnitt 1 und die Goldregeln aus
+  Abschnitt 2 lesen, dann je zwei Redemittel für Sprechen Teil 1 und 2
+  auswendig aufsagen. Keine neuen Vokabeln mehr — die bringen jetzt nichts
+  mehr, guter Schlaf schon. Viel Erfolg!}
+
+\end{document}

@@ -249,3 +249,65 @@ export interface Versuch {
   sprechen: Record<string, Blob>;
   gehoerteTeile: number[];
 }
+
+// --- the cheat sheet --------------------------------------------------------
+// Belongs to no single exam: it is the reference the candidate reads before
+// sitting one, so it carries no answers and needs no public/keyed split.
+
+export interface Tabelle {
+  kopf: string[];
+  zeilen: string[][];
+}
+
+export interface Lernhilfe {
+  titel: string;
+  untertitel: string;
+  version: string;
+  ueberblick: {
+    einleitung: string;
+    module: {
+      modul: string;
+      zeit: string;
+      teile: string;
+      punkte: string;
+      kern: string;
+    }[];
+    noten: { note: string; von: number; bis: number }[];
+  };
+  strategie: {
+    modul: string;
+    zeitplan: string;
+    goldregeln: string[];
+    tipps?: { teil: string; text: string }[];
+    aufgaben?: { aufgabe: string; aufbau: string; hinweis: string }[];
+    teile?: { teil: string; ziel: string; ablauf: string; achtung: string }[];
+    fehlerliste?: { falsch: string; richtig: string; grund: string }[];
+  }[];
+  redemittel: {
+    bereich: string;
+    gruppen: { funktion: string; phrasen: string[] }[];
+  }[];
+  grammatik: { thema: string; erklaerung: string; tabelle: Tabelle }[];
+  wortschatz: {
+    titel: string;
+    hinweis: string;
+    verben: {
+      gruppe: string;
+      eintraege: {
+        inf: string;
+        en: string;
+        er: string;
+        prät: string;
+        perf: string;
+        unreg: boolean;
+        bsp: string;
+      }[];
+    }[];
+    nomen: {
+      gruppe: string;
+      eintraege: { art: string; wort: string; pl: string; en: string }[];
+    }[];
+    adjektive: { wort: string; gegenteil: string; en: string }[];
+    kleineWoerter: { gruppe: string; woerter: string }[];
+  };
+}

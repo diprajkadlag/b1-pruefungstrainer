@@ -55,7 +55,10 @@ jobs:
       - name: Package assets
         run: |
           mkdir -p release
-          zip -rq release/pdfs.zip content/exams/*/pdf
+          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf
+          # Also on its own: most people want the cheat sheet without
+          # downloading 20 exam PDFs to find it.
+          cp content/lernhilfe/pdf/spickzettel.pdf release/
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
@@ -77,6 +80,9 @@ jobs:
 
             - **`b1-pruefungstrainer-portable.zip`** — unzip and double-click
               `Start-B1-Trainer.cmd`. No installation, works offline.
+            - **`spickzettel.pdf`** — the cheat sheet: strategy for all four
+              modules, Redemittel for Sprechen and Schreiben, grammar in
+              tables, and the core vocabulary with every verb form.
             - **`pdfs.zip`** — printable papers, answer sheets, speaking cards
               and solution booklets.
             - **`audio-pruefung-NN.zip`** — the listening tracks for one paper.

@@ -1,6 +1,6 @@
 # b1-pruefungstrainer
 
-**Free, open-source practice examinations for German B1 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki.
+**Free, open-source practice examinations for German B1 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
 
 [![CI](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml)
 [![Content](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml)
@@ -22,6 +22,8 @@
 | Marked instantly, with what to work on next | Every item with its evidence and rationale |
 | ![Glossary](docs/screenshots/05-glossar.png) | ![Grammar](docs/screenshots/06-grammatik.png) |
 | Vocabulary with all word forms → Anki | The grammar the paper actually tested |
+| ![Cheat sheet](docs/screenshots/07-spickzettel.png) | ![Core vocabulary](docs/screenshots/08-wortschatz.png) |
+| Redemittel for every part of Sprechen and Schreiben | The core vocabulary, searchable, with every verb form |
 
 ---
 
@@ -36,6 +38,8 @@
 **Turns the result into a lesson.** Every item is shown with the sentence that proves the answer, why the key is right in German, and why each distractor is wrong in English. Plus full listening transcripts, annotated model answers at two grades, the grammar the paper tested with exercises, and a vocabulary list carrying article and plural for every noun and all principal parts for every verb — exportable to Anki in one click.
 
 **Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
+
+**Gives you something to revise from.** A cheat sheet — in the app and as an 18-page PDF — carries strategy for all four modules, ~185 Redemittel weighted towards Sprechen and Schreiben, 18 grammar topics as tables, and the core vocabulary: 123 verbs with all principal parts, 101 nouns with article and plural, adjectives as opposite pairs. Searchable in the app, printable for the train.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet.
 
@@ -113,6 +117,9 @@ build_pdf.py  generate_audio  export_web.py   validate.py
                                │
                           apps/web (PWA)  ←→  apps/server (optional)
                                └── @b1/core: scoring shared by both
+
+content/lernhilfe/*.json              ← the cheat sheet, belonging to no paper
+                 └── build_pdf.py → spickzettel.pdf · export_web.py → app tab
 ```
 
 **Content is data; code is generic.** One `exam.json` drives the printed paper, the solution booklet, the listening script, the web app and the glossary. **Adding a sixth exam is a single JSON pull request with no code change**, and CI refuses to merge it unless it is structurally perfect.
@@ -124,6 +131,7 @@ build_pdf.py  generate_audio  export_web.py   validate.py
 - every scored item quotes the sentence that proves its key, and carries a German rationale plus an English distractor analysis
 - every glossary lemma **actually occurs** in that paper's texts — matched through inflection, separable prefixes and dictionary placeholders
 - speaking topics and themes never repeat across papers
+- and for the cheat sheet: no ragged grammar table, no verb missing a principal part, no noun with an article that is not *der*, *die* or *das*
 
 Some things worth knowing about, because they were not obvious:
 

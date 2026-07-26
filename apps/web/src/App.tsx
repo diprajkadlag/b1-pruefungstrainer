@@ -1,6 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { AudioManifest, OeffentlichePruefung, Schluesseldaten } from '@b1/core';
-import { audioManifestLaden, pruefungLaden, schluesselLaden } from './lib/content';
+import type {
+  AudioManifest,
+  Lernhilfe,
+  OeffentlichePruefung,
+  Schluesseldaten,
+} from '@b1/core';
+import {
+  audioManifestLaden,
+  lernhilfeLaden,
+  pruefungLaden,
+  schluesselLaden,
+} from './lib/content';
 import { laden, neuerVersuch, speichern, type GespeicherterVersuch } from './lib/db';
 import { abgabeSenden } from './lib/server';
 import { Timer, useCountdown } from './components/Timer';
@@ -10,8 +20,9 @@ import { Hoeren } from './screens/Hoeren';
 import { Schreiben } from './screens/Schreiben';
 import { Sprechen } from './screens/Sprechen';
 import { Ergebnis } from './screens/Ergebnis';
+import { Spickzettel } from './screens/Spickzettel';
 
-type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis';
+type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis' | 'spickzettel';
 
 /** Sprechen has no single countdown; its parts are timed by the recorder. */
 const DAUER: Record<ModulWahl, number | null> = {
@@ -39,6 +50,7 @@ export default function App() {
   const [abgelaufen, setAbgelaufen] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
   const [serverHinweis, setServerHinweis] = useState<string | null>(null);
+  const [lernhilfe, setLernhilfe] = useState<Lernhilfe | null>(null);
 
   const aktuellesModul = versuch?.module[modulIndex] as ModulWahl | undefined;
 
@@ -167,6 +179,19 @@ export default function App() {
     }
   }
 
+  async function spickzettelOeffnen() {
+    setFehler(null);
+    try {
+      // Fetched on demand rather than with the registry: it is a good deal
+      // larger than the exam list and most sessions never open it.
+      setLernhilfe(lernhilfe ?? (await lernhilfeLaden()));
+      setPhase('spickzettel');
+      window.scrollTo({ top: 0 });
+    } catch {
+      setFehler('Der Spickzettel konnte nicht geladen werden.');
+    }
+  }
+
   function zurueck() {
     setPhase('start');
     setVersuch(null);
@@ -190,13 +215,25 @@ export default function App() {
         )}
       </header>
 
-      <main className="inhalt">
+      {/* The exam screens are capped at a comfortable reading measure for
+          German prose. The cheat sheet is scanned rather than read and its
+          vocabulary tables have six columns, so it gets the extra width. */}
+      <main className={`inhalt ${phase === 'spickzettel' ? 'inhalt--breit' : ''}`}>
         {fehler && <p className="fehler">{fehler}</p>}
 
         {phase === 'laden' && <p className="laden">Prüfung wird geladen …</p>}
 
         {phase === 'start' && (
-          <Start onStart={starten} onWeiter={fortsetzen} onErgebnis={ergebnisAnsehen} />
+          <Start
+            onStart={starten}
+            onWeiter={fortsetzen}
+            onErgebnis={ergebnisAnsehen}
+            onSpickzettel={spickzettelOeffnen}
+          />
+        )}
+
+        {phase === 'spickzettel' && lernhilfe && (
+          <Spickzettel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
         )}
 
         {phase === 'pruefung' && pruefung && versuch && aktuellesModul && (

@@ -15,10 +15,12 @@ interface Props {
   onStart: (examId: string, name: string, module: ModulWahl[]) => void;
   onWeiter: (versuchId: string) => void;
   onErgebnis: (versuchId: string) => void;
+  onSpickzettel: () => void;
 }
 
-export function Start({ onStart, onWeiter, onErgebnis }: Props) {
+export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
+  const [hatLernhilfe, setHatLernhilfe] = useState(false);
   const [versuche, setVersuche] = useState<GespeicherterVersuch[]>([]);
   const [fehler, setFehler] = useState<string | null>(null);
   const [name, setName] = useState(localStorage.getItem('b1-name') ?? '');
@@ -29,6 +31,7 @@ export function Start({ onStart, onWeiter, onErgebnis }: Props) {
     registryLaden()
       .then((r) => {
         setPruefungen(r.pruefungen);
+        setHatLernhilfe(Boolean(r.hatLernhilfe));
         setExamId((cur) => cur || (r.pruefungen[0]?.id ?? ''));
       })
       .catch(() =>
@@ -66,6 +69,22 @@ export function Start({ onStart, onWeiter, onErgebnis }: Props) {
       </section>
 
       {fehler && <p className="fehler">{fehler}</p>}
+
+      {hatLernhilfe && (
+        <section className="teil spick__einstieg">
+          <div>
+            <h2>Spickzettel</h2>
+            <p className="notiz">
+              Strategie für alle vier Module, Redemittel für Sprechen und Schreiben,
+              Grammatik in Tabellen und der Grundwortschatz mit allen Verbformen. Zum
+              Nachschlagen, ohne eine Prüfung zu starten.
+            </p>
+          </div>
+          <button type="button" className="knopf knopf--primaer" onClick={onSpickzettel}>
+            Spickzettel öffnen
+          </button>
+        </section>
+      )}
 
       {versuche.some((v) => !v.abgegeben) && (
         <section className="teil">

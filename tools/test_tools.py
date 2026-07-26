@@ -9,10 +9,13 @@ every voice sound comical).
 
 from __future__ import annotations
 
+import json
+
 import audio_dsp as dsp
 import numpy as np
 import pytest
-from build_pdf import folientext, tex, texpar, zeilen
+import validate
+from build_pdf import betont, folientext, tex, texpar, zeilen
 from validate import lemma_variants, normalise
 
 # --------------------------------------------------------------------------
@@ -245,3 +248,87 @@ def test_concat_skips_empty_segments():
 def test_to_int16_clamps_out_of_range_samples():
     out = dsp.to_int16(np.array([-2.0, 0.0, 2.0], dtype=np.float32))
     assert out.tolist() == [-32767, 0, 32767]
+
+
+# --------------------------------------------------------------------------
+# Cheat sheet
+# --------------------------------------------------------------------------
+# The sheet has no JSON Schema — it is one document, not a repeated form — so
+# these tests are what stands between a typo and a LaTeX build that fails four
+# hundred lines deep in a longtable.
+
+
+class TestSpickzettel:
+    """The shipped cheat sheet, and the checks that guard it."""
+
+    def test_shipped_sheet_is_clean(self):
+        rep = validate.Report("lernhilfe")
+        validate.check_lernhilfe(rep)
+        assert rep.findings == [], "\n".join(str(f) for f in rep.findings)
+
+    def test_ragged_grammar_table_is_an_error(self, tmp_path, monkeypatch):
+        daten = self._laden()
+        daten["grammatik"][0]["tabelle"]["zeilen"][0].append("eine Zelle zu viel")
+        rep = self._pruefen(daten, tmp_path, monkeypatch)
+        assert any("cells, header has" in f.message for f in rep.errors)
+
+    def test_missing_verb_form_is_an_error(self, tmp_path, monkeypatch):
+        daten = self._laden()
+        wort = self._wortschatz()
+        wort["verben"][0]["eintraege"][0]["prät"] = ""
+        rep = self._pruefen(daten, tmp_path, monkeypatch, wort)
+        assert any("missing ['prät']" in f.message for f in rep.errors)
+
+    def test_noun_without_a_real_article_is_an_error(self, tmp_path, monkeypatch):
+        wort = self._wortschatz()
+        wort["nomen"][0]["eintraege"][0]["art"] = "den"
+        rep = self._pruefen(self._laden(), tmp_path, monkeypatch, wort)
+        assert any("has article 'den'" in f.message for f in rep.errors)
+
+    def test_dropping_a_module_is_an_error(self, tmp_path, monkeypatch):
+        daten = self._laden()
+        daten["strategie"] = [s for s in daten["strategie"] if s["modul"] != "Sprechen"]
+        rep = self._pruefen(daten, tmp_path, monkeypatch)
+        assert any("expected the four modules" in f.message for f in rep.errors)
+
+    def test_receptive_heavy_redemittel_warns(self, tmp_path, monkeypatch):
+        """Sprechen and Schreiben are meant to dominate; drifting away warns."""
+        daten = self._laden()
+        daten["redemittel"] = [
+            r for r in daten["redemittel"]
+            if not r["bereich"].startswith(("Sprechen", "Schreiben"))
+        ]
+        rep = self._pruefen(daten, tmp_path, monkeypatch)
+        assert any("Sprechen or Schreiben" in f.message for f in rep.warnings)
+
+    # -- helpers ----------------------------------------------------------
+
+    @staticmethod
+    def _laden() -> dict:
+        return json.loads(
+            (validate.LERNHILFE / "lernhilfe.json").read_text(encoding="utf-8"))
+
+    @staticmethod
+    def _wortschatz() -> dict:
+        return json.loads(
+            (validate.LERNHILFE / "wortschatz.json").read_text(encoding="utf-8"))
+
+    def _pruefen(self, daten, tmp_path, monkeypatch, wortschatz=None):
+        """Write a doctored copy to a temp dir and validate that instead."""
+        (tmp_path / "lernhilfe.json").write_text(
+            json.dumps(daten, ensure_ascii=False), encoding="utf-8")
+        (tmp_path / "wortschatz.json").write_text(
+            json.dumps(wortschatz or self._wortschatz(), ensure_ascii=False),
+            encoding="utf-8")
+        monkeypatch.setattr(validate, "LERNHILFE", tmp_path)
+        rep = validate.Report("lernhilfe")
+        validate.check_lernhilfe(rep)
+        return rep
+
+
+def test_betont_marks_become_bold():
+    assert betont("Ich **bin** müde.") == r"Ich \textbf{bin} müde."
+
+
+def test_betont_still_escapes_latex():
+    assert betont("100 % **sicher**") == r"100 \% \textbf{sicher}"

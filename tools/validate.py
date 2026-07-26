@@ -26,7 +26,10 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
+LERNHILFE = ROOT / "content" / "lernhilfe"
 SCHEMA = ROOT / "packages" / "schema" / "exam.schema.json"
+
+MODULNAMEN = ("Lesen", "Hören", "Schreiben", "Sprechen")
 
 # --------------------------------------------------------------------------
 # The examination specification, as data. Every rule below traces back to the
@@ -698,6 +701,93 @@ def load_exams(only: str | None) -> dict[str, dict[str, Any]]:
     return out
 
 
+def check_lernhilfe(rep: Report) -> None:
+    """Validate the cheat sheet.
+
+    It has no JSON Schema of its own because it is one hand-written document,
+    not a repeated form — but it feeds both a LaTeX build and a React screen,
+    and both fail unhelpfully on a missing key. These checks turn "StrictUndefined
+    raised on line 214" into "grammatik[7] has no tabelle".
+    """
+    quelle = LERNHILFE / "lernhilfe.json"
+    if not quelle.exists():
+        return
+
+    daten = json.loads(quelle.read_text(encoding="utf-8"))
+    wort = json.loads((LERNHILFE / "wortschatz.json").read_text(encoding="utf-8"))
+
+    for feld in ("titel", "untertitel", "version", "ueberblick", "strategie",
+                 "redemittel", "grammatik"):
+        if feld not in daten:
+            rep.error("lernhilfe", f"missing top-level field {feld!r}")
+    if rep.errors:
+        return
+
+    module = {m["modul"] for m in daten["ueberblick"]["module"]}
+    if module != set(MODULNAMEN):
+        rep.error("lernhilfe.ueberblick", f"expected the four modules, got {sorted(module)}")
+
+    strategie = [s["modul"] for s in daten["strategie"]]
+    if set(strategie) != set(MODULNAMEN):
+        rep.error("lernhilfe.strategie", f"expected the four modules, got {strategie}")
+    for s in daten["strategie"]:
+        if len(s["goldregeln"]) < 4:
+            rep.warn(f"lernhilfe.strategie[{s['modul']}]",
+                     f"only {len(s['goldregeln'])} Goldregeln; aim for at least 4")
+
+    # The whole point of the sheet is that Sprechen and Schreiben get more room
+    # than the receptive skills, which is what the user asked for. Guard it, so
+    # a later edit cannot quietly rebalance it.
+    phrasen = {}
+    for r in daten["redemittel"]:
+        for g in r["gruppen"]:
+            if not g["phrasen"]:
+                rep.error(f"lernhilfe.redemittel[{r['bereich']}]",
+                          f"group {g['funktion']!r} has no phrases")
+        phrasen[r["bereich"]] = sum(len(g["phrasen"]) for g in r["gruppen"])
+    produktiv = sum(n for b, n in phrasen.items()
+                    if b.startswith(("Sprechen", "Schreiben")))
+    gesamt = sum(phrasen.values())
+    if gesamt and produktiv / gesamt < 0.8:
+        rep.warn("lernhilfe.redemittel",
+                 f"only {produktiv}/{gesamt} phrases serve Sprechen or Schreiben; "
+                 "the sheet is meant to weight those two")
+
+    for i, g in enumerate(daten["grammatik"]):
+        tab = g.get("tabelle")
+        if not tab or not tab.get("kopf") or not tab.get("zeilen"):
+            rep.error(f"lernhilfe.grammatik[{i}]", f"{g.get('thema')!r} has no table")
+            continue
+        breite = len(tab["kopf"])
+        for j, zeile in enumerate(tab["zeilen"]):
+            if len(zeile) != breite:
+                rep.error(f"lernhilfe.grammatik[{g['thema']}]",
+                          f"row {j} has {len(zeile)} cells, header has {breite}")
+
+    verben = [v for gruppe in wort["verben"] for v in gruppe["eintraege"]]
+    nomen = [n for gruppe in wort["nomen"] for n in gruppe["eintraege"]]
+    for v in verben:
+        fehlend = [k for k in ("inf", "en", "er", "prät", "perf", "bsp") if not v.get(k)]
+        if fehlend:
+            rep.error("lernhilfe.wortschatz", f"verb {v.get('inf')!r} missing {fehlend}")
+    for n in nomen:
+        if n.get("art") not in ("der", "die", "das"):
+            rep.error("lernhilfe.wortschatz",
+                      f"noun {n.get('wort')!r} has article {n.get('art')!r}")
+
+    for name, eintraege, schluessel, ziel in (
+        ("verbs", verben, "inf", 100),
+        ("nouns", nomen, "wort", 100),
+    ):
+        doppelt = [k for k in {e[schluessel] for e in eintraege}
+                   if [e[schluessel] for e in eintraege].count(k) > 1]
+        if doppelt:
+            rep.error("lernhilfe.wortschatz", f"duplicate {name}: {sorted(doppelt)}")
+        if len(eintraege) < ziel:
+            rep.warn("lernhilfe.wortschatz",
+                     f"{len(eintraege)} {name}; the sheet promises {ziel}")
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -718,6 +808,14 @@ def main(argv: Iterable[str] | None = None) -> int:
     if len(exams) > 1:
         check_cross_exam(exams, reports)
 
+    # The cheat sheet stands apart from any exam, so it gets its own report
+    # rather than being blamed on whichever paper happened to be first.
+    lernhilfe_rep = Report("lernhilfe")
+    if args.exam is None:
+        check_lernhilfe(lernhilfe_rep)
+        if lernhilfe_rep.findings:
+            reports["lernhilfe"] = lernhilfe_rep
+
     n_err = n_warn = 0
     for exam_id in sorted(reports):
         rep = reports[exam_id]
@@ -729,6 +827,10 @@ def main(argv: Iterable[str] | None = None) -> int:
             print("  30 Lesen + 30 Hören items, 100 points per module, glossary verified.")
         for f in rep.findings:
             print(f)
+
+    if args.exam is None and not lernhilfe_rep.findings:
+        print("\nlernhilfe  [ok]")
+        print("  Cheat sheet: four modules, Redemittel, grammar tables, word lists.")
 
     print(f"\n{'-' * 60}")
     print(f"{len(exams)} exam(s): {n_err} error(s), {n_warn} warning(s)")

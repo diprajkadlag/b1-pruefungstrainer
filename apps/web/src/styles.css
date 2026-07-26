@@ -490,7 +490,11 @@ audio {
   padding: 0.4rem 0.9rem;
   min-height: 2.4rem;
 }
-.knopf--aktiv {
+.knopf--aktiv,
+/* `.knopf:hover` is the more specific selector, so without this the hover
+   background wins on the selected tab and paints its white label onto a pale
+   grey pill — the current tab becomes the one you cannot read. */
+.knopf--aktiv:hover:not(:disabled) {
   background: var(--rule);
   color: var(--bg);
 }
@@ -870,4 +874,157 @@ code {
   .abschluss {
     display: none;
   }
+}
+
+/* --- Spickzettel ---------------------------------------------------------
+   Wider than the exam screens on purpose: this one is scanned, not read, and
+   the vocabulary tables need the room. */
+.inhalt--breit {
+  max-width: 66rem;
+}
+.spick {
+  max-width: 100%;
+}
+.spick__kopf {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.spick__kopf h1 {
+  margin-bottom: 0.2rem;
+}
+.spick__einstieg {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.spick__einstieg h2 {
+  margin: 0 0 0.3rem;
+}
+.spick__suche {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  margin: 0.8rem 0 0.4rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+}
+.spick__block {
+  margin-top: 1.6rem;
+}
+.spick__block h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--edge);
+}
+
+/* Tables can be wider than a phone; let them scroll rather than squeeze. */
+.tabelle-rahmen {
+  overflow-x: auto;
+  margin-top: 0.6rem;
+}
+.spick__tabelle {
+  min-width: 34rem;
+  margin-top: 0;
+}
+.spick__tabelle th[scope='row'] {
+  white-space: nowrap;
+}
+.spick__unreg {
+  color: var(--mark);
+  text-decoration: none;
+}
+
+.spick__noten {
+  list-style: none;
+  padding: 0;
+  max-width: 24rem;
+}
+.spick__noten li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--edge);
+}
+
+.merke {
+  padding: 0.75rem 0.9rem;
+  background: var(--soft);
+  border-left: 4px solid var(--mark);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.spick__regeln {
+  padding-left: 1.2rem;
+}
+.spick__regeln li {
+  margin-bottom: 0.35rem;
+}
+
+.spick__liste div {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--edge);
+}
+.spick__liste dt {
+  font-weight: 700;
+}
+.spick__liste dd {
+  margin: 0.2rem 0 0;
+}
+
+.spick__karte {
+  padding: 0.75rem 0.9rem;
+  margin-top: 0.7rem;
+  background: var(--soft);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+}
+.spick__karte h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--mark);
+}
+.spick__karte p {
+  margin: 0.3rem 0;
+}
+.spick__karte ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.spick__karte li {
+  margin-bottom: 0.25rem;
+}
+
+/* Two columns where there is room — Redemittel are short and read as a list. */
+.spick__spalten {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.spick__fehler {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+.spick__fehler li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--edge);
+}
+.spick__falsch {
+  color: var(--bad);
+  text-decoration: line-through;
+}
+.spick__richtig {
+  font-weight: 700;
+  color: var(--mark);
 }
