@@ -66,8 +66,10 @@ test('offers the papers for printing before the exam starts', async ({ page }) =
 test('the print links resolve to a real PDF', async ({ page, request }) => {
   await page.goto('/');
   const links = page.locator('.druck__link');
-  const anzahl = await links.count();
-  expect(anzahl).toBe(erste.pdfsVorAbgabe.length);
+  // toHaveCount, not count(): the block only renders once the registry fetch
+  // resolves, and a bare count() reads whatever is there at that instant.
+  const anzahl = erste.pdfsVorAbgabe.length;
+  await expect(links).toHaveCount(anzahl);
 
   for (let i = 0; i < anzahl; i++) {
     const href = await links.nth(i).getAttribute('href');
@@ -83,12 +85,13 @@ test('switching paper switches which PDFs are offered', async ({ page }) => {
   test.skip(registry.pruefungen.length < 2, 'needs at least two papers');
   await page.goto('/');
 
-  const ersterHref = await page.locator('.druck__link').first().getAttribute('href');
-  expect(ersterHref).toContain(registry.pruefungen[0].id);
+  // toHaveAttribute retries, so this cannot read the previous paper's href in
+  // the frame between the click and React re-rendering the links.
+  const ersterLink = page.locator('.druck__link').first();
+  await expect(ersterLink).toHaveAttribute('href', new RegExp(registry.pruefungen[0].id));
 
   await page.getByRole('button', { name: /Übungsprüfung 2/ }).click();
-  const zweiterHref = await page.locator('.druck__link').first().getAttribute('href');
-  expect(zweiterHref).toContain(registry.pruefungen[1].id);
+  await expect(ersterLink).toHaveAttribute('href', new RegExp(registry.pruefungen[1].id));
 });
 
 test('never offers the solution booklet before submission', async ({ page }) => {
