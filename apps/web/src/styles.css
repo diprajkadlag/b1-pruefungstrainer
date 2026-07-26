@@ -1028,3 +1028,60 @@ code {
   font-weight: 700;
   color: var(--mark);
 }
+
+/* --- printable papers ----------------------------------------------------- */
+.druck {
+  margin-top: 1.4rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+.druck h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.druck__liste {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.druck__liste li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.druck__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  min-height: 2.75rem;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+.druck__link:hover {
+  background: var(--soft);
+}
+.druck__art {
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: var(--rule);
+  color: var(--bg);
+}
+.druck--leer {
+  background: transparent;
+  border-style: dashed;
+}

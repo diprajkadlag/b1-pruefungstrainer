@@ -65,6 +65,17 @@ export default defineConfig({
             handler: 'StaleWhileRevalidate',
             options: { cacheName: 'b1-inhalte' },
           },
+          {
+            // Opened once, kept. Someone who pulls up the papers to print
+            // them should still have them on a train with no signal.
+            urlPattern: /\/content\/.*\.pdf$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'b1-pdf',
+              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 180 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
         ],
       },
     }),

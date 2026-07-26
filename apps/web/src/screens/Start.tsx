@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { registryLaden, type RegistryEintrag } from '../lib/content';
 import { alleVersuche, loeschen, type GespeicherterVersuch } from '../lib/db';
+import { Druckbogen } from '../components/Druckbogen';
 
 export type ModulWahl = 'lesen' | 'hoeren' | 'schreiben' | 'sprechen';
 
@@ -208,6 +209,18 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
             </span>
           )}
         </button>
+
+        {gewaehlt && (
+          <Druckbogen
+            examId={gewaehlt.id}
+            dateien={gewaehlt.pdfsVorAbgabe}
+            titel="Lieber auf Papier?"
+            hinweis={
+              'Diese Prüfung als PDF — zum Ausdrucken und offline Schreiben. ' +
+              'Das Lösungsheft erscheint nach der Abgabe auf der Ergebnisseite.'
+            }
+          />
+        )}
 
         <p className="notiz">
           Der Timer läuft ab dem Start und lässt sich nicht anhalten. Ihre Antworten

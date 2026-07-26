@@ -9,7 +9,9 @@ import {
   audioManifestLaden,
   lernhilfeLaden,
   pruefungLaden,
+  registryLaden,
   schluesselLaden,
+  type PdfName,
 } from './lib/content';
 import { laden, neuerVersuch, speichern, type GespeicherterVersuch } from './lib/db';
 import { abgabeSenden } from './lib/server';
@@ -51,6 +53,10 @@ export default function App() {
   const [fehler, setFehler] = useState<string | null>(null);
   const [serverHinweis, setServerHinweis] = useState<string | null>(null);
   const [lernhilfe, setLernhilfe] = useState<Lernhilfe | null>(null);
+  // Which printables exist for the current paper. Kept here rather than in the
+  // result screen so the solution booklet is looked up on the same path as the
+  // answer key, and cannot appear before the attempt is closed.
+  const [loesungsPdfs, setLoesungsPdfs] = useState<PdfName[]>([]);
 
   const aktuellesModul = versuch?.module[modulIndex] as ModulWahl | undefined;
 
@@ -131,6 +137,14 @@ export default function App() {
       setManifest(await audioManifestLaden(examId));
     } catch {
       setManifest(null); // Written modules still work without audio.
+    }
+    try {
+      const registry = await registryLaden();
+      setLoesungsPdfs(
+        registry.pruefungen.find((e) => e.id === examId)?.pdfsNachAbgabe ?? [],
+      );
+    } catch {
+      setLoesungsPdfs([]); // The result screen simply offers no booklet.
     }
     return p;
   }
@@ -342,6 +356,7 @@ export default function App() {
             pruefung={pruefung}
             schluessel={schluessel}
             versuch={versuch}
+            loesungsPdfs={loesungsPdfs}
             onNeustart={zurueck}
           />
         )}

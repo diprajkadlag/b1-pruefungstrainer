@@ -19,6 +19,15 @@ Exam content is versioned separately, per paper, in each `exam.json`
   that cost the most marks, and the core vocabulary — 123 verbs with all
   principal parts, 101 nouns with article and plural, 30 adjective pairs and
   the connectors. Searchable in the app.
+- **The printable papers are wired into the app.** `export_web.py` copies each
+  paper's PDFs alongside its JSON, and the start screen offers the
+  Kandidatenblätter, the Antwortbogen and the Sprechen-Karten for printing — so
+  a paper can be sat on paper. The Lösungsheft is treated exactly like the JSON
+  answer key: copied, but linked only from the result screen once an attempt is
+  closed, which an end-to-end test asserts. Opened PDFs are cached for offline
+  use, and the Pages deploy now builds them so the hosted demo carries them too.
+  Where no LaTeX was available at build time the app says so and points at the
+  release download instead of showing dead links.
 - `tools/validate.py` now checks the cheat sheet too: all four modules present,
   no ragged grammar tables, no verb missing a principal part, no noun with a
   bogus article, and a warning if the Redemittel drift away from Sprechen and

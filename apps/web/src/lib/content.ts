@@ -24,7 +24,32 @@ export interface RegistryEintrag {
   hatAudio: boolean;
   audioFormat: string;
   audioDauerSek: number;
+  /** Printables a candidate may have before sitting the paper. */
+  pdfsVorAbgabe: PdfName[];
+  /** The solution booklet — offered only once an attempt is closed. */
+  pdfsNachAbgabe: PdfName[];
 }
+
+export type PdfName =
+  'kandidatenblaetter' | 'antwortbogen' | 'sprechen_karten' | 'loesungen';
+
+export const PDF_TITEL: Record<PdfName, string> = {
+  kandidatenblaetter: 'Kandidatenblätter',
+  antwortbogen: 'Antwortbogen',
+  sprechen_karten: 'Sprechen-Karten',
+  loesungen: 'Lösungsheft',
+};
+
+export const PDF_BESCHREIBUNG: Record<PdfName, string> = {
+  kandidatenblaetter: 'Lesen, Hören und Schreiben, so wie am Prüfungstag.',
+  antwortbogen: 'Zum Ankreuzen — wie in der Prüfung, mit der Hand.',
+  sprechen_karten: 'Karten für Teil 1 und die fünf Folien für Teil 2.',
+  loesungen: 'Lösungen, Hörtexte, Musterantworten, Glossar und Grammatik.',
+};
+
+/** Where a release download lives, for when the PDFs were not built locally. */
+export const RELEASE_URL =
+  'https://github.com/diprajkadlag/b1-pruefungstrainer/releases/latest';
 
 const BASIS = `${import.meta.env.BASE_URL}content`;
 
@@ -54,6 +79,9 @@ export const audioManifestLaden = (id: string): Promise<AudioManifest> =>
 
 export const audioUrl = (id: string, datei: string): string =>
   `${BASIS}/${id}/audio/${datei}`;
+
+export const pdfUrl = (id: string, name: PdfName): string =>
+  `${BASIS}/${id}/pdf/${name}.pdf`;
 
 /**
  * Pull an exam's audio into the service worker cache so the module can be sat

@@ -9,10 +9,14 @@ Writes into apps/web/public/content/:
     <id>/exam.public.json       texts, items and options — no answers
     <id>/exam.keys.json         answers, evidence, rationales, glossary, grammar
     <id>/audio/*                listening tracks and the partner turns
+    <id>/pdf/*                  the printable papers, if they have been built
+    lernhilfe.json              the cheat sheet
 
 Why the split: the app must not ship the answer key in the bundle a candidate
 can open before submitting. The public half contains nothing that gives an
-answer away; the keyed half is fetched only once an attempt is closed.
+answer away; the keyed half is fetched only once an attempt is closed. The
+printable solution booklet is treated the same way — copied, but linked only
+from the result screen.
 """
 
 from __future__ import annotations
@@ -37,6 +41,14 @@ GEHEIM = {
     "loesung", "beleg", "begruendung", "musterloesungen", "musterantwort",
     "kompetenz",
 }
+
+# Printable documents, split the same way the JSON is: what a candidate may
+# have on the desk before the exam, and what only makes sense afterwards.
+# loesungen.pdf is copied too — it is the offline twin of exam.keys.json and
+# gets the same treatment: present at a URL, but linked only once an attempt
+# is closed. The app enforces that; an end-to-end test asserts it.
+PDF_VOR_ABGABE = ("kandidatenblaetter", "antwortbogen", "sprechen_karten")
+PDF_NACH_ABGABE = ("loesungen",)
 
 
 def strip_item(item: dict[str, Any]) -> dict[str, Any]:
@@ -139,7 +151,30 @@ def leak_check(public: dict[str, Any], exam: dict[str, Any]) -> list[str]:
     return problems
 
 
-def export(exam_id: str, exam: dict[str, Any], with_audio: bool) -> dict[str, Any]:
+def copy_pdfs(exam_id: str, out_dir: Path) -> dict[str, bool]:
+    """Copy whatever PDFs have been built so the app can offer them.
+
+    They are optional: the PDFs need a LaTeX installation, and someone working
+    on the app alone should not have to have one. When they are missing the app
+    falls back to a link to the release download.
+    """
+    quelle = CONTENT / exam_id / "pdf"
+    vorhanden: dict[str, bool] = {}
+    if not quelle.exists():
+        return vorhanden
+
+    ziel = out_dir / "pdf"
+    ziel.mkdir(exist_ok=True)
+    for name in (*PDF_VOR_ABGABE, *PDF_NACH_ABGABE):
+        datei = quelle / f"{name}.pdf"
+        if datei.exists():
+            shutil.copy2(datei, ziel / datei.name)
+            vorhanden[name] = True
+    return vorhanden
+
+
+def export(exam_id: str, exam: dict[str, Any], with_audio: bool,
+           with_pdf: bool) -> dict[str, Any]:
     out_dir = TARGET / exam_id
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -165,6 +200,8 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool) -> dict[str, An
                 shutil.copy2(f, audio_dst / f.name)
                 audio_files.append(f.name)
 
+    pdfs = copy_pdfs(exam_id, out_dir) if with_pdf else {}
+
     manifest_path = audio_src / "manifest.json"
     audio_manifest = json.loads(manifest_path.read_text(encoding="utf-8")) \
         if manifest_path.exists() else None
@@ -180,6 +217,9 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool) -> dict[str, An
         "audioFormat": (audio_manifest or {}).get("format", "mp3"),
         "audioDauerSek": sum(t["dauerSek"] for t in (audio_manifest or {}).get("hoeren", [])),
         "dateien": len(audio_files),
+        # Two lists, not one flag: the start screen may only offer the first.
+        "pdfsVorAbgabe": [n for n in PDF_VOR_ABGABE if pdfs.get(n)],
+        "pdfsNachAbgabe": [n for n in PDF_NACH_ABGABE if pdfs.get(n)],
     }
 
 
@@ -208,6 +248,8 @@ def main(argv: Iterable[str] | None = None) -> int:
     ap.add_argument("exam", nargs="?")
     ap.add_argument("--no-audio", action="store_true",
                     help="skip copying audio (much faster while iterating on the app)")
+    ap.add_argument("--no-pdf", action="store_true",
+                    help="skip copying PDFs even if they have been built")
     args = ap.parse_args(list(argv) if argv is not None else None)
 
     # Exam titles and this summary contain German text and an arrow; a Windows
@@ -227,10 +269,12 @@ def main(argv: Iterable[str] | None = None) -> int:
         if not folder.is_dir() or (args.exam and folder.name != args.exam):
             continue
         exam = json.loads((folder / "exam.json").read_text(encoding="utf-8"))
-        entry = export(folder.name, exam, not args.no_audio)
+        entry = export(folder.name, exam, not args.no_audio, not args.no_pdf)
         registry.append(entry)
+        n_pdf = len(entry["pdfsVorAbgabe"]) + len(entry["pdfsNachAbgabe"])
         print(f"  {entry['id']}  {entry['titel'][:44]:44} "
-              f"{entry['audioDauerSek'] / 60:5.1f} min Audio, {entry['dateien']} Dateien")
+              f"{entry['audioDauerSek'] / 60:5.1f} min Audio, {entry['dateien']} Dateien, "
+              f"{n_pdf} PDFs")
 
     if not args.exam:
         hat_lernhilfe = export_lernhilfe()

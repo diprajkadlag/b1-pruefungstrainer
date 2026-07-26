@@ -9,11 +9,15 @@ import {
 import type { GespeicherterVersuch } from '../lib/db';
 import { ankiTsv } from '../lib/anki';
 import { blobZuBytes, herunterladen, zipErstellen, type ZipEintrag } from '../lib/zip';
+import type { PdfName } from '../lib/content';
+import { Druckbogen } from '../components/Druckbogen';
 
 interface Props {
   pruefung: OeffentlichePruefung;
   schluessel: Schluesseldaten;
   versuch: GespeicherterVersuch;
+  /** Printables that only make sense now the attempt is closed. */
+  loesungsPdfs: PdfName[];
   onNeustart: () => void;
 }
 
@@ -43,7 +47,13 @@ const KOMPETENZ_RAT: Record<string, string> = {
     'Und trauen Sie sich zur Null: Eine Situation passt zu keiner Anzeige.',
 };
 
-export function Ergebnis({ pruefung, schluessel, versuch, onNeustart }: Props) {
+export function Ergebnis({
+  pruefung,
+  schluessel,
+  versuch,
+  loesungsPdfs,
+  onNeustart,
+}: Props) {
   const [tab, setTab] = useState<'uebersicht' | 'loesungen' | 'glossar' | 'grammatik'>(
     'uebersicht',
   );
@@ -193,6 +203,16 @@ export function Ergebnis({ pruefung, schluessel, versuch, onNeustart }: Props) {
               ))}
             </section>
           )}
+
+          <Druckbogen
+            examId={pruefung.meta.id}
+            dateien={loesungsPdfs}
+            titel="Zum Nachschlagen auf Papier"
+            hinweis={
+              'Das Lösungsheft zu dieser Prüfung: alle Lösungen mit Begründung, ' +
+              'die vollständigen Hörtexte, Musterantworten, Glossar und Grammatik.'
+            }
+          />
 
           <div className="aktionen">
             <button
