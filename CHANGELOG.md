@@ -28,6 +28,9 @@ Exam content is versioned separately, per paper, in each `exam.json`
   use, and the Pages deploy now builds them so the hosted demo carries them too.
   Where no LaTeX was available at build time the app says so and points at the
   release download instead of showing dead links.
+- `tools/make_pdf_fixture.py`, the printable counterpart to the existing audio
+  fixture: hand-rolled one-page PDFs so CI can exercise the download links —
+  and the rule that hides the solution booklet — without installing TeX Live.
 - `tools/validate.py` now checks the cheat sheet too: all four modules present,
   no ragged grammar tables, no verb missing a principal part, no noun with a
   bogus article, and a warning if the Redemittel drift away from Sprechen and

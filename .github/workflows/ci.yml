@@ -66,6 +66,12 @@ jobs:
         # and minutes of synthesis. The player tests care about the controls,
         # not about the audio being speech, so a short tone stands in.
         run: python tools/make_audio_fixture.py
+      - name: Placeholder printable papers
+        # Same trade as the audio: the real PDFs need a few hundred megabytes
+        # of TeX Live, and the tests here care about the links and about the
+        # solution booklet staying hidden until an attempt closes — neither of
+        # which depends on what is printed on the page.
+        run: python tools/make_pdf_fixture.py
       - run: npm run build --workspace=@b1/core
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --grep-invert Screenshots

@@ -10,8 +10,10 @@ every voice sound comical).
 from __future__ import annotations
 
 import json
+import re
 
 import audio_dsp as dsp
+import make_pdf_fixture
 import numpy as np
 import pytest
 import validate
@@ -332,3 +334,39 @@ def test_betont_marks_become_bold():
 
 def test_betont_still_escapes_latex():
     assert betont("100 % **sicher**") == r"100 \% \textbf{sicher}"
+
+
+# --------------------------------------------------------------------------
+# PDF fixture
+# --------------------------------------------------------------------------
+
+
+class TestPdfFixture:
+    """The stand-in PDFs the end-to-end tests download when LaTeX is absent."""
+
+    def test_is_a_structurally_valid_pdf(self):
+        pdf = make_pdf_fixture.minimal_pdf(["Titel", "Zeile"])
+        assert pdf.startswith(b"%PDF-")
+        assert pdf.rstrip().endswith(b"%%EOF")
+        # One xref entry per object plus the free head entry.
+        assert pdf.count(b" 00000 n \n") == 5
+        assert b"/Type /Catalog" in pdf and b"/Type /Page " in pdf
+
+    def test_declared_stream_length_matches_the_stream(self):
+        """A wrong /Length is the classic way to produce a file readers reject."""
+        pdf = make_pdf_fixture.minimal_pdf(["Ein Titel", "und eine Zeile"])
+        declared = int(re.search(rb"/Length (\d+) >>", pdf).group(1))
+        body = re.search(rb"stream\n(.*?)\nendstream", pdf, re.S).group(1)
+        assert declared == len(body)
+
+    def test_brackets_in_a_title_cannot_end_the_string_early(self):
+        """An exam title with a bracket would otherwise corrupt the file."""
+        assert make_pdf_fixture.pdf_text("Teil 1 (Beispiel)") == r"Teil 1 \(Beispiel\)"
+        assert make_pdf_fixture.pdf_text("a\\b") == "a\\\\b"
+
+    def test_umlauts_are_transliterated_not_dropped(self):
+        assert make_pdf_fixture.pdf_text("Übungsprüfung — groß") == "Uebungspruefung - gross"
+
+    def test_stays_ascii_so_the_stream_encodes(self):
+        gefaltet = make_pdf_fixture.pdf_text("Ελληνικά · 中文")
+        gefaltet.encode("ascii")  # raises if the fold leaked a non-ASCII byte
