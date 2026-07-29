@@ -55,6 +55,31 @@ Nothing you do is uploaded anywhere. See [docs/PRIVACY.md](docs/PRIVACY.md).
 
 > Microphone recording needs a secure context. The hosted app is HTTPS, so it works. If you self-host over plain `http://` on a LAN address, browsers will block the microphone — see below.
 
+### For developers — clone and run
+
+```bash
+git clone https://github.com/diprajkadlag/b1-pruefungstrainer.git
+cd b1-pruefungstrainer
+```
+
+Then **double-click `Start-B1-Trainer.bat`** (Windows). It checks for Node and
+Python, installs dependencies, generates the exam content, builds the app and
+opens it on `http://localhost:8123`. The printable papers are pulled from the
+latest release because building them needs a TeX distribution; the listening
+audio is offered as an optional download because generating it needs the Piper
+voice models. Skip either and the app still runs — only that feature is
+missing.
+
+On macOS or Linux, or to do it by hand:
+
+```bash
+npm install
+npm run build --workspace=@b1/core
+python tools/export_web.py     # generates the exam content; standard library only
+npm run build --workspace=@b1/web
+npm run preview --workspace=@b1/web
+```
+
 ### For teachers — keep submissions on disk
 
 ```bash
