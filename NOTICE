@@ -5,6 +5,24 @@ This product includes and/or depends on third-party components. Their licenses
 and required attributions are reproduced below.
 
 ================================================================================
+0. SCOPE OF THE PROJECT'S OWN LICENSES
+================================================================================
+
+Two licenses apply, to different parts of the repository:
+
+  MIT (see LICENSE)              the SOURCE CODE, namely the contents of
+                                 apps/  packages/  tools/  .github/
+
+  CC BY 4.0 (see LICENSE-CONTENT) the EXAM CONTENT, namely everything under
+                                 content/, together with the audio tracks and
+                                 the PDF papers and solution booklets that are
+                                 generated from it
+
+This note lives here rather than in LICENSE because GitHub's license detector
+classifies any LICENSE file carrying extra prose as "Other", which hides the
+MIT license from the repository page.
+
+================================================================================
 1. PIPER TEXT-TO-SPEECH VOICE MODELS
 ================================================================================
 

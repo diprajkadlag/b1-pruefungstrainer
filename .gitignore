@@ -59,3 +59,7 @@ apps/web/public/content/
 apps/web/dist/
 voice-preview-*
 apps/server/.tls/
+
+# Local working notes: reasoning behind decisions, kept for future sessions.
+# Useful to whoever maintains this, noise to whoever is just reading the code.
+/context/

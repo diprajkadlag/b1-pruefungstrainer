@@ -62,10 +62,10 @@ git clone https://github.com/diprajkadlag/b1-pruefungstrainer.git
 cd b1-pruefungstrainer
 npm install
 npm run content:export      # prepare the exams for the app
-npm run serve               # http://localhost:3000
+npm run serve               # http://localhost:8130
 ```
 
-Your student sits the exam at `http://localhost:3000`; you mark at **`http://localhost:3000/pruefer`**, which shows the writing beside the official criteria and the recordings with inline players, and computes the overall result. Everything lands under `apps/server/submissions/`.
+Your student sits the exam at `http://localhost:8130`; you mark at **`http://localhost:8130/pruefer`**, which shows the writing beside the official criteria and the recordings with inline players, and computes the overall result. Everything lands under `apps/server/submissions/`.
 
 For a phone or tablet on the same network, the microphone needs TLS:
 

@@ -2,7 +2,7 @@
  * Optional local server: keeps submissions on disk and gives the examiner a
  * place to mark writing and speaking.
  *
- *   npm run serve            # http://localhost:3000
+ *   npm run serve            # http://localhost:8130
  *   npm run serve -- --https # self-signed TLS, so a phone on the LAN can record
  *
  * Deliberately unauthenticated and bound to localhost by default. It is meant
@@ -28,7 +28,11 @@ const INHALTE = join(WURZEL, 'content', 'exams');
 const STATISCH = join(WURZEL, 'apps', 'web', 'dist');
 const ABGABEN = process.env.ABGABEN_DIR ?? join(WURZEL, 'apps', 'server', 'submissions');
 
-const PORT = Number(process.env.PORT ?? 3000);
+// 8130, not 3000. This server hosts the PWA, and a service worker claims a
+// whole origin (scheme + host + port) — so squatting the most contended port
+// in Node development leaves this app answering navigations for whatever the
+// user starts on 3000 next. Override with PORT if you need to.
+const PORT = Number(process.env.PORT ?? 8130);
 const HTTPS = process.argv.includes('--https');
 // Binding to 0.0.0.0 is opt-in, because it exposes an unauthenticated server.
 const HOST = process.argv.includes('--lan') ? '0.0.0.0' : '127.0.0.1';
