@@ -11,6 +11,32 @@ Exam content is versioned separately, per paper, in each `exam.json`
 
 ### Added
 
+- **B2 as a second examination level.** The level is a first-class dimension
+  now: `meta.stufe` selects the whole rule set, and the item counts, task types,
+  module times, repeat pattern and marking maxima are read from one table per
+  level rather than hard-coded. `tools/validate.py`, `tools/new_exam.py`,
+  `tools/build_pdf.py` and the app all follow it. B1 papers are unchanged and
+  keep their ids; B2 papers are `b2-pruefung-NN`.
+- **`content/exams/b2-pruefung-01`** — a complete, original B2 paper: a forum on
+  the four-day week, a history of street lighting with sentence-insertion gaps,
+  a newspaper article on urban noise, eight opinions on renting clothes, a
+  workshop's regulations, four listening texts, two writing tasks with annotated
+  model answers at two grades, a talk and a debate, plus 34 glossary entries,
+  four idioms and four grammar foci built from the paper's own sentences.
+- **Three reading task types B1 never had**, end to end — inserting a sentence
+  into a gap, matching an opinion to a heading, matching a regulation paragraph
+  to a table of contents. They share one item type (`zuordnung_buchstabe`) and
+  answer with a letter taken from a list on the Teil, which the app, the
+  printed paper and the answer sheet all render from the data.
+- **Level tabs on the start screen**, remembered between visits, with the module
+  durations and the cheat sheet following the chosen level.
+- **`docs/EXAM-FORMAT.md`** — the specification both levels are validated
+  against, with the source of every number. `validate.py` had cited this file
+  since the beginning; it had never been written.
+- End-to-end coverage for B2 (`apps/web/e2e/b2.spec.ts`) and tests asserting
+  that what `new_exam.py` scaffolds is exactly what `validate.py` demands, at
+  both levels.
+
 - **Spickzettel — a cheat sheet**, built from `content/lernhilfe/` and shipped
   three ways: a tab in the app, an 18-page `spickzettel.pdf`, and a standalone
   release asset. It carries strategy and a timing plan for all four modules,
@@ -35,6 +61,20 @@ Exam content is versioned separately, per paper, in each `exam.json`
   no ragged grammar tables, no verb missing a principal part, no noun with a
   bogus article, and a warning if the Redemittel drift away from Sprechen and
   Schreiben.
+
+### Changed
+
+- **The project is no longer named for one level.** The header reads
+  *Prüfungstrainer*, the packages are `@pruefung/core` and `@pruefung/web`, the
+  launcher is `Start-Trainer.bat` and the LaTeX package is `pruefung.sty`. The
+  repository URL is unchanged.
+- **The answer sheet is generated from the paper** instead of from hard-coded
+  item ranges, so it follows whatever tasks a paper actually contains.
+- `index.json` now carries each paper's `stufe`, and reports which levels ship a
+  cheat sheet as `lernhilfeStufen` in place of the old `hatLernhilfe` flag.
+- Topic-overlap and speaking-topic checks compare papers **within a level**; a
+  B1 and a B2 paper may share a subject, since the tasks built on it are
+  nothing alike.
 
 ### Fixed
 

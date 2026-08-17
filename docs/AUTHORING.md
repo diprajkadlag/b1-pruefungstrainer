@@ -4,7 +4,8 @@ Adding a paper needs no code change. Scaffold it, write it, and let the
 validator tell you what is still wrong:
 
 ```bash
-python tools/new_exam.py pruefung-06
+python tools/new_exam.py pruefung-06        # B1
+python tools/new_exam.py b2-pruefung-02    # B2 — the level comes from the id
 python tools/validate.py pruefung-06 --strict
 ```
 
@@ -64,7 +65,7 @@ what the app shows after the exam.
 
 ## Rule 3: distractors must be wrong for a reason
 
-A good B1 distractor is not random. It is usually one of:
+A good distractor is not random. It is usually one of:
 
 | Kind | Example |
 |---|---|
@@ -80,26 +81,36 @@ Avoid distractors that are wrong because they are absurd. They test nothing.
 
 ## The specification, as the validator enforces it
 
-| Modul | Zeit | Teile | Items |
-|---|---|---|---|
-| Lesen | 65 min | 5 | 6 + 6 + 7 + 7 + 4 = 30 |
-| Hören | 40 min | 4 | 10 + 5 + 7 + 8 = 30 |
-| Schreiben | 60 min | 3 | 40 + 40 + 20 = 100 points |
-| Sprechen | 15 min | 3 | 28 + 40 + 16 + 16 (Aussprache) = 100 |
+The full table for both levels, with the source of every number, is in
+[EXAM-FORMAT.md](EXAM-FORMAT.md). In short:
 
-Also enforced:
+| Modul | B1 | B2 |
+|---|---|---|
+| Lesen | 65 min · 6+6+7+7+4 = 30 | 65 min · 9+6+6+6+3 = 30 |
+| Hören | 40 min · 10+5+7+8 = 30 | 40 min · 10+6+6+8 = 30 |
+| Schreiben | 60 min · 40+40+20 = 100 | 75 min · 60+40 = 100 |
+| Sprechen | 15 min prep · 28+40+16 + 16 Aussprache | 15 min prep · 50+50 |
+
+Also enforced, at whichever level applies:
 
 - Items numbered 1–30 exactly once per module
-- **Lesen Teil 3**: exactly ten ads `a`–`j`, exactly one situation keyed `0`, no
-  ad used twice
-- **Hören Teil 1**: exactly five short texts, each with one `richtig_falsch` and
-  one `multiple_choice` item
-- **Hören Teile 1 and 4** are heard twice, **2 and 3** once
-- **Hören Teil 4**: a moderator and exactly two guests; try to key at least one
-  item to each
+- **B1 Lesen Teil 3**: exactly ten ads `a`–`j`, exactly one situation keyed `0`,
+  no ad used twice
+- **B2 Lesen Teile 2, 4, 5**: eight lettered alternatives, no letter answering
+  two items, the worked example's letter spent, and at least one left unused
+- **B2 Lesen Teile 2 and 5**: every item number appears exactly once in the text
+  as a gap marker `[10]`, and no marker is orphaned
+- **B2 Lesen Teil 1**: four forum posts labelled `a`–`d`, and every item's four
+  options naming those same four writers
+- **Hören Teil 1** at both levels: exactly five short texts, each with one
+  `richtig_falsch` and one `multiple_choice` item
+- **Which parts repeat**: B1 hears Teile 1 and 4 twice, **B2 hears 2 and 4**
+- **The speaker-matching part** (B1 Teil 4, B2 Teil 3): a host and exactly two
+  guests; try to key at least one item to each
 - Every `glossar` lemma occurs somewhere in the paper, every `grammatik`
-  `belegSatz` is a real sentence from it
-- Speaking presentation topics never repeat across papers
+  `belegSatz` is a real sentence from it, and every `fundstelle` names a Teil
+  that exists at this level
+- Speaking presentation topics never repeat across papers **of the same level**
 
 ---
 
@@ -108,12 +119,28 @@ Also enforced:
 Aim for **roughly 30 minutes of audio** across the module. The generator warns
 if you miss it. As a guide, at exam pace (~130 wpm):
 
+**B1**
+
 | Teil | Words | Notes |
 |---|---|---|
 | 1 | ~80 per short text, five of them | Each is heard twice |
 | 2 | 450–550 | One speaker, heard once |
 | 3 | 450–550 | Two speakers, heard once |
 | 4 | 600–750 | Three speakers, heard **twice** — this is the long one |
+
+**B2**
+
+| Teil | Words | Notes |
+|---|---|---|
+| 1 | ~85 per short text, five of them | Heard **once** — leave answering time in `pauseDanachSek` |
+| 2 | 500–580 | Interview, two speakers, heard **twice** |
+| 3 | 520–620 | Three speakers, heard once |
+| 4 | 600–700 | One speaker, heard **twice** — this is the long one |
+
+At B1 the repeats fall on the first and last parts, at B2 on the second and
+fourth. Because B2's short texts are heard only once, the answering time has to
+come from the `pauseDanachSek` of the last line of each text — nothing else
+inserts it.
 
 Mark the line carrying each answer with `"betont": true`. It is read very
 slightly more deliberately, as a real reader would.
@@ -138,16 +165,22 @@ explicit `stimme` or reduce the cast.
 
 ## Difficulty
 
-`niveau` is `mittel-leicht` or `mittel`, and `sprechtempoProzent` slows the
-audio (`-8` on the gentlest paper, `0` at full exam speed).
+`stufe` picks the format. Within a level, `niveau` is `mittel-leicht` or
+`mittel`, and `sprechtempoProzent` slows the audio (`-8` on the gentlest paper,
+`0` at full exam speed).
 
 A *mittel-leicht* paper differs by being **more transparent, not shorter**:
 distractors are further from the key, the answer-bearing sentence is closer to
 the surface, and fewer items depend on tracking a pronoun across sentences.
-Never make it easier by using sub-B1 vocabulary — that trains the wrong level.
+Never make it easier by dropping below the level's vocabulary range — that
+trains the wrong level.
 
-Keep to the B1 vocabulary range. A handful of `B1+` glossary items per paper is
-realistic; a text full of them is not.
+At B1, keep to the B1 range; a handful of `B1+` glossary items per paper is
+realistic, a text full of them is not. At B2 the difficulty is less about rare
+words than about how much has to be held in mind at once: opinions that turn
+mid-paragraph, concessive connectors that reverse a sentence you have already
+half-read, and extended participial attributes between an article and its noun.
+Write those in deliberately — they are what the level actually tests.
 
 ---
 
@@ -158,6 +191,11 @@ fails on a repeated speaking topic.
 
 **Erwachsene**: work, applications, housing and moving, insurance, further
 training, consumer rights, mobility, health, volunteering, neighbourhood.
+
+**Erwachsene, B2** can go further into the abstract, because the tasks demand a
+position rather than a preference: working-time models, urban planning, consumer
+habits, science in everyday life, education policy, the effects of technology on
+how we learn or remember.
 
 **Jugendliche**: school, homework, hobbies, sport, phones and social media,
 pocket money, friendship, class trips, part-time jobs, family rules.

@@ -7,7 +7,7 @@
  * every Anki client as well as in Quizlet and a spreadsheet.
  */
 
-import type { GlossarEintrag, Redewendung } from '@b1/core';
+import type { GlossarEintrag, Redewendung } from '@pruefung/core';
 
 /** Anki treats a literal tab or newline inside a field as a column break. */
 function feld(text: string): string {

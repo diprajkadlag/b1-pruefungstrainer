@@ -19,7 +19,12 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { bewerteModul, gesamtergebnis, type Modul, type Schluessel } from '@b1/core';
+import {
+  bewerteModul,
+  gesamtergebnis,
+  type Modul,
+  type Schluessel,
+} from '@pruefung/core';
 import { selbstsigniertesZertifikat } from './tls.js';
 
 const HIER = dirname(fileURLToPath(import.meta.url));

@@ -22,7 +22,7 @@ export default defineConfig({
     // repo root it finds neither. Going through the workspace script keeps the
     // two from drifting apart.
     command:
-      'npm run build --workspace=@b1/web && npm run preview --workspace=@b1/web -- --port 4173 --strictPort',
+      'npm run build --workspace=@pruefung/web && npm run preview --workspace=@pruefung/web -- --port 4173 --strictPort',
     cwd: '.',
     url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,

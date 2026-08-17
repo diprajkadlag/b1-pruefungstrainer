@@ -5,6 +5,7 @@
  * Python validator enforces it on every content change. Keep them in step.
  */
 
+export type Stufe = 'B1' | 'B2';
 export type Variante = 'erwachsene' | 'jugendliche';
 export type Niveau = 'mittel-leicht' | 'mittel';
 
@@ -13,12 +14,28 @@ export type ItemTyp =
   | 'multiple_choice'
   | 'zuordnung_anzeigen'
   | 'ja_nein'
-  | 'zuordnung_person';
+  | 'zuordnung_person'
+  /**
+   * B2: pick one letter from the Teil's `optionenliste`. Inserting a sentence
+   * into a gap, matching an opinion to a heading and matching a paragraph to a
+   * table of contents look nothing alike on paper but are the same decision,
+   * so they share a control and are told apart by the Teil's `typ`.
+   */
+  | 'zuordnung_buchstabe';
 
 export interface Optionen {
   a: string;
   b: string;
   c: string;
+  /** Only B2 Lesen Teil 1, which matches statements to four named writers. */
+  d?: string;
+}
+
+/** One lettered alternative in a B2 matching task. Some are never the answer. */
+export interface Zuordnungsoption {
+  buchstabe: string;
+  titel?: string;
+  inhalt: string;
 }
 
 /** An item as the candidate sees it: no answer, no evidence, no rationale. */
@@ -41,6 +58,12 @@ export interface PruefungsText {
   id: string;
   titel?: string;
   quelle?: string;
+  /** B2 Lesen Teil 1: which of the four forum writers this post is. */
+  buchstabe?: string;
+  /**
+   * Where the task is to fill gaps (B2 Lesen Teile 2 and 5) each gap appears
+   * in the running text as its item number in square brackets: `[10]`.
+   */
   inhalt: string;
 }
 
@@ -57,7 +80,10 @@ export interface LesenTeil {
   richtzeitMinuten: number;
   these?: string;
   texte?: PruefungsText[];
+  /** B1 Teil 3: ten classified ads. */
   anzeigen?: Anzeige[];
+  /** B2 Teile 2, 4 and 5: the lettered alternatives on offer. */
+  optionenliste?: Zuordnungsoption[];
   beispiel?: Beispiel;
   items: OeffentlichesItem[];
 }
@@ -75,19 +101,21 @@ export interface HoerenTeil {
 
 export interface SchreibenAufgabe {
   nummer: number;
-  typ: 'email_informell' | 'forumsbeitrag' | 'email_halbformell';
+  typ: 'email_informell' | 'forumsbeitrag' | 'email_halbformell' | 'nachricht_formell';
   situation: string;
   impuls?: string;
   aufgabenstellung: string;
   leitpunkte: string[];
   anrede?: string;
-  woerter: 40 | 80;
+  /** A target at B1, a minimum at B2 — which is why the app labels it per level. */
+  woerter: 40 | 80 | 100 | 150;
   zeitMinuten: number;
   punkte: number;
 }
 
 export interface SprechenThema {
   titel: string;
+  /** Five slides at B1; four outline points at B2, where it is a talk. */
   folien: string[];
 }
 
@@ -99,7 +127,13 @@ export interface PartnerTurn {
 
 export interface SprechenTeil {
   nummer: number;
-  typ: 'gemeinsam_planen' | 'praesentation' | 'rueckmeldung';
+  typ:
+    | 'gemeinsam_planen'
+    | 'praesentation'
+    | 'rueckmeldung'
+    /** B2: a structured talk, then a debate on a set question. */
+    | 'vortrag'
+    | 'diskussion';
   titel: string;
   anweisung: string;
   dauerMinuten: number;
@@ -115,6 +149,7 @@ export interface OeffentlichePruefung {
   meta: {
     id: string;
     titel: string;
+    stufe: Stufe;
     variante: Variante;
     niveau: Niveau;
     contentVersion: string;
@@ -262,6 +297,8 @@ export interface Tabelle {
 export interface Lernhilfe {
   titel: string;
   untertitel: string;
+  /** Which level's sheet this is. Stamped on by the exporter. */
+  stufe: Stufe;
   version: string;
   ueberblick: {
     einleitung: string;

@@ -5,7 +5,7 @@ import {
   type ModulErgebnis,
   type OeffentlichePruefung,
   type Schluesseldaten,
-} from '@b1/core';
+} from '@pruefung/core';
 import type { GespeicherterVersuch } from '../lib/db';
 import { ankiTsv } from '../lib/anki';
 import { blobZuBytes, herunterladen, zipErstellen, type ZipEintrag } from '../lib/zip';
@@ -27,6 +27,7 @@ const KOMPETENZ_NAME: Record<string, string> = {
   selektivverstehen: 'Selektives Verstehen',
   meinung_haltung: 'Meinung und Haltung erkennen',
   zuordnen: 'Zuordnen',
+  textstruktur: 'Textaufbau erkennen',
 };
 
 const KOMPETENZ_RAT: Record<string, string> = {
@@ -43,8 +44,13 @@ const KOMPETENZ_RAT: Record<string, string> = {
     'Entscheidend ist der letzte Satz, nicht der erste. Viele Beiträge beginnen mit ' +
     'der Gegenposition („Ich war skeptisch …“) und drehen dann.',
   zuordnen:
-    'Prüfen Sie bei jeder Zuordnung alle Bedingungen der Situation, nicht nur eine. ' +
-    'Und trauen Sie sich zur Null: Eine Situation passt zu keiner Anzeige.',
+    'Prüfen Sie bei jeder Zuordnung alle Bedingungen, nicht nur eine. Arbeiten Sie ' +
+    'die sicheren Treffer zuerst ab und streichen Sie, was schon vergeben ist — was ' +
+    'übrig bleibt, ist am Ende die schwerste Entscheidung.',
+  textstruktur:
+    'Hier zählt nicht der Inhalt, sondern der Anschluss. Sehen Sie sich an, was ' +
+    'unmittelbar vor und nach der Lücke steht: Pronomen, Konnektoren („deshalb“, ' +
+    '„allerdings“) und wiederaufgenommene Wörter verraten, welcher Satz passt.',
 };
 
 export function Ergebnis({
@@ -115,7 +121,7 @@ export function Ergebnis({
     const tsv = ankiTsv(
       schluessel.glossar,
       schluessel.redewendungen,
-      `B1-Prüfungstrainer::${pruefung.meta.id}`,
+      `Prüfungstrainer::${pruefung.meta.stufe}::${pruefung.meta.id}`,
     );
     herunterladen(
       new Blob([tsv], { type: 'text/tab-separated-values;charset=utf-8' }),

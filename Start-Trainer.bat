@@ -1,13 +1,13 @@
 @echo off
 setlocal EnableDelayedExpansion
-title B1-Pruefungstrainer
+title Pruefungstrainer B1/B2
 
 rem  Start the trainer from a fresh clone. Double-click this file.
 rem
 rem  It installs what is missing, builds the app, and opens it in the browser.
 rem  The first run takes a few minutes; later runs take seconds.
 rem
-rem  Not to be confused with tools\Start-B1-Trainer.cmd, which is a different
+rem  Not to be confused with tools\Start-Trainer.cmd, which is a different
 rem  and much smaller script: that one ships inside the portable ZIP, where the
 rem  app is already built and only needs a web server.
 rem
@@ -22,7 +22,7 @@ set URL=http://localhost:%PORT%/
 set REPO=https://github.com/diprajkadlag/b1-pruefungstrainer
 
 echo.
-echo   B1-Pruefungstrainer
+echo   Pruefungstrainer B1/B2
 echo   ===================
 echo.
 
@@ -168,7 +168,7 @@ rem --------------------------------------------------------------------------
 :build
 echo   [4/5] Preparing the exams and building the app...
 
-call npm run build --workspace=@b1/core >nul
+call npm run build --workspace=@pruefung/core >nul
 if errorlevel 1 (
   echo   [X] Building the scoring package failed.
   pause
@@ -182,7 +182,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-call npm run build --workspace=@b1/web
+call npm run build --workspace=@pruefung/web
 if errorlevel 1 (
   echo   [X] Building the app failed.
   pause
@@ -202,6 +202,6 @@ rem  Open the browser only once the server actually answers, rather than
 rem  racing it and landing on a connection error.
 start "" /b cmd /c "for /l %%i in (1,1,60) do (curl -s -o nul %URL% && (start %URL% & exit) || timeout /t 1 /nobreak >nul)"
 
-call npm run preview --workspace=@b1/web -- --port %PORT% --strictPort
+call npm run preview --workspace=@pruefung/web -- --port %PORT% --strictPort
 
 endlocal

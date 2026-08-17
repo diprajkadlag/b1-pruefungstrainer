@@ -4,7 +4,8 @@ import type {
   Lernhilfe,
   OeffentlichePruefung,
   Schluesseldaten,
-} from '@b1/core';
+  Stufe,
+} from '@pruefung/core';
 import {
   audioManifestLaden,
   lernhilfeLaden,
@@ -26,13 +27,24 @@ import { Spickzettel } from './screens/Spickzettel';
 
 type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis' | 'spickzettel';
 
-/** Sprechen has no single countdown; its parts are timed by the recorder. */
-const DAUER: Record<ModulWahl, number | null> = {
-  lesen: 65,
-  hoeren: 40,
-  schreiben: 60,
-  sprechen: null,
-};
+/**
+ * How long the current module runs, taken from the paper itself rather than a
+ * table: Schreiben is 60 minutes at B1 and 75 at B2, and the file that is open
+ * is the only thing that knows which. Sprechen has no single countdown — its
+ * parts are timed by the recorder.
+ */
+function modulDauer(pruefung: OeffentlichePruefung, modul: ModulWahl): number | null {
+  switch (modul) {
+    case 'lesen':
+      return pruefung.lesen.zeitMinuten;
+    case 'hoeren':
+      return pruefung.hoeren.zeitMinuten;
+    case 'schreiben':
+      return pruefung.schreiben.zeitMinuten;
+    default:
+      return null;
+  }
+}
 
 const TITEL: Record<ModulWahl, string> = {
   lesen: 'Lesen',
@@ -113,12 +125,12 @@ export default function App() {
   });
 
   useEffect(() => {
-    if (!aktuellesModul) return;
-    const minuten = DAUER[aktuellesModul];
+    if (!aktuellesModul || !pruefung) return;
+    const minuten = modulDauer(pruefung, aktuellesModul);
     setDeadline(minuten ? Date.now() + minuten * 60_000 : null);
     setAbgelaufen(false);
     window.scrollTo({ top: 0 });
-  }, [aktuellesModul]);
+  }, [aktuellesModul, pruefung]);
 
   // Warn before an accidental tab close mid-exam.
   useEffect(() => {
@@ -193,12 +205,15 @@ export default function App() {
     }
   }
 
-  async function spickzettelOeffnen() {
+  async function spickzettelOeffnen(stufe: Stufe) {
     setFehler(null);
     try {
       // Fetched on demand rather than with the registry: it is a good deal
-      // larger than the exam list and most sessions never open it.
-      setLernhilfe(lernhilfe ?? (await lernhilfeLaden()));
+      // larger than the exam list and most sessions never open it. Cached per
+      // level, so switching tabs does not refetch the one already in hand.
+      const geladen =
+        lernhilfe?.stufe === stufe ? lernhilfe : await lernhilfeLaden(stufe);
+      setLernhilfe(geladen);
       setPhase('spickzettel');
       window.scrollTo({ top: 0 });
     } catch {
@@ -217,12 +232,13 @@ export default function App() {
     <div className="app">
       <header className="kopf">
         <a className="kopf__marke" href={import.meta.env.BASE_URL}>
-          B1-Prüfungstrainer
+          Prüfungstrainer
         </a>
         {phase === 'pruefung' && aktuellesModul && versuch && (
           <div className="kopf__lauf">
             <span className="kopf__modul">
-              Modul {TITEL[aktuellesModul]} ({modulIndex + 1}/{versuch.module.length})
+              {pruefung?.meta.stufe} · Modul {TITEL[aktuellesModul]} ({modulIndex + 1}/
+              {versuch.module.length})
             </span>
             {deadline !== null && <Timer restMs={restMs} label="Verbleibend" />}
           </div>

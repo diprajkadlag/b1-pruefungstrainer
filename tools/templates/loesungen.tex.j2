@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage{b1pruefung}
+\usepackage{pruefung}
 \usepackage{longtable}
 
 \pruefungstitel{<< meta.titel >>}
@@ -30,7 +30,7 @@ pro Modul.\\[3pt]
 %% ---------------- Schnellübersicht ----------------
 \vspace{0.9em}
 {\large\bfseries Lösungsschlüssel auf einen Blick}\par
-{\color{b1edge}\hrule height 0.8pt}\vspace{0.5em}
+{\color{pruefedge}\hrule height 0.8pt}\vspace{0.5em}
 
 \begin{minipage}[t]{0.48\linewidth}
 {\bfseries Lesen}\par\vspace{3pt}
@@ -48,12 +48,12 @@ pro Modul.\\[3pt]
 %% ---------------- Lesen ----------------
 \clearpage
 {\Large\bfseries Modul Lesen}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 <% for teil in lesen.teile %>
 \vspace{0.7em}
-{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil | teilname | tex >>}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{pruefmute}\small << teil | teilname | tex >>}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 <% for item in teil['items'] %>
 \loesungszeile{<< item.nr >>}{<< item.loesung | kurz >>}{%
   << item.frage | tex >>%
@@ -67,12 +67,12 @@ pro Modul.\\[3pt]
 %% ---------------- Hören ----------------
 \clearpage
 {\Large\bfseries Modul Hören}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 <% for teil in hoeren.teile %>
 \vspace{0.7em}
-{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil | teilname | tex >>}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{pruefmute}\small << teil | teilname | tex >>}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 <% for item in teil['items'] %>
 \loesungszeile{<< item.nr >>}{<< item.loesung | kurz >>}{%
   << item.frage | tex >>%
@@ -86,16 +86,16 @@ pro Modul.\\[3pt]
 %% ---------------- Hörtexte ----------------
 \clearpage
 {\Large\bfseries Hörtexte — Transkription}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 {\small Die Sätze, die eine Lösung tragen, sind \textbf{fett} gedruckt.}
 
 <% for teil in hoeren.teile %>
 \vspace{0.7em}
-{\large\bfseries Teil << teil.nummer >>}\hfill{\small\color{b1mute}<< teil.wiederholungen >>× zu hören}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries Teil << teil.nummer >>}\hfill{\small\color{pruefmute}<< teil.wiederholungen >>× zu hören}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 <% for line in teil.skript %>
-\noindent\makebox[7.5em][l]{\small\bfseries\color{b1mute}<< line.rolle | tex >>}%
+\noindent\makebox[7.5em][l]{\small\bfseries\color{pruefmute}<< line.rolle | tex >>}%
 \begin{minipage}[t]{\dimexpr\linewidth-7.5em\relax}<% if line.get('betont') %>\bfseries{}<% endif %><< line.text | tex >>\end{minipage}\par\vspace{2pt}
 <% endfor %>
 <% endfor %>
@@ -103,12 +103,12 @@ pro Modul.\\[3pt]
 %% ---------------- Schreiben ----------------
 \clearpage
 {\Large\bfseries Modul Schreiben — Musterlösungen}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 <% for a in schreiben.aufgaben %>
 \vspace{0.7em}
-{\large\bfseries Aufgabe << a.nummer >>}\quad{\color{b1mute}\small << a | aufgabenname | tex >> · ca. << a.woerter >> Wörter · << a.punkte >> Punkte}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries Aufgabe << a.nummer >>}\quad{\color{pruefmute}\small << a | aufgabenname | tex >> · ca. << a.woerter >> Wörter · << a.punkte >> Punkte}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 
 <% if a.get('redemittel') %>
 {\bfseries\small Nützliche Redemittel}
@@ -138,25 +138,25 @@ Aufgabe 3: 4 Punkte für Erfüllung, 4 für Kohärenz, 6 für Wortschatz,
 %% ---------------- Sprechen ----------------
 \clearpage
 {\Large\bfseries Modul Sprechen — Musterantworten}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 <% for teil in sprechen.teile %>
 \vspace{0.7em}
-{\large\bfseries Teil << teil.nummer >>}\quad{\color{b1mute}\small << teil.titel | tex >> · << teil.punkte >> Punkte}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries Teil << teil.nummer >>}\quad{\color{pruefmute}\small << teil.titel | tex >> · << teil.punkte >> Punkte}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 
 <% for thema in teil.get('themen') or [] %>
 {\bfseries << thema.titel | tex >>}\par
 <% if thema.get('redemittel') %>
-{\small\color{b1mute}Redemittel: <% for r in thema.get('redemittel') %><< r | tex >><% if not loop.last %> · <% endif %><% endfor %>}\par
+{\small\color{pruefmute}Redemittel: <% for r in thema.get('redemittel') %><< r | tex >><% if not loop.last %> · <% endif %><% endfor %>}\par
 <% endif %>
 \pruefungstext{Musterantwort}{}{<< thema.musterantwort | texpar >>}
 <% endfor %>
 
 <% for p in teil.get('partnerSkript') or [] %>
-\noindent\makebox[6em][l]{\small\bfseries\color{b1mute}Partner}%
+\noindent\makebox[6em][l]{\small\bfseries\color{pruefmute}Partner}%
 \begin{minipage}[t]{\dimexpr\linewidth-6em\relax}<< p.text | tex >>\par
-{\small\color{b1mute}$
+{\small\color{pruefmute}$
 ightarrow$ << p.get('hinweis') | default('') | tex >> (ca. << p.wartenSek >> Sekunden)}\end{minipage}\par\vspace{3pt}
 <% endfor %>
 <% endfor %>
@@ -173,7 +173,7 @@ Aussprache über alle Teile: 16. Zusammen 100 Punkte.
 %% ---------------- Glossar ----------------
 \clearpage
 {\Large\bfseries Wortschatz aus dieser Prüfung}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 {\small Alle Wörter stammen aus den Texten dieser Prüfung. Nomen stehen mit
 Artikel und Plural, Verben mit allen Stammformen. Lernen Sie Verben immer
@@ -185,14 +185,14 @@ zusammen mit ihrer Präposition und deren Kasus.}
 \hline
 \endhead
 <% for g in glossar | sort(attribute='lemma') %>
-<< g | glossarformen >> & << g.bedeutung_en | tex >> & \textit{<< g.get('beispiel') | tex | kuerzen >>}\newline{\scriptsize\color{b1mute}<< g.fundstelle | tex >>} \\[3pt]
+<< g | glossarformen >> & << g.bedeutung_en | tex >> & \textit{<< g.get('beispiel') | tex | kuerzen >>}\newline{\scriptsize\color{pruefmute}<< g.fundstelle | tex >>} \\[3pt]
 <% endfor %>
 \end{longtable}}
 
 <% if redewendungen %>
 \vspace{0.5em}
 {\large\bfseries Redewendungen und feste Wendungen}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 {\small\begin{longtable}{@{}p{0.26\linewidth}p{0.36\linewidth}p{0.32\linewidth}@{}}
 <% for r in redewendungen %>
 \textbf{<< r.wendung | tex >>} & << r.bedeutung_en | tex >> & \textit{<< r.get('beispiel') | tex | kuerzen >>} \\[3pt]
@@ -203,15 +203,15 @@ zusammen mit ihrer Präposition und deren Kasus.}
 %% ---------------- Grammatik ----------------
 \clearpage
 {\Large\bfseries Grammatik aus dieser Prüfung}\par
-{\color{b1rule}\hrule height 1pt}
+{\color{pruefrule}\hrule height 1pt}
 
 {\small Diese Strukturen wurden in dieser Prüfung tatsächlich geprüft. Jeder
 Punkt zeigt den echten Satz aus dem Text und hat drei Übungen.}
 
 <% for g in grammatik %>
 \vspace{0.7em}
-{\large\bfseries << g.phaenomen | tex >>}\hfill{\small\color{b1mute}<< g.fundstelle | tex >>}\par
-{\color{b1edge}\hrule height 0.6pt}\vspace{0.3em}
+{\large\bfseries << g.phaenomen | tex >>}\hfill{\small\color{pruefmute}<< g.fundstelle | tex >>}\par
+{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
 \warum{<< g.erklaerung_de | tex >>}
 \warumen{<< g.erklaerung_en | tex >>}
 \pruefungstext{}{}{\textbf{Beispiel aus der Prüfung:} „<< g.belegSatz | tex >>“}
@@ -219,8 +219,8 @@ Punkt zeigt den echten Satz aus dem Text und hat drei Übungen.}
 \begin{enumerate}[leftmargin=1.6em,itemsep=3pt,topsep=3pt]
 <% for u in g.uebungen %>
 \item << u.aufgabe | tex >>%
-<% if u.hinweis %>\newline{\scriptsize\color{b1mute}Tipp: << u.hinweis | tex >>}<% endif %>%
-\newline{\small\color{b1mark}Lösung: << u.loesung | tex >>}
+<% if u.hinweis %>\newline{\scriptsize\color{pruefmute}Tipp: << u.hinweis | tex >>}<% endif %>%
+\newline{\small\color{pruefmark}Lösung: << u.loesung | tex >>}
 <% endfor %>
 \end{enumerate}
 <% endfor %>

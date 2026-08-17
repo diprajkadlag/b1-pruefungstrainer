@@ -40,23 +40,63 @@ TEMPLATES = Path(__file__).resolve().parent / "templates"
 
 DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen"]
 
+# What each part actually is, per level. Printed next to the part number so a
+# candidate leafing through the paper knows what is coming. The two levels
+# share no single line here, which is why this is keyed by level.
 TEIL_NAMEN = {
-    ("lesen", 1): "Blog / persönlicher Bericht",
-    ("lesen", 2): "Zeitungsartikel",
-    ("lesen", 3): "Anzeigen zuordnen",
-    ("lesen", 4): "Meinungen im Forum",
-    ("lesen", 5): "Benutzungsordnung",
-    ("hoeren", 1): "Fünf kurze Texte",
-    ("hoeren", 2): "Vortrag / Führung",
-    ("hoeren", 3): "Alltagsgespräch",
-    ("hoeren", 4): "Radiodiskussion",
+    "B1": {
+        ("lesen", 1): "Blog / persönlicher Bericht",
+        ("lesen", 2): "Zeitungsartikel",
+        ("lesen", 3): "Anzeigen zuordnen",
+        ("lesen", 4): "Meinungen im Forum",
+        ("lesen", 5): "Benutzungsordnung",
+        ("hoeren", 1): "Fünf kurze Texte",
+        ("hoeren", 2): "Vortrag / Führung",
+        ("hoeren", 3): "Alltagsgespräch",
+        ("hoeren", 4): "Radiodiskussion",
+    },
+    "B2": {
+        ("lesen", 1): "Forumsbeiträge zuordnen",
+        ("lesen", 2): "Sätze in Lücken einsetzen",
+        ("lesen", 3): "Zeitungsartikel",
+        ("lesen", 4): "Meinungen zu Überschriften",
+        ("lesen", 5): "Ordnung und Inhaltsverzeichnis",
+        ("hoeren", 1): "Fünf kurze Texte",
+        ("hoeren", 2): "Radiointerview",
+        ("hoeren", 3): "Gespräch mit mehreren Personen",
+        ("hoeren", 4): "Kurzvortrag",
+    },
 }
 
 AUFGABEN_NAMEN = {
     "email_informell": "Informelle E-Mail",
     "forumsbeitrag": "Forumsbeitrag",
     "email_halbformell": "Halbformelle E-Mail",
+    "nachricht_formell": "Formelle Nachricht",
 }
+
+# How one item is answered on the answer sheet. The sheet is built from this
+# rather than from hard-coded number ranges, so it follows whatever the paper
+# actually contains.
+BOGEN_ART = {
+    "richtig_falsch": "rf",
+    "ja_nein": "ja",
+    "multiple_choice": "abc",
+    "zuordnung_anzeigen": "kasten",
+    "zuordnung_buchstabe": "kasten",
+}
+
+# Label above the block, and the macro that draws one line of boxes. Choosing
+# the macro here rather than branching inside LaTeX keeps the template a loop.
+BOGEN_LABEL = {
+    "rf": ("richtig / falsch", "\\rfpaar"),
+    "ja": ("dafür / dagegen", "\\jnpaar"),
+    "abc": ("a / b / c", "\\abcdrei"),
+    "abcd": ("a / b / c / d", "\\abcvier"),
+    "kasten": ("Buchstabe eintragen", "\\kastenfeld"),
+}
+
+GAP = re.compile(r"\[(\d{1,2})\]")
 
 KURZ = {
     "richtig": "richtig", "falsch": "falsch",
@@ -152,9 +192,54 @@ def kurz(loesung: str) -> str:
     return tex(KURZ.get(loesung, loesung))
 
 
-def teilname(teil: dict[str, Any]) -> str:
+def teilname(teil: dict[str, Any], stufe: str = "B1") -> str:
     modul = "hoeren" if "skript" in teil else "lesen"
-    return TEIL_NAMEN.get((modul, teil["nummer"]), "")
+    return TEIL_NAMEN.get(stufe, {}).get((modul, teil["nummer"]), "")
+
+
+def luecken(value: Any) -> str:
+    """Escape a text and turn its [10] gap markers into printed blanks."""
+    return GAP.sub(lambda m: f"\\luecke{{{m.group(1)}}}", texpar(value))
+
+
+def bogen_art(item: dict[str, Any]) -> str:
+    """Which set of boxes this item needs on the answer sheet."""
+    if item["typ"] == "zuordnung_person":
+        return "abcd" if (item.get("optionen") or {}).get("d") else "abc"
+    return BOGEN_ART.get(item["typ"], "abc")
+
+
+def bogenteile(modul: dict[str, Any]) -> list[dict[str, Any]]:
+    """One block per part, with the answer format each item needs.
+
+    Replaces what used to be hard-coded number ranges in the template. B1 and
+    B2 number their parts identically and answer them completely differently,
+    so the sheet has to be derived from the items rather than described twice.
+    """
+    out = []
+    for teil in modul["teile"]:
+        zeilen = [{"nr": i["nr"], "makro": BOGEN_LABEL[bogen_art(i)][1]}
+                  for i in teil["items"]]
+        arten = sorted({bogen_art(i) for i in teil["items"]})
+        label = " und ".join(BOGEN_LABEL[a][0] for a in arten)
+        out.append({"nummer": teil["nummer"], "label": label, "zeilen": zeilen})
+    return out
+
+
+def bogenspalten(modul: dict[str, Any]) -> list[list[dict[str, Any]]]:
+    """Split the parts into two roughly equal columns, keeping parts whole."""
+    teile = bogenteile(modul)
+    gesamt = sum(len(t["zeilen"]) for t in teile)
+    links: list[dict[str, Any]] = []
+    laufend = 0
+    for teil in teile:
+        # Move on to the right column once the left one holds about half the
+        # items; a part is never split across the fold.
+        if laufend and laufend + len(teil["zeilen"]) > gesamt / 2 + 1:
+            break
+        links.append(teil)
+        laufend += len(teil["zeilen"])
+    return [links, teile[len(links):]]
 
 
 def aufgabenname(aufgabe: dict[str, Any]) -> str:
@@ -172,13 +257,18 @@ def itemmacro(item: dict[str, Any]) -> str:
 
     if typ in ("multiple_choice", "zuordnung_person"):
         o = item["optionen"]
-        return (f"\\itemmc{{{nr}}}{{{tex(item['frage'])}}}"
-                f"{{{tex(o['a'])}}}{{{tex(o['b'])}}}{{{tex(o['c'])}}}")
+        gemeinsam = (f"{{{nr}}}{{{tex(item['frage'])}}}"
+                     f"{{{tex(o['a'])}}}{{{tex(o['b'])}}}{{{tex(o['c'])}}}")
+        # Four options only where the paper offers four — B2 Lesen Teil 1.
+        if o.get("d"):
+            return f"\\itemmcvier{gemeinsam}{{{tex(o['d'])}}}"
+        return f"\\itemmc{gemeinsam}"
     if typ == "richtig_falsch":
         return f"\\itemrf{{{nr}}}{{{tex(item['frage'])}}}"
     if typ == "ja_nein":
         return f"\\itemja{{{nr}}}{{{tex(item['frage'])}}}"
-    if typ == "zuordnung_anzeigen":
+    if typ in ("zuordnung_anzeigen", "zuordnung_buchstabe"):
+        # Both answer with a single letter written into a box.
         return f"\\itemzuordnung{{{nr}}}{{{tex(item['frage'])}}}"
     raise ValueError(f"no LaTeX macro for item type {typ!r}")
 
@@ -208,11 +298,11 @@ def glossarformen(g: dict[str, Any]) -> str:
             marks.append("trennbar")
         lines.append(f"{{\\scriptsize {tex(forms)}}}")
         if marks:
-            lines.append(f"{{\\scriptsize\\color{{b1mute}}{tex(', '.join(marks))}}}")
+            lines.append(f"{{\\scriptsize\\color{{pruefmute}}{tex(', '.join(marks))}}}")
 
     if g.get("praeposition"):
         p = g["praeposition"]
-        lines.append(f"{{\\scriptsize\\color{{b1mark}}+ {tex(p['wort'])} "
+        lines.append(f"{{\\scriptsize\\color{{pruefmark}}+ {tex(p['wort'])} "
                      f"({tex(p['kasus'])})}}")
 
     return "\\newline ".join(lines)
@@ -223,7 +313,7 @@ def glossarformen(g: dict[str, Any]) -> str:
 # ---------------------------------------------------------------------------
 
 
-def environment():
+def environment(stufe: str = "B1"):
     import jinja2
 
     env = jinja2.Environment(
@@ -238,9 +328,13 @@ def environment():
     )
     env.filters.update(
         tex=tex, texpar=texpar, betont=betont, kuerzen=kuerzen,
-        folientext=folientext, zeilen=zeilen, kurz=kurz, teilname=teilname,
+        folientext=folientext, zeilen=zeilen, kurz=kurz,
+        # The part names differ entirely between levels, so the filter is bound
+        # to the level of the paper being rendered rather than taking it as an
+        # argument at every one of its call sites.
+        teilname=lambda teil: teilname(teil, stufe),
         aufgabenname=aufgabenname, alle_items=alle_items, itemmacro=itemmacro,
-        glossarformen=glossarformen,
+        glossarformen=glossarformen, luecken=luecken, bogenspalten=bogenspalten,
     )
     return env
 
@@ -256,13 +350,13 @@ def latex_error(log: str) -> str:
 
 def build_document(name: str, exam: dict[str, Any], out_dir: Path,
                    keep_tex: bool) -> tuple[Path, int]:
-    env = environment()
+    env = environment(exam.get("meta", {}).get("stufe", "B1"))
     source = env.get_template(f"{name}.tex.j2").render(**exam)
 
-    work = Path(tempfile.mkdtemp(prefix=f"b1-{name}-"))
+    work = Path(tempfile.mkdtemp(prefix=f"pruefung-{name}-"))
     try:
         (work / f"{name}.tex").write_text(source, encoding="utf-8")
-        shutil.copy(TEMPLATES / "b1pruefung.sty", work / "b1pruefung.sty")
+        shutil.copy(TEMPLATES / "pruefung.sty", work / "pruefung.sty")
 
         if keep_tex:
             out_dir.mkdir(parents=True, exist_ok=True)

@@ -199,7 +199,9 @@ body {
   margin: 0;
   font-size: 0.88rem;
 }
-.anzeige__buchstabe {
+.anzeige__buchstabe,
+.optionenliste__buchstabe,
+.lesetext__buchstabe {
   display: inline-block;
   min-width: 1.5rem;
   text-align: center;
@@ -207,6 +209,78 @@ body {
   color: var(--bg);
   border-radius: 4px;
   margin-right: 0.3rem;
+}
+
+/* --- B2 matching tasks --------------------------------------------------- */
+/* The lettered alternatives of Lesen Teile 2, 4 and 5. Teil 4's entries are
+   whole opinions and Teil 5's are single headings, so the column has to cope
+   with both without either looking wrong: one column, full measure. */
+.optionenliste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+.optionenliste__eintrag {
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  background: var(--bg);
+}
+.optionenliste__eintrag h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+.optionenliste__eintrag p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* A gap in the text, numbered so it can be matched to its item. Marked rather
+   than left blank: the candidate has to see which gap they are answering. */
+.luecke {
+  display: inline-block;
+  min-width: 2.2rem;
+  padding: 0 0.35rem;
+  text-align: center;
+  font-weight: 600;
+  background: var(--soft);
+  color: var(--text);
+  border: 1px dashed var(--rule);
+  border-radius: 4px;
+}
+
+/* --- level tabs ---------------------------------------------------------- */
+.stufenwahl {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.stufe {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.stufe strong {
+  font-size: 1.1rem;
+}
+.stufe__kurz {
+  font-size: 0.8rem;
+  color: var(--mute);
+}
+.stufe--aktiv {
+  border-color: var(--rule);
+  border-width: 2px;
+  background: var(--soft);
 }
 
 /* --- items -------------------------------------------------------------- */

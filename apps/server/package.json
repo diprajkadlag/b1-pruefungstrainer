@@ -1,5 +1,5 @@
 {
-  "name": "@b1/server",
+  "name": "@pruefung/server",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -10,7 +10,7 @@
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "@b1/core": "*",
+    "@pruefung/core": "*",
     "express": "^4.21.2",
     "multer": "^1.4.5-lts.1"
   },

@@ -31,7 +31,7 @@ jobs:
           sudo apt-get update
           # lmodern and pgf are separate packages on Ubuntu and are not pulled
           # in by texlive-fonts-recommended or texlive-latex-extra, although
-          # b1pruefung.sty needs both: lmodern for the type, pgffor for the
+          # pruefung.sty needs both: lmodern for the type, pgffor for the
           # ruled writing lines.
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-recommended texlive-latex-extra \
@@ -49,8 +49,8 @@ jobs:
       - name: Verify no answer leak
         run: python tools/check_no_leak.py
 
-      - run: npm run build --workspace=@b1/core
-      - run: npm run build --workspace=@b1/web
+      - run: npm run build --workspace=@pruefung/core
+      - run: npm run build --workspace=@pruefung/web
 
       - name: Package assets
         run: |
@@ -65,7 +65,7 @@ jobs:
               zip -rqj "release/audio-$id.zip" "$d/audio"
             fi
           done
-          cp tools/Start-B1-Trainer.cmd apps/web/dist/
+          cp tools/Start-Trainer.cmd apps/web/dist/
           cp docs/PORTABLE-LIESMICH.txt apps/web/dist/ 2>/dev/null || true
           cd apps/web && zip -rq ../../release/b1-pruefungstrainer-portable.zip dist
           cd ../.. && ls -lh release/
@@ -79,7 +79,7 @@ jobs:
             ## Downloads
 
             - **`b1-pruefungstrainer-portable.zip`** — unzip and double-click
-              `Start-B1-Trainer.cmd`. No installation, works offline.
+              `Start-Trainer.cmd`. No installation, works offline.
             - **`spickzettel.pdf`** — the cheat sheet: strategy for all four
               modules, Redemittel for Sprechen and Schreiben, grammar in
               tables, and the core vocabulary with every verb form.

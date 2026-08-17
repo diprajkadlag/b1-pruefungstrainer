@@ -14,7 +14,8 @@ and quote the sentence you think supports a different answer.
 You need to touch **no code**:
 
 ```bash
-python tools/new_exam.py pruefung-06
+python tools/new_exam.py pruefung-06        # B1
+# or: python tools/new_exam.py b2-pruefung-02   # B2 — the level comes from the id
 # write the content
 python tools/validate.py pruefung-06 --strict
 ```
@@ -30,7 +31,7 @@ listening scripts need to be, and the one rule that cannot bend:
 
 ```bash
 npm install
-npm run build --workspace=@b1/core
+npm run build --workspace=@pruefung/core
 python tools/export_web.py --no-audio   # content for the app
 npm run dev                             # http://localhost:5173
 ```

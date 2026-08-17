@@ -1,4 +1,4 @@
-import type { AudioManifest, OeffentlichePruefung } from '@b1/core';
+import type { AudioManifest, OeffentlichePruefung } from '@pruefung/core';
 import { audioUrl } from '../lib/content';
 import { BeispielItem, Item } from '../components/Item';
 import { HoerPlayer } from '../components/HoerPlayer';
@@ -58,8 +58,10 @@ export function Hoeren({
               />
             )}
 
-            {/* Teil 4 maps a/b/c onto the three speakers, so name them. */}
-            {teil.nummer === 4 && teil.sprecher && (
+            {/* The speaker-matching part maps a/b/c onto the three voices, so
+                name them. Which part that is differs by level — B1 Teil 4, B2
+                Teil 3 — so key it on what the items actually ask for. */}
+            {teil.items.some((i) => i.typ === 'zuordnung_person') && teil.sprecher && (
               <p className="sprecherliste">
                 {teil.sprecher.map((s, i) => (
                   <span key={s.rolle}>

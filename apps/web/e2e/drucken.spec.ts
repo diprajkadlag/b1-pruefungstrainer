@@ -82,16 +82,20 @@ test('the print links resolve to a real PDF', async ({ page, request }) => {
 });
 
 test('switching paper switches which PDFs are offered', async ({ page }) => {
-  test.skip(registry.pruefungen.length < 2, 'needs at least two papers');
+  // The start screen shows one level at a time, so compare two papers of the
+  // same level. Looked up by title rather than by position: the registry is
+  // ordered by folder name, and a new level's papers can land anywhere in it.
+  const b1 = registry.pruefungen.filter((p: { stufe: string }) => p.stufe === 'B1');
+  test.skip(b1.length < 2, 'needs at least two B1 papers');
   await page.goto('/');
 
   // toHaveAttribute retries, so this cannot read the previous paper's href in
   // the frame between the click and React re-rendering the links.
   const ersterLink = page.locator('.druck__link').first();
-  await expect(ersterLink).toHaveAttribute('href', new RegExp(registry.pruefungen[0].id));
+  await expect(ersterLink).toHaveAttribute('href', new RegExp(b1[0].id));
 
   await page.getByRole('button', { name: /Übungsprüfung 2/ }).click();
-  await expect(ersterLink).toHaveAttribute('href', new RegExp(registry.pruefungen[1].id));
+  await expect(ersterLink).toHaveAttribute('href', new RegExp(b1[1].id));
 });
 
 test('never offers the solution booklet before submission', async ({ page }) => {

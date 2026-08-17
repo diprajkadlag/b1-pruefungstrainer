@@ -14,6 +14,7 @@ import re
 
 import audio_dsp as dsp
 import make_pdf_fixture
+import new_exam
 import numpy as np
 import pytest
 import validate
@@ -370,3 +371,153 @@ class TestPdfFixture:
     def test_stays_ascii_so_the_stream_encodes(self):
         gefaltet = make_pdf_fixture.pdf_text("Ελληνικά · 中文")
         gefaltet.encode("ascii")  # raises if the fold leaked a non-ASCII byte
+
+
+# --------------------------------------------------------------------------
+# The examination formats
+# --------------------------------------------------------------------------
+# These are the tests that keep the two levels honest. B1 and B2 share a
+# pipeline and disagree on nearly every number in it — including which
+# listening parts are heard twice, which is the mistake you make once.
+
+
+def fuellen(wert):
+    """Pad every placeholder so a scaffold clears the schema's minLength rules.
+
+    The scaffolder deliberately writes prose too short to pass: a half-written
+    paper must never validate. To test the *structure* it produced, the prose
+    has to be lengthened without touching anything meaningful — keys, letters,
+    gap markers and role names are all real values already, and none of them
+    starts with TODO.
+    """
+    if isinstance(wert, dict):
+        return {k: fuellen(v) for k, v in wert.items()}
+    if isinstance(wert, list):
+        return [fuellen(v) for v in wert]
+    if isinstance(wert, str) and wert.startswith("TODO"):
+        fehlend = max(0, 200 - len(wert))
+        return wert + " Fülltext für den Test." * (fehlend // 24 + 1)
+    return wert
+
+
+def geruest_pruefen(exam_id: str, stufe: str) -> validate.Report:
+    exam = fuellen(new_exam.geruest(exam_id, stufe, "erwachsene", "mittel"))
+    return validate.validate_one(exam, exam_id)
+
+
+def strukturfehler(rep: validate.Report) -> list[str]:
+    """Errors about the shape of the paper, not about its (placeholder) prose."""
+    return [
+        str(f) for f in rep.errors
+        if f.where.startswith(("schema:", "lesen", "hoeren", "schreiben", "sprechen"))
+    ]
+
+
+class TestGeruestPasstZurSpezifikation:
+    """What new_exam.py builds is what validate.py demands, at both levels."""
+
+    @pytest.mark.parametrize(
+        "exam_id,stufe", [("pruefung-99", "B1"), ("b2-pruefung-99", "B2")]
+    )
+    def test_scaffold_is_structurally_valid(self, exam_id, stufe):
+        rep = geruest_pruefen(exam_id, stufe)
+        assert strukturfehler(rep) == [], "\n".join(strukturfehler(rep))
+
+    @pytest.mark.parametrize("stufe", ["B1", "B2"])
+    def test_every_module_is_worth_one_hundred_points(self, stufe):
+        spec = validate.FORMATE[stufe]
+        assert sum(spec.schreiben_punkte) == 100
+        assert sum(spec.sprechen_punkte) + spec.sprechen_aussprache == 100
+
+    @pytest.mark.parametrize("stufe", ["B1", "B2"])
+    def test_both_receptive_modules_have_thirty_items(self, stufe):
+        spec = validate.FORMATE[stufe]
+        assert sum(spec.lesen_items) == validate.GESAMT_ITEMS
+        assert sum(spec.hoeren_items) == validate.GESAMT_ITEMS
+
+    def test_the_levels_disagree_about_which_parts_repeat(self):
+        """The single easiest thing to get wrong when adapting a B1 paper."""
+        assert validate.FORMATE["B1"].hoeren_wiederholungen == (2, 1, 1, 2)
+        assert validate.FORMATE["B2"].hoeren_wiederholungen == (1, 2, 1, 2)
+
+    def test_the_level_comes_from_the_folder_name(self):
+        assert validate.stufe_von("pruefung-01") == "B1"
+        assert validate.stufe_von("b2-pruefung-01") == "B2"
+
+
+class TestB2Regeln:
+    """The B2-only rules, each tested by breaking exactly one thing."""
+
+    def bauen(self) -> dict:
+        return fuellen(new_exam.geruest("b2-pruefung-99", "B2", "erwachsene", "mittel"))
+
+    def pruefen(self, exam: dict) -> validate.Report:
+        return validate.validate_one(exam, "b2-pruefung-99")
+
+    def test_a_reused_letter_is_an_error(self):
+        exam = self.bauen()
+        teil = exam["lesen"]["teile"][1]
+        teil["items"][1]["loesung"] = teil["items"][0]["loesung"]
+        assert any("may answer at most one item" in f.message
+                   for f in self.pruefen(exam).errors)
+
+    def test_spending_the_worked_example_letter_again_is_an_error(self):
+        exam = self.bauen()
+        teil = exam["lesen"]["teile"][3]
+        teil["items"][0]["loesung"] = teil["beispiel"]["loesung"]
+        assert any("may answer at most one item" in f.message
+                   for f in self.pruefen(exam).errors)
+
+    def test_a_list_with_no_decoy_is_an_error(self):
+        """Drop the one sentence nothing points at, and the task gives itself away."""
+        exam = self.bauen()
+        teil = exam["lesen"]["teile"][1]
+        benutzt = {i["loesung"] for i in teil["items"]} | {teil["beispiel"]["loesung"]}
+        teil["optionenliste"] = [o for o in teil["optionenliste"]
+                                 if o["buchstabe"] in benutzt]
+        assert any("at least one decoy" in f.message for f in self.pruefen(exam).errors)
+
+    def test_a_missing_gap_marker_is_an_error(self):
+        exam = self.bauen()
+        teil = exam["lesen"]["teile"][1]
+        teil["texte"][0]["inhalt"] = teil["texte"][0]["inhalt"].replace("[12]", "…")
+        assert any("no gap marker for item(s) [12]" in f.message
+                   for f in self.pruefen(exam).errors)
+
+    def test_a_gap_nobody_asks_about_is_an_error(self):
+        exam = self.bauen()
+        teil = exam["lesen"]["teile"][1]
+        teil["texte"][0]["inhalt"] += " Und hier noch eine Lücke [29]."
+        assert any("marks gap(s) [29]" in f.message for f in self.pruefen(exam).errors)
+
+    def test_the_four_writers_must_be_named_the_same_everywhere(self):
+        exam = self.bauen()
+        exam["lesen"]["teile"][0]["items"][0]["optionen"]["c"] = "Jemand ganz anderes"
+        assert any("must name the same writer" in f.message
+                   for f in self.pruefen(exam).errors)
+
+    def test_b1_repeat_pattern_on_a_b2_paper_is_an_error(self):
+        exam = self.bauen()
+        exam["hoeren"]["teile"][0]["wiederholungen"] = 2
+        assert any("heard 2x, B2 requires 1x" in f.message
+                   for f in self.pruefen(exam).errors)
+
+    def test_a_fundstelle_that_does_not_exist_at_this_level_is_an_error(self):
+        """B2 Sprechen has two parts, so 'Sprechen Teil 3' is nowhere."""
+        exam = self.bauen()
+        exam["glossar"][0]["fundstelle"] = "Sprechen Teil 3"
+        assert any("does not exist at B2" in f.message for f in self.pruefen(exam).errors)
+
+    def test_a_debate_without_a_partner_script_is_an_error(self):
+        exam = self.bauen()
+        del exam["sprechen"]["teile"][1]["partnerSkript"]
+        assert any("solo candidates need the other side" in f.message
+                   for f in self.pruefen(exam).errors)
+
+
+class TestGeruestIdUndStufe:
+    def test_a_b2_id_without_the_prefix_is_rejected(self):
+        assert new_exam.main(["pruefung-98", "--stufe", "B2"]) == 1
+
+    def test_a_b1_id_with_the_b2_prefix_is_rejected(self):
+        assert new_exam.main(["b2-pruefung-98", "--stufe", "B1"]) == 1

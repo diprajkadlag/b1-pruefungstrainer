@@ -11,7 +11,7 @@ export default defineConfig({
   base,
   resolve: {
     alias: {
-      '@b1/core': fileURLToPath(
+      '@pruefung/core': fileURLToPath(
         new URL('../../packages/core/src/index.ts', import.meta.url),
       ),
     },

@@ -1,8 +1,25 @@
 import { useState } from 'react';
-import type { AudioManifest, OeffentlichePruefung } from '@b1/core';
+import { STUFEN, type AudioManifest, type OeffentlichePruefung } from '@pruefung/core';
 import { audioUrl } from '../lib/content';
 import { Rekorder } from '../components/Rekorder';
 import { formatiereZeit, useCountdown } from '../components/Timer';
+
+/**
+ * The label on one outline card.
+ *
+ * B1 prints numbered slides. B2 asks for a talk with an introduction, a main
+ * part and a conclusion, and each point names its own role — so the label is
+ * taken from the text where there is one, and falls back to the slide number.
+ */
+function gliederungLabel(punkt: string, index: number): [string, string] {
+  const treffer = /^([^—–-]{3,24})\s*[—–-]\s*(.+)$/s.exec(punkt);
+  const marke = treffer?.[1]?.trim();
+  const rest = treffer?.[2]?.trim();
+  if (marke && rest && !/^Folie\s*\d+$/i.test(marke)) {
+    return [marke, rest];
+  }
+  return [`Folie ${index + 1}`, punkt.replace(/^Folie\s*\d+\s*[—–-]\s*/, '')];
+}
 
 interface Props {
   pruefung: OeffentlichePruefung;
@@ -90,13 +107,17 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
                   ))}
                 </div>
                 <h3 className="thema__titel">{teil.themen[gewaehltesThema]?.titel}</h3>
+                <p className="notiz">{STUFEN[pruefung.meta.stufe].gliederungTitel}</p>
                 <div className="folien">
-                  {teil.themen[gewaehltesThema]?.folien.map((f, i) => (
-                    <article className="folie" key={i}>
-                      <span className="folie__nr">Folie {i + 1}</span>
-                      <p>{f.replace(/^Folie\s*\d+\s*[—–-]\s*/, '')}</p>
-                    </article>
-                  ))}
+                  {teil.themen[gewaehltesThema]?.folien.map((f, i) => {
+                    const [label, text] = gliederungLabel(f, i);
+                    return (
+                      <article className="folie" key={i}>
+                        <span className="folie__nr">{label}</span>
+                        <p>{text}</p>
+                      </article>
+                    );
+                  })}
                 </div>
               </div>
             )}

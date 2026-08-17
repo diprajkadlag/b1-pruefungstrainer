@@ -12,11 +12,13 @@ import type {
   Lernhilfe,
   OeffentlichePruefung,
   Schluesseldaten,
-} from '@b1/core';
+  Stufe,
+} from '@pruefung/core';
 
 export interface RegistryEintrag {
   id: string;
   titel: string;
+  stufe: Stufe;
   variante: string;
   niveau: string;
   contentVersion: string;
@@ -63,10 +65,14 @@ async function holen<T>(pfad: string): Promise<T> {
 
 export const registryLaden = (): Promise<{
   pruefungen: RegistryEintrag[];
-  hatLernhilfe?: boolean;
+  /** Levels that actually ship a cheat sheet; the others hide the button. */
+  lernhilfeStufen?: Stufe[];
 }> => holen(`${BASIS}/index.json`);
 
-export const lernhilfeLaden = (): Promise<Lernhilfe> => holen(`${BASIS}/lernhilfe.json`);
+export const lernhilfeLaden = (stufe: Stufe): Promise<Lernhilfe> =>
+  holen(
+    `${BASIS}/${stufe === 'B1' ? 'lernhilfe' : `lernhilfe-${stufe.toLowerCase()}`}.json`,
+  );
 
 export const pruefungLaden = (id: string): Promise<OeffentlichePruefung> =>
   holen(`${BASIS}/${id}/exam.public.json`);
