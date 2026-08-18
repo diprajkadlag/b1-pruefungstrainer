@@ -36,6 +36,16 @@ Exam content is versioned separately, per paper, in each `exam.json`
 - End-to-end coverage for B2 (`apps/web/e2e/b2.spec.ts`) and tests asserting
   that what `new_exam.py` scaffolds is exactly what `validate.py` demands, at
   both levels.
+- **A B2 Spickzettel**, so both levels have one. Strategy and a timing plan for
+  all four modules built around the B2 tasks, 105 Redemittel for the talk, the
+  debate and the two written tasks, 16 grammar tables aimed at what B2 actually
+  tests — concessive connectors, extended participial attributes, Konjunktiv I,
+  the passive substitutes — a ten-entry list of the written mistakes that cost
+  most marks, and 112 verbs with all principal parts plus 106 nouns of the
+  abstract vocabulary B2 texts are built from. In the app, and as a 17-page PDF.
+- The examiner view marks against the right criteria: B2's two writing tasks are
+  weighted 60/40 and its speaking parts 50/50, with pronunciation folded into
+  both rather than scored separately. The level is read from the paper id.
 
 - **Spickzettel — a cheat sheet**, built from `content/lernhilfe/` and shipped
   three ways: a tab in the app, an 18-page `spickzettel.pdf`, and a standalone
@@ -75,8 +85,19 @@ Exam content is versioned separately, per paper, in each `exam.json`
 - Topic-overlap and speaking-topic checks compare papers **within a level**; a
   B1 and a B2 paper may share a subject, since the tasks built on it are
   nothing alike.
+- The cheat sheet is per level throughout: `content/lernhilfe/b2/` beside the
+  B1 one, a `spickzettel.pdf` for each, both in the release, and the app's
+  button following the level tab.
+- Level-neutral naming reached the last user-visible strings: the browser
+  tab, the installable app's name, the examiner view's title and the default
+  Anki deck.
 
 ### Fixed
+
+- `generate_audio.py` died on the first status line on any Windows console,
+  before writing a single track: it prints an arrow and German role names but
+  never reconfigured stdout to UTF-8, unlike the other tools. A test now asserts
+  every command-line tool has that guard.
 
 - The selected tab became unreadable on hover — `.knopf:hover` outranks
   `.knopf--aktiv`, so the white label was painted onto a pale background.

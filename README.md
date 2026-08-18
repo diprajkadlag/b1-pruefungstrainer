@@ -29,7 +29,7 @@
 
 ## What it does
 
-**Sits a real paper.** Four modules on the published specification: Lesen 65 min / 30 items, Hören 40 min / 30 items, Schreiben 60 min / 3 tasks, Sprechen 15 min. 100 points per module, 60 to pass.
+**Sits a real paper, at B1 or B2.** Four modules on the published specification for the level you pick: Lesen 65 min / 30 items, Hören 40 min / 30 items, then Schreiben 60 min / 3 tasks and three speaking parts at B1, or Schreiben 75 min / 2 tasks and a talk plus a debate at B2. 100 points per module, 60 to pass, each module passed on its own.
 
 **Under exam conditions.** The countdown derives from a wall-clock deadline, so reloading the page does not hand back minutes, and running out hard-submits the module. The listening player gives you one start button and nothing else — no pause, no seek, no second listen. Parts you are entitled to hear twice contain the repeat inside the audio, exactly as in the hall.
 
@@ -39,7 +39,7 @@
 
 **Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
 
-**Gives you something to revise from.** A cheat sheet — in the app and as an 18-page PDF — carries strategy for all four modules, ~185 Redemittel weighted towards Sprechen and Schreiben, 18 grammar topics as tables, and the core vocabulary: 123 verbs with all principal parts, 101 nouns with article and plural, adjectives as opposite pairs. Searchable in the app, printable for the train.
+**Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 
@@ -145,7 +145,9 @@ gaps in a text, matching opinions to headings, and matching the paragraphs of a
 set of regulations to its table of contents. Reading part 1 also matches
 statements to **four** people rather than three, so its answers run `a`–`d`.
 
-Every number above is enforced by `tools/validate.py` against
+Each level has its own papers, its own cheat sheet and its own printable
+answer sheet; picking a tab switches all of them. Every number above is
+enforced by `tools/validate.py` against
 [docs/EXAM-FORMAT.md](docs/EXAM-FORMAT.md), which records where each one comes
 from.
 
@@ -167,7 +169,8 @@ build_pdf.py  generate_audio  export_web.py   validate.py
                           apps/web (PWA)  ←→  apps/server (optional)
                                └── @pruefung/core: scoring shared by both
 
-content/lernhilfe/*.json              ← the cheat sheet, belonging to no paper
+content/lernhilfe/*.json              ← the B1 cheat sheet, belonging to no paper
+content/lernhilfe/b2/*.json           ← the B2 one
                  └── build_pdf.py → spickzettel.pdf · export_web.py → app tab
 ```
 

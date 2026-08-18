@@ -57,7 +57,7 @@ function rueckseite(g: GlossarEintrag): string {
 export function ankiTsv(
   glossar: ReadonlyArray<GlossarEintrag>,
   redewendungen: ReadonlyArray<Redewendung> = [],
-  deckName = 'B1-Prüfungstrainer',
+  deckName = 'Prüfungstrainer',
 ): string {
   // Anki reads these header directives on import and configures itself.
   const zeilen = [

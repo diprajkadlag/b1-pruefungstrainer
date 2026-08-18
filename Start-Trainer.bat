@@ -96,17 +96,17 @@ rem  The release carries them and the whole set is about 5 MB, so there is no
 rem  reason to ask. Without them the app simply offers no print links.
 
 if exist "content\exams\pruefung-01\pdf" goto :pdf_ok
-if /i "%B1_SKIP_DOWNLOADS%"=="1" goto :pdf_ok
+if /i "%PRUEF_SKIP_DOWNLOADS%"=="1" goto :pdf_ok
 where curl >nul 2>&1 || goto :pdf_ok
 where tar  >nul 2>&1 || goto :pdf_ok
 
 echo   ... fetching the printable papers ^(about 5 MB^)
-curl -sSL -o "%TEMP%\b1-pdfs.zip" "%REPO%/releases/latest/download/pdfs.zip"
+curl -sSL -o "%TEMP%\pruef-pdfs.zip" "%REPO%/releases/latest/download/pdfs.zip"
 if not errorlevel 1 (
   rem  The archive stores full relative paths, so it unpacks straight into
   rem  content\exams\...\pdf and content\lernhilfe\pdf.
-  tar -xf "%TEMP%\b1-pdfs.zip"
-  del /q "%TEMP%\b1-pdfs.zip" >nul 2>&1
+  tar -xf "%TEMP%\pruef-pdfs.zip"
+  del /q "%TEMP%\pruef-pdfs.zip" >nul 2>&1
 )
 
 :pdf_ok
@@ -119,8 +119,8 @@ rem  several minutes per paper. Downloading the finished tracks from the
 rem  release is far quicker. Reading, writing and speaking work without it.
 
 if exist "content\exams\pruefung-01\audio" goto :audio_ok
-if /i "%B1_SKIP_AUDIO%"=="1" goto :audio_skipped
-if /i "%B1_SKIP_DOWNLOADS%"=="1" goto :audio_skipped
+if /i "%PRUEF_SKIP_AUDIO%"=="1" goto :audio_skipped
+if /i "%PRUEF_SKIP_DOWNLOADS%"=="1" goto :audio_skipped
 
 echo.
 echo   The listening tracks are not in the repository - they are too big.
@@ -134,15 +134,17 @@ where curl >nul 2>&1 || goto :audio_no_tools
 where tar  >nul 2>&1 || goto :audio_no_tools
 
 echo.
-for %%P in (01 02 03 04 05) do (
-  echo   Downloading audio for Pruefung %%P...
-  if not exist "content\exams\pruefung-%%P\audio" mkdir "content\exams\pruefung-%%P\audio"
-  curl -sSL -o "%TEMP%\b1-audio-%%P.zip" "%REPO%/releases/latest/download/audio-pruefung-%%P.zip"
+rem  Every paper that ships, at either level. The release names its audio
+rem  archive after the paper id, so this list is the only thing to extend.
+for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01) do (
+  echo   Downloading audio for %%P...
+  if not exist "content\exams\%%P\audio" mkdir "content\exams\%%P\audio"
+  curl -sSL -o "%TEMP%\pruef-audio-%%P.zip" "%REPO%/releases/latest/download/audio-%%P.zip"
   if errorlevel 1 (
     echo   ... download failed, skipping.
   ) else (
-    tar -xf "%TEMP%\b1-audio-%%P.zip" -C "content\exams\pruefung-%%P\audio"
-    del /q "%TEMP%\b1-audio-%%P.zip" >nul 2>&1
+    tar -xf "%TEMP%\pruef-audio-%%P.zip" -C "content\exams\%%P\audio"
+    del /q "%TEMP%\pruef-audio-%%P.zip" >nul 2>&1
   )
 )
 goto :audio_ok

@@ -1007,7 +1007,17 @@ def load_exams(only: str | None) -> dict[str, dict[str, Any]]:
     return out
 
 
-def check_lernhilfe(rep: Report) -> None:
+def lernhilfe_ordner(stufe: str) -> Path:
+    """Where a level's cheat sheet lives.
+
+    B1's sits at the top of content/lernhilfe/ because it was there before a
+    second level existed, and the PDF build, the app route and the release
+    assets all name that path. Later levels get a subdirectory.
+    """
+    return LERNHILFE if stufe == "B1" else LERNHILFE / stufe.lower()
+
+
+def check_lernhilfe(rep: Report, stufe: str = "B1") -> None:
     """Validate the cheat sheet.
 
     It has no JSON Schema of its own because it is one hand-written document,
@@ -1015,12 +1025,13 @@ def check_lernhilfe(rep: Report) -> None:
     and both fail unhelpfully on a missing key. These checks turn "StrictUndefined
     raised on line 214" into "grammatik[7] has no tabelle".
     """
-    quelle = LERNHILFE / "lernhilfe.json"
+    ordner = lernhilfe_ordner(stufe)
+    quelle = ordner / "lernhilfe.json"
     if not quelle.exists():
         return
 
     daten = json.loads(quelle.read_text(encoding="utf-8"))
-    wort = json.loads((LERNHILFE / "wortschatz.json").read_text(encoding="utf-8"))
+    wort = json.loads((ordner / "wortschatz.json").read_text(encoding="utf-8"))
 
     for feld in ("titel", "untertitel", "version", "ueberblick", "strategie",
                  "redemittel", "grammatik"):
@@ -1120,13 +1131,18 @@ def main(argv: Iterable[str] | None = None) -> int:
     if len(exams) > 1:
         check_cross_exam(exams, reports)
 
-    # The cheat sheet stands apart from any exam, so it gets its own report
-    # rather than being blamed on whichever paper happened to be first.
-    lernhilfe_rep = Report("lernhilfe")
+    # Each level's cheat sheet stands apart from any exam, so it gets its own
+    # report rather than being blamed on whichever paper happened to be first.
+    lernhilfe_reps: dict[str, Report] = {}
     if args.exam is None:
-        check_lernhilfe(lernhilfe_rep)
-        if lernhilfe_rep.findings:
-            reports["lernhilfe"] = lernhilfe_rep
+        for stufe in FORMATE:
+            if not (lernhilfe_ordner(stufe) / "lernhilfe.json").exists():
+                continue
+            rep = Report(f"spickzettel-{stufe.lower()}")
+            check_lernhilfe(rep, stufe)
+            lernhilfe_reps[stufe] = rep
+            if rep.findings:
+                reports[rep.exam_id] = rep
 
     n_err = n_warn = 0
     for exam_id in sorted(reports):
@@ -1141,9 +1157,11 @@ def main(argv: Iterable[str] | None = None) -> int:
         for f in rep.findings:
             print(f)
 
-    if args.exam is None and not lernhilfe_rep.findings:
-        print("\nlernhilfe  [ok]")
-        print("  Cheat sheet: four modules, Redemittel, grammar tables, word lists.")
+    for stufe, rep in lernhilfe_reps.items():
+        if not rep.findings:
+            print(f"\n{rep.exam_id}  [ok]")
+            print(f"  Spickzettel {stufe}: four modules, Redemittel, grammar "
+                  f"tables, word lists.")
 
     print(f"\n{'-' * 60}")
     print(f"{len(exams)} exam(s): {n_err} error(s), {n_warn} warning(s)")

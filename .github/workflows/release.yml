@@ -55,10 +55,11 @@ jobs:
       - name: Package assets
         run: |
           mkdir -p release
-          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf
-          # Also on its own: most people want the cheat sheet without
-          # downloading 20 exam PDFs to find it.
-          cp content/lernhilfe/pdf/spickzettel.pdf release/
+          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf \n            content/lernhilfe/*/pdf
+          # Also on their own: most people want a cheat sheet without
+          # downloading two dozen exam PDFs to find it.
+          cp content/lernhilfe/pdf/spickzettel.pdf release/spickzettel-b1.pdf
+          cp content/lernhilfe/b2/pdf/spickzettel.pdf release/spickzettel-b2.pdf
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
@@ -80,12 +81,13 @@ jobs:
 
             - **`b1-pruefungstrainer-portable.zip`** — unzip and double-click
               `Start-Trainer.cmd`. No installation, works offline.
-            - **`spickzettel.pdf`** — the cheat sheet: strategy for all four
-              modules, Redemittel for Sprechen and Schreiben, grammar in
-              tables, and the core vocabulary with every verb form.
+            - **`spickzettel-b1.pdf`** / **`spickzettel-b2.pdf`** — the cheat
+              sheet for each level: strategy for all four modules, Redemittel
+              for Sprechen and Schreiben, grammar in tables, and the core
+              vocabulary with every verb form.
             - **`pdfs.zip`** — printable papers, answer sheets, speaking cards
-              and solution booklets.
-            - **`audio-pruefung-NN.zip`** — the listening tracks for one paper.
+              and solution booklets, for both levels.
+            - **`audio-<paper>.zip`** — the listening tracks for one paper.
 
             Or just use the hosted app, no download needed:
             https://diprajkadlag.github.io/b1-pruefungstrainer/

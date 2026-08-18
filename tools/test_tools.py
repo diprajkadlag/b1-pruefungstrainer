@@ -10,6 +10,7 @@ every voice sound comical).
 from __future__ import annotations
 
 import json
+import pathlib
 import re
 
 import audio_dsp as dsp
@@ -521,3 +522,35 @@ class TestGeruestIdUndStufe:
 
     def test_a_b1_id_with_the_b2_prefix_is_rejected(self):
         assert new_exam.main(["b2-pruefung-98", "--stufe", "B1"]) == 1
+
+
+# --------------------------------------------------------------------------
+# Console encoding
+# --------------------------------------------------------------------------
+
+
+class TestKonsolenKodierung:
+    """Every CLI tool must survive a cp1252 console.
+
+    All of them print German text, and most print an arrow in their status
+    lines. On Windows the default console encoding kills the process on the
+    first such line — before any output is written, which makes it look like
+    the tool did nothing rather than like it crashed. generate_audio.py
+    shipped without the guard and failed exactly that way.
+    """
+
+    WERKZEUGE = [
+        "validate.py",
+        "build_pdf.py",
+        "export_web.py",
+        "generate_audio.py",
+        "new_exam.py",
+    ]
+
+    @pytest.mark.parametrize("name", WERKZEUGE)
+    def test_reconfigures_stdout(self, name):
+        quelle = (pathlib.Path(__file__).parent / name).read_text(encoding="utf-8")
+        assert 'reconfigure(encoding="utf-8"' in quelle, (
+            f"{name} prints German text but never reconfigures stdout; "
+            f"it will die on a cp1252 console"
+        )

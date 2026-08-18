@@ -12,7 +12,8 @@ Four documents per exam, into content/exams/<id>/pdf/:
     sprechen_karten.pdf      speaking cards and notes page
     loesungen.pdf            keys, transcripts, model answers, glossary, grammar
 
-Plus one document that belongs to no single exam, into content/lernhilfe/pdf/:
+Plus one document per level that belongs to no single exam, into
+content/lernhilfe/pdf/ (B1) and content/lernhilfe/b2/pdf/ (B2):
 
     spickzettel.pdf          strategy, Redemittel, grammar tables, core vocabulary
 
@@ -39,6 +40,10 @@ LERNHILFE = ROOT / "content" / "lernhilfe"
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 
 DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen"]
+
+# Levels that can carry their own cheat sheet. Ones without a
+# content/lernhilfe/<stufe>/ directory are skipped silently.
+STUFEN = ("B1", "B2")
 
 # What each part actually is, per level. Printed next to the part number so a
 # candidate leafing through the paper knows what is coming. The two levels
@@ -422,24 +427,33 @@ def build_exam(exam_id: str, keep_tex: bool, only: str | None) -> bool:
     return ok
 
 
-def build_lernhilfe(keep_tex: bool) -> bool:
-    """Build the cheat sheet.
+def lernhilfe_ordner(stufe: str) -> Path:
+    """Where a level's cheat sheet lives. B1's stayed at the top of the tree."""
+    return LERNHILFE if stufe == "B1" else LERNHILFE / stufe.lower()
+
+
+def build_lernhilfe(keep_tex: bool, stufe: str = "B1") -> bool:
+    """Build one level's cheat sheet.
 
     It sits outside the per-exam loop on purpose: it belongs to no single paper
-    and is what the student takes to the café the evening before, so it is
-    built once from content/lernhilfe/ rather than five times.
+    and is what the student takes to the cafe the evening before, so it is
+    built once per level rather than once per paper.
     """
-    if not (LERNHILFE / "lernhilfe.json").exists():
+    ordner = lernhilfe_ordner(stufe)
+    if not (ordner / "lernhilfe.json").exists():
         return True
 
-    daten = json.loads((LERNHILFE / "lernhilfe.json").read_text(encoding="utf-8"))
+    daten = json.loads((ordner / "lernhilfe.json").read_text(encoding="utf-8"))
     daten["wortschatz"] = json.loads(
-        (LERNHILFE / "wortschatz.json").read_text(encoding="utf-8")
+        (ordner / "wortschatz.json").read_text(encoding="utf-8")
     )
+    # The template prints the level on the cover, and the shipped B1 sheet
+    # predates the field, so supply it rather than requiring it in the content.
+    daten.setdefault("stufe", stufe)
 
-    print("\nlernhilfe")
+    print(f"\nlernhilfe {stufe}")
     try:
-        pdf, n_pages = build_document("spickzettel", daten, LERNHILFE / "pdf", keep_tex)
+        pdf, n_pages = build_document("spickzettel", daten, ordner / "pdf", keep_tex)
         print(f"    {'spickzettel':22} {n_pages:3d} Seiten  "
               f"{pdf.stat().st_size / 1024:6.0f} KB")
         return True
@@ -473,7 +487,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         return 1
 
     if args.only == "spickzettel":
-        ok = build_lernhilfe(args.keep_tex)
+        ok = all(build_lernhilfe(args.keep_tex, s) for s in STUFEN)
         print("\nDone." if ok else "\nSome documents failed.")
         return 0 if ok else 1
 
@@ -486,7 +500,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     # all() short-circuits, and a failed exam must not stop the rest.
     results = [build_exam(f.name, args.keep_tex, args.only) for f in folders]
     if not args.exam and not args.only:
-        results.append(build_lernhilfe(args.keep_tex))
+        results.extend(build_lernhilfe(args.keep_tex, s) for s in STUFEN)
 
     ok = all(results)
     print("\nDone." if ok else "\nSome documents failed.")

@@ -1,0 +1,924 @@
+{
+  "titel": "B2 Spickzettel — Strategie, Redemittel und Grammatik",
+  "untertitel": "Alles, was man am Tag vor der Prüfung noch einmal durchgehen sollte",
+  "version": "1.0.0",
+
+  "ueberblick": {
+    "einleitung": "Jedes Modul zählt 100 Punkte und wird einzeln bestanden. 60 Punkte reichen. B2 ist nicht einfach ein schwereres B1: Die Aufgaben sind andere. Gefragt ist nicht mehr, ob Sie eine Information finden, sondern ob Sie erkennen, wie ein Text gebaut ist, wo eine Meinung kippt und was jemand sagt, ohne es zu sagen. Wer B1 sicher kann und hier scheitert, scheitert fast immer an der Zeit oder an den kleinen Wörtern, die den Sinn umdrehen.",
+    "module": [
+      {
+        "modul": "Lesen",
+        "zeit": "65 Min.",
+        "teile": "5 Teile, 30 Aufgaben",
+        "punkte": "100",
+        "kern": "Jede Aufgabe 1 Punkt. 18 richtige Aufgaben = 60 Punkte = bestanden. Teil 1 ist der längste — er darf 18 Minuten kosten, aber keine Minute mehr."
+      },
+      {
+        "modul": "Hören",
+        "zeit": "40 Min.",
+        "teile": "4 Teile, 30 Aufgaben",
+        "punkte": "100",
+        "kern": "Teile 2 und 4 hören Sie zweimal, Teile 1 und 3 nur einmal. Das ist genau umgekehrt zu B1 — verwechseln Sie es nicht."
+      },
+      {
+        "modul": "Schreiben",
+        "zeit": "75 Min.",
+        "teile": "2 Aufgaben",
+        "punkte": "100",
+        "kern": "Aufgabe 1 zählt 60 Punkte, Aufgabe 2 nur 40. Teilen Sie die Zeit im selben Verhältnis: 50 und 25 Minuten."
+      },
+      {
+        "modul": "Sprechen",
+        "zeit": "ca. 15 Min. + 15 Min. Vorbereitung",
+        "teile": "2 Teile",
+        "punkte": "100",
+        "kern": "Vortrag und Debatte zählen gleich viel. Die Aussprache wird in beiden Teilen mitbewertet, nicht separat."
+      }
+    ],
+    "noten": [
+      { "note": "sehr gut", "von": 100, "bis": 90 },
+      { "note": "gut", "von": 89, "bis": 80 },
+      { "note": "befriedigend", "von": 79, "bis": 70 },
+      { "note": "ausreichend", "von": 69, "bis": 60 },
+      { "note": "nicht bestanden", "von": 59, "bis": 0 }
+    ]
+  },
+
+  "strategie": [
+    {
+      "modul": "Lesen",
+      "zeitplan": "T1 18 · T2 12 · T3 12 · T4 12 · T5 6 Min. Die letzten fünf Minuten gehören dem Antwortbogen — nicht dem letzten Zweifelsfall.",
+      "goldregeln": [
+        "Die Aufgaben folgen nur in Teil 3 der Reihenfolge des Textes. Überall sonst suchen Sie gezielt, statt von vorn zu lesen.",
+        "Bei jeder Zuordnung zuerst die sicheren Treffer setzen und die verbrauchten Buchstaben durchstreichen. Am Ende bleibt eine Entscheidung zwischen zwei Möglichkeiten übrig — nie zwischen acht.",
+        "Ein Wort aus dem Text in einer Antwortoption ist ein Warnsignal, kein Beweis. Die richtige Option formuliert fast immer um.",
+        "„Allerdings“, „jedoch“, „zwar … aber“, „gleichwohl“ drehen den Satz, den Sie gerade zur Hälfte gelesen haben. Lesen Sie bis zum Punkt, bevor Sie ankreuzen.",
+        "Markieren Sie die Stelle, die Ihre Antwort beweist. Finden Sie keine, haben Sie geraten — und sollten weitergehen, statt zu grübeln.",
+        "Übertragen Sie nach jedem Teil auf den Antwortbogen. Wer alles bis zum Schluss aufhebt, überträgt am Ende unter Zeitdruck falsch."
+      ],
+      "tipps": [
+        {
+          "teil": "Teil 1 — vier Meinungen, neun Aussagen (18 Min.)",
+          "text": "Lesen Sie zuerst alle vier Beiträge und notieren Sie neben jeden ein Stichwort: wofür, wogegen, mit welcher Einschränkung. Erst dann die Aussagen. Eine Person kann mehrfach passen — das ist normal und kein Zeichen für einen Fehler. Achten Sie auf Personen, die zustimmen und dann einschränken: Sie liefern die schwersten Aussagen."
+        },
+        {
+          "teil": "Teil 2 — Sätze in Lücken einsetzen (12 Min.)",
+          "text": "Hier zählt nicht der Inhalt, sondern der Anschluss. Sehen Sie sich an, was unmittelbar vor und nach der Lücke steht: Ein Pronomen („sie“, „das“, „dieser“) braucht ein Wort davor, auf das es zeigt. Konnektoren wie „deshalb“ oder „dagegen“ verlangen einen bestimmten Vorsatz. Zwei Sätze bleiben übrig — wundern Sie sich nicht."
+        },
+        {
+          "teil": "Teil 3 — ein Artikel, a/b/c (12 Min.)",
+          "text": "Die Aufgaben folgen dem Text. Prüfen Sie jede Option einzeln gegen genau eine Textstelle. Die klassische Falle: Eine Option nennt etwas, das im Text vorkommt, aber einer anderen Person zugeschrieben wird — oder als Befürchtung, nicht als Tatsache."
+        },
+        {
+          "teil": "Teil 4 — acht Meinungen, sechs Überschriften (12 Min.)",
+          "text": "Lesen Sie die Überschriften zuerst; sie sind kürzer. Jede fasst eine Meinung in einem Punkt zusammen. Suchen Sie dann in den Äußerungen nach genau diesem Punkt — nicht nach dem Thema. Zwei Äußerungen passen zu keiner Überschrift."
+        },
+        {
+          "teil": "Teil 5 — Ordnung und Inhaltsverzeichnis (6 Min.)",
+          "text": "Der kürzeste Teil, aber nur drei Aufgaben — jede ist ein voller Punkt. Lesen Sie den ganzen Paragraphen, nicht nur den ersten Satz: Ein Paragraph über Haftung nennt gern nebenbei die Öffnungszeiten, und genau darauf zielt die falsche Überschrift."
+        }
+      ]
+    },
+    {
+      "modul": "Hören",
+      "zeitplan": "Die Zeit gibt die Aufnahme vor. Nutzen Sie jede Lesepause vollständig — sie ist eingeplant, nicht geschenkt.",
+      "goldregeln": [
+        "Teil 1 und Teil 3 hören Sie nur einmal. Wer dort auf einen zweiten Durchgang wartet, verliert 16 von 30 Aufgaben.",
+        "Lesen Sie in der Pause vor jedem Teil nicht die ganze Aufgabe, sondern nur die Schlüsselwörter. Beim Hören müssen Sie hören, nicht lesen.",
+        "Kreuzen Sie sofort an, auch wenn Sie unsicher sind. Eine Aufgabe, an der Sie hängen bleiben, kostet Sie die nächste.",
+        "Die Antwort steht fast nie im ersten Anlauf. Menschen korrigieren sich: „… also eigentlich eher …“ — es zählt, was am Ende steht.",
+        "Bei „Wer sagt das?“ hilft es, sich vorher die drei Stimmen zu merken: Wer moderiert, wer ist wofür, wer ist dagegen.",
+        "Im zweiten Durchgang nur die offenen Aufgaben prüfen. Bereits Angekreuztes ändert man selten zu Recht."
+      ],
+      "tipps": [
+        {
+          "teil": "Teil 1 — fünf kurze Texte, einmal hören",
+          "text": "Zu jedem Text zwei Aufgaben: eine richtig/falsch und eine mit a/b/c. Die beiden hängen zusammen; wenn Sie die erste sicher haben, grenzt das die zweite ein. Ansagen und Mailboxnachrichten nennen Zahlen und Zeiten — notieren Sie sie mit, auch ungefragt."
+        },
+        {
+          "teil": "Teil 2 — Radiointerview, zweimal hören",
+          "text": "Sechs Aufgaben, sechs Fragen des Moderators. Die Reihenfolge stimmt. Wenn Sie die Frage hören, kommt die zugehörige Antwort in den nächsten zwanzig Sekunden — danach nicht mehr."
+        },
+        {
+          "teil": "Teil 3 — Gespräch mit mehreren Personen, einmal hören",
+          "text": "Zuordnung zu drei Sprechenden. Die Moderation stellt meist nur Fragen, sagt aber gelegentlich selbst etwas — dann ist sie die Antwort. Vorsicht bei Sätzen, die eine Person zitiert oder als Gegenmeinung nennt."
+        },
+        {
+          "teil": "Teil 4 — Kurzvortrag, zweimal hören",
+          "text": "Acht Aufgaben, der längste Text. Ein Vortrag ist gegliedert: Einleitung, mehrere Punkte, Schluss. Hören Sie im ersten Durchgang auf die Gliederungssignale („Zunächst …“, „Ein zweiter Punkt …“, „Damit komme ich zum Schluss“) und ordnen Sie die Aufgaben zu."
+        }
+      ]
+    },
+    {
+      "modul": "Schreiben",
+      "zeitplan": "Aufgabe 1: 50 Min. (10 planen · 30 schreiben · 10 prüfen) · Aufgabe 2: 25 Min. (5 · 15 · 5).",
+      "goldregeln": [
+        "Alle Leitpunkte müssen vorkommen. Ein fehlender Punkt kostet mehr als zehn Grammatikfehler.",
+        "„Mindestens 150 Wörter“ ist eine Untergrenze, keine Zielmarke. Darunter wird die Aufgabenerfüllung abgewertet; 180 bis 200 sind sicher.",
+        "Ein Beitrag ist kein Aufsatz: Schreiben Sie eine erkennbare Einleitung, zwei bis drei Absätze und einen Schluss mit Ihrer Position.",
+        "Gehen Sie in Aufgabe 1 wirklich auf den Impuls ein. „Ich stimme zu“ ist keine Auseinandersetzung — nennen Sie das Argument, das Sie aufgreifen.",
+        "Register durchhalten: Im Forum „ihr“ oder unpersönlich, in der Nachricht an Vorgesetzte durchgehend „Sie“ und Konjunktiv II bei Bitten.",
+        "Die letzten Minuten gehören der Kontrolle: Verbstellung, Groß- und Kleinschreibung, Endungen nach dem Artikel, Kommas vor Nebensätzen."
+      ],
+      "aufgaben": [
+        {
+          "aufgabe": "Aufgabe 1 — Forumsbeitrag (mind. 150 Wörter, 60 Punkte, 50 Min.)",
+          "aufbau": "Anrede (Hallo zusammen) → Bezug auf den Beitrag → eigene Position → Argument mit Beispiel → Auseinandersetzung mit dem Gegenargument → Vorschlag oder Fazit → Gruß",
+          "hinweis": "Die stärksten Beiträge drehen das Gegenargument um, statt es nur zu bestreiten: „Genau das würde ich sogar als Erfolg werten, weil …“ Ein konkretes Beispiel aus dem eigenen Land oder Beruf hebt die Bewertung bei „Inhalt“ zuverlässig."
+        },
+        {
+          "aufgabe": "Aufgabe 2 — formelle Nachricht (mind. 100 Wörter, 40 Punkte, 25 Min.)",
+          "aufbau": "Sehr geehrte Frau … → Bezug („ich habe mich für … angemeldet“) → Anlass und Grund → Bitte oder Frage im Konjunktiv II → Frist mit Begründung → Mit freundlichen Grüßen",
+          "hinweis": "Hier entscheidet das Register. „Kann ich …?“ wird zu „Wäre es möglich, dass …?“; „Ich will“ zu „Ich würde gern“. Nennen Sie den Grund für Ihre Frist mit — das wirkt höflich und liefert nebenbei Wörter."
+        }
+      ],
+      "fehlerliste": [
+        {
+          "falsch": "Ich bin der Meinung, dass die Preise sind zu hoch.",
+          "richtig": "Ich bin der Meinung, dass die Preise zu hoch sind.",
+          "grund": "Im dass-Satz steht das Verb ganz am Ende."
+        },
+        {
+          "falsch": "Trotz er hatte wenig Zeit, kam er.",
+          "richtig": "Obwohl er wenig Zeit hatte, kam er. / Trotz seiner knappen Zeit kam er.",
+          "grund": "„Trotz“ ist eine Präposition mit Genitiv, „obwohl“ eine Konjunktion mit Nebensatz."
+        },
+        {
+          "falsch": "Ich freue mich, dass Sie mir helfen würden.",
+          "richtig": "Ich würde mich freuen, wenn Sie mir helfen könnten.",
+          "grund": "Der Konjunktiv gehört in die höfliche Bitte, nicht in die Feststellung."
+        },
+        {
+          "falsch": "Das Problem wird immer schlimmer geworden.",
+          "richtig": "Das Problem ist immer schlimmer geworden.",
+          "grund": "„werden“ als Vollverb bildet das Perfekt mit „sein“: ist geworden."
+        },
+        {
+          "falsch": "Einerseits ist es teuer, aber andererseits es ist praktisch.",
+          "richtig": "Einerseits ist es teuer, andererseits ist es praktisch.",
+          "grund": "Nach „andererseits“ steht das Verb direkt danach — und „aber“ ist daneben überflüssig."
+        },
+        {
+          "falsch": "Ich interessiere mich für zu lernen.",
+          "richtig": "Ich bin daran interessiert, es zu lernen. / Ich interessiere mich dafür.",
+          "grund": "Vor einem Infinitivsatz steht das Präpositionaladverb: dafür, darauf, daran."
+        },
+        {
+          "falsch": "Je mehr Menschen fahren Bus, desto die Luft wird besser.",
+          "richtig": "Je mehr Menschen Bus fahren, desto besser wird die Luft.",
+          "grund": "„je“ leitet einen Nebensatz ein (Verb am Ende), nach „desto“ folgt Komparativ und dann das Verb."
+        },
+        {
+          "falsch": "Die Studie, die Ergebnisse überraschend sind, wurde gestern veröffentlicht.",
+          "richtig": "Die Studie, deren Ergebnisse überraschend sind, wurde gestern veröffentlicht.",
+          "grund": "Besitzverhältnis im Relativsatz: Genitiv deren / dessen."
+        },
+        {
+          "falsch": "Er sagte, dass er hat keine Zeit gehabt.",
+          "richtig": "Er sagte, dass er keine Zeit gehabt habe. / … keine Zeit gehabt hatte.",
+          "grund": "In der indirekten Rede steht Konjunktiv I; das Hilfsverb rückt ans Ende."
+        },
+        {
+          "falsch": "Der Vorschlag muss diskutiert.",
+          "richtig": "Der Vorschlag muss diskutiert werden. / Der Vorschlag ist zu diskutieren.",
+          "grund": "Passiv mit Modalverb braucht „werden“ — oder Sie nehmen den Passiversatz."
+        }
+      ]
+    },
+    {
+      "modul": "Sprechen",
+      "zeitplan": "15 Min. Vorbereitung für beide Teile · Teil 1 ca. 4 Min. Vortrag plus Fragen · Teil 2 ca. 5 Min. Debatte.",
+      "goldregeln": [
+        "Notieren Sie in der Vorbereitung Stichworte, keine Sätze. Vorgelesene Sätze hört jede Prüferin sofort, und sie kosten Punkte.",
+        "Gliedern Sie den Vortrag hörbar: „Zunächst …“, „Ein zweiter Punkt ist …“, „Damit komme ich zum Schluss.“ Die Struktur wird eigens bewertet.",
+        "In der Debatte gewinnt nicht, wer am längsten redet, sondern wer auf die Gegenseite eingeht. Nehmen Sie das Argument auf, bevor Sie widersprechen.",
+        "Sagen Sie lieber einen Satz, den Sie sicher können, als einen, den Sie sich gerade ausdenken. Flüssigkeit zählt mehr als Komplexität.",
+        "Wenn Ihnen ein Wort fehlt, umschreiben Sie es. Eine Pause zum Suchen wirkt schlechter als „so eine Art …“ oder „das Ding, mit dem man …“.",
+        "Beenden Sie beide Teile aktiv: eine Zusammenfassung im Vortrag, ein gemeinsames Fazit in der Debatte. Ein Abbruch mitten im Satz wirkt wie Zeitnot."
+      ],
+      "teile": [
+        {
+          "teil": "Teil 1 — einen Vortrag halten (ca. 4 Min., 50 Punkte)",
+          "ziel": "Ein Thema strukturiert darstellen, Beispiele geben, abwägen und eine eigene Position begründen. Danach Fragen der Partnerin beantworten.",
+          "ablauf": "Thema nennen und begründen, warum es Sie interessiert → Situation beschreiben, mit mindestens einem konkreten Beispiel → Vor- und Nachteile abwägen → Fazit mit eigener Meinung → Dank → Rückfragen beantworten",
+          "achtung": "Vier Minuten sind länger, als sie klingen. Wer nach zwei Minuten fertig ist, hat zu wenig gesagt: Planen Sie pro Gliederungspunkt einen Gedanken plus ein Beispiel. Auf die Rückfragen antworten Sie in zwei bis drei Sätzen — nicht mit einem zweiten Vortrag."
+        },
+        {
+          "teil": "Teil 2 — eine Debatte führen (ca. 5 Min., 50 Punkte)",
+          "ziel": "Argumente austauschen, auf Einwände eingehen und am Ende zusammenfassen, worauf man sich einigen kann.",
+          "ablauf": "Position nennen → Argument mit Begründung → Einwand der Partnerin aufnehmen („Da ist etwas dran, allerdings …“) → nachfragen → Kompromiss oder gemeinsames Fazit",
+          "achtung": "Der häufigste Fehler ist der Monolog: zwei fertige Argumente vortragen und dann schweigen. Stellen Sie Rückfragen („Wie sehen Sie das?“, „Und wenn nun …?“) — Interaktion ist ein eigenes Bewertungskriterium. Widersprechen dürfen Sie deutlich, aber höflich: nicht „das ist falsch“, sondern „das überzeugt mich nicht, weil …“."
+        }
+      ]
+    }
+  ],
+
+  "redemittel": [
+    {
+      "bereich": "Sprechen Teil 1 — Vortrag halten",
+      "gruppen": [
+        {
+          "funktion": "Einleiten",
+          "phrasen": [
+            "Ich möchte heute über die Frage sprechen, ob …",
+            "Mein Thema lautet … Ich habe es gewählt, weil es mich selbst betrifft.",
+            "Bevor ich beginne, möchte ich kurz sagen, warum mich das interessiert.",
+            "Ich werde mich dabei auf drei Punkte beschränken."
+          ]
+        },
+        {
+          "funktion": "Gliedern",
+          "phrasen": [
+            "Zunächst möchte ich beschreiben, wie die Lage im Moment aussieht.",
+            "Ein zweiter Punkt, der mir wichtig ist, ist …",
+            "Damit komme ich zum eigentlichen Kern.",
+            "Ich fasse kurz zusammen, bevor ich zum Schluss komme."
+          ]
+        },
+        {
+          "funktion": "Beispiele geben",
+          "phrasen": [
+            "Ein Beispiel dafür ist …",
+            "Aus eigener Erfahrung kann ich sagen, dass …",
+            "In meinem Heimatland ist das etwas anders geregelt: …",
+            "Konkret heißt das: …"
+          ]
+        },
+        {
+          "funktion": "Abwägen",
+          "phrasen": [
+            "Für … spricht vor allem, dass …",
+            "Dagegen wird häufig eingewendet, dass …",
+            "Man muss dabei zwei Dinge auseinanderhalten: … und …",
+            "Dieses Argument halte ich für ernst zu nehmen, allerdings …",
+            "Wenn man beide Seiten gegeneinander abwägt, überwiegt für mich …"
+          ]
+        },
+        {
+          "funktion": "Position beziehen",
+          "phrasen": [
+            "Ich komme deshalb zu folgendem Schluss: …",
+            "Meine Position lässt sich in einem Satz zusammenfassen: …",
+            "Entscheidend ist meiner Meinung nach nicht ob, sondern wie …",
+            "Ich bin überzeugt davon, dass …"
+          ]
+        },
+        {
+          "funktion": "Schließen und auf Fragen antworten",
+          "phrasen": [
+            "Vielen Dank für Ihre Aufmerksamkeit.",
+            "Das ist eine gute Frage — ich würde sagen: …",
+            "Da bin ich mir selbst nicht ganz sicher, aber ich vermute, dass …",
+            "Wenn ich Sie richtig verstehe, meinen Sie …?"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 2 — Debatte",
+      "gruppen": [
+        {
+          "funktion": "Position nennen",
+          "phrasen": [
+            "Ich bin grundsätzlich dafür, allerdings unter einer Bedingung.",
+            "Da bin ich anderer Meinung, und zwar aus folgendem Grund: …",
+            "Ich sehe das mit gemischten Gefühlen.",
+            "Meine Position ist ziemlich eindeutig: …"
+          ]
+        },
+        {
+          "funktion": "Zustimmen und einschränken",
+          "phrasen": [
+            "Da ist etwas dran, allerdings …",
+            "In diesem Punkt gebe ich Ihnen recht, nur …",
+            "Das stimmt für …, gilt aber nicht für …",
+            "Bis dahin folge ich Ihnen, ab dann nicht mehr."
+          ]
+        },
+        {
+          "funktion": "Widersprechen",
+          "phrasen": [
+            "Das überzeugt mich nicht, weil …",
+            "Genau das Gegenteil ist meiner Erfahrung nach der Fall.",
+            "Dagegen spricht aus meiner Sicht vor allem, dass …",
+            "Das lässt sich so pauschal nicht sagen."
+          ]
+        },
+        {
+          "funktion": "Nachfragen und einbeziehen",
+          "phrasen": [
+            "Wie sehen Sie das?",
+            "Und wenn nun der Fall einträte, dass …?",
+            "Können Sie das an einem Beispiel erklären?",
+            "Habe ich Sie richtig verstanden, dass …?"
+          ]
+        },
+        {
+          "funktion": "Vorschlagen und vermitteln",
+          "phrasen": [
+            "Wie wäre es, wenn wir …?",
+            "Man könnte doch beides verbinden: …",
+            "Ein Kompromiss wäre vielleicht, zunächst … und später …",
+            "Darauf könnten wir uns wahrscheinlich einigen."
+          ]
+        },
+        {
+          "funktion": "Zusammenfassen",
+          "phrasen": [
+            "Fassen wir zusammen: Einig sind wir uns darin, dass …",
+            "Unterschiedlich sehen wir vor allem …",
+            "Als gemeinsames Fazit würde ich festhalten: …",
+            "Wir sind uns näher, als es am Anfang aussah."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 1 — Forumsbeitrag",
+      "gruppen": [
+        {
+          "funktion": "Einsteigen",
+          "phrasen": [
+            "Hallo zusammen,",
+            "ich lese hier schon eine Weile mit und möchte gern etwas ergänzen.",
+            "seit ein paar Tagen verfolge ich die Diskussion, und ich glaube, wir reden aneinander vorbei.",
+            "der Beitrag von … hat mich zum Nachdenken gebracht."
+          ]
+        },
+        {
+          "funktion": "Auf den Impuls eingehen",
+          "phrasen": [
+            "… schreibt, dass … — in diesem Punkt gebe ich ihm recht, allerdings …",
+            "Der Einwand richtet sich meiner Meinung nach gar nicht gegen …, sondern gegen …",
+            "Genau das würde ich sogar als Erfolg werten, denn …",
+            "Dagegen lässt sich einwenden, dass …"
+          ]
+        },
+        {
+          "funktion": "Die eigene Meinung begründen",
+          "phrasen": [
+            "Aus meiner Sicht wäre es sinnvoller, zunächst … und erst danach …",
+            "Ich halte … für sinnvoll, allerdings erst als zweiten Schritt.",
+            "Der Grund dafür ist einfach: …",
+            "Was dabei oft übersehen wird, ist …"
+          ]
+        },
+        {
+          "funktion": "Beispiele und Erfahrung einbringen",
+          "phrasen": [
+            "In meinem Heimatland wird … überwiegend aus Steuern finanziert.",
+            "Ich habe selbst erlebt, dass …",
+            "Ein Beispiel aus meinem Umfeld: …",
+            "Bei uns ist das etwas anders geregelt: …"
+          ]
+        },
+        {
+          "funktion": "Vorschlagen",
+          "phrasen": [
+            "Ich schlage deshalb vor, … Damit ließe sich erreichen, dass …",
+            "Sinnvoller wäre es, mit … zu beginnen.",
+            "Man könnte zunächst … und später entscheiden, ob …",
+            "Zwei Dinge müssten sich ändern: erstens …, zweitens …"
+          ]
+        },
+        {
+          "funktion": "Abschließen",
+          "phrasen": [
+            "Zusammenfassend halte ich es für wichtiger, … als …",
+            "Deshalb bleibe ich dabei: …",
+            "Ich bin gespannt, wie ihr das seht.",
+            "Viele Grüße"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 2 — Formelle Nachricht",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Bezug",
+          "phrasen": [
+            "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+            "ich habe mich für den Kurs … angemeldet und wende mich heute mit einer Bitte an Sie.",
+            "mit Interesse habe ich Ihre Ankündigung gelesen.",
+            "auf Ihre Nachricht vom … komme ich gern zurück."
+          ]
+        },
+        {
+          "funktion": "Anlass und Grund nennen",
+          "phrasen": [
+            "Leider ist mir kurzfristig etwas dazwischengekommen: …",
+            "Aus beruflichen Gründen werde ich die ersten beiden Termine nicht wahrnehmen können.",
+            "Der Grund dafür ist, dass …",
+            "Die Entscheidung fiel erst nach meiner Anmeldung."
+          ]
+        },
+        {
+          "funktion": "Höflich bitten",
+          "phrasen": [
+            "Nun wäre meine Frage, ob es möglich wäre, … nachzuholen.",
+            "Ich würde mich freuen, wenn Sie mir … mitteilen könnten.",
+            "Wären Sie so freundlich, mir …?",
+            "Ich würde mich gern nach Ihrem Terminvorschlag richten."
+          ]
+        },
+        {
+          "funktion": "Frist und Begründung",
+          "phrasen": [
+            "Über eine kurze Rückmeldung bis Ende dieser Woche wäre ich Ihnen sehr dankbar.",
+            "… da ich meine Reise sonst anders planen müsste.",
+            "Für eine Antwort bis zum … wäre ich dankbar.",
+            "Sollte das nicht möglich sein, richte ich mich selbstverständlich nach Ihnen."
+          ]
+        },
+        {
+          "funktion": "Schließen",
+          "phrasen": [
+            "Vielen Dank im Voraus für Ihre Mühe.",
+            "Für Rückfragen stehe ich Ihnen gern zur Verfügung.",
+            "Mit freundlichen Grüßen",
+            "Mit besten Grüßen"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Universell — Konnektoren, die überall Punkte bringen",
+      "gruppen": [
+        {
+          "funktion": "Einräumen",
+          "phrasen": [
+            "zwar … aber",
+            "allerdings · jedoch · dennoch",
+            "obwohl · obgleich · auch wenn"
+          ]
+        },
+        {
+          "funktion": "Begründen und folgern",
+          "phrasen": [
+            "da · weil · nämlich",
+            "deshalb · folglich · infolgedessen",
+            "aus diesem Grund · daher"
+          ]
+        },
+        {
+          "funktion": "Gegenüberstellen",
+          "phrasen": [
+            "während · wohingegen",
+            "einerseits … andererseits",
+            "im Gegensatz dazu · demgegenüber"
+          ]
+        },
+        {
+          "funktion": "Einschränken",
+          "phrasen": [
+            "insofern · sofern · vorausgesetzt, dass",
+            "es sei denn · abgesehen von",
+            "zumindest · jedenfalls"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "grammatik": [
+    {
+      "thema": "Konnektoren und die Stellung des Verbs",
+      "erklaerung": "Welches Wort einen Satz verbindet, entscheidet über die Wortstellung. Vier Gruppen genügen: Hauptsatz-Konjunktionen ändern nichts, Adverbkonnektoren ziehen das Verb nach vorn, Subjunktionen schicken es ans Ende, Präpositionen brauchen ein Nomen.",
+      "tabelle": {
+        "kopf": ["Gruppe", "Wörter", "Beispiel"],
+        "zeilen": [
+          [
+            "Konjunktion (Position 0)",
+            "und, aber, denn, oder, sondern",
+            "Es regnete, **aber** wir gingen los."
+          ],
+          [
+            "Adverbkonnektor (Position 1)",
+            "deshalb, trotzdem, dennoch, außerdem, sonst",
+            "Es regnete, **trotzdem gingen** wir los."
+          ],
+          [
+            "Subjunktion (Verb am Ende)",
+            "weil, obwohl, während, damit, sodass",
+            "Wir gingen los, **obwohl** es **regnete**."
+          ],
+          [
+            "Präposition (+ Nomen)",
+            "trotz, wegen, während, aufgrund",
+            "**Trotz des Regens** gingen wir los."
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Einräumen — obwohl, trotzdem, zwar … aber",
+      "erklaerung": "Alle drei sagen dasselbe und stehen an verschiedenen Stellen. Wer sie überliest, versteht den Text genau umgekehrt — das ist im Leseteil die häufigste Fehlerquelle.",
+      "tabelle": {
+        "kopf": ["Form", "Beispiel", "Achtung"],
+        "zeilen": [
+          [
+            "obwohl + Nebensatz",
+            "**Obwohl** das Modell teuer **ist**, lohnt es sich.",
+            "Verb ans Ende"
+          ],
+          [
+            "trotzdem / dennoch",
+            "Das Modell ist teuer. **Trotzdem lohnt** es sich.",
+            "Verb direkt danach"
+          ],
+          [
+            "zwar … aber",
+            "Das Modell ist **zwar** teuer, **aber** es lohnt sich.",
+            "„zwar“ beim Zugeständnis"
+          ],
+          [
+            "allerdings / jedoch",
+            "Zuverlässig war es **allerdings** nicht.",
+            "Kann mitten im Satz stehen — leicht zu überlesen"
+          ],
+          [
+            "trotz + Genitiv",
+            "**Trotz der Kosten** lohnt es sich.",
+            "Nomen, kein Nebensatz"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Das erweiterte Partizip als Attribut",
+      "erklaerung": "Ein ganzer Relativsatz wird zwischen Artikel und Nomen gepackt. Beim Lesen springt man zuerst ans Ende der Gruppe, findet das Nomen und liest dann zurück.",
+      "tabelle": {
+        "kopf": ["Partizip", "Kurzform", "Aufgelöst"],
+        "zeilen": [
+          [
+            "Partizip II (passiv)",
+            "die **vorgelegte** Auswertung",
+            "die Auswertung, die vorgelegt wurde"
+          ],
+          [
+            "Partizip II mit Angabe",
+            "die **jetzt vorgelegte** Auswertung",
+            "die Auswertung, die jetzt vorgelegt wurde"
+          ],
+          [
+            "Partizip I (aktiv)",
+            "die **aufzeichnenden** Sensoren",
+            "die Sensoren, die aufzeichnen"
+          ],
+          [
+            "zu + Partizip I",
+            "die **zu lösende** Aufgabe",
+            "die Aufgabe, die gelöst werden muss"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Passiv und Passiversatz",
+      "erklaerung": "Im Passiv ist wichtig, was geschieht, nicht wer es tut. In Ordnungen, Anleitungen und Berichten ersetzt man es gern durch kürzere Formen — die muss man erkennen können.",
+      "tabelle": {
+        "kopf": ["Form", "Beispiel", "Bedeutung"],
+        "zeilen": [
+          ["Vorgangspassiv", "Der Schaden **wird gemeldet**.", "es geschieht"],
+          [
+            "Passiv mit Modalverb",
+            "Der Schaden **muss gemeldet werden**.",
+            "Notwendigkeit"
+          ],
+          [
+            "sein + zu + Infinitiv",
+            "Der Schaden **ist zu melden**.",
+            "muss gemeldet werden"
+          ],
+          [
+            "sich lassen + Infinitiv",
+            "Der Schaden **lässt sich beheben**.",
+            "kann behoben werden"
+          ],
+          ["Adjektiv auf -bar", "Der Schaden ist **behebbar**.", "kann behoben werden"],
+          ["Zustandspassiv", "Der Schaden **ist behoben**.", "Ergebnis, kein Vorgang"]
+        ]
+      }
+    },
+    {
+      "thema": "Konjunktiv II — höflich und irreal",
+      "erklaerung": "Zwei Verwendungen, eine Form. Höflich in Bitten, irreal für alles, was nicht der Fall ist. Für die Vergangenheit gibt es nur hätte/wäre + Partizip II.",
+      "tabelle": {
+        "kopf": ["Verwendung", "Beispiel", "Hinweis"],
+        "zeilen": [
+          [
+            "Höfliche Bitte",
+            "**Wäre** es möglich, den Termin zu verschieben?",
+            "ersetzt „Kann ich …?“"
+          ],
+          [
+            "Irreale Bedingung",
+            "**Wenn** ich Zeit **hätte**, **käme** ich mit.",
+            "beide Teile im Konjunktiv"
+          ],
+          [
+            "Vergangenheit",
+            "**Hätte** ich das gewusst, **wäre** ich geblieben.",
+            "hätte/wäre + Partizip II"
+          ],
+          [
+            "Ohne „wenn“",
+            "Wir stellten ein, **sonst wäre** der Plan **zusammengebrochen**.",
+            "„sonst“ enthält die Verneinung"
+          ],
+          [
+            "Ratschlag",
+            "An deiner Stelle **würde** ich noch warten.",
+            "würde + Infinitiv"
+          ],
+          [
+            "Vorsichtige Aussage",
+            "Das **dürfte** schwierig werden.",
+            "Vermutung, kein Erlaubnis-dürfen"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Konjunktiv I — indirekte Rede",
+      "erklaerung": "In Berichten und Zeitungstexten zeigt der Konjunktiv I, dass jemand anders das gesagt hat und der Schreiber es nicht behauptet. Wo die Form wie der Indikativ aussieht, weicht man auf Konjunktiv II aus.",
+      "tabelle": {
+        "kopf": ["Direkt", "Indirekt", "Regel"],
+        "zeilen": [
+          ["„Ich habe keine Zeit.“", "Er sagte, er **habe** keine Zeit.", "Konjunktiv I"],
+          [
+            "„Wir haben keine Zeit.“",
+            "Sie sagten, sie **hätten** keine Zeit.",
+            "Form = Indikativ → Konjunktiv II"
+          ],
+          [
+            "„Ich war dort.“",
+            "Er sagte, er **sei** dort **gewesen**.",
+            "Vergangenheit: sei/habe + Partizip"
+          ],
+          [
+            "„Ich werde kommen.“",
+            "Sie sagte, sie **werde** kommen.",
+            "Zukunft: werde + Infinitiv"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Nominalisierung und Verbalisierung",
+      "erklaerung": "Schriftliche Texte packen Handlungen in Nomen. Für das Lesen muss man sie zurückverwandeln, für das Schreiben spart die Nominalform Wörter und wirkt förmlicher.",
+      "tabelle": {
+        "kopf": ["Verbal (Nebensatz)", "Nominal (Präposition + Nomen)", "Signalwort"],
+        "zeilen": [
+          ["weil es regnete", "**wegen des Regens**", "wegen / aufgrund"],
+          ["obwohl es regnete", "**trotz des Regens**", "trotz"],
+          ["wenn man sich anmeldet", "**bei der Anmeldung**", "bei"],
+          ["nachdem der Kurs begonnen hatte", "**nach Kursbeginn**", "nach"],
+          ["damit die Kosten sinken", "**zur Senkung der Kosten**", "zu / für"],
+          ["ohne dass man fragt", "**ohne Rückfrage**", "ohne"]
+        ]
+      }
+    },
+    {
+      "thema": "Verben mit Präposition und die da-Wörter",
+      "erklaerung": "Die Präposition gehört zum Verb und ist nicht ableitbar — sie wird mitgelernt. Steht danach ein Nebensatz oder ein Infinitiv, braucht man das Präpositionaladverb: da + Präposition.",
+      "tabelle": {
+        "kopf": ["Verb + Präposition", "Mit Nomen", "Mit Nebensatz"],
+        "zeilen": [
+          [
+            "sich beschäftigen mit + D",
+            "Er beschäftigt sich **mit dem Thema**.",
+            "**damit**, dass …"
+          ],
+          [
+            "hinweisen auf + A",
+            "Sie weist **auf das Problem** hin.",
+            "**darauf**, dass …"
+          ],
+          ["abhängen von + D", "Das hängt **von der Branche** ab.", "**davon**, ob …"],
+          ["zweifeln an + D", "Ich zweifle **an der Zahl**.", "**daran**, dass …"],
+          [
+            "sich einigen auf + A",
+            "Wir einigen uns **auf einen Termin**.",
+            "**darauf**, wann …"
+          ],
+          [
+            "verzichten auf + A",
+            "Sie verzichtet **auf das Auto**.",
+            "**darauf**, zu fahren"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Nomen-Verb-Verbindungen",
+      "erklaerung": "Feste Paare aus Nomen und blassem Verb. Sie klingen förmlich und sind im Schreiben und in Vorträgen Punktebringer — aber nur als ganze Wendung, nicht Wort für Wort übersetzt.",
+      "tabelle": {
+        "kopf": ["Wendung", "Bedeutet", "Beispiel"],
+        "zeilen": [
+          ["zur Verfügung stehen", "verfügbar sein", "Der Raum **steht zur Verfügung**."],
+          [
+            "in Frage kommen",
+            "möglich sein",
+            "Das **kommt** für mich nicht **in Frage**."
+          ],
+          [
+            "Rücksicht nehmen auf",
+            "berücksichtigen",
+            "Man muss **Rücksicht** auf die Nachbarn **nehmen**."
+          ],
+          [
+            "eine Entscheidung treffen",
+            "entscheiden",
+            "Der Rat **trifft** die **Entscheidung** im Herbst."
+          ],
+          ["in Kauf nehmen", "hinnehmen", "Diesen Nachteil **nehme** ich **in Kauf**."],
+          [
+            "zur Sprache bringen",
+            "ansprechen",
+            "Sie **brachte** das Thema **zur Sprache**."
+          ],
+          [
+            "Anspruch haben auf",
+            "berechtigt sein",
+            "Sie **hat Anspruch auf** eine Erstattung."
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Zweiteilige Konnektoren",
+      "erklaerung": "Sie kommen paarweise und dürfen nicht gemischt werden. Im Vortrag und im Forumsbeitrag strukturieren sie hörbar — und sie zeigen, dass man über der Satzgrenze plant.",
+      "tabelle": {
+        "kopf": ["Paar", "Beispiel", "Achtung"],
+        "zeilen": [
+          [
+            "nicht nur … sondern auch",
+            "**Nicht nur** die Kosten, **sondern auch** die Zeit.",
+            "„sondern“, nicht „aber“"
+          ],
+          [
+            "entweder … oder",
+            "**Entweder** wir zahlen **oder** wir verzichten.",
+            "zwei Möglichkeiten"
+          ],
+          [
+            "weder … noch",
+            "Es war **weder** teuer **noch** kompliziert.",
+            "kein zweites „nicht“"
+          ],
+          [
+            "sowohl … als auch",
+            "**Sowohl** Eltern **als auch** Lehrkräfte.",
+            "Verb im Plural"
+          ],
+          [
+            "je … desto",
+            "**Je** früher man bucht, **desto** günstiger wird es.",
+            "je-Satz: Verb ans Ende"
+          ],
+          [
+            "einerseits … andererseits",
+            "**Einerseits** praktisch, **andererseits** teuer.",
+            "Verb folgt direkt"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Relativsätze — auch Genitiv und Präposition",
+      "erklaerung": "Das Relativpronomen richtet sich im Geschlecht nach dem Nomen davor, im Kasus nach seiner Rolle im Relativsatz. Zwei Formen trennen B1 von B2: der Genitiv und die Präposition davor.",
+      "tabelle": {
+        "kopf": ["Kasus", "Beispiel", "Form"],
+        "zeilen": [
+          ["Nominativ", "die Studie, **die** überrascht", "die"],
+          ["Akkusativ", "die Studie, **die** ich las", "die"],
+          ["Dativ", "der Kollege, **dem** ich half", "dem"],
+          ["Genitiv", "die Studie, **deren** Ergebnisse überraschen", "deren / dessen"],
+          [
+            "mit Präposition",
+            "der Punkt, **auf den** es ankommt",
+            "Präposition vor dem Pronomen"
+          ],
+          [
+            "Ort / unbestimmt",
+            "die Stadt, **in der** ich wohne · alles, **was** zählt",
+            "wo / was / wer"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Infinitivsätze mit zu",
+      "erklaerung": "Kürzer als ein Nebensatz und im Schreiben fast immer die bessere Wahl — solange das Subjekt dasselbe bleibt. Sonst braucht es einen dass-Satz.",
+      "tabelle": {
+        "kopf": ["Form", "Beispiel", "Ersetzt"],
+        "zeilen": [
+          [
+            "um … zu",
+            "Ich schreibe, **um** mich **zu** bewerben.",
+            "damit ich mich bewerbe"
+          ],
+          [
+            "ohne … zu",
+            "Er ging, **ohne** etwas **zu** sagen.",
+            "ohne dass er etwas sagte"
+          ],
+          ["statt … zu", "**Statt** zu warten, rief sie an.", "statt dass sie wartete"],
+          ["nach Verben", "Ich hoffe, Sie bald **zu** sehen.", "…, dass ich Sie sehe"],
+          ["trennbares Verb", "Sie bat mich **anzurufen**.", "zu steht im Wort"],
+          [
+            "Subjektwechsel",
+            "Ich hoffe, **dass Sie** kommen.",
+            "kein Infinitivsatz möglich"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Modalverben als Vermutung",
+      "erklaerung": "Dieselben Verben drücken auch aus, wie sicher der Sprecher ist. Im Hörverstehen entscheidet das darüber, ob etwas eine Tatsache oder eine Annahme ist.",
+      "tabelle": {
+        "kopf": ["Verb", "Beispiel", "Sicherheit"],
+        "zeilen": [
+          ["müssen", "Er **muss** krank sein.", "fast sicher"],
+          ["dürfte", "Das **dürfte** stimmen.", "wahrscheinlich"],
+          ["können / könnte", "Sie **könnte** recht haben.", "möglich"],
+          ["mögen", "Das **mag** sein.", "eingeräumt, aber unwichtig"],
+          ["will (Behauptung)", "Er **will** nichts gewusst haben.", "er behauptet es"],
+          ["soll (Gerücht)", "Der Kurs **soll** gut sein.", "andere sagen es"]
+        ]
+      }
+    },
+    {
+      "thema": "Präpositionen mit Genitiv",
+      "erklaerung": "Das Kennzeichen förmlicher Texte. In der gesprochenen Sprache stehen viele davon auch mit Dativ — im schriftlichen Teil bleibt man beim Genitiv.",
+      "tabelle": {
+        "kopf": ["Präposition", "Bedeutung", "Beispiel"],
+        "zeilen": [
+          ["wegen", "Grund", "**wegen des Wetters**"],
+          ["trotz", "Einräumung", "**trotz der Kosten**"],
+          ["während", "Zeit", "**während der Sitzung**"],
+          ["aufgrund", "Grund, förmlich", "**aufgrund der Ergebnisse**"],
+          ["innerhalb / außerhalb", "Raum und Zeit", "**innerhalb einer Woche**"],
+          ["anstelle / anhand / mithilfe", "Ersatz, Mittel", "**anhand der Daten**"]
+        ]
+      }
+    },
+    {
+      "thema": "Verweiswörter — wie ein Text zusammenhält",
+      "erklaerung": "In Teil 2 des Lesemoduls entscheidet fast nur das: Welcher Satz passt in die Lücke? Der, dessen Verweiswort einen Anknüpfungspunkt im Satz davor findet.",
+      "tabelle": {
+        "kopf": ["Mittel", "Beispiel", "Zeigt zurück auf"],
+        "zeilen": [
+          [
+            "Personalpronomen",
+            "… die Forschung. **Sie** liefert keine Antwort.",
+            "ein Nomen davor"
+          ],
+          [
+            "Demonstrativ",
+            "**Diese** Einseitigkeit stört mich.",
+            "einen ganzen Gedanken"
+          ],
+          ["da-Wort", "**Dadurch** sinken die Kosten.", "den vorigen Satz"],
+          [
+            "Synonym",
+            "die Auswertung … **die Untersuchung**",
+            "dasselbe, anders benannt"
+          ],
+          ["Oberbegriff", "Bus und Bahn … **diese Verkehrsmittel**", "eine Aufzählung"],
+          ["so / solch-", "**So entstand** ein neuer Beruf.", "die genannte Ursache"]
+        ]
+      }
+    },
+    {
+      "thema": "Wortbildung — raten mit System",
+      "erklaerung": "B2-Texte enthalten Wörter, die Sie nicht kennen. Bei zusammengesetzten und abgeleiteten Wörtern lässt sich die Bedeutung oft erschließen, ohne nachzuschlagen.",
+      "tabelle": {
+        "kopf": ["Bausteine", "Bedeutung", "Beispiel"],
+        "zeilen": [
+          ["un- / miss-", "Verneinung", "**un**zuverlässig · **miss**verstehen"],
+          ["-bar / -lich", "kann … werden", "mach**bar** · verständ**lich**"],
+          [
+            "-los / -arm / -reich",
+            "ohne · wenig · viel",
+            "kosten**los** · lärm**arm** · erfolg**reich**"
+          ],
+          [
+            "-ung / -heit / -keit",
+            "Nomen aus Verb / Adjektiv",
+            "Senk**ung** · Sicher**heit**"
+          ],
+          ["ver- / ent-", "Veränderung · Wegnahme", "**ver**bessern · **ent**lasten"],
+          [
+            "Kompositum",
+            "letztes Wort bestimmt Artikel und Sinn",
+            "die Lärm|schutz|**wand**"
+          ]
+        ]
+      }
+    }
+  ]
+}

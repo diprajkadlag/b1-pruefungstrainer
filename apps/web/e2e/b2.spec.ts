@@ -120,3 +120,48 @@ test.describe('B2', () => {
     expect(html).not.toContain('begruendung');
   });
 });
+
+test.describe('B2 Spickzettel', () => {
+  const b2Lernhilfe = JSON.parse(
+    readFileSync(
+      fileURLToPath(
+        new URL('../../../content/lernhilfe/b2/lernhilfe.json', import.meta.url),
+      ),
+      'utf-8',
+    ),
+  );
+  const b2Wortschatz = JSON.parse(
+    readFileSync(
+      fileURLToPath(
+        new URL('../../../content/lernhilfe/b2/wortschatz.json', import.meta.url),
+      ),
+      'utf-8',
+    ),
+  );
+
+  test('the level tab decides which sheet opens', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('tab', { name: 'B2' }).click();
+    await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+
+    await expect(page.getByRole('heading', { name: b2Lernhilfe.titel })).toBeVisible();
+    // 75 minutes for writing is the B2 number; B1's sheet says 60.
+    await expect(page.getByRole('cell', { name: '75 Min.' })).toBeVisible();
+  });
+
+  test('carries the full B2 word list', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('tab', { name: 'B2' }).click();
+    await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+    await page.getByRole('tab', { name: 'Wortschatz' }).click();
+
+    const verben = b2Wortschatz.verben.flatMap(
+      (g: { eintraege: unknown[] }) => g.eintraege,
+    );
+    expect(verben.length).toBeGreaterThanOrEqual(100);
+    // Matched by row, not by exact text: irregular verbs carry a marker in
+    // the same cell as the infinitive.
+    await expect(page.getByRole('row', { name: /einräumen/ })).toBeVisible();
+    await expect(page.getByRole('row', { name: /sich beziehen auf/ })).toBeVisible();
+  });
+});
