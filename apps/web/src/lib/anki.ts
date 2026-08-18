@@ -7,7 +7,7 @@
  * every Anki client as well as in Quizlet and a spreadsheet.
  */
 
-import type { GlossarEintrag, Redewendung } from '@b1/core';
+import type { GlossarEintrag, Redewendung } from '@pruefung/core';
 
 /** Anki treats a literal tab or newline inside a field as a column break. */
 function feld(text: string): string {
@@ -57,7 +57,7 @@ function rueckseite(g: GlossarEintrag): string {
 export function ankiTsv(
   glossar: ReadonlyArray<GlossarEintrag>,
   redewendungen: ReadonlyArray<Redewendung> = [],
-  deckName = 'B1-Prüfungstrainer',
+  deckName = 'GermanExamTrainer',
 ): string {
   // Anki reads these header directives on import and configures itself.
   const zeilen = [

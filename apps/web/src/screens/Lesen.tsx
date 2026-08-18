@@ -1,4 +1,4 @@
-import type { LesenTeil, OeffentlichePruefung } from '@b1/core';
+import type { LesenTeil, OeffentlichePruefung, PruefungsText } from '@pruefung/core';
 import { BeispielItem, Item } from '../components/Item';
 
 interface Props {
@@ -24,6 +24,56 @@ export function Lesen({ pruefung, antworten, onAntwort, abgelaufen }: Props) {
   );
 }
 
+/**
+ * A B2 text with gaps marks each one as its item number in square brackets.
+ * Rendering it means splitting on those markers and showing a numbered slot
+ * where the sentence or heading is missing, so the candidate can see which gap
+ * a given item refers to without counting paragraphs.
+ */
+function AbsatzMitLuecken({ absatz }: { absatz: string }) {
+  const stuecke = absatz.split(/(\[\d{1,2}\])/g);
+  return (
+    <>
+      {stuecke.map((stueck, i) => {
+        const treffer = /^\[(\d{1,2})\]$/.exec(stueck);
+        return treffer ? (
+          <mark className="luecke" key={i}>
+            {treffer[1]}
+          </mark>
+        ) : (
+          <span key={i}>{stueck}</span>
+        );
+      })}
+    </>
+  );
+}
+
+function Lesetext({ text }: { text: PruefungsText }) {
+  return (
+    <article className="lesetext">
+      {text.titel && (
+        <h3>
+          {text.buchstabe && (
+            <span className="lesetext__buchstabe">{text.buchstabe}</span>
+          )}
+          {text.titel}
+        </h3>
+      )}
+      {text.quelle && <p className="lesetext__quelle">{text.quelle}</p>}
+      {text.inhalt.split('\n\n').map((absatz, i) => (
+        <p key={i}>
+          {absatz.split('\n').map((zeile, j, alle) => (
+            <span key={j}>
+              <AbsatzMitLuecken absatz={zeile} />
+              {j < alle.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      ))}
+    </article>
+  );
+}
+
 function TeilAnsicht({
   teil,
   antworten,
@@ -36,6 +86,7 @@ function TeilAnsicht({
   abgelaufen: boolean;
 }) {
   const beantwortet = teil.items.filter((i) => antworten[String(i.nr)]).length;
+  const buchstaben = teil.optionenliste?.map((o) => o.buchstabe);
 
   return (
     <section className="teil" aria-labelledby={`lesen-teil-${teil.nummer}`}>
@@ -50,21 +101,26 @@ function TeilAnsicht({
       {teil.these && <p className="these">{teil.these}</p>}
 
       {teil.texte?.map((t) => (
-        <article className="lesetext" key={t.id}>
-          {t.titel && <h3>{t.titel}</h3>}
-          {t.quelle && <p className="lesetext__quelle">{t.quelle}</p>}
-          {t.inhalt.split('\n\n').map((absatz, i) => (
-            <p key={i}>
-              {absatz.split('\n').map((zeile, j, alle) => (
-                <span key={j}>
-                  {zeile}
-                  {j < alle.length - 1 && <br />}
-                </span>
-              ))}
-            </p>
-          ))}
-        </article>
+        <Lesetext key={t.id} text={t} />
       ))}
+
+      {/* The lettered alternatives come before the items when they are what the
+          candidate reads (the opinions of Teil 4) and after the text otherwise,
+          which is how the printed paper sets them. Either way they precede the
+          questions, because you cannot answer one without having read them. */}
+      {teil.optionenliste && (
+        <div className="optionenliste">
+          {teil.optionenliste.map((o) => (
+            <article className="optionenliste__eintrag" key={o.buchstabe}>
+              <h4>
+                <span className="optionenliste__buchstabe">{o.buchstabe}</span>
+                {o.titel}
+              </h4>
+              <p>{o.inhalt}</p>
+            </article>
+          ))}
+        </div>
+      )}
 
       {teil.beispiel && <BeispielItem beispiel={teil.beispiel} />}
 
@@ -76,6 +132,7 @@ function TeilAnsicht({
             wert={antworten[String(item.nr)]}
             onChange={(wert) => onAntwort(item.nr, wert)}
             disabled={abgelaufen}
+            buchstaben={buchstaben}
           />
         ))}
       </div>

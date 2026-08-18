@@ -3,9 +3,10 @@
   "meta": {
     "id": "pruefung-05",
     "titel": "Übungsprüfung 5 — Sprache, Sicherheit und Zusammenleben",
+    "stufe": "B1",
     "variante": "erwachsene",
     "niveau": "mittel",
-    "contentVersion": "1.0.0",
+    "contentVersion": "1.1.0",
     "sprechtempoProzent": 0,
     "themen": [
       "Sprache und Migration",
@@ -85,25 +86,25 @@
           {
             "nr": 4,
             "typ": "richtig_falsch",
-            "frage": "Der Autor war damit zufrieden, dass Robert ihn selten korrigierte.",
-            "loesung": "falsch",
-            "beleg": "Am Anfang fand ich das höflich, nach zwei Monaten hat es mich geärgert.",
+            "frage": "Der Autor und Robert haben eine gemeinsame Lösung für das Korrigieren gefunden.",
+            "loesung": "richtig",
+            "beleg": "Wir haben uns dann auf eine Regel geeinigt: Er notiert Fehler und wir gehen sie am Ende gemeinsam durch.",
             "kompetenz": "meinung_haltung",
             "begruendung": {
-              "de": "Zuerst fand er es höflich, dann hat es ihn geärgert – deshalb hat er es angesprochen.",
-              "en": "The attitude changes within one sentence. Read to the end before judging: „Am Anfang …“ almost always signals that something later differs."
+              "de": "Der Absatz beschreibt zuerst den Ärger und dann die Einigung; der letzte Satz bestätigt sie mit „Seitdem funktioniert es“.",
+              "en": "The paragraph opens with a complaint and closes with the fix. Stopping at the complaint gives the opposite answer."
             }
           },
           {
             "nr": 5,
             "typ": "richtig_falsch",
-            "frage": "Durch das Tandem hat der Autor vor allem viele neue Wörter gelernt.",
-            "loesung": "falsch",
-            "beleg": "Mein Wortschatz ist kaum größer geworden, meine Aussprache auch nicht wesentlich besser.",
+            "frage": "Beim Sprechen muss der Autor nicht mehr über die Satzstellung nachdenken.",
+            "loesung": "richtig",
+            "beleg": "Aber ich denke beim Sprechen nicht mehr an die Satzstellung, und das war ja der Punkt.",
             "kompetenz": "detailverstehen",
             "begruendung": {
-              "de": "Wortschatz und Aussprache haben sich kaum verändert; gewonnen hat er beim flüssigen Sprechen.",
-              "en": "He lists what did *not* improve before naming what did. „kaum“ and „nicht wesentlich“ both play the change down."
+              "de": "Das „Aber“ trennt das, was sich nicht verbessert hat, von dem, was der Autor eigentlich erreichen wollte.",
+              "en": "Two things did not improve and one did. The „Aber“ marks the switch, and the closing clause says this was the goal all along."
             }
           },
           {

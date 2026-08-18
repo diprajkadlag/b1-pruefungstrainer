@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prüfer-Ansicht — B1-Prüfungstrainer</title>
+    <title>Prüfer-Ansicht — GermanExamTrainer</title>
     <style>
       :root {
         --rule: #2f3e4e;
@@ -197,6 +197,32 @@
         return `<span class="chip chip--${klasse}">${label}: ${punkte}/100 · ${NOTE(punkte)}</span>`;
       };
 
+      // B1 and B2 are marked against different criteria and different maxima.
+      // The paper id encodes the level, so nothing has to be sent along.
+      const STUFE = (examId) => (String(examId).startsWith('b2-') ? 'B2' : 'B1');
+
+      const KRITERIEN = {
+        B1: {
+          schreiben:
+            'Aufgaben 1 und 2: je 10 Punkte für Erfüllung, Kohärenz, Wortschatz, ' +
+            'Strukturen (40). Aufgabe 3: 4 / 4 / 6 / 6 (20). Zusammen 100.',
+          sprechen:
+            'Teil 1: 28 (Erfüllung 8 / Interaktion 4 / Wortschatz 8 / Strukturen 8). ' +
+            'Teil 2: 40 (12 / 4 / 12 / 12). Teil 3: 16. Aussprache: 16. Zusammen 100.',
+        },
+        B2: {
+          schreiben:
+            'Aufgabe 1 (Forumsbeitrag, mind. 150 Wörter): 60 Punkte. Aufgabe 2 ' +
+            '(formelle Nachricht, mind. 100 Wörter): 40. Je vier Kriterien — ' +
+            'Aufgabenerfüllung, Kohärenz, Wortschatz, Strukturen. Wird die ' +
+            'Aufgabenerfüllung mit 0 bewertet, ist die ganze Aufgabe 0.',
+          sprechen:
+            'Teil 1 (Vortrag mit Rückfragen): 50. Teil 2 (Debatte): 50. Bewertet ' +
+            'werden Erfüllung, Interaktion, Wortschatz, Strukturen — die ' +
+            'Aussprache fließt in beide Teile ein, nicht separat. Zusammen 100.',
+        },
+      };
+
       const escape = (s) =>
         String(s ?? '').replace(
           /[&<>"]/g,
@@ -239,7 +265,7 @@
           <div class="abgabe__kopf">
             <strong>${escape(a.name || 'ohne Namen')}</strong>
             <span class="abgabe__meta">
-              ${escape(a.examId)} · ${new Date(a.abgegeben).toLocaleString('de-DE')}
+              ${STUFE(a.examId)} · ${escape(a.examId)} · ${new Date(a.abgegeben).toLocaleString('de-DE')}
               · Module: ${escape((a.module ?? []).join(', '))}
             </span>
           </div>
@@ -252,18 +278,12 @@
           </div>
 
           <details open><summary>Schreiben</summary>
-            <p class="kriterien">
-              Aufgaben 1 und 2: je 10 Punkte für Erfüllung, Kohärenz, Wortschatz,
-              Strukturen (40). Aufgabe 3: 4 / 4 / 6 / 6 (20). Zusammen 100.
-            </p>
+            <p class="kriterien">${KRITERIEN[STUFE(a.examId)].schreiben}</p>
             ${texte}
           </details>
 
           <details><summary>Sprechen — Aufnahmen</summary>
-            <p class="kriterien">
-              Teil 1: 28 (Erfüllung 8 / Interaktion 4 / Wortschatz 8 / Strukturen 8).
-              Teil 2: 40 (12 / 4 / 12 / 12). Teil 3: 16. Aussprache: 16. Zusammen 100.
-            </p>
+            <p class="kriterien">${KRITERIEN[STUFE(a.examId)].sprechen}</p>
             ${audio || '<p class="leer">Keine Aufnahmen.</p>'}
           </details>
 

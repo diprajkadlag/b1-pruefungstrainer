@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/diprajkadlag/b1-pruefungstrainer/packages/schema/exam.schema.json",
-  "title": "B1 Übungsprüfung",
-  "description": "Single source of truth for one complete B1 practice examination. Drives the PDF paper, the solution booklet, the listening audio script, the web app and the glossary.",
+  "title": "Übungsprüfung B1 / B2",
+  "description": "Single source of truth for one complete practice examination. Drives the PDF paper, the solution booklet, the listening audio script, the web app and the glossary. Shape is enforced here; the per-level specification (item counts per part, points, repeat counts) is enforced by tools/validate.py, which reads it from one table per level. See docs/EXAM-FORMAT.md.",
   "type": "object",
   "required": [
     "meta",
@@ -23,6 +23,7 @@
       "required": [
         "id",
         "titel",
+        "stufe",
         "variante",
         "niveau",
         "contentVersion",
@@ -33,17 +34,21 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^pruefung-[0-9]{2}$",
-          "description": "Folder name and stable identifier, e.g. pruefung-01."
+          "pattern": "^(b2-)?pruefung-[0-9]{2}$",
+          "description": "Folder name and stable identifier. B1 papers are pruefung-01; B2 papers carry the level as a prefix, b2-pruefung-01. The unprefixed form means B1 because those five papers shipped before the second level existed, and renaming them would have broken every stored attempt."
         },
         "titel": { "type": "string", "minLength": 3 },
+        "stufe": {
+          "enum": ["B1", "B2"],
+          "description": "Which examination format this paper follows. Must agree with the id prefix. Selects the whole rule set: item counts, task types, module times, marking maxima."
+        },
         "variante": {
           "enum": ["erwachsene", "jugendliche"],
           "description": "Topic register. Identical structure, different subject matter."
         },
         "niveau": {
           "enum": ["mittel-leicht", "mittel"],
-          "description": "Difficulty band. Drives speech rate and distractor transparency."
+          "description": "Difficulty band within the level. Drives speech rate and distractor transparency."
         },
         "contentVersion": {
           "type": "string",
@@ -61,7 +66,7 @@
           "type": "array",
           "minItems": 3,
           "items": { "type": "string" },
-          "description": "Topic tags. The validator enforces that papers do not overlap heavily."
+          "description": "Topic tags. The validator enforces that papers of the same level do not overlap heavily."
         },
         "autor": { "type": "string" },
         "lizenz": { "const": "CC-BY-4.0" },
@@ -108,10 +113,13 @@
       "required": ["zeitMinuten", "aufgaben"],
       "additionalProperties": false,
       "properties": {
-        "zeitMinuten": { "const": 60 },
+        "zeitMinuten": {
+          "enum": [60, 75],
+          "description": "60 at B1 (three tasks), 75 at B2 (two, and far longer)."
+        },
         "aufgaben": {
           "type": "array",
-          "minItems": 3,
+          "minItems": 2,
           "maxItems": 3,
           "items": { "$ref": "#/$defs/schreibenAufgabe" }
         }
@@ -126,7 +134,7 @@
         "vorbereitungMinuten": { "const": 15 },
         "teile": {
           "type": "array",
-          "minItems": 3,
+          "minItems": 2,
           "maxItems": 3,
           "items": { "$ref": "#/$defs/sprechenTeil" }
         }
@@ -151,6 +159,53 @@
       "items": { "$ref": "#/$defs/grammatikFokus" }
     }
   },
+
+  "allOf": [
+    {
+      "description": "B1: three writing tasks in 60 minutes, three speaking parts.",
+      "if": {
+        "required": ["meta"],
+        "properties": {
+          "meta": { "required": ["stufe"], "properties": { "stufe": { "const": "B1" } } }
+        }
+      },
+      "then": {
+        "properties": {
+          "schreiben": {
+            "properties": {
+              "zeitMinuten": { "const": 60 },
+              "aufgaben": { "minItems": 3, "maxItems": 3 }
+            }
+          },
+          "sprechen": {
+            "properties": { "teile": { "minItems": 3, "maxItems": 3 } }
+          }
+        }
+      }
+    },
+    {
+      "description": "B2: two writing tasks in 75 minutes, two speaking parts.",
+      "if": {
+        "required": ["meta"],
+        "properties": {
+          "meta": { "required": ["stufe"], "properties": { "stufe": { "const": "B2" } } }
+        }
+      },
+      "then": {
+        "properties": {
+          "schreiben": {
+            "properties": {
+              "zeitMinuten": { "const": 75 },
+              "aufgaben": { "minItems": 2, "maxItems": 2 }
+            }
+          },
+          "sprechen": {
+            "properties": { "teile": { "minItems": 2, "maxItems": 2 } }
+          }
+        }
+      }
+    }
+  ],
 
   "$defs": {
     "begruendung": {
@@ -182,7 +237,16 @@
           "type": "string",
           "description": "Fictional publication name for realism. Must NOT be a real outlet."
         },
-        "inhalt": { "type": "string", "minLength": 100 }
+        "buchstabe": {
+          "type": "string",
+          "pattern": "^[a-d]$",
+          "description": "B2 Lesen Teil 1 only: which of the four forum writers this post is, so an item keyed 'c' can be traced to a text."
+        },
+        "inhalt": {
+          "type": "string",
+          "minLength": 100,
+          "description": "The running text. Where the task is to fill gaps (B2 Lesen Teile 2 and 5) each gap appears as its item number in square brackets, e.g. [10]."
+        }
       }
     },
 
@@ -198,21 +262,26 @@
             "multiple_choice",
             "zuordnung_anzeigen",
             "ja_nein",
-            "multiple_choice_ordnung"
-          ]
+            "multiple_choice_ordnung",
+            "zuordnung_person",
+            "satz_einfuegen",
+            "zuordnung_aeusserungen",
+            "zuordnung_ueberschriften"
+          ],
+          "description": "The task, not the item control. The last four are B2: match statements to one of four people, insert sentences into gaps, match opinions to headings, match regulation paragraphs to a table of contents."
         },
         "anweisung": { "type": "string", "minLength": 20 },
         "richtzeitMinuten": { "type": "integer", "minimum": 5, "maximum": 25 },
         "these": {
           "type": "string",
-          "description": "Teil 4 only: the proposition readers react to."
+          "description": "B1 Teil 4 only: the proposition readers react to."
         },
         "texte": { "type": "array", "items": { "$ref": "#/$defs/text" } },
         "anzeigen": {
           "type": "array",
           "minItems": 10,
           "maxItems": 10,
-          "description": "Teil 3 only: exactly ten classified ads, labelled a-j.",
+          "description": "B1 Teil 3 only: exactly ten classified ads, labelled a-j.",
           "items": {
             "type": "object",
             "required": ["buchstabe", "titel", "inhalt"],
@@ -221,6 +290,25 @@
               "buchstabe": { "type": "string", "pattern": "^[a-j]$" },
               "titel": { "type": "string" },
               "inhalt": { "type": "string", "minLength": 30 }
+            }
+          }
+        },
+        "optionenliste": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 10,
+          "description": "B2 Teile 2, 4 and 5: the lettered alternatives on offer. Deliberately longer than the number of items — the unused letters are the distractors. Kept separate from B1's 'anzeigen' rather than replacing it, so the five shipped B1 papers did not have to be rewritten.",
+          "items": {
+            "type": "object",
+            "required": ["buchstabe", "inhalt"],
+            "additionalProperties": false,
+            "properties": {
+              "buchstabe": { "type": "string", "pattern": "^[a-j]$" },
+              "titel": {
+                "type": "string",
+                "description": "Shown above the entry. In Teil 4 this is the writer's name."
+              },
+              "inhalt": { "type": "string", "minLength": 5 }
             }
           }
         },
@@ -235,12 +323,22 @@
       "additionalProperties": false,
       "properties": {
         "nummer": { "type": "integer", "minimum": 1, "maximum": 4 },
-        "typ": { "enum": ["kurztexte", "monolog", "gespraech", "diskussion"] },
+        "typ": {
+          "enum": [
+            "kurztexte",
+            "monolog",
+            "gespraech",
+            "diskussion",
+            "interview",
+            "vortrag"
+          ],
+          "description": "'interview' and 'vortrag' are the B2 shapes: a radio interview heard twice, and a short lecture heard twice."
+        },
         "anweisung": { "type": "string", "minLength": 20 },
         "wiederholungen": {
           "type": "integer",
           "enum": [1, 2],
-          "description": "Teile 1 and 4 are heard twice; Teile 2 and 3 once."
+          "description": "B1 hears Teile 1 and 4 twice; B2 hears Teile 2 and 4 twice. The validator enforces the pattern per level."
         },
         "situation": {
           "type": "string",
@@ -325,8 +423,10 @@
             "multiple_choice",
             "zuordnung_anzeigen",
             "ja_nein",
-            "zuordnung_person"
-          ]
+            "zuordnung_person",
+            "zuordnung_buchstabe"
+          ],
+          "description": "The control the candidate uses. 'zuordnung_buchstabe' covers every B2 task where the answer is one letter from the Teil's optionenliste — inserting a sentence, matching an opinion, matching a paragraph. The three read very differently on paper but are one and the same decision, so they share an item type and are told apart by the Teil's typ."
         },
         "frage": { "type": "string", "minLength": 5 },
         "textId": {
@@ -340,24 +440,25 @@
         "optionen": {
           "type": "object",
           "additionalProperties": false,
-          "description": "Multiple choice only.",
+          "description": "Multiple choice and person-matching only. Three options everywhere except B2 Lesen Teil 1, which matches statements to four named people.",
           "properties": {
             "a": { "type": "string", "minLength": 1 },
             "b": { "type": "string", "minLength": 1 },
-            "c": { "type": "string", "minLength": 1 }
+            "c": { "type": "string", "minLength": 1 },
+            "d": { "type": "string", "minLength": 1 }
           },
           "required": ["a", "b", "c"]
         },
         "loesung": {
-          "description": "Which key is legal depends on the item's typ; that pairing is enforced by tools/validate.py (VALID_LOESUNG), not here. anyOf, not oneOf: 'a'-'c' are legal both as multiple-choice keys and as ad letters, and oneOf would reject them for matching twice.",
+          "description": "Which key is legal depends on the item's typ; that pairing is enforced by tools/validate.py (VALID_LOESUNG), not here. anyOf, not oneOf: 'a'-'c' are legal both as multiple-choice keys and as letters from a list, and oneOf would reject them for matching twice.",
           "anyOf": [
             { "enum": ["richtig", "falsch"] },
             { "enum": ["ja", "nein"] },
-            { "enum": ["a", "b", "c"] },
+            { "enum": ["a", "b", "c", "d"] },
             {
               "type": "string",
               "pattern": "^[a-j0]$",
-              "description": "Ad letter, or 0 for 'no suitable ad'."
+              "description": "A letter from the Teil's ad or option list, or 0 for 'none suitable'."
             }
           ]
         },
@@ -372,9 +473,10 @@
             "detailverstehen",
             "selektivverstehen",
             "meinung_haltung",
-            "zuordnen"
+            "zuordnen",
+            "textstruktur"
           ],
-          "description": "Skill tested. Drives the personalised weak-spot report."
+          "description": "Skill tested. Drives the personalised weak-spot report. 'textstruktur' is what B2's sentence-insertion task actually measures: following how a text is put together."
         }
       }
     },
@@ -395,7 +497,15 @@
       "additionalProperties": false,
       "properties": {
         "nummer": { "type": "integer", "minimum": 1, "maximum": 3 },
-        "typ": { "enum": ["email_informell", "forumsbeitrag", "email_halbformell"] },
+        "typ": {
+          "enum": [
+            "email_informell",
+            "forumsbeitrag",
+            "email_halbformell",
+            "nachricht_formell"
+          ],
+          "description": "'nachricht_formell' is the B2 second task: a message to a superior or an institution, where register carries marks."
+        },
         "situation": { "type": "string", "minLength": 20 },
         "impuls": {
           "type": "string",
@@ -413,9 +523,13 @@
           "type": "string",
           "description": "Expected register cue, e.g. 'Liebe Sofia' vs 'Sehr geehrte Frau Berger'."
         },
-        "woerter": { "type": "integer", "enum": [40, 80] },
-        "zeitMinuten": { "type": "integer", "enum": [15, 20, 25] },
-        "punkte": { "type": "integer", "enum": [20, 40] },
+        "woerter": {
+          "type": "integer",
+          "enum": [40, 80, 100, 150],
+          "description": "B1 targets 80/80/40; B2 asks for a minimum of 150 and 100."
+        },
+        "zeitMinuten": { "type": "integer", "enum": [15, 20, 25, 50] },
+        "punkte": { "type": "integer", "enum": [20, 40, 60] },
         "redemittel": {
           "type": "array",
           "items": { "type": "string" },
@@ -446,22 +560,34 @@
       "additionalProperties": false,
       "properties": {
         "nummer": { "type": "integer", "minimum": 1, "maximum": 3 },
-        "typ": { "enum": ["gemeinsam_planen", "praesentation", "rueckmeldung"] },
+        "typ": {
+          "enum": [
+            "gemeinsam_planen",
+            "praesentation",
+            "rueckmeldung",
+            "vortrag",
+            "diskussion"
+          ],
+          "description": "'vortrag' and 'diskussion' are the two B2 parts: a structured talk with follow-up questions, then a debate on a set question."
+        },
         "titel": { "type": "string" },
         "anweisung": { "type": "string", "minLength": 20 },
-        "dauerMinuten": { "type": "number", "minimum": 1, "maximum": 4 },
-        "punkte": { "type": "integer", "enum": [16, 28, 40] },
-        "situation": { "type": "string" },
+        "dauerMinuten": { "type": "number", "minimum": 1, "maximum": 6 },
+        "punkte": { "type": "integer", "enum": [16, 28, 40, 50] },
+        "situation": {
+          "type": "string",
+          "description": "B1 Teil 1: what is being planned. B2 Teil 2: the debate question itself."
+        },
         "planungspunkte": {
           "type": "array",
           "items": { "type": "string" },
-          "description": "Teil 1: the bullet points on the planning card."
+          "description": "B1 Teil 1: the bullet points on the planning card. B2 Teil 2: the aspects the debate should touch."
         },
         "themen": {
           "type": "array",
           "minItems": 2,
           "maxItems": 2,
-          "description": "Teil 2: the candidate chooses one of exactly two topics.",
+          "description": "The candidate chooses one of exactly two topics. B1 Teil 2 and B2 Teil 1.",
           "items": {
             "type": "object",
             "required": ["titel", "folien"],
@@ -470,10 +596,10 @@
               "titel": { "type": "string" },
               "folien": {
                 "type": "array",
-                "minItems": 5,
+                "minItems": 3,
                 "maxItems": 5,
                 "items": { "type": "string" },
-                "description": "Thema nennen / eigene Erfahrung / Situation im Heimatland / Vor- und Nachteile / Abschluss."
+                "description": "The outline printed on the card. B1: five slides (Thema nennen / eigene Erfahrung / Situation im Heimatland / Vor- und Nachteile / Abschluss). B2: four points (Einleitung / Hauptteil mit Beispielen / Vor- und Nachteile / Schluss mit eigener Meinung), because B2 asks for a talk rather than a slide sequence."
               },
               "redemittel": { "type": "array", "items": { "type": "string" } },
               "musterantwort": { "type": "string", "minLength": 100 }
@@ -500,7 +626,7 @@
         "fragen": {
           "type": "array",
           "items": { "type": "string" },
-          "description": "Teil 3: feedback questions about the partner's presentation."
+          "description": "B1 Teil 3: feedback questions about the partner's presentation. B2 Teil 1: the questions put to the candidate after the talk."
         }
       }
     },
@@ -571,7 +697,7 @@
           "pattern": "^(Lesen|Hören|Schreiben|Sprechen) Teil [1-5]$",
           "description": "Where in the paper it occurred."
         },
-        "niveau": { "enum": ["A2", "B1", "B1+"], "default": "B1" }
+        "niveau": { "enum": ["A2", "B1", "B1+", "B2", "B2+"], "default": "B1" }
       }
     },
 

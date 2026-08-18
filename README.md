@@ -1,6 +1,6 @@
-# b1-pruefungstrainer
+# GermanExamTrainer
 
-**Free, open-source practice examinations for German B1 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
+**Free, open-source practice examinations for German B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
 
 [![CI](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml)
 [![Content](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml)
@@ -10,7 +10,7 @@
 **▶ [Try it in your browser](https://diprajkadlag.github.io/b1-pruefungstrainer/)** — nothing to install, works offline after the first visit.
 
 > ### ⚠️ Not an official examination
-> This project provides practice material in the **format** of standard German B1 certificate examinations. It is **not affiliated with, endorsed by, or connected to Goethe-Institut e. V., telc gGmbH or the ÖSD**, and sitting these papers confers no certification. All exam content is original work written for this project. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
+> This project provides practice material in the **format** of standard German B1 and B2 certificate examinations. It is **not affiliated with, endorsed by, or connected to Goethe-Institut e. V., telc gGmbH or the ÖSD**, and sitting these papers confers no certification. All exam content is original work written for this project. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## What it does
 
-**Sits a real paper.** Four modules on the published specification: Lesen 65 min / 30 items, Hören 40 min / 30 items, Schreiben 60 min / 3 tasks, Sprechen 15 min. 100 points per module, 60 to pass.
+**Sits a real paper, at B1 or B2.** Four modules on the published specification for the level you pick: Lesen 65 min / 30 items, Hören 40 min / 30 items, then Schreiben 60 min / 3 tasks and three speaking parts at B1, or Schreiben 75 min / 2 tasks and a talk plus a debate at B2. 100 points per module, 60 to pass, each module passed on its own.
 
 **Under exam conditions.** The countdown derives from a wall-clock deadline, so reloading the page does not hand back minutes, and running out hard-submits the module. The listening player gives you one start button and nothing else — no pause, no seek, no second listen. Parts you are entitled to hear twice contain the repeat inside the audio, exactly as in the hall.
 
@@ -39,7 +39,7 @@
 
 **Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
 
-**Gives you something to revise from.** A cheat sheet — in the app and as an 18-page PDF — carries strategy for all four modules, ~185 Redemittel weighted towards Sprechen and Schreiben, 18 grammar topics as tables, and the core vocabulary: 123 verbs with all principal parts, 101 nouns with article and plural, adjectives as opposite pairs. Searchable in the app, printable for the train.
+**Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 
@@ -62,7 +62,7 @@ git clone https://github.com/diprajkadlag/b1-pruefungstrainer.git
 cd b1-pruefungstrainer
 ```
 
-Then **double-click `Start-B1-Trainer.bat`** (Windows). It checks for Node and
+Then **double-click `Start-Trainer.bat`** (Windows). It checks for Node and
 Python, installs dependencies, generates the exam content, builds the app and
 opens it on `http://localhost:8123`. The printable papers are pulled from the
 latest release because building them needs a TeX distribution; the listening
@@ -74,10 +74,10 @@ On macOS or Linux, or to do it by hand:
 
 ```bash
 npm install
-npm run build --workspace=@b1/core
+npm run build --workspace=@pruefung/core
 python tools/export_web.py     # generates the exam content; standard library only
-npm run build --workspace=@b1/web
-npm run preview --workspace=@b1/web
+npm run build --workspace=@pruefung/web
+npm run preview --workspace=@pruefung/web
 ```
 
 ### For teachers — keep submissions on disk
@@ -105,7 +105,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 | Route | Needs | Good for |
 |---|---|---|
 | [Hosted app](https://diprajkadlag.github.io/b1-pruefungstrainer/) | nothing | most people |
-| `Start-B1-Trainer.cmd` from a [release](../../releases) | nothing | Windows, offline, no terminal |
+| `Start-Trainer.cmd` from a [release](../../releases) | nothing | Windows, offline, no terminal |
 | `npm run serve` | Node 20+ | teachers marking work |
 | `docker compose up` | Docker | classrooms |
 
@@ -113,7 +113,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 
 ## Rebuilding the content
 
-Audio and PDFs are generated, not committed — five papers of listening audio is roughly 200 MB, which does not belong in git. Releases carry them; to build locally:
+Audio and PDFs are generated, not committed — eight papers of listening audio is well over 300 MB, which does not belong in git. Releases carry them; to build locally:
 
 ```bash
 pip install -r tools/requirements.txt
@@ -128,10 +128,36 @@ The first audio run downloads the voice models (~200 MB) into `tools/.voices/`.
 
 ---
 
+## Two levels
+
+Pick B1 or B2 on the start screen. They share the pipeline and almost nothing
+else — B2 is not a harder B1, it is a different paper:
+
+| | B1 | B2 |
+|---|---|---|
+| **Lesen** | 65 min · 6/6/7/7/4 items | 65 min · 9/6/6/6/3 items |
+| **Hören** | 40 min · 10/5/7/8 · parts **1 and 4** heard twice | 40 min · 10/6/6/8 · parts **2 and 4** heard twice |
+| **Schreiben** | 60 min · 3 tasks (80/80/40 words) | 75 min · 2 tasks (min. 150/100 words) |
+| **Sprechen** | 3 parts: plan together, present, respond | 2 parts: a structured talk, then a debate |
+
+Three B2 reading tasks have no B1 equivalent at all: inserting sentences into
+gaps in a text, matching opinions to headings, and matching the paragraphs of a
+set of regulations to its table of contents. Reading part 1 also matches
+statements to **four** people rather than three, so its answers run `a`–`d`.
+
+Each level has its own papers, its own cheat sheet and its own printable
+answer sheet; picking a tab switches all of them. Every number above is
+enforced by `tools/validate.py` against
+[docs/EXAM-FORMAT.md](docs/EXAM-FORMAT.md), which records where each one comes
+from.
+
+---
+
 ## How it is built
 
 ```
-content/exams/pruefung-01/exam.json   ← one file per paper: the single source of truth
+content/exams/pruefung-01/exam.json      ← B1: one file per paper, the single source of truth
+content/exams/b2-pruefung-01/exam.json   ← B2: same pipeline, a different rule set
                  │
    ┌─────────────┼──────────────┬────────────────┐
    ▼             ▼              ▼                ▼
@@ -141,17 +167,19 @@ build_pdf.py  generate_audio  export_web.py   validate.py
                             halves
                                │
                           apps/web (PWA)  ←→  apps/server (optional)
-                               └── @b1/core: scoring shared by both
+                               └── @pruefung/core: scoring shared by both
 
-content/lernhilfe/*.json              ← the cheat sheet, belonging to no paper
+content/lernhilfe/*.json              ← the B1 cheat sheet, belonging to no paper
+content/lernhilfe/b2/*.json           ← the B2 one
                  └── build_pdf.py → spickzettel.pdf · export_web.py → app tab
 ```
 
-**Content is data; code is generic.** One `exam.json` drives the printed paper, the solution booklet, the listening script, the web app and the glossary. **Adding a sixth exam is a single JSON pull request with no code change**, and CI refuses to merge it unless it is structurally perfect.
+**Content is data; code is generic.** One `exam.json` drives the printed paper, the solution booklet, the listening script, the web app and the glossary. **Adding a paper at either level is a single JSON pull request with no code change**, and CI refuses to merge it unless it is structurally perfect. The level lives in `meta.stufe`; everything downstream — item counts, which listening parts repeat, how many writing tasks there are, what the answer sheet looks like — is read from a table rather than hard-coded.
 
 `tools/validate.py` encodes the examination specification as executable rules, not comments:
 
-- item counts per part — 6/6/7/7/4 for reading, 10/5/7/8 for listening
+- item counts per part — B1: 6/6/7/7/4 reading, 10/5/7/8 listening; B2: 9/6/6/6/3 and 10/6/6/8
+- which listening parts are heard twice — B1 hears parts 1 and 4 twice, **B2 hears 2 and 4**, and getting that backwards is the single easiest mistake when adapting a paper
 - exactly 100 points per module, and 60 as the pass mark
 - every scored item quotes the sentence that proves its key, and carries a German rationale plus an English distractor analysis
 - every glossary lemma **actually occurs** in that paper's texts — matched through inflection, separable prefixes and dictionary placeholders
@@ -174,7 +202,8 @@ More in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/AUDIO.md](docs/AUDIO
 New papers are extremely welcome, and you need to touch no code:
 
 ```bash
-python tools/new_exam.py pruefung-06     # scaffold with the right item counts
+python tools/new_exam.py pruefung-06        # B1, scaffolded with the right item counts
+python tools/new_exam.py b2-pruefung-02    # B2 — the level comes from the id
 # write the content
 python tools/validate.py pruefung-06 --strict
 ```
@@ -203,6 +232,7 @@ This project is a supplement, not a substitute. Get the official material too �
 
 - **[Goethe-Institut B1 practice materials](https://www.goethe.de/ins/in/en/spr/prf/gzb1.cfm)** — free official model and practice sets
 - **[Goethe B1 Wortliste](https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_B1_Wortliste.pdf)** — the vocabulary the exam draws on
+- **[Goethe-Institut B2 model set](https://www.goethe.de/pro/relaunch/prf/materialien/B2/b2_modellsatz_erwachsene.pdf)** and the **[interactive B2 model exam](https://bfu.goethe.de/b2_mod_2MX6/)** — the official B2 format, part by part
 - **Prüfungstraining Goethe-Zertifikat B1** (Cornelsen, Maenner/Dittrich) — four model tests with strategies
 - **Mit Erfolg zum Goethe-/ÖSD-Zertifikat B1** (Klett) — Testbuch plus Übungsbuch
 - **[Goethe-Institut / Max Mueller Bhavan, India](https://www.goethe.de/ins/in/en/sta/pun.html)** — registration and dates

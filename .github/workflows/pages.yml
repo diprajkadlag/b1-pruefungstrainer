@@ -32,13 +32,21 @@ jobs:
       - name: Install LaTeX
         # The hosted app links the printable papers, so the demo has to carry
         # them. Same package set as release.yml: lmodern and pgffor are their
-        # own Ubuntu packages and b1pruefung.sty needs both.
+        # own Ubuntu packages and pruefung.sty needs both.
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-recommended texlive-latex-extra \
             texlive-lang-german texlive-fonts-recommended \
             texlive-pictures lmodern
+
+      - name: Cache Piper voice models
+        # About 250 MB, identical from run to run. The key is the voice
+        # registry itself, so adding or removing a voice invalidates it.
+        uses: actions/cache@v4
+        with:
+          path: tools/.voices
+          key: piper-voices-${{ hashFiles('tools/generate_audio.py') }}
 
       - name: Synthesise listening audio
         run: python tools/generate_audio.py
@@ -49,13 +57,13 @@ jobs:
       - name: Verify no answer leak
         run: python tools/check_no_leak.py
 
-      - run: npm run build --workspace=@b1/core
+      - run: npm run build --workspace=@pruefung/core
       - name: Build the app
         # A project page is served from a sub-path, so the bundle and the
         # service worker scope must be built for it.
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
-        run: npm run build --workspace=@b1/web
+        run: npm run build --workspace=@pruefung/web
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

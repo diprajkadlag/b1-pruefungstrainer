@@ -1,18 +1,18 @@
 \documentclass[11pt]{article}
-\usepackage{b1pruefung}
+\usepackage{pruefung}
 
 \pruefungstitel{<< meta.titel >>}
 \modulname{Kandidatenblätter}
-\niveaustufe{<< meta.niveau >>}
+\niveaustufe{<< meta.stufe >> · << meta.niveau >>}
 
 \begin{document}
 
 %% ===================== LESEN =====================
 \modulname{Lesen}
-\modulkopf{Modul Lesen}{65 Minuten}{30 Aufgaben · 100 Punkte}
+\modulkopf{Modul Lesen}{<< lesen.zeitMinuten >> Minuten}{30 Aufgaben · 100 Punkte}
 \hinweisblock
 
-Das Modul Lesen hat fünf Teile. Sie lesen mehrere Texte und lösen dazu
+Das Modul Lesen hat << lesen.teile | length >> Teile. Sie lesen mehrere Texte und lösen dazu
 Aufgaben. Schreiben Sie Ihre Lösungen am Ende auf den Antwortbogen.
 Wörterbücher und Mobiltelefone sind nicht erlaubt.
 
@@ -21,9 +21,18 @@ Wörterbücher und Mobiltelefone sind nicht erlaubt.
 
 <% if teil.get('these') %>\pruefungstext{}{}{\textbf{<< teil.get('these') | tex >>}}<% endif %>
 
-<% if teil.nummer != 3 %>
+<# Texts, with any [10] gap markers printed as numbered blanks. #>
 <% for t in teil.get('texte') or [] %>
-\pruefungstext{<< t.titel | default('') | tex >>}{<< t.quelle | default('') | tex >>}{<< t.inhalt | texpar >>}
+\pruefungstext{<% if t.get('buchstabe') %><< t.get('buchstabe') >>) <% endif %><< t.titel | default('') | tex >>}{<< t.quelle | default('') | tex >>}{<< t.inhalt | luecken >>}
+<% endfor %>
+
+<# B2: the lettered alternatives the items are answered from. #>
+<% if teil.get('optionenliste') %>
+\vspace{0.4em}
+{\bfseries Zur Auswahl}
+\vspace{0.2em}
+<% for o in teil.get('optionenliste') %>
+\zuordnungsoption{<< o.buchstabe >>}{<< o.get('titel') | default('') | tex >>}{<< o.inhalt | tex >>}
 <% endfor %>
 <% endif %>
 
@@ -31,20 +40,17 @@ Wörterbücher und Mobiltelefone sind nicht erlaubt.
 \beispielkasten{<< teil.get('beispiel') | itemmacro >>}
 <% endif %>
 
-<% if teil.nummer == 3 %>
 <% for item in teil['items'] %>
-\itemzuordnung{<< item.nr >>}{<< item.frage | tex >>}
+<< item | itemmacro >>
 <% endfor %>
 
+<# B1 Teil 3: the ads come after the situations, as on the printed paper. #>
+<% if teil.get('anzeigen') %>
 \vspace{0.6em}
 {\bfseries Anzeigen}
 \vspace{0.2em}
 <% for a in teil.get('anzeigen') %>
 \anzeige{<< a.buchstabe >>}{<< a.titel | tex >>}{<< a.inhalt | tex >>}
-<% endfor %>
-<% else %>
-<% for item in teil['items'] %>
-<< item | itemmacro >>
 <% endfor %>
 <% endif %>
 <% endfor %>
@@ -53,9 +59,9 @@ Wörterbücher und Mobiltelefone sind nicht erlaubt.
 
 %% ===================== HÖREN =====================
 \modulname{Hören}
-\modulkopf{Modul Hören}{ca. 40 Minuten}{30 Aufgaben · 100 Punkte}
+\modulkopf{Modul Hören}{ca. << hoeren.zeitMinuten >> Minuten}{30 Aufgaben · 100 Punkte}
 
-Das Modul Hören hat vier Teile. Sie hören mehrere Texte und lösen dazu
+Das Modul Hören hat << hoeren.teile | length >> Teile. Sie hören mehrere Texte und lösen dazu
 Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
 
 <% for teil in hoeren.teile %>
@@ -67,9 +73,13 @@ Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
 \beispielkasten{<< teil.get('beispiel') | itemmacro >>}
 <% endif %>
 
-<% if teil.nummer == 4 %>
-{\small Wer sagt das? Kreuzen Sie an: \textbf{a} die Moderatorin,
-\textbf{b} <<  teil.get('sprecher')[1].rolle | tex >>, \textbf{c} << teil.get('sprecher')[2].rolle | tex >>.}
+<# The speaker-matching part: B1 Teil 4, B2 Teil 3. Keyed on what the items
+   ask for rather than on a number, and labelled from the item's own options
+   so the letters on the page always match the ones being marked. #>
+<% set zuordnung = teil['items'] | selectattr('typ', 'equalto', 'zuordnung_person') | list %>
+<% if zuordnung %>
+{\small Wer sagt das? Kreuzen Sie an:
+<% for b in ['a', 'b', 'c'] %>\textbf{<< b >>} << zuordnung[0]['optionen'][b] | tex >><% if not loop.last %>, <% endif %><% endfor %>.}
 <% endif %>
 
 <% for item in teil['items'] %>
@@ -81,13 +91,13 @@ Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
 
 %% ===================== SCHREIBEN =====================
 \modulname{Schreiben}
-\modulkopf{Modul Schreiben}{60 Minuten}{3 Aufgaben · 100 Punkte}
+\modulkopf{Modul Schreiben}{<< schreiben.zeitMinuten >> Minuten}{<< schreiben.aufgaben | length >> Aufgaben · 100 Punkte}
 
-Das Modul Schreiben hat drei Aufgaben. Schreiben Sie Ihre Texte auf den
+Das Modul Schreiben hat << schreiben.aufgaben | length >> Aufgaben. Schreiben Sie Ihre Texte auf den
 Antwortbogen. Achten Sie auf Anrede, Gruß und die vorgegebene Länge.
 
 <% for a in schreiben.aufgaben %>
-\schreibaufgabe{<< a.nummer >>}{<< a | aufgabenname | tex >>}{<< a.zeitMinuten >> Min.}{<< a.punkte >>}{<< a.woerter >>}{<< a.get('situation') | tex >>}{<< a.aufgabenstellung | tex >>}
+\schreibaufgabe{<< a.nummer >>}{<< a | aufgabenname | tex >>}{<< a.zeitMinuten >> Min.}{<< a.punkte >>}{<% if meta.stufe == 'B2' %>mind. <% else %>ca. <% endif %><< a.woerter >>}{<< a.get('situation') | tex >>}{<< a.aufgabenstellung | tex >>}
 
 <% if a.get('impuls') %>
 \pruefungstext{}{}{<< a.get('impuls') | texpar >>}
@@ -96,10 +106,11 @@ Antwortbogen. Achten Sie auf Anrede, Gruß und die vorgegebene Länge.
 \leitpunkte{<% for p in a.leitpunkte %>\item << p | tex >>
 <% endfor %>}
 
-<% if a.get('anrede') %>{\small\color{b1mute}Beginnen Sie zum Beispiel mit:
+<% if a.get('anrede') %>{\small\color{pruefmute}Beginnen Sie zum Beispiel mit:
 \textit{<< a.get('anrede') | tex >>,}}\par<% endif %>
 
 \schreiblinien{<< a.woerter | zeilen >>}
+<% if not loop.last %>\clearpage<% endif %>
 <% endfor %>
 
 \end{document}

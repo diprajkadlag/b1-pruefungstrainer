@@ -209,6 +209,7 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool,
     return {
         "id": exam_id,
         "titel": exam["meta"]["titel"],
+        "stufe": exam["meta"]["stufe"],
         "variante": exam["meta"]["variante"],
         "niveau": exam["meta"]["niveau"],
         "contentVersion": exam["meta"]["contentVersion"],
@@ -223,21 +224,37 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool,
     }
 
 
-def export_lernhilfe() -> bool:
-    """Copy the cheat sheet into the app as one file.
+def lernhilfe_quelle(stufe: str) -> Path:
+    """Where a level's cheat sheet lives.
+
+    B1's sits at the top of content/lernhilfe/ because it was there before a
+    second level existed and the PDF build, the app route and the release
+    assets all name that path. Later levels get a subdirectory.
+    """
+    return LERNHILFE if stufe == "B1" else LERNHILFE / stufe.lower()
+
+
+def lernhilfe_datei(stufe: str) -> str:
+    return "lernhilfe.json" if stufe == "B1" else f"lernhilfe-{stufe.lower()}.json"
+
+
+def export_lernhilfe(stufe: str) -> bool:
+    """Copy one level's cheat sheet into the app as a single file.
 
     No split is needed here — it belongs to no attempt and gives away no
     answer, so it stays readable before, during preparation and after.
     """
-    quelle = LERNHILFE / "lernhilfe.json"
+    ordner = lernhilfe_quelle(stufe)
+    quelle = ordner / "lernhilfe.json"
     if not quelle.exists():
         return False
 
     daten = json.loads(quelle.read_text(encoding="utf-8"))
     daten["wortschatz"] = json.loads(
-        (LERNHILFE / "wortschatz.json").read_text(encoding="utf-8")
+        (ordner / "wortschatz.json").read_text(encoding="utf-8")
     )
-    (TARGET / "lernhilfe.json").write_text(
+    daten["stufe"] = stufe
+    (TARGET / lernhilfe_datei(stufe)).write_text(
         json.dumps(daten, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return True
 
@@ -277,14 +294,16 @@ def main(argv: Iterable[str] | None = None) -> int:
               f"{n_pdf} PDFs")
 
     if not args.exam:
-        hat_lernhilfe = export_lernhilfe()
+        # One sheet per level, and the app is told which levels actually have
+        # one so it can offer the button only where it leads somewhere.
+        stufen = [s for s in ("B1", "B2") if export_lernhilfe(s)]
         (TARGET / "index.json").write_text(
-            json.dumps({"pruefungen": registry, "hatLernhilfe": hat_lernhilfe},
+            json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen},
                        ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8")
         print(f"\nRegistry: {len(registry)} Prüfung(en) → {TARGET / 'index.json'}")
-        if hat_lernhilfe:
-            print(f"Spickzettel → {TARGET / 'lernhilfe.json'}")
+        for s in stufen:
+            print(f"Spickzettel {s} → {TARGET / lernhilfe_datei(s)}")
     return 0
 
 

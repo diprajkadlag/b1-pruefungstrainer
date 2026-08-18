@@ -1,5 +1,5 @@
 {
-  "name": "@b1/core",
+  "name": "@pruefung/core",
   "version": "0.1.0",
   "private": true,
   "description": "Scoring, grade bands and shared types for b1-pruefungstrainer.",

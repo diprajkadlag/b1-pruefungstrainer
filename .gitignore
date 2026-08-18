@@ -5,6 +5,7 @@
 content/exams/*/audio/
 content/exams/*/pdf/
 content/lernhilfe/pdf/
+content/lernhilfe/*/pdf/
 loesungen/*.pdf
 build/
 dist/

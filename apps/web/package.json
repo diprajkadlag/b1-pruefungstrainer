@@ -1,5 +1,5 @@
 {
-  "name": "@b1/web",
+  "name": "@pruefung/web",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@b1/core": "*",
+    "@pruefung/core": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

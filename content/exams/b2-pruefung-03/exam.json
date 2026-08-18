@@ -1,0 +1,2556 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "b2-pruefung-03",
+    "titel": "Übungsprüfung B2 3 — Sprache, Medien und Wohnen",
+    "stufe": "B2",
+    "variante": "erwachsene",
+    "niveau": "mittel",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": 0,
+    "themen": [
+      "Sprache und Dialekt",
+      "Medien und Nachrichten",
+      "Wohnungsmarkt",
+      "Mobilität und Fahrrad",
+      "Erinnerung und Geschichte",
+      "Hochschule und Praktikum"
+    ],
+    "autor": "b1-pruefungstrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "zuordnung_person",
+        "anweisung": "Sie lesen in einem Forum, wie vier Menschen über Dialekt denken. Auf welche der vier Personen treffen die Aussagen 1 bis 9 zu? Die Personen können mehrmals gewählt werden.",
+        "richtzeitMinuten": 18,
+        "texte": [
+          {
+            "id": "person_a",
+            "buchstabe": "a",
+            "titel": "Hannes Grubmüller, Grundschullehrer",
+            "inhalt": "Ich unterrichte seit vierzehn Jahren in einem Dorf, in dem zu Hause fast ausschließlich Dialekt gesprochen wird, und ich habe irgendwann aufgehört, meine Kinder beim Sprechen zu verbessern. Das war keine bequeme Entscheidung, sondern eine, die mir zwei Kolleginnen jahrelang übel genommen haben.\n\nDas Ergebnis hat mich selbst überrascht: Seit ich das Reden in Ruhe lasse, sind die Aufsätze besser geworden, nicht schlechter. Meine Erklärung ist einfach. Wer beim Sprechen ständig unterbrochen wird, meldet sich seltener, und wer sich seltener meldet, übt weniger.\n\nWorauf ich streng achte, ist das Schreiben. Im Heft gilt Standarddeutsch, ohne Ausnahme, und die Kinder verstehen das sofort, wenn man es ihnen als zwei verschiedene Werkzeuge erklärt. Reden und Schreiben sind bei uns getrennte Baustellen, und genau deshalb funktionieren beide."
+          },
+          {
+            "id": "person_b",
+            "buchstabe": "b",
+            "titel": "Dr. Silke Ottmann, Soziolinguistin",
+            "inhalt": "Wir haben vor zwei Jahren untersucht, wie Dialekt in Bewerbungsgesprächen wirkt. Dieselben Bewerbungen, dieselben Texte, einmal in Standardsprache eingesprochen und einmal gefärbt — bewertet von vierhundert Personalverantwortlichen.\n\nIch hatte vorher erwartet, dass wir einen kleinen, aber einheitlichen Nachteil finden würden. Herausgekommen ist etwas anderes: Der Effekt hängt fast vollständig davon ab, um welchen Dialekt es geht. Manche werden als warm und vertrauenswürdig gehört, andere kosten den Bewerber messbar Punkte bei der fachlichen Einschätzung. Meine eigene Vermutung war damit widerlegt, und das gehört zu diesem Beruf.\n\nDaraus einen Rat abzuleiten, fällt mir schwer. Ich sage den Leuten nur: Es ist keine Frage von richtig und falsch, sondern eine von Erwartungen, die andere mitbringen und die Sie nicht ändern können."
+          },
+          {
+            "id": "person_c",
+            "buchstabe": "c",
+            "titel": "Ayla Demirtaş, Personalleiterin",
+            "inhalt": "Bei uns im Betrieb ist das schlicht kein Thema, und ich sage das ohne jede Schönfärberei. Wir stellen jedes Jahr rund achtzig Leute ein, und ich kann mich an keinen einzigen Fall erinnern, in dem die Aussprache eine Rolle gespielt hätte.\n\nWorauf ich achte, ist etwas anderes: Unsere Teams sitzen in vier Städten, und die Hälfte der Kollegschaft ist nicht hier aufgewachsen. Wenn in einer Besprechung die eine Hälfte die andere nicht versteht, ist das ein Problem — unabhängig davon, ob es an Dialekt, an Fachbegriffen oder am Tempo liegt.\n\nVerständlich zu sein ist das einzige Kriterium, das ich anlege. Wer das schafft, darf von mir aus klingen, wie er will. Und ehrlich gesagt klingt in unserer Kantine sowieso längst niemand mehr wie das Lehrbuch."
+          },
+          {
+            "id": "person_d",
+            "buchstabe": "d",
+            "titel": "Gero Wiechert, Sprachverein Nordwiese",
+            "inhalt": "Was hier verloren geht, merkt man erst, wenn es weg ist. In meinem Heimatort habe ich als Kind Wörter gehört, die heute kein Kind mehr kennt, und mit jedem dieser Wörter verschwindet ein Stück Wissen über die Gegend — über Wetter, Handwerk, Landschaft.\n\nSchuld daran ist meiner Überzeugung nach vor allem das Fernsehen. Seit in jedem Wohnzimmer den ganzen Tag Standarddeutsch läuft, hören Kinder ihre eigene Sprache nur noch von den Großeltern, und das reicht nicht. Der Rückgang ist keine Naturgewalt, er hat eine Ursache.\n\nDeshalb fordere ich seit Jahren, dass Dialekt in der Schule seinen Platz bekommt — nicht als Freizeitangebot, sondern als Fach mit Stunden im Plan. Andere Länder machen das längst, und niemand hat dort schlechter Deutsch gelernt."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_person",
+          "frage": "Diese Person arbeitet in einer Schule.",
+          "optionen": {
+            "a": "Hannes Grubmüller",
+            "b": "Silke Ottmann",
+            "c": "Ayla Demirtaş",
+            "d": "Gero Wiechert"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Hannes Grubmüller unterrichtet seit vierzehn Jahren an einer Grundschule.",
+            "en": "Worked example. d wants a school subject introduced but does not teach."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat untersucht, wie Dialekt in Bewerbungsgesprächen wirkt.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "b",
+            "beleg": "Wir haben vor zwei Jahren untersucht, wie Dialekt in Bewerbungsgesprächen wirkt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Silke Ottmann beschreibt den Aufbau der Untersuchung im folgenden Satz.",
+              "en": "c hires eighty people a year but reports experience, not a study."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person behandelt Sprechen und Schreiben nach unterschiedlichen Regeln.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "a",
+            "beleg": "Reden und Schreiben sind bei uns getrennte Baustellen, und genau deshalb funktionieren beide.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Im Heft gilt Standarddeutsch ohne Ausnahme, beim Sprechen greift er nicht ein.",
+              "en": "He is strict about one and deliberately loose about the other, which is the whole point of his post."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "zuordnung_person",
+            "frage": "Für diese Person zählt allein, ob man verstanden wird.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "c",
+            "beleg": "Verständlich zu sein ist das einzige Kriterium, das ich anlege.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie nennt ausdrücklich ein einziges Kriterium und erlaubt alles andere.",
+              "en": "„das einzige Kriterium“ is what separates her from b, who says the effect exists but is not hers to judge."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person macht das Fernsehen für den Rückgang verantwortlich.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "d",
+            "beleg": "Schuld daran ist meiner Überzeugung nach vor allem das Fernsehen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er nennt die Ursache und begründet sie im nächsten Satz mit dem Standarddeutsch im Wohnzimmer.",
+              "en": "„meiner Überzeugung nach“ marks it as his position rather than a finding — nobody in the forum has measured this."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat eine Verbesserung beobachtet, seit sie etwas nicht mehr korrigiert.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "a",
+            "beleg": "Seit ich das Reden in Ruhe lasse, sind die Aufsätze besser geworden, nicht schlechter.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der folgende Satz liefert seine Erklärung: Wer unterbrochen wird, meldet sich seltener und übt weniger.",
+              "en": "„nicht schlechter“ anticipates the objection, which is what makes the sentence worth quoting."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person betont, dass die Wirkung je nach Dialekt sehr verschieden ist.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "b",
+            "beleg": "Der Effekt hängt fast vollständig davon ab, um welchen Dialekt es geht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie führt es sofort aus: manche wirken warm, andere kosten Punkte bei der fachlichen Einschätzung.",
+              "en": "The differentiation is her actual finding; a single uniform disadvantage is what she expected and did not find."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person fordert Dialekt als eigenes Fach im Stundenplan.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "d",
+            "beleg": "nicht als Freizeitangebot, sondern als Fach mit Stunden im Plan",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Die Formulierung „nicht … sondern …“ schärft die Forderung: kein Zusatzangebot, sondern ein Fach.",
+              "en": "a works with dialect in class every day but never asks for it to be taught as a subject."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sagt, im eigenen Betrieb spiele die Frage überhaupt keine Rolle.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "c",
+            "beleg": "Bei uns im Betrieb ist das schlicht kein Thema, und ich sage das ohne jede Schönfärberei.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie stützt es mit achtzig Einstellungen im Jahr und keinem einzigen erinnerten Fall.",
+              "en": "b's four hundred recruiters say otherwise — the two are not talking about the same set of employers, which is the tension in this forum."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person räumt ein, dass ihre eigene Vermutung widerlegt wurde.",
+            "optionen": {
+              "a": "Hannes Grubmüller",
+              "b": "Silke Ottmann",
+              "c": "Ayla Demirtaş",
+              "d": "Gero Wiechert"
+            },
+            "loesung": "b",
+            "beleg": "Meine eigene Vermutung war damit widerlegt, und das gehört zu diesem Beruf.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie hatte einen einheitlichen Nachteil erwartet und fand stattdessen große Unterschiede.",
+              "en": "a is also surprised by his result, but his expectation is never called wrong — it simply was not his."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "satz_einfuegen",
+        "anweisung": "Sie lesen in einer Zeitschrift einen Artikel über die Geschichte des Fahrrads. Welche der Sätze a bis h passen in die Lücken 10 bis 15? Ein Satz steht bereits als Beispiel im Text, ein weiterer Satz passt in keine Lücke.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Als die Straße dem Rad gehörte",
+            "quelle": "Sallberger Blätter für Stadtgeschichte",
+            "inhalt": "Wer heute für einen Radweg kämpft, hat selten im Kopf, dass das Fahrrad schon einmal gewonnen hatte. Um 1900 war es in europäischen Städten das schnellste Verkehrsmittel für Einzelne, und die Straßen gehörten ihm in einem Maß, das aus heutiger Sicht kaum vorstellbar ist. Was wir für einen modernen Konflikt halten, ist in Wahrheit die zweite Runde eines alten.\n\nDer Anfang war allerdings mühsam. [10] Erst als in den 1880er-Jahren gleich große Räder, eine Kette und der luftgefüllte Reifen zusammenkamen, wurde daraus ein Gerät für den Alltag.\n\nDanach ging es schnell, und zwar aus einem Grund, den man leicht übersieht. [11] Ein Arbeiter konnte sich ein gebrauchtes Rad leisten, ein Pferd nie; damit war zum ersten Mal ein Verkehrsmittel nicht an Vermögen gebunden.\n\nDie Folgen reichten weit über den Verkehr hinaus. [12] Zeitgenössische Berichte beschreiben empört, dass junge Frauen ohne Begleitung aus der Stadt hinausfuhren — und beiläufig, dass sie dafür ihre Kleidung änderten.\n\nSogar die Straßen selbst verdanken dem Rad mehr, als das Auto zugeben mag. [13] Radfahrervereine forderten glatte Beläge lange bevor es nennenswerten Autoverkehr gab, und in mehreren Ländern gingen die ersten Asphaltstrecken auf ihre Eingaben zurück.\n\nDann kippte das Verhältnis. [14] Zwischen 1920 und 1960 wurde der Straßenraum in fast ganz Westeuropa neu aufgeteilt, und das Rad verlor dabei fast alles, was es gewonnen hatte.\n\nHeute dreht sich die Entwicklung wieder. [15] Dabei geht es allerdings selten um Nostalgie: Wer Radwege plant, rechnet mit Fläche, mit Lärm und mit Gesundheitskosten — und kommt aus ganz anderen Gründen zu ganz ähnlichen Ergebnissen wie die Vereine vor hundert Jahren."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Es war schlicht das erste bezahlbare Fahrzeug."
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Vierzig Jahre lang war das Rad ein teures und gefährliches Spielzeug für sportliche Männer."
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Mit dem Auto kam ein Mitbewerber, der mehr Platz brauchte und ihn auch bekam."
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Wer plötzlich zwanzig Kilometer weit reisen konnte, ohne jemanden um Erlaubnis zu fragen, lebte anders."
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Immer mehr Städte holen zurück, was sie damals abgegeben haben."
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Ohne die Radfahrer gäbe es die befestigte Landstraße in ihrer heutigen Form vermutlich später."
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Auch die Eisenbahn veränderte in dieser Zeit das Reisen grundlegend."
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Was wir für einen modernen Konflikt halten, ist in Wahrheit die zweite Runde eines alten."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Die erste Lücke im ersten Absatz ist bereits gefüllt.",
+          "loesung": "h",
+          "begruendung": {
+            "de": "Der Satz fasst zusammen, was der Absatz gezeigt hat, und kündigt den Rückblick an, der folgt.",
+            "en": "Shown filled in, so letter h is used up and cannot answer 10 to 15."
+          }
+        },
+        "items": [
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 10?",
+            "loesung": "b",
+            "beleg": "Der Anfang war allerdings mühsam.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz sagt, worin die Mühsal bestand, und der folgende nennt mit „erst als …“ das Ende dieser Phase.",
+              "en": "„Erst als …“ in the next sentence requires a stated period that it brings to an end; only b supplies one."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 11?",
+            "loesung": "a",
+            "beleg": "Danach ging es schnell, und zwar aus einem Grund, den man leicht übersieht.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Aus einem Grund“ kündigt genau einen Grund an, und der folgende Satz rechnet ihn mit Arbeiter und Pferd vor.",
+              "en": "The sentence after the gap is about affordability, so the gap has to name affordability as the reason."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 12?",
+            "loesung": "d",
+            "beleg": "Die Folgen reichten weit über den Verkehr hinaus.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz benennt die gesellschaftliche Folge, die die empörten Berichte über junge Frauen dann belegen.",
+              "en": "„ohne jemanden um Erlaubnis zu fragen“ is precisely what the outraged reports are about."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 13?",
+            "loesung": "f",
+            "beleg": "Sogar die Straßen selbst verdanken dem Rad mehr, als das Auto zugeben mag.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Ohne die Radfahrer …“ formuliert dieselbe Behauptung als irreale Bedingung; danach folgen die Eingaben als Beleg.",
+              "en": "The gap sits between a claim and its evidence, and f restates the claim in the form the evidence answers."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 14?",
+            "loesung": "c",
+            "beleg": "Dann kippte das Verhältnis.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz nennt den Mitbewerber, der das Kippen verursacht, und leitet zur Neuaufteilung des Straßenraums über.",
+              "en": "„Dann kippte das Verhältnis“ needs an agent, and the years 1920 to 1960 in the next sentence confirm which one."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 15?",
+            "loesung": "e",
+            "beleg": "Heute dreht sich die Entwicklung wieder.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Zurückholen, was sie abgegeben haben“ knüpft an den vorigen Absatz an; der Folgesatz schränkt mit „dabei geht es allerdings selten um Nostalgie“ ein.",
+              "en": "The following sentence pushes back against a nostalgic reading, which only makes sense if the gap describes cities taking something back."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Sie lesen in einer Zeitung einen Artikel über den Umgang mit Nachrichten. Wählen Sie bei den Aufgaben 16 bis 21 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "Lieber nicht wissen",
+            "quelle": "Nordwieser Zeitung",
+            "inhalt": "Etwa jede vierte erwachsene Person in Deutschland will Nachrichten inzwischen gezielt aus dem Weg gehen — nicht aus Desinteresse, sondern weil sie den Umgang damit nicht mehr aushält. Die Fachwelt nennt das Nachrichtenvermeidung, und sie beobachtet den Anstieg seit gut zehn Jahren.\n\n„Der erste Reflex ist, den Leuten Gleichgültigkeit vorzuwerfen“, sagt die Medienforscherin Rebekka Ohlwein. „Unsere Daten zeigen fast das Gegenteil.“ In ihren Befragungen sind es nicht die Uninteressierten, die abschalten, sondern überdurchschnittlich häufig Menschen, die sich vorher intensiv informiert haben. Wer nichts erwartet, wird auch nicht enttäuscht; wer viel erwartet hat, schon.\n\nAls Hauptgrund nennen die Befragten nicht die Menge, sondern das Gefühl, nichts tun zu können. Ohnmacht ist in ihren Zahlen der stärkste Einzelfaktor, deutlich vor Zeitmangel und deutlich vor politischem Misstrauen. Wer einen Bericht liest, in dem eine Katastrophe geschildert und keine Handlungsmöglichkeit genannt wird, schaltet beim nächsten Mal eher ab.\n\nEinige Redaktionen haben darauf reagiert und berichten zusätzlich über Lösungsversuche — was funktioniert hat, wo, unter welchen Bedingungen. Die Wirkung ist messbar, aber kleiner, als die Verfechter dieses Ansatzes gern behaupten: In kontrollierten Studien lesen die Versuchspersonen anschließend etwas länger weiter, ihre Einschätzung der Lage verändert sich jedoch kaum.\n\nOhlwein warnt vor der naheliegenden Schlussfolgerung. Der Ausweg könne nicht darin bestehen, unangenehme Nachrichten wegzulassen; eine Redaktion, die nur noch berichte, was aushaltbar sei, gebe ihre Aufgabe auf. „Wir haben es nicht mit einem Problem der Nachricht zu tun, sondern mit einem Problem der Dosis und des Rahmens.“\n\nPraktisch heißt das: feste Zeiten statt ständiger Meldungen, Einordnung statt Eilmeldung. In einer Untersuchung mit zweihundert Teilnehmenden führte allein die Umstellung auf zweimal täglich statt dauerhaft dazu, dass sich die Betroffenen besser informiert fühlten — bei objektiv gleichem Wissensstand."
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Wer meidet laut den Daten von Rebekka Ohlwein besonders häufig Nachrichten?",
+            "optionen": {
+              "a": "Menschen, die sich vorher intensiv informiert haben.",
+              "b": "Menschen, die sich noch nie für Politik interessiert haben.",
+              "c": "Vor allem jüngere Menschen unter dreißig."
+            },
+            "loesung": "a",
+            "beleg": "In ihren Befragungen sind es nicht die Uninteressierten, die abschalten, sondern überdurchschnittlich häufig Menschen, die sich vorher intensiv informiert haben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz stellt beide Gruppen gegeneinander und benennt die tatsächliche.",
+              "en": "b is the „erster Reflex“ the article quotes precisely in order to contradict it."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "multiple_choice",
+            "frage": "Was nennen die Befragten als Hauptgrund?",
+            "optionen": {
+              "a": "Die schiere Menge an Meldungen.",
+              "b": "Das Gefühl, ohnehin nichts ändern zu können.",
+              "c": "Misstrauen gegenüber der Politik."
+            },
+            "loesung": "b",
+            "beleg": "Ohnmacht ist in ihren Zahlen der stärkste Einzelfaktor, deutlich vor Zeitmangel und deutlich vor politischem Misstrauen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt die Rangfolge ausdrücklich: Ohnmacht vor Zeitmangel und vor Misstrauen.",
+              "en": "a and c both appear in the same sentence — as the factors that come second and third."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "multiple_choice",
+            "frage": "Wie fällt die Wirkung des lösungsorientierten Berichtens aus?",
+            "optionen": {
+              "a": "Sie ist nachweisbar, aber geringer als behauptet.",
+              "b": "Sie lässt sich bisher nicht nachweisen.",
+              "c": "Sie verändert die Einschätzung der Lage deutlich."
+            },
+            "loesung": "a",
+            "beleg": "Die Wirkung ist messbar, aber kleiner, als die Verfechter dieses Ansatzes gern behaupten",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Messbar schließt b aus; der Halbsatz danach sagt, dass sich die Einschätzung kaum ändert, und schließt c aus.",
+              "en": "The sentence contains both halves of the answer, and each half rules out one distractor."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "multiple_choice",
+            "frage": "Wovor warnt Ohlwein?",
+            "optionen": {
+              "a": "Davor, unangenehme Nachrichten wegzulassen.",
+              "b": "Davor, zu viele Lösungsvorschläge zu bringen.",
+              "c": "Davor, Nachrichten nur noch zu festen Zeiten zu senden."
+            },
+            "loesung": "a",
+            "beleg": "Der Ausweg könne nicht darin bestehen, unangenehme Nachrichten wegzulassen; eine Redaktion, die nur noch berichte, was aushaltbar sei, gebe ihre Aufgabe auf.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Konjunktiv I markiert ihre Position; feste Zeiten empfiehlt sie im nächsten Absatz sogar.",
+              "en": "c inverts her recommendation — fixed times are what she suggests, not what she warns against."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "multiple_choice",
+            "frage": "Worin sieht sie das eigentliche Problem?",
+            "optionen": {
+              "a": "In den Themen der Berichterstattung.",
+              "b": "In der Menge und in der Art der Einordnung.",
+              "c": "In der Ausbildung der Journalistinnen und Journalisten."
+            },
+            "loesung": "b",
+            "beleg": "Wir haben es nicht mit einem Problem der Nachricht zu tun, sondern mit einem Problem der Dosis und des Rahmens.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "„Dosis“ meint die Menge, „Rahmen“ die Einordnung; die Nachricht selbst wird ausdrücklich ausgenommen.",
+              "en": "The metaphor is the answer: dose and frame, not the substance."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "multiple_choice",
+            "frage": "Was ergab die Untersuchung mit zweihundert Teilnehmenden?",
+            "optionen": {
+              "a": "Die Teilnehmenden wussten hinterher messbar mehr.",
+              "b": "Die Teilnehmenden fühlten sich besser informiert, wussten aber nicht mehr.",
+              "c": "Die Teilnehmenden lasen insgesamt seltener Nachrichten."
+            },
+            "loesung": "b",
+            "beleg": "dass sich die Betroffenen besser informiert fühlten — bei objektiv gleichem Wissensstand",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Gedankenstrich trennt das Gefühl vom tatsächlichen Wissen, das gleich blieb.",
+              "en": "Feeling and knowing are separated in one sentence — a is exactly the half the sentence denies."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_aeusserungen",
+        "anweisung": "Sie lesen in einer Zeitschrift Meinungsäußerungen zum Thema mieten oder kaufen. Welche Äußerung a bis h passt zu welcher Überschrift 22 bis 27? Eine Äußerung dient als Beispiel, eine weitere passt zu keiner Überschrift.",
+        "richtzeitMinuten": 12,
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "titel": "Kerstin Lubowitz",
+            "inhalt": "Wir haben vor zwölf Jahren gekauft, und ich würde es wieder tun — allerdings nicht wegen des Geldes. Ob sich das gerechnet hat, weiß ich bis heute nicht genau. Was ich weiß: Uns kann niemand kündigen, und wir mussten in zwölf Jahren nicht ein einziges Mal über einen Umzug nachdenken."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Dr. Amir Solouki",
+            "inhalt": "In den Rechnungen, die man überall liest, fehlt fast immer derselbe Posten. Verglichen wird die Miete mit der Rate — aber Instandhaltung, Rücklagen und Kaufnebenkosten tauchen nicht auf. Rechnet man sie mit, verschiebt sich der Punkt, ab dem sich Kaufen lohnt, je nach Stadt um sieben bis fünfzehn Jahre nach hinten."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Jonna Wieprecht",
+            "inhalt": "Mich hat der Kauf beweglich gemacht — allerdings anders herum, als alle denken. Ich habe eine kleine Wohnung in meiner Heimatstadt gekauft und vermiete sie. Damit kann ich hinziehen, wohin ich will, und habe trotzdem etwas, worauf ich zurückfallen kann. Besitz und Beweglichkeit schließen sich für mich nicht aus."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Ehepaar Kastner",
+            "inhalt": "Wir haben gekauft, weil wir Angst vor der Miete im Alter hatten. Heute sind wir siebzig, das Haus ist abbezahlt, und wir merken, dass wir das falsche Problem gelöst haben. Zwei Etagen, ein Garten, eine Treppe ohne Geländer — pflegeleicht ist etwas anderes. Wir hätten früher über das Danach nachdenken sollen."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Timo Grasnick",
+            "inhalt": "Für mich war es schlicht keine Entscheidung. Ich verdiene ordentlich, aber das Eigenkapital, das die Bank sehen will, hat in meiner Familie nie jemand gehabt. Wer erbt, kauft; wer nicht erbt, mietet. Das ist die ehrlichste Zusammenfassung dieses Themas, und mit persönlicher Leistung hat sie wenig zu tun."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Marlis Steenbeck",
+            "inhalt": "Ich miete seit dreißig Jahren dieselbe Wohnung und habe nie bereut, nicht gekauft zu haben. Wenn die Heizung ausfällt, rufe ich an. Was ich dadurch nicht ausgegeben habe, liegt angelegt und arbeitet für mich — ohne dass ich am Wochenende auf einer Leiter stehe."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Nuri Baltacı",
+            "inhalt": "Was mich an der Debatte stört, ist, dass immer nur über Zahlen geredet wird. In meiner Straße kenne ich die Leute, die seit Jahrzehnten mieten, deutlich besser als die, die gekauft haben und nach fünf Jahren weiterziehen. Eine Nachbarschaft entsteht nicht durch Grundbucheinträge."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Prof. Renate Kilb",
+            "inhalt": "Man muss das Bild vom sicheren Eigentum etwas relativieren. Eine Immobilie ist ein Klumpenrisiko: Das gesamte Vermögen hängt an einem einzigen Objekt an einem einzigen Ort. Zieht die Arbeit weg oder verliert die Gegend an Wert, trifft beides dieselbe Familie gleichzeitig. Streuung sieht anders aus."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Nicht das Geld war der Grund, sondern die Sicherheit",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Kerstin Lubowitz weiß nicht, ob es sich gerechnet hat, nennt aber die Unkündbarkeit als Gewinn.",
+            "en": "Shown as the worked example, so letter a is used up and cannot answer 22 to 27."
+          }
+        },
+        "items": [
+          {
+            "nr": 22,
+            "typ": "zuordnung_buchstabe",
+            "frage": "In den üblichen Rechnungen fehlen wichtige Posten",
+            "loesung": "b",
+            "beleg": "Verglichen wird die Miete mit der Rate — aber Instandhaltung, Rücklagen und Kaufnebenkosten tauchen nicht auf.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Amir Solouki benennt die fehlenden Posten und beziffert, wie stark sich das Ergebnis dadurch verschiebt.",
+              "en": "h also warns about buying, but about concentration of risk, not about arithmetic."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Gekauft — und trotzdem frei umzuziehen",
+            "loesung": "c",
+            "beleg": "Damit kann ich hinziehen, wohin ich will, und habe trotzdem etwas, worauf ich zurückfallen kann.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Jonna Wieprecht kauft und vermietet und löst damit den erwarteten Gegensatz auf.",
+              "en": "„allerdings anders herum, als alle denken“ signals the reversal the heading names."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Im Alter passt das Haus nicht mehr",
+            "loesung": "d",
+            "beleg": "Zwei Etagen, ein Garten, eine Treppe ohne Geländer — pflegeleicht ist etwas anderes.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Ehepaar hat das Ziel erreicht und stellt fest, dass es das falsche Problem gelöst hat.",
+              "en": "The house is paid off, so this is not about money — which is what separates it from b."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Ob man kauft, entscheidet sich in der Familie",
+            "loesung": "e",
+            "beleg": "Wer erbt, kauft; wer nicht erbt, mietet.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Timo Grasnick führt es auf das Eigenkapital zurück und nennt eigene Leistung ausdrücklich nachrangig.",
+              "en": "He earns well — the sentence before rules out income as the explanation."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Beim Mieten bleibt Geld und Zeit übrig",
+            "loesung": "f",
+            "beleg": "Was ich dadurch nicht ausgegeben habe, liegt angelegt und arbeitet für mich — ohne dass ich am Wochenende auf einer Leiter stehe.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Marlis Steenbeck nennt beides: das angelegte Geld und die nicht aufgewendete Zeit.",
+              "en": "b makes a similar arithmetic point in the abstract; she reports having lived it for thirty years."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Das ganze Vermögen hängt an einem einzigen Ort",
+            "loesung": "h",
+            "beleg": "Eine Immobilie ist ein Klumpenrisiko: Das gesamte Vermögen hängt an einem einzigen Objekt an einem einzigen Ort.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Renate Kilb erklärt, warum Arbeitsplatz und Wert dieselbe Familie gleichzeitig treffen können.",
+              "en": "Only h talks about risk in the financial sense; the others talk about cost, freedom or community."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 5,
+        "typ": "zuordnung_ueberschriften",
+        "anweisung": "Sie möchten ein Praktikum machen und lesen die Praktikumsordnung Ihrer Hochschule. Welche der Überschriften a bis h aus dem Inhaltsverzeichnis passen zu den Paragraphen 28 bis 30? Vier Überschriften passen zu keinem der Paragraphen.",
+        "richtzeitMinuten": 6,
+        "texte": [
+          {
+            "id": "text_5",
+            "titel": "Praktikumsordnung der Hochschule Nordwiese — Auszug",
+            "inhalt": "§ 1 Ziel des Praktikums\nDas Praktikum soll die im Studium erworbenen Kenntnisse in der beruflichen Praxis erproben und die Berufsorientierung unterstützen. Es ist Bestandteil des Studiums und wird mit fünfzehn Leistungspunkten angerechnet.\n\n§ 2 [28]\nDas Praktikum kann erst nach bestandener Zwischenprüfung angetreten werden. Es umfasst mindestens zwölf zusammenhängende Wochen in Vollzeit; eine Aufteilung auf zwei Abschnitte ist zulässig, wenn kein Abschnitt kürzer als sechs Wochen ist. Tätigkeiten im eigenen Familienbetrieb werden nicht anerkannt.\n\n§ 3 [29]\nDie Praktikumsstelle ist vor Antritt beim Praktikumsbüro anzuzeigen. Der Anzeige sind die Stellenbeschreibung und der Name der betreuenden Person im Betrieb beizufügen. Über die Eignung entscheidet das Praktikumsbüro innerhalb von drei Wochen; eine nachträgliche Anerkennung ist ausgeschlossen.\n\n§ 4 [30]\nNach Abschluss ist innerhalb von acht Wochen ein Bericht von mindestens zwanzig Seiten einzureichen, der Tätigkeiten, Arbeitsabläufe und eigene Erfahrungen darstellt. Der Bericht ist von der betreuenden Person im Betrieb gegenzuzeichnen. Wer die Frist ohne wichtigen Grund versäumt, muss das Praktikum wiederholen."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Ziel des Praktikums"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Voraussetzungen und Dauer"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Anmeldung und Genehmigung"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Bericht und Nachweis"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Vergütung und Versicherung"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Praktikum im Ausland"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Betreuung durch die Hochschule"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Widerspruch und Beschwerde"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "§ 1 trägt bereits seine Überschrift.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Der Paragraph sagt, wozu das Praktikum dient und wie es angerechnet wird.",
+            "en": "Shown filled in, so letter a is used up and cannot answer 28 to 30."
+          }
+        },
+        "items": [
+          {
+            "nr": 28,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 2?",
+            "loesung": "b",
+            "beleg": "Es umfasst mindestens zwölf zusammenhängende Wochen in Vollzeit; eine Aufteilung auf zwei Abschnitte ist zulässig, wenn kein Abschnitt kürzer als sechs Wochen ist.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Der Paragraph regelt zwei Dinge, die zusammengehören: wann man darf und wie lange es dauern muss.",
+              "en": "The family business is excluded here, which tempts towards a heading about what counts — but that is one condition inside the rule, not its subject."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 3?",
+            "loesung": "c",
+            "beleg": "Die Praktikumsstelle ist vor Antritt beim Praktikumsbüro anzuzeigen.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Anzeigen, Unterlagen beifügen und die Entscheidung über die Eignung gehören alle zur Genehmigung im Voraus.",
+              "en": "„Über die Eignung entscheidet …“ is the approval half; the notification is the registration half."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 4?",
+            "loesung": "d",
+            "beleg": "Nach Abschluss ist innerhalb von acht Wochen ein Bericht von mindestens zwanzig Seiten einzureichen",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Umfang, Inhalt, Gegenzeichnung und Frist betreffen alle den Nachweis über das Praktikum.",
+              "en": "The countersignature by the company mentor makes it a Nachweis as well as a Bericht — which is why the heading names both."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte: Ansagen, Nachrichten und Durchsagen. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text einmal.",
+        "wiederholungen": 1,
+        "sprecher": [
+          {
+            "rolle": "Werkstattmeister",
+            "geschlecht": "m",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Zugbegleiterin",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage im Zug"
+          },
+          {
+            "rolle": "Verkehrssprecher",
+            "geschlecht": "m",
+            "beschreibung": "Verkehrsmeldung im Radio"
+          },
+          {
+            "rolle": "Freundin",
+            "geschlecht": "f",
+            "beschreibung": "Sprachnachricht an eine Bekannte"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "geschlecht": "f",
+            "beschreibung": "Ansage in der Stadtbibliothek"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben: Sie entscheiden, ob eine Aussage richtig oder falsch ist, und Sie wählen bei der zweiten Aufgabe die richtige Lösung a, b oder c. Sie hören jeden Text einmal. Lesen Sie jetzt die Aufgaben eins bis zehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Werkstattmeister",
+            "text": "Guten Tag, Herr Nowak, Klausen von der Werkstatt am Ring. Wir haben Ihren Wagen jetzt auf der Bühne gehabt. Die Bremsen sind besser als gedacht, die halten noch mindestens ein Jahr. Dafür ist der Auspuff durchgerostet, und das müssen wir machen, sonst kommen Sie durch keine Prüfung. Wir landen damit bei etwa vierhundertzwanzig Euro statt der geschätzten sechshundert. Das Teil ist bestellt und kommt Mittwoch. Den Wagen können Sie dann ab Donnerstagnachmittag abholen; wir stellen ihn Ihnen fertig auf den Hof, falls Sie später kommen. Wenn Sie das so wollen, brauchen Sie nichts zu tun; wenn nicht, rufen Sie bitte bis morgen Mittag an.",
+            "pauseDanachSek": 14,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Zugbegleiterin",
+            "text": "Sehr geehrte Fahrgäste, wir erreichen Sallberg voraussichtlich mit fünfundzwanzig Minuten Verspätung. Grund ist ein Notarzteinsatz am Gleis in Weidenbach. Ihre Anschlüsse in Sallberg warten nicht; das gilt ausdrücklich auch für den letzten Zug nach Nordwiese um zweiundzwanzig Uhr acht. Reisende mit diesem Ziel wenden sich bitte direkt am Bahnsteig an unsere Kollegen im roten Weste — es ist ein Ersatzverkehr mit Taxen eingerichtet. Fahrkarten behalten selbstverständlich ihre Gültigkeit. Wir bitten die Verzögerung zu entschuldigen.",
+            "pauseDanachSek": 14,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Verkehrssprecher",
+            "text": "Und die Lage auf den Straßen: Auf der B zweiundfünfzig zwischen Weidenbach und der Anschlussstelle Hohenrode beginnen heute Nacht die Deckenarbeiten. Gesperrt wird nur in Fahrtrichtung Norden, und zwar jeweils von zwanzig Uhr bis fünf Uhr morgens. Tagsüber läuft der Verkehr normal, die Umleitung ist ausgeschildert. Die Arbeiten sollen bis Ende des Monats abgeschlossen sein — vorausgesetzt, es bleibt trocken. Andernfalls verlängert sich die Sperrung um bis zu zwei Wochen. Wer nachts in Richtung Norden unterwegs ist, rechnet am besten zwanzig Minuten mehr ein.",
+            "pauseDanachSek": 14,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Freundin",
+            "text": "Hey, ich bin's. Also, ich war jetzt bei der Wohnung in der Fasanenstraße. Ehrlich gesagt: viel schöner als auf den Fotos, richtig hell, und der Schnitt ist super. Aber — und das ist ein dickes Aber — es waren ungefähr vierzig Leute da. Vierzig! Die Maklerin hat gesagt, wer sich ernsthaft interessiert, soll die Unterlagen heute noch schicken, sonst braucht man gar nicht mehr. Also Gehaltsnachweise, Schufa, das ganze Programm. Ich mach das jetzt, aber mach dir keine zu großen Hoffnungen für uns beide. Melde dich mal.",
+            "pauseDanachSek": 14,
+            "akustik": "telefon",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "text": "Liebe Besucherinnen und Besucher, ein Hinweis in eigener Sache. Ab kommendem Montag stellen wir auf ein neues Ausleihsystem um. In der Woche darauf bleibt die Bibliothek deshalb von Dienstag bis Donnerstag geschlossen; Montag und Freitag haben wir wie gewohnt geöffnet. Alle Medien, die in dieser Zeit fällig wären, verlängern sich automatisch um zwei Wochen — Sie müssen nichts unternehmen und zahlen keine Gebühren. Ihre bisherigen Ausweise behalten ihre Gültigkeit. Der Rückgabekasten am Haupteingang ist auch an den Schließtagen erreichbar. Wer dringend etwas braucht, erreicht uns in dieser Woche telefonisch von zehn bis zwölf.",
+            "pauseDanachSek": 14,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der erste Text ist eine Nachricht auf einer Mailbox.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Der Meister nennt Namen und Werkstatt und bittet um Rückruf bis morgen Mittag.",
+            "en": "Worked example, so you can hear how the two questions per text work."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Die Reparatur wird teurer als ursprünglich geschätzt.",
+            "loesung": "falsch",
+            "beleg": "Wir landen damit bei etwa vierhundertzwanzig Euro statt der geschätzten sechshundert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Vierhundertzwanzig statt sechshundert ist weniger, nicht mehr.",
+              "en": "Two figures in one sentence and a „statt“ between them — the direction is the whole question."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was muss Herr Nowak tun, wenn er einverstanden ist?",
+            "optionen": {
+              "a": "Nichts.",
+              "b": "Bis morgen Mittag zurückrufen.",
+              "c": "Am Mittwoch in der Werkstatt vorbeikommen."
+            },
+            "loesung": "a",
+            "beleg": "Wenn Sie das so wollen, brauchen Sie nichts zu tun; wenn nicht, rufen Sie bitte bis morgen Mittag an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Rückruf gilt ausdrücklich für den Fall, dass er nicht einverstanden ist.",
+              "en": "Both halves are in one sentence, and they are the wrong way round from what you expect."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Der letzte Zug nach Nordwiese wartet auf die verspäteten Reisenden.",
+            "loesung": "falsch",
+            "beleg": "Ihre Anschlüsse in Sallberg warten nicht; das gilt ausdrücklich auch für den letzten Zug nach Nordwiese um zweiundzwanzig Uhr acht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Halbsatz nach dem Semikolon schließt gerade diesen Zug ausdrücklich ein.",
+              "en": "„auch für“ singles out the case you would most expect to be an exception."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was ist für Reisende nach Nordwiese eingerichtet?",
+            "optionen": {
+              "a": "Ein Ersatzverkehr mit Taxen.",
+              "b": "Eine Übernachtung auf Kosten der Bahn.",
+              "c": "Ein späterer Sonderzug."
+            },
+            "loesung": "a",
+            "beleg": "es ist ein Ersatzverkehr mit Taxen eingerichtet",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Die Ansage nennt die Lösung direkt nach der Aufforderung, sich an das Personal zu wenden.",
+              "en": "Tickets stay valid, which is about the fare, not about the substitute service."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Die Straße ist auch tagsüber gesperrt.",
+            "loesung": "falsch",
+            "beleg": "Tagsüber läuft der Verkehr normal, die Umleitung ist ausgeschildert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Gesperrt wird nur nachts von zwanzig bis fünf Uhr und nur in einer Fahrtrichtung.",
+              "en": "The closure has two limits — time and direction — and the question tests only the first."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Wovon hängt ab, ob die Arbeiten rechtzeitig fertig werden?",
+            "optionen": {
+              "a": "Von der Zahl der eingesetzten Maschinen.",
+              "b": "Vom Wetter.",
+              "c": "Von der Verkehrsstärke in der Nacht."
+            },
+            "loesung": "b",
+            "beleg": "Die Arbeiten sollen bis Ende des Monats abgeschlossen sein — vorausgesetzt, es bleibt trocken.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Vorausgesetzt, es bleibt trocken“ nennt die Bedingung; andernfalls dauert es bis zu zwei Wochen länger.",
+              "en": "„vorausgesetzt“ is the word carrying the answer, and it comes after a dash at the end of the sentence."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Die Wohnung hat der Freundin gefallen.",
+            "loesung": "richtig",
+            "beleg": "viel schöner als auf den Fotos, richtig hell, und der Schnitt ist super",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das „Aber“ danach betrifft nicht die Wohnung, sondern die Zahl der Interessenten.",
+              "en": "The big „Aber“ makes it sound like a negative message; it is about competition, not about the flat."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was verlangt die Maklerin von ernsthaften Interessenten?",
+            "optionen": {
+              "a": "Eine höhere Kaution.",
+              "b": "Die Unterlagen noch am selben Tag.",
+              "c": "Einen zweiten Besichtigungstermin."
+            },
+            "loesung": "b",
+            "beleg": "wer sich ernsthaft interessiert, soll die Unterlagen heute noch schicken, sonst braucht man gar nicht mehr",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Heute noch“ ist die Frist; welche Unterlagen gemeint sind, zählt die Freundin danach auf.",
+              "en": "The list of documents follows, which is what makes the deadline easy to hear past."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Wer in der Umstellungswoche etwas zurückgeben müsste, zahlt Gebühren.",
+            "loesung": "falsch",
+            "beleg": "verlängern sich automatisch um zwei Wochen — Sie müssen nichts unternehmen und zahlen keine Gebühren",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Verlängerung geschieht automatisch, und Gebühren werden ausdrücklich ausgeschlossen.",
+              "en": "Two reassurances in one clause: nothing to do, nothing to pay."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Wann ist die Bibliothek in der zweiten Woche geöffnet?",
+            "optionen": {
+              "a": "Nur montags und freitags.",
+              "b": "Von Dienstag bis Donnerstag.",
+              "c": "Die ganze Woche über gar nicht."
+            },
+            "loesung": "a",
+            "beleg": "bleibt die Bibliothek deshalb von Dienstag bis Donnerstag geschlossen; Montag und Freitag haben wir wie gewohnt geöffnet",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt zuerst die geschlossenen und dann die geöffneten Tage.",
+              "en": "b repeats the days named first — the ones the sentence says are closed."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "interview",
+        "anweisung": "Sie hören im Radio ein Interview mit einer Sprachwissenschaftlerin. Wählen Sie bei den Aufgaben 11 bis 16 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Radiosendung „Wissen am Abend“ — Interview mit Prof. Marlene Tiedge, Sprachwissenschaftlerin.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "führt das Interview"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "geschlecht": "f",
+            "beschreibung": "Prof. Marlene Tiedge, forscht über Dialekte"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Interview mit einer Sprachwissenschaftlerin. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben elf bis sechzehn.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Tiedge, sterben die Dialekte aus? Man liest das seit meiner Kindheit, und das ist eine Weile her.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Man liest es seit zweihundert Jahren, und das ist der beste Hinweis darauf, dass die Frage falsch gestellt ist. Was verschwindet, sind die alten Ortsdialekte, in denen jedes Dorf anders sprach. Was entsteht, sind großräumige Umgangssprachen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Ein junger Mensch aus Köln spricht heute nicht mehr wie sein Großvater, aber auch nicht wie die Tagesschau. Er spricht etwas Drittes, und dieses Dritte ist eine sprachliche Form mit eigenen Regeln — kein Fehler und kein Rest.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Warum hält sich dann so hartnäckig das Gefühl, es gehe etwas verloren?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Weil es das ja auch tut. Ich bestreite nicht, dass Wortschatz verschwindet, und zwar in großem Umfang. Nur ist Sprachwandel kein Verfall, sondern der Normalzustand. Das Mittelhochdeutsche ist auch nicht gestorben, es ist Deutsch geworden.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Der Unterschied ist nur: Früher dauerte so ein Wandel Jahrhunderte, heute sehen wir ihn innerhalb von zwei Generationen. Wer alt genug wird, erlebt die Veränderung am eigenen Leib, und das fühlt sich anders an als eine Zeile im Lehrbuch.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Es heißt oft, Dialekt sei ein Nachteil für Kinder in der Schule. Stimmt das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Nach der heutigen Datenlage ist eher das Gegenteil der Fall. Kinder, die zwei Varietäten sicher beherrschen und zwischen ihnen wechseln können, schneiden bei Aufgaben zur Sprachaufmerksamkeit besser ab als einsprachig aufgewachsene.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Entscheidend ist allerdings das Wort „sicher“. Problematisch wird es, wenn ein Kind keine der beiden Formen vollständig lernt, weil ihm zu Hause der Dialekt und in der Schule das Standarddeutsch abgewöhnt wird. Dann fehlt am Ende beides.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Sie plädieren also dafür, Dialekt in der Schule zuzulassen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Zuzulassen, ja. Zu unterrichten, nein — und da widerspreche ich manchen Vereinen ausdrücklich. Eine Sprachform, die man im Unterricht aus einem Buch lernt, ist kein Dialekt mehr, sondern ein Schulfach mit Dialektwörtern darin.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Dialekte leben davon, dass man sie zu Hause und auf dem Hof hört. Was die Schule tun kann, ist bescheidener und wirksamer: Sie kann aufhören, ihn zu bestrafen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Wird eigentlich irgendwo aufgeschrieben, was verschwindet? Es gibt ja diese großen Wörterbücher der Mundarten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Es gibt sie, und sie sind großartig — aber sie halten fest, was vor sechzig Jahren gesprochen wurde. Was heute entsteht, erfassen wir viel schlechter, weil es keine Rechtschreibung hat und selten aufgeschrieben wird.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Wir behelfen uns inzwischen mit Aufnahmen aus dem Alltag: Marktgespräche, Vereinsabende, Küchentische. Das ist mühsam, liefert aber die einzigen Daten, die zeigen, wie die Leute tatsächlich reden — und nicht, wie sie glauben, dass man reden sollte. Diese Lücke zwischen Selbstauskunft und Aufnahme ist übrigens riesig.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Wenn Sie eine Sache ändern könnten — welche wäre das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Ich würde bei der Lehrkräfteausbildung ansetzen. Wer nie gelernt hat, dass ein Dialektwort im Aufsatz kein Rechtschreibfehler ist, korrigiert es weg, ohne böse Absicht.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sprachwissenschaftlerin",
+            "text": "Das kostet keine zusätzlichen Stunden und keine neuen Fächer, sondern eine einzige Seminarsitzung im Studium. Solche Maßnahmen sind unspektakulär, und genau deshalb kommen sie in Debatten nie vor.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Tiedge, vielen Dank für das Gespräch.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Was sagt Frau Tiedge über das Verschwinden der Dialekte?",
+            "optionen": {
+              "a": "Die alten Ortsdialekte gehen zurück, großräumige Formen entstehen.",
+              "b": "Die Dialekte werden in zwei Generationen verschwunden sein.",
+              "c": "Die Dialekte gleichen sich der Sprache der Nachrichten an."
+            },
+            "loesung": "a",
+            "beleg": "Was verschwindet, sind die alten Ortsdialekte, in denen jedes Dorf anders sprach. Was entsteht, sind großräumige Umgangssprachen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Zwei Sätze, zwei Richtungen: was geht und was kommt.",
+              "en": "c is ruled out explicitly — the young speaker sounds neither like the grandfather nor like the news."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Wie beurteilt sie den Sprachwandel?",
+            "optionen": {
+              "a": "Als Verfall, den man aufhalten sollte.",
+              "b": "Als Normalzustand jeder lebenden Sprache.",
+              "c": "Als Folge der modernen Medien."
+            },
+            "loesung": "b",
+            "beleg": "Nur ist Sprachwandel kein Verfall, sondern der Normalzustand.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie räumt den Verlust an Wortschatz ein und weist die Deutung als Verfall im selben Absatz zurück.",
+              "en": "She concedes the loss before rejecting the label, which is what makes a tempting if you stop early."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was zeigt die heutige Datenlage zu Dialekt und Schule?",
+            "optionen": {
+              "a": "Dialektsprechende Kinder haben deutliche Nachteile.",
+              "b": "Kinder mit zwei sicher beherrschten Varietäten schneiden besser ab.",
+              "c": "Ein Unterschied lässt sich nicht feststellen."
+            },
+            "loesung": "b",
+            "beleg": "Kinder, die zwei Varietäten sicher beherrschen und zwischen ihnen wechseln können, schneiden bei Aufgaben zur Sprachaufmerksamkeit besser ab als einsprachig aufgewachsene.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie leitet mit „eher das Gegenteil“ ein und nennt dann die Bedingung: sicher beherrschen.",
+              "en": "The next turn adds the qualification, which is what separates b from an unconditional claim."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Wann wird es nach ihren Worten problematisch?",
+            "optionen": {
+              "a": "Wenn zu Hause nur Dialekt gesprochen wird.",
+              "b": "Wenn ein Kind keine der beiden Formen vollständig lernt.",
+              "c": "Wenn Kinder in der Schule Dialekt sprechen dürfen."
+            },
+            "loesung": "b",
+            "beleg": "Problematisch wird es, wenn ein Kind keine der beiden Formen vollständig lernt, weil ihm zu Hause der Dialekt und in der Schule das Standarddeutsch abgewöhnt wird.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Nebensatz nennt beide Seiten, die zusammen das Problem ergeben — nicht eine allein.",
+              "en": "Half the sentence looks like a; the point is that both halves have to happen."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Was hält sie vom Vorschlag, Dialekt als Fach zu unterrichten?",
+            "optionen": {
+              "a": "Sie hält ihn für richtig und überfällig.",
+              "b": "Sie lehnt ihn ab; die Schule solle Dialekt nur nicht bestrafen.",
+              "c": "Sie hält ihn für sinnvoll, aber zu teuer."
+            },
+            "loesung": "b",
+            "beleg": "Zuzulassen, ja. Zu unterrichten, nein — und da widerspreche ich manchen Vereinen ausdrücklich.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie trennt Zulassen und Unterrichten und nennt am Ende, was die Schule stattdessen tun solle.",
+              "en": "The two halves of her answer are four words long each, and only the second one is the answer."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Wo würde sie ansetzen, wenn sie eine Sache ändern könnte?",
+            "optionen": {
+              "a": "Bei der Ausbildung der Lehrkräfte.",
+              "b": "Bei den Lehrplänen der Grundschulen.",
+              "c": "Bei den Sendungen im öffentlichen Rundfunk."
+            },
+            "loesung": "a",
+            "beleg": "Ich würde bei der Lehrkräfteausbildung ansetzen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie beziffert es sogar: eine einzige Seminarsitzung im Studium, keine neuen Fächer.",
+              "en": "„keine neuen Fächer“ in the following turn is what rules out b."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören im Radio ein Gespräch mit mehreren Personen über den Wohnungsmarkt. Wer sagt was? Ordnen Sie die Aussagen 17 bis 22 den Personen zu. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Radiosendung „Weidenbach diskutiert“ — im Studio: die Stadtplanerin Corinna Halbach und Ulf Pretzel vom Mieterverein.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "moderiert die Sendung"
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "geschlecht": "f",
+            "beschreibung": "Corinna Halbach, plant Neubaugebiete"
+          },
+          {
+            "rolle": "Mietervertreter",
+            "geschlecht": "m",
+            "beschreibung": "Ulf Pretzel, Mieterverein Weidenbach"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch mit drei Personen. Ordnen Sie die Aussagen den Personen zu. Sie hören den Text einmal. Lesen Sie jetzt die Aufgaben siebzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Guten Abend. Ich habe für diese Sendung selbst einmal gesucht — anonym, mit einem Durchschnittsgehalt und zwei Kindern. Auf vierzehn Anfragen kam eine einzige Einladung.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Halbach, Herr Pretzel, schön, dass Sie da sind. Frau Halbach, die Stadt sagt seit Jahren, sie baue. Warum merkt davon niemand etwas?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "text": "Weil zwischen dem Beschluss und dem Einzug im Schnitt neun Jahre liegen. Das ist die Zahl, die in jeder Debatte fehlt. Was wir heute beschließen, entlastet frühestens die Kinder der heutigen Suchenden.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "text": "Und ehrlich gesagt bauen wir auch nicht so viel, wie es klingt. Von den 2019 beschlossenen Gebieten ist bis heute etwa die Hälfte im Bau. Der Rest hängt an Einsprüchen, an fehlenden Fachleuten und an Zinsen, die inzwischen doppelt so hoch sind wie damals kalkuliert.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Herr Pretzel, hilft Bauen denn überhaupt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Auf lange Sicht ja, das bestreitet bei uns niemand. Nur hilft es genau den Menschen nicht, die zu uns in die Beratung kommen. Neubau kostet in dieser Stadt vierzehn Euro den Quadratmeter, und wer heute eine Wohnung sucht, sucht für neun.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Das ist kein Argument gegen Bauen. Es ist ein Argument dagegen, das Bauen als Antwort auf jede Frage zu behandeln.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Was wäre denn die Antwort für heute?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Der wirksamste Hebel ist der Bestand, nicht der Neubau. In Weidenbach stehen nach unserer Zählung über achthundert Wohnungen länger als ein Jahr leer, viele davon in Erbengemeinschaften, die sich nicht einigen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Dazu kommen Wohnungen, die dauerhaft als Ferienunterkunft vermietet werden. Beides ließe sich mit vorhandenen Mitteln angehen, sofort, ohne einen einzigen Bagger.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Halbach, überzeugt Sie das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "text": "In der Sache ja, in der Größenordnung nein. Achthundert Wohnungen klingen nach viel, decken aber nicht einmal den Bedarf eines Jahres; in einer Bilanz über zehn Jahre würde das kaum ins Gewicht fallen. Ich halte es trotzdem für richtig, weil man in einer Stadt schwer Neubau verlangen kann, während bekannte Wohnungen leer stehen. Das ist auch eine Frage der Glaubwürdigkeit.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Herr Pretzel, eine Zwischenfrage: Warum stehen diese Wohnungen überhaupt leer? Der Markt ist doch leer gefegt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "In den meisten Fällen aus Bequemlichkeit oder aus Angst. Wer eine geerbte Wohnung vermietet, hat plötzlich Pflichten, eine Abrechnung und womöglich Streit. Wer sie leer stehen lässt, hat Ruhe.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Solange Leerstand nichts kostet, ist das eine rationale Entscheidung. Genau da müsste man ansetzen, und zwar nicht mit Strafen, sondern mit Beratung und mit einer Stelle, die die Vermietung abnimmt.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Ein Wort noch zu den Mieten selbst. Vielerorts wird über eine Deckelung diskutiert.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "text": "Da bin ich zurückhaltend, und das sage ich als jemand, der beruflich für bezahlbares Wohnen zuständig ist. Wo Mieten stark gedeckelt wurden, ist die Zahl der angebotenen Wohnungen anschließend gesunken, weil weniger vermietet und mehr verkauft wurde.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Mietervertreter",
+            "text": "Und ich halte diese Befunde für einseitig ausgewählt. Aber darüber streiten wir seit Jahren, das schaffen wir heute Abend nicht.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Dann ein Schlusssatz von jedem. Frau Halbach?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Stadtplanerin",
+            "text": "Wir müssen aufhören, jede Planung als Kampf zu führen. Ein Neubaugebiet, gegen das drei Jahre geklagt wird, hilft niemandem — auch den Klagenden nicht, deren Kinder später selbst suchen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Halbach, Herr Pretzel, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 17,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat selbst einen Versuch gemacht und berichtet davon.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "a",
+            "beleg": "Auf vierzehn Anfragen kam eine einzige Einladung.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Moderator hat anonym gesucht; beide Gäste sprechen aus ihrer beruflichen Rolle.",
+              "en": "Both guests also open with numbers, which is what makes attribution the work here."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt die Zeit zwischen Beschluss und Einzug als entscheidende Zahl.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "b",
+            "beleg": "Weil zwischen dem Beschluss und dem Einzug im Schnitt neun Jahre liegen. Das ist die Zahl, die in jeder Debatte fehlt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Corinna Halbach antwortet damit auf die Frage, warum vom Bauen niemand etwas merkt.",
+              "en": "The moderator asks the question that prompts it; the figure and its interpretation are hers."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sagt, Neubau helfe den heute Suchenden nicht.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "c",
+            "beleg": "Neubau kostet in dieser Stadt vierzehn Euro den Quadratmeter, und wer heute eine Wohnung sucht, sucht für neun.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Ulf Pretzel begründet es mit dem Preisunterschied und stellt im nächsten Satz klar, dass es kein Argument gegen Bauen ist.",
+              "en": "Halbach also says building takes time — his point is about price, not about the calendar."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat leer stehende Wohnungen gezählt.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "c",
+            "beleg": "In Weidenbach stehen nach unserer Zählung über achthundert Wohnungen länger als ein Jahr leer",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Nach unserer Zählung“ weist die Zahl dem Mieterverein zu; die Stadtplanerin kommentiert sie nur.",
+              "en": "Halbach repeats the figure to argue about its size — repeating is not reporting."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person äußert sich zurückhaltend zu einer Deckelung der Mieten.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "b",
+            "beleg": "Da bin ich zurückhaltend, und das sage ich als jemand, der beruflich für bezahlbares Wohnen zuständig ist.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Stadtplanerin begründet ihre Zurückhaltung mit dem Rückgang des Angebots; der Mietervertreter widerspricht ihr danach.",
+              "en": "The one you would expect to be cautious about a rent cap is not the one who is."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person wirbt dafür, Planungen nicht als Kampf zu führen.",
+            "optionen": {
+              "a": "der Moderator",
+              "b": "die Stadtplanerin",
+              "c": "der Mietervertreter"
+            },
+            "loesung": "b",
+            "beleg": "Wir müssen aufhören, jede Planung als Kampf zu führen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Ihr Schlusssatz nennt die Klage gegen ein Neubaugebiet als Beispiel dafür, wem das schadet.",
+              "en": "She had already named Einsprüche as one reason half the projects stall, so the closing word follows from her own account."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "vortrag",
+        "anweisung": "Sie hören einen kurzen Vortrag über Straßennamen. Wählen Sie bei den Aufgaben 23 bis 30 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Vortragsreihe der Volkshochschule Weidenbach: „Wer steht an der Ecke?“ — Dr. Henrike Bausback.",
+        "sprecher": [
+          {
+            "rolle": "Vortragende",
+            "geschlecht": "f",
+            "beschreibung": "Dr. Henrike Bausback, Stadthistorikerin"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören einen kurzen Vortrag. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 60,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Guten Abend. Wir laufen täglich an Dutzenden Namen vorbei, ohne sie zu lesen. Dabei ist ein Straßenschild eines der wenigen Denkmäler, die eine Stadt sich täglich selbst vor Augen hält — und das billigste, das sie hat.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Beginnen wir mit dem Alter. Die ältesten Namen sind keine Ehrungen, sondern Wegbeschreibungen. Die Bachgasse führte zum Bach, in der Gerberstraße gerbte man Leder, das Sandtor lag im Sand. Solche Namen entstanden von unten, durch Gebrauch; niemand hat sie beschlossen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Das ändert sich im 19. Jahrhundert grundlegend. Städte wachsen schneller, als Gewohnheiten entstehen können, und Verwaltungen brauchen für Post und Steuern eindeutige Bezeichnungen. Ab da werden Namen vergeben, nicht mehr gefunden — und von diesem Moment an sagen sie mehr über die Vergebenden aus als über den Ort.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Damit sind wir bei dem, was mich eigentlich interessiert. Wer die Namen eines Viertels einmal unter die Lupe nehmen will, zählt am besten nach: Wie viele Straßen sind nach Frauen benannt? In den meisten deutschen Städten liegt der Anteil zwischen fünf und zehn Prozent.",
+            "pauseDanachSek": 0.6,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Interessant ist dabei weniger die Zahl selbst als ihre Verteilung: Wo Frauennamen vorkommen, häufen sie sich in Neubaugebieten am Rand. Die repräsentativen Straßen der Innenstädte waren längst vergeben, bevor jemand auf die Idee kam, das Verhältnis zu zählen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Umbenennungen sind der konfliktreichste Teil meines Fachs, und sie sind seltener, als die Aufregung vermuten lässt. Der häufigste Grund für eine Umbenennung ist bis heute kein politischer, sondern ein banaler: Zwei Orte werden zusammengelegt und haben plötzlich zwei Hauptstraßen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Wenn doch aus historischen Gründen umbenannt wird, ist der Widerstand fast nie inhaltlich. Ich habe Anhörungen erlebt, in denen niemand die Person verteidigt hat, um die es ging. Gestritten wurde über Briefköpfe, Ausweise und darüber, dass die eigene Adresse in keiner Karte mehr stimmt.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Das nehme ich ernst. Wer vierzig Jahre in derselben Straße wohnt, hat ein Recht darauf, dass eine Änderung ordentlich begleitet wird. In den Städten, die Umbenennungen mit Übergangsfristen und einer bezahlten Umstellung verbunden haben, verliefen die Verfahren merklich ruhiger.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Ein Wort noch zu den Kosten, weil sie in jeder Diskussion auftauchen. Eine Umbenennung kostet eine mittlere Stadt nach unseren Erhebungen zwischen fünfzehn- und vierzigtausend Euro, je nachdem, wie viele Adressen betroffen sind.",
+            "pauseDanachSek": 0.6,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Das ist einerseits nicht nichts, andererseits ungefähr der Preis von zwanzig Metern Radweg. Ich sage das nicht, um die Sorgen kleinzureden, sondern weil die Zahl in Debatten regelmäßig um ein Vielfaches zu hoch geschätzt wird.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Eine Beobachtung noch, die mich lange beschäftigt hat. Man könnte annehmen, ein Straßenname präge das Bild einer Person im Ort. Unsere Befragungen zeigen das Gegenteil: Die allermeisten Anwohnenden können zu dem Namen ihrer eigenen Straße nichts sagen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Ein Name wirkt also nicht, indem er erinnert, sondern indem er normalisiert. Er sagt nicht: Diese Person war wichtig. Er sagt: Über diese Person wird nicht mehr gesprochen. Genau deshalb halte ich die Zusatzschilder für das wirksamste Mittel überhaupt — zwei Zeilen unter dem Namen, die erklären, wer da steht.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Sie kosten wenig, sie nehmen niemandem die Adresse, und sie verwandeln ein Schild zurück in das, was es einmal war: eine Auskunft. Ich danke Ihnen.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "multiple_choice",
+            "frage": "Wie entstanden die ältesten Straßennamen?",
+            "optionen": {
+              "a": "Durch Beschlüsse der Stadtverwaltung.",
+              "b": "Durch den täglichen Gebrauch der Bewohner.",
+              "c": "Durch Ehrungen verdienter Personen."
+            },
+            "loesung": "b",
+            "beleg": "Solche Namen entstanden von unten, durch Gebrauch; niemand hat sie beschlossen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt die Entstehung und schließt einen Beschluss ausdrücklich aus.",
+              "en": "a and c are both explicitly denied — the first by the second half of the sentence, the second by „keine Ehrungen“ before it."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "multiple_choice",
+            "frage": "Was änderte sich im 19. Jahrhundert?",
+            "optionen": {
+              "a": "Namen wurden vergeben statt gefunden.",
+              "b": "Die Städte kehrten zu alten Namen zurück.",
+              "c": "Die Zahl der Straßen nahm ab."
+            },
+            "loesung": "a",
+            "beleg": "Ab da werden Namen vergeben, nicht mehr gefunden",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Rednerin nennt auch den Grund: Verwaltungen brauchten für Post und Steuern eindeutige Bezeichnungen.",
+              "en": "The consequence follows in the same sentence — from then on names say more about who gave them."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "multiple_choice",
+            "frage": "Wie hoch ist der Anteil der nach Frauen benannten Straßen meist?",
+            "optionen": {
+              "a": "Zwischen fünf und zehn Prozent.",
+              "b": "Etwa ein Viertel.",
+              "c": "In Neubaugebieten über die Hälfte."
+            },
+            "loesung": "a",
+            "beleg": "In den meisten deutschen Städten liegt der Anteil zwischen fünf und zehn Prozent.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Zahl steht direkt nach der Aufforderung, im eigenen Viertel zu zählen.",
+              "en": "New estates are where such names cluster, which is a statement about distribution, not about a share."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "multiple_choice",
+            "frage": "Was ist an der Verteilung dieser Namen auffällig?",
+            "optionen": {
+              "a": "Sie liegen vor allem an Hauptstraßen.",
+              "b": "Sie häufen sich in Neubaugebieten am Rand.",
+              "c": "Sie sind gleichmäßig über die Stadt verteilt."
+            },
+            "loesung": "b",
+            "beleg": "Wo Frauennamen vorkommen, häufen sie sich in Neubaugebieten am Rand.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Begründung folgt: Die repräsentativen Straßen der Innenstädte waren längst vergeben.",
+              "en": "a inverts it exactly — the central streets are the ones that had already been assigned."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Was ist der häufigste Grund für eine Umbenennung?",
+            "optionen": {
+              "a": "Politischer Druck aus der Bevölkerung.",
+              "b": "Die Zusammenlegung zweier Orte.",
+              "c": "Der Wunsch, mehr Frauen zu ehren."
+            },
+            "loesung": "b",
+            "beleg": "Der häufigste Grund für eine Umbenennung ist bis heute kein politischer, sondern ein banaler: Zwei Orte werden zusammengelegt und haben plötzlich zwei Hauptstraßen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Kein politischer, sondern ein banaler“ schließt a aus, der Doppelpunkt nennt den tatsächlichen.",
+              "en": "The whole lecture is about politics of naming, which is what makes a sound obviously right."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Worum wird bei historisch begründeten Umbenennungen meist gestritten?",
+            "optionen": {
+              "a": "Um die Person, die den Namen gab.",
+              "b": "Um praktische Folgen wie Adressen und Papiere.",
+              "c": "Um die Kosten für die neuen Schilder."
+            },
+            "loesung": "b",
+            "beleg": "Gestritten wurde über Briefköpfe, Ausweise und darüber, dass die eigene Adresse in keiner Karte mehr stimmt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor sagt ausdrücklich, dass niemand die Person verteidigt hat.",
+              "en": "a is what everyone assumes the argument is about, and she reports it explicitly is not."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Was ergaben die Befragungen unter Anwohnenden?",
+            "optionen": {
+              "a": "Die meisten wissen nichts über den Namen ihrer Straße.",
+              "b": "Die meisten sind stolz auf den Namen ihrer Straße.",
+              "c": "Die meisten wünschen sich eine Umbenennung."
+            },
+            "loesung": "a",
+            "beleg": "Die allermeisten Anwohnenden können zu dem Namen ihrer eigenen Straße nichts sagen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Ergebnis widerspricht der Annahme, ein Name präge das Bild einer Person im Ort.",
+              "en": "„Man könnte annehmen …“ sets up the expectation, and „das Gegenteil“ knocks it down."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Welches Mittel hält die Rednerin für das wirksamste?",
+            "optionen": {
+              "a": "Häufigere Umbenennungen.",
+              "b": "Erklärende Zusatzschilder unter dem Namen.",
+              "c": "Eine Karte mit allen Namen im Internet."
+            },
+            "loesung": "b",
+            "beleg": "Genau deshalb halte ich die Zusatzschilder für das wirksamste Mittel überhaupt — zwei Zeilen unter dem Namen, die erklären, wer da steht.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Schluss begründet es: Sie kosten wenig und nehmen niemandem die Adresse.",
+              "en": "Her whole account of renaming disputes is what makes a the answer she is arguing against."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 75,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "forumsbeitrag",
+        "situation": "In einem Onlineforum für Ihre Stadt wird darüber diskutiert, ob Parkplätze am Straßenrand in Radwege umgewandelt werden sollen. Sie lesen den folgenden Beitrag und möchten darauf antworten.",
+        "impuls": "Ostwall41: Jetzt sollen also wieder Parkplätze weg. Ich fahre selbst gern Rad, aber langsam wird es absurd. Wer sein Kind zum Sport bringt, wer schwer trägt, wer nachts aus der Schicht kommt — für diese Leute gibt es keine Alternative, und genau sie zahlen die Rechnung. Radwege baut man bitte dort, wo Platz ist, und nicht, indem man anderen etwas wegnimmt. Sonst haben wir am Ende leere Radwege und Leute, die zwanzig Minuten um den Block kreisen.",
+        "aufgabenstellung": "Schreiben Sie einen Beitrag für dieses Forum. Gehen Sie auf alle vier Leitpunkte ein, ordnen Sie Ihren Text sinnvoll und schreiben Sie mindestens 150 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie selbst davon halten, und begründen Sie Ihre Meinung.",
+          "Gehen Sie auf ein Argument von Ostwall41 ein.",
+          "Beschreiben Sie, wie der Platz auf den Straßen in Ihrem Heimatland verteilt ist.",
+          "Machen Sie einen Vorschlag, wie man beide Seiten berücksichtigen könnte."
+        ],
+        "anrede": "Hallo zusammen",
+        "woerter": 150,
+        "zeitMinuten": 50,
+        "punkte": 60,
+        "redemittel": [
+          "Ich lese hier schon eine Weile mit und möchte gern etwas ergänzen.",
+          "Ostwall41 schreibt, dass … — diesen Punkt halte ich für den stärksten in seinem Beitrag, allerdings …",
+          "Man muss dabei zwei Gruppen auseinanderhalten: … und …",
+          "Bei uns ist der Straßenraum ganz anders aufgeteilt: …",
+          "Aus meiner Sicht spricht wenig dagegen, zunächst … und erst danach …",
+          "Ich schlage deshalb vor, … Damit wäre beiden Seiten geholfen.",
+          "Zusammenfassend halte ich es für falsch, die Frage als Entweder-oder zu stellen."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo zusammen,\n\nich bin für mehr Radwege, aber ich verstehe auch die Kritik.\n\nOstwall41 schreibt, dass manche Leute auf das Auto angewiesen sind. Das stimmt. Ich kenne selbst eine Familie mit drei Kindern, die ohne Auto nicht zurechtkommt. Trotzdem finde ich das kein Argument gegen Radwege, sondern nur gegen schlechte Planung. Man muss eben schauen, welche Parkplätze wirklich gebraucht werden.\n\nIn meinem Heimatland ist das ganz anders. Dort gehört die Straße dem Auto, und wer Rad fährt, fährt auf der Fahrbahn zwischen Lastwagen. Radwege gibt es fast nur in Parks. Deshalb fahren dort auch nur wenige Leute mit dem Rad, obwohl die Entfernungen oft kurz sind.\n\nMein Vorschlag ist ein Kompromiss: Man könnte zuerst nur die Parkplätze umwandeln, die tagsüber leer stehen, und die Plätze in der Nähe von Schulen und Arztpraxen behalten. Außerdem sollte man in der ersten Zeit prüfen, ob die neuen Radwege überhaupt benutzt werden.\n\nViele Grüße\nRavi",
+            "kommentar": "Alle vier Leitpunkte sind bearbeitet, die Position ist klar und der Vorschlag greift die Kritik auf. Auf „ausreichend“ hält den Text die Sprache: überwiegend kurze Hauptsätze, wenige Konnektoren („aber“, „trotzdem“, „deshalb“), und die Auseinandersetzung mit Ostwall41 bleibt bei „das stimmt“ stehen, statt sein Argument weiterzudrehen."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo zusammen,\n\nan Ostwall41s Beitrag finde ich einen Punkt sehr stark und einen Schluss zu schnell.\n\nStark ist die Beobachtung, dass es Menschen gibt, für die es keine Alternative gibt — die Nachtschicht, das schwere Gepäck, das Kind mit dem Kontrabass. Wer das wegwischt, hat die Debatte schon verloren. Nur folgt daraus nicht, dass Parkplätze unantastbar sind. Es folgt, dass man unterscheiden muss, welche Parkplätze für wen da sind. Ein Stellplatz, der werktags von neun bis siebzehn Uhr leer steht, ist kein Argument gegen den Radweg, sondern ein Beleg dafür, dass die Fläche schlecht genutzt wird.\n\nIn meinem Heimatland stellt sich die Frage gar nicht erst: Dort gehört die Fahrbahn dem Auto, Radfahrende teilen sie sich mit Lastwagen, und entsprechend fährt kaum jemand Rad. Man sieht dort gut, dass die Aufteilung des Platzes das Verhalten steuert — und nicht umgekehrt.\n\nDeshalb mein Vorschlag: eine Zählung vor der Entscheidung, Umwandlung nur dort, wo die Auslastung unter fünfzig Prozent liegt, und im Gegenzug geschützte Kurzzeitplätze für Lieferungen und für Menschen mit Behinderung. Das kostet wenig und nimmt dem Streit die Schärfe.\n\nViele Grüße\nRavi",
+            "kommentar": "Deutlich über dem Mindestmaß, ohne zu schwätzen. Der Beitrag trennt sauber zwischen dem, was am Gegenargument stimmt, und dem Schluss, der daraus nicht folgt, und liefert dafür ein Kriterium statt einer Meinung („Auslastung unter fünfzig Prozent“). Sprachlich fallen die Konnektoren „nur folgt daraus nicht“, „im Gegenzug“, „entsprechend“ sowie mehrere Relativ- und Infinitivsätze ins Gewicht."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "nachricht_formell",
+        "situation": "Sie studieren an der Hochschule Nordwiese und haben eine Praktikumsstelle gefunden. Der Betrieb möchte Ihr Praktikum jedoch in zwei Abschnitte teilen — acht Wochen im Sommer und sechs Wochen im Winter. In der Praktikumsordnung steht, dass eine Aufteilung zulässig ist, wenn kein Abschnitt kürzer als sechs Wochen ist.",
+        "aufgabenstellung": "Schreiben Sie eine Nachricht an das Praktikumsbüro, Frau Dr. Ostermann. Achten Sie auf eine angemessene Anrede und einen passenden Schluss und schreiben Sie mindestens 100 Wörter.",
+        "leitpunkte": [
+          "Nennen Sie den Grund für Ihr Schreiben.",
+          "Erklären Sie, warum der Betrieb das Praktikum teilen möchte.",
+          "Fragen Sie, ob die geplante Aufteilung anerkannt wird.",
+          "Bitten Sie um eine Antwort, bevor Sie den Vertrag unterschreiben."
+        ],
+        "anrede": "Sehr geehrte Frau Dr. Ostermann",
+        "woerter": 100,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "ich studiere im fünften Semester und wende mich mit einer Frage zum Pflichtpraktikum an Sie.",
+          "Der Betrieb hat mir vorgeschlagen, das Praktikum in zwei Abschnitte zu teilen.",
+          "Der Grund dafür ist, dass …",
+          "Der Praktikumsordnung entnehme ich, dass eine Aufteilung zulässig ist, sofern …",
+          "Nun wäre meine Frage, ob die geplante Aufteilung anerkannt würde.",
+          "Da ich den Vertrag bis … unterschreiben soll, wäre ich Ihnen für eine Antwort bis … sehr dankbar."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Frau Dr. Ostermann,\n\nich studiere im fünften Semester und habe eine Frage zu meinem Pflichtpraktikum.\n\nIch habe eine Stelle bei der Firma Reuter gefunden. Der Betrieb möchte das Praktikum aber teilen: acht Wochen im Sommer und sechs Wochen im Winter. Der Grund ist, dass die Firma im Herbst sehr wenig zu tun hat und ich dann nichts lernen würde.\n\nIn der Praktikumsordnung habe ich gelesen, dass eine Aufteilung möglich ist, wenn kein Teil kürzer als sechs Wochen ist. Das ist bei mir so. Wird die Aufteilung also anerkannt?\n\nIch soll den Vertrag am 15. Mai unterschreiben. Deshalb bitte ich Sie um eine Antwort vorher.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle vier Punkte kommen vor, und der Bezug auf die Ordnung zeigt, dass sie gelesen wurde. Auf „ausreichend“ hält den Text die einfache Syntax: fast nur Hauptsätze, die direkte Frage „Wird die Aufteilung also anerkannt?“ statt einer höflichen Konjunktivform, und ein knapper Schluss ohne Begründung der Frist."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Frau Dr. Ostermann,\n\nich studiere im fünften Semester und wende mich mit einer Frage zum Pflichtpraktikum an Sie.\n\nEine Stelle bei der Firma Reuter habe ich bereits zugesagt bekommen. Der Betrieb schlägt allerdings vor, das Praktikum in zwei Abschnitte zu teilen: acht Wochen von Juli bis August und sechs Wochen im Januar und Februar. Begründet wird das damit, dass im Herbst kaum Aufträge anliegen und ich in dieser Zeit wenig lernen könnte.\n\nDer Praktikumsordnung entnehme ich, dass eine Aufteilung zulässig ist, sofern kein Abschnitt kürzer als sechs Wochen ist. Diese Bedingung wäre erfüllt. Nun wäre meine Frage, ob die geplante Aufteilung in dieser Form anerkannt würde und ob sich die Frist für den Bericht dadurch verschiebt.\n\nDa ich den Vertrag bis zum 15. Mai unterschreiben soll, wäre ich Ihnen für eine kurze Rückmeldung bis zum 10. Mai sehr dankbar — eine nachträgliche Anerkennung ist ja ausgeschlossen.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Durchgehend halbformelles Register. Die Frage steht im Konjunktiv II („wäre erfüllt“, „anerkannt würde“), es wird eine zweite, mitgedachte Frage nach der Berichtsfrist gestellt, und die Dringlichkeit wird mit einem Satz aus der Ordnung selbst begründet („eine nachträgliche Anerkennung ist ja ausgeschlossen“). Auffällig sind außerdem das Passiv („Begründet wird das damit“) und die Umstellungen im Vorfeld."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "vortrag",
+        "titel": "Einen kurzen Vortrag halten",
+        "anweisung": "Wählen Sie eines der beiden Themen und halten Sie dazu einen Vortrag von etwa vier Minuten. Gliedern Sie ihn in Einleitung, Hauptteil und Schluss. Ihre Gesprächspartnerin stellt Ihnen anschließend Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 50,
+        "fragen": [
+          "Sie haben Ihre eigene Erfahrung geschildert — wie wäre es für jemanden auf dem Land?",
+          "Was spricht aus Ihrer Sicht am stärksten gegen Ihre eigene Position?",
+          "Wenn Sie eine Sache sofort ändern könnten, ohne auf Kosten zu achten — welche wäre das?"
+        ],
+        "themen": [
+          {
+            "titel": "Sollten Nachrichten für Jugendliche ein eigenes Schulfach werden?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Ich möchte heute über die Frage sprechen, ob …",
+              "Zunächst beschreibe ich kurz, wie Jugendliche sich heute informieren.",
+              "Ein Beispiel aus meinem eigenen Umfeld ist …",
+              "Für ein eigenes Fach spricht vor allem, dass …",
+              "Dagegen wird eingewendet, der Stundenplan sei ohnehin voll.",
+              "Wenn man beide Seiten abwägt, überwiegt für mich …",
+              "Ich komme damit zum Schluss und fasse zusammen: …"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob Nachrichten ein eigenes Schulfach werden sollten. Das Thema interessiert mich, weil ich zwei Neffen im Alter von dreizehn und fünfzehn habe und regelmäßig staune, woher sie ihre Informationen beziehen.\n\nZur Lage: Beide lesen keine Zeitung und sehen keine Nachrichtensendung. Sie erfahren, was passiert, über kurze Videos, und zwar ohne Datum, ohne Quelle und ohne erkennbaren Unterschied zwischen einer Meldung und einer Meinung. Als ich meinen Neffen einmal gefragt habe, woher eine bestimmte Zahl stammt, war die Antwort: aus dem Internet. Das war ehrlich gemeint und genau das Problem.\n\nFür ein eigenes Fach spricht, dass diese Fähigkeit heute so grundlegend ist wie Lesen und Rechnen. Wer eine Quelle nicht prüfen kann, kann auch keine begründete Meinung bilden. Dagegen wird eingewendet, der Stundenplan sei voll, und das nehme ich ernst — ein neues Fach bedeutet, dass ein anderes weniger Zeit bekommt.\n\nWenn ich abwäge, komme ich zu folgendem Schluss: Ein eigenes Fach halte ich für falsch, eine feste Stunde pro Woche in einem bestehenden Fach dagegen für richtig. Es geht nicht darum, mehr zu lernen, sondern darum, dass sich überhaupt jemand zuständig fühlt. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Ist ein eigenes Auto in der Stadt noch zeitgemäß?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Mein Thema lautet … Ich habe es gewählt, weil ich selbst vor dieser Entscheidung stand.",
+              "Man muss dabei zwei Dinge auseinanderhalten: … und …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Der größte Vorteil liegt für mich darin, dass …",
+              "Problematisch finde ich allerdings, dass …",
+              "Entscheidend ist meiner Meinung nach nicht ob, sondern wo …",
+              "Abschließend möchte ich festhalten: …"
+            ],
+            "musterantwort": "Mein Thema lautet: Ist ein eigenes Auto in der Stadt noch zeitgemäß? Ich habe es gewählt, weil ich vor zwei Jahren selbst vor dieser Entscheidung stand und mich dagegen entschieden habe.\n\nMan muss dabei zwei Dinge auseinanderhalten. Das eine ist die Frage, ob man ein Auto braucht; das andere, ob man eines besitzen muss. Ich brauche etwa achtmal im Jahr eines, für Umzüge, für Besuche auf dem Land, für den Baumarkt. Als ich zusammengerechnet habe, was mich ein eigenes Auto im Jahr gekostet hätte, und das mit acht Mieten verglichen habe, war die Rechnung eindeutig.\n\nDer größte Vorteil liegt für mich nicht im Geld, sondern im Platz: Der Stellplatz vor meinem Haus ist heute ein Fahrradbügel für sechs Räder. Problematisch finde ich allerdings, dass diese Rechnung nur in der Stadt aufgeht. Meine Schwester wohnt in einem Dorf mit drei Bussen am Tag, und für sie wäre dieselbe Entscheidung unvernünftig.\n\nAbschließend möchte ich festhalten: Entscheidend ist nicht ob, sondern wo. In der Innenstadt ist das eigene Auto für die meisten Menschen inzwischen ein teures Gewohnheitsrecht — auf dem Land ist es weiterhin eine Notwendigkeit. Vielen Dank."
+          }
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihren Vortrag. Eine Frage dazu: Sie haben Ihre eigene Erfahrung geschildert — wie wäre es denn für jemanden, der auf dem Land lebt?",
+            "wartenSek": 45,
+            "hinweis": "Antworten Sie in zwei bis drei Sätzen und räumen Sie ein, wo Ihre Position nicht trägt."
+          },
+          {
+            "text": "Das leuchtet mir ein. Und was spricht aus Ihrer Sicht eigentlich am stärksten gegen Ihre eigene Position?",
+            "wartenSek": 45,
+            "hinweis": "Nennen Sie ein echtes Gegenargument — nicht das schwächste, das Ihnen einfällt."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "diskussion",
+        "titel": "Eine Debatte führen",
+        "anweisung": "Diskutieren Sie mit Ihrer Gesprächspartnerin über die folgende Frage. Tauschen Sie Argumente aus, gehen Sie auf die Gegenseite ein und kommen Sie am Ende zu einem gemeinsamen Fazit.",
+        "dauerMinuten": 5,
+        "punkte": 50,
+        "situation": "Sollte in allen Wohngebieten grundsätzlich Tempo 30 gelten?",
+        "planungspunkte": [
+          "Wer hätte Vorteile, wer Nachteile?",
+          "Was bedeutet es für Busse, Rettungsdienste und Lieferverkehr?",
+          "Lässt sich eine solche Regel überhaupt durchsetzen?",
+          "Welche Alternative wäre denkbar, wenn es keine allgemeine Regel gibt?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Ich fange einmal an, und ich bin dafür — allerdings mit einem Vorbehalt. Der Lärm sinkt hörbar, Unfälle gehen zurück, das ist alles gut belegt. Nur frage ich mich, ob wir uns nicht etwas vormachen: Wo niemand kontrolliert, fährt am Ende jeder so schnell wie vorher.",
+            "wartenSek": 40,
+            "hinweis": "Gehen Sie zuerst auf ihren Vorbehalt ein: Ist die Durchsetzung wirklich das Problem?"
+          },
+          {
+            "text": "Gut, das ist ein Punkt. Aber sehen Sie, es trifft ja nicht nur Autos. Ein Bus, der überall dreißig fährt, braucht länger, und dann steigen die Leute erst recht ins Auto. Das wäre das Gegenteil von dem, was wir wollen.",
+            "wartenSek": 40,
+            "hinweis": "Stimmen Sie zu oder widersprechen Sie — und machen Sie einen Vorschlag, der beides berücksichtigt."
+          },
+          {
+            "text": "Über Ausnahmen könnte man reden, ja. Ehrlich gesagt frage ich mich aber, ob eine Regel für alle überhaupt sinnvoll ist. Eine ruhige Sackgasse und eine vierspurige Straße sind nicht dasselbe.",
+            "wartenSek": 40,
+            "hinweis": "Ein starkes Argument. Geben Sie zu, was daran stimmt, und ziehen Sie eine Folgerung daraus."
+          },
+          {
+            "text": "Da sind wir uns näher, als es am Anfang aussah. Wollen wir das zusammenfassen? Sagen Sie doch, worauf wir uns einigen könnten.",
+            "wartenSek": 45,
+            "hinweis": "Fassen Sie beide Positionen zusammen und formulieren Sie ein gemeinsames Fazit."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "die Aussprache",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Aussprachen",
+      "bedeutung_de": "die Art, wie jemand die Laute einer Sprache bildet",
+      "bedeutung_en": "pronunciation, accent",
+      "beispiel": "in dem die Aussprache eine Rolle gespielt hätte",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "der Rückgang",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Rückgänge",
+      "bedeutung_de": "das Weniger-Werden einer Menge",
+      "bedeutung_en": "decline, decrease",
+      "beispiel": "Der Rückgang ist keine Naturgewalt, er hat eine Ursache.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Schönfärberei",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "das Darstellen von etwas als besser, als es ist",
+      "bedeutung_en": "glossing over, whitewashing",
+      "beispiel": "und ich sage das ohne jede Schönfärberei",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "widerlegen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "widerlegt",
+        "praeteritum": "widerlegte",
+        "perfekt": "hat widerlegt"
+      },
+      "bedeutung_de": "beweisen, dass etwas nicht stimmt",
+      "bedeutung_en": "to refute, to disprove",
+      "beispiel": "Meine eigene Vermutung war damit widerlegt",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "vertrauenswürdig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man der Person glauben kann",
+      "bedeutung_en": "trustworthy",
+      "beispiel": "Manche werden als warm und vertrauenswürdig gehört",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Reifen",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Reifen",
+      "bedeutung_de": "der Ring aus Gummi um ein Rad",
+      "bedeutung_en": "tyre",
+      "beispiel": "eine Kette und der luftgefüllte Reifen zusammenkamen",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "das Vermögen",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Vermögen",
+      "bedeutung_de": "der gesamte Besitz einer Person",
+      "bedeutung_en": "wealth, assets",
+      "beispiel": "damit war zum ersten Mal ein Verkehrsmittel nicht an Vermögen gebunden",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "empört",
+      "wortart": "adjektiv",
+      "bedeutung_de": "voller Ärger über etwas, das man für falsch hält",
+      "bedeutung_en": "outraged, indignant",
+      "beispiel": "Zeitgenössische Berichte beschreiben empört",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Belag",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Beläge",
+      "bedeutung_de": "die oberste Schicht einer Straße",
+      "bedeutung_en": "road surface",
+      "beispiel": "Radfahrervereine forderten glatte Beläge",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Eingabe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Eingaben",
+      "bedeutung_de": "ein schriftlicher Antrag an eine Behörde",
+      "bedeutung_en": "petition, formal submission",
+      "beispiel": "gingen die ersten Asphaltstrecken auf ihre Eingaben zurück",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "kippen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "kippt",
+        "praeteritum": "kippte",
+        "perfekt": "ist gekippt"
+      },
+      "bedeutung_de": "plötzlich in die andere Richtung umschlagen",
+      "bedeutung_en": "to tip over, to swing the other way",
+      "beispiel": "Dann kippte das Verhältnis.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Gleichgültigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "das Fehlen jedes Interesses",
+      "bedeutung_en": "indifference",
+      "beispiel": "den Leuten Gleichgültigkeit vorzuwerfen",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "vorwerfen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "wirft vor",
+        "praeteritum": "warf vor",
+        "perfekt": "hat vorgeworfen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "jemandem sagen, er habe etwas falsch gemacht",
+      "bedeutung_en": "to accuse, to reproach",
+      "beispiel": "Der erste Reflex ist, den Leuten Gleichgültigkeit vorzuwerfen",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Ohnmacht",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "das Gefühl, nichts ausrichten zu können",
+      "bedeutung_en": "powerlessness",
+      "beispiel": "Ohnmacht ist in ihren Zahlen der stärkste Einzelfaktor",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Einordnung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Einordnungen",
+      "bedeutung_de": "die Erklärung, wie eine Nachricht zu verstehen ist",
+      "bedeutung_en": "contextualisation",
+      "beispiel": "feste Zeiten statt ständiger Meldungen, Einordnung statt Eilmeldung",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Verfechter",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Verfechter",
+      "bedeutung_de": "eine Person, die eine Sache entschieden vertritt",
+      "bedeutung_en": "advocate, proponent",
+      "beispiel": "als die Verfechter dieses Ansatzes gern behaupten",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Wissensstand",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "—",
+      "bedeutung_de": "das, was jemand tatsächlich weiß",
+      "bedeutung_en": "level of knowledge",
+      "beispiel": "bei objektiv gleichem Wissensstand",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Instandhaltung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "die laufenden Arbeiten, damit etwas in Ordnung bleibt",
+      "bedeutung_en": "maintenance",
+      "beispiel": "aber Instandhaltung, Rücklagen und Kaufnebenkosten tauchen nicht auf",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Rücklage",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Rücklagen",
+      "bedeutung_de": "Geld, das man für spätere Ausgaben zurücklegt",
+      "bedeutung_en": "reserve, savings set aside",
+      "beispiel": "Instandhaltung, Rücklagen und Kaufnebenkosten",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "das Eigenkapital",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "—",
+      "bedeutung_de": "das eigene Geld, das man beim Kauf einbringt",
+      "bedeutung_en": "own capital, deposit",
+      "beispiel": "aber das Eigenkapital, das die Bank sehen will",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "erben",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "erbt",
+        "praeteritum": "erbte",
+        "perfekt": "hat geerbt"
+      },
+      "bedeutung_de": "nach dem Tod einer Person deren Besitz bekommen",
+      "bedeutung_en": "to inherit",
+      "beispiel": "Wer erbt, kauft; wer nicht erbt, mietet.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "pflegeleicht",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man wenig Arbeit damit hat",
+      "bedeutung_en": "easy to look after",
+      "beispiel": "pflegeleicht ist etwas anderes",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Streuung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Streuungen",
+      "bedeutung_de": "das Verteilen auf mehrere Anlagen, um Risiko zu senken",
+      "bedeutung_en": "diversification, spread",
+      "beispiel": "Streuung sieht anders aus.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "antreten",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "tritt an",
+        "praeteritum": "trat an",
+        "perfekt": "hat angetreten",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "mit etwas beginnen, etwas aufnehmen",
+      "bedeutung_en": "to take up, to begin (a post, a trip)",
+      "beispiel": "kann erst nach bestandener Zwischenprüfung angetreten werden",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "anerkennen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "erkennt an",
+        "praeteritum": "erkannte an",
+        "perfekt": "hat anerkannt",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "offiziell als gültig gelten lassen",
+      "bedeutung_en": "to recognise, to accept as valid",
+      "beispiel": "Tätigkeiten im eigenen Familienbetrieb werden nicht anerkannt.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "versäumen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "versäumt",
+        "praeteritum": "versäumte",
+        "perfekt": "hat versäumt"
+      },
+      "bedeutung_de": "eine Frist oder Gelegenheit verpassen",
+      "bedeutung_en": "to miss (a deadline)",
+      "beispiel": "Wer die Frist ohne wichtigen Grund versäumt, muss das Praktikum wiederholen.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Gültigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "der Zustand, dass etwas noch gilt",
+      "bedeutung_en": "validity",
+      "beispiel": "Fahrkarten behalten selbstverständlich ihre Gültigkeit.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Umleitung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Umleitungen",
+      "bedeutung_de": "der Weg um eine gesperrte Strecke herum",
+      "bedeutung_en": "diversion, detour",
+      "beispiel": "die Umleitung ist ausgeschildert",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Varietät",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Varietäten",
+      "bedeutung_de": "eine Form einer Sprache, etwa Dialekt oder Standard",
+      "bedeutung_en": "language variety",
+      "beispiel": "Kinder, die zwei Varietäten sicher beherrschen",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Sprachwandel",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "—",
+      "bedeutung_de": "die Veränderung einer Sprache über die Zeit",
+      "bedeutung_en": "language change",
+      "beispiel": "Nur ist Sprachwandel kein Verfall, sondern der Normalzustand.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Verfall",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "—",
+      "bedeutung_de": "das allmähliche Schlechterwerden",
+      "bedeutung_en": "decay, decline",
+      "beispiel": "Sprachwandel kein Verfall",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "abgewöhnen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "gewöhnt ab",
+        "praeteritum": "gewöhnte ab",
+        "perfekt": "hat abgewöhnt"
+      },
+      "bedeutung_de": "dafür sorgen, dass jemand etwas nicht mehr tut",
+      "bedeutung_en": "to break someone of a habit",
+      "beispiel": "in der Schule das Standarddeutsch abgewöhnt wird",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Bestand",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Bestände",
+      "bedeutung_de": "das, was bereits vorhanden ist",
+      "bedeutung_en": "existing stock",
+      "beispiel": "Der wirksamste Hebel ist der Bestand, nicht der Neubau.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Hebel",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Hebel",
+      "bedeutung_de": "der Punkt, an dem man mit wenig Aufwand viel bewirkt",
+      "bedeutung_en": "lever, point of leverage",
+      "beispiel": "Der wirksamste Hebel ist der Bestand",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Einspruch",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Einsprüche",
+      "bedeutung_de": "der förmliche Widerspruch gegen eine Entscheidung",
+      "bedeutung_en": "objection, formal appeal",
+      "beispiel": "Der Rest hängt an Einsprüchen, an fehlenden Fachleuten und an Zinsen",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Erbengemeinschaft",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Erbengemeinschaften",
+      "bedeutung_de": "mehrere Personen, die gemeinsam geerbt haben",
+      "bedeutung_en": "community of heirs",
+      "beispiel": "viele davon in Erbengemeinschaften, die sich nicht einigen",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Umbenennung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Umbenennungen",
+      "bedeutung_de": "das Ändern eines Namens",
+      "bedeutung_en": "renaming",
+      "beispiel": "Umbenennungen sind der konfliktreichste Teil meines Fachs",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "normalisieren",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "normalisiert",
+        "praeteritum": "normalisierte",
+        "perfekt": "hat normalisiert"
+      },
+      "bedeutung_de": "etwas als selbstverständlich erscheinen lassen",
+      "bedeutung_en": "to normalise",
+      "beispiel": "sondern indem er normalisiert",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Übergangsfrist",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Übergangsfristen",
+      "bedeutung_de": "die Zeit, in der die alte und die neue Regel gelten",
+      "bedeutung_en": "transitional period",
+      "beispiel": "die Umbenennungen mit Übergangsfristen und einer bezahlten Umstellung verbunden haben",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Auslastung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Auslastungen",
+      "bedeutung_de": "wie stark etwas tatsächlich genutzt wird",
+      "bedeutung_en": "utilisation, occupancy",
+      "beispiel": "Umwandlung nur dort, wo die Auslastung unter fünfzig Prozent liegt",
+      "fundstelle": "Schreiben Teil 1",
+      "niveau": "B2"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "aus dem Weg gehen",
+      "typ": "redewendung",
+      "bedeutung_de": "etwas oder jemandem bewusst ausweichen",
+      "bedeutung_en": "to steer clear of, to avoid",
+      "beispiel": "will Nachrichten inzwischen gezielt aus dem Weg gehen",
+      "fundstelle": "Lesen Teil 3"
+    },
+    {
+      "wendung": "auf lange Sicht",
+      "typ": "kollokation",
+      "bedeutung_de": "über einen längeren Zeitraum betrachtet",
+      "bedeutung_en": "in the long run",
+      "beispiel": "Auf lange Sicht ja, das bestreitet bei uns niemand.",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "ins Gewicht fallen",
+      "typ": "redewendung",
+      "bedeutung_de": "eine spürbare Rolle spielen",
+      "bedeutung_en": "to count for something, to matter",
+      "beispiel": "in einer Bilanz über zehn Jahre würde das kaum ins Gewicht fallen",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "unter die Lupe nehmen",
+      "typ": "redewendung",
+      "bedeutung_de": "etwas genau untersuchen",
+      "bedeutung_en": "to examine closely, to scrutinise",
+      "beispiel": "Wer die Namen eines Viertels einmal unter die Lupe nehmen will",
+      "fundstelle": "Hören Teil 4"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Vergleiche: als, wie und der doppelte Vergleich",
+      "erklaerung_de": "„wie“ steht bei Gleichheit, „als“ beim Unterschied und nach dem Komparativ. Verneinte Vergleiche kombinieren beides: „nicht mehr wie X, aber auch nicht wie Y“ heißt, dass die Person weder dem einen noch dem anderen gleicht. Wer hier „als“ und „wie“ verwechselt, dreht die Aussage um.",
+      "erklaerung_en": "The rule is simple — „wie“ for sameness, „als“ for difference — but negated comparisons stack them, and that is where B2 texts hide their meaning. Read the whole chain before deciding what is being compared with what.",
+      "belegSatz": "Ein junger Mensch aus Köln spricht heute nicht mehr wie sein Großvater, aber auch nicht wie die Tagesschau.",
+      "fundstelle": "Hören Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "„als“ oder „wie“? Der Neubau ist teurer ___ der Altbau.",
+          "loesung": "als",
+          "hinweis": "Nach dem Komparativ steht „als“."
+        },
+        {
+          "aufgabe": "„als“ oder „wie“? Die Miete ist genauso hoch ___ vor zwei Jahren.",
+          "loesung": "wie",
+          "hinweis": "„genauso … wie“ drückt Gleichheit aus."
+        },
+        {
+          "aufgabe": "Was bedeutet der Belegsatz? Spricht die Person Dialekt oder Standarddeutsch?",
+          "loesung": "Weder noch — sie spricht eine dritte Form zwischen beidem.",
+          "hinweis": "Zwei Verneinungen, zwei ausgeschlossene Möglichkeiten."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Irreale Bedingung ohne „wenn“: mit „ohne“ und Konjunktiv II",
+      "erklaerung_de": "Eine Bedingung muss nicht als wenn-Satz auftreten. „Ohne + Nomen“ leistet dasselbe in vier Wörtern, und der Konjunktiv II im Hauptsatz zeigt, dass die Bedingung nicht zutrifft. Auflösen lässt sich das immer als wenn-Satz mit Verneinung.",
+      "erklaerung_en": "Compact and very common in argumentative writing. „Ohne X gäbe es Y nicht“ means X exists and is why Y exists. The Konjunktiv II is the only signal that you are reading a hypothetical, so it is worth spotting fast.",
+      "belegSatz": "Ohne die Radfahrer gäbe es die befestigte Landstraße in ihrer heutigen Form vermutlich später.",
+      "fundstelle": "Lesen Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Lösen Sie auf: „Ohne den Zuschuss wäre der Kurs teurer.“ — mit „wenn“.",
+          "loesung": "Wenn es den Zuschuss nicht gäbe, wäre der Kurs teurer.",
+          "hinweis": "„ohne“ enthält die Verneinung, der wenn-Satz muss sie ausschreiben."
+        },
+        {
+          "aufgabe": "Verkürzen Sie: „Wenn es die Vereine nicht gäbe, hätte niemand die Halle geöffnet.“",
+          "loesung": "Ohne die Vereine hätte niemand die Halle geöffnet.",
+          "hinweis": "Nomen statt Nebensatz, Konjunktiv II bleibt."
+        },
+        {
+          "aufgabe": "Trifft die Bedingung zu? „Ohne die Radfahrer gäbe es die Landstraße später.“",
+          "loesung": "Es gab die Radfahrer — deshalb kam die Landstraße früher.",
+          "hinweis": "Der Konjunktiv beschreibt, was nicht eingetreten ist."
+        }
+      ]
+    },
+    {
+      "phaenomen": "„sich lassen“ als Passiversatz",
+      "erklaerung_de": "„etwas lässt sich machen“ heißt „etwas kann gemacht werden“. Die Form ist kürzer als das Passiv mit Modalverb und klingt weniger amtlich, weshalb sie in Berichten und Gesprächen häufig ist. Im Konjunktiv II („ließe sich“) wird daraus ein Vorschlag.",
+      "erklaerung_en": "One of three ways German avoids a full modal passive — alongside „sein + zu“ and adjectives in -bar. Recognise it and a dense sentence becomes simple: subject + lässt sich + infinitive = can be done.",
+      "belegSatz": "Beides ließe sich mit vorhandenen Mitteln angehen, sofort, ohne einen einzigen Bagger.",
+      "fundstelle": "Hören Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um: „Das Problem kann schnell gelöst werden.“ — mit „sich lassen“.",
+          "loesung": "Das Problem lässt sich schnell lösen.",
+          "hinweis": "lassen + sich + Infinitiv."
+        },
+        {
+          "aufgabe": "Formen Sie um: „Die Zahlen lassen sich kaum vergleichen.“ — mit „können“.",
+          "loesung": "Die Zahlen können kaum verglichen werden.",
+          "hinweis": "Passiv mit Modalverb: Partizip II + werden."
+        },
+        {
+          "aufgabe": "Vorschlag oder Feststellung? „Beides ließe sich angehen.“",
+          "loesung": "Vorschlag — der Konjunktiv II macht daraus eine Anregung, keine Tatsache.",
+          "hinweis": "„ließe“ statt „lässt“ ist der ganze Unterschied."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Die da-Wörter: dagegen, dafür, darauf",
+      "erklaerung_de": "Steht nach einem Verb mit fester Präposition kein Nomen, sondern ein Nebensatz oder ein Infinitiv, braucht es das Präpositionaladverb: da + Präposition, mit eingeschobenem r vor Vokal (darauf, daran, darüber). Es kündigt an, dass die eigentliche Information erst kommt.",
+      "erklaerung_en": "These little words are signposts: when you hear „dagegen, dass …“, the content follows. In listening they are gold, because they tell you a full second before the point arrives that a point is coming.",
+      "belegSatz": "Es ist ein Argument dagegen, das Bauen als Antwort auf jede Frage zu behandeln.",
+      "fundstelle": "Hören Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: Ich weise ___ hin, dass die Frist morgen endet.",
+          "loesung": "darauf",
+          "hinweis": "hinweisen auf + A, also darauf."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Wir müssen ___ rechnen, dass es länger dauert.",
+          "loesung": "damit",
+          "hinweis": "rechnen mit + D, also damit."
+        },
+        {
+          "aufgabe": "Warum steht hier „dagegen“ und nicht „gegen“? „ein Argument dagegen, das Bauen … zu behandeln“",
+          "loesung": "Weil kein Nomen folgt, sondern ein Infinitivsatz.",
+          "hinweis": "Mit Nomen hieße es „ein Argument gegen den Neubau“."
+        }
+      ]
+    }
+  ]
+}

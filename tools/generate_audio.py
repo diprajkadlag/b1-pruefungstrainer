@@ -802,6 +802,13 @@ def main(argv: Iterable[str] | None = None) -> int:
                     help="synthesise a sample sentence with one voice and exit")
     args = ap.parse_args(list(argv) if argv is not None else None)
 
+    # The role table prints an arrow and German role names, and a Windows
+    # console defaults to cp1252 — without this the whole run dies on its
+    # first status line, before a single track is written.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
     if args.list_voices:
         list_voices()
         return 0

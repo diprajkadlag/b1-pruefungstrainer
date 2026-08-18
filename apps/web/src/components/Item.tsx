@@ -1,4 +1,4 @@
-import type { Beispiel, OeffentlichesItem } from '@b1/core';
+import type { Beispiel, OeffentlichesItem } from '@pruefung/core';
 
 const ANZEIGEN_BUCHSTABEN = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', '0'];
 
@@ -7,14 +7,19 @@ interface Props {
   wert: string | undefined;
   onChange: (wert: string) => void;
   disabled?: boolean;
+  /**
+   * The letters this item may be answered with, for the B2 tasks whose
+   * alternatives live on the Teil rather than on the item. Ignored otherwise.
+   */
+  buchstaben?: string[];
 }
 
 /**
  * One answerable item. Which control appears is driven entirely by `item.typ`,
- * so the five reading task types and four listening task types all render from
- * the same component and no screen has to know about item shapes.
+ * so every reading and listening task type at both levels renders from the same
+ * component and no screen has to know about item shapes.
  */
-export function Item({ item, wert, onChange, disabled }: Props) {
+export function Item({ item, wert, onChange, disabled, buchstaben }: Props) {
   const name = `item-${item.nr}`;
 
   const optionen: { value: string; label: string }[] =
@@ -33,13 +38,16 @@ export function Item({ item, wert, onChange, disabled }: Props) {
               value: b,
               label: b === '0' ? '0 — keine passt' : b,
             }))
-          : [
-              { value: 'a', label: item.optionen?.a ?? 'a' },
-              { value: 'b', label: item.optionen?.b ?? 'b' },
-              { value: 'c', label: item.optionen?.c ?? 'c' },
-            ];
+          : item.typ === 'zuordnung_buchstabe'
+            ? (buchstaben ?? []).map((b) => ({ value: b, label: b }))
+            : // Multiple choice and person-matching. Three options everywhere
+              // except B2 Lesen Teil 1, which matches statements to four
+              // writers, so the fourth is included only when the item has one.
+              (['a', 'b', 'c', 'd'] as const)
+                .filter((k) => item.optionen?.[k])
+                .map((k) => ({ value: k, label: item.optionen?.[k] ?? k }));
 
-  const kompakt = item.typ === 'zuordnung_anzeigen';
+  const kompakt = item.typ === 'zuordnung_anzeigen' || item.typ === 'zuordnung_buchstabe';
 
   return (
     <fieldset className={`item ${wert ? 'item--beantwortet' : ''}`} disabled={disabled}>
@@ -81,7 +89,7 @@ export function BeispielItem({ beispiel }: { beispiel: Beispiel }) {
       <p className="beispiel__loesung">
         Lösung: <strong>{beispiel.loesung}</strong>
         {beispiel.optionen &&
-          ` — ${beispiel.optionen[beispiel.loesung as 'a' | 'b' | 'c']}`}
+          ` — ${beispiel.optionen[beispiel.loesung as 'a' | 'b' | 'c' | 'd']}`}
       </p>
       <p className="beispiel__grund">{beispiel.begruendung.de}</p>
     </div>

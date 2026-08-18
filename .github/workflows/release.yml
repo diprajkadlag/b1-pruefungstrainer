@@ -31,7 +31,7 @@ jobs:
           sudo apt-get update
           # lmodern and pgf are separate packages on Ubuntu and are not pulled
           # in by texlive-fonts-recommended or texlive-latex-extra, although
-          # b1pruefung.sty needs both: lmodern for the type, pgffor for the
+          # pruefung.sty needs both: lmodern for the type, pgffor for the
           # ruled writing lines.
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-recommended texlive-latex-extra \
@@ -40,6 +40,14 @@ jobs:
 
       - name: Validate content
         run: python tools/validate.py --strict
+      - name: Cache Piper voice models
+        # About 250 MB, identical from run to run. The key is the voice
+        # registry itself, so adding or removing a voice invalidates it.
+        uses: actions/cache@v4
+        with:
+          path: tools/.voices
+          key: piper-voices-${{ hashFiles('tools/generate_audio.py') }}
+
       - name: Synthesise audio
         run: python tools/generate_audio.py
       - name: Build PDFs
@@ -49,23 +57,24 @@ jobs:
       - name: Verify no answer leak
         run: python tools/check_no_leak.py
 
-      - run: npm run build --workspace=@b1/core
-      - run: npm run build --workspace=@b1/web
+      - run: npm run build --workspace=@pruefung/core
+      - run: npm run build --workspace=@pruefung/web
 
       - name: Package assets
         run: |
           mkdir -p release
-          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf
-          # Also on its own: most people want the cheat sheet without
-          # downloading 20 exam PDFs to find it.
-          cp content/lernhilfe/pdf/spickzettel.pdf release/
+          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf \n            content/lernhilfe/*/pdf
+          # Also on their own: most people want a cheat sheet without
+          # downloading two dozen exam PDFs to find it.
+          cp content/lernhilfe/pdf/spickzettel.pdf release/spickzettel-b1.pdf
+          cp content/lernhilfe/b2/pdf/spickzettel.pdf release/spickzettel-b2.pdf
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
               zip -rqj "release/audio-$id.zip" "$d/audio"
             fi
           done
-          cp tools/Start-B1-Trainer.cmd apps/web/dist/
+          cp tools/Start-Trainer.cmd apps/web/dist/
           cp docs/PORTABLE-LIESMICH.txt apps/web/dist/ 2>/dev/null || true
           cd apps/web && zip -rq ../../release/b1-pruefungstrainer-portable.zip dist
           cd ../.. && ls -lh release/
@@ -79,13 +88,14 @@ jobs:
             ## Downloads
 
             - **`b1-pruefungstrainer-portable.zip`** — unzip and double-click
-              `Start-B1-Trainer.cmd`. No installation, works offline.
-            - **`spickzettel.pdf`** — the cheat sheet: strategy for all four
-              modules, Redemittel for Sprechen and Schreiben, grammar in
-              tables, and the core vocabulary with every verb form.
+              `Start-Trainer.cmd`. No installation, works offline.
+            - **`spickzettel-b1.pdf`** / **`spickzettel-b2.pdf`** — the cheat
+              sheet for each level: strategy for all four modules, Redemittel
+              for Sprechen and Schreiben, grammar in tables, and the core
+              vocabulary with every verb form.
             - **`pdfs.zip`** — printable papers, answer sheets, speaking cards
-              and solution booklets.
-            - **`audio-pruefung-NN.zip`** — the listening tracks for one paper.
+              and solution booklets, for both levels.
+            - **`audio-<paper>.zip`** — the listening tracks for one paper.
 
             Or just use the hosted app, no download needed:
             https://diprajkadlag.github.io/b1-pruefungstrainer/

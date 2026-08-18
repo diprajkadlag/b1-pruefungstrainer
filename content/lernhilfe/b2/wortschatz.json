@@ -1,0 +1,1687 @@
+{
+  "titel": "B2 Aufbauwortschatz — Verben, Nomen und der Rest",
+  "hinweis": "Der B1-Wortschatz wird hier vorausgesetzt. Was folgt, ist das, was in B2-Texten dazukommt: Verben des Argumentierens, Nomen für Abstraktes und die festen Präpositionen, die man nicht ableiten kann. Verben stehen mit ihren Stammformen: Infinitiv · er-Form · Präteritum · Perfekt. Unregelmäßige sind mit ▲ markiert.",
+
+  "verben": [
+    {
+      "gruppe": "Behaupten, begründen, bezweifeln — die Sprache der Argumentation",
+      "eintraege": [
+        {
+          "inf": "behaupten",
+          "en": "to claim, to assert",
+          "er": "behauptet",
+          "prät": "behauptete",
+          "perf": "hat behauptet",
+          "unreg": false,
+          "bsp": "Er **behauptet**, davon nichts gewusst zu haben."
+        },
+        {
+          "inf": "bezweifeln",
+          "en": "to doubt",
+          "er": "bezweifelt",
+          "prät": "bezweifelte",
+          "perf": "hat bezweifelt",
+          "unreg": false,
+          "bsp": "Ich **bezweifle**, dass die Zahlen stimmen."
+        },
+        {
+          "inf": "einräumen",
+          "en": "to concede, to admit",
+          "er": "räumt ein",
+          "prät": "räumte ein",
+          "perf": "hat eingeräumt",
+          "unreg": false,
+          "bsp": "Sie **räumte ein**, sich geirrt zu haben."
+        },
+        {
+          "inf": "widerlegen",
+          "en": "to refute",
+          "er": "widerlegt",
+          "prät": "widerlegte",
+          "perf": "hat widerlegt",
+          "unreg": false,
+          "bsp": "Die Studie **widerlegt** die alte Annahme."
+        },
+        {
+          "inf": "betonen",
+          "en": "to stress, to emphasise",
+          "er": "betont",
+          "prät": "betonte",
+          "perf": "hat betont",
+          "unreg": false,
+          "bsp": "Er **betonte** vor allem die Kosten."
+        },
+        {
+          "inf": "verweisen",
+          "en": "to refer, to point to",
+          "er": "verweist",
+          "prät": "verwies",
+          "perf": "hat verwiesen",
+          "unreg": true,
+          "bsp": "Sie **verwies** auf die neue Regelung."
+        },
+        {
+          "inf": "einwenden",
+          "en": "to object",
+          "er": "wendet ein",
+          "prät": "wandte ein",
+          "perf": "hat eingewandt",
+          "unreg": true,
+          "bsp": "Dagegen **wandte** er **ein**, dass die Zeit fehle."
+        },
+        {
+          "inf": "unterstreichen",
+          "en": "to underline, to underscore",
+          "er": "unterstreicht",
+          "prät": "unterstrich",
+          "perf": "hat unterstrichen",
+          "unreg": true,
+          "bsp": "Das Beispiel **unterstreicht** ihre Position."
+        },
+        {
+          "inf": "relativieren",
+          "en": "to qualify, to put into perspective",
+          "er": "relativiert",
+          "prät": "relativierte",
+          "perf": "hat relativiert",
+          "unreg": false,
+          "bsp": "Später **relativierte** sie ihre Aussage."
+        },
+        {
+          "inf": "zustimmen",
+          "en": "to agree",
+          "er": "stimmt zu",
+          "prät": "stimmte zu",
+          "perf": "hat zugestimmt",
+          "unreg": false,
+          "bsp": "In diesem Punkt **stimme** ich Ihnen **zu**."
+        },
+        {
+          "inf": "widersprechen",
+          "en": "to contradict",
+          "er": "widerspricht",
+          "prät": "widersprach",
+          "perf": "hat widersprochen",
+          "unreg": true,
+          "bsp": "Da muss ich Ihnen **widersprechen**."
+        },
+        {
+          "inf": "voraussetzen",
+          "en": "to presuppose, to require",
+          "er": "setzt voraus",
+          "prät": "setzte voraus",
+          "perf": "hat vorausgesetzt",
+          "unreg": false,
+          "bsp": "Der Kurs **setzt** Grundkenntnisse **voraus**."
+        },
+        {
+          "inf": "nachweisen",
+          "en": "to prove, to demonstrate",
+          "er": "weist nach",
+          "prät": "wies nach",
+          "perf": "hat nachgewiesen",
+          "unreg": true,
+          "bsp": "Eine Wirkung ließ sich nicht **nachweisen**."
+        },
+        {
+          "inf": "schlussfolgern",
+          "en": "to conclude",
+          "er": "schlussfolgert",
+          "prät": "schlussfolgerte",
+          "perf": "hat geschlussfolgert",
+          "unreg": false,
+          "bsp": "Daraus **schlussfolgern** die Autoren, dass …"
+        }
+      ]
+    },
+    {
+      "gruppe": "Zunehmen, sinken, sich verändern — Entwicklungen beschreiben",
+      "eintraege": [
+        {
+          "inf": "zunehmen",
+          "en": "to increase",
+          "er": "nimmt zu",
+          "prät": "nahm zu",
+          "perf": "hat zugenommen",
+          "unreg": true,
+          "bsp": "Die Beschwerden **haben zugenommen**."
+        },
+        {
+          "inf": "abnehmen",
+          "en": "to decrease",
+          "er": "nimmt ab",
+          "prät": "nahm ab",
+          "perf": "hat abgenommen",
+          "unreg": true,
+          "bsp": "Der Geruchssinn **nimmt** im Alter **ab**."
+        },
+        {
+          "inf": "steigen",
+          "en": "to rise",
+          "er": "steigt",
+          "prät": "stieg",
+          "perf": "ist gestiegen",
+          "unreg": true,
+          "bsp": "Die Kosten **sind** deutlich **gestiegen**."
+        },
+        {
+          "inf": "sinken",
+          "en": "to fall, to drop",
+          "er": "sinkt",
+          "prät": "sank",
+          "perf": "ist gesunken",
+          "unreg": true,
+          "bsp": "Die Zahl der Meldungen **ist gesunken**."
+        },
+        {
+          "inf": "wachsen",
+          "en": "to grow",
+          "er": "wächst",
+          "prät": "wuchs",
+          "perf": "ist gewachsen",
+          "unreg": true,
+          "bsp": "Der Druck auf die Betriebe **wächst**."
+        },
+        {
+          "inf": "schrumpfen",
+          "en": "to shrink",
+          "er": "schrumpft",
+          "prät": "schrumpfte",
+          "perf": "ist geschrumpft",
+          "unreg": false,
+          "bsp": "Der Vorsprung **ist geschrumpft**."
+        },
+        {
+          "inf": "sich verdoppeln",
+          "en": "to double",
+          "er": "verdoppelt sich",
+          "prät": "verdoppelte sich",
+          "perf": "hat sich verdoppelt",
+          "unreg": false,
+          "bsp": "Die Zahl **hat sich** binnen zehn Jahren **verdoppelt**."
+        },
+        {
+          "inf": "schwanken",
+          "en": "to fluctuate",
+          "er": "schwankt",
+          "prät": "schwankte",
+          "perf": "hat geschwankt",
+          "unreg": false,
+          "bsp": "Die Werte **schwanken** stark."
+        },
+        {
+          "inf": "überwiegen",
+          "en": "to outweigh, to predominate",
+          "er": "überwiegt",
+          "prät": "überwog",
+          "perf": "hat überwogen",
+          "unreg": true,
+          "bsp": "Für mich **überwiegen** die Vorteile."
+        },
+        {
+          "inf": "betragen",
+          "en": "to amount to",
+          "er": "beträgt",
+          "prät": "betrug",
+          "perf": "hat betragen",
+          "unreg": true,
+          "bsp": "Der Rückgang **beträgt** ein Drittel."
+        },
+        {
+          "inf": "stagnieren",
+          "en": "to stagnate",
+          "er": "stagniert",
+          "prät": "stagnierte",
+          "perf": "hat stagniert",
+          "unreg": false,
+          "bsp": "Die Zahlen **stagnieren** seit drei Jahren."
+        },
+        {
+          "inf": "verzeichnen",
+          "en": "to record, to register (a change)",
+          "er": "verzeichnet",
+          "prät": "verzeichnete",
+          "perf": "hat verzeichnet",
+          "unreg": false,
+          "bsp": "Die Stadt **verzeichnet** weniger Beschwerden."
+        }
+      ]
+    },
+    {
+      "gruppe": "Verben mit fester Präposition — die muss man mitlernen",
+      "eintraege": [
+        {
+          "inf": "abhängen von + D",
+          "en": "to depend on",
+          "er": "hängt ab",
+          "prät": "hing ab",
+          "perf": "hat abgehangen",
+          "unreg": true,
+          "bsp": "Das **hängt** stark **von** der Branche **ab**."
+        },
+        {
+          "inf": "sich beschäftigen mit + D",
+          "en": "to deal with",
+          "er": "beschäftigt sich",
+          "prät": "beschäftigte sich",
+          "perf": "hat sich beschäftigt",
+          "unreg": false,
+          "bsp": "Sie **beschäftigt sich mit** Schichtarbeit."
+        },
+        {
+          "inf": "hinweisen auf + A",
+          "en": "to point out",
+          "er": "weist hin",
+          "prät": "wies hin",
+          "perf": "hat hingewiesen",
+          "unreg": true,
+          "bsp": "Der Verein **weist darauf hin**, dass …"
+        },
+        {
+          "inf": "verzichten auf + A",
+          "en": "to do without, to forgo",
+          "er": "verzichtet",
+          "prät": "verzichtete",
+          "perf": "hat verzichtet",
+          "unreg": false,
+          "bsp": "Viele **verzichten auf** das eigene Auto."
+        },
+        {
+          "inf": "sich einigen auf + A",
+          "en": "to agree on",
+          "er": "einigt sich",
+          "prät": "einigte sich",
+          "perf": "hat sich geeinigt",
+          "unreg": false,
+          "bsp": "Wir **einigten uns auf** einen Kompromiss."
+        },
+        {
+          "inf": "teilnehmen an + D",
+          "en": "to take part in",
+          "er": "nimmt teil",
+          "prät": "nahm teil",
+          "perf": "hat teilgenommen",
+          "unreg": true,
+          "bsp": "Wer **teilnehmen** will, meldet sich vorher an."
+        },
+        {
+          "inf": "sich beziehen auf + A",
+          "en": "to refer to",
+          "er": "bezieht sich",
+          "prät": "bezog sich",
+          "perf": "hat sich bezogen",
+          "unreg": true,
+          "bsp": "Ich **beziehe mich auf** Ihre Nachricht."
+        },
+        {
+          "inf": "rechnen mit + D",
+          "en": "to reckon with, to expect",
+          "er": "rechnet",
+          "prät": "rechnete",
+          "perf": "hat gerechnet",
+          "unreg": false,
+          "bsp": "Damit hatte niemand **gerechnet**."
+        },
+        {
+          "inf": "führen zu + D",
+          "en": "to lead to",
+          "er": "führt",
+          "prät": "führte",
+          "perf": "hat geführt",
+          "unreg": false,
+          "bsp": "Das **führt zu** höheren Kosten."
+        },
+        {
+          "inf": "beruhen auf + D",
+          "en": "to be based on",
+          "er": "beruht",
+          "prät": "beruhte",
+          "perf": "hat beruht",
+          "unreg": false,
+          "bsp": "Die Annahme **beruht auf** einer alten Studie."
+        },
+        {
+          "inf": "sich auswirken auf + A",
+          "en": "to have an effect on",
+          "er": "wirkt sich aus",
+          "prät": "wirkte sich aus",
+          "perf": "hat sich ausgewirkt",
+          "unreg": false,
+          "bsp": "Der Lärm **wirkt sich auf** den Schlaf **aus**."
+        },
+        {
+          "inf": "sich wenden an + A",
+          "en": "to turn to, to contact",
+          "er": "wendet sich",
+          "prät": "wandte sich",
+          "perf": "hat sich gewandt",
+          "unreg": true,
+          "bsp": "Ich **wende mich** mit einer Bitte **an** Sie."
+        },
+        {
+          "inf": "bestehen auf + D",
+          "en": "to insist on",
+          "er": "besteht",
+          "prät": "bestand",
+          "perf": "hat bestanden",
+          "unreg": true,
+          "bsp": "Er **bestand auf** einer schriftlichen Antwort."
+        },
+        {
+          "inf": "sorgen für + A",
+          "en": "to see to, to provide for",
+          "er": "sorgt",
+          "prät": "sorgte",
+          "perf": "hat gesorgt",
+          "unreg": false,
+          "bsp": "Die Regel **sorgt für** klare Verhältnisse."
+        },
+        {
+          "inf": "warnen vor + D",
+          "en": "to warn against",
+          "er": "warnt",
+          "prät": "warnte",
+          "perf": "hat gewarnt",
+          "unreg": false,
+          "bsp": "Ärzte **warnten vor** Schäden für die Augen."
+        },
+        {
+          "inf": "zweifeln an + D",
+          "en": "to doubt something",
+          "er": "zweifelt",
+          "prät": "zweifelte",
+          "perf": "hat gezweifelt",
+          "unreg": false,
+          "bsp": "Niemand **zweifelt an** ihrer Kompetenz."
+        }
+      ]
+    },
+    {
+      "gruppe": "Arbeit, Verwaltung und Verträge",
+      "eintraege": [
+        {
+          "inf": "beantragen",
+          "en": "to apply for",
+          "er": "beantragt",
+          "prät": "beantragte",
+          "perf": "hat beantragt",
+          "unreg": false,
+          "bsp": "Sie **hat** Urlaub **beantragt**."
+        },
+        {
+          "inf": "genehmigen",
+          "en": "to approve",
+          "er": "genehmigt",
+          "prät": "genehmigte",
+          "perf": "hat genehmigt",
+          "unreg": false,
+          "bsp": "Der Antrag wurde **genehmigt**."
+        },
+        {
+          "inf": "ablehnen",
+          "en": "to reject, to turn down",
+          "er": "lehnt ab",
+          "prät": "lehnte ab",
+          "perf": "hat abgelehnt",
+          "unreg": false,
+          "bsp": "Der Rat **lehnte** den Vorschlag **ab**."
+        },
+        {
+          "inf": "kündigen",
+          "en": "to give notice, to terminate",
+          "er": "kündigt",
+          "prät": "kündigte",
+          "perf": "hat gekündigt",
+          "unreg": false,
+          "bsp": "Er **hat** zum Monatsende **gekündigt**."
+        },
+        {
+          "inf": "einstellen",
+          "en": "to hire; to discontinue",
+          "er": "stellt ein",
+          "prät": "stellte ein",
+          "perf": "hat eingestellt",
+          "unreg": false,
+          "bsp": "Wir **haben** drei Kolleginnen **eingestellt**."
+        },
+        {
+          "inf": "entlassen",
+          "en": "to dismiss, to lay off",
+          "er": "entlässt",
+          "prät": "entließ",
+          "perf": "hat entlassen",
+          "unreg": true,
+          "bsp": "Niemand wurde **entlassen**."
+        },
+        {
+          "inf": "verhandeln",
+          "en": "to negotiate",
+          "er": "verhandelt",
+          "prät": "verhandelte",
+          "perf": "hat verhandelt",
+          "unreg": false,
+          "bsp": "Über den Preis lässt sich **verhandeln**."
+        },
+        {
+          "inf": "vereinbaren",
+          "en": "to arrange, to agree",
+          "er": "vereinbart",
+          "prät": "vereinbarte",
+          "perf": "hat vereinbart",
+          "unreg": false,
+          "bsp": "Wir hatten Donnerstag **vereinbart**."
+        },
+        {
+          "inf": "erstatten",
+          "en": "to reimburse",
+          "er": "erstattet",
+          "prät": "erstattete",
+          "perf": "hat erstattet",
+          "unreg": false,
+          "bsp": "Die Gebühr wird **erstattet**."
+        },
+        {
+          "inf": "beauftragen",
+          "en": "to commission, to instruct",
+          "er": "beauftragt",
+          "prät": "beauftragte",
+          "perf": "hat beauftragt",
+          "unreg": false,
+          "bsp": "Die Stadt **beauftragte** ein Institut."
+        },
+        {
+          "inf": "haften",
+          "en": "to be liable",
+          "er": "haftet",
+          "prät": "haftete",
+          "perf": "hat gehaftet",
+          "unreg": false,
+          "bsp": "Für mitgebrachtes Material **haftet** niemand."
+        },
+        {
+          "inf": "versichern",
+          "en": "to insure; to assure",
+          "er": "versichert",
+          "prät": "versicherte",
+          "perf": "hat versichert",
+          "unreg": false,
+          "bsp": "Teilnehmende sind **versichert**."
+        },
+        {
+          "inf": "melden",
+          "en": "to report, to notify",
+          "er": "meldet",
+          "prät": "meldete",
+          "perf": "hat gemeldet",
+          "unreg": false,
+          "bsp": "Schäden sind sofort zu **melden**."
+        },
+        {
+          "inf": "erledigen",
+          "en": "to deal with, to get done",
+          "er": "erledigt",
+          "prät": "erledigte",
+          "perf": "hat erledigt",
+          "unreg": false,
+          "bsp": "Das **erledige** ich noch heute."
+        }
+      ]
+    },
+    {
+      "gruppe": "Wahrnehmen, erkennen, einschätzen",
+      "eintraege": [
+        {
+          "inf": "wahrnehmen",
+          "en": "to perceive; to keep (an appointment)",
+          "er": "nimmt wahr",
+          "prät": "nahm wahr",
+          "perf": "hat wahrgenommen",
+          "unreg": true,
+          "bsp": "Den Termin kann ich leider nicht **wahrnehmen**."
+        },
+        {
+          "inf": "erkennen",
+          "en": "to recognise",
+          "er": "erkennt",
+          "prät": "erkannte",
+          "perf": "hat erkannt",
+          "unreg": true,
+          "bsp": "Fast alle **erkennen**, dass ihnen etwas vertraut ist."
+        },
+        {
+          "inf": "unterscheiden",
+          "en": "to distinguish",
+          "er": "unterscheidet",
+          "prät": "unterschied",
+          "perf": "hat unterschieden",
+          "unreg": true,
+          "bsp": "Man muss zwei Dinge **unterscheiden**."
+        },
+        {
+          "inf": "vergleichen",
+          "en": "to compare",
+          "er": "vergleicht",
+          "prät": "verglich",
+          "perf": "hat verglichen",
+          "unreg": true,
+          "bsp": "Die Ergebnisse lassen sich kaum **vergleichen**."
+        },
+        {
+          "inf": "einschätzen",
+          "en": "to assess, to judge",
+          "er": "schätzt ein",
+          "prät": "schätzte ein",
+          "perf": "hat eingeschätzt",
+          "unreg": false,
+          "bsp": "Wie **schätzen** Sie die Lage **ein**?"
+        },
+        {
+          "inf": "beurteilen",
+          "en": "to evaluate",
+          "er": "beurteilt",
+          "prät": "beurteilte",
+          "perf": "hat beurteilt",
+          "unreg": false,
+          "bsp": "Das lässt sich von außen schwer **beurteilen**."
+        },
+        {
+          "inf": "übersehen",
+          "en": "to overlook",
+          "er": "übersieht",
+          "prät": "übersah",
+          "perf": "hat übersehen",
+          "unreg": true,
+          "bsp": "Dabei wird oft **übersehen**, dass …"
+        },
+        {
+          "inf": "auffallen",
+          "en": "to be noticeable, to stand out",
+          "er": "fällt auf",
+          "prät": "fiel auf",
+          "perf": "ist aufgefallen",
+          "unreg": true,
+          "bsp": "In Versuchen **fällt** sofort **auf**, dass …"
+        },
+        {
+          "inf": "vermuten",
+          "en": "to suspect, to presume",
+          "er": "vermutet",
+          "prät": "vermutete",
+          "perf": "hat vermutet",
+          "unreg": false,
+          "bsp": "Ich **vermute**, dass es am Licht liegt."
+        },
+        {
+          "inf": "annehmen",
+          "en": "to assume; to accept",
+          "er": "nimmt an",
+          "prät": "nahm an",
+          "perf": "hat angenommen",
+          "unreg": true,
+          "bsp": "Man **nahm an**, die Wirkung sei groß."
+        },
+        {
+          "inf": "verwechseln",
+          "en": "to mix up, to confuse",
+          "er": "verwechselt",
+          "prät": "verwechselte",
+          "perf": "hat verwechselt",
+          "unreg": false,
+          "bsp": "Die beiden Formen werden oft **verwechselt**."
+        },
+        {
+          "inf": "deuten",
+          "en": "to interpret, to read",
+          "er": "deutet",
+          "prät": "deutete",
+          "perf": "hat gedeutet",
+          "unreg": false,
+          "bsp": "Diese Zahl wird fast immer falsch **gedeutet**."
+        }
+      ]
+    },
+    {
+      "gruppe": "Bewirken und verhindern",
+      "eintraege": [
+        {
+          "inf": "verursachen",
+          "en": "to cause",
+          "er": "verursacht",
+          "prät": "verursachte",
+          "perf": "hat verursacht",
+          "unreg": false,
+          "bsp": "Einzelne Ereignisse **verursachen** die Beschwerden."
+        },
+        {
+          "inf": "verhindern",
+          "en": "to prevent",
+          "er": "verhindert",
+          "prät": "verhinderte",
+          "perf": "hat verhindert",
+          "unreg": false,
+          "bsp": "Das lässt sich kaum **verhindern**."
+        },
+        {
+          "inf": "vermeiden",
+          "en": "to avoid",
+          "er": "vermeidet",
+          "prät": "vermied",
+          "perf": "hat vermieden",
+          "unreg": true,
+          "bsp": "Solche Formulierungen sollte man **vermeiden**."
+        },
+        {
+          "inf": "bewirken",
+          "en": "to bring about",
+          "er": "bewirkt",
+          "prät": "bewirkte",
+          "perf": "hat bewirkt",
+          "unreg": false,
+          "bsp": "Kleine Maßnahmen **bewirken** oft mehr."
+        },
+        {
+          "inf": "bewältigen",
+          "en": "to cope with, to manage",
+          "er": "bewältigt",
+          "prät": "bewältigte",
+          "perf": "hat bewältigt",
+          "unreg": false,
+          "bsp": "Kleine Betriebe können den Ausfall kaum **bewältigen**."
+        },
+        {
+          "inf": "berücksichtigen",
+          "en": "to take into account",
+          "er": "berücksichtigt",
+          "prät": "berücksichtigte",
+          "perf": "hat berücksichtigt",
+          "unreg": false,
+          "bsp": "Dieser Einwand wurde **berücksichtigt**."
+        },
+        {
+          "inf": "entstehen",
+          "en": "to arise, to come into being",
+          "er": "entsteht",
+          "prät": "entstand",
+          "perf": "ist entstanden",
+          "unreg": true,
+          "bsp": "So **entstand** ein neuer Beruf."
+        },
+        {
+          "inf": "entwickeln",
+          "en": "to develop",
+          "er": "entwickelt",
+          "prät": "entwickelte",
+          "perf": "hat entwickelt",
+          "unreg": false,
+          "bsp": "Das Verfahren wurde weiter **entwickelt**."
+        },
+        {
+          "inf": "entlasten",
+          "en": "to relieve, to take pressure off",
+          "er": "entlastet",
+          "prät": "entlastete",
+          "perf": "hat entlastet",
+          "unreg": false,
+          "bsp": "Das **entlastet** vor allem die Innenstadt."
+        },
+        {
+          "inf": "erfordern",
+          "en": "to require",
+          "er": "erfordert",
+          "prät": "erforderte",
+          "perf": "hat erfordert",
+          "unreg": false,
+          "bsp": "Der Zugang **erfordert** eine Unterweisung."
+        },
+        {
+          "inf": "ermöglichen",
+          "en": "to make possible",
+          "er": "ermöglicht",
+          "prät": "ermöglichte",
+          "perf": "hat ermöglicht",
+          "unreg": false,
+          "bsp": "Das **ermöglicht** eine verlässliche Planung."
+        },
+        {
+          "inf": "erhöhen",
+          "en": "to raise, to increase",
+          "er": "erhöht",
+          "prät": "erhöhte",
+          "perf": "hat erhöht",
+          "unreg": false,
+          "bsp": "Die Gebühren wurden nicht **erhöht**."
+        },
+        {
+          "inf": "verschärfen",
+          "en": "to tighten, to aggravate",
+          "er": "verschärft",
+          "prät": "verschärfte",
+          "perf": "hat verschärft",
+          "unreg": false,
+          "bsp": "Die Regeln wurden **verschärft**."
+        },
+        {
+          "inf": "ersetzen",
+          "en": "to replace",
+          "er": "ersetzt",
+          "prät": "ersetzte",
+          "perf": "hat ersetzt",
+          "unreg": false,
+          "bsp": "Ein Gespräch **ersetzt** keine Untersuchung."
+        }
+      ]
+    },
+    {
+      "gruppe": "Häufige unregelmäßige Verben auf B2-Niveau",
+      "eintraege": [
+        {
+          "inf": "gelten",
+          "en": "to apply, to be valid",
+          "er": "gilt",
+          "prät": "galt",
+          "perf": "hat gegolten",
+          "unreg": true,
+          "bsp": "Die Unterweisung **gilt** 24 Monate."
+        },
+        {
+          "inf": "geschehen",
+          "en": "to happen",
+          "er": "geschieht",
+          "prät": "geschah",
+          "perf": "ist geschehen",
+          "unreg": true,
+          "bsp": "Das **geschieht** langsam und ist normal."
+        },
+        {
+          "inf": "gelingen",
+          "en": "to succeed",
+          "er": "gelingt",
+          "prät": "gelang",
+          "perf": "ist gelungen",
+          "unreg": true,
+          "bsp": "Der Versuch **ist gelungen**."
+        },
+        {
+          "inf": "scheitern",
+          "en": "to fail",
+          "er": "scheitert",
+          "prät": "scheiterte",
+          "perf": "ist gescheitert",
+          "unreg": false,
+          "bsp": "Die Reparatur **scheitert** an fehlenden Teilen."
+        },
+        {
+          "inf": "verlieren",
+          "en": "to lose",
+          "er": "verliert",
+          "prät": "verlor",
+          "perf": "hat verloren",
+          "unreg": true,
+          "bsp": "Wer den Geruchssinn **verliert**, verliert mehr."
+        },
+        {
+          "inf": "gewinnen",
+          "en": "to gain, to win",
+          "er": "gewinnt",
+          "prät": "gewann",
+          "perf": "hat gewonnen",
+          "unreg": true,
+          "bsp": "Dadurch **gewinnen** wir Zeit."
+        },
+        {
+          "inf": "beitragen zu + D",
+          "en": "to contribute to",
+          "er": "trägt bei",
+          "prät": "trug bei",
+          "perf": "hat beigetragen",
+          "unreg": true,
+          "bsp": "Das **trägt** wenig **zu** einer Lösung **bei**."
+        },
+        {
+          "inf": "vorschlagen",
+          "en": "to suggest",
+          "er": "schlägt vor",
+          "prät": "schlug vor",
+          "perf": "hat vorgeschlagen",
+          "unreg": true,
+          "bsp": "Ich **schlage vor**, zunächst zu messen."
+        },
+        {
+          "inf": "zurückgehen",
+          "en": "to decline, to go back",
+          "er": "geht zurück",
+          "prät": "ging zurück",
+          "perf": "ist zurückgegangen",
+          "unreg": true,
+          "bsp": "Die Meldungen **gingen** um ein Drittel **zurück**."
+        },
+        {
+          "inf": "eingreifen",
+          "en": "to intervene",
+          "er": "greift ein",
+          "prät": "griff ein",
+          "perf": "hat eingegriffen",
+          "unreg": true,
+          "bsp": "Die Stadt musste **eingreifen**."
+        },
+        {
+          "inf": "durchsetzen",
+          "en": "to push through; to catch on",
+          "er": "setzt durch",
+          "prät": "setzte durch",
+          "perf": "hat durchgesetzt",
+          "unreg": false,
+          "bsp": "Ein einfaches Verfahren **hat sich durchgesetzt**."
+        },
+        {
+          "inf": "übertreffen",
+          "en": "to exceed, to surpass",
+          "er": "übertrifft",
+          "prät": "übertraf",
+          "perf": "hat übertroffen",
+          "unreg": true,
+          "bsp": "Das Ergebnis **übertraf** alle Erwartungen."
+        },
+        {
+          "inf": "nachlassen",
+          "en": "to decline, to ease off",
+          "er": "lässt nach",
+          "prät": "ließ nach",
+          "perf": "hat nachgelassen",
+          "unreg": true,
+          "bsp": "Die Aufmerksamkeit **lässt** nach Mitternacht **nach**."
+        },
+        {
+          "inf": "unterliegen",
+          "en": "to be subject to; to lose",
+          "er": "unterliegt",
+          "prät": "unterlag",
+          "perf": "ist unterlegen",
+          "unreg": true,
+          "bsp": "Die Nutzung **unterliegt** der Hausordnung."
+        }
+      ]
+    },
+    {
+      "gruppe": "Weitere Verben, die in B2-Texten ständig vorkommen",
+      "eintraege": [
+        {
+          "inf": "fördern",
+          "en": "to promote, to support",
+          "er": "fördert",
+          "prät": "förderte",
+          "perf": "hat gefördert",
+          "unreg": false,
+          "bsp": "Das Land **fördert** solche Projekte."
+        },
+        {
+          "inf": "fordern",
+          "en": "to demand",
+          "er": "fordert",
+          "prät": "forderte",
+          "perf": "hat gefordert",
+          "unreg": false,
+          "bsp": "Der Verein **fordert** eine Neuplanung."
+        },
+        {
+          "inf": "verlangen",
+          "en": "to require, to ask for",
+          "er": "verlangt",
+          "prät": "verlangte",
+          "perf": "hat verlangt",
+          "unreg": false,
+          "bsp": "Mehr kann man nicht **verlangen**."
+        },
+        {
+          "inf": "ermitteln",
+          "en": "to determine, to establish",
+          "er": "ermittelt",
+          "prät": "ermittelte",
+          "perf": "hat ermittelt",
+          "unreg": false,
+          "bsp": "Die Werte wurden über zwei Jahre **ermittelt**."
+        },
+        {
+          "inf": "feststellen",
+          "en": "to find, to ascertain",
+          "er": "stellt fest",
+          "prät": "stellte fest",
+          "perf": "hat festgestellt",
+          "unreg": false,
+          "bsp": "Dabei **stellte** man **fest**, dass …"
+        },
+        {
+          "inf": "veröffentlichen",
+          "en": "to publish",
+          "er": "veröffentlicht",
+          "prät": "veröffentlichte",
+          "perf": "hat veröffentlicht",
+          "unreg": false,
+          "bsp": "Die Auswertung wurde gestern **veröffentlicht**."
+        },
+        {
+          "inf": "verzögern",
+          "en": "to delay",
+          "er": "verzögert",
+          "prät": "verzögerte",
+          "perf": "hat verzögert",
+          "unreg": false,
+          "bsp": "Die Lieferung **hat sich verzögert**."
+        },
+        {
+          "inf": "ergänzen",
+          "en": "to add, to supplement",
+          "er": "ergänzt",
+          "prät": "ergänzte",
+          "perf": "hat ergänzt",
+          "unreg": false,
+          "bsp": "Ich möchte gern etwas **ergänzen**."
+        },
+        {
+          "inf": "verfolgen",
+          "en": "to follow, to pursue",
+          "er": "verfolgt",
+          "prät": "verfolgte",
+          "perf": "hat verfolgt",
+          "unreg": false,
+          "bsp": "Ich **verfolge** die Studienlage beruflich."
+        },
+        {
+          "inf": "prägen",
+          "en": "to shape, to characterise",
+          "er": "prägt",
+          "prät": "prägte",
+          "perf": "hat geprägt",
+          "unreg": false,
+          "bsp": "Das Elternhaus **prägt** die Entscheidung."
+        },
+        {
+          "inf": "bewahren",
+          "en": "to preserve, to keep",
+          "er": "bewahrt",
+          "prät": "bewahrte",
+          "perf": "hat bewahrt",
+          "unreg": false,
+          "bsp": "Ruhe zu **bewahren** hilft mehr als alles andere."
+        },
+        {
+          "inf": "begleiten",
+          "en": "to accompany",
+          "er": "begleitet",
+          "prät": "begleitete",
+          "perf": "hat begleitet",
+          "unreg": false,
+          "bsp": "Sie **hat** das Projekt **begleitet**."
+        },
+        {
+          "inf": "verschwinden",
+          "en": "to disappear",
+          "er": "verschwindet",
+          "prät": "verschwand",
+          "perf": "ist verschwunden",
+          "unreg": true,
+          "bsp": "In Mittelwerten **verschwinden** solche Spitzen."
+        },
+        {
+          "inf": "rechtfertigen",
+          "en": "to justify",
+          "er": "rechtfertigt",
+          "prät": "rechtfertigte",
+          "perf": "hat gerechtfertigt",
+          "unreg": false,
+          "bsp": "Das ist durch nichts zu **rechtfertigen**."
+        },
+        {
+          "inf": "sich gewöhnen an + A",
+          "en": "to get used to",
+          "er": "gewöhnt sich",
+          "prät": "gewöhnte sich",
+          "perf": "hat sich gewöhnt",
+          "unreg": false,
+          "bsp": "An gleichmäßigen Lärm **gewöhnen wir uns** gut."
+        },
+        {
+          "inf": "verlegen",
+          "en": "to move, to relocate; to postpone",
+          "er": "verlegt",
+          "prät": "verlegte",
+          "perf": "hat verlegt",
+          "unreg": false,
+          "bsp": "Die Container wurden **verlegt**."
+        }
+      ]
+    }
+  ],
+
+  "nomen": [
+    {
+      "gruppe": "Argument und Diskussion",
+      "eintraege": [
+        {
+          "art": "die",
+          "wort": "Behauptung",
+          "pl": "die Behauptungen",
+          "en": "claim, assertion"
+        },
+        { "art": "der", "wort": "Einwand", "pl": "die Einwände", "en": "objection" },
+        {
+          "art": "die",
+          "wort": "Voraussetzung",
+          "pl": "die Voraussetzungen",
+          "en": "precondition"
+        },
+        {
+          "art": "der",
+          "wort": "Widerspruch",
+          "pl": "die Widersprüche",
+          "en": "contradiction"
+        },
+        {
+          "art": "die",
+          "wort": "Begründung",
+          "pl": "die Begründungen",
+          "en": "justification, reasoning"
+        },
+        { "art": "der", "wort": "Beleg", "pl": "die Belege", "en": "piece of evidence" },
+        {
+          "art": "die",
+          "wort": "Einschränkung",
+          "pl": "die Einschränkungen",
+          "en": "qualification, restriction"
+        },
+        {
+          "art": "die",
+          "wort": "Haltung",
+          "pl": "die Haltungen",
+          "en": "stance, attitude"
+        },
+        {
+          "art": "der",
+          "wort": "Standpunkt",
+          "pl": "die Standpunkte",
+          "en": "point of view"
+        },
+        {
+          "art": "die",
+          "wort": "Auseinandersetzung",
+          "pl": "die Auseinandersetzungen",
+          "en": "debate, engagement with"
+        },
+        {
+          "art": "das",
+          "wort": "Fazit",
+          "pl": "die Fazite",
+          "en": "conclusion, bottom line"
+        },
+        {
+          "art": "die",
+          "wort": "Einseitigkeit",
+          "pl": "die Einseitigkeiten",
+          "en": "one-sidedness"
+        },
+        {
+          "art": "der",
+          "wort": "Kompromiss",
+          "pl": "die Kompromisse",
+          "en": "compromise"
+        },
+        { "art": "die", "wort": "Nüchternheit", "pl": "—", "en": "level-headedness" }
+      ]
+    },
+    {
+      "gruppe": "Gesellschaft und Politik",
+      "eintraege": [
+        {
+          "art": "die",
+          "wort": "Gesellschaft",
+          "pl": "die Gesellschaften",
+          "en": "society"
+        },
+        { "art": "die", "wort": "Öffentlichkeit", "pl": "—", "en": "the public" },
+        { "art": "die", "wort": "Mehrheit", "pl": "die Mehrheiten", "en": "majority" },
+        {
+          "art": "die",
+          "wort": "Minderheit",
+          "pl": "die Minderheiten",
+          "en": "minority"
+        },
+        {
+          "art": "die",
+          "wort": "Verwaltung",
+          "pl": "die Verwaltungen",
+          "en": "administration, authorities"
+        },
+        { "art": "der", "wort": "Stadtrat", "pl": "die Stadträte", "en": "city council" },
+        {
+          "art": "die",
+          "wort": "Maßnahme",
+          "pl": "die Maßnahmen",
+          "en": "measure, step"
+        },
+        {
+          "art": "die",
+          "wort": "Regelung",
+          "pl": "die Regelungen",
+          "en": "rule, arrangement"
+        },
+        {
+          "art": "die",
+          "wort": "Beteiligung",
+          "pl": "die Beteiligungen",
+          "en": "participation"
+        },
+        {
+          "art": "das",
+          "wort": "Engagement",
+          "pl": "die Engagements",
+          "en": "commitment, involvement"
+        },
+        {
+          "art": "die",
+          "wort": "Zuschrift",
+          "pl": "die Zuschriften",
+          "en": "letter sent in"
+        },
+        {
+          "art": "die",
+          "wort": "Entwicklung",
+          "pl": "die Entwicklungen",
+          "en": "development"
+        },
+        {
+          "art": "der",
+          "wort": "Anspruch",
+          "pl": "die Ansprüche",
+          "en": "claim, entitlement"
+        },
+        {
+          "art": "die",
+          "wort": "Verantwortung",
+          "pl": "die Verantwortungen",
+          "en": "responsibility"
+        }
+      ]
+    },
+    {
+      "gruppe": "Wirtschaft und Arbeit",
+      "eintraege": [
+        {
+          "art": "die",
+          "wort": "Volkswirtschaft",
+          "pl": "die Volkswirtschaften",
+          "en": "national economy"
+        },
+        {
+          "art": "die",
+          "wort": "Branche",
+          "pl": "die Branchen",
+          "en": "sector, industry"
+        },
+        {
+          "art": "die",
+          "wort": "Fachkraft",
+          "pl": "die Fachkräfte",
+          "en": "skilled worker"
+        },
+        {
+          "art": "der",
+          "wort": "Betrieb",
+          "pl": "die Betriebe",
+          "en": "business, plant"
+        },
+        {
+          "art": "der",
+          "wort": "Dienstplan",
+          "pl": "die Dienstpläne",
+          "en": "duty roster"
+        },
+        { "art": "die", "wort": "Schichtarbeit", "pl": "—", "en": "shift work" },
+        { "art": "die", "wort": "Marge", "pl": "die Margen", "en": "profit margin" },
+        {
+          "art": "der",
+          "wort": "Umsatz",
+          "pl": "die Umsätze",
+          "en": "turnover, revenue"
+        },
+        {
+          "art": "die",
+          "wort": "Auftragslage",
+          "pl": "die Auftragslagen",
+          "en": "order situation"
+        },
+        { "art": "der", "wort": "Aufschlag", "pl": "die Aufschläge", "en": "surcharge" },
+        { "art": "die", "wort": "Gebühr", "pl": "die Gebühren", "en": "fee" },
+        {
+          "art": "die",
+          "wort": "Fahrlässigkeit",
+          "pl": "die Fahrlässigkeiten",
+          "en": "negligence"
+        },
+        { "art": "die", "wort": "Gewähr", "pl": "—", "en": "guarantee, warranty" },
+        {
+          "art": "das",
+          "wort": "Lebenseinkommen",
+          "pl": "die Lebenseinkommen",
+          "en": "lifetime earnings"
+        }
+      ]
+    },
+    {
+      "gruppe": "Wissenschaft und Forschung",
+      "eintraege": [
+        { "art": "die", "wort": "Forschung", "pl": "die Forschungen", "en": "research" },
+        {
+          "art": "die",
+          "wort": "Datengrundlage",
+          "pl": "die Datengrundlagen",
+          "en": "evidence base"
+        },
+        {
+          "art": "die",
+          "wort": "Auswertung",
+          "pl": "die Auswertungen",
+          "en": "analysis, evaluation"
+        },
+        {
+          "art": "die",
+          "wort": "Erhebung",
+          "pl": "die Erhebungen",
+          "en": "survey, data collection"
+        },
+        {
+          "art": "der",
+          "wort": "Messwert",
+          "pl": "die Messwerte",
+          "en": "measured value"
+        },
+        {
+          "art": "der",
+          "wort": "Mittelwert",
+          "pl": "die Mittelwerte",
+          "en": "average, mean"
+        },
+        {
+          "art": "das",
+          "wort": "Pilotprojekt",
+          "pl": "die Pilotprojekte",
+          "en": "pilot project"
+        },
+        {
+          "art": "die",
+          "wort": "Veranlagung",
+          "pl": "die Veranlagungen",
+          "en": "predisposition"
+        },
+        {
+          "art": "das",
+          "wort": "Verfahren",
+          "pl": "die Verfahren",
+          "en": "procedure, method"
+        },
+        {
+          "art": "die",
+          "wort": "Wahrnehmung",
+          "pl": "die Wahrnehmungen",
+          "en": "perception"
+        },
+        {
+          "art": "der",
+          "wort": "Zusammenhang",
+          "pl": "die Zusammenhänge",
+          "en": "connection, context"
+        },
+        {
+          "art": "die",
+          "wort": "Größenordnung",
+          "pl": "die Größenordnungen",
+          "en": "order of magnitude"
+        }
+      ]
+    },
+    {
+      "gruppe": "Stadt, Umwelt und Verkehr",
+      "eintraege": [
+        { "art": "der", "wort": "Nahverkehr", "pl": "—", "en": "local public transport" },
+        {
+          "art": "die",
+          "wort": "Innenstadt",
+          "pl": "die Innenstädte",
+          "en": "city centre"
+        },
+        { "art": "die", "wort": "Sperrung", "pl": "die Sperrungen", "en": "closure" },
+        { "art": "der", "wort": "Lärmschutz", "pl": "—", "en": "noise protection" },
+        {
+          "art": "die",
+          "wort": "Beschwerde",
+          "pl": "die Beschwerden",
+          "en": "complaint"
+        },
+        {
+          "art": "der",
+          "wort": "Dauerwert",
+          "pl": "die Dauerwerte",
+          "en": "sustained level"
+        },
+        {
+          "art": "das",
+          "wort": "Leitungsnetz",
+          "pl": "die Leitungsnetze",
+          "en": "distribution network"
+        },
+        {
+          "art": "die",
+          "wort": "Beleuchtung",
+          "pl": "die Beleuchtungen",
+          "en": "lighting"
+        },
+        {
+          "art": "die",
+          "wort": "Verschwendung",
+          "pl": "die Verschwendungen",
+          "en": "waste"
+        },
+        {
+          "art": "der",
+          "wort": "Anwohner",
+          "pl": "die Anwohner",
+          "en": "local resident"
+        },
+        {
+          "art": "die",
+          "wort": "Umgebung",
+          "pl": "die Umgebungen",
+          "en": "surroundings"
+        },
+        { "art": "der", "wort": "Ersatzverkehr", "pl": "—", "en": "replacement service" }
+      ]
+    },
+    {
+      "gruppe": "Bildung und Sprache",
+      "eintraege": [
+        {
+          "art": "der",
+          "wort": "Bildungsweg",
+          "pl": "die Bildungswege",
+          "en": "educational path"
+        },
+        {
+          "art": "die",
+          "wort": "Ausbildung",
+          "pl": "die Ausbildungen",
+          "en": "vocational training"
+        },
+        {
+          "art": "der",
+          "wort": "Abbruch",
+          "pl": "die Abbrüche",
+          "en": "drop-out, discontinuation"
+        },
+        {
+          "art": "die",
+          "wort": "Unterweisung",
+          "pl": "die Unterweisungen",
+          "en": "instruction, briefing"
+        },
+        { "art": "der", "wort": "Vortrag", "pl": "die Vorträge", "en": "talk, lecture" },
+        {
+          "art": "die",
+          "wort": "Gliederung",
+          "pl": "die Gliederungen",
+          "en": "structure, outline"
+        },
+        {
+          "art": "die",
+          "wort": "Aufmerksamkeit",
+          "pl": "die Aufmerksamkeiten",
+          "en": "attention"
+        },
+        {
+          "art": "der",
+          "wort": "Wortschatz",
+          "pl": "die Wortschätze",
+          "en": "vocabulary"
+        },
+        {
+          "art": "die",
+          "wort": "Bezeichnung",
+          "pl": "die Bezeichnungen",
+          "en": "term, designation"
+        },
+        { "art": "die", "wort": "Fähigkeit", "pl": "die Fähigkeiten", "en": "ability" },
+        {
+          "art": "die",
+          "wort": "Kenntnis",
+          "pl": "die Kenntnisse",
+          "en": "knowledge, command"
+        },
+        {
+          "art": "das",
+          "wort": "Vokabular",
+          "pl": "die Vokabularien",
+          "en": "vocabulary (of a field)"
+        }
+      ]
+    },
+    {
+      "gruppe": "Recht, Ordnung und Verwaltung",
+      "eintraege": [
+        {
+          "art": "die",
+          "wort": "Ordnung",
+          "pl": "die Ordnungen",
+          "en": "regulations, rules"
+        },
+        {
+          "art": "der",
+          "wort": "Geltungsbereich",
+          "pl": "die Geltungsbereiche",
+          "en": "scope of application"
+        },
+        {
+          "art": "der",
+          "wort": "Paragraph",
+          "pl": "die Paragraphen",
+          "en": "section, paragraph"
+        },
+        { "art": "die", "wort": "Haftung", "pl": "die Haftungen", "en": "liability" },
+        {
+          "art": "der",
+          "wort": "Versicherungsschutz",
+          "pl": "—",
+          "en": "insurance cover"
+        },
+        { "art": "die", "wort": "Frist", "pl": "die Fristen", "en": "deadline, period" },
+        {
+          "art": "der",
+          "wort": "Antrag",
+          "pl": "die Anträge",
+          "en": "application, motion"
+        },
+        {
+          "art": "die",
+          "wort": "Zustimmung",
+          "pl": "die Zustimmungen",
+          "en": "consent, approval"
+        },
+        {
+          "art": "die",
+          "wort": "Verpflichtung",
+          "pl": "die Verpflichtungen",
+          "en": "obligation"
+        },
+        {
+          "art": "der",
+          "wort": "Nachweis",
+          "pl": "die Nachweise",
+          "en": "proof, certificate"
+        },
+        {
+          "art": "die",
+          "wort": "Entsorgung",
+          "pl": "die Entsorgungen",
+          "en": "disposal"
+        },
+        { "art": "der", "wort": "Zugang", "pl": "die Zugänge", "en": "access" },
+        { "art": "die", "wort": "Ausnahme", "pl": "die Ausnahmen", "en": "exception" },
+        {
+          "art": "die",
+          "wort": "Vorschrift",
+          "pl": "die Vorschriften",
+          "en": "regulation"
+        }
+      ]
+    },
+    {
+      "gruppe": "Abstrakte Nomen — das, was Meinungstexte tragen",
+      "eintraege": [
+        { "art": "das", "wort": "Hindernis", "pl": "die Hindernisse", "en": "obstacle" },
+        { "art": "die", "wort": "Wirkung", "pl": "die Wirkungen", "en": "effect" },
+        { "art": "die", "wort": "Folge", "pl": "die Folgen", "en": "consequence" },
+        { "art": "der", "wort": "Vorteil", "pl": "die Vorteile", "en": "advantage" },
+        { "art": "der", "wort": "Nachteil", "pl": "die Nachteile", "en": "disadvantage" },
+        { "art": "die", "wort": "Bedingung", "pl": "die Bedingungen", "en": "condition" },
+        { "art": "der", "wort": "Anlass", "pl": "die Anlässe", "en": "occasion, reason" },
+        { "art": "der", "wort": "Zweck", "pl": "die Zwecke", "en": "purpose" },
+        { "art": "die", "wort": "Absicht", "pl": "die Absichten", "en": "intention" },
+        { "art": "der", "wort": "Zweifel", "pl": "die Zweifel", "en": "doubt" },
+        { "art": "die", "wort": "Vereinsamung", "pl": "—", "en": "growing isolation" },
+        {
+          "art": "die",
+          "wort": "Reichweite",
+          "pl": "die Reichweiten",
+          "en": "reach, scope"
+        },
+        {
+          "art": "der",
+          "wort": "Besitz",
+          "pl": "die Besitztümer",
+          "en": "possession, ownership"
+        },
+        {
+          "art": "der",
+          "wort": "Widerstand",
+          "pl": "die Widerstände",
+          "en": "resistance"
+        }
+      ]
+    }
+  ],
+
+  "adjektive": [
+    {
+      "wort": "zuverlässig",
+      "gegenteil": "unzuverlässig",
+      "en": "reliable / unreliable"
+    },
+    { "wort": "eindeutig", "gegenteil": "mehrdeutig", "en": "unambiguous / ambiguous" },
+    { "wort": "einseitig", "gegenteil": "ausgewogen", "en": "one-sided / balanced" },
+    {
+      "wort": "erheblich",
+      "gegenteil": "geringfügig",
+      "en": "considerable / negligible"
+    },
+    { "wort": "vorläufig", "gegenteil": "endgültig", "en": "provisional / final" },
+    {
+      "wort": "freiwillig",
+      "gegenteil": "verpflichtend",
+      "en": "voluntary / compulsory"
+    },
+    { "wort": "üblich", "gegenteil": "ungewöhnlich", "en": "usual / unusual" },
+    {
+      "wort": "wesentlich",
+      "gegenteil": "nebensächlich",
+      "en": "essential / incidental"
+    },
+    { "wort": "umstritten", "gegenteil": "unbestritten", "en": "contested / undisputed" },
+    {
+      "wort": "nachvollziehbar",
+      "gegenteil": "unverständlich",
+      "en": "comprehensible / baffling"
+    },
+    {
+      "wort": "aufwendig",
+      "gegenteil": "unkompliziert",
+      "en": "elaborate / straightforward"
+    },
+    { "wort": "umständlich", "gegenteil": "praktisch", "en": "cumbersome / practical" },
+    { "wort": "vorsichtig", "gegenteil": "leichtsinnig", "en": "careful / reckless" },
+    { "wort": "gründlich", "gegenteil": "oberflächlich", "en": "thorough / superficial" },
+    {
+      "wort": "verbindlich",
+      "gegenteil": "unverbindlich",
+      "en": "binding / non-binding"
+    },
+    { "wort": "angemessen", "gegenteil": "übertrieben", "en": "appropriate / excessive" },
+    { "wort": "belastet", "gegenteil": "unbelastet", "en": "burdened / unburdened" },
+    {
+      "wort": "bemerkenswert",
+      "gegenteil": "unauffällig",
+      "en": "remarkable / inconspicuous"
+    },
+    { "wort": "ernüchternd", "gegenteil": "ermutigend", "en": "sobering / encouraging" },
+    { "wort": "unverzüglich", "gegenteil": "verzögert", "en": "immediate / delayed" },
+    { "wort": "übertragbar", "gegenteil": "persönlich", "en": "transferable / personal" },
+    { "wort": "seriös", "gegenteil": "unseriös", "en": "reputable / dubious" },
+    { "wort": "gleichmäßig", "gegenteil": "unregelmäßig", "en": "steady / irregular" },
+    {
+      "wort": "spürbar",
+      "gegenteil": "kaum merklich",
+      "en": "noticeable / barely perceptible"
+    },
+    { "wort": "schlicht", "gegenteil": "aufwändig gestaltet", "en": "plain / elaborate" },
+    { "wort": "knapp", "gegenteil": "ausführlich", "en": "brief / detailed" },
+    { "wort": "vergleichbar", "gegenteil": "einzigartig", "en": "comparable / unique" },
+    { "wort": "sinnvoll", "gegenteil": "sinnlos", "en": "sensible / pointless" },
+    {
+      "wort": "wahrscheinlich",
+      "gegenteil": "ausgeschlossen",
+      "en": "likely / out of the question"
+    },
+    { "wort": "zulässig", "gegenteil": "untersagt", "en": "permitted / prohibited" },
+    { "wort": "notwendig", "gegenteil": "entbehrlich", "en": "necessary / dispensable" },
+    { "wort": "abhängig", "gegenteil": "unabhängig", "en": "dependent / independent" },
+    { "wort": "sorgfältig", "gegenteil": "nachlässig", "en": "meticulous / negligent" },
+    {
+      "wort": "überzeugend",
+      "gegenteil": "fragwürdig",
+      "en": "convincing / questionable"
+    },
+    { "wort": "dringend", "gegenteil": "aufschiebbar", "en": "urgent / deferrable" },
+    { "wort": "zurückhaltend", "gegenteil": "aufdringlich", "en": "reserved / pushy" }
+  ],
+
+  "kleineWoerter": [
+    {
+      "gruppe": "Einräumen und einschränken (das B2-Kernstück)",
+      "woerter": "allerdings · jedoch · dennoch · gleichwohl · zwar … aber · immerhin · zumindest · insofern · es sei denn · abgesehen davon"
+    },
+    {
+      "gruppe": "Begründen und folgern",
+      "woerter": "da · zumal · nämlich · folglich · infolgedessen · demnach · somit · daher · aus diesem Grund"
+    },
+    {
+      "gruppe": "Gegenüberstellen",
+      "woerter": "während · wohingegen · im Gegensatz dazu · demgegenüber · umgekehrt · einerseits … andererseits · vielmehr"
+    },
+    {
+      "gruppe": "Grad und Menge — präziser als „sehr“",
+      "woerter": "erheblich · deutlich · geringfügig · weitgehend · überwiegend · nahezu · knapp · gut ein Drittel · rund · durchschnittlich"
+    },
+    {
+      "gruppe": "Vorsichtig formulieren (im Vortrag Gold wert)",
+      "woerter": "offenbar · vermutlich · anscheinend · tendenziell · in der Regel · meines Erachtens · soweit ich weiß · alles in allem"
+    },
+    {
+      "gruppe": "Reihenfolge und Gliederung",
+      "woerter": "zunächst · anschließend · im Folgenden · abschließend · zum einen … zum anderen · erstens · schließlich · damit komme ich zu"
+    },
+    {
+      "gruppe": "Verweisen und aufgreifen",
+      "woerter": "dabei · dadurch · davon · darauf · dagegen · hierbei · diesbezüglich · was das betrifft"
+    },
+    {
+      "gruppe": "Feste Wendungen, die überall passen",
+      "woerter": "in Bezug auf · im Hinblick auf · unter Umständen · in erster Linie · nicht zuletzt · im Wesentlichen · mit anderen Worten · das heißt"
+    }
+  ]
+}

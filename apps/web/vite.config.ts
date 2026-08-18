@@ -11,7 +11,7 @@ export default defineConfig({
   base,
   resolve: {
     alias: {
-      '@b1/core': fileURLToPath(
+      '@pruefung/core': fileURLToPath(
         new URL('../../packages/core/src/index.ts', import.meta.url),
       ),
     },
@@ -23,10 +23,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'B1-Prüfungstrainer',
-        short_name: 'B1-Trainer',
+        name: 'GermanExamTrainer — Deutsch B1 & B2',
+        short_name: 'GermanExamTrainer',
         description:
-          'Übungsprüfungen im Format der deutschen B1-Zertifikatsprüfungen — mit Timer, Hörtexten und automatischer Auswertung.',
+          'Übungsprüfungen im Format der deutschen B1- und B2-Zertifikatsprüfungen — mit Timer, Hörtexten und automatischer Auswertung.',
         lang: 'de',
         start_url: base,
         scope: base,

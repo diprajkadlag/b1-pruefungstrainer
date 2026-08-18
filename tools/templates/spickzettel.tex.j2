@@ -4,7 +4,7 @@
 % runs narrower margins and a smaller body size: it is a reference the student
 % flicks through, and page turns cost more here than white space does.
 \documentclass[10pt,a4paper]{article}
-\usepackage{b1pruefung}
+\usepackage{pruefung}
 \usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -12,7 +12,7 @@
 
 \geometry{top=2.1cm,bottom=1.9cm,left=1.6cm,right=1.6cm,headheight=22pt}
 
-\pruefungstitel{B1 Spickzettel}
+\pruefungstitel{<< stufe >> Spickzettel}
 \modulname{Strategie · Redemittel · Grammatik · Wortschatz}
 \niveaustufe{B1}
 
@@ -26,10 +26,10 @@
 \newcommand{\spickteil}[2]{%
   \needspace{6\baselineskip}
   \vspace{0.9em}
-  \begin{tcolorbox}[colback=b1rule,colframe=b1rule,boxrule=0pt,arc=2pt,
+  \begin{tcolorbox}[colback=pruefrule,colframe=pruefrule,boxrule=0pt,arc=2pt,
                     left=9pt,right=9pt,top=5pt,bottom=5pt]
     {\large\bfseries\color{white}#1}%
-    \hfill{\small\color{b1edge}#2}
+    \hfill{\small\color{pruefedge}#2}
   \end{tcolorbox}
   \vspace{0.2em}
 }
@@ -37,13 +37,13 @@
 \newcommand{\spickunter}[1]{%
   \needspace{4\baselineskip}
   \vspace{0.5em}
-  {\bfseries\color{b1rule}#1}\par
-  \vspace{0.1em}{\color{b1edge}\hrule height 0.7pt}\vspace{0.35em}
+  {\bfseries\color{pruefrule}#1}\par
+  \vspace{0.1em}{\color{pruefedge}\hrule height 0.7pt}\vspace{0.35em}
 }
 
 % \merke{body} — the rule worth carrying into the exam hall.
 \newcommand{\merke}[1]{%
-  \begin{tcolorbox}[colback=b1soft,colframe=b1mark,boxrule=0pt,arc=1pt,
+  \begin{tcolorbox}[colback=pruefsoft,colframe=pruefmark,boxrule=0pt,arc=1pt,
                     leftrule=2.5pt,left=8pt,right=8pt,top=5pt,bottom=5pt,
                     before skip=5pt,after skip=6pt]
     \small #1
@@ -55,28 +55,28 @@
 % needspace's page-breaking test does not apply and upsets column balancing.
 \newcommand{\redeblock}[2]{%
   \par\vspace{0.35em}
-  {\small\bfseries\color{b1mark}#1}\par\vspace{0.1em}
+  {\small\bfseries\color{pruefmark}#1}\par\vspace{0.1em}
   \begin{list}{}{\leftmargin=0.9em\itemsep=1pt\parsep=0pt\topsep=1pt
                  \labelsep=0.35em\labelwidth=0.55em}
     #2
   \end{list}
 }
-\newcommand{\redesatz}[1]{\item[\color{b1edge}\textbullet] \small #1}
+\newcommand{\redesatz}[1]{\item[\color{pruefedge}\textbullet] \small #1}
 
 % Wrong-versus-right pair for the writing error list.
 \newcommand{\fehlerzeile}[3]{%
   \par\vspace{0.3em}
-  {\small\color{b1mute}$\times$\ #1}\par
-  {\small\color{b1mark}$\checkmark$\ \textbf{#2}}\par
-  {\footnotesize\color{b1mute}#3}\par
+  {\small\color{pruefmute}$\times$\ #1}\par
+  {\small\color{pruefmark}$\checkmark$\ \textbf{#2}}\par
+  {\footnotesize\color{pruefmute}#3}\par
 }
 
 \begin{document}
 
-\begin{tcolorbox}[colback=b1soft,colframe=b1rule,boxrule=1pt,arc=2pt,
+\begin{tcolorbox}[colback=pruefsoft,colframe=pruefrule,boxrule=1pt,arc=2pt,
                   left=10pt,right=10pt,top=9pt,bottom=9pt]
   {\LARGE\bfseries << titel|tex >>}\\[3pt]
-  {\small\color{b1mute}<< untertitel|tex >>}
+  {\small\color{pruefmute}<< untertitel|tex >>}
 \end{tcolorbox}
 
 \hinweisblock
@@ -127,12 +127,12 @@
 \spickteil{2 · Strategie für die vier Module}{Was man macht, bevor man kann}
 
 <% for s in strategie %>
-\spickunter{<< s.modul|tex >>  ·  {\normalfont\small\color{b1mute}<< s.zeitplan|tex >>}}
+\spickunter{<< s.modul|tex >>  ·  {\normalfont\small\color{pruefmute}<< s.zeitplan|tex >>}}
 
 \begin{list}{}{\leftmargin=1.2em\itemsep=2pt\parsep=0pt\topsep=2pt
                \labelsep=0.4em\labelwidth=0.8em}
 <% for g in s.goldregeln %>
-  \item[\color{b1mark}\textbf{\textbullet}] \small << g|betont >>
+  \item[\color{pruefmark}\textbf{\textbullet}] \small << g|betont >>
 <% endfor %>
 \end{list}
 
@@ -152,9 +152,9 @@
 \vspace{0.3em}
 <% for a in s.aufgaben %>
 \needspace{5\baselineskip}
-{\small\bfseries\color{b1mark}<< a.aufgabe|tex >>}\par
+{\small\bfseries\color{pruefmark}<< a.aufgabe|tex >>}\par
 {\footnotesize\textbf{Aufbau:} << a.aufbau|tex >>}\par
-{\footnotesize\color{b1mute}<< a.hinweis|betont >>}\par\vspace{0.35em}
+{\footnotesize\color{pruefmute}<< a.hinweis|betont >>}\par\vspace{0.35em}
 <% endfor %>
 <% endif %>
 
@@ -162,10 +162,10 @@
 \vspace{0.3em}
 <% for t in s.teile %>
 \needspace{6\baselineskip}
-{\small\bfseries\color{b1mark}<< t.teil|tex >>}\par
+{\small\bfseries\color{pruefmark}<< t.teil|tex >>}\par
 {\footnotesize\textbf{Ziel:} << t.ziel|tex >>}\par
 {\footnotesize\textbf{Ablauf:} << t.ablauf|tex >>}\par
-{\footnotesize\color{b1mute}\textbf{Achtung:} << t.achtung|betont >>}\par\vspace{0.35em}
+{\footnotesize\color{pruefmute}\textbf{Achtung:} << t.achtung|betont >>}\par\vspace{0.35em}
 <% endfor %>
 <% endif %>
 
@@ -268,7 +268,7 @@
 \endfoot
 <% for g in wortschatz.verben %>
 \addlinespace[2pt]
-\multicolumn{6}{@{}l}{\color{b1mark}\bfseries << g.gruppe|tex >>} \\
+\multicolumn{6}{@{}l}{\color{pruefmark}\bfseries << g.gruppe|tex >>} \\
 \addlinespace[1pt]
 \midrule
 <% for v in g.eintraege %>
@@ -307,7 +307,7 @@
 \endfoot
 <% for g in wortschatz.nomen %>
 \addlinespace[2pt]
-\multicolumn{4}{@{}l}{\color{b1mark}\bfseries << g.gruppe|tex >>} \\
+\multicolumn{4}{@{}l}{\color{pruefmark}\bfseries << g.gruppe|tex >>} \\
 \addlinespace[1pt]
 \midrule
 <% for n in g.eintraege %>
@@ -349,7 +349,7 @@
 
 <% for k in wortschatz.kleineWoerter %>
 \needspace{3\baselineskip}
-{\small\bfseries\color{b1mark}<< k.gruppe|tex >>}\par
+{\small\bfseries\color{pruefmark}<< k.gruppe|tex >>}\par
 {\small << k['woerter']|tex >>}\par\vspace{0.35em}
 <% endfor %>
 

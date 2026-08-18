@@ -8,7 +8,7 @@
  */
 
 import { useState } from 'react';
-import type { Lernhilfe, Tabelle } from '@b1/core';
+import type { Lernhilfe, Tabelle } from '@pruefung/core';
 
 const REITER = [
   'ueberblick',

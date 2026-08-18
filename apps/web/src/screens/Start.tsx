@@ -1,30 +1,40 @@
 import { useEffect, useState } from 'react';
+import { STUFEN, STUFEN_REIHE, type Stufe } from '@pruefung/core';
 import { registryLaden, type RegistryEintrag } from '../lib/content';
 import { alleVersuche, loeschen, type GespeicherterVersuch } from '../lib/db';
 import { Druckbogen } from '../components/Druckbogen';
 
 export type ModulWahl = 'lesen' | 'hoeren' | 'schreiben' | 'sprechen';
 
-const MODULE: { id: ModulWahl; label: string; dauer: string }[] = [
-  { id: 'lesen', label: 'Lesen', dauer: '65 Min.' },
-  { id: 'hoeren', label: 'Hören', dauer: '40 Min.' },
-  { id: 'schreiben', label: 'Schreiben', dauer: '60 Min.' },
-  { id: 'sprechen', label: 'Sprechen', dauer: '15 Min. + 15 Min. Vorbereitung' },
+/** Official order, which is also the order a candidate sits them in. */
+const MODULE: { id: ModulWahl; label: string }[] = [
+  { id: 'lesen', label: 'Lesen' },
+  { id: 'hoeren', label: 'Hören' },
+  { id: 'schreiben', label: 'Schreiben' },
+  { id: 'sprechen', label: 'Sprechen' },
 ];
+
+const STUFE_GESPEICHERT = 'pruefung-stufe';
 
 interface Props {
   onStart: (examId: string, name: string, module: ModulWahl[]) => void;
   onWeiter: (versuchId: string) => void;
   onErgebnis: (versuchId: string) => void;
-  onSpickzettel: () => void;
+  onSpickzettel: (stufe: Stufe) => void;
 }
 
 export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
-  const [hatLernhilfe, setHatLernhilfe] = useState(false);
+  const [lernhilfeStufen, setLernhilfeStufen] = useState<Stufe[]>([]);
   const [versuche, setVersuche] = useState<GespeicherterVersuch[]>([]);
   const [fehler, setFehler] = useState<string | null>(null);
-  const [name, setName] = useState(localStorage.getItem('b1-name') ?? '');
+  // 'b1-name' is what the key was called before the app grew a second level.
+  const [name, setName] = useState(
+    localStorage.getItem('pruefung-name') ?? localStorage.getItem('b1-name') ?? '',
+  );
+  const [stufe, setStufe] = useState<Stufe>(
+    (localStorage.getItem(STUFE_GESPEICHERT) as Stufe | null) ?? 'B1',
+  );
   const [examId, setExamId] = useState('');
   const [module, setModule] = useState<ModulWahl[]>(['lesen', 'hoeren']);
 
@@ -32,8 +42,7 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
     registryLaden()
       .then((r) => {
         setPruefungen(r.pruefungen);
-        setHatLernhilfe(Boolean(r.hatLernhilfe));
-        setExamId((cur) => cur || (r.pruefungen[0]?.id ?? ''));
+        setLernhilfeStufen(r.lernhilfeStufen ?? []);
       })
       .catch(() =>
         setFehler(
@@ -44,7 +53,25 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
     void alleVersuche().then(setVersuche);
   }, []);
 
-  const gewaehlt = pruefungen.find((p) => p.id === examId);
+  // Only papers of the chosen level, and never a selection left over from the
+  // other one — switching level must not silently start a B1 paper from a B2 tab.
+  const sichtbar = pruefungen.filter((p) => p.stufe === stufe);
+  useEffect(() => {
+    setExamId((cur) =>
+      sichtbar.some((p) => p.id === cur) ? cur : (sichtbar[0]?.id ?? ''),
+    );
+  }, [stufe, pruefungen.length]);
+
+  const gewaehlt = sichtbar.find((p) => p.id === examId);
+  const format = STUFEN[stufe];
+  const angeboteneStufen = STUFEN_REIHE.filter((s) =>
+    pruefungen.some((p) => p.stufe === s),
+  );
+
+  function stufeWaehlen(neu: Stufe) {
+    setStufe(neu);
+    localStorage.setItem(STUFE_GESPEICHERT, neu);
+  }
 
   function umschalten(id: ModulWahl) {
     setModule((m) => (m.includes(id) ? m.filter((x) => x !== id) : [...m, id]));
@@ -52,7 +79,7 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
 
   function starten() {
     if (!examId || module.length === 0) return;
-    localStorage.setItem('b1-name', name);
+    localStorage.setItem('pruefung-name', name);
     onStart(
       examId,
       name,
@@ -71,17 +98,39 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
 
       {fehler && <p className="fehler">{fehler}</p>}
 
-      {hatLernhilfe && (
+      {angeboteneStufen.length > 1 && (
+        <div className="stufenwahl" role="tablist" aria-label="Prüfungsniveau">
+          {angeboteneStufen.map((s) => (
+            <button
+              key={s}
+              type="button"
+              role="tab"
+              aria-selected={stufe === s}
+              className={`stufe ${stufe === s ? 'stufe--aktiv' : ''}`}
+              onClick={() => stufeWaehlen(s)}
+            >
+              <strong>{s}</strong>
+              <span className="stufe__kurz">{STUFEN[s].kurz}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {lernhilfeStufen.includes(stufe) && (
         <section className="teil spick__einstieg">
           <div>
-            <h2>Spickzettel</h2>
+            <h2>Spickzettel {stufe}</h2>
             <p className="notiz">
               Strategie für alle vier Module, Redemittel für Sprechen und Schreiben,
               Grammatik in Tabellen und der Grundwortschatz mit allen Verbformen. Zum
               Nachschlagen, ohne eine Prüfung zu starten.
             </p>
           </div>
-          <button type="button" className="knopf knopf--primaer" onClick={onSpickzettel}>
+          <button
+            type="button"
+            className="knopf knopf--primaer"
+            onClick={() => onSpickzettel(stufe)}
+          >
             Spickzettel öffnen
           </button>
         </section>
@@ -151,7 +200,7 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
         </label>
 
         <div className="pruefungswahl">
-          {pruefungen.map((p) => (
+          {sichtbar.map((p) => (
             <button
               type="button"
               key={p.id}
@@ -182,7 +231,7 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
                 onChange={() => umschalten(m.id)}
               />
               <span className="modulkarte__name">{m.label}</span>
-              <span className="modulkarte__dauer">{m.dauer}</span>
+              <span className="modulkarte__dauer">{format.module[m.id].anzeige}</span>
             </label>
           ))}
         </fieldset>

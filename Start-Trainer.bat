@@ -1,13 +1,13 @@
 @echo off
 setlocal EnableDelayedExpansion
-title B1-Pruefungstrainer
+title GermanExamTrainer
 
 rem  Start the trainer from a fresh clone. Double-click this file.
 rem
 rem  It installs what is missing, builds the app, and opens it in the browser.
 rem  The first run takes a few minutes; later runs take seconds.
 rem
-rem  Not to be confused with tools\Start-B1-Trainer.cmd, which is a different
+rem  Not to be confused with tools\Start-Trainer.cmd, which is a different
 rem  and much smaller script: that one ships inside the portable ZIP, where the
 rem  app is already built and only needs a web server.
 rem
@@ -22,7 +22,7 @@ set URL=http://localhost:%PORT%/
 set REPO=https://github.com/diprajkadlag/b1-pruefungstrainer
 
 echo.
-echo   B1-Pruefungstrainer
+echo   GermanExamTrainer  -  Deutsch B1 und B2
 echo   ===================
 echo.
 
@@ -96,17 +96,17 @@ rem  The release carries them and the whole set is about 5 MB, so there is no
 rem  reason to ask. Without them the app simply offers no print links.
 
 if exist "content\exams\pruefung-01\pdf" goto :pdf_ok
-if /i "%B1_SKIP_DOWNLOADS%"=="1" goto :pdf_ok
+if /i "%PRUEF_SKIP_DOWNLOADS%"=="1" goto :pdf_ok
 where curl >nul 2>&1 || goto :pdf_ok
 where tar  >nul 2>&1 || goto :pdf_ok
 
 echo   ... fetching the printable papers ^(about 5 MB^)
-curl -sSL -o "%TEMP%\b1-pdfs.zip" "%REPO%/releases/latest/download/pdfs.zip"
+curl -sSL -o "%TEMP%\pruef-pdfs.zip" "%REPO%/releases/latest/download/pdfs.zip"
 if not errorlevel 1 (
   rem  The archive stores full relative paths, so it unpacks straight into
   rem  content\exams\...\pdf and content\lernhilfe\pdf.
-  tar -xf "%TEMP%\b1-pdfs.zip"
-  del /q "%TEMP%\b1-pdfs.zip" >nul 2>&1
+  tar -xf "%TEMP%\pruef-pdfs.zip"
+  del /q "%TEMP%\pruef-pdfs.zip" >nul 2>&1
 )
 
 :pdf_ok
@@ -119,8 +119,8 @@ rem  several minutes per paper. Downloading the finished tracks from the
 rem  release is far quicker. Reading, writing and speaking work without it.
 
 if exist "content\exams\pruefung-01\audio" goto :audio_ok
-if /i "%B1_SKIP_AUDIO%"=="1" goto :audio_skipped
-if /i "%B1_SKIP_DOWNLOADS%"=="1" goto :audio_skipped
+if /i "%PRUEF_SKIP_AUDIO%"=="1" goto :audio_skipped
+if /i "%PRUEF_SKIP_DOWNLOADS%"=="1" goto :audio_skipped
 
 echo.
 echo   The listening tracks are not in the repository - they are too big.
@@ -134,15 +134,17 @@ where curl >nul 2>&1 || goto :audio_no_tools
 where tar  >nul 2>&1 || goto :audio_no_tools
 
 echo.
-for %%P in (01 02 03 04 05) do (
-  echo   Downloading audio for Pruefung %%P...
-  if not exist "content\exams\pruefung-%%P\audio" mkdir "content\exams\pruefung-%%P\audio"
-  curl -sSL -o "%TEMP%\b1-audio-%%P.zip" "%REPO%/releases/latest/download/audio-pruefung-%%P.zip"
+rem  Every paper that ships, at either level. The release names its audio
+rem  archive after the paper id, so this list is the only thing to extend.
+for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03) do (
+  echo   Downloading audio for %%P...
+  if not exist "content\exams\%%P\audio" mkdir "content\exams\%%P\audio"
+  curl -sSL -o "%TEMP%\pruef-audio-%%P.zip" "%REPO%/releases/latest/download/audio-%%P.zip"
   if errorlevel 1 (
     echo   ... download failed, skipping.
   ) else (
-    tar -xf "%TEMP%\b1-audio-%%P.zip" -C "content\exams\pruefung-%%P\audio"
-    del /q "%TEMP%\b1-audio-%%P.zip" >nul 2>&1
+    tar -xf "%TEMP%\pruef-audio-%%P.zip" -C "content\exams\%%P\audio"
+    del /q "%TEMP%\pruef-audio-%%P.zip" >nul 2>&1
   )
 )
 goto :audio_ok
@@ -168,7 +170,7 @@ rem --------------------------------------------------------------------------
 :build
 echo   [4/5] Preparing the exams and building the app...
 
-call npm run build --workspace=@b1/core >nul
+call npm run build --workspace=@pruefung/core >nul
 if errorlevel 1 (
   echo   [X] Building the scoring package failed.
   pause
@@ -182,7 +184,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-call npm run build --workspace=@b1/web
+call npm run build --workspace=@pruefung/web
 if errorlevel 1 (
   echo   [X] Building the app failed.
   pause
@@ -202,6 +204,6 @@ rem  Open the browser only once the server actually answers, rather than
 rem  racing it and landing on a connection error.
 start "" /b cmd /c "for /l %%i in (1,1,60) do (curl -s -o nul %URL% && (start %URL% & exit) || timeout /t 1 /nobreak >nul)"
 
-call npm run preview --workspace=@b1/web -- --port %PORT% --strictPort
+call npm run preview --workspace=@pruefung/web -- --port %PORT% --strictPort
 
 endlocal
