@@ -878,13 +878,13 @@
             "nr": 3,
             "typ": "richtig_falsch",
             "abschnitt": "text_2",
-            "frage": "Wegen des Gatewechsels startet der Flug später.",
-            "loesung": "falsch",
-            "beleg": "Der Abflug verschiebt sich dadurch nicht.",
+            "frage": "Der Weg zum neuen Gate dauert etwa eine Viertelstunde.",
+            "loesung": "richtig",
+            "beleg": "Der Weg dorthin führt über die Ebene eins und dauert etwa fünfzehn Minuten.",
             "kompetenz": "detailverstehen",
             "begruendung": {
-              "de": "Das Gate ändert sich, die Abflugzeit nicht — die Durchsage sagt es in einem eigenen Satz.",
-              "en": "A fifteen-minute walk is announced, which sounds like a delay but is not one."
+              "de": "Fünfzehn Minuten sind eine Viertelstunde; die Ansage nennt die Dauer unmittelbar nach dem neuen Gate.",
+              "en": "The announcement gives minutes and the statement gives a quarter of an hour — the same figure in a different unit, which is the whole step."
             }
           },
           {
@@ -940,13 +940,13 @@
             "nr": 7,
             "typ": "richtig_falsch",
             "abschnitt": "text_4",
-            "frage": "Das braune Wasser nach dem Anstellen ist ein Grund zur Sorge.",
-            "loesung": "falsch",
+            "frage": "Dass das Wasser am Anfang bräunlich ist, ist normal.",
+            "loesung": "richtig",
             "beleg": "In den ersten Minuten kann das Wasser bräunlich sein, das ist unbedenklich.",
             "kompetenz": "detailverstehen",
             "begruendung": {
-              "de": "Der Hausverwalter kündigt die Verfärbung an und nennt sie im selben Satz unbedenklich.",
-              "en": "Announced and defused together — hearing only the first half produces the opposite answer."
+              "de": "„Unbedenklich“ heißt genau das: kein Grund zur Sorge. Die Verfärbung wird angekündigt und im selben Satz entschärft.",
+              "en": "Announced and defused in one sentence. Hearing only the first half — the water turns brown — produces the opposite answer."
             }
           },
           {

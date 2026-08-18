@@ -98,6 +98,16 @@ Exam content is versioned separately, per paper, in each `exam.json`
 
 ### Fixed
 
+- **Three parts could be answered without reading them.** An audit of the answer
+  keys found a listening part whose five multiple-choice items were all keyed
+  `b`, another whose five true/false items were all `falsch`, and — in the
+  shipped `pruefung-05` — a reading part that was five *falsch* to one *richtig*.
+  A candidate could tick one answer down the column and score them. All three
+  are fixed, `validate.py` now refuses any part where one answer exceeds 80 % of
+  the items, and `new_exam.py` rotates its placeholder keys so a scaffold cannot
+  start out that way. `pruefung-05` goes to contentVersion 1.1.0; the other two
+  were unreleased.
+
 - `generate_audio.py` died on the first status line on any Windows console,
   before writing a single track: it prints an arrow and German role names but
   never reconfigured stdout to UTF-8, unlike the other tools. A test now asserts

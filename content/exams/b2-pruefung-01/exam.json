@@ -893,11 +893,11 @@
             "abschnitt": "text_2",
             "frage": "Was sollen Reisende mit Anschluss nach Sallberg tun?",
             "optionen": {
-              "a": "Am Vorplatz in den Ersatzbus steigen.",
-              "b": "Einen späteren Zug von Gleis drei nehmen.",
+              "a": "Einen späteren Zug von Gleis drei nehmen.",
+              "b": "Am Vorplatz in den Ersatzbus steigen.",
               "c": "Ihre Fahrkarte am Schalter umtauschen."
             },
-            "loesung": "b",
+            "loesung": "a",
             "beleg": "Reisende mit Anschluss nach Sallberg nutzen bitte den Zug um achtzehn Uhr neunundvierzig von Gleis drei, der heute in Weidenbach zusätzlich hält.",
             "kompetenz": "selektivverstehen",
             "begruendung": {
@@ -925,15 +925,15 @@
             "frage": "Was hat der Stadtrat zusätzlich zur Verlängerung beschlossen?",
             "optionen": {
               "a": "Eine Ausweitung der Sperrung auf weitere Straßen.",
-              "b": "Ein Zeitfenster für Lieferungen am Morgen.",
-              "c": "Eine dauerhafte Sperrung ohne weitere Prüfung."
+              "b": "Eine dauerhafte Sperrung ohne weitere Prüfung.",
+              "c": "Ein Zeitfenster für Lieferungen am Morgen."
             },
-            "loesung": "b",
+            "loesung": "c",
             "beleg": "Der Stadtrat hat die Sperrung deshalb um ein Jahr verlängert, gleichzeitig aber ein Lieferfenster bis halb neun beschlossen.",
             "kompetenz": "detailverstehen",
             "begruendung": {
               "de": "Das Lieferfenster ist die Antwort auf das im Satz davor genannte Problem der Lieferanten.",
-              "en": "c is ruled out by the last sentence: the final decision is still a year away."
+              "en": "b is ruled out by the last sentence: the final decision is still a year away."
             }
           },
           {
@@ -955,11 +955,11 @@
             "abschnitt": "text_4",
             "frage": "Was muss Robert früher erledigen als bisher gedacht?",
             "optionen": {
-              "a": "Den Beamer in den Seminarraum bringen.",
-              "b": "Seine Zahlen für die Personalplanung liefern.",
+              "a": "Seine Zahlen für die Personalplanung liefern.",
+              "b": "Den Beamer in den Seminarraum bringen.",
               "c": "Den Raum für die Tagung reservieren."
             },
-            "loesung": "b",
+            "loesung": "a",
             "beleg": "Das heißt, deine Zahlen brauche ich schon morgen Abend, nicht erst Mittwochfrüh.",
             "kompetenz": "detailverstehen",
             "begruendung": {

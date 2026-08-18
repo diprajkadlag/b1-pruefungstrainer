@@ -39,6 +39,10 @@ MODULNAMEN = ("Lesen", "Hören", "Schreiben", "Sprechen")
 GESAMT_ITEMS = 30
 BESTEHENSGRENZE = 60
 
+# Share of one answer within a part above which the part stops measuring
+# anything. See check_schluesselverteilung for why it is this loose.
+MAX_GLEICHE_LOESUNG = 0.8
+
 NARRATOR = "Sprecher"
 
 
@@ -423,6 +427,8 @@ def check_lesen(exam: dict[str, Any], spec: Format, rep: Report) -> None:
         else:
             check_lesen_teil_b2(idx, teil, spec, w, rep)
 
+        check_schluesselverteilung(teil, w, rep)
+
         if idx not in spec.lesen_ohne_beispiel and not teil.get("beispiel"):
             rep.warn(w, "no Beispiel - this Teil shows a worked example in the real paper")
 
@@ -641,6 +647,8 @@ def check_hoeren(exam: dict[str, Any], spec: Format, rep: Report) -> None:
             for item in items:
                 check_item(item, erwarteter_typ, f"{w}/item{item['nr']}", rep)
 
+        check_schluesselverteilung(teil, w, rep)
+
         if teil["nummer"] == spec.hoeren_zuordnung_teil:
             check_mehrere_sprecher(teil, w, rep)
 
@@ -743,6 +751,37 @@ def check_item(item: dict[str, Any], expected_typ: str, w: str, rep: Report) -> 
         opts = [normalise(v) for v in item["optionen"].values()]
         if len(set(opts)) != len(opts):
             rep.error(w, "two answer options are identical")
+
+
+def check_schluesselverteilung(teil: dict[str, Any], w: str, rep: Report) -> None:
+    """Refuse a part whose answers are effectively one answer.
+
+    A candidate who notices that every multiple-choice item in a part is keyed
+    'b' can tick 'b' five times and score full marks without reading anything.
+    That is not a stylistic complaint; it is a hole in the measurement.
+
+    The threshold is deliberately loose. Real papers are not evenly balanced —
+    a true/false part running four-to-two is ordinary — so only a part that is
+    *essentially* single-answer fails. Anything tighter would reject valid
+    papers and tempt authors to key items by arithmetic instead of by evidence.
+
+    Matching tasks are exempt: their letters are already forced to be distinct.
+    """
+    nach_typ: dict[str, list[str]] = {}
+    for item in teil["items"]:
+        if item["typ"] in ("zuordnung_anzeigen", "zuordnung_buchstabe"):
+            continue
+        nach_typ.setdefault(item["typ"], []).append(item["loesung"])
+
+    for typ, keys in nach_typ.items():
+        if len(keys) < 4:
+            continue
+        haeufigste = max(set(keys), key=keys.count)
+        anteil = keys.count(haeufigste) / len(keys)
+        if anteil > MAX_GLEICHE_LOESUNG:
+            rep.error(w, f"{keys.count(haeufigste)} of {len(keys)} '{typ}' items are "
+                         f"keyed '{haeufigste}' ({anteil:.0%}) - a candidate can tick "
+                         f"one answer throughout and score them without reading")
 
 
 def check_numbering(nrs: list[int], modul: str, rep: Report) -> None:

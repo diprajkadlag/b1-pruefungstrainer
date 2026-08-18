@@ -77,6 +77,12 @@ A good distractor is not random. It is usually one of:
 
 Avoid distractors that are wrong because they are absurd. They test nothing.
 
+And check your keys at the end. If a whole part came out keyed `b`, do not
+re-key an item to fix the arithmetic — that breaks the evidence. Reorder the
+three options instead, or find a different sentence in the same text to ask
+about. The validator will tell you; it is checking the same thing a candidate
+would notice.
+
 ---
 
 ## The specification, as the validator enforces it
@@ -94,6 +100,10 @@ The full table for both levels, with the source of every number, is in
 Also enforced, at whichever level applies:
 
 - Items numbered 1–30 exactly once per module
+- **No part may be answerable without reading it**: within one part, no single
+  answer may account for more than 80 % of the items of the same type. Real
+  papers are lopsided and that is fine — four *falsch* to two *richtig* passes.
+  What fails is a part where every multiple-choice item is keyed `b`.
 - **B1 Lesen Teil 3**: exactly ten ads `a`–`j`, exactly one situation keyed `0`,
   no ad used twice
 - **B2 Lesen Teile 2, 4, 5**: eight lettered alternatives, no letter answering

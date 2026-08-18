@@ -554,3 +554,50 @@ class TestKonsolenKodierung:
             f"{name} prints German text but never reconfigures stdout; "
             f"it will die on a cp1252 console"
         )
+
+
+class TestSchluesselverteilung:
+    """A part whose answers are all the same answer measures nothing.
+
+    Found by auditing the shipped papers: one had five multiple-choice items in
+    a row keyed 'b', another six true/false items of which five were 'falsch'.
+    Both were tickable without reading. The rule is deliberately loose — real
+    papers are lopsided — so these tests pin both ends of it.
+    """
+
+    def teil(self, keys, typ="multiple_choice"):
+        return {"nummer": 1, "items": [{"nr": n, "typ": typ, "loesung": k}
+                                       for n, k in enumerate(keys, start=1)]}
+
+    def fehler(self, keys, typ="multiple_choice"):
+        rep = validate.Report("test")
+        validate.check_schluesselverteilung(self.teil(keys, typ), "w", rep)
+        return rep.errors
+
+    def test_a_single_answer_part_is_rejected(self):
+        assert self.fehler(["b"] * 5)
+
+    def test_five_of_six_is_rejected(self):
+        assert self.fehler(["falsch"] * 5 + ["richtig"], "richtig_falsch")
+
+    def test_an_ordinary_lopsided_part_is_accepted(self):
+        # Four to two is normal in a real paper and must not fail the build.
+        assert not self.fehler(["falsch"] * 4 + ["richtig"] * 2, "richtig_falsch")
+
+    def test_a_short_part_is_not_judged(self):
+        # Three items are too few for the share to mean anything.
+        assert not self.fehler(["a", "a", "a"])
+
+    def test_matching_tasks_are_exempt(self):
+        # Their letters are already forced to be distinct by another rule.
+        assert not self.fehler(["a"] * 6, "zuordnung_buchstabe")
+
+    def test_every_shipped_paper_passes(self):
+        for pfad in sorted((pathlib.Path(__file__).parent.parent / "content" / "exams")
+                           .glob("*/exam.json")):
+            exam = json.loads(pfad.read_text(encoding="utf-8"))
+            for modul in ("lesen", "hoeren"):
+                for teil in exam[modul]["teile"]:
+                    rep = validate.Report(exam["meta"]["id"])
+                    validate.check_schluesselverteilung(teil, f"{modul}/{teil['nummer']}", rep)
+                    assert rep.errors == [], "\n".join(str(f) for f in rep.errors)

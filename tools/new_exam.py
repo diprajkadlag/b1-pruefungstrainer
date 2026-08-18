@@ -109,17 +109,28 @@ B2_GLIEDERUNG = [
 ]
 
 
-def item(nr: int, typ: str, mit_optionen: bool, buchstaben: str = "abc") -> dict[str, Any]:
+# Placeholder keys rotate rather than repeating. Partly so the scaffold passes
+# the distribution check, and partly as a hint: a part whose answers are all the
+# same letter can be ticked without reading it.
+ROTATION = {
+    "richtig_falsch": ("richtig", "falsch"),
+    "ja_nein": ("ja", "nein"),
+    "zuordnung_anzeigen": ("a",),
+    "zuordnung_buchstabe": ("a",),
+}
+
+
+def item(nr: int, typ: str, mit_optionen: bool, buchstaben: str = "abc",
+         dreh: int | None = None) -> dict[str, Any]:
+    # `dreh` exists because the item number is not always a usable rotation
+    # index: in Teil 1 the true/false items are every second number, so keying
+    # off nr alone would give all five the same answer.
+    moeglich = ROTATION.get(typ, tuple(buchstaben))
     eintrag: dict[str, Any] = {
         "nr": nr,
         "typ": typ,
         "frage": f"{TODO}: Frage {nr}",
-        "loesung": {
-            "richtig_falsch": "richtig",
-            "ja_nein": "ja",
-            "zuordnung_anzeigen": "a",
-            "zuordnung_buchstabe": "a",
-        }.get(typ, "a"),
+        "loesung": moeglich[(nr if dreh is None else dreh) % len(moeglich)],
         "beleg": f"{TODO}: der Satz aus dem Text, der diese Lösung beweist",
         "kompetenz": "detailverstehen",
         "begruendung": {
@@ -318,7 +329,8 @@ def fuelle_kurztexte(teil: dict[str, Any], start: int) -> None:
     """Each short text carries one true/false and one multiple-choice item."""
     for i in range(5):
         for j, typ_item in enumerate(("richtig_falsch", "multiple_choice")):
-            eintrag = item(start + i * 2 + j, typ_item, typ_item == "multiple_choice")
+            eintrag = item(start + i * 2 + j, typ_item,
+                           typ_item == "multiple_choice", dreh=i)
             eintrag["abschnitt"] = f"text_{i + 1}"
             teil["items"].append(eintrag)
     teil["beispiel"] = beispiel("richtig_falsch", "richtig")
