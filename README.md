@@ -1,4 +1,4 @@
-# b1-pruefungstrainer
+# GermanExamTrainer
 
 **Free, open-source practice examinations for German B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
 
@@ -113,7 +113,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 
 ## Rebuilding the content
 
-Audio and PDFs are generated, not committed — five papers of listening audio is roughly 200 MB, which does not belong in git. Releases carry them; to build locally:
+Audio and PDFs are generated, not committed — eight papers of listening audio is well over 300 MB, which does not belong in git. Releases carry them; to build locally:
 
 ```bash
 pip install -r tools/requirements.txt

@@ -1,0 +1,2577 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "b2-pruefung-02",
+    "titel": "Übungsprüfung B2 2 — Ernährung, Vereine und Entscheidungen",
+    "stufe": "B2",
+    "variante": "erwachsene",
+    "niveau": "mittel",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": 0,
+    "themen": [
+      "Ernährung und Landwirtschaft",
+      "Kulturgeschichte der Nahrung",
+      "Vereine und Gemeinschaft",
+      "Reisen und Klima",
+      "Boden und Umwelt",
+      "Entscheidungen in Gruppen"
+    ],
+    "autor": "b1-pruefungstrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "zuordnung_person",
+        "anweisung": "Sie lesen in einem Forum, wie vier Menschen über regionale Lebensmittel denken. Auf welche der vier Personen treffen die Aussagen 1 bis 9 zu? Die Personen können mehrmals gewählt werden.",
+        "richtzeitMinuten": 18,
+        "texte": [
+          {
+            "id": "person_a",
+            "buchstabe": "a",
+            "titel": "Ruth Salzmann, Marktbeschickerin",
+            "inhalt": "Ich stehe seit achtzehn Jahren mit Gemüse aus dem Umland auf dem Wochenmarkt, und ich könnte ganze Abende damit füllen, was mir Leute an meinem Stand erzählen. Fast alle sagen, ihnen sei Herkunft wichtig. Was dann im Korb landet, sieht regelmäßig anders aus — spätestens im Februar, wenn es bei mir nur noch Kohl, Rüben und Äpfel gibt.\n\nAm Preis liegt das übrigens seltener, als alle glauben. Mein größtes Problem ist, dass ich dienstags und freitags bis vierzehn Uhr da bin und die meisten Berufstätigen genau dann arbeiten. Wer erst um achtzehn Uhr einkaufen kann, landet zwangsläufig im Supermarkt, ganz gleich, wie überzeugt er ist.\n\nZwei Kolleginnen liefern inzwischen abends in Kisten aus. Das funktioniert erstaunlich gut, und ich überlege ernsthaft mitzumachen."
+          },
+          {
+            "id": "person_b",
+            "buchstabe": "b",
+            "titel": "Dr. Milan Prohaska, Agrarökonom",
+            "inhalt": "Regional und klimafreundlich werden fast immer gleichgesetzt, und das ist in dieser Allgemeinheit falsch. Beim Transport entsteht bei den meisten Lebensmitteln nur ein kleiner Teil der gesamten Klimabelastung; entscheidend ist, wie und wo etwas angebaut wurde, nicht die Entfernung zum Teller.\n\nDas anschaulichste Beispiel sind Tomaten. Eine im beheizten Gewächshaus vor der Haustür gezogene Tomate schneidet in unseren Rechnungen schlechter ab als eine, die im Freiland gewachsen und anschließend mit dem Schiff transportiert worden ist. Bei Äpfeln aus dem Kühllager im Juni sieht es ähnlich aus.\n\nMissverstehen Sie mich nicht: Für kurze Wege sprechen gute Gründe — frische Ware, Geld, das in der Gegend bleibt, Höfe, die es sonst nicht mehr gäbe. Nur sollte man sie nennen, statt sich eine Klimabilanz herbeizureden, die die Zahlen nicht hergeben."
+          },
+          {
+            "id": "person_c",
+            "buchstabe": "c",
+            "titel": "Ines Botterweck, Kantinenleiterin",
+            "inhalt": "Wir haben unsere Kantine mit sechshundert Essen am Tag vor drei Jahren umgestellt, und ich hatte mit ganz anderen Schwierigkeiten gerechnet als denen, die dann kamen. Teurer wurde es kaum — das hatte ich befürchtet und es traf nicht ein.\n\nDie eigentliche Schwierigkeit war die Verlässlichkeit. Ein Großhändler liefert, was auf der Bestellung steht, jeden Tag, in gleicher Qualität. Vier kleine Höfe liefern, was gewachsen ist, und melden sich am Vorabend, wenn der Hagel etwas anderes entschieden hat.\n\nGelöst haben wir es, indem wir den Speiseplan nicht mehr im Voraus festlegen, sondern der Saison folgen und erst freitags für die kommende Woche entscheiden. Das war eine größere Umstellung für mein Team als jede Preisfrage."
+          },
+          {
+            "id": "person_d",
+            "buchstabe": "d",
+            "titel": "Tarek Ünal, Verbraucherschützer",
+            "inhalt": "Der wichtigste Satz in dieser Debatte lautet: „Regional“ ist kein geschützter Begriff. Anders als bei „Bio“ steht dahinter keine Verordnung, keine Kontrolle und keine Mindestanforderung. Wer ein Glas Honig mit einem Fachwerkhaus beklebt und „aus der Region“ darauf schreibt, tut nichts Verbotenes, auch wenn der Honig aus drei Ländern stammt.\n\nDeshalb dringen wir seit Jahren auf eine verbindliche Kennzeichnung: Wie weit ist die Ware gereist, und wo wurde sie verarbeitet? Beides gehört auf die Packung, in Kilometern und Ortsnamen, nicht in Bildern.\n\nSolange das fehlt, verkaufen viele Anbieter kein Lebensmittel, sondern ein Gefühl — und die ehrlichen Betriebe, die tatsächlich vor Ort produzieren, haben davon am wenigsten."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_person",
+          "frage": "Diese Person verkauft selbst auf einem Wochenmarkt.",
+          "optionen": {
+            "a": "Ruth Salzmann",
+            "b": "Milan Prohaska",
+            "c": "Ines Botterweck",
+            "d": "Tarek Ünal"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Ruth Salzmann steht nach eigener Aussage seit achtzehn Jahren mit Gemüse auf dem Wochenmarkt.",
+            "en": "Worked example. The other three describe an office, a canteen and a consumer body."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person weist darauf hin, dass der Begriff rechtlich nicht geschützt ist.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "d",
+            "beleg": "Der wichtigste Satz in dieser Debatte lautet: „Regional“ ist kein geschützter Begriff.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Tarek Ünal stellt den Satz an den Anfang und grenzt ihn im nächsten Satz ausdrücklich gegen „Bio“ ab.",
+              "en": "b criticises the same label, but for being climatically overrated — not for being legally empty."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält die Einkaufszeiten für ein größeres Hindernis als den Preis.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "a",
+            "beleg": "Mein größtes Problem ist, dass ich dienstags und freitags bis vierzehn Uhr da bin und die meisten Berufstätigen genau dann arbeiten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor schließt den Preis ausdrücklich als Hauptgrund aus, dieser nennt den tatsächlichen.",
+              "en": "c also finds cost was not the problem — but for her the obstacle was supply reliability, not opening hours."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person erklärt, dass der Transport nur einen kleinen Teil der Klimabelastung ausmacht.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "b",
+            "beleg": "Beim Transport entsteht bei den meisten Lebensmitteln nur ein kleiner Teil der gesamten Klimabelastung; entscheidend ist, wie und wo etwas angebaut wurde, nicht die Entfernung zum Teller.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt beides: den geringen Anteil des Transports und das, was stattdessen entscheidet.",
+              "en": "d also wants distance on the label, but as consumer information, not as a claim about how much it matters."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat den Speiseplan an die Jahreszeiten angepasst.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "c",
+            "beleg": "Gelöst haben wir es, indem wir den Speiseplan nicht mehr im Voraus festlegen, sondern der Saison folgen und erst freitags für die kommende Woche entscheiden.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz beschreibt genau die Umstellung: keine Vorausplanung mehr, sondern Saison und kurzfristige Entscheidung.",
+              "en": "a mentions the seasons too, but as what her stall happens to offer in February — not as a change she made."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person beobachtet einen Unterschied zwischen dem, was Kundschaft sagt, und dem, was sie kauft.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "a",
+            "beleg": "Fast alle sagen, ihnen sei Herkunft wichtig. Was dann im Korb landet, sieht regelmäßig anders aus — spätestens im Februar, wenn es bei mir nur noch Kohl, Rüben und Äpfel gibt.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Zwei Sätze stellen Aussage und Verhalten direkt gegeneinander.",
+              "en": "d says shoppers are sold a feeling, which is about the sellers; a is reporting what her own customers do."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person fordert verbindliche Regeln für die Kennzeichnung.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "d",
+            "beleg": "Deshalb dringen wir seit Jahren auf eine verbindliche Kennzeichnung: Wie weit ist die Ware gereist, und wo wurde sie verarbeitet?",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "„Dringen auf“ ist die Forderung; der Doppelpunkt nennt, was auf die Packung gehört.",
+              "en": "Only d asks for a rule. The others describe what they do, not what the law should require."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt die Verlässlichkeit der Lieferungen als eigentliche Schwierigkeit.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "c",
+            "beleg": "Die eigentliche Schwierigkeit war die Verlässlichkeit.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der folgende Absatz führt es aus: Großhändler liefern nach Bestellung, kleine Höfe nach Wetterlage.",
+              "en": "„Die eigentliche“ marks it as the one that mattered, against the cost she had wrongly expected."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält die Art des Anbaus für wichtiger als die Entfernung.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "b",
+            "beleg": "entscheidend ist, wie und wo etwas angebaut wurde, nicht die Entfernung zum Teller",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Die Formulierung „entscheidend ist … nicht …“ setzt die Rangfolge ausdrücklich.",
+              "en": "He is not against short distances — the last paragraph lists good reasons for them. Reading him as an opponent is the trap."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt ein Beispiel, in dem heimische Ware schlechter abschneidet als importierte.",
+            "optionen": {
+              "a": "Ruth Salzmann",
+              "b": "Milan Prohaska",
+              "c": "Ines Botterweck",
+              "d": "Tarek Ünal"
+            },
+            "loesung": "b",
+            "beleg": "Eine im beheizten Gewächshaus vor der Haustür gezogene Tomate schneidet in unseren Rechnungen schlechter ab als eine, die im Freiland gewachsen und anschließend mit dem Schiff transportiert worden ist.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Tomate aus dem beheizten Gewächshaus wird der verschifften Freilandtomate direkt gegenübergestellt.",
+              "en": "The comparison runs the way round most readers do not expect, which is the point of the example."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "satz_einfuegen",
+        "anweisung": "Sie lesen in einer Zeitschrift einen Artikel über die Geschichte der Kartoffel in Europa. Welche der Sätze a bis h passen in die Lücken 10 bis 15? Ein Satz steht bereits als Beispiel im Text, ein weiterer Satz passt in keine Lücke.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Wie die Kartoffel auf den Teller kam",
+            "quelle": "Weidenbacher Blätter für Kulturgeschichte",
+            "inhalt": "Kaum ein Nahrungsmittel gilt heute als so selbstverständlich deutsch wie die Kartoffel. Dabei kannte sie in Europa vor knapp fünfhundert Jahren niemand. Sie stammt aus den Anden, wo sie seit Jahrtausenden angebaut wurde, und kam im 16. Jahrhundert mit spanischen Schiffen über den Atlantik. Ihre Karriere begann sie allerdings nicht als Nahrung, sondern als Zierpflanze in botanischen Gärten.\n\nDass daraus ein Grundnahrungsmittel wurde, hat gedauert. [10] Die Knolle wächst unter der Erde, sie gehört zu einer Pflanzenfamilie mit giftigen Verwandten, und wer versehentlich die grünen Früchte aß, wurde tatsächlich krank.\n\nErst der Hunger änderte das. [11] Getreide verdirbt auf dem Feld, wenn ein Sommer verregnet; die Kartoffel liegt geschützt im Boden und liefert auf derselben Fläche deutlich mehr Kalorien.\n\nDie Obrigkeit half nach, teils mit erstaunlichen Mitteln. [12] Überliefert ist die Geschichte von Feldern, die tagsüber auffällig bewacht und nachts unbewacht gelassen wurden — weil bewachte Ware begehrenswert wirkt.\n\nIm 19. Jahrhundert war die Umstellung abgeschlossen, mit allen Folgen. [13] Als in den 1840er-Jahren eine aus Amerika eingeschleppte Pilzkrankheit die Ernten vernichtete, traf das Irland mit voller Wucht: Eine Million Menschen starben, zwei Millionen wanderten aus.\n\nDaraus hat die Landwirtschaft gelernt, wenn auch langsam. [14] Weltweit sind heute mehreretausend Sorten beschrieben, von denen im Handel allerdings nur eine Handvoll auftaucht.\n\nUnd die Zierpflanze von einst? Ihre Blüte steckte sich einst der französische Hof ans Revers. [15] Wer heute im Frühsommer über ein blühendes Kartoffelfeld schaut, sieht denselben Zierwert — er denkt nur nicht mehr daran."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Wer nur eine einzige Sorte anbaut, verliert bei einer einzigen Krankheit alles."
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Zwei Jahrhunderte lang blieb sie den Menschen unheimlich, und dafür gab es Gründe."
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Heute erinnert an diese Herkunft nichts mehr."
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Wo die Ernte ausfiel, überstand die neue Frucht das Wetter zuverlässiger als alles Bisherige."
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Denn wer sich vollständig auf eine Pflanze verlässt, hängt auch von ihren Krankheiten ab."
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Befehle allein wirkten nämlich wenig."
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Auch der Kaffee brauchte in Europa mehrere Jahrzehnte, bis er akzeptiert wurde."
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Ihre Karriere begann sie allerdings nicht als Nahrung, sondern als Zierpflanze in botanischen Gärten."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Die erste Lücke im ersten Absatz ist bereits gefüllt.",
+          "loesung": "h",
+          "begruendung": {
+            "de": "Der Satz schließt an die Ankunft der Schiffe an und bereitet den zweiten Absatz vor: erst Zierpflanze, dann Nahrung.",
+            "en": "Shown filled in, so letter h is used up and cannot answer 10 to 15."
+          }
+        },
+        "items": [
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 10?",
+            "loesung": "b",
+            "beleg": "Dass daraus ein Grundnahrungsmittel wurde, hat gedauert.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Und dafür gab es Gründe“ kündigt genau die Aufzählung an, die unmittelbar folgt: unter der Erde, giftige Verwandte, grüne Früchte.",
+              "en": "The gap sits between a claim that it took time and a list of why. Only b bridges the two."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 11?",
+            "loesung": "d",
+            "beleg": "Erst der Hunger änderte das.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Wo die Ernte ausfiel“ nimmt den Hunger auf, und der folgende Satz erklärt mit dem verregneten Sommer genau diese Zuverlässigkeit.",
+              "en": "The sentence after the gap explains why the new crop was more reliable, so the gap has to claim it was."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 12?",
+            "loesung": "f",
+            "beleg": "Die Obrigkeit half nach, teils mit erstaunlichen Mitteln.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Befehle allein wirkten nämlich wenig“ begründet, warum es die erstaunlichen Mittel überhaupt brauchte — die bewachten Felder folgen als Beispiel.",
+              "en": "„nämlich“ marks it as the explanation of the sentence before, and the guarded fields are the illustration after."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 13?",
+            "loesung": "e",
+            "beleg": "Im 19. Jahrhundert war die Umstellung abgeschlossen, mit allen Folgen.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Mit allen Folgen“ verlangt eine Erläuterung, und die Abhängigkeit von den Krankheiten einer Pflanze führt direkt zur irischen Katastrophe.",
+              "en": "a makes a similar point but about varieties, which the text only raises two paragraphs later."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 14?",
+            "loesung": "a",
+            "beleg": "Daraus hat die Landwirtschaft gelernt, wenn auch langsam.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz nennt die Lehre aus der Katastrophe, und die Zahl der Sorten im nächsten Satz misst, wie weit sie gezogen wurde.",
+              "en": "Both a and e are about dependence, but only a is about varieties, which is what the following sentence counts."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 15?",
+            "loesung": "c",
+            "beleg": "Ihre Blüte steckte sich einst der französische Hof ans Revers.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Heute erinnert daran nichts mehr“ steht zwischen der höfischen Mode und dem „er denkt nur nicht mehr daran“ des Schlusssatzes.",
+              "en": "The closing sentence contradicts it gently — the ornamental value is still there, unnoticed — which only works if the gap asserts it has gone."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Sie lesen in einer Zeitung einen Artikel über Sportvereine. Wählen Sie bei den Aufgaben 16 bis 21 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "Die Halle ist voll, der Verein ist leer",
+            "quelle": "Sallberger Rundschau",
+            "inhalt": "Wer die Zahlen des Kreissportbunds liest, könnte den Eindruck bekommen, die Menschen bewegten sich immer weniger. Achtzehn Prozent weniger Mitglieder in zehn Jahren, in einigen Sparten mehr. Nur stimmt der Eindruck nicht: Gelaufen, geschwommen und geklettert wird heute mehr als je zuvor. Was zurückgeht, ist nicht der Sport, sondern die Mitgliedschaft.\n\n„Die Leute wollen trainieren, nicht beitreten“, sagt Ute Fahrenkamp, die den Bund seit sechs Jahren führt. Ihre Erhebung unter zweitausend Menschen zwischen zwanzig und vierzig zeigt ein deutliches Bild: Nicht der Jahresbeitrag schreckt ab — er liegt bei den meisten Vereinen unter dem Preis eines Monats im Fitnessstudio. Abschreckend wirken die Bindung an feste Trainingszeiten und die unausgesprochene Erwartung, irgendwann ein Amt zu übernehmen.\n\nGenau dort liegt aber das Problem der Vereine, denn ohne Ämter gibt es sie nicht. Ein Verein braucht einen Vorstand, eine Kasse, eine Person, die die Halle aufschließt. In Weidenbach mussten im vergangenen Jahr zwei Vereine aufgeben, nicht aus Geldmangel, sondern weil sich für den Vorstand niemand fand.\n\nEinige Vereine haben reagiert und die Mitgliedschaft aufgebrochen. Der TSV Nordwiese verkauft seit zwei Jahren Zehnerkarten fürs Hallentraining, ohne Beitritt und ohne Kündigungsfrist. Das Ergebnis überraschte den Vorstand: Die Zahl der Trainierenden verdoppelte sich, und etwa jeder fünfte Kartenkäufer trat nach einigen Monaten doch ein. Der Weg führte also über das Ausprobieren, nicht über die Überzeugung.\n\nNicht alle halten das für den richtigen Weg. Der Landesverband warnt, ein Verein sei kein Dienstleister; wer nur Leistungen verkaufe, züchte sich Kundschaft heran statt einer Gemeinschaft, und in fünf Jahren fehlten die Ehrenamtlichen erst recht. Fahrenkamp widerspricht dem nicht grundsätzlich, hält den Einwand aber für zu spät: Wer heute niemanden mehr in die Halle bekomme, brauche über den Vorstand von übermorgen nicht zu reden.\n\nEinig sind sich beide Seiten in einem Punkt, und er hat mit Sport wenig zu tun: Ämter müssen kleiner werden. Ein Vorstandsposten, der zehn Stunden pro Woche kostet, findet niemanden mehr. Drei Posten mit je drei Stunden finden ihre Leute."
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Was zeigen die Zahlen des Kreissportbunds bei genauerem Hinsehen?",
+            "optionen": {
+              "a": "Die Menschen treiben insgesamt weniger Sport.",
+              "b": "Sport wird getrieben, aber seltener im Verein.",
+              "c": "Vor allem ältere Mitglieder treten aus."
+            },
+            "loesung": "b",
+            "beleg": "Was zurückgeht, ist nicht der Sport, sondern die Mitgliedschaft.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der Absatz führt den falschen Eindruck ein und korrigiert ihn im letzten Satz ausdrücklich.",
+              "en": "a is the impression the article sets up in order to refute it — reading only the first two sentences produces exactly that answer."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "multiple_choice",
+            "frage": "Was schreckt laut der Erhebung von einem Beitritt ab?",
+            "optionen": {
+              "a": "Der Jahresbeitrag im Vergleich zum Fitnessstudio.",
+              "b": "Feste Zeiten und die Erwartung, ein Amt zu übernehmen.",
+              "c": "Das Fehlen geeigneter Sportstätten."
+            },
+            "loesung": "b",
+            "beleg": "Abschreckend wirken die Bindung an feste Trainingszeiten und die unausgesprochene Erwartung, irgendwann ein Amt zu übernehmen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor schließt den Beitrag ausdrücklich aus, dieser nennt die beiden tatsächlichen Gründe.",
+              "en": "The fee is named only to rule it out, and the comparison with the gym is what rules it out."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "multiple_choice",
+            "frage": "Warum mussten in Weidenbach zwei Vereine aufgeben?",
+            "optionen": {
+              "a": "Es fand sich niemand für den Vorstand.",
+              "b": "Die Beiträge deckten die Kosten nicht mehr.",
+              "c": "Ihnen wurde die Halle gekündigt."
+            },
+            "loesung": "a",
+            "beleg": "In Weidenbach mussten im vergangenen Jahr zwei Vereine aufgeben, nicht aus Geldmangel, sondern weil sich für den Vorstand niemand fand.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Nicht aus Geldmangel, sondern weil …“ nennt den Grund und schließt b im selben Satz aus.",
+              "en": "Money is mentioned precisely to exclude it, which is why b is offered."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "multiple_choice",
+            "frage": "Was hat der TSV Nordwiese mit seinen Zehnerkarten erreicht?",
+            "optionen": {
+              "a": "Die Beiträge der bestehenden Mitglieder sanken.",
+              "b": "Doppelt so viele Trainierende, und ein Teil trat später bei.",
+              "c": "Die Zahl der Ehrenamtlichen stieg deutlich."
+            },
+            "loesung": "b",
+            "beleg": "Die Zahl der Trainierenden verdoppelte sich, und etwa jeder fünfte Kartenkäufer trat nach einigen Monaten doch ein.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Beide Wirkungen stehen in einem Satz; der folgende fasst sie als Weg über das Ausprobieren zusammen.",
+              "en": "c is what the Landesverband doubts will happen — the article never reports it."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "multiple_choice",
+            "frage": "Was befürchtet der Landesverband?",
+            "optionen": {
+              "a": "Dass die Vereine finanziell überfordert werden.",
+              "b": "Dass aus Mitgliedern Kundschaft wird und später Ehrenamtliche fehlen.",
+              "c": "Dass die Angebote qualitativ schlechter werden."
+            },
+            "loesung": "b",
+            "beleg": "wer nur Leistungen verkaufe, züchte sich Kundschaft heran statt einer Gemeinschaft, und in fünf Jahren fehlten die Ehrenamtlichen erst recht",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Konjunktiv I markiert die Position des Verbands; genannt werden Kundschaft statt Gemeinschaft und die Folge in fünf Jahren.",
+              "en": "The objection is about what the club becomes, not about money or quality."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "multiple_choice",
+            "frage": "Worin sind sich beide Seiten am Ende einig?",
+            "optionen": {
+              "a": "Dass Ämter in kleinere Aufgaben geteilt werden müssen.",
+              "b": "Dass Zehnerkarten überall eingeführt werden sollten.",
+              "c": "Dass die Beiträge steigen müssen."
+            },
+            "loesung": "a",
+            "beleg": "Einig sind sich beide Seiten in einem Punkt, und er hat mit Sport wenig zu tun: Ämter müssen kleiner werden.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der Schlussabsatz benennt die Einigkeit und rechnet sie vor: zehn Stunden finden niemanden, drei mal drei Stunden schon.",
+              "en": "The ten-session pass is exactly what they disagree about, so b inverts the paragraph."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_aeusserungen",
+        "anweisung": "Sie lesen in einer Zeitschrift Meinungsäußerungen zum Thema Urlaub ohne Flugzeug. Welche Äußerung a bis h passt zu welcher Überschrift 22 bis 27? Eine Äußerung dient als Beispiel, eine weitere passt zu keiner Überschrift.",
+        "richtzeitMinuten": 12,
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "titel": "Gesa Wendtland",
+            "inhalt": "Seit vier Jahren fliege ich nicht mehr in den Urlaub, und ich will ehrlich sein: Bequemer ist es nicht geworden. Nach Südfrankreich sitze ich vierzehn Stunden statt zwei. Dafür habe ich meine Reisen entschleunigt und komme deutlich erholter an, weil das Ankommen nicht mehr in einer Warteschlange beginnt."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Rüdiger Kohlmey",
+            "inhalt": "Ich vermittle seit zwanzig Jahren Reisen, und die Nachfrage ist eindeutig da — sie scheitert an der Technik. Für eine Bahnfahrt über drei Länder brauche ich vier Buchungssysteme, die sich gegenseitig nicht kennen. Bei einer Verspätung haftet dann niemand für den Anschluss. So lange das so bleibt, verkaufe ich Zugreisen nur an Überzeugte."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Neele Barsig",
+            "inhalt": "Ich habe es zweimal ausgerechnet, für dieselbe Strecke und dieselbe Woche: Der Nachtzug kostete für uns zu zweit knapp das Dreifache des Flugs. Ich verstehe jedes Argument für die Bahn, aber solange der Preisunterschied so aussieht, ist das keine Entscheidung zwischen Bequemlichkeit und Haltung, sondern eine zwischen Haltung und Haushaltsbuch."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Familie Trautwein",
+            "inhalt": "Mit zwei kleinen Kindern hatten wir das Schlimmste erwartet und das Gegenteil erlebt. Im Zug dürfen sie aufstehen, essen, wann sie wollen, und aus dem Fenster sehen. Inzwischen fragen sie nach der Fahrt, nicht nach dem Ziel. Die Anreise ist bei uns von einem notwendigen Übel zum besten Teil der Ferien geworden."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Prof. Aylin Kestner",
+            "inhalt": "Man sollte die Wirkung realistisch einordnen. Wer einmal im Jahr in den Urlaub fliegt und nun mit dem Zug fährt, spart weniger ein, als die meisten annehmen. Die wirklich großen Effekte liegen bei der kleinen Gruppe, die sechs- oder achtmal jährlich fliegt. Über die redet in dieser Debatte allerdings kaum jemand, weil es unangenehmer ist."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Bernd Oswald",
+            "inhalt": "Was mir an dieser Debatte gegen den Strich gehen kann, ist der Ton. Ich fahre selbst Zug, aber ich käme nicht auf die Idee, jemandem den Urlaub vorzurechnen. Meine Nachbarin fliegt einmal im Jahr zu ihrer Schwester nach Portugal, und niemand hat ihr dazu etwas zu sagen. Wer andere belehrt, gewinnt keine Verbündeten, sondern verliert sie."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Milena Frowein",
+            "inhalt": "Mein Kompromiss sieht so aus, dass ich das Land, in dem ich wohne, endlich kennenlerne. Ich hätte nie gedacht, wie wenig ich davon gesehen habe. Vier Tage im Harz, im Herbst eine Woche an der Ostsee — das ist erreichbar, bezahlbar und ich brauche dafür keine Diskussion über Flugscham."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Jörn Aschenbrenner",
+            "inhalt": "Beruflich geht es nicht, und ich sage das ohne schlechtes Gewissen. Ich betreue Kunden in Finnland und Portugal und habe montags in Helsinki und mittwochs in Lissabon zu sein. Privat fliege ich seit Jahren nicht mehr, und das fällt mir leicht. Aber die Debatte tut so, als sei jeder Flug dieselbe Entscheidung, und das ist sie nicht."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Länger unterwegs, aber erholter angekommen",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Gesa Wendtland räumt die längere Fahrzeit ein und nennt die Erholung als Gewinn.",
+            "en": "Shown as the worked example, so letter a is used up and cannot answer 22 to 27."
+          }
+        },
+        "items": [
+          {
+            "nr": 22,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Nicht der Wille fehlt, sondern die Buchung",
+            "loesung": "b",
+            "beleg": "Für eine Bahnfahrt über drei Länder brauche ich vier Buchungssysteme, die sich gegenseitig nicht kennen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Rüdiger Kohlmey stellt ausdrücklich fest, dass die Nachfrage da ist und an der Technik scheitert.",
+              "en": "c also reports a practical obstacle, but hers is the price, not the booking."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Am Ende entscheidet der Preis",
+            "loesung": "c",
+            "beleg": "Der Nachtzug kostete für uns zu zweit knapp das Dreifache des Flugs.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Neele Barsig nennt eine gerechnete Zahl und schließt daraus, worum es tatsächlich gehe.",
+              "en": "She does not argue against the train — the sentence before concedes every argument for it."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Die Anreise ist zum Ziel geworden",
+            "loesung": "d",
+            "beleg": "Die Anreise ist bei uns von einem notwendigen Übel zum besten Teil der Ferien geworden.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Die Familie beschreibt genau diese Umkehrung, belegt mit den Kindern, die nach der Fahrt fragen.",
+              "en": "a values the arrival, not the journey — the distinction is what separates the two."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Wer viel fliegt, fällt am meisten ins Gewicht",
+            "loesung": "e",
+            "beleg": "Die wirklich großen Effekte liegen bei der kleinen Gruppe, die sechs- oder achtmal jährlich fliegt.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Aylin Kestner ordnet die Wirkung ein und benennt die Gruppe, über die kaum jemand spricht.",
+              "en": "h also distinguishes between kinds of flight, but from his own situation rather than from a measured effect."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Belehren bringt niemanden auf die eigene Seite",
+            "loesung": "f",
+            "beleg": "Wer andere belehrt, gewinnt keine Verbündeten, sondern verliert sie.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Bernd Oswald kritisiert ausdrücklich den Ton, nicht die Sache — er fährt selbst Zug.",
+              "en": "Reading him as an opponent of train travel inverts his second sentence."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Urlaub vor der eigenen Haustür",
+            "loesung": "g",
+            "beleg": "Mein Kompromiss sieht so aus, dass ich das Land, in dem ich wohne, endlich kennenlerne.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Milena Frowein beschreibt kein Verkehrsmittel, sondern ein anderes Ziel: Harz und Ostsee statt Ausland.",
+              "en": "Everyone else swaps the means of travel; only g swaps the destination."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 5,
+        "typ": "zuordnung_ueberschriften",
+        "anweisung": "Sie möchten einem Sportverein beitreten und lesen dessen Satzung. Welche der Überschriften a bis h aus dem Inhaltsverzeichnis passen zu den Paragraphen 28 bis 30? Vier Überschriften passen zu keinem der Paragraphen.",
+        "richtzeitMinuten": 6,
+        "texte": [
+          {
+            "id": "text_5",
+            "titel": "Satzung des TSV Nordwiese — Auszug",
+            "inhalt": "§ 1 Zweck des Vereins\nDer Verein verfolgt ausschließlich gemeinnützige Zwecke. Er fördert den Breitensport, insbesondere für Kinder, Jugendliche und ältere Menschen, und unterhält zu diesem Zweck Übungsgruppen, Sportstätten und Geräte. Ein wirtschaftlicher Geschäftsbetrieb ist ausgeschlossen.\n\n§ 2 [28]\nMitglied kann jede natürliche Person werden. Der Antrag ist schriftlich zu stellen; über die Aufnahme entscheidet der Vorstand innerhalb von vier Wochen. Bei Minderjährigen ist die Unterschrift einer sorgeberechtigten Person erforderlich. Ein Anspruch auf Aufnahme besteht nicht; eine Ablehnung muss nicht begründet werden.\n\n§ 3 [29]\nDer Beitrag wird jährlich im Voraus erhoben und zum 15. Januar abgebucht. Die Höhe setzt die Mitgliederversammlung fest. Wer im laufenden Jahr eintritt, zahlt für jeden angefangenen Monat ein Zwölftel. In begründeten Fällen — insbesondere bei Arbeitslosigkeit — kann der Vorstand auf Antrag stunden oder ermäßigen.\n\n§ 4 [30]\nDie Mitgliedschaft endet durch Austritt, Ausschluss oder Tod. Der Austritt ist schriftlich zu erklären und nur zum Ende eines Kalenderjahres möglich; die Erklärung muss bis zum 30. September vorliegen. Ein Ausschluss ist nur bei grobem Verstoß gegen die Satzung möglich und setzt eine vorherige Anhörung voraus."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Zweck des Vereins"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Erwerb der Mitgliedschaft"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Beiträge"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Beendigung der Mitgliedschaft"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Vorstand und Wahlen"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Mitgliederversammlung"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Haftung und Versicherung"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Benutzung der Sportstätten"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "§ 1 trägt bereits seine Überschrift.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Der Paragraph sagt, wofür der Verein da ist und was er dafür unterhält.",
+            "en": "Shown filled in, so letter a is used up and cannot answer 28 to 30."
+          }
+        },
+        "items": [
+          {
+            "nr": 28,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 2?",
+            "loesung": "b",
+            "beleg": "Der Antrag ist schriftlich zu stellen; über die Aufnahme entscheidet der Vorstand innerhalb von vier Wochen.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Der ganze Paragraph regelt, wie man Mitglied wird: Antrag, Frist, Minderjährige, kein Anspruch.",
+              "en": "The Vorstand appears here, which pulls towards e — but it is the body deciding, not the subject of the rule."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 3?",
+            "loesung": "c",
+            "beleg": "Der Beitrag wird jährlich im Voraus erhoben und zum 15. Januar abgebucht.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Fälligkeit, Höhe, anteilige Zahlung und Ermäßigung gehören alle zur Frage, wer wie viel zahlt.",
+              "en": "The Mitgliederversammlung is named as the body that sets the amount, which is the hook towards f."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 4?",
+            "loesung": "d",
+            "beleg": "Die Mitgliedschaft endet durch Austritt, Ausschluss oder Tod.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Der erste Satz nennt alle drei Wege, die folgenden regeln Fristen und Voraussetzungen.",
+              "en": "Symmetrical with § 2: one paragraph for joining, one for leaving."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte: Ansagen, Nachrichten und Durchsagen. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text einmal.",
+        "wiederholungen": 1,
+        "sprecher": [
+          {
+            "rolle": "Apothekerin",
+            "geschlecht": "f",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Flughafensprecher",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage am Gate"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "geschlecht": "f",
+            "beschreibung": "Kulturtipp im Radio"
+          },
+          {
+            "rolle": "Hausverwalter",
+            "geschlecht": "m",
+            "beschreibung": "Sprachnachricht an die Mieter"
+          },
+          {
+            "rolle": "Badeaufsicht",
+            "geschlecht": "f",
+            "beschreibung": "Ansage im Schwimmbad"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben: Sie entscheiden, ob eine Aussage richtig oder falsch ist, und Sie wählen bei der zweiten Aufgabe die richtige Lösung a, b oder c. Sie hören jeden Text einmal. Lesen Sie jetzt die Aufgaben eins bis zehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Apothekerin",
+            "text": "Guten Tag, Frau Brenner, hier ist die Lindenapotheke, Frau Kuczynski. Es geht um Ihr Rezept von gestern. Das Präparat, das Ihnen verschrieben wurde, ist derzeit bundesweit nicht lieferbar; wann es wieder kommt, kann uns niemand sagen. Ich habe deshalb bei Ihrer Ärztin angerufen, und sie hat einem wirkstoffgleichen Mittel zugestimmt. Das liegt ab morgen früh bei uns bereit. Sie brauchen kein neues Rezept, und für Sie ändert sich beim Preis nichts. Bringen Sie bitte trotzdem Ihre Versichertenkarte mit. Falls Sie das Mittel dringend heute noch brauchen, sagen Sie kurz Bescheid — dann versuchen wir es über eine Kollegin in der Nachbarschaft. Wenn etwas unklar ist, rufen Sie gern zurück.",
+            "pauseDanachSek": 14,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Flughafensprecher",
+            "text": "Eine Information für die Reisenden des Fluges nach Helsinki, planmäßiger Abflug elf Uhr fünfzig. Dieser Flug wird heute nicht von Gate B zwölf, sondern von Gate D vier abgefertigt. Der Weg dorthin führt über die Ebene eins und dauert etwa fünfzehn Minuten. Der Abflug verschiebt sich dadurch nicht. Reisende, die bereits am ursprünglichen Gate warten, werden gebeten, sich unverzüglich auf den Weg zu machen. Fluggäste mit eingeschränkter Mobilität melden sich bitte beim Servicepunkt in der Abflughalle; ein Transport wird gestellt.",
+            "pauseDanachSek": 14,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "text": "Und noch ein Tipp fürs Wochenende: Das Hoffest auf dem Gut Sallberg feiert in diesem Jahr sein zwanzigstes Bestehen. Ab elf Uhr gibt es Führungen über die Felder, am Nachmittag spielen drei Kapellen. Der Eintritt ist frei; für das Essen sollten Sie Bargeld einstecken, Karten werden dort nicht genommen. Und eine Bitte der Veranstalter: Kommen Sie möglichst mit dem Rad oder dem Bus, denn Parkplätze gibt es kaum. Bei Regen findet alles in der großen Scheune statt — abgesagt wird also auf keinen Fall.",
+            "pauseDanachSek": 14,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Hausverwalter",
+            "text": "Guten Abend, hier spricht Marek Dohnal von der Hausverwaltung, für alle Parteien im Haus Nummer sieben. Am Donnerstag wird zwischen acht und voraussichtlich vierzehn Uhr das Wasser abgestellt; die Stadtwerke tauschen die Hauptleitung im Hof. Bitte lassen Sie an dem Tag keine Waschmaschine laufen und drehen Sie die Hähne zu, damit nach dem Anstellen nichts überläuft. In den ersten Minuten kann das Wasser bräunlich sein, das ist unbedenklich. Sollten die Arbeiten länger dauern, hängen wir am Donnerstagmittag einen Zettel im Treppenhaus aus.",
+            "pauseDanachSek": 14,
+            "akustik": "telefon",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Badeaufsicht",
+            "text": "Liebe Badegäste, eine Durchsage der Badeaufsicht. Die beiden linken Bahnen sind ab sofort und bis achtzehn Uhr für den Schwimmkurs der Grundschule reserviert. Wir bitten Sie, auf die übrigen vier Bahnen auszuweichen. Wer in Ruhe seine Bahnen ziehen möchte, kommt erfahrungsgemäß am besten vor zehn Uhr vormittags oder nach dem frühen Abend. Das Sprungbecken bleibt heute geschlossen, weil ein Techniker die Anlage prüft; die Rutsche ist davon nicht betroffen und normal geöffnet. Und noch ein Hinweis: Ab Montag beginnt der Sommerbetrieb, wir öffnen dann bereits um sieben statt um neun Uhr. Vielen Dank.",
+            "pauseDanachSek": 14,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der erste Text ist eine Nachricht auf einer Mailbox.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Die Anruferin nennt Apotheke und Namen und bittet um Rückruf — eine typische Mailboxnachricht.",
+            "en": "Worked example, so you can hear how the two questions per text work."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Frau Brenner braucht für das andere Mittel ein neues Rezept.",
+            "loesung": "falsch",
+            "beleg": "Sie brauchen kein neues Rezept, und für Sie ändert sich beim Preis nichts.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Apothekerin hat mit der Ärztin gesprochen und sagt ausdrücklich, dass kein neues Rezept nötig ist.",
+              "en": "The doctor is involved, which makes a new prescription sound likely — the sentence rules it out."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Warum bekommt die Kundin ein anderes Präparat?",
+            "optionen": {
+              "a": "Das verschriebene Mittel ist nicht lieferbar.",
+              "b": "Das verschriebene Mittel ist zu teuer geworden.",
+              "c": "Die Ärztin hat sich bei der Dosierung geirrt."
+            },
+            "loesung": "a",
+            "beleg": "Das Präparat, das Ihnen verschrieben wurde, ist derzeit bundesweit nicht lieferbar; wann es wieder kommt, kann uns niemand sagen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Grund steht im zweiten Satz; der Preis wird später ausdrücklich als unverändert genannt.",
+              "en": "Price is mentioned, but to say nothing changes — which is what makes b tempting."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Wegen des Gatewechsels startet der Flug später.",
+            "loesung": "falsch",
+            "beleg": "Der Abflug verschiebt sich dadurch nicht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Gate ändert sich, die Abflugzeit nicht — die Durchsage sagt es in einem eigenen Satz.",
+              "en": "A fifteen-minute walk is announced, which sounds like a delay but is not one."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was sollen Reisende mit eingeschränkter Mobilität tun?",
+            "optionen": {
+              "a": "Am alten Gate auf Begleitung warten.",
+              "b": "Sich beim Servicepunkt in der Abflughalle melden.",
+              "c": "Den Weg über die Ebene eins nehmen."
+            },
+            "loesung": "b",
+            "beleg": "Fluggäste mit eingeschränkter Mobilität melden sich bitte beim Servicepunkt in der Abflughalle; ein Transport wird gestellt.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Für diese Gruppe gilt eine eigene Anweisung, nicht der Fußweg über Ebene eins.",
+              "en": "The walking route is the instruction for everyone else, which is exactly why c is offered."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Bei schlechtem Wetter fällt das Fest aus.",
+            "loesung": "falsch",
+            "beleg": "Bei Regen findet alles in der großen Scheune statt — abgesagt wird also auf keinen Fall.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der letzte Satz nennt den Ausweichort und schließt eine Absage ausdrücklich aus.",
+              "en": "The information sits at the very end, after the parking advice — easy to stop listening before it."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was sollten Besucherinnen und Besucher mitbringen?",
+            "optionen": {
+              "a": "Bargeld für das Essen.",
+              "b": "Eine Eintrittskarte aus dem Vorverkauf.",
+              "c": "Einen Parkschein für den Hof."
+            },
+            "loesung": "a",
+            "beleg": "Der Eintritt ist frei; für das Essen sollten Sie Bargeld einstecken, Karten werden dort nicht genommen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Karten“ meint hier Zahlkarten, nicht Eintrittskarten — der Eintritt ist im selben Satz als frei genannt.",
+              "en": "The word Karten does double duty in German, and the sentence resolves it: entry is free, so these are payment cards."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Das braune Wasser nach dem Anstellen ist ein Grund zur Sorge.",
+            "loesung": "falsch",
+            "beleg": "In den ersten Minuten kann das Wasser bräunlich sein, das ist unbedenklich.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Hausverwalter kündigt die Verfärbung an und nennt sie im selben Satz unbedenklich.",
+              "en": "Announced and defused together — hearing only the first half produces the opposite answer."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was sollen die Mieterinnen und Mieter am Donnerstag tun?",
+            "optionen": {
+              "a": "Wasser in Flaschen bereitstellen.",
+              "b": "Die Wasserhähne zudrehen und nicht waschen.",
+              "c": "Zwischen acht und vierzehn Uhr zu Hause bleiben."
+            },
+            "loesung": "b",
+            "beleg": "Bitte lassen Sie an dem Tag keine Waschmaschine laufen und drehen Sie die Hähne zu, damit nach dem Anstellen nichts überläuft.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Beide Anweisungen stehen in einem Satz, mit dem Grund dahinter.",
+              "en": "Nobody is asked to be at home — the notice on the stairs exists precisely so that nobody has to be."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Die Rutsche ist heute ebenfalls gesperrt.",
+            "loesung": "falsch",
+            "beleg": "das Sprungbecken bleibt heute geschlossen, weil ein Techniker die Anlage prüft; die Rutsche ist davon nicht betroffen und normal geöffnet",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Geschlossen ist nur das Sprungbecken; die Rutsche wird ausdrücklich ausgenommen.",
+              "en": "Two water features, one closure — the announcement separates them in the same sentence."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was ändert sich ab Montag?",
+            "optionen": {
+              "a": "Das Bad öffnet zwei Stunden früher.",
+              "b": "Der Schwimmkurs belegt weitere Bahnen.",
+              "c": "Das Sprungbecken wird wieder freigegeben."
+            },
+            "loesung": "a",
+            "beleg": "Ab Montag beginnt der Sommerbetrieb, wir öffnen dann bereits um sieben statt um neun Uhr.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sieben statt neun sind zwei Stunden; die anderen beiden Punkte gelten nur für heute.",
+              "en": "The lane closure ends at six today, and the diving pool has no reopening date — both are today's news, not Monday's."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "interview",
+        "anweisung": "Sie hören im Radio ein Interview mit einer Bodenkundlerin. Wählen Sie bei den Aufgaben 11 bis 16 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Radiosendung „Wissen am Abend“ — Interview mit Dr. Franziska Buhlert, Bodenkundlerin.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "führt das Interview"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "geschlecht": "f",
+            "beschreibung": "Dr. Franziska Buhlert, forscht über Ackerböden"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Interview mit einer Bodenkundlerin. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben elf bis sechzehn.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Buhlert, Sie sagen, unter unseren Füßen liege der am wenigsten erforschte Lebensraum Europas. Ist das nicht etwas übertrieben?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Nein, das meine ich wörtlich. In einer einzigen Handvoll gesunden Ackerbodens leben mehr Organismen, als es Menschen auf der Erde gibt, und den allergrößten Teil davon haben wir nie beschrieben.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Wir kennen die Tiefsee besser. Das klingt wie eine Anekdote, hat aber Folgen: Über etwas, das man nicht kennt, kann man auch keine verlässliche Aussage treffen, wenn es verschwindet.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Und es verschwindet — wie schnell?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Die entscheidende Zahl ist nicht, wie viel jährlich abgetragen wird, sondern wie lange es dauert, ihn neu zu bilden. Ein Zentimeter fruchtbarer Boden braucht in unserem Klima ungefähr hundert Jahre.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Ein einziges Starkregenereignis kann auf einem ungeschützten Hang mehr abtragen, als in einem Menschenleben nachwächst. Solche Verluste können in jeder Bilanz erheblich zu Buche schlagen. Deshalb rede ich ungern von Verlust und lieber von Unumkehrbarkeit.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Viele denken bei Bodenschutz zuerst an Dünger und Pflanzenschutzmittel. Zu Recht?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Das ist der verbreitetste Irrtum in diesem Feld. Nach allem, was wir messen, richtet das Gewicht der Maschinen den größeren Schaden an, weil es den Boden in der Tiefe verdichtet.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Ein moderner Mähdrescher wiegt beladen über dreißig Tonnen. Was er unten zusammenpresst, lockert kein Pflug wieder auf; Wasser läuft dann oben ab, statt zu versickern, und genau da beginnt die Erosion.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Was würden Sie einem Betrieb raten, der morgen anfangen will?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Den Boden über den Winter nicht nackt liegen lassen. Eine Zwischenfrucht auszusäen kostet wenig, hält die Erde fest und füttert das Bodenleben.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Das ist keine neue Erkenntnis, im Gegenteil, unsere Großeltern haben es so gemacht. Es passt nur schlecht in eine Betriebsplanung, die jede Fläche jedes Jahr verkaufen will.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Kann ein Betrieb überhaupt sehen, ob es besser wird? Boden verändert sich ja nicht über Nacht.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Doch, und zwar mit erstaunlich einfachen Mitteln. Der bekannteste Test kostet nichts: Man vergräbt ein Stück Baumwollstoff dreißig Zentimeter tief und holt es nach zwei Monaten wieder heraus.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Ist es weitgehend zersetzt, arbeitet das Bodenleben. Kommt es fast unversehrt heraus, ist unten wenig los. Das ersetzt keine Laboranalyse, aber es macht etwas sichtbar, das sonst unsichtbar bleibt — und wer einmal so ein Stück Stoff in der Hand gehalten hat, diskutiert anders über Bodenschutz.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Klingt, als läge das Problem weniger im Wissen als anderswo.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "So ist es. Fast zwei Drittel der Ackerflächen bei uns sind gepachtet, häufig auf fünf Jahre. Wer nicht weiß, ob er die Fläche in sechs Jahren noch bewirtschaftet, investiert nicht in etwas, das sich erst in zwanzig auszahlt.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Ich halte deshalb längere Pachtverträge für die wirksamste Maßnahme, die wir hätten — wirksamer als jedes Verbot, das ich mir ausdenken könnte.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Sind Sie am Ende optimistisch?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Bodenkundlerin",
+            "text": "Vorsichtig, ja. Als ich anfing, interessierte sich für Böden niemand außerhalb des Fachs. Heute rufen mich Landwirte an und fragen, wie sie messen können, ob es besser wird. Das ist eine andere Ausgangslage als vor zwanzig Jahren.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Buhlert, vielen Dank für das Gespräch.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Womit begründet Frau Buhlert, dass der Boden wenig erforscht ist?",
+            "optionen": {
+              "a": "Die meisten Organismen darin sind nie beschrieben worden.",
+              "b": "Es gibt zu wenige Messstationen in Europa.",
+              "c": "Böden verändern sich zu schnell für Langzeitstudien."
+            },
+            "loesung": "a",
+            "beleg": "In einer einzigen Handvoll gesunden Ackerbodens leben mehr Organismen, als es Menschen auf der Erde gibt, und den allergrößten Teil davon haben wir nie beschrieben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Vergleich mit der Tiefsee im nächsten Beitrag unterstreicht dieselbe Aussage.",
+              "en": "Speed of change is her point about renewal, not about why the research is thin."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Welche Zahl hält sie für die entscheidende?",
+            "optionen": {
+              "a": "Wie viel Boden jährlich abgetragen wird.",
+              "b": "Wie lange die Neubildung eines Zentimeters dauert.",
+              "c": "Wie viele Hektar jährlich bebaut werden."
+            },
+            "loesung": "b",
+            "beleg": "Die entscheidende Zahl ist nicht, wie viel jährlich abgetragen wird, sondern wie lange es dauert, ihn neu zu bilden.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Formulierung „nicht …, sondern …“ schließt a ausdrücklich aus und nennt die hundert Jahre.",
+              "en": "The rejected figure is stated first, which is what makes a sound right if you stop early."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was richtet nach ihren Messungen den größeren Schaden an?",
+            "optionen": {
+              "a": "Dünger und Pflanzenschutzmittel.",
+              "b": "Das Gewicht der Maschinen.",
+              "c": "Zu häufiges Pflügen."
+            },
+            "loesung": "b",
+            "beleg": "Nach allem, was wir messen, richtet das Gewicht der Maschinen den größeren Schaden an, weil es den Boden in der Tiefe verdichtet.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt die Annahme über Dünger ausdrücklich den verbreitetsten Irrtum.",
+              "en": "The plough appears in the next sentence — as something that cannot undo the damage, not as its cause."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Was empfiehlt sie einem Betrieb als Erstes?",
+            "optionen": {
+              "a": "Leichtere Maschinen anzuschaffen.",
+              "b": "Über den Winter eine Zwischenfrucht auszusäen.",
+              "c": "Die Felder seltener zu pflügen."
+            },
+            "loesung": "b",
+            "beleg": "Eine Zwischenfrucht auszusäen kostet wenig, hält die Erde fest und füttert das Bodenleben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Auf die Frage nach dem Anfangen nennt sie genau diese eine Maßnahme, mit drei Wirkungen.",
+              "en": "Lighter machines follow from her diagnosis but are never what she recommends starting with."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Warum investieren viele Betriebe trotzdem nicht?",
+            "optionen": {
+              "a": "Weil die Maßnahmen zu teuer sind.",
+              "b": "Weil viele Flächen nur kurzfristig gepachtet sind.",
+              "c": "Weil die Wirkung wissenschaftlich umstritten ist."
+            },
+            "loesung": "b",
+            "beleg": "Wer nicht weiß, ob er die Fläche in sechs Jahren noch bewirtschaftet, investiert nicht in etwas, das sich erst in zwanzig auszahlt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt zwei Drittel Pachtflächen und fünf Jahre Laufzeit und zieht daraus den Schluss.",
+              "en": "She has just said the measure costs little, which rules out a in the sentence before."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Welche Maßnahme hält sie für die wirksamste?",
+            "optionen": {
+              "a": "Ein Verbot schwerer Maschinen.",
+              "b": "Höhere Förderung für Zwischenfrüchte.",
+              "c": "Längere Pachtverträge."
+            },
+            "loesung": "c",
+            "beleg": "Ich halte deshalb längere Pachtverträge für die wirksamste Maßnahme, die wir hätten — wirksamer als jedes Verbot, das ich mir ausdenken könnte.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Satz nennt die Maßnahme und stellt sie ausdrücklich über jedes Verbot.",
+              "en": "The comparison with a ban is in the same sentence, which is what disposes of a."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören im Radio ein Gespräch mit mehreren Personen über das Ehrenamt in Vereinen. Wer sagt was? Ordnen Sie die Aussagen 17 bis 22 den Personen zu. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Radiosendung „Weidenbach diskutiert“ — im Studio: der Vereinsvorsitzende Robert Steinkamp und die Ehrenamtsforscherin Nadja Loewe.",
+        "sprecher": [
+          {
+            "rolle": "Moderatorin",
+            "geschlecht": "f",
+            "beschreibung": "moderiert die Sendung"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "geschlecht": "m",
+            "beschreibung": "Robert Steinkamp, führt einen Sportverein"
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "geschlecht": "f",
+            "beschreibung": "Nadja Loewe, untersucht freiwilliges Engagement"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch mit drei Personen. Ordnen Sie die Aussagen den Personen zu. Sie hören den Text einmal. Lesen Sie jetzt die Aufgaben siebzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Guten Abend. Vor der Sendung habe ich in unserem Haus herumgefragt, wer von den Kolleginnen und Kollegen ehrenamtlich aktiv ist. Es waren zwei von neunzehn — ich hatte mit deutlich mehr gerechnet.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Steinkamp, Frau Loewe, schön, dass Sie da sind. Herr Steinkamp, Sie suchen seit anderthalb Jahren einen Kassenwart. Woran liegt das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Nicht am guten Willen, so viel steht fest. Ich habe im letzten Jahr vierzig Leute persönlich gefragt, und die Antwort war fast immer dieselbe: Zeitlich vielleicht, aber nicht mit dieser Verantwortung.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Der Kassenwart haftet bei uns persönlich, wenn etwas schiefgeht. Das schreckt zu Recht ab. Für einen Posten, der ehrenamtlich ist, verlangen wir eine Verpflichtung, die ich mir selbst zweimal überlegen würde.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Loewe, man liest ständig, die Bereitschaft zum Ehrenamt gehe zurück. Stimmt das überhaupt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "text": "In dieser Form nicht, und das ist eine der hartnäckigsten Fehldeutungen in meinem Fach. Die Zahl der Engagierten ist über zwanzig Jahre bemerkenswert stabil geblieben.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "text": "Verändert hat sich die Form. Früher trat man mit dreißig in einen Verein ein und blieb vierzig Jahre. Heute engagieren sich dieselben Menschen projektweise: ein halbes Jahr für das Schulfest, zwei Monate für die Nachbarschaftshilfe. Wer nach Vorständen sucht, findet niemanden. Wer nach Händen für Samstag sucht, findet zu viele.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Steinkamp, deckt sich das mit Ihrer Erfahrung?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Vollkommen. Für unser Sommerturnier hatte ich innerhalb von drei Tagen dreißig Helfer zusammen, per Nachricht in einer Gruppe. Für die Jahreshauptversammlung im November melden sich elf Leute.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Loewe, wäre Bezahlung eine Lösung? Manche Kommunen zahlen inzwischen eine Aufwandsentschädigung.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "text": "Davon rate ich in den meisten Fällen ab, und zwar aus einem Grund, der überrascht: Sobald Geld fließt, verschwindet bei vielen genau das Motiv, aus dem sie überhaupt gekommen sind.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "text": "Aus „Ich helfe, weil es mir wichtig ist“ wird „Ich arbeite für zwölf Euro“ — und zwölf Euro sind schlecht bezahlt. Anerkennung und Bezahlung müssen eben nicht Hand in Hand gehen. Wir haben Vereine gesehen, in denen die Zahl der Freiwilligen nach Einführung einer Pauschale gesunken ist.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Steinkamp, sehen Sie das genauso? Sie könnten das Geld ja gut gebrauchen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Wir haben es tatsächlich diskutiert und wieder verworfen. Nicht aus Überzeugung, sondern aus Rechnerei: Für neun Ämter hätten wir im Jahr einen fünfstelligen Betrag gebraucht, und den hätten die Beiträge hereinholen müssen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Dann zahlen die Mitglieder mehr, damit jemand die Arbeit macht, die sie früher selbst gemacht haben. Spätestens an dieser Stelle merkt man, dass etwas nicht stimmt.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Was hilft dann? Herr Steinkamp, Sie haben etwas verändert.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Wir haben den Vorstand zerlegt. Aus drei großen Ämtern sind neun kleine geworden, jedes mit einer klaren Aufgabe und einer Zusage über ein Jahr, nicht über vier.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Vereinsvorsitzender",
+            "text": "Sieben davon sind besetzt. Vor der Umstellung war ich froh, wenn ich überhaupt jemanden fand. Die Leute sagen nicht Nein zur Arbeit, sie sagen Nein zur Unendlichkeit.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Loewe, ein Schlusswort?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Ehrenamtsforscherin",
+            "text": "Wir sollten aufhören, junge Menschen zu beschuldigen. In unseren Erhebungen ist die Gruppe zwischen zwanzig und dreißig genauso hilfsbereit wie früher — sie will nur gefragt werden, wofür genau und wie lange.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Loewe, Herr Steinkamp, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 17,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat im eigenen Umfeld nachgefragt und weniger Engagierte gefunden als erwartet.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "a",
+            "beleg": "Es waren zwei von neunzehn — ich hatte mit deutlich mehr gerechnet.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Moderatorin berichtet aus der eigenen Redaktion; die Gäste sprechen über Verein und Forschung.",
+              "en": "Both guests also give numbers, which is what makes attribution the work here."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt die persönliche Haftung als Grund für die Zurückhaltung.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "b",
+            "beleg": "Der Kassenwart haftet bei uns persönlich, wenn etwas schiefgeht. Das schreckt zu Recht ab.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Robert Steinkamp erklärt damit, warum vierzig Angefragte abgesagt haben.",
+              "en": "He agrees the fear is justified, which rules out reading it as a complaint about the candidates."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sagt, die Zahl der Engagierten sei über Jahrzehnte stabil geblieben.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "c",
+            "beleg": "Die Zahl der Engagierten ist über zwanzig Jahre bemerkenswert stabil geblieben.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Nadja Loewe widerspricht damit der Frage der Moderatorin, nicht umgekehrt.",
+              "en": "The moderator raises the claim of decline; Loewe is the one correcting it."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person vergleicht die Resonanz auf ein Fest mit der auf eine Versammlung.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "b",
+            "beleg": "Für unser Sommerturnier hatte ich innerhalb von drei Tagen dreißig Helfer zusammen, per Nachricht in einer Gruppe. Für die Jahreshauptversammlung im November melden sich elf Leute.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er bestätigt die These der Forscherin mit zwei Zahlen aus dem eigenen Verein.",
+              "en": "Loewe makes the general point about projects; the concrete pair of numbers is his."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person warnt davor, freiwillige Arbeit zu bezahlen.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "c",
+            "beleg": "Sobald Geld fließt, verschwindet bei vielen genau das Motiv, aus dem sie überhaupt gekommen sind.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Moderatorin bringt die Aufwandsentschädigung als Frage ins Spiel; abgeraten wird von der Forscherin.",
+              "en": "Asking about a measure is not proposing it — the distinction the whole part is built on."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person berichtet, große Ämter in kleinere aufgeteilt zu haben.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Vereinsvorsitzende",
+              "c": "die Ehrenamtsforscherin"
+            },
+            "loesung": "b",
+            "beleg": "Aus drei großen Ämtern sind neun kleine geworden, jedes mit einer klaren Aufgabe und einer Zusage über ein Jahr, nicht über vier.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er beschreibt eine Maßnahme im eigenen Verein und nennt das Ergebnis: sieben von neun besetzt.",
+              "en": "Loewe supplies the explanation for why it works, but the change itself is his."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "vortrag",
+        "anweisung": "Sie hören einen kurzen Vortrag über Entscheidungen in Gruppen. Wählen Sie bei den Aufgaben 23 bis 30 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Vortragsreihe der Volkshochschule Weidenbach: „Zu zweit klüger?“ — Dr. Levin Sartorius.",
+        "sprecher": [
+          {
+            "rolle": "Vortragender",
+            "geschlecht": "m",
+            "beschreibung": "Dr. Levin Sartorius, Sozialpsychologe"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören einen kurzen Vortrag. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 60,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Guten Abend. Ich beginne mit einem Versuch, den Sie hier im Saal kennen dürften. Man lässt Menschen schätzen, wie viele Bohnen in einem Glas sind. Einzeln liegt fast niemand richtig. Bildet man aber den Mittelwert aus hundert Schätzungen, landet der oft erstaunlich nah am wahren Wert.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Daraus ist der Satz geworden, Gruppen seien klüger als Einzelne. Er stimmt aber nur unter einer Bedingung, und die wird fast immer weggelassen: Die Schätzungen müssen unabhängig voneinander entstehen. Sobald die Leute einander hören, bricht der Effekt zusammen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Der Grund ist gut untersucht. Wer eine Zahl nennt, nachdem drei andere gesprochen haben, nennt nicht mehr seine eigene, sondern eine korrigierte. Die Fehler laufen dann in dieselbe Richtung, statt sich gegenseitig aufzuheben — und genau vom Aufheben lebte der Mittelwert.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Das hat unmittelbare Folgen für jede Besprechung. Wenn die ranghöchste Person zuerst ihre Meinung sagt, ist die Diskussion praktisch beendet, bevor sie beginnt. Der wirksamste Eingriff, den ich kenne, kostet nichts: Alle notieren ihre Einschätzung schriftlich, bevor gesprochen wird.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Ein zweiter Punkt betrifft nicht die Genauigkeit, sondern das Risiko. Man nimmt gemeinhin an, Gruppen entschieden vorsichtiger als Einzelne — mehrere Köpfe, mehr Bedenken. Die Befunde zeigen das Gegenteil.",
+            "pauseDanachSek": 0.6,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Eine Gruppe, die diskutiert, verschiebt ihre Position in der Regel weiter in die Richtung, in die sie ohnehin tendierte. Wer vorsichtig begann, wird noch vorsichtiger; wer zum Risiko neigte, entscheidet riskanter als jedes einzelne Mitglied es allein getan hätte.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Zum dritten Punkt, und der ist mir der liebste, weil er so unbequem ist. Man sollte meinen, eine Gruppe bringe zusammen, was die Einzelnen wissen. Tatsächlich reden Gruppen überwiegend über das, was ohnehin alle schon wussten.",
+            "pauseDanachSek": 0.6,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Information, die nur einer Person vorliegt, kommt seltener zur Sprache — und wenn, dann wird sie schwächer gewichtet. Für Auswahlgespräche ist das ein ernstes Problem: Die entscheidende Beobachtung hat oft nur eine Person gemacht.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Was hilft dagegen? Rollen helfen. Wenn eine Person ausdrücklich beauftragt wird, Einwände zu sammeln, verliert der Widerspruch seinen persönlichen Beigeschmack. Sie widersprechen dann nicht Ihrer Chefin, Sie erfüllen eine Aufgabe.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Wichtig ist dabei, dass die Rolle wechselt. Bleibt sie immer bei derselben Person, gilt diese nach drei Sitzungen als schwierig, und ihre Einwände werden abgehakt statt geprüft. Das habe ich in Betrieben oft genug gesehen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Lassen Sie mich das an einem Fall aus einem Betrieb zeigen, den ich begleitet habe. Dort wurde über den Kauf einer Maschine entschieden, acht Personen am Tisch, zwei Stunden Diskussion, am Ende ein einstimmiger Beschluss.",
+            "pauseDanachSek": 0.6,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Hinterher stellte sich heraus, dass drei der Anwesenden erhebliche Bedenken hatten. Gesagt hatte sie niemand, und zwar aus dem denkbar banalsten Grund: Jeder hielt sich für den Einzigen, der zweifelte. Einstimmigkeit nach zwei Stunden ist selten ein gutes Zeichen — sie ist meistens ein Hinweis darauf, dass jemand geschwiegen hat.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Ein letzter Hinweis zur Größe. Ich werde regelmäßig gefragt, wie groß ein Gremium sein soll. Die ehrliche Antwort lautet: kleiner, als Sie denken. Ab etwa sieben Personen sinkt der Beitrag jeder zusätzlichen Person messbar, weil sich immer mehr Anwesende darauf verlassen, dass jemand anderes schon etwas sagen wird.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Fassen wir zusammen: Gruppen sind nicht klüger und nicht dümmer als Einzelne. Sie sind anders, und zwar auf vorhersagbare Weise. Wer weiß, in welche Richtung sie kippen, kann das Verfahren so bauen, dass die Kippe nicht schadet. Ich danke Ihnen.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "multiple_choice",
+            "frage": "Unter welcher Bedingung ist der Mittelwert vieler Schätzungen genau?",
+            "optionen": {
+              "a": "Die Schätzungen entstehen unabhängig voneinander.",
+              "b": "Die Gruppe ist möglichst groß.",
+              "c": "Die Teilnehmenden sind Fachleute."
+            },
+            "loesung": "a",
+            "beleg": "Die Schätzungen müssen unabhängig voneinander entstehen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Redner nennt die Bedingung ausdrücklich als die, die fast immer weggelassen wird.",
+              "en": "Group size comes up at the end, and there larger is worse — the opposite of b."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "multiple_choice",
+            "frage": "Warum bricht der Effekt zusammen, wenn die Leute einander hören?",
+            "optionen": {
+              "a": "Weil die Diskussion zu lange dauert.",
+              "b": "Weil die Fehler dann in dieselbe Richtung laufen.",
+              "c": "Weil sich niemand mehr traut, eine Zahl zu nennen."
+            },
+            "loesung": "b",
+            "beleg": "Die Fehler laufen dann in dieselbe Richtung, statt sich gegenseitig aufzuheben — und genau vom Aufheben lebte der Mittelwert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt den Mechanismus und erinnert daran, worauf der Mittelwert beruhte.",
+              "en": "People do still answer — the point is that they answer with a corrected figure, not that they fall silent."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "multiple_choice",
+            "frage": "Welchen Eingriff empfiehlt er für Besprechungen?",
+            "optionen": {
+              "a": "Die ranghöchste Person soll zuerst sprechen.",
+              "b": "Alle notieren ihre Einschätzung, bevor gesprochen wird.",
+              "c": "Entscheidungen sollen vertagt werden."
+            },
+            "loesung": "b",
+            "beleg": "Alle notieren ihre Einschätzung schriftlich, bevor gesprochen wird.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor beschreibt genau das Gegenteil als Problem: Wenn die ranghöchste Person zuerst spricht, ist die Diskussion beendet.",
+              "en": "a is named as the failure mode the measure is designed to prevent."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "multiple_choice",
+            "frage": "Was zeigen die Befunde zum Risiko?",
+            "optionen": {
+              "a": "Gruppen entscheiden regelmäßig vorsichtiger als Einzelne.",
+              "b": "Gruppen verstärken die Richtung, in die sie ohnehin tendierten.",
+              "c": "Gruppen treffen seltener eine Entscheidung."
+            },
+            "loesung": "b",
+            "beleg": "Eine Gruppe, die diskutiert, verschiebt ihre Position in der Regel weiter in die Richtung, in die sie ohnehin tendierte.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Satz führt es in beide Richtungen aus — vorsichtiger und riskanter.",
+              "en": "a is the common assumption he introduces precisely in order to contradict it."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Worüber sprechen Gruppen laut Vortrag überwiegend?",
+            "optionen": {
+              "a": "Über das, was ohnehin alle schon wussten.",
+              "b": "Über neue Informationen einzelner Mitglieder.",
+              "c": "Über die Person, die den Vorsitz führt."
+            },
+            "loesung": "a",
+            "beleg": "Tatsächlich reden Gruppen überwiegend über das, was ohnehin alle schon wussten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Man sollte meinen … Tatsächlich …“ stellt Erwartung und Befund gegeneinander.",
+              "en": "b is exactly what he says does not happen, in the following sentence."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Warum hilft es, jemanden ausdrücklich mit Einwänden zu beauftragen?",
+            "optionen": {
+              "a": "Weil dadurch Zeit gespart wird.",
+              "b": "Weil der Widerspruch dann nicht mehr persönlich wirkt.",
+              "c": "Weil Einwände so schriftlich festgehalten werden."
+            },
+            "loesung": "b",
+            "beleg": "Wenn eine Person ausdrücklich beauftragt wird, Einwände zu sammeln, verliert der Widerspruch seinen persönlichen Beigeschmack.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der folgende Satz macht es anschaulich: Sie widersprechen nicht Ihrer Chefin, Sie erfüllen eine Aufgabe.",
+              "en": "Writing things down belongs to the earlier measure about estimates, not to this one."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Warum soll diese Rolle wechseln?",
+            "optionen": {
+              "a": "Weil sonst niemand sie freiwillig übernimmt.",
+              "b": "Weil die Person sonst als schwierig gilt und überhört wird.",
+              "c": "Weil die Aufgabe sehr zeitaufwendig ist."
+            },
+            "loesung": "b",
+            "beleg": "Bleibt sie immer bei derselben Person, gilt diese nach drei Sitzungen als schwierig, und ihre Einwände werden abgehakt statt geprüft.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Abgehakt statt geprüft“ ist die Folge, die der Wechsel verhindern soll.",
+              "en": "He never mentions how much work the role is, which is what makes c sound plausible."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Was sagt er über die Größe eines Gremiums?",
+            "optionen": {
+              "a": "Ab etwa sieben Personen sinkt der Beitrag jeder weiteren.",
+              "b": "Je größer das Gremium, desto ausgewogener die Entscheidung.",
+              "c": "Die Größe spielt für das Ergebnis keine Rolle."
+            },
+            "loesung": "a",
+            "beleg": "Ab etwa sieben Personen sinkt der Beitrag jeder zusätzlichen Person messbar, weil sich immer mehr Anwesende darauf verlassen, dass jemand anderes schon etwas sagen wird.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er kündigt die Antwort als „kleiner, als Sie denken“ an und nennt dann die Zahl mit Begründung.",
+              "en": "b is the expectation he answers, and the closing summary rules out c: groups differ predictably."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 75,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "forumsbeitrag",
+        "situation": "In einem Onlineforum wird darüber diskutiert, ob Supermärkte gesetzlich verpflichtet werden sollten, unverkaufte, aber noch essbare Lebensmittel abzugeben statt sie wegzuwerfen. Sie lesen den folgenden Beitrag und möchten darauf antworten.",
+        "impuls": "Hirtenweg: Ein solches Gesetz klingt gut und bringt gar nichts. Der allergrößte Teil der Lebensmittel wird nämlich nicht im Supermarkt weggeworfen, sondern bei uns zu Hause — und daran ändert eine Pflicht für den Handel kein Gramm. Am Ende haben wir eine neue Vorschrift, zusätzliche Kosten für die Märkte und ein gutes Gewissen, das wir uns nicht verdient haben. Wer wirklich etwas erreichen will, sollte bei sich selbst anfangen, statt nach dem Gesetzgeber zu rufen.",
+        "aufgabenstellung": "Schreiben Sie einen Beitrag für dieses Forum. Gehen Sie auf alle vier Leitpunkte ein, ordnen Sie Ihren Text sinnvoll und schreiben Sie mindestens 150 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie selbst von einer solchen Pflicht halten, und begründen Sie Ihre Meinung.",
+          "Gehen Sie auf ein Argument von Hirtenweg ein.",
+          "Beschreiben Sie, wie in Ihrem Heimatland mit übrig gebliebenen Lebensmitteln umgegangen wird.",
+          "Machen Sie einen Vorschlag, wie man die Verschwendung wirksam verringern könnte."
+        ],
+        "anrede": "Hallo zusammen",
+        "woerter": 150,
+        "zeitMinuten": 50,
+        "punkte": 60,
+        "redemittel": [
+          "Ich lese hier schon eine Weile mit und möchte gern etwas ergänzen.",
+          "Hirtenweg schreibt, dass … — dieser Zahl widerspreche ich gar nicht, allerdings …",
+          "Der Einwand richtet sich meiner Meinung nach gar nicht gegen …, sondern gegen …",
+          "Bei uns ist das anders geregelt: …",
+          "Aus meiner Sicht wäre es sinnvoller, zunächst … und erst danach …",
+          "Ich schlage deshalb vor, … Damit ließe sich erreichen, dass …",
+          "Zusammenfassend halte ich beides für nötig: … und …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo zusammen,\n\nich finde die Idee mit dem Gesetz gut, aber sie reicht allein nicht aus.\n\nHirtenweg schreibt, dass die meisten Lebensmittel zu Hause weggeworfen werden. Das stimmt wahrscheinlich. Trotzdem ist das für mich kein Grund, beim Handel nichts zu tun. Wenn jeder sagt, die anderen sind schuld, passiert am Ende gar nichts.\n\nIn meinem Heimatland gibt es kein solches Gesetz. Viele kleine Läden geben abends übriges Brot und Gemüse an Nachbarn oder an eine Moschee weiter. Das ist nicht organisiert, sondern hängt vom einzelnen Besitzer ab. In den großen Supermärkten wird dagegen alles weggeworfen, und niemand kontrolliert das. Genau deshalb halte ich eine Regel für den Handel auch bei uns für nötig.\n\nMein Vorschlag ist deshalb, beides zu machen. Die Märkte sollten abgeben müssen, und gleichzeitig sollte man in der Schule zeigen, wie man Reste verwendet und wie lange Lebensmittel wirklich haltbar sind. Viele Leute werfen weg, weil sie das Datum falsch verstehen.\n\nViele Grüße\nRavi",
+            "kommentar": "Alle vier Leitpunkte sind bearbeitet, die Position ist klar und der Vorschlag passt zur Begründung. Auf „ausreichend“ hält den Text die Sprache: überwiegend kurze Hauptsätze, wenige Konnektoren („aber“, „trotzdem“, „deshalb“), und die Auseinandersetzung mit Hirtenweg bleibt beim Zugeständnis stehen, statt sein Argument wirklich zu drehen."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo zusammen,\n\nden Beitrag von Hirtenweg finde ich in einem Punkt überzeugend und in seinem Schluss falsch.\n\nÜberzeugend ist die Zahl: Zu Hause wird tatsächlich mehr weggeworfen als im Handel. Nur folgt daraus nicht, dass eine Pflicht für die Märkte nichts bringt. Sie folgt nur, wenn man beides gegeneinander ausspielt — und genau das muss man nicht. Ein Gesetz kostet die Kundschaft nichts und wirkt sofort; die Gewohnheiten von vierzig Millionen Haushalten zu ändern, dauert eine Generation. Man sollte mit dem Schnellen anfangen und das Langsame parallel betreiben.\n\nIn meinem Heimatland ist der Handel zu nichts verpflichtet. Kleine Läden geben abends weiter, was übrig ist, aber das beruht auf Anstand, nicht auf Regeln, und in den großen Ketten geschieht es gar nicht. Wer sich darauf verlässt, verlässt sich auf Zufall.\n\nMein Vorschlag wäre eine Kombination: eine Abgabepflicht für Betriebe ab einer bestimmten Größe, damit kleine Läden nicht überfordert werden, und daneben eine verständlichere Kennzeichnung. Ein erheblicher Teil der Verschwendung entsteht nämlich dadurch, dass Menschen das Mindesthaltbarkeitsdatum für ein Verfallsdatum halten.\n\nViele Grüße\nRavi",
+            "kommentar": "Deutlich über dem Mindestmaß, ohne zu schwätzen. Der Beitrag trennt sauber zwischen dem, was am Gegenargument stimmt, und dem Schluss, der daraus nicht folgt („Sie folgt nur, wenn man beides gegeneinander ausspielt“), und begründet die Reihenfolge der Maßnahmen mit ihrer Geschwindigkeit. Sprachlich fallen Konnektoren wie „nur folgt daraus nicht“, „nämlich“, „daneben“ sowie mehrere Nebensätze und ein Passiv ins Gewicht."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "nachricht_formell",
+        "situation": "Sie sind Mitglied im TSV Nordwiese. Ihr Arbeitgeber versetzt Sie für sechs Monate an einen anderen Standort, sodass Sie das Training in dieser Zeit nicht besuchen können. Sie wissen aus der Satzung, dass ein Austritt nur zum Jahresende und nur bis zum 30. September möglich ist.",
+        "aufgabenstellung": "Schreiben Sie eine Nachricht an den Vorstand, Frau Reinbold. Achten Sie auf eine angemessene Anrede und einen passenden Schluss und schreiben Sie mindestens 100 Wörter.",
+        "leitpunkte": [
+          "Nennen Sie den Grund für Ihr Schreiben.",
+          "Erklären Sie, warum Sie ein halbes Jahr nicht am Training teilnehmen können.",
+          "Fragen Sie, ob der Beitrag in dieser Zeit ruhen kann oder ob eine Zehnerkarte möglich wäre.",
+          "Bitten Sie um eine Antwort vor dem 30. September."
+        ],
+        "anrede": "Sehr geehrte Frau Reinbold",
+        "woerter": 100,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "ich bin seit … Mitglied in Ihrem Verein und wende mich heute mit einer Bitte an Sie.",
+          "Aus beruflichen Gründen werde ich ab … für sechs Monate nicht am Training teilnehmen können.",
+          "Nun wäre meine Frage, ob es möglich wäre, den Beitrag in dieser Zeit ruhen zu lassen.",
+          "Alternativ käme für mich … in Frage.",
+          "Da die Satzung eine Frist zum 30. September vorsieht, wäre ich für eine Antwort bis … dankbar.",
+          "Vielen Dank im Voraus für Ihre Mühe."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Frau Reinbold,\n\nich bin seit drei Jahren Mitglied im TSV Nordwiese und habe eine Frage.\n\nMeine Firma schickt mich ab dem 1. November für sechs Monate nach Hamburg. Deshalb kann ich bis Ende April nicht zum Training kommen. Ich möchte aber im Verein bleiben, weil ich danach wieder mitmachen will.\n\nDeshalb meine Frage: Kann der Beitrag in dieser Zeit ruhen? Oder wäre eine Zehnerkarte für mich besser? Ich habe gelesen, dass es die seit zwei Jahren gibt.\n\nIn der Satzung steht, dass man nur bis zum 30. September kündigen kann. Deshalb bitte ich Sie um eine Antwort vor diesem Datum.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle vier Punkte kommen vor, und der Bezug auf die Frist zeigt, dass die Satzung gelesen wurde. Auf „ausreichend“ hält den Text die einfache Syntax: fast nur Hauptsätze, die direkte Frage „Kann der Beitrag …?“ statt einer höflichen Konjunktivform, und ein dreimal wiederholtes „deshalb“."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Frau Reinbold,\n\nseit drei Jahren bin ich Mitglied im TSV Nordwiese und wende mich heute mit einer Bitte an Sie.\n\nMein Arbeitgeber versetzt mich zum 1. November für sechs Monate an unseren Hamburger Standort. Am Training werde ich daher bis Ende April nicht teilnehmen können. Austreten möchte ich deswegen aber ausdrücklich nicht, da ich anschließend gern weitermachen würde.\n\nNun wäre meine Frage, ob es möglich wäre, die Mitgliedschaft für diese sechs Monate ruhen zu lassen. Sollte die Satzung das nicht vorsehen, käme für mich alternativ die Zehnerkarte in Frage, über die ich in der Zeitung gelesen habe. Ich würde mich gern nach dem richten, was für den Verein einfacher ist.\n\nDa ein Austritt laut Satzung nur bis zum 30. September erklärt werden kann, wäre ich Ihnen für eine Rückmeldung vor diesem Termin sehr dankbar — sonst müsste ich mich ohne Ihre Auskunft entscheiden.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Durchgehend halbformelles Register, ohne steif zu wirken. Die Bitte steht im Konjunktiv II („wäre es möglich“, „käme in Frage“, „würde mich gern richten“), es wird eine Alternative angeboten statt nur eine Frage gestellt, und die Frist wird begründet („sonst müsste ich mich ohne Ihre Auskunft entscheiden“). Auffällig sind außerdem die Umstellungen im Vorfeld, die den Text vom Schema „Ich bin … Ich kann nicht … Ich frage …“ lösen."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "vortrag",
+        "titel": "Einen kurzen Vortrag halten",
+        "anweisung": "Wählen Sie eines der beiden Themen und halten Sie dazu einen Vortrag von etwa vier Minuten. Gliedern Sie ihn in Einleitung, Hauptteil und Schluss. Ihre Gesprächspartnerin stellt Ihnen anschließend Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 50,
+        "fragen": [
+          "Sie haben von Ihren eigenen Beobachtungen berichtet — gilt das auch für Menschen in einer ganz anderen Lage?",
+          "Was wäre nötig, damit sich daran in den nächsten fünf Jahren etwas ändert?",
+          "Wenn Sie eine einzige Maßnahme durchsetzen könnten — welche wäre das, und wer müsste sie bezahlen?"
+        ],
+        "themen": [
+          {
+            "titel": "Sollte gesundes Essen in Kantinen billiger sein als ungesundes?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Ich habe mich für dieses Thema entschieden, weil ich täglich in einer Kantine esse.",
+              "Zunächst möchte ich beschreiben, wie die Preise dort heute aussehen.",
+              "Ein Beispiel dafür ist …",
+              "Für eine solche Steuerung spricht vor allem, dass …",
+              "Dagegen wird eingewendet, dass man Menschen nicht erziehen sollte.",
+              "Wenn man beide Seiten abwägt, überwiegt für mich …",
+              "Ich komme damit zum Schluss und fasse zusammen: …"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob gesundes Essen in Kantinen billiger sein sollte als ungesundes. Das Thema interessiert mich, weil ich seit zwei Jahren jeden Mittag in einer Betriebskantine esse und dort jeden Tag dieselbe Beobachtung mache.\n\nZur Lage: Bei uns kostet der Teller mit Gemüse und Salat vier Euro achtzig, die Currywurst mit Pommes drei Euro zwanzig. Wer wenig verdient, entscheidet sich vorhersehbar. Ich sehe das jeden Tag an der Kasse, und ich schließe mich davon nicht aus — an einem langen Tag greife ich selbst zum billigeren Teller.\n\nFür eine Umkehrung der Preise spricht aus meiner Sicht vor allem, dass sie ohne Verbot auskommt. Niemandem wird etwas weggenommen; es wird nur billiger, was ohnehin gesünder ist. Hinzu kommt, dass Betriebe an gesunden Beschäftigten ein eigenes Interesse haben. Dagegen wird eingewendet, Erwachsene ließen sich nicht erziehen, und dieses Argument nehme ich ernst. Nur wird auch heute schon gesteuert — eben in die andere Richtung, weil Fleisch subventioniert ist und Gemüse nicht.\n\nWenn ich beide Seiten abwäge, komme ich zu folgendem Schluss: Eine Vorschrift für alle Kantinen wäre falsch, ein Preisunterschied von einem Euro dagegen richtig. Er entscheidet nichts, aber er macht die gesündere Wahl zur bequemeren. Die etwas höheren Kosten für den Betrieb würde ich dafür in Kauf nehmen. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Brauchen Städte noch Wochenmärkte?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Mein Thema lautet … Ich habe es gewählt, weil es meinen eigenen Alltag betrifft.",
+              "Man muss dabei zwei Fragen auseinanderhalten: … und …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Der größte Vorteil liegt für mich darin, dass …",
+              "Problematisch finde ich allerdings, dass …",
+              "Entscheidend ist meiner Meinung nach nicht ob, sondern wann …",
+              "Abschließend möchte ich festhalten: …"
+            ],
+            "musterantwort": "Mein Thema lautet: Brauchen Städte noch Wochenmärkte? Ich habe es gewählt, weil in meiner Straße vor einem Jahr der Markt von zwei Tagen auf einen gekürzt wurde und ich seitdem darüber nachdenke.\n\nMan muss dabei zwei Fragen auseinanderhalten. Die erste ist, ob wir den Markt zum Einkaufen brauchen. Ehrlich gesagt: nein. Alles, was dort verkauft wird, gibt es im Supermarkt, oft günstiger und immer länger geöffnet. Die zweite Frage ist, ob wir ihn für etwas anderes brauchen, und da fällt meine Antwort anders aus.\n\nDer größte Vorteil liegt für mich darin, dass ein Markt der einzige Ort in meinem Viertel ist, an dem man sich zufällig trifft und stehen bleibt. Im Supermarkt spricht niemand miteinander. Hinzu kommt, dass kleine Höfe ohne Marktstände kaum eine Möglichkeit haben zu verkaufen. Problematisch finde ich allerdings die Öffnungszeiten: Ein Markt, der dienstags um vierzehn Uhr schließt, ist für Berufstätige praktisch nicht vorhanden.\n\nAbschließend möchte ich festhalten: Entscheidend ist nicht ob, sondern wann. Ich würde den Markt nicht streichen, sondern auf den späten Nachmittag verlegen. Wer erst um achtzehn Uhr einkaufen kann, hätte dann zum ersten Mal die Wahl. Vielen Dank."
+          }
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihren Vortrag. Eine Sache würde mich noch interessieren: Sie haben von Ihren eigenen Beobachtungen berichtet — gilt das auch für Menschen in einer ganz anderen Lage?",
+            "wartenSek": 45,
+            "hinweis": "Antworten Sie in zwei bis drei Sätzen und nennen Sie ein konkretes Gegenbeispiel."
+          },
+          {
+            "text": "Das leuchtet mir ein. Und was wäre nötig, damit sich daran in den nächsten fünf Jahren wirklich etwas ändert?",
+            "wartenSek": 45,
+            "hinweis": "Nennen Sie eine Bedingung und sagen Sie, wer dafür zuständig wäre."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "diskussion",
+        "titel": "Eine Debatte führen",
+        "anweisung": "Diskutieren Sie mit Ihrer Gesprächspartnerin über die folgende Frage. Tauschen Sie Argumente aus, gehen Sie auf die Gegenseite ein und kommen Sie am Ende zu einem gemeinsamen Fazit.",
+        "dauerMinuten": 5,
+        "punkte": 50,
+        "situation": "Sollen Inlandsflüge verboten werden, wenn die Strecke auch in unter vier Stunden mit dem Zug zu schaffen ist?",
+        "planungspunkte": [
+          "Wer wäre von einem solchen Verbot betroffen — und wer nicht?",
+          "Reicht die Bahn heute für diese Strecken aus?",
+          "Was würde ein Verbot tatsächlich einsparen?",
+          "Welche Alternative wäre denkbar, wenn ein Verbot nicht kommt?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Ich fange einmal an, und ich bin ehrlich gesagt dagegen. Ein Verbot trifft am Ende die, die sich keine Alternative aussuchen können — wer pendeln muss, sitzt dann eben sechs Stunden im Zug. Und die Bahn ist auf diesen Strecken heute schon voll.",
+            "wartenSek": 40,
+            "hinweis": "Gehen Sie zuerst auf ihren Punkt ein: Trifft ein Verbot wirklich vor allem Pendler?"
+          },
+          {
+            "text": "Gut, den Einwand verstehe ich. Aber sehen Sie: Wenn die Bahn nicht ausgebaut ist, verschiebt ein Verbot das Problem doch nur. Erst die Kapazität, dann das Verbot — nicht umgekehrt.",
+            "wartenSek": 40,
+            "hinweis": "Stimmen Sie zu oder widersprechen Sie — und machen Sie einen Vorschlag zur Reihenfolge."
+          },
+          {
+            "text": "Das wäre ein Weg, ja. Ehrlich gesagt frage ich mich aber, ob wir über die richtige Größenordnung reden. Inlandsflüge sind ein kleiner Teil des Verkehrs. Wäre die Aufregung nicht woanders besser aufgehoben?",
+            "wartenSek": 40,
+            "hinweis": "Ein starkes Argument. Geben Sie zu, was daran stimmt, und ziehen Sie eine Folgerung daraus."
+          },
+          {
+            "text": "Da liegen wir näher beieinander, als ich dachte. Wollen wir versuchen, das zusammenzufassen? Sagen Sie doch, worauf wir uns einigen könnten.",
+            "wartenSek": 45,
+            "hinweis": "Fassen Sie beide Positionen zusammen und formulieren Sie ein gemeinsames Fazit."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "die Herkunft",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Herkünfte",
+      "bedeutung_de": "der Ort oder das Land, woher etwas oder jemand stammt",
+      "bedeutung_en": "origin, provenance",
+      "beispiel": "ihnen sei Herkunft wichtig",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Klimabelastung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Klimabelastungen",
+      "bedeutung_de": "die Wirkung einer Tätigkeit auf das Klima",
+      "bedeutung_en": "climate impact",
+      "beispiel": "nur ein kleiner Teil der gesamten Klimabelastung",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "das Gewächshaus",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Gewächshäuser",
+      "bedeutung_de": "ein Haus aus Glas, in dem Pflanzen wachsen",
+      "bedeutung_en": "greenhouse",
+      "beispiel": "Eine im beheizten Gewächshaus vor der Haustür gezogene Tomate",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Verlässlichkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "die Eigenschaft, dass man sich auf etwas verlassen kann",
+      "bedeutung_en": "reliability",
+      "beispiel": "Die eigentliche Schwierigkeit war die Verlässlichkeit.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Großhändler",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Großhändler",
+      "bedeutung_de": "ein Betrieb, der große Mengen an Betriebe weiterverkauft",
+      "bedeutung_en": "wholesaler",
+      "beispiel": "Ein Großhändler liefert, was auf der Bestellung steht",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "verbindlich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man sich daran halten muss",
+      "bedeutung_en": "binding, obligatory",
+      "beispiel": "eine verbindliche Kennzeichnung",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Kennzeichnung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Kennzeichnungen",
+      "bedeutung_de": "die Angaben auf einer Ware, die sagen, was sie ist",
+      "bedeutung_en": "labelling",
+      "beispiel": "dringen wir seit Jahren auf eine verbindliche Kennzeichnung",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Anbau",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "—",
+      "bedeutung_de": "das Anpflanzen und Ziehen von Nutzpflanzen",
+      "bedeutung_en": "cultivation, growing",
+      "beispiel": "Diese Person hält die Art des Anbaus für wichtiger als die Entfernung.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Knolle",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Knollen",
+      "bedeutung_de": "der dicke, essbare Teil einer Pflanze unter der Erde",
+      "bedeutung_en": "tuber",
+      "beispiel": "Die Knolle wächst unter der Erde",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "verderben",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verdirbt",
+        "praeteritum": "verdarb",
+        "perfekt": "ist verdorben",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "schlecht werden, ungenießbar werden",
+      "bedeutung_en": "to spoil, to go off",
+      "beispiel": "Getreide verdirbt auf dem Feld, wenn ein Sommer verregnet",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Obrigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Obrigkeiten",
+      "bedeutung_de": "die herrschende Macht, der Staat — älteres Wort",
+      "bedeutung_en": "the authorities (historical register)",
+      "beispiel": "Die Obrigkeit half nach, teils mit erstaunlichen Mitteln.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Ernte",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Ernten",
+      "bedeutung_de": "das Einbringen der Feldfrüchte und ihr Ertrag",
+      "bedeutung_en": "harvest, crop",
+      "beispiel": "eine aus Amerika eingeschleppte Pilzkrankheit die Ernten vernichtete",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "vernichten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vernichtet",
+        "praeteritum": "vernichtete",
+        "perfekt": "hat vernichtet"
+      },
+      "bedeutung_de": "vollständig zerstören",
+      "bedeutung_en": "to destroy, to wipe out",
+      "beispiel": "die Ernten vernichtete",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "auswandern",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "wandert aus",
+        "praeteritum": "wanderte aus",
+        "perfekt": "ist ausgewandert"
+      },
+      "bedeutung_de": "das eigene Land dauerhaft verlassen",
+      "bedeutung_en": "to emigrate",
+      "beispiel": "zwei Millionen wanderten aus",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Mitgliedschaft",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Mitgliedschaften",
+      "bedeutung_de": "das Mitgliedsein in einem Verein oder einer Organisation",
+      "bedeutung_en": "membership",
+      "beispiel": "Was zurückgeht, ist nicht der Sport, sondern die Mitgliedschaft.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "der Vorstand",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Vorstände",
+      "bedeutung_de": "die gewählte Leitung eines Vereins",
+      "bedeutung_en": "board, committee",
+      "beispiel": "Ein Verein braucht einen Vorstand, eine Kasse, eine Person, die die Halle aufschließt.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Kündigungsfrist",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Kündigungsfristen",
+      "bedeutung_de": "die Zeit, die zwischen Kündigung und Ende liegen muss",
+      "bedeutung_en": "notice period",
+      "beispiel": "ohne Beitritt und ohne Kündigungsfrist",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Dienstleister",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Dienstleister",
+      "bedeutung_de": "ein Betrieb, der Leistungen verkauft statt Waren",
+      "bedeutung_en": "service provider",
+      "beispiel": "ein Verein sei kein Dienstleister",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "abschreckend",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass es Menschen von etwas fernhält",
+      "bedeutung_en": "off-putting, deterrent",
+      "beispiel": "Abschreckend wirken die Bindung an feste Trainingszeiten",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "entschleunigen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "entschleunigt",
+        "praeteritum": "entschleunigte",
+        "perfekt": "hat entschleunigt"
+      },
+      "bedeutung_de": "langsamer machen, das Tempo herausnehmen",
+      "bedeutung_en": "to slow down deliberately",
+      "beispiel": "Dafür habe ich meine Reisen entschleunigt",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "haften",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "haftet",
+        "praeteritum": "haftete",
+        "perfekt": "hat gehaftet"
+      },
+      "praeposition": {
+        "wort": "für",
+        "kasus": "Akkusativ"
+      },
+      "bedeutung_de": "rechtlich für einen Schaden einstehen müssen",
+      "bedeutung_en": "to be liable for",
+      "beispiel": "Bei einer Verspätung haftet dann niemand für den Anschluss.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Anschluss",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Anschlüsse",
+      "bedeutung_de": "der nächste Zug oder Bus, den man erreichen muss",
+      "bedeutung_en": "connection (in travel)",
+      "beispiel": "haftet dann niemand für den Anschluss",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "erreichbar",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man es schaffen oder hinkommen kann",
+      "bedeutung_en": "achievable; within reach",
+      "beispiel": "das ist erreichbar, bezahlbar",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "gemeinnützig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "der Allgemeinheit dienend, nicht auf Gewinn gerichtet",
+      "bedeutung_en": "non-profit, charitable",
+      "beispiel": "Der Verein verfolgt ausschließlich gemeinnützige Zwecke.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Antrag",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Anträge",
+      "bedeutung_de": "die förmliche Bitte um etwas, meist schriftlich",
+      "bedeutung_en": "application, request",
+      "beispiel": "Der Antrag ist schriftlich zu stellen",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "ermäßigen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "ermäßigt",
+        "praeteritum": "ermäßigte",
+        "perfekt": "hat ermäßigt"
+      },
+      "bedeutung_de": "den Preis herabsetzen",
+      "bedeutung_en": "to reduce (a fee)",
+      "beispiel": "kann der Vorstand auf Antrag stunden oder ermäßigen",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Ausschluss",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Ausschlüsse",
+      "bedeutung_de": "das Entfernen einer Person aus einer Gruppe",
+      "bedeutung_en": "expulsion",
+      "beispiel": "Die Mitgliedschaft endet durch Austritt, Ausschluss oder Tod.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Anhörung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Anhörungen",
+      "bedeutung_de": "die Gelegenheit, sich vor einer Entscheidung zu äußern",
+      "bedeutung_en": "hearing (the right to be heard)",
+      "beispiel": "setzt eine vorherige Anhörung voraus",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "lieferbar",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass es geliefert werden kann, vorrätig",
+      "bedeutung_en": "available for delivery, in stock",
+      "beispiel": "ist derzeit bundesweit nicht lieferbar",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "unbedenklich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne Gefahr, kein Grund zur Sorge",
+      "bedeutung_en": "harmless, nothing to worry about",
+      "beispiel": "kann das Wasser bräunlich sein, das ist unbedenklich",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Erosion",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Erosionen",
+      "bedeutung_de": "das Abtragen von Boden durch Wasser oder Wind",
+      "bedeutung_en": "erosion",
+      "beispiel": "genau da beginnt die Erosion",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "verdichten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verdichtet",
+        "praeteritum": "verdichtete",
+        "perfekt": "hat verdichtet"
+      },
+      "bedeutung_de": "zusammenpressen, dichter machen",
+      "bedeutung_en": "to compact",
+      "beispiel": "weil es den Boden in der Tiefe verdichtet",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "versickern",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "versickert",
+        "praeteritum": "versickerte",
+        "perfekt": "ist versickert"
+      },
+      "bedeutung_de": "langsam im Boden verschwinden",
+      "bedeutung_en": "to seep away, to infiltrate",
+      "beispiel": "Wasser läuft dann oben ab, statt zu versickern",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "pachten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "pachtet",
+        "praeteritum": "pachtete",
+        "perfekt": "hat gepachtet"
+      },
+      "bedeutung_de": "Land gegen Bezahlung zur Nutzung übernehmen",
+      "bedeutung_en": "to lease (farmland)",
+      "beispiel": "Fast zwei Drittel der Ackerflächen bei uns sind gepachtet",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Fehldeutung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Fehldeutungen",
+      "bedeutung_de": "eine falsche Auslegung von etwas",
+      "bedeutung_en": "misreading, misinterpretation",
+      "beispiel": "eine der hartnäckigsten Fehldeutungen in meinem Fach",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "hartnäckig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass es nicht verschwinden will",
+      "bedeutung_en": "persistent, stubborn",
+      "beispiel": "eine der hartnäckigsten Fehldeutungen",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Aufwandsentschädigung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Aufwandsentschädigungen",
+      "bedeutung_de": "ein kleiner Betrag als Ausgleich für Mühe und Kosten",
+      "bedeutung_en": "expense allowance",
+      "beispiel": "Manche Kommunen zahlen inzwischen eine Aufwandsentschädigung.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "das Gremium",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Gremien",
+      "bedeutung_de": "eine Gruppe von Personen, die gemeinsam entscheidet",
+      "bedeutung_en": "committee, panel",
+      "beispiel": "wie groß ein Gremium sein soll",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "gewichten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "gewichtet",
+        "praeteritum": "gewichtete",
+        "perfekt": "hat gewichtet"
+      },
+      "bedeutung_de": "einer Sache mehr oder weniger Bedeutung geben",
+      "bedeutung_en": "to weight, to give weight to",
+      "beispiel": "dann wird sie schwächer gewichtet",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "vorhersagbar",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man es im Voraus wissen kann",
+      "bedeutung_en": "predictable",
+      "beispiel": "Sie sind anders, und zwar auf vorhersagbare Weise.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Verschwendung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Verschwendungen",
+      "bedeutung_de": "der unnötige Verbrauch von etwas",
+      "bedeutung_en": "waste",
+      "beispiel": "wie man die Verschwendung wirksam verringern könnte",
+      "fundstelle": "Schreiben Teil 1",
+      "niveau": "B1+"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "gegen den Strich gehen",
+      "typ": "redewendung",
+      "bedeutung_de": "einem unangenehm sein, gegen das eigene Gefühl sein",
+      "bedeutung_en": "to rub someone up the wrong way",
+      "beispiel": "Was mir an dieser Debatte gegen den Strich gehen kann, ist der Ton.",
+      "fundstelle": "Lesen Teil 4"
+    },
+    {
+      "wendung": "zu Buche schlagen",
+      "typ": "redewendung",
+      "bedeutung_de": "sich in der Rechnung deutlich bemerkbar machen",
+      "bedeutung_en": "to make a real dent in the figures",
+      "beispiel": "Das schlägt in jeder Bilanz erheblich zu Buche.",
+      "fundstelle": "Hören Teil 2"
+    },
+    {
+      "wendung": "Hand in Hand gehen",
+      "typ": "redewendung",
+      "bedeutung_de": "zusammengehören, gemeinsam auftreten",
+      "bedeutung_en": "to go hand in hand",
+      "beispiel": "Anerkennung und Bezahlung müssen eben nicht Hand in Hand gehen.",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "in Kauf nehmen",
+      "typ": "redewendung",
+      "bedeutung_de": "einen Nachteil hinnehmen, weil der Vorteil überwiegt",
+      "bedeutung_en": "to accept something as the price of something else",
+      "beispiel": "Die etwas höheren Kosten für den Betrieb würde ich dafür in Kauf nehmen.",
+      "fundstelle": "Sprechen Teil 1"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Die Korrektur im Satz: „nicht …, sondern …“",
+      "erklaerung_de": "Mit „nicht … sondern …“ wird eine Annahme zurückgewiesen und im selben Atemzug ersetzt. Wichtig ist, dass „sondern“ nur nach einer Verneinung stehen kann; sonst heißt es „aber“. In Prüfungstexten steht die richtige Antwort fast immer im zweiten Teil.",
+      "erklaerung_en": "The single most common trap in B2 reading. The first half names what is *not* the case, and readers who stop there choose exactly the distractor that was offered for them. Note that „sondern“ requires a preceding negation — otherwise German uses „aber“.",
+      "belegSatz": "Was zurückgeht, ist nicht der Sport, sondern die Mitgliedschaft.",
+      "fundstelle": "Lesen Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "„aber“ oder „sondern“? Der Kurs ist teuer, ___ er lohnt sich.",
+          "loesung": "aber",
+          "hinweis": "Keine Verneinung im ersten Teil, also „aber“."
+        },
+        {
+          "aufgabe": "„aber“ oder „sondern“? Es liegt nicht am Preis, ___ an den Öffnungszeiten.",
+          "loesung": "sondern",
+          "hinweis": "„nicht“ im ersten Teil verlangt „sondern“."
+        },
+        {
+          "aufgabe": "Was ist die Aussage? „Nicht die Zahl der Engagierten ist gesunken, sondern ihre Form hat sich geändert.“",
+          "loesung": "Die Zahl ist gleich geblieben; geändert hat sich die Form des Engagements.",
+          "hinweis": "Der zweite Teil trägt die Information, der erste räumt nur auf."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Konjunktiv I — wer sagt das eigentlich?",
+      "erklaerung_de": "In Berichten zeigt der Konjunktiv I, dass jemand anders das behauptet und die schreibende Person es nicht übernimmt. Erkennbar an Formen wie „sei“, „habe“, „verkaufe“, „züchte“. Wo die Form wie der Indikativ aussieht, weicht man auf Konjunktiv II aus („fehlten“).",
+      "erklaerung_en": "The grammatical marker of attribution. When a report switches to Konjunktiv I, everything in that stretch belongs to the person being quoted — which is exactly what „who says what“ tasks test. Miss it and you credit the newspaper with the source's opinion.",
+      "belegSatz": "Der Landesverband warnt, ein Verein sei kein Dienstleister; wer nur Leistungen verkaufe, züchte sich Kundschaft heran statt einer Gemeinschaft, und in fünf Jahren fehlten die Ehrenamtlichen erst recht.",
+      "fundstelle": "Lesen Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um: „Ich habe keine Zeit“, sagte er. — indirekt.",
+          "loesung": "Er sagte, er habe keine Zeit.",
+          "hinweis": "Konjunktiv I: habe."
+        },
+        {
+          "aufgabe": "Formen Sie um: „Wir haben nichts davon gewusst“, sagten sie. — indirekt.",
+          "loesung": "Sie sagten, sie hätten nichts davon gewusst.",
+          "hinweis": "„haben“ sähe wie der Indikativ aus, also Konjunktiv II."
+        },
+        {
+          "aufgabe": "Wessen Meinung ist das? „Fahrenkamp widerspricht dem nicht grundsätzlich, hält den Einwand aber für zu spät.“",
+          "loesung": "Fahrenkamps — hier steht Indikativ, die Zeitung berichtet ihre Handlung, nicht eine fremde Behauptung.",
+          "hinweis": "Kein Konjunktiv I, also kein zitierter Inhalt."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Infinitivsätze: statt zu, ohne zu, um zu",
+      "erklaerung_de": "Diese drei ersetzen einen ganzen Nebensatz, solange das Subjekt dasselbe bleibt. „statt zu“ nennt, was jemand nicht tut, „ohne zu“ eine fehlende Begleitumstände, „um zu“ die Absicht. Wechselt das Subjekt, braucht es „statt dass“, „ohne dass“ oder „damit“.",
+      "erklaerung_en": "Compact and typical of written German. The one rule that matters: same subject, infinitive; different subject, full clause with dass or damit. Getting that wrong is one of the most visible B2 writing errors.",
+      "belegSatz": "Wasser läuft dann oben ab, statt zu versickern",
+      "fundstelle": "Hören Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Verkürzen Sie: „Er ging, ohne dass er sich verabschiedete.“",
+          "loesung": "Er ging, ohne sich zu verabschieden.",
+          "hinweis": "Gleiches Subjekt, also Infinitiv."
+        },
+        {
+          "aufgabe": "Geht das? „Ich schreibe Ihnen, um Sie mir zu antworten.“",
+          "loesung": "Nein — anderes Subjekt. Richtig: „Ich schreibe Ihnen, damit Sie mir antworten.“",
+          "hinweis": "„um zu“ nur bei gleichem Subjekt."
+        },
+        {
+          "aufgabe": "Setzen Sie ein: Sie säen eine Zwischenfrucht, ___ den Boden festzuhalten.",
+          "loesung": "um",
+          "hinweis": "Absicht, gleiches Subjekt."
+        }
+      ]
+    },
+    {
+      "phaenomen": "„Wer …, der …“ — die verallgemeinernde Aussage",
+      "erklaerung_de": "Mit „wer“ formuliert man eine Regel, die für jede Person gilt, auf die die Bedingung zutrifft. Der wer-Satz ist ein Nebensatz, das Verb steht also am Ende; danach folgt der Hauptsatz mit dem Verb an erster Stelle. Ein „der“ oder „dem“ kann folgen, muss aber nicht.",
+      "erklaerung_en": "German's way of saying \"anyone who …\". It reads like a proverb and is very common in argumentative writing, where it lets you make a general claim without naming anybody. Watch the word order: subordinate clause first, so the main clause starts with its verb.",
+      "belegSatz": "Wer erst um achtzehn Uhr einkaufen kann, landet zwangsläufig im Supermarkt",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um: „Alle Menschen, die früh buchen, zahlen weniger.“ — mit „wer“.",
+          "loesung": "Wer früh bucht, zahlt weniger.",
+          "hinweis": "Verb im wer-Satz ans Ende, danach gleich das Verb des Hauptsatzes."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Wer sich nicht meldet, ___ bei der Planung übersehen.",
+          "loesung": "wird",
+          "hinweis": "Der Hauptsatz beginnt mit dem konjugierten Verb."
+        },
+        {
+          "aufgabe": "Richtig oder falsch? „Wer nach Vorständen sucht, findet niemanden.“",
+          "loesung": "Richtig — Nebensatz mit Verb am Ende, Hauptsatz mit Verb an erster Stelle.",
+          "hinweis": "Genau dieses Muster steht im Hörtext zum Ehrenamt."
+        }
+      ]
+    }
+  ]
+}

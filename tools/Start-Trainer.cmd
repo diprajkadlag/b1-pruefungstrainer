@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-title Pruefungstrainer B1/B2
+title GermanExamTrainer
 
 rem  Starts the trainer with whatever the machine already has.
 rem
@@ -13,7 +13,7 @@ cd /d "%~dp0"
 if exist "dist\index.html" cd dist
 
 echo.
-echo   Pruefungstrainer B1/B2
+echo   GermanExamTrainer  -  Deutsch B1 und B2
 echo   -------------------
 echo.
 

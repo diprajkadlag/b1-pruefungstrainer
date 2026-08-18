@@ -121,7 +121,7 @@ export function Ergebnis({
     const tsv = ankiTsv(
       schluessel.glossar,
       schluessel.redewendungen,
-      `Prüfungstrainer::${pruefung.meta.stufe}::${pruefung.meta.id}`,
+      `GermanExamTrainer::${pruefung.meta.stufe}::${pruefung.meta.id}`,
     );
     herunterladen(
       new Blob([tsv], { type: 'text/tab-separated-values;charset=utf-8' }),

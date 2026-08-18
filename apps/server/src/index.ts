@@ -258,7 +258,7 @@ async function start() {
   const anzeige = HOST === '0.0.0.0' ? 'localhost' : HOST;
 
   const fertig = () => {
-    console.log(`\n  Prüfungstrainer`);
+    console.log(`\n  GermanExamTrainer`);
     console.log(`  App      ${schema}://${anzeige}:${PORT}/`);
     console.log(`  Prüfer   ${schema}://${anzeige}:${PORT}/pruefer`);
     console.log(`  Abgaben  ${ABGABEN}`);

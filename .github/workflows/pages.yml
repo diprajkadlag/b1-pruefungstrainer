@@ -40,6 +40,14 @@ jobs:
             texlive-lang-german texlive-fonts-recommended \
             texlive-pictures lmodern
 
+      - name: Cache Piper voice models
+        # About 250 MB, identical from run to run. The key is the voice
+        # registry itself, so adding or removing a voice invalidates it.
+        uses: actions/cache@v4
+        with:
+          path: tools/.voices
+          key: piper-voices-${{ hashFiles('tools/generate_audio.py') }}
+
       - name: Synthesise listening audio
         run: python tools/generate_audio.py
       - name: Build the printable papers

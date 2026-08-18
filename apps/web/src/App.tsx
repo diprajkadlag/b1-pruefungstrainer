@@ -232,7 +232,7 @@ export default function App() {
     <div className="app">
       <header className="kopf">
         <a className="kopf__marke" href={import.meta.env.BASE_URL}>
-          Prüfungstrainer
+          GermanExamTrainer
         </a>
         {phase === 'pruefung' && aktuellesModul && versuch && (
           <div className="kopf__lauf">

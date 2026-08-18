@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-title Pruefungstrainer B1/B2
+title GermanExamTrainer
 
 rem  Start the trainer from a fresh clone. Double-click this file.
 rem
@@ -22,7 +22,7 @@ set URL=http://localhost:%PORT%/
 set REPO=https://github.com/diprajkadlag/b1-pruefungstrainer
 
 echo.
-echo   Pruefungstrainer B1/B2
+echo   GermanExamTrainer  -  Deutsch B1 und B2
 echo   ===================
 echo.
 
@@ -136,7 +136,7 @@ where tar  >nul 2>&1 || goto :audio_no_tools
 echo.
 rem  Every paper that ships, at either level. The release names its audio
 rem  archive after the paper id, so this list is the only thing to extend.
-for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01) do (
+for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03) do (
   echo   Downloading audio for %%P...
   if not exist "content\exams\%%P\audio" mkdir "content\exams\%%P\audio"
   curl -sSL -o "%TEMP%\pruef-audio-%%P.zip" "%REPO%/releases/latest/download/audio-%%P.zip"

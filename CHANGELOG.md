@@ -17,12 +17,12 @@ Exam content is versioned separately, per paper, in each `exam.json`
   level rather than hard-coded. `tools/validate.py`, `tools/new_exam.py`,
   `tools/build_pdf.py` and the app all follow it. B1 papers are unchanged and
   keep their ids; B2 papers are `b2-pruefung-NN`.
-- **`content/exams/b2-pruefung-01`** — a complete, original B2 paper: a forum on
-  the four-day week, a history of street lighting with sentence-insertion gaps,
-  a newspaper article on urban noise, eight opinions on renting clothes, a
-  workshop's regulations, four listening texts, two writing tasks with annotated
-  model answers at two grades, a talk and a debate, plus 34 glossary entries,
-  four idioms and four grammar foci built from the paper's own sentences.
+- **Three complete B2 papers**, `b2-pruefung-01` to `-03`, each with 30 reading
+  and 30 listening items, two writing tasks with annotated model answers at two
+  grades, a talk and a debate, a glossary built from the paper's own sentences
+  and roughly half an hour of generated listening audio. Their subjects are the
+  four-day week and urban noise; food, clubs and how groups decide; language,
+  news and housing.
 - **Three reading task types B1 never had**, end to end — inserting a sentence
   into a gap, matching an opinion to a heading, matching a regulation paragraph
   to a table of contents. They share one item type (`zuordnung_buchstabe`) and
@@ -74,10 +74,11 @@ Exam content is versioned separately, per paper, in each `exam.json`
 
 ### Changed
 
-- **The project is no longer named for one level.** The header reads
-  *Prüfungstrainer*, the packages are `@pruefung/core` and `@pruefung/web`, the
-  launcher is `Start-Trainer.bat` and the LaTeX package is `pruefung.sty`. The
-  repository URL is unchanged.
+- **The app is called GermanExamTrainer.** The header, the browser tab, the
+  installable app, the examiner view and the launcher all use that name; the
+  packages are `@pruefung/core` and `@pruefung/web` and the LaTeX package is
+  `pruefung.sty`. The repository URL is unchanged, so existing links keep
+  working.
 - **The answer sheet is generated from the paper** instead of from hard-coded
   item ranges, so it follows whatever tasks a paper actually contains.
 - `index.json` now carries each paper's `stufe`, and reports which levels ship a
@@ -91,6 +92,9 @@ Exam content is versioned separately, per paper, in each `exam.json`
 - Level-neutral naming reached the last user-visible strings: the browser
   tab, the installable app's name, the examiner view's title and the default
   Anki deck.
+
+- Deploys cache the Piper voice models between runs (~250 MB), so building
+  the hosted app no longer re-downloads them every time.
 
 ### Fixed
 

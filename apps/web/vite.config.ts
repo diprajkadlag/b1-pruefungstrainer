@@ -23,8 +23,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'Prüfungstrainer B1 / B2',
-        short_name: 'Prüfungstrainer',
+        name: 'GermanExamTrainer — Deutsch B1 & B2',
+        short_name: 'GermanExamTrainer',
         description:
           'Übungsprüfungen im Format der deutschen B1- und B2-Zertifikatsprüfungen — mit Timer, Hörtexten und automatischer Auswertung.',
         lang: 'de',
