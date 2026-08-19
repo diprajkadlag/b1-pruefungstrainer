@@ -7,7 +7,7 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
-## [Unreleased]
+## [1.3.0] — 2026-08-19
 
 ### Added
 
@@ -47,30 +47,10 @@ Exam content is versioned separately, per paper, in each `exam.json`
   weighted 60/40 and its speaking parts 50/50, with pronunciation folded into
   both rather than scored separately. The level is read from the paper id.
 
-- **Spickzettel — a cheat sheet**, built from `content/lernhilfe/` and shipped
-  three ways: a tab in the app, an 18-page `spickzettel.pdf`, and a standalone
-  release asset. It carries strategy and a timing plan for all four modules,
-  ~185 Redemittel weighted towards Sprechen and Schreiben (including a block
-  per presentation slide), 18 grammar topics as tables, the ten written errors
-  that cost the most marks, and the core vocabulary — 123 verbs with all
-  principal parts, 101 nouns with article and plural, 30 adjective pairs and
-  the connectors. Searchable in the app.
-- **The printable papers are wired into the app.** `export_web.py` copies each
-  paper's PDFs alongside its JSON, and the start screen offers the
-  Kandidatenblätter, the Antwortbogen and the Sprechen-Karten for printing — so
-  a paper can be sat on paper. The Lösungsheft is treated exactly like the JSON
-  answer key: copied, but linked only from the result screen once an attempt is
-  closed, which an end-to-end test asserts. Opened PDFs are cached for offline
-  use, and the Pages deploy now builds them so the hosted demo carries them too.
-  Where no LaTeX was available at build time the app says so and points at the
-  release download instead of showing dead links.
-- `tools/make_pdf_fixture.py`, the printable counterpart to the existing audio
-  fixture: hand-rolled one-page PDFs so CI can exercise the download links —
-  and the rule that hides the solution booklet — without installing TeX Live.
-- `tools/validate.py` now checks the cheat sheet too: all four modules present,
-  no ragged grammar tables, no verb missing a principal part, no noun with a
-  bogus article, and a warning if the Redemittel drift away from Sprechen and
-  Schreiben.
+- **A one-click launcher for people who clone the repo.** `Start-Trainer.bat`
+  checks for Node and Python, installs what is missing, fetches the printable
+  papers and — on request — the listening audio from the latest release, then
+  builds the app and opens it. No terminal required.
 
 ### Changed
 
@@ -107,11 +87,49 @@ Exam content is versioned separately, per paper, in each `exam.json`
   the items, and `new_exam.py` rotates its placeholder keys so a scaffold cannot
   start out that way. `pruefung-05` goes to contentVersion 1.1.0; the other two
   were unreleased.
-
 - `generate_audio.py` died on the first status line on any Windows console,
   before writing a single track: it prints an arrow and German role names but
   never reconfigured stdout to UTF-8, unlike the other tools. A test now asserts
   every command-line tool has that guard.
+- GitHub did not detect the MIT licence because `LICENSE` carried an
+  explanatory preamble, and the examiner server squatted port 3000 even when
+  something else already held it.
+
+## [1.2.0] — 2026-07-26
+
+### Added
+
+- **The printable papers are wired into the app.** `export_web.py` copies each
+  paper's PDFs alongside its JSON, and the start screen offers the
+  Kandidatenblätter, the Antwortbogen and the Sprechen-Karten for printing — so
+  a paper can be sat on paper. The Lösungsheft is treated exactly like the JSON
+  answer key: copied, but linked only from the result screen once an attempt is
+  closed, which an end-to-end test asserts. Opened PDFs are cached for offline
+  use, and the Pages deploy now builds them so the hosted demo carries them too.
+  Where no LaTeX was available at build time the app says so and points at the
+  release download instead of showing dead links.
+- `tools/make_pdf_fixture.py`, the printable counterpart to the existing audio
+  fixture: hand-rolled one-page PDFs so CI can exercise the download links —
+  and the rule that hides the solution booklet — without installing TeX Live.
+
+## [1.1.0] — 2026-07-26
+
+### Added
+
+- **Spickzettel — a cheat sheet**, built from `content/lernhilfe/` and shipped
+  three ways: a tab in the app, an 18-page `spickzettel.pdf`, and a standalone
+  release asset. It carries strategy and a timing plan for all four modules,
+  ~185 Redemittel weighted towards Sprechen and Schreiben (including a block
+  per presentation slide), 18 grammar topics as tables, the ten written errors
+  that cost the most marks, and the core vocabulary — 123 verbs with all
+  principal parts, 101 nouns with article and plural, 30 adjective pairs and
+  the connectors. Searchable in the app.
+- `tools/validate.py` now checks the cheat sheet too: all four modules present,
+  no ragged grammar tables, no verb missing a principal part, no noun with a
+  bogus article, and a warning if the Redemittel drift away from Sprechen and
+  Schreiben.
+
+### Fixed
 
 - The selected tab became unreadable on hover — `.knopf:hover` outranks
   `.knopf--aktiv`, so the white label was painted onto a pale background.
