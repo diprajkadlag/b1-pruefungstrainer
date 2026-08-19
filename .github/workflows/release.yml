@@ -76,7 +76,7 @@ jobs:
           done
           cp tools/Start-Trainer.cmd apps/web/dist/
           cp docs/PORTABLE-LIESMICH.txt apps/web/dist/ 2>/dev/null || true
-          cd apps/web && zip -rq ../../release/b1-pruefungstrainer-portable.zip dist
+          cd apps/web && zip -rq ../../release/GermanExamTrainer-portable.zip dist
           cd ../.. && ls -lh release/
 
       - uses: softprops/action-gh-release@v2
@@ -87,7 +87,7 @@ jobs:
           body: |
             ## Downloads
 
-            - **`b1-pruefungstrainer-portable.zip`** — unzip and double-click
+            - **`GermanExamTrainer-portable.zip`** — unzip and double-click
               `Start-Trainer.cmd`. No installation, works offline.
             - **`spickzettel-b1.pdf`** / **`spickzettel-b2.pdf`** — the cheat
               sheet for each level: strategy for all four modules, Redemittel
