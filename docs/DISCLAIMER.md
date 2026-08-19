@@ -2,7 +2,7 @@
 
 ## No affiliation
 
-> **b1-pruefungstrainer provides practice examinations in the format of standard
+> **GermanExamTrainer provides practice examinations in the format of standard
 > German B1 and B2 certificate examinations. It is not affiliated with, endorsed by,
 > sponsored by, or connected to Goethe-Institut e.V., telc gGmbH, or the
 > Österreichisches Sprachdiplom Deutsch (ÖSD).**

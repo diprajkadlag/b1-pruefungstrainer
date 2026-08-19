@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { fileURLToPath, URL } from 'node:url';
 
 // BASE_PATH lets the same build serve from a user site ("/") or from a project
-// page ("/b1-pruefungstrainer/"). The GitHub Pages workflow sets it.
+// page ("/german-exam-trainer/"). The GitHub Pages workflow sets it.
 const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({

@@ -66,8 +66,8 @@ function zertifikatBauen(privateKey: string, publicKeyPem: string): string {
 
   const algorithmus = seq(oid('1.2.840.113549.1.1.11'), Buffer.from([0x05, 0x00])); // sha256WithRSA
   const name = seq(
-    set(seq(oid('2.5.4.3'), utf8('b1-pruefungstrainer local'))),
-    set(seq(oid('2.5.4.10'), utf8('b1-pruefungstrainer'))),
+    set(seq(oid('2.5.4.3'), utf8('GermanExamTrainer local'))),
+    set(seq(oid('2.5.4.10'), utf8('GermanExamTrainer'))),
   );
 
   const gueltigkeit = seq(utcZeit(jetzt), utcZeit(bis));

@@ -7,6 +7,64 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.4.0] — 2026-08-19
+
+### Added
+
+- **Two more B2 papers**, `b2-pruefung-04` and `-05`, bringing the collection to
+  **ten complete papers, five at each level**. Their subjects are health,
+  self-tracking, rural medical cover and how habits are actually changed; and
+  repairing rather than discarding, further training alongside a job, and
+  paying with cash or by card. Both carry the full apparatus: 30 reading and 30
+  listening items with the sentence that settles each one, two writing tasks
+  with annotated model answers at two grades, a talk and a debate, a glossary
+  built from the paper's own sentences, and around half an hour of generated
+  listening audio.
+- **Every paper card names its course stage** — B1.1, B1.2, B2.1 or B2.2 —
+  derived from the difficulty band in `meta.niveau`, and the PDF covers print it
+  too. The start screen says in as many words what the label means, because it
+  is easy to read the wrong thing into it: these are the stages a language
+  school splits a level into for teaching. The certificate has no such split —
+  it is one exam of four modules, sat together or one at a time — so there is no
+  "B2.1 exam" to pass. `docs/EXAM-FORMAT.md` records the distinction and the
+  table of what the band does change: speech rate, and how transparent the wrong
+  answers are. Nothing else.
+
+### Changed
+
+- **The repository is now `german-exam-trainer`.** The old name outlived its
+  accuracy the moment B2 shipped. The hosted app therefore moves to
+  <https://diprajkadlag.github.io/german-exam-trainer/>; GitHub redirects the
+  old repository URL, and the Pages workflow derives its base path from the
+  repository name, so nothing had to be configured by hand. Badges, the app
+  footer, the launcher, the schema `$id`, the release links, the CC BY
+  attribution line and the `autor` field of every paper follow the new name.
+- **The browser database keeps its old name on purpose.** It belongs to the
+  browser, not to the project: renaming it would leave every saved attempt in an
+  orphaned database that nothing ever opens again. The reason is now written
+  where the constant is.
+- The launcher fetches listening audio for all ten papers, and the two places
+  that quoted a total download size quoted it wrong — it is around 180 MB, not
+  "well over 300".
+
+### Fixed
+
+- The B2 cheat sheet printed **"Niveau B1"** in its running header on all 17
+  pages: the template took its title from the level it was rendered for but had
+  the level itself hard-coded from the days when there was only one.
+- `npm run format:check` failed on a fresh Windows checkout while CI stayed
+  green: `.gitattributes` pins `eol=lf` for TypeScript, Python and JSON but had
+  never listed `.html` or `.css`, so those two were checked out with CRLF and
+  Prettier — which expects LF — rejected them. Both extensions are pinned now.
+- `b2-pruefung-05`'s listening module ran under the 27-minute floor, and two
+  scripts explained why: the radio host asked for "ein Schlusssatz von jedem"
+  and then thanked both guests without ever coming back to the second, and the
+  lecture simply stopped mid-thought. Both now end as they promised to.
+- The script that regenerates the README screenshots photographed the start
+  screen without waiting for the paper list to arrive — a race that got harder
+  to win with every paper added, and that loses silently into a committed
+  image. It waits for the list now.
+
 ## [1.3.0] — 2026-08-19
 
 ### Added

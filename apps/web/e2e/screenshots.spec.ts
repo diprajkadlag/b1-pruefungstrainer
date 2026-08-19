@@ -24,6 +24,10 @@ test.use({ viewport: { width: 1180, height: 900 } });
 test('Screenshots erzeugen', async ({ page }) => {
   await page.goto('/');
   await page.getByPlaceholder('z. B. Ravi').fill('Ravi');
+  // The registry arrives over the network, and the paper list is the whole
+  // point of this shot. Without the wait it is a race that gets slower to win
+  // with every paper added — and loses silently, into a committed image.
+  await page.getByRole('button', { name: /Übungsprüfung 1/ }).waitFor();
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: `${OUT}01-start.png`, fullPage: false });
 

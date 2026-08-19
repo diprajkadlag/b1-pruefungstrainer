@@ -1,6 +1,5 @@
 {
   "$schema": "../../../packages/schema/exam.schema.json",
-
   "meta": {
     "id": "pruefung-01",
     "titel": "Übungsprüfung 1 — Arbeit, Wohnen und Engagement",
@@ -17,11 +16,10 @@
       "Weiterbildung",
       "Ehrenamt"
     ],
-    "autor": "b1-pruefungstrainer",
+    "autor": "GermanExamTrainer",
     "lizenz": "CC-BY-4.0",
     "originalitaet": true
   },
-
   "lesen": {
     "zeitMinuten": 65,
     "teile": [
@@ -123,7 +121,6 @@
           }
         ]
       },
-
       {
         "nummer": 2,
         "typ": "multiple_choice",
@@ -254,7 +251,6 @@
           }
         ]
       },
-
       {
         "nummer": 3,
         "typ": "zuordnung_anzeigen",
@@ -409,7 +405,6 @@
           }
         ]
       },
-
       {
         "nummer": 4,
         "typ": "ja_nein",
@@ -521,7 +516,6 @@
           }
         ]
       },
-
       {
         "nummer": 5,
         "typ": "multiple_choice",
@@ -623,7 +617,6 @@
       }
     ]
   },
-
   "hoeren": {
     "zeitMinuten": 40,
     "teile": [
@@ -934,7 +927,6 @@
           }
         ]
       },
-
       {
         "nummer": 2,
         "typ": "monolog",
@@ -1109,7 +1101,6 @@
           }
         ]
       },
-
       {
         "nummer": 3,
         "typ": "gespraech",
@@ -1117,7 +1108,11 @@
         "wiederholungen": 1,
         "situation": "Nadine und Tobias arbeiten in derselben Firma. Sie treffen sich in der Kantine.",
         "sprecher": [
-          { "rolle": "Nadine", "geschlecht": "f", "beschreibung": "Kollegin" },
+          {
+            "rolle": "Nadine",
+            "geschlecht": "f",
+            "beschreibung": "Kollegin"
+          },
           {
             "rolle": "Tobias",
             "geschlecht": "m",
@@ -1358,7 +1353,6 @@
           }
         ]
       },
-
       {
         "nummer": 4,
         "typ": "diskussion",
@@ -1647,7 +1641,6 @@
       }
     ]
   },
-
   "schreiben": {
     "zeitMinuten": 60,
     "aufgaben": [
@@ -1764,7 +1757,6 @@
       }
     ]
   },
-
   "sprechen": {
     "vorbereitungMinuten": 15,
     "teile": [
@@ -1888,7 +1880,6 @@
       }
     ]
   },
-
   "glossar": [
     {
       "lemma": "die Werbeagentur",
@@ -2371,7 +2362,6 @@
       "niveau": "B1"
     }
   ],
-
   "redewendungen": [
     {
       "wendung": "in erster Linie",
@@ -2454,7 +2444,6 @@
       "fundstelle": "Schreiben Teil 2"
     }
   ],
-
   "grammatik": [
     {
       "phaenomen": "Konjunktiv II der Höflichkeit",

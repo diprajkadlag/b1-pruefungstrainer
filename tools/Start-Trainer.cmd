@@ -45,7 +45,7 @@ echo.
 echo   Sie haben zwei Moeglichkeiten:
 echo.
 echo     1. Nutzen Sie die Online-Version - dort ist nichts zu installieren:
-echo        https://diprajkadlag.github.io/b1-pruefungstrainer/
+echo        https://diprajkadlag.github.io/german-exam-trainer/
 echo.
 echo     2. Installieren Sie Python (kostenlos) und starten Sie diese Datei
 echo        erneut: https://www.python.org/downloads/

@@ -1,0 +1,2476 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "b2-pruefung-04",
+    "titel": "Übungsprüfung B2 4 — Gesundheit, Bewegung und Gewohnheiten",
+    "stufe": "B2",
+    "variante": "erwachsene",
+    "niveau": "mittel-leicht",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": -8,
+    "themen": [
+      "Gesundheit und Selbstvermessung",
+      "Bewegung im Alltag",
+      "Ärztliche Versorgung auf dem Land",
+      "Arbeitszeit und Erreichbarkeit",
+      "Bäder und kommunale Aufgaben",
+      "Gewohnheiten und Vorsätze"
+    ],
+    "autor": "GermanExamTrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "zuordnung_person",
+        "anweisung": "Sie lesen in einem Forum, wie vier Menschen über Fitness-Apps und das Messen der eigenen Gesundheit denken. Auf welche der vier Personen treffen die Aussagen 1 bis 9 zu? Die Personen können mehrmals gewählt werden.",
+        "richtzeitMinuten": 18,
+        "texte": [
+          {
+            "id": "person_a",
+            "buchstabe": "a",
+            "titel": "Britta Hoheisel, Physiotherapeutin",
+            "inhalt": "In meiner Praxis sehe ich täglich, was diese Apps bewirken, und mein Urteil fällt zwiespältig aus. Für Menschen, die sich zu wenig bewegen, sind sie oft der Anstoß, der jahrelang gefehlt hat. Zehntausend Schritte sind eine willkürliche Zahl, aber sie ist eine Zahl, und das hilft vielen mehr als jeder gut gemeinte Rat von mir.\n\nProblematisch wird es bei einer kleinen Gruppe, die ich inzwischen sofort erkenne. Diese Patientinnen und Patienten trainieren weiter, obwohl der Körper längst Pause verlangt, weil die App sonst eine Lücke anzeigt. Zwei von ihnen sind mit Ermüdungsbrüchen zu mir gekommen.\n\nIch verbiete niemandem das Gerät. Ich bitte nur darum, es an Tagen mit Schmerzen abzulegen, und ehrlich gesagt fällt das erstaunlich vielen schwer."
+          },
+          {
+            "id": "person_b",
+            "buchstabe": "b",
+            "titel": "Ortwin Zeisig, Rentner",
+            "inhalt": "Meine Tochter hat mir zum siebzigsten Geburtstag so eine Uhr geschenkt, und ich habe sie ein halbes Jahr in der Schublade liegen lassen. Heute trage ich sie jeden Tag.\n\nDer Grund ist nicht die Gesundheit, sondern die Gewohnheit. Früher bin ich gelaufen, wenn das Wetter schön war, also selten. Jetzt laufe ich, weil abends eine Zahl dasteht, und das ist offenbar Motivation genug für einen erwachsenen Mann. Ein bisschen albern finde ich das schon.\n\nWas mich stört, ist etwas anderes: Die Uhr misst angeblich meinen Schlaf und behauptet regelmäßig, ich hätte schlecht geschlafen, obwohl ich mich ausgeruht fühle. Inzwischen schaue ich morgens absichtlich nicht mehr hin. Ein Gerät soll mir nicht erzählen, wie ich mich fühle."
+          },
+          {
+            "id": "person_c",
+            "buchstabe": "c",
+            "titel": "Dr. Sanela Mirković, Sportmedizinerin",
+            "inhalt": "Über die Messgenauigkeit dieser Geräte wird viel geschrieben, meist ungenau. Schritte zählen sie zuverlässig, das ist unstrittig. Beim Puls hängt es stark von der Bewegung ab, und beim Schlaf werden Werte ausgegeben, die im Vergleich zur Messung im Labor bestenfalls grob zutreffen.\n\nDas dürfte für den Alltag kein Beinbruch sein, solange man weiß, welche Zahl was wert ist. Kritisch wird es dort, wo Menschen aus solchen Werten medizinische Schlüsse ziehen und mit einem ausgedruckten Diagramm in die Sprechstunde kommen.\n\nMein Rat lautet deshalb nicht, die Geräte wegzulegen, sondern sie als das zu nehmen, was sie sind: Anzeigen für Trends über Wochen, nicht Messwerte für einen einzelnen Tag."
+          },
+          {
+            "id": "person_d",
+            "buchstabe": "d",
+            "titel": "Levent Akbulut, Softwareentwickler",
+            "inhalt": "Mich interessiert weniger, ob die Zahlen stimmen, als wer sie bekommt. Ich habe mir die Bedingungen von drei bekannten Anbietern durchgelesen — das dauert länger, als man denkt — und bei zweien steht ausdrücklich, dass Daten an Partnerunternehmen weitergegeben werden dürfen.\n\nWo ich schlafe, wie oft mein Herz schlägt und wann ich das Haus verlasse: Das sind für mich keine Fitnessdaten, das sind Gesundheitsdaten. Wer sie einmal abgibt, bekommt sie nicht zurück.\n\nBenutzen tue ich trotzdem eine App, allerdings eine, die alles auf dem Gerät behält und nichts überträgt. Sie kann weniger und sieht schlechter aus. Damit kann ich gut leben."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_person",
+          "frage": "Diese Person arbeitet in einem medizinischen Beruf.",
+          "optionen": {
+            "a": "Britta Hoheisel",
+            "b": "Ortwin Zeisig",
+            "c": "Sanela Mirković",
+            "d": "Levent Akbulut"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Britta Hoheisel führt eine physiotherapeutische Praxis und spricht von ihren Patientinnen und Patienten.",
+            "en": "Worked example. c is a doctor too, which is why the item names a practice rather than a title."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat sich die Nutzungsbedingungen mehrerer Anbieter angesehen.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "d",
+            "beleg": "Ich habe mir die Bedingungen von drei bekannten Anbietern durchgelesen — das dauert länger, als man denkt — und bei zweien steht ausdrücklich, dass Daten an Partnerunternehmen weitergegeben werden dürfen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Levent Akbulut nennt die Zahl der geprüften Anbieter und was bei zweien darin steht.",
+              "en": "Only d talks about the terms and conditions at all; the others discuss what the devices measure."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person berichtet von Menschen, die trotz Beschwerden weitertrainieren.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "a",
+            "beleg": "Diese Patientinnen und Patienten trainieren weiter, obwohl der Körper längst Pause verlangt, weil die App sonst eine Lücke anzeigt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt im nächsten Satz sogar zwei Fälle mit Ermüdungsbrüchen.",
+              "en": "c warns about medical conclusions drawn from the numbers, not about people training through pain."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat das Gerät zunächst gar nicht benutzt.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "b",
+            "beleg": "ich habe sie ein halbes Jahr in der Schublade liegen lassen",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Satz stellt den Gegensatz her: „Heute trage ich sie jeden Tag.“",
+              "en": "The drawer and the half year are stated plainly in the opening paragraph."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält die Schrittzählung für zuverlässig, die Schlafmessung dagegen nicht.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "c",
+            "beleg": "Schritte zählen sie zuverlässig, das ist unstrittig. Beim Puls hängt es stark von der Bewegung ab, und beim Schlaf werden Werte ausgegeben, die im Vergleich zur Messung im Labor bestenfalls grob zutreffen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie unterscheidet drei Messgrößen und beurteilt jede einzeln.",
+              "en": "b also doubts the sleep figures, but from how he feels in the morning rather than from a comparison with laboratory measurement."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person benutzt bewusst eine App, die keine Daten überträgt.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "d",
+            "beleg": "allerdings eine, die alles auf dem Gerät behält und nichts überträgt",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er nimmt dafür ausdrücklich in Kauf, dass sie weniger kann und schlechter aussieht.",
+              "en": "He is not a refuser — the last paragraph says he uses one, which is the turn the item tests."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person findet ihre eigene Motivation etwas lächerlich.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "b",
+            "beleg": "Ein bisschen albern finde ich das schon.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Satz davor erklärt, worauf sich das bezieht: Er läuft, weil abends eine Zahl dasteht.",
+              "en": "He judges himself, not the device — which is what separates this from the other three posts."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person warnt davor, aus den Werten medizinische Schlüsse zu ziehen.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "c",
+            "beleg": "Kritisch wird es dort, wo Menschen aus solchen Werten medizinische Schlüsse ziehen und mit einem ausgedruckten Diagramm in die Sprechstunde kommen.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Ihr Rat im letzten Absatz zieht daraus die Folgerung: Trends über Wochen, keine Einzelwerte.",
+              "en": "a also sees harm, but physical — people training on an injury, not misreading a chart."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält die Geräte für einen sinnvollen Anstoß bei Bewegungsmangel.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "a",
+            "beleg": "Für Menschen, die sich zu wenig bewegen, sind sie oft der Anstoß, der jahrelang gefehlt hat.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie räumt sogar ein, dass die Zahl willkürlich ist, und hält sie trotzdem für wirksamer als ihren eigenen Rat.",
+              "en": "b describes exactly this effect on himself, but as his own story — a states it as a general observation from practice."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person schaut bestimmte Anzeigen absichtlich nicht mehr an.",
+            "optionen": {
+              "a": "Britta Hoheisel",
+              "b": "Ortwin Zeisig",
+              "c": "Sanela Mirković",
+              "d": "Levent Akbulut"
+            },
+            "loesung": "b",
+            "beleg": "Inzwischen schaue ich morgens absichtlich nicht mehr hin.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Gemeint ist die Schlafanzeige, die ihm widerspricht, obwohl er sich ausgeruht fühlt.",
+              "en": "„absichtlich“ is the word: he has not stopped wearing it, he has stopped looking at one screen."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "satz_einfuegen",
+        "anweisung": "Sie lesen in einer Zeitschrift einen Artikel über die Geschichte des Schwimmbads. Welche der Sätze a bis h passen in die Lücken 10 bis 15? Ein Satz steht bereits als Beispiel im Text, ein weiterer Satz passt in keine Lücke.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Warum die Stadt schwimmen lernte",
+            "quelle": "Hohenrode Magazin für Stadtgeschichte",
+            "inhalt": "Ein Schwimmbad wirkt heute wie eine Selbstverständlichkeit, ungefähr so wie eine Turnhalle oder eine Bushaltestelle. Tatsächlich ist es eine vergleichsweise junge Einrichtung, und sie entstand nicht aus Freude am Wasser. Sie entstand aus zwei sehr nüchternen Gründen: Hygiene und Unfallzahlen.\n\nDer erste Grund ist heute schwer vorstellbar. [10] In den wachsenden Städten des 19. Jahrhunderts hatten die wenigsten Wohnungen ein Bad, und so wurden Volksbäder gebaut, in denen man vor allem eines tat: sich waschen.\n\nDas Schwimmen kam erst danach dazu. [11] Wer am Fluss badete, tat das ohne Aufsicht und ohne es gelernt zu haben, und die Zahl der Ertrunkenen war entsprechend hoch.\n\nBemerkenswert ist, wer den Bau durchsetzte. [12] Ärzte, Turnvereine und Versicherungen mussten dafür an einem Strang ziehen, wenn auch aus ganz unterschiedlichen Motiven — die einen aus Sorge um die Gesundheit, die anderen um die Kosten.\n\nIm 20. Jahrhundert kehrte sich die Nutzung um. [13] Wohnungen bekamen eigene Bäder, das Waschbecken im Volksbad wurde überflüssig, und aus der Wascheinrichtung wurde ein Sportbad und später ein Freizeitbad mit Rutsche.\n\nHeute stehen viele dieser Häuser wieder zur Debatte, und zwar aus Gründen, die mit dem Schwimmen wenig zu tun haben. [14] Ein Hallenbad gehört zu den teuersten Gebäuden, die eine Gemeinde unterhalten kann, weil Wasser geheizt und Luft getrocknet werden muss.\n\nWas dabei leicht untergeht, ist der Ausgangspunkt. [15] Jede Schließung eines Bades verlängert den Weg zum nächsten, und mit dem Weg sinkt die Zahl der Kinder, die dort das Schwimmen lernen."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Nicht der Bedarf ist gesunken, sondern die Bereitschaft, dafür zu zahlen."
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Baden diente ursprünglich der Sauberkeit, nicht dem Vergnügen."
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Der Anstoß kam von einem ungewöhnlichen Bündnis."
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Das Ziel war zunächst nicht der Sport, sondern die Vermeidung von Todesfällen."
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Was als Notwendigkeit begonnen hatte, wurde zum Vergnügen."
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Auch die Turnhallen dieser Zeit wurden aus ähnlichen Erwägungen errichtet."
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Sie entstand aus zwei sehr nüchternen Gründen: Hygiene und Unfallzahlen."
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Es geht fast immer ums Geld."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Die erste Lücke im ersten Absatz ist bereits gefüllt.",
+          "loesung": "g",
+          "begruendung": {
+            "de": "Der Satz nennt die beiden Gründe, die die folgenden Absätze der Reihe nach behandeln.",
+            "en": "Shown filled in, so letter g is used up and cannot answer 10 to 15."
+          }
+        },
+        "items": [
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 10?",
+            "loesung": "b",
+            "beleg": "In den wachsenden Städten des 19. Jahrhunderts hatten die wenigsten Wohnungen ein Bad, und so wurden Volksbäder gebaut, in denen man vor allem eines tat: sich waschen.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Absatz kündigt etwas schwer Vorstellbares an; der Satz sagt, was das ist, und der folgende belegt es.",
+              "en": "The paragraph after the gap is about washing, so the gap has to introduce washing rather than swimming."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 11?",
+            "loesung": "d",
+            "beleg": "Wer am Fluss badete, tat das ohne Aufsicht und ohne es gelernt zu haben, und die Zahl der Ertrunkenen war entsprechend hoch.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Vermeidung von Todesfällen“ wird durch den Satz danach mit den Ertrunkenen belegt.",
+              "en": "The drownings in the next sentence only make sense if the gap has just named deaths as the motive."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 12?",
+            "loesung": "c",
+            "beleg": "Ärzte, Turnvereine und Versicherungen mussten dafür an einem Strang ziehen, wenn auch aus ganz unterschiedlichen Motiven",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Ein ungewöhnliches Bündnis“ kündigt genau diese Aufzählung dreier Gruppen an.",
+              "en": "The paragraph opens by asking who pushed it through, and the gap has to answer that with a group."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 13?",
+            "loesung": "e",
+            "beleg": "Wohnungen bekamen eigene Bäder, das Waschbecken im Volksbad wurde überflüssig, und aus der Wascheinrichtung wurde ein Sportbad und später ein Freizeitbad mit Rutsche.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz benennt die Umkehrung, die der folgende Satz Schritt für Schritt beschreibt.",
+              "en": "„kehrte sich die Nutzung um“ needs the gap to say what it turned from and into."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 14?",
+            "loesung": "h",
+            "beleg": "Ein Hallenbad gehört zu den teuersten Gebäuden, die eine Gemeinde unterhalten kann, weil Wasser geheizt und Luft getrocknet werden muss.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Absatz kündigt Gründe an, die mit dem Schwimmen wenig zu tun haben; der Satz nennt sie, der folgende rechnet sie vor.",
+              "en": "Short and blunt, and the next sentence is entirely about running costs — the gap has to name money."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 15?",
+            "loesung": "a",
+            "beleg": "Jede Schließung eines Bades verlängert den Weg zum nächsten, und mit dem Weg sinkt die Zahl der Kinder, die dort das Schwimmen lernen.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Der Ausgangspunkt“ war die Zahl der Ertrunkenen; der Satz stellt klar, dass dieser Bedarf geblieben ist.",
+              "en": "„nicht … sondern“ ties the closing paragraph back to the opening motive, which is what „der Ausgangspunkt“ points at."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Sie lesen in einer Zeitung einen Artikel über Hausarztpraxen auf dem Land. Wählen Sie bei den Aufgaben 16 bis 21 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "Die Praxis, die keiner übernehmen will",
+            "quelle": "Hohenroder Anzeiger",
+            "inhalt": "Als Dr. Almut Riedesel im Frühjahr ihre Praxis in Hohenrode abgab, hatte sie vier Jahre lang eine Nachfolge gesucht. Gefunden hat sie am Ende keine einzelne Person, sondern eine Lösung, die vor zehn Jahren noch niemand vorgeschlagen hätte: Die Gemeinde kaufte die Praxis und stellt nun zwei Ärztinnen in Teilzeit an.\n\nDass Praxen auf dem Land schwer zu besetzen sind, ist bekannt. Weniger bekannt ist, woran es tatsächlich liegt. „Alle reden über das Geld“, sagt Riedesel, „dabei war das nie mein Problem.“ In den Gesprächen mit möglichen Nachfolgerinnen sei es fast immer um etwas anderes gegangen: um die wirtschaftliche Verantwortung für eine eigene Praxis und um die Arbeitszeiten. Wer eine Praxis übernimmt, übernimmt einen Betrieb mit Personal, Miete und Kredit — und ist damit an einen Ort gebunden.\n\nDas Modell, das Hohenrode nun gefunden hat, dreht genau diesen Punkt um. Die Gemeinde trägt die Räume und das Risiko, die Ärztinnen bringen ihre Arbeit mit und teilen sich die Stelle. Beide arbeiten an drei Tagen, beide haben Kinder im Schulalter, und beide hätten die Praxis allein nach eigener Aussage nicht übernommen.\n\nBezahlt hat die Gemeinde dafür rund vierhunderttausend Euro, verteilt über zehn Jahre. Bürgermeister Kai Übelacker rechnet trotzdem mit einem Gewinn: „Ein Dorf ohne Arzt verliert danach den Kindergarten und dann die jungen Familien. Das kostet uns ein Vielfaches.“\n\nOb sich das Modell übertragen lässt, ist offen. Die Kassenärztliche Vereinigung sieht es zurückhaltend und verweist darauf, dass nicht jede Gemeinde vierhunderttausend Euro aufbringen könne; wo das Geld fehle, entstehe am Ende ein Gefälle zwischen reichen und armen Gemeinden. Riedesel hält dagegen, dass ihre Gemeinde nicht reich sei, sondern nur früh angefangen habe.\n\nEinig sind sich beide Seiten immerhin darin, dass die Teilzeit kein Randthema ist. Von den Medizinstudierenden, die in diesem Jahr ihren Abschluss machen, wollen nach einer Befragung der Universität Weidenbach zwei Drittel nicht in Vollzeit arbeiten — unabhängig davon, ob sie aufs Land gehen oder in die Stadt."
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Wie wurde die Nachfolge in Hohenrode gelöst?",
+            "optionen": {
+              "a": "Die Gemeinde kaufte die Praxis und beschäftigt zwei Ärztinnen.",
+              "b": "Eine junge Ärztin übernahm die Praxis allein.",
+              "c": "Die Praxis wurde mit einer Klinik zusammengelegt."
+            },
+            "loesung": "a",
+            "beleg": "Die Gemeinde kaufte die Praxis und stellt nun zwei Ärztinnen in Teilzeit an.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der erste Absatz nennt die Lösung ausdrücklich als etwas, das keine einzelne Person war.",
+              "en": "b is what the article says did not happen — she looked for one person for four years and did not find one."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "multiple_choice",
+            "frage": "Was war laut Riedesel nicht der Hauptgrund für die Schwierigkeiten?",
+            "optionen": {
+              "a": "Die Arbeitszeiten.",
+              "b": "Das Einkommen.",
+              "c": "Die wirtschaftliche Verantwortung."
+            },
+            "loesung": "b",
+            "beleg": "„Alle reden über das Geld“, sagt Riedesel, „dabei war das nie mein Problem.“",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt Verantwortung und Arbeitszeiten als die tatsächlichen Punkte; das Geld schließt sie ausdrücklich aus.",
+              "en": "a and c are the two reasons she gives in the following sentence — the question asks for the one she rules out."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "multiple_choice",
+            "frage": "Was ändert sich für die beiden Ärztinnen durch das Modell?",
+            "optionen": {
+              "a": "Sie verdienen mehr als in einer eigenen Praxis.",
+              "b": "Sie tragen das wirtschaftliche Risiko nicht selbst.",
+              "c": "Sie müssen keine Sprechstunden mehr anbieten."
+            },
+            "loesung": "b",
+            "beleg": "Die Gemeinde trägt die Räume und das Risiko, die Ärztinnen bringen ihre Arbeit mit und teilen sich die Stelle.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz verteilt beides ausdrücklich: Räume und Risiko bei der Gemeinde, Arbeit bei den Ärztinnen.",
+              "en": "The article never compares earnings, which is what makes a sound plausible."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "multiple_choice",
+            "frage": "Womit begründet der Bürgermeister die Ausgabe?",
+            "optionen": {
+              "a": "Die Praxis werde sich in zehn Jahren selbst tragen.",
+              "b": "Ohne Arzt verliere das Dorf weitere Einrichtungen und Familien.",
+              "c": "Das Land habe die Hälfte der Kosten übernommen."
+            },
+            "loesung": "b",
+            "beleg": "Ein Dorf ohne Arzt verliert danach den Kindergarten und dann die jungen Familien. Das kostet uns ein Vielfaches.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er rechnet nicht mit Einnahmen, sondern mit vermiedenen Folgekosten.",
+              "en": "The four hundred thousand is spread over ten years, which is what makes a sound like the argument. It is not."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "multiple_choice",
+            "frage": "Was wendet die Kassenärztliche Vereinigung ein?",
+            "optionen": {
+              "a": "Die medizinische Qualität leide unter der Teilzeit.",
+              "b": "Ärmere Gemeinden könnten sich das Modell nicht leisten.",
+              "c": "Gemeinden dürften rechtlich keine Praxen betreiben."
+            },
+            "loesung": "b",
+            "beleg": "wo das Geld fehle, entstehe am Ende ein Gefälle zwischen reichen und armen Gemeinden",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Der Konjunktiv I markiert die Position der Vereinigung; genannt wird das Gefälle, nicht die Qualität.",
+              "en": "The objection is about which municipalities can afford it, not about whether it is allowed or any good."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "multiple_choice",
+            "frage": "Was zeigt die Befragung der Universität Weidenbach?",
+            "optionen": {
+              "a": "Zwei Drittel der künftigen Ärztinnen und Ärzte wollen keine Vollzeitstelle.",
+              "b": "Zwei Drittel wollen nach dem Abschluss aufs Land gehen.",
+              "c": "Zwei Drittel halten eine eigene Praxis für erstrebenswert."
+            },
+            "loesung": "a",
+            "beleg": "wollen nach einer Befragung der Universität Weidenbach zwei Drittel nicht in Vollzeit arbeiten — unabhängig davon, ob sie aufs Land gehen oder in die Stadt",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Halbsatz nach dem Gedankenstrich stellt ausdrücklich klar, dass es nicht um Stadt oder Land geht.",
+              "en": "The sentence anticipates b and rules it out in its second half."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_aeusserungen",
+        "anweisung": "Sie lesen in einer Zeitschrift Meinungsäußerungen zum Thema Erreichbarkeit nach Feierabend. Welche Äußerung a bis h passt zu welcher Überschrift 22 bis 27? Eine Äußerung dient als Beispiel, eine weitere passt zu keiner Überschrift.",
+        "richtzeitMinuten": 12,
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "titel": "Doris Wallenhorst",
+            "inhalt": "Bei uns gilt seit zwei Jahren, dass zwischen zwanzig und sieben Uhr keine Mails zugestellt werden. Sie werden nicht gelöscht, nur gehalten. Ich hatte mit Protest gerechnet und stattdessen Erleichterung erlebt: Viele hatten abends nur geschrieben, weil andere abends schrieben."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Emre Yildirim",
+            "inhalt": "Für mich wäre so eine Regel eine Zumutung. Ich hole meine Kinder um halb vier ab, bin von vier bis acht nicht ansprechbar und arbeite dafür später am Abend weiter. Wer mir das verbietet, nimmt mir nicht Arbeit ab, sondern die einzige Einteilung, mit der mein Tag funktioniert."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Prof. Ruth Simoneit",
+            "inhalt": "Unsere Messungen zeigen etwas, das die meisten unterschätzen. Nicht das Beantworten der Nachricht kostet die Erholung, sondern die Erwartung, dass eine kommen könnte. Wer den ganzen Abend damit rechnet, erholt sich messbar schlechter — auch an Abenden, an denen gar nichts eintrifft."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Jannis Prellwitz",
+            "inhalt": "Wir haben es mit einer Betriebsvereinbarung versucht und sind daran gescheitert, dass niemand sie durchsetzen wollte. Auf dem Papier steht seitdem alles richtig. In der Praxis schreibt die Geschäftsführung weiter um zweiundzwanzig Uhr, und solange das so ist, liest jeder mit, ganz gleich, was in der Vereinbarung steht."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Familie Osterkamp",
+            "inhalt": "Wir haben uns zu Hause auf etwas geeinigt, das kein Unternehmen verordnen kann: Das Diensthandy liegt ab dem Abendessen in einer Schublade im Flur. Anfangs war das schwer, inzwischen fragt niemand mehr danach. Manche Regeln muss man eben selbst machen, weil sie sonst niemand macht."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Wiebke Thalmann",
+            "inhalt": "Ich arbeite mit Kolleginnen in drei Zeitzonen, und wer da eine feste Sperre einführt, legt die Zusammenarbeit lahm. Was bei uns funktioniert, ist eine andere Vereinbarung: Man darf jederzeit schreiben, aber niemand muss außerhalb seiner Arbeitszeit antworten. Die Trennung von Senden und Antworten hat mehr gebracht als jedes Verbot."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Dr. Malte Sonnborn",
+            "inhalt": "Rechtlich ist die Lage klarer, als viele glauben. Wer außerhalb der vereinbarten Arbeitszeit tätig wird, leistet Arbeitszeit, und die ist zu erfassen und zu vergüten. Das gilt auch für die Mail, die man kurz vor dem Einschlafen beantwortet. Dass dieses Recht selten in Anspruch genommen wird, ändert daran nichts."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Nora Bechtluft",
+            "inhalt": "Mich stört, dass immer über Mails geredet wird und nie über die Ursache. In meiner Abteilung sind zwei Stellen seit einem Jahr unbesetzt. Die Arbeit verschwindet dadurch nicht, sie wandert in den Abend. Eine Sperre um zwanzig Uhr würde daran genau nichts ändern, sie würde es nur unsichtbar machen."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Bei uns werden Nachrichten nachts einfach zurückgehalten",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Doris Wallenhorst beschreibt genau diese Regel: Mails werden zwischen zwanzig und sieben Uhr gehalten, nicht gelöscht.",
+            "en": "Shown as the worked example, so letter a is used up and cannot answer 22 to 27."
+          }
+        },
+        "items": [
+          {
+            "nr": 22,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Eine feste Sperre würde meinen Tag zerstören",
+            "loesung": "b",
+            "beleg": "Wer mir das verbietet, nimmt mir nicht Arbeit ab, sondern die einzige Einteilung, mit der mein Tag funktioniert.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Emre Yildirim erklärt vorher, warum er abends arbeitet: Er ist zwischen vier und acht bei den Kindern.",
+              "en": "f also rejects a blanket block, but because of time zones at work rather than because of her own day."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Schon das Warten auf eine Nachricht kostet Erholung",
+            "loesung": "c",
+            "beleg": "Nicht das Beantworten der Nachricht kostet die Erholung, sondern die Erwartung, dass eine kommen könnte.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der letzte Satz schärft es: auch an Abenden, an denen gar nichts eintrifft.",
+              "en": "The „nicht … sondern“ is the whole finding, and the closing clause proves it is not about the messages at all."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Eine Regel nützt nichts, wenn die Leitung sie selbst bricht",
+            "loesung": "d",
+            "beleg": "In der Praxis schreibt die Geschäftsführung weiter um zweiundzwanzig Uhr, und solange das so ist, liest jeder mit, ganz gleich, was in der Vereinbarung steht.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Jannis Prellwitz stellt Papier und Praxis gegeneinander und nennt die Geschäftsführung als Grund.",
+              "en": "The agreement exists and is correct — his point is about who ignores it, not about how it is worded."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Wir haben die Grenze zu Hause selbst gezogen",
+            "loesung": "e",
+            "beleg": "Das Diensthandy liegt ab dem Abendessen in einer Schublade im Flur.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Familie betont ausdrücklich, dass kein Unternehmen das verordnen kann.",
+              "en": "Everyone else describes what an employer, a law or a study says; only e describes a household rule."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Schreiben ja, antworten müssen nein",
+            "loesung": "f",
+            "beleg": "Man darf jederzeit schreiben, aber niemand muss außerhalb seiner Arbeitszeit antworten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Wiebke Thalmann nennt die Trennung von Senden und Antworten ausdrücklich als das, was mehr gebracht hat.",
+              "en": "b also opposes a block, but proposes nothing in its place — f is the one with an alternative rule."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Das eigentliche Problem sind die fehlenden Stellen",
+            "loesung": "h",
+            "beleg": "In meiner Abteilung sind zwei Stellen seit einem Jahr unbesetzt. Die Arbeit verschwindet dadurch nicht, sie wandert in den Abend.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Nora Bechtluft hält die ganze Debatte für an der Ursache vorbeigeführt und sagt, eine Sperre mache sie nur unsichtbar.",
+              "en": "d also reports a rule that fails, but blames the people ignoring it; h says the rule addresses the wrong thing entirely."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 5,
+        "typ": "zuordnung_ueberschriften",
+        "anweisung": "Sie möchten die Stadtbibliothek nutzen und lesen die Benutzungsordnung. Welche der Überschriften a bis h aus dem Inhaltsverzeichnis passen zu den Paragraphen 28 bis 30? Vier Überschriften passen zu keinem der Paragraphen.",
+        "richtzeitMinuten": 6,
+        "texte": [
+          {
+            "id": "text_5",
+            "titel": "Benutzungsordnung der Stadtbibliothek Hohenrode — Auszug",
+            "inhalt": "§ 1 Öffnungszeiten\nDie Bibliothek ist dienstags bis freitags von zehn bis neunzehn Uhr und samstags von zehn bis vierzehn Uhr geöffnet. An gesetzlichen Feiertagen bleibt sie geschlossen. Abweichungen werden am Haupteingang und auf der Internetseite bekannt gegeben.\n\n§ 2 [28]\nZur Benutzung ist ein Ausweis erforderlich. Er wird auf Antrag gegen Vorlage eines amtlichen Lichtbildausweises ausgestellt und gilt zwölf Monate. Für Personen unter achtzehn Jahren ist die Unterschrift einer sorgeberechtigten Person erforderlich. Der Ausweis ist nicht übertragbar; bei Verlust ist die Bibliothek unverzüglich zu benachrichtigen.\n\n§ 3 [29]\nBücher werden für vier Wochen ausgeliehen, Zeitschriften und Filme für eine Woche. Zweimal kann verlängert werden, sofern keine Vormerkung vorliegt; die Verlängerung ist auch telefonisch möglich. Wer die Frist überschreitet, zahlt je Medium und angefangener Woche fünfzig Cent, höchstens jedoch zehn Euro.\n\n§ 4 [30]\nMedien sind pfleglich zu behandeln. Bereits vorhandene Beschädigungen sind vor der Ausleihe anzuzeigen, andernfalls haftet die entleihende Person. Bei Verlust oder starker Beschädigung ist Ersatz in Höhe des Wiederbeschaffungswertes zu leisten; die Bibliothek entscheidet, ob stattdessen ein gleichwertiges Exemplar angenommen wird."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Öffnungszeiten"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Anmeldung und Ausweis"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Leihfristen und Gebühren"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Behandlung der Medien und Ersatz"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Internetplätze und WLAN"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Veranstaltungen und Führungen"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Verhalten in den Räumen"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Hausrecht und Ausschluss"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "§ 1 trägt bereits seine Überschrift.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Der Paragraph nennt die Tage, die Uhrzeiten und wie Abweichungen bekannt gegeben werden.",
+            "en": "Shown filled in, so letter a is used up and cannot answer 28 to 30."
+          }
+        },
+        "items": [
+          {
+            "nr": 28,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 2?",
+            "loesung": "b",
+            "beleg": "Zur Benutzung ist ein Ausweis erforderlich. Er wird auf Antrag gegen Vorlage eines amtlichen Lichtbildausweises ausgestellt und gilt zwölf Monate.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Der ganze Paragraph regelt, wie man den Ausweis bekommt und was für ihn gilt.",
+              "en": "The paragraph ends with what to do if you lose it, which tempts towards a heading about exclusion — that is one consequence inside the rule, not its subject."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 3?",
+            "loesung": "c",
+            "beleg": "Bücher werden für vier Wochen ausgeliehen, Zeitschriften und Filme für eine Woche.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Fristen, Verlängerung und die Gebühr bei Überschreitung gehören alle zusammen.",
+              "en": "Two ideas, one heading: how long you may keep it, and what it costs if you keep it longer."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 4?",
+            "loesung": "d",
+            "beleg": "Medien sind pfleglich zu behandeln. Bereits vorhandene Beschädigungen sind vor der Ausleihe anzuzeigen, andernfalls haftet die entleihende Person.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Sorgfalt, Meldepflicht und Ersatz bei Verlust betreffen alle den Umgang mit den Medien.",
+              "en": "The word „haftet“ points towards a liability heading, but the paragraph is about the media themselves, not about who is liable in general."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte: Ansagen, Nachrichten und Durchsagen. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text einmal.",
+        "wiederholungen": 1,
+        "sprecher": [
+          {
+            "rolle": "Praxismitarbeiterin",
+            "geschlecht": "f",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Bahnsprecher",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage im Bahnhof"
+          },
+          {
+            "rolle": "Wettersprecherin",
+            "geschlecht": "f",
+            "beschreibung": "Wetterbericht im Radio"
+          },
+          {
+            "rolle": "Trainer",
+            "geschlecht": "m",
+            "beschreibung": "Sprachnachricht an die Mannschaft"
+          },
+          {
+            "rolle": "Museumsaufsicht",
+            "geschlecht": "f",
+            "beschreibung": "Ansage im Museum"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben: Sie entscheiden, ob eine Aussage richtig oder falsch ist, und Sie wählen bei der zweiten Aufgabe die richtige Lösung a, b oder c. Sie hören jeden Text einmal. Lesen Sie jetzt die Aufgaben eins bis zehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Praxismitarbeiterin",
+            "text": "Guten Tag, Frau Lehnhoff, hier ist die Praxis Dr. Riedesel, Sie sprechen mit Frau Kortmann. Es geht um Ihren Termin zur Vorsorge am Montag. Frau Doktor ist an dem Tag leider bei einer Fortbildung, deshalb müssen wir verschieben. Ich könnte Ihnen Mittwoch um acht Uhr fünfzehn anbieten oder Donnerstag am späten Nachmittag, um siebzehn Uhr dreißig. Nüchtern kommen müssen Sie diesmal nicht, das war beim letzten Mal anders. Bringen Sie bitte die Liste Ihrer Medikamente mit. Sagen Sie uns kurz Bescheid, welcher Termin Ihnen besser passt.",
+            "pauseDanachSek": 15,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Bahnsprecher",
+            "text": "Meine Damen und Herren, eine Information zum Regionalexpress nach Sallberg, Abfahrt neunzehn Uhr vier. Der Zug fährt heute nicht wie gewohnt von Gleis fünf, sondern von Gleis acht. Der Grund ist eine Bauarbeit im Bereich der Einfahrt. Die Fahrzeit verlängert sich dadurch nicht. Bitte beachten Sie außerdem, dass der Zug heute nur aus drei statt aus sechs Wagen besteht; wir bitten Sie deshalb, den ganzen Bahnsteig zu nutzen und beim Einsteigen zusammenzurücken. Die Fahrradmitnahme ist heute nicht möglich.",
+            "pauseDanachSek": 15,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Wettersprecherin",
+            "text": "Und nun zum Wetter für die kommenden Tage. Der Samstag beginnt neblig, ab dem späten Vormittag setzt sich aber die Sonne durch, und es werden bis zu einundzwanzig Grad erreicht. Der Sonntag bringt dann einen deutlichen Wechsel: Von Westen zieht Regen auf, dazu kräftiger Wind, und die Temperaturen gehen auf vierzehn Grad zurück. Wer am Wochenende etwas im Freien vorhat, sollte es also auf den Samstag legen. In der neuen Woche bleibt es wechselhaft, für Frost ist es aber noch zu früh im Jahr.",
+            "pauseDanachSek": 15,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Trainer",
+            "text": "Hallo zusammen, kurze Info zum Wochenende. Das Spiel am Sonntag findet statt, aber nicht bei uns, sondern in Nordwiese — deren Platz ist bespielbar, unserer nicht. Anpfiff bleibt bei elf Uhr. Wir treffen uns um Viertel nach neun am Vereinsheim und fahren gemeinsam, wer selbst fährt, sagt mir bitte vorher Bescheid. Und noch etwas: Die neuen Trikots sind da, ich bringe sie mit. Wer noch Beiträge offen hat, kann sie am Sonntag gleich bei mir abgeben. Bis dann!",
+            "pauseDanachSek": 15,
+            "akustik": "telefon",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Museumsaufsicht",
+            "text": "Liebe Besucherinnen und Besucher, wir möchten Sie darauf hinweisen, dass das Museum heute bereits um sechzehn Uhr schließt; der Grund ist eine Abendveranstaltung. Die letzte Einlassmöglichkeit ist um fünfzehn Uhr dreißig. Die Sonderausstellung im zweiten Stock ist davon nicht betroffen und bleibt bis sechzehn Uhr geöffnet. Wer heute keine Zeit mehr findet: Ihre Eintrittskarte behält bis zum Monatsende ihre Gültigkeit. Das Café im Erdgeschoss bleibt bis achtzehn Uhr offen, der Zugang erfolgt dann über den Seiteneingang.",
+            "pauseDanachSek": 15,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der erste Text ist eine Nachricht auf einer Mailbox.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Die Anruferin nennt Praxis und Namen und bittet um eine kurze Rückmeldung.",
+            "en": "Worked example, so you can hear how the two questions per text work."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Frau Lehnhoff muss diesmal nüchtern zur Untersuchung kommen.",
+            "loesung": "falsch",
+            "beleg": "Nüchtern kommen müssen Sie diesmal nicht, das war beim letzten Mal anders.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz sagt es direkt und stellt es ausdrücklich dem letzten Mal gegenüber.",
+              "en": "„diesmal nicht“ against „beim letzten Mal anders“ — the contrast is the whole item."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Warum wird der Termin verschoben?",
+            "optionen": {
+              "a": "Die Ärztin ist auf einer Fortbildung.",
+              "b": "Die Praxis ist an dem Tag geschlossen.",
+              "c": "Ein Untersuchungsgerät ist defekt."
+            },
+            "loesung": "a",
+            "beleg": "Frau Doktor ist an dem Tag leider bei einer Fortbildung, deshalb müssen wir verschieben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Grund und Folge stehen in einem Satz, verbunden mit „deshalb“.",
+              "en": "The practice itself is clearly open — the caller is offering other appointments that week."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Der Zug fährt heute von einem anderen Gleis ab.",
+            "loesung": "richtig",
+            "beleg": "Der Zug fährt heute nicht wie gewohnt von Gleis fünf, sondern von Gleis acht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Durchsage nennt beide Gleise und den Grund im nächsten Satz.",
+              "en": "Stated with „nicht … sondern“, which is as direct as an announcement gets."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Worum werden die Reisenden gebeten?",
+            "optionen": {
+              "a": "Einen späteren Zug zu nehmen.",
+              "b": "Den ganzen Bahnsteig zu nutzen.",
+              "c": "Ihre Fahrkarte vorher zu entwerten."
+            },
+            "loesung": "b",
+            "beleg": "wir bitten Sie deshalb, den ganzen Bahnsteig zu nutzen und beim Einsteigen zusammenzurücken",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Die Bitte folgt direkt auf den Hinweis, dass der Zug nur drei statt sechs Wagen hat.",
+              "en": "The train is short, not late — which is what makes a sound plausible if you miss the reason."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Am Sonntag wird es wärmer als am Samstag.",
+            "loesung": "falsch",
+            "beleg": "Von Westen zieht Regen auf, dazu kräftiger Wind, und die Temperaturen gehen auf vierzehn Grad zurück.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Vierzehn Grad am Sonntag gegen einundzwanzig am Samstag: Es wird kühler, nicht wärmer.",
+              "en": "Two numbers in two sentences, and the item only asks which way round they go."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was empfiehlt die Sprecherin?",
+            "optionen": {
+              "a": "Ausflüge auf den Samstag zu legen.",
+              "b": "Das Wochenende zu Hause zu verbringen.",
+              "c": "Mit Frost zu rechnen."
+            },
+            "loesung": "a",
+            "beleg": "Wer am Wochenende etwas im Freien vorhat, sollte es also auf den Samstag legen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das „also“ zieht die Empfehlung aus dem Wetterwechsel, den sie gerade beschrieben hat.",
+              "en": "Frost is named in the last sentence precisely to be ruled out — „dafür ist es noch zu früh im Jahr“."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Das Spiel am Sonntag fällt aus.",
+            "loesung": "falsch",
+            "beleg": "Das Spiel am Sonntag findet statt, aber nicht bei uns, sondern in Nordwiese — deren Platz ist bespielbar, unserer nicht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Verlegt ist nicht abgesagt; der Satz sagt beides in einem Zug.",
+              "en": "The unplayable pitch is mentioned, which is exactly what makes a cancellation sound likely."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was sollen Spieler tun, die selbst fahren?",
+            "optionen": {
+              "a": "Um Viertel nach neun am Vereinsheim sein.",
+              "b": "Dem Trainer vorher Bescheid sagen.",
+              "c": "Die Trikots selbst mitbringen."
+            },
+            "loesung": "b",
+            "beleg": "wer selbst fährt, sagt mir bitte vorher Bescheid",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Treffpunkt um Viertel nach neun gilt für die gemeinsame Fahrt, nicht für diese Gruppe.",
+              "en": "Both halves are in one sentence, and a is the instruction for everybody else."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Wer heute nicht mehr hineinkommt, muss eine neue Karte kaufen.",
+            "loesung": "falsch",
+            "beleg": "Ihre Eintrittskarte behält bis zum Monatsende ihre Gültigkeit.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Ansage nennt die Gültigkeit ausdrücklich für den Fall, dass jemand heute keine Zeit mehr findet.",
+              "en": "The sentence opens with exactly that case — „Wer heute keine Zeit mehr findet“ — and then answers it."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was gilt für das Café?",
+            "optionen": {
+              "a": "Es schließt zusammen mit dem Museum.",
+              "b": "Es bleibt länger offen, mit eigenem Zugang.",
+              "c": "Es ist heute ganz geschlossen."
+            },
+            "loesung": "b",
+            "beleg": "Das Café im Erdgeschoss bleibt bis achtzehn Uhr offen, der Zugang erfolgt dann über den Seiteneingang.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Achtzehn Uhr gegen sechzehn Uhr für das Museum, und der Seiteneingang erklärt, wie das geht.",
+              "en": "The last sentence of the announcement, after three other closing times — worth listening to the end for."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "interview",
+        "anweisung": "Sie hören im Radio ein Interview mit einer Sportwissenschaftlerin über Bewegung im Alltag. Wählen Sie bei den Aufgaben 11 bis 16 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Radiosendung „Wissen am Abend“ — Interview mit Prof. Katrin Buschhoff, Sportwissenschaftlerin.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "führt das Interview"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "geschlecht": "f",
+            "beschreibung": "Prof. Katrin Buschhoff, forscht über Alltagsbewegung"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Interview mit einer Sportwissenschaftlerin. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben elf bis sechzehn.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Buschhoff, zehntausend Schritte am Tag — diese Zahl kennt inzwischen jeder. Woher kommt sie eigentlich?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Aus der Werbung, und das sage ich ohne jede Ironie. Sie stammt aus den sechziger Jahren von einem japanischen Schrittzähler, dessen Name sich mit „Zehntausend-Schritte-Messer“ übersetzen lässt. Eine medizinische Grundlage hatte sie damals nicht.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Was die Forschung inzwischen zeigt, ist etwas Erfreulicheres: Der größte Gewinn liegt gar nicht bei zehntausend, sondern viel früher. Zwischen zweitausend und sechstausend Schritten sinkt das Risiko am stärksten. Danach geht es weiter nach unten, aber deutlich flacher.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Das heißt, wer wenig geht, gewinnt am meisten?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Genau, und das ist die wichtigste Botschaft überhaupt. Der Sprung von tausend auf viertausend Schritte bringt einem Menschen mehr als der Sprung von achttausend auf zwölftausend.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Das ist deshalb so wichtig, weil die Zehntausend viele abschreckt. Wer den ganzen Tag sitzt, hört diese Zahl und hält sie für unerreichbar — und tut dann gar nichts. Eine kleinere Zahl hätte mehr Menschen in Bewegung gebracht.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Muss es denn Gehen sein? Viele gehen lieber zweimal die Woche ins Studio.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Beides ist gut, aber es ersetzt sich nicht gegenseitig. Das ist einer der häufigsten Irrtümer, die mir begegnen: Wer dreimal pro Woche trainiert und die übrigen Stunden sitzt, gilt in unseren Daten trotzdem als überwiegend inaktiv.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Man kann eine Stunde Training nicht gegen neun Stunden Sitzen aufrechnen. Es sind zwei verschiedene Dinge, und beide zählen. Deshalb rate ich immer zu dem, was ohnehin im Tag steckt: die Treppe, der Weg zum Bäcker, das Telefonat im Stehen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Was ist mit dem Tempo? Muss man ins Schwitzen kommen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Das Tempo hilft, aber es ist zweitrangig. Wichtiger ist die Regelmäßigkeit. Eine gute Faustregel ist der Sprechtest: Wenn Sie sich noch unterhalten, aber nicht mehr singen können, ist das Tempo völlig ausreichend.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Diese Regel hat den Vorteil, dass sie ohne Uhr auskommt und dass niemand sie falsch verstehen kann. Pulswerte auswendig zu lernen bringt den meisten Menschen dagegen wenig.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Wenn Sie eine einzige Empfehlung geben müssten — welche wäre das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Sportwissenschaftlerin",
+            "text": "Verbinden Sie die Bewegung mit etwas, das ohnehin jeden Tag passiert. Nicht „ich gehe künftig mehr“, sondern „ich steige eine Station früher aus“. Vorsätze ohne festen Anlass halten im Schnitt drei Wochen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Buschhoff, vielen Dank für das Gespräch.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Woher stammt die Zahl von zehntausend Schritten?",
+            "optionen": {
+              "a": "Aus einer medizinischen Studie der sechziger Jahre.",
+              "b": "Aus der Werbung für einen japanischen Schrittzähler.",
+              "c": "Aus einer Empfehlung der Weltgesundheitsorganisation."
+            },
+            "loesung": "b",
+            "beleg": "Sie stammt aus den sechziger Jahren von einem japanischen Schrittzähler, dessen Name sich mit „Zehntausend-Schritte-Messer“ übersetzen lässt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt vorher ausdrücklich „aus der Werbung“ und danach, dass es keine medizinische Grundlage gab.",
+              "en": "The sixties are in the sentence, which is what makes a tempting — but the decade belongs to the pedometer, not to a study."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Wo liegt laut Forschung der größte gesundheitliche Gewinn?",
+            "optionen": {
+              "a": "Zwischen zweitausend und sechstausend Schritten.",
+              "b": "Erst ab zehntausend Schritten.",
+              "c": "Bei mehr als zwölftausend Schritten."
+            },
+            "loesung": "a",
+            "beleg": "Zwischen zweitausend und sechstausend Schritten sinkt das Risiko am stärksten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor sagt es allgemein, dieser nennt den Bereich; danach geht es flacher weiter.",
+              "en": "More steps do keep helping — the point is that the curve flattens, not that it stops."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Warum hält sie die Zahl Zehntausend für problematisch?",
+            "optionen": {
+              "a": "Weil sie für Sportliche zu niedrig ist.",
+              "b": "Weil sie viele abschreckt, die wenig gehen.",
+              "c": "Weil sie sich schlecht messen lässt."
+            },
+            "loesung": "b",
+            "beleg": "Wer den ganzen Tag sitzt, hört diese Zahl und hält sie für unerreichbar — und tut dann gar nichts.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie schließt daraus, eine kleinere Zahl hätte mehr Menschen in Bewegung gebracht.",
+              "en": "Her objection is about who gives up, not about measurement or about athletes."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Was sagt sie über Training im Studio und Alltagsbewegung?",
+            "optionen": {
+              "a": "Training ersetzt die Alltagsbewegung.",
+              "b": "Alltagsbewegung ist wichtiger als Training.",
+              "c": "Beides zählt und lässt sich nicht gegeneinander aufrechnen."
+            },
+            "loesung": "c",
+            "beleg": "Man kann eine Stunde Training nicht gegen neun Stunden Sitzen aufrechnen. Es sind zwei verschiedene Dinge, und beide zählen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt die Gegenannahme ausdrücklich einen der häufigsten Irrtümer.",
+              "en": "She does not rank them — „beide zählen“ is the whole answer, and b would be a ranking."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Wie soll man laut ihr das richtige Tempo erkennen?",
+            "optionen": {
+              "a": "An einem Pulswert, den man auswendig lernt.",
+              "b": "Daran, dass man noch sprechen, aber nicht mehr singen kann.",
+              "c": "Daran, dass man deutlich ins Schwitzen kommt."
+            },
+            "loesung": "b",
+            "beleg": "Wenn Sie sich noch unterhalten, aber nicht mehr singen können, ist das Tempo völlig ausreichend.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt es Sprechtest und hebt hervor, dass er ohne Uhr auskommt.",
+              "en": "The next turn rules a out explicitly — memorising pulse values „bringt den meisten Menschen wenig“."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Was rät sie zum Schluss?",
+            "optionen": {
+              "a": "Bewegung an eine tägliche Gewohnheit zu koppeln.",
+              "b": "Sich ein festes Wochenziel zu setzen.",
+              "c": "Mit einem Trainingsplan zu beginnen."
+            },
+            "loesung": "a",
+            "beleg": "Verbinden Sie die Bewegung mit etwas, das ohnehin jeden Tag passiert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ihr Beispiel macht es konkret: nicht „ich gehe künftig mehr“, sondern „ich steige eine Station früher aus“.",
+              "en": "„Vorsätze ohne festen Anlass halten drei Wochen“ is precisely the argument against b and c."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören im Radio ein Gespräch mit mehreren Personen über die Zukunft der Freibäder. Wer sagt was? Ordnen Sie die Aussagen 17 bis 22 den Personen zu. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Radiosendung „Hohenrode diskutiert“ — im Studio: die Kämmerin Ilka Ronneberger und der Schwimmmeister Detlef Kaminski.",
+        "sprecher": [
+          {
+            "rolle": "Moderatorin",
+            "geschlecht": "f",
+            "beschreibung": "moderiert die Sendung"
+          },
+          {
+            "rolle": "Kaemmerin",
+            "geschlecht": "f",
+            "beschreibung": "Ilka Ronneberger, verantwortet den Haushalt der Stadt"
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "geschlecht": "m",
+            "beschreibung": "Detlef Kaminski, leitet das Freibad"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch mit drei Personen. Ordnen Sie die Aussagen den Personen zu. Sie hören den Text einmal. Lesen Sie jetzt die Aufgaben siebzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Guten Abend. Ich habe vor der Sendung in unserem Archiv nachgesehen: Wir haben über dieses Freibad zum ersten Mal vor achtzehn Jahren gesendet, und schon damals lautete die Frage, ob es geschlossen wird.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Ronneberger, Herr Kaminski, schön, dass Sie da sind. Frau Ronneberger, was kostet das Bad die Stadt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Kaemmerin",
+            "text": "Im letzten Jahr rund vierhundertsechzigtausend Euro Zuschuss, und das ist keine Ausnahme, sondern der Durchschnitt der letzten fünf Jahre. Damit ist es der größte einzelne Posten in unserem Freizeitbereich.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Kaemmerin",
+            "text": "Ich sage aber gleich dazu, was in dieser Zahl nicht steht: Wir haben seit 2011 nichts Größeres investiert. Ein Teil der Kosten entsteht heute genau deshalb — alte Technik, undichte Becken, Wasser, das nachlaufen muss.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Kaminski, Sie hören diese Zahl sicher nicht zum ersten Mal.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "text": "Nein, und ich bestreite sie auch nicht. Nur wird sie immer allein genannt. Bei uns haben im letzten Sommer vierhundert Kinder schwimmen gelernt, in Kursen, die es sonst im Umkreis von dreißig Kilometern nicht gibt.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "text": "Wenn dieses Bad zumacht, lernen die Kinder nicht anderswo schwimmen. Sie lernen es gar nicht. Das ist keine Vermutung, das haben wir in den Nachbarorten gesehen, deren Bäder vor zehn Jahren geschlossen haben.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Ronneberger, überzeugt Sie das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Kaemmerin",
+            "text": "Es überzeugt mich sogar sehr, nur löst es mein Problem nicht. Ich muss denselben Euro auch für Kindergartenplätze und für den Winterdienst ausgeben, und niemand sagt mir, wo ich ihn stattdessen wegnehmen soll.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Kaemmerin",
+            "text": "Was ich ablehne, ist die Vorstellung, das sei eine Frage des Wollens. Es ist eine Frage der Reihenfolge, und die muss der Rat entscheiden, nicht ich.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Es gibt ja Vorschläge aus der Bürgerschaft. Der bekannteste ist ein Förderverein.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "text": "Den gibt es seit drei Jahren, und er leistet Erstaunliches: Er hat die Liegewiese hergerichtet, den Kiosk übernommen und im letzten Jahr zweiundzwanzigtausend Euro gesammelt.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "text": "Ich sage aber offen: Damit lässt sich kein Becken sanieren. Ehrenamt kann ein Bad verschönern, es kann es nicht tragen. Wer etwas anderes verspricht, will den Leuten etwas vormachen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Und die Idee, im Sommer länger und im Frühjahr gar nicht zu öffnen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Kaemmerin",
+            "text": "Das rechnen wir gerade durch, und die ersten Zahlen sind besser, als ich erwartet hatte. Im Mai kommen an manchen Tagen dreißig Gäste, im Juli zweitausend. Die Fixkosten laufen aber ab dem ersten Öffnungstag.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Ein Schlusssatz von Ihnen beiden. Herr Kaminski?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schwimmmeister",
+            "text": "Man sollte diese Entscheidung nicht nach dem Kassenstand eines einzelnen Jahres treffen. Ein Bad, das man schließt, macht niemand wieder auf. Das ist der Unterschied zu fast allem anderen, worüber der Rat streitet.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Ronneberger, Herr Kaminski, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 17,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat nachgesehen, wie lange die Frage schon gestellt wird.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "a",
+            "beleg": "Wir haben über dieses Freibad zum ersten Mal vor achtzehn Jahren gesendet, und schon damals lautete die Frage, ob es geschlossen wird.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Moderatorin spricht vom Archiv der eigenen Sendung; die Gäste kommen erst danach zu Wort.",
+              "en": "Both guests also open with figures, which is what makes attribution the work here."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt einen Grund für die Kosten, der in der Zahl selbst nicht steht.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "b",
+            "beleg": "Wir haben seit 2011 nichts Größeres investiert. Ein Teil der Kosten entsteht heute genau deshalb — alte Technik, undichte Becken, Wasser, das nachlaufen muss.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Bemerkenswert ist, dass die Kämmerin selbst die Einschränkung ihrer eigenen Zahl liefert.",
+              "en": "You expect the swimming-pool manager to relativise the cost. It is the treasurer who does it."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person berichtet, wie viele Kinder im Bad schwimmen gelernt haben.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "c",
+            "beleg": "Bei uns haben im letzten Sommer vierhundert Kinder schwimmen gelernt, in Kursen, die es sonst im Umkreis von dreißig Kilometern nicht gibt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er stellt diese Zahl der Kostenzahl gegenüber, die er ausdrücklich nicht bestreitet.",
+              "en": "He accepts her figure first, which is what makes the two numbers easy to attribute to the wrong speaker."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sagt, die Entscheidung sei keine Frage des Wollens, sondern der Reihenfolge.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "b",
+            "beleg": "Es ist eine Frage der Reihenfolge, und die muss der Rat entscheiden, nicht ich.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie nennt vorher Kindergartenplätze und Winterdienst als konkurrierende Ausgaben.",
+              "en": "She says his argument convinces her — and then explains why being convinced does not solve her problem."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält das Ehrenamt für hilfreich, aber nicht für tragfähig.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "c",
+            "beleg": "Ehrenamt kann ein Bad verschönern, es kann es nicht tragen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er zählt vorher auf, was der Förderverein geleistet hat, und zieht danach die Grenze.",
+              "en": "Praise first, limit second — and the limit is the half the item asks about."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person berichtet von einer Rechnung, deren Ergebnis sie überrascht hat.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "die Kämmerin",
+              "c": "der Schwimmmeister"
+            },
+            "loesung": "b",
+            "beleg": "Das rechnen wir gerade durch, und die ersten Zahlen sind besser, als ich erwartet hatte.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Es geht um die kürzere Saison; sie belegt es mit dreißig Gästen im Mai gegen zweitausend im Juli.",
+              "en": "The moderator raises the idea as a question; the calculation and the surprise are the treasurer's."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "vortrag",
+        "anweisung": "Sie hören einen kurzen Vortrag über Gewohnheiten. Wählen Sie bei den Aufgaben 23 bis 30 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Vortragsreihe der Volkshochschule Hohenrode: „Warum Vorsätze scheitern“ — Dr. Yannick Ohlerich.",
+        "sprecher": [
+          {
+            "rolle": "Vortragender",
+            "geschlecht": "m",
+            "beschreibung": "Dr. Yannick Ohlerich, Psychologe"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören einen kurzen Vortrag. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 60,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Guten Abend. Ich beginne mit einer Zahl, die Sie vielleicht kennen: Angeblich braucht man einundzwanzig Tage, um eine Gewohnheit zu bilden. Diese Zahl ist falsch, und sie ist auf eine interessante Weise falsch.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Sie stammt aus den fünfziger Jahren von einem Schönheitschirurgen, der beobachtet hatte, dass seine Patienten etwa drei Wochen brauchten, um sich an ihr verändertes Gesicht zu gewöhnen. Aus dieser Beobachtung wurde über Jahrzehnte eine Regel für alles Mögliche.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Die tatsächlichen Werte sehen anders aus. In der größten Untersuchung dazu lag der Mittelwert bei etwa zwei Monaten, mit einer enormen Streuung: Manche Teilnehmenden brauchten drei Wochen, andere fast ein Jahr. Ein Glas Wasser nach dem Frühstück ist eben etwas anderes als fünfzig Sitzliegestütze.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Wichtiger als die Dauer ist ohnehin die Struktur. Eine Gewohnheit besteht aus drei Teilen: einem Auslöser, der Handlung selbst und einer Folge, die angenehm genug ist, dass man es wieder tut. Wer eine Gewohnheit aufbauen will, arbeitet fast immer am mittleren Teil — und der ist der unwichtigste.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Der Auslöser entscheidet. Deshalb funktioniert „nach dem Zähneputzen zwei Seiten lesen“ zuverlässiger als „mehr lesen“. Das erste hat einen festen Anlass, das zweite hat gar keinen und wartet auf einen guten Moment, der nie kommt.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Beim Abgewöhnen gilt etwas anderes, und das wird oft übersehen. Eine schlechte Gewohnheit verschwindet selten dadurch, dass man sie sich verbietet. Sie verschwindet, wenn an ihrer Stelle etwas anderes steht, das denselben Auslöser bedient.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Nun zu dem, was mich am meisten interessiert: dem Rückfall. In fast allen Ratgebern steht, ein ausgelassener Tag sei gefährlich. Unsere Daten zeigen das nicht. Ein einzelner ausgelassener Tag hat auf die Bildung der Gewohnheit keinen messbaren Einfluss.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Was schadet, ist nicht der ausgelassene Tag, sondern die Schlussfolgerung daraus. Wer denkt „jetzt ist es sowieso egal“, hört tatsächlich auf — und zwar nicht wegen des einen Tages, sondern wegen dieses Satzes. Der Vorsatz scheitert an der Bewertung des Fehltritts, nicht am Fehltritt.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Und noch etwas, das Sie überraschen dürfte: Belohnungen von außen können schaden. Wer für das Laufen bezahlt wird, läuft zuverlässig — solange gezahlt wird. Danach läuft er seltener als jemand, der nie etwas bekommen hat.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Die Erklärung ist unbequem: Die Belohnung ersetzt den eigenen Grund, und wenn sie wegfällt, ist der eigene Grund nicht mehr da. Für den Aufbau einer dauerhaften Gewohnheit ist es deshalb besser, die Folge in der Sache selbst zu suchen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragender",
+            "text": "Ich fasse zusammen: Vergessen Sie die einundzwanzig Tage. Suchen Sie sich einen festen Auslöser, machen Sie den Anfang lächerlich klein, und behandeln Sie einen ausgelassenen Tag als das, was er ist — ein ausgelassener Tag. Ich danke Ihnen.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "multiple_choice",
+            "frage": "Woher stammt die Zahl von einundzwanzig Tagen?",
+            "optionen": {
+              "a": "Aus der Beobachtung eines Schönheitschirurgen.",
+              "b": "Aus einer psychologischen Langzeitstudie.",
+              "c": "Aus einer Umfrage unter Sportlern."
+            },
+            "loesung": "a",
+            "beleg": "Sie stammt aus den fünfziger Jahren von einem Schönheitschirurgen, der beobachtet hatte, dass seine Patienten etwa drei Wochen brauchten, um sich an ihr verändertes Gesicht zu gewöhnen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Redner nennt sie ausdrücklich falsch und erklärt danach, wie aus einer Beobachtung eine Regel wurde.",
+              "en": "The real study comes in the next paragraph and gives a different number, which is what makes b tempting."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "multiple_choice",
+            "frage": "Was ergab die größte Untersuchung zur Dauer?",
+            "optionen": {
+              "a": "Genau drei Wochen bei fast allen Teilnehmenden.",
+              "b": "Im Mittel etwa zwei Monate, mit großen Unterschieden.",
+              "c": "Bei allen mindestens ein Jahr."
+            },
+            "loesung": "b",
+            "beleg": "lag der Mittelwert bei etwa zwei Monaten, mit einer enormen Streuung",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Spanne wird sofort genannt: von drei Wochen bis fast einem Jahr.",
+              "en": "Both three weeks and a year appear in the sentence — as the ends of the range, not as the result."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "multiple_choice",
+            "frage": "Welcher Teil einer Gewohnheit ist laut Vortrag der unwichtigste?",
+            "optionen": {
+              "a": "Der Auslöser.",
+              "b": "Die Handlung selbst.",
+              "c": "Die angenehme Folge."
+            },
+            "loesung": "b",
+            "beleg": "Wer eine Gewohnheit aufbauen will, arbeitet fast immer am mittleren Teil — und der ist der unwichtigste.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der mittlere der drei genannten Teile ist die Handlung; der nächste Absatz erklärt, dass der Auslöser entscheidet.",
+              "en": "You have to hold the order of the three parts to know which one „der mittlere“ is."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "multiple_choice",
+            "frage": "Warum funktioniert „nach dem Zähneputzen zwei Seiten lesen“ besser als „mehr lesen“?",
+            "optionen": {
+              "a": "Weil es weniger Zeit kostet.",
+              "b": "Weil es einen festen Anlass hat.",
+              "c": "Weil es leichter zu messen ist."
+            },
+            "loesung": "b",
+            "beleg": "Das erste hat einen festen Anlass, das zweite hat gar keinen und wartet auf einen guten Moment, der nie kommt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz stellt beide Formulierungen gegenüber und nennt den Unterschied.",
+              "en": "Two pages is indeed less, which is what makes a plausible — but the sentence names the trigger, not the size."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Wie verschwindet eine schlechte Gewohnheit am ehesten?",
+            "optionen": {
+              "a": "Indem man sie sich streng verbietet.",
+              "b": "Indem etwas anderes denselben Auslöser bedient.",
+              "c": "Indem man den Auslöser vollständig vermeidet."
+            },
+            "loesung": "b",
+            "beleg": "Sie verschwindet, wenn an ihrer Stelle etwas anderes steht, das denselben Auslöser bedient.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor schließt das Verbot ausdrücklich als Weg aus.",
+              "en": "The trigger stays and gets a new answer — c would remove it, which is not what he says."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Was sagen die Daten über einen einzelnen ausgelassenen Tag?",
+            "optionen": {
+              "a": "Er hat keinen messbaren Einfluss.",
+              "b": "Er verlängert den Aufbau um mehrere Wochen.",
+              "c": "Er führt bei den meisten zum Abbruch."
+            },
+            "loesung": "a",
+            "beleg": "Ein einzelner ausgelassener Tag hat auf die Bildung der Gewohnheit keinen messbaren Einfluss.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er stellt das ausdrücklich gegen das, was in fast allen Ratgebern steht.",
+              "en": "c is what the guidebooks claim, and he names them in order to contradict them."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Woran scheitert ein Vorsatz nach seiner Darstellung?",
+            "optionen": {
+              "a": "Am Fehltritt selbst.",
+              "b": "An der Bewertung des Fehltritts.",
+              "c": "An zu hohen Zielen am Anfang."
+            },
+            "loesung": "b",
+            "beleg": "Der Vorsatz scheitert an der Bewertung des Fehltritts, nicht am Fehltritt.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der Satz davor macht es konkret: Wer denkt „jetzt ist es sowieso egal“, hört tatsächlich auf.",
+              "en": "The sentence contains a and b and says which of the two it is."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Was sagt er über Belohnungen von außen?",
+            "optionen": {
+              "a": "Sie sind das wirksamste Mittel überhaupt.",
+              "b": "Sie wirken nur bei sportlichen Zielen.",
+              "c": "Sie können den eigenen Grund ersetzen und dann fehlen."
+            },
+            "loesung": "c",
+            "beleg": "Die Belohnung ersetzt den eigenen Grund, und wenn sie wegfällt, ist der eigene Grund nicht mehr da.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Beispiel davor zeigt es: Wer fürs Laufen bezahlt wurde, läuft danach seltener als jemand ohne Bezahlung.",
+              "en": "They do work while they last, which is the half of the point that makes a sound right."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 75,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "forumsbeitrag",
+        "situation": "In einem Onlineforum für Beschäftigte wird darüber diskutiert, ob Arbeitgeber Bewegung während der Arbeitszeit ermöglichen sollten — etwa eine bezahlte halbe Stunde pro Woche. Sie lesen den folgenden Beitrag und möchten darauf antworten.",
+        "impuls": "Werkbank_Nord: Ich lese hier von bezahlter Bewegungszeit und frage mich, in welcher Welt ihr arbeitet. Bei uns in der Fertigung stehen die Leute acht Stunden und bewegen sich mehr, als ihnen lieb ist. Diese ganzen Angebote gibt es immer nur dort, wo ohnehin schon alle im Sitzen gut verdienen. Und ehrlich: Wer eine halbe Stunde bezahlt bekommt, arbeitet sie an anderer Stelle wieder rein. Verschenkt wird nichts, das sollte man wenigstens dazusagen.",
+        "aufgabenstellung": "Schreiben Sie einen Beitrag für dieses Forum. Gehen Sie auf alle vier Leitpunkte ein, ordnen Sie Ihren Text sinnvoll und schreiben Sie mindestens 150 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie selbst davon halten, und begründen Sie Ihre Meinung.",
+          "Gehen Sie auf ein Argument von Werkbank_Nord ein.",
+          "Beschreiben Sie, wie in Ihrem Heimatland mit Bewegung am Arbeitsplatz umgegangen wird.",
+          "Machen Sie einen Vorschlag, der auch für körperlich arbeitende Menschen etwas bringt."
+        ],
+        "anrede": "Hallo zusammen",
+        "woerter": 150,
+        "zeitMinuten": 50,
+        "punkte": 60,
+        "redemittel": [
+          "Ich lese hier schon eine Weile mit und möchte gern etwas ergänzen.",
+          "Werkbank_Nord schreibt, dass … — diesen Punkt halte ich für den stärksten im ganzen Beitrag.",
+          "Daraus folgt für mich allerdings etwas anderes als für ihn: …",
+          "Bei uns wird das ganz anders gehandhabt: …",
+          "Sinnvoller fände ich es, zunächst … und erst danach …",
+          "Ich schlage deshalb vor, … Davon hätten dann auch … etwas.",
+          "Zusammenfassend halte ich es für falsch, die Frage nur für Büroarbeit zu stellen."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo zusammen,\n\nich finde die Idee mit der bezahlten Bewegungszeit gut, aber nicht für alle gleich.\n\nWerkbank_Nord schreibt, dass sich Leute in der Fertigung schon genug bewegen. Da hat er recht. Mein Onkel arbeitet in einer Halle und ist abends völlig kaputt. Für ihn wäre eine halbe Stunde Sport keine Hilfe, sondern eine Zumutung. Trotzdem ist das für mich kein Grund, gar nichts zu machen.\n\nIn meinem Heimatland gibt es so etwas fast nirgends. In großen Firmen gibt es manchmal einen Raum mit Geräten, aber niemand geht dorthin, weil die Arbeitszeit trotzdem voll gearbeitet werden muss. Es steht also auf dem Papier und passiert nicht.\n\nMein Vorschlag ist deshalb, nicht für alle dasselbe anzubieten. Wer den ganzen Tag sitzt, braucht Bewegung. Wer den ganzen Tag steht, braucht eher Pausen und einen Stuhl. Beides kostet die Firma Zeit, aber beides hilft der Gesundheit. Wichtig ist nur, dass man nicht allen dasselbe anbietet und es dann Gesundheitsprogramm nennt.\n\nViele Grüße\nRavi",
+            "kommentar": "Alle vier Leitpunkte sind bearbeitet, die Position ist differenziert und der Vorschlag greift den Einwand auf. Auf „ausreichend“ hält den Text die Sprache: überwiegend kurze Hauptsätze, wenige Konnektoren („aber“, „trotzdem“, „deshalb“), und die Auseinandersetzung bleibt bei „da hat er recht“ stehen, statt das Argument weiterzudenken."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo zusammen,\n\nWerkbank_Nord hat mit seinem Haupteinwand vollkommen recht, zieht daraus aber meiner Meinung nach den falschen Schluss.\n\nRichtig ist: Wer acht Stunden in der Fertigung steht, hat kein Bewegungsdefizit, und ein Angebot, das für Büroarbeit gedacht ist, wirkt dort wie Hohn. Daraus folgt für mich allerdings nicht, dass man es lassen sollte, sondern dass man aufhören muss, „Gesundheit am Arbeitsplatz“ mit „Sport“ gleichzusetzen. Wer steht, braucht Sitzgelegenheiten und kürzere, häufigere Pausen; wer sitzt, braucht das Gegenteil. Das ist dieselbe Idee, nur nicht dasselbe Angebot.\n\nIn meinem Heimatland existiert so etwas fast nur auf dem Papier. Große Firmen richten einen Raum mit Geräten ein, aber die Arbeitszeit bleibt unverändert, und entsprechend steht der Raum leer. Man sieht daran gut, dass nicht das Angebot entscheidet, sondern ob die Zeit dafür bezahlt wird.\n\nDeshalb mein Vorschlag: eine feste, bezahlte Viertelstunde pro Tag, die jede Abteilung selbst ausfüllt — Rückenübungen in der Fertigung, ein Spaziergang im Büro. Damit wäre auch Werkbank_Nords Kollegschaft etwas geholfen, und niemand bekäme etwas geschenkt, was er gar nicht braucht.\n\nViele Grüße\nRavi",
+            "kommentar": "Deutlich über dem Mindestmaß, ohne zu schwätzen. Der Beitrag trennt sauber zwischen dem, was am Gegenargument stimmt, und dem Schluss, der daraus nicht folgt, und findet dafür eine Formel („dieselbe Idee, nur nicht dasselbe Angebot“). Sprachlich fallen die Konnektoren „daraus folgt allerdings nicht“, „entsprechend“, „damit“ sowie mehrere Nebensätze mit „wer …, braucht …“ ins Gewicht."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "nachricht_formell",
+        "situation": "Sie haben in der Stadtbibliothek Hohenrode ein Buch entliehen und beim Auspacken zu Hause festgestellt, dass die letzten Seiten fehlen. Sie wissen aus der Benutzungsordnung, dass Beschädigungen vor der Ausleihe angezeigt werden müssen und man sonst dafür haftet.",
+        "aufgabenstellung": "Schreiben Sie eine Nachricht an die Bibliotheksleitung, Frau Kablitz. Achten Sie auf eine angemessene Anrede und einen passenden Schluss und schreiben Sie mindestens 100 Wörter.",
+        "leitpunkte": [
+          "Nennen Sie den Grund für Ihr Schreiben.",
+          "Beschreiben Sie, wann und wie Sie den Schaden bemerkt haben.",
+          "Fragen Sie, wie Sie jetzt vorgehen sollen.",
+          "Bitten Sie darum, dass Ihnen der Schaden nicht angerechnet wird."
+        ],
+        "anrede": "Sehr geehrte Frau Kablitz",
+        "woerter": 100,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "ich habe am … in Ihrer Bibliothek das Buch … entliehen und wende mich mit einer Bitte an Sie.",
+          "Zu Hause ist mir aufgefallen, dass …",
+          "Beim Ausleihen ist mir das nicht aufgefallen, da …",
+          "Der Benutzungsordnung entnehme ich, dass Beschädigungen vor der Ausleihe anzuzeigen sind.",
+          "Nun wäre meine Frage, wie ich in diesem Fall vorgehen soll.",
+          "Ich möchte Sie bitten, den Schaden nicht mir anzurechnen.",
+          "Über eine kurze Rückmeldung wäre ich Ihnen dankbar."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Frau Kablitz,\n\nich habe am Montag in Ihrer Bibliothek das Buch „Die Geschichte der Stadt“ ausgeliehen. Leider gibt es ein Problem.\n\nZu Hause habe ich gesehen, dass die letzten zwölf Seiten fehlen. Sie sind offenbar herausgerissen worden. Beim Ausleihen habe ich das nicht bemerkt, weil ich das Buch nur kurz angeschaut habe.\n\nIn der Benutzungsordnung steht, dass man Schäden vorher melden muss. Das habe ich nicht getan, aber ich habe den Schaden auch nicht verursacht.\n\nWie soll ich jetzt vorgehen? Soll ich das Buch zurückbringen? Ich bitte Sie, mir den Schaden nicht anzurechnen.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle vier Punkte kommen vor, und der Bezug auf die Ordnung zeigt, dass sie gelesen wurde. Auf „ausreichend“ hält den Text die einfache Syntax: fast nur Hauptsätze, die direkten Fragen „Wie soll ich vorgehen? Soll ich …?“ statt einer höflichen Konjunktivform, und ein knapper Schluss ohne Frist."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Frau Kablitz,\n\nam vergangenen Montag habe ich in Ihrer Bibliothek den Band „Die Geschichte der Stadt“ entliehen und wende mich heute mit einer Bitte an Sie.\n\nBeim Lesen ist mir am Abend aufgefallen, dass die letzten zwölf Seiten fehlen; sie sind offensichtlich herausgetrennt worden, und zwar sauber genug, dass man es von außen nicht sieht. Bei der Ausleihe war mir das entgangen, da ich den Band lediglich kurz durchgeblättert hatte.\n\nDer Benutzungsordnung entnehme ich, dass bereits vorhandene Beschädigungen vor der Ausleihe anzuzeigen sind und andernfalls die entleihende Person haftet. Da ich den Schaden weder verursacht noch bemerkt habe, möchte ich Sie bitten, in diesem Fall von einer Ersatzforderung abzusehen.\n\nNun wäre meine Frage, wie ich vorgehen soll: Soll ich den Band vorzeitig zurückbringen, oder genügt es, ihn bei der Rückgabe an der Theke vorzulegen? Über eine kurze Rückmeldung wäre ich Ihnen sehr dankbar.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Durchgehend halbformelles Register. Die Bitte steht im Konjunktiv II („möchte ich Sie bitten“, „wäre meine Frage“), die Frage bietet zwei konkrete Möglichkeiten an, statt sie offen zu lassen, und die Ordnung wird zitiert, um die eigene Lage genau darin zu verorten. Auffällig sind außerdem das Plusquamperfekt („durchgeblättert hatte“) und die Umstellungen im Vorfeld."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "vortrag",
+        "titel": "Einen kurzen Vortrag halten",
+        "anweisung": "Wählen Sie eines der beiden Themen und halten Sie dazu einen Vortrag von etwa vier Minuten. Gliedern Sie ihn in Einleitung, Hauptteil und Schluss. Ihre Gesprächspartnerin stellt Ihnen anschließend Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 50,
+        "fragen": [
+          "Sie haben von Ihren eigenen Erfahrungen berichtet — wie wäre es für jemanden mit Schichtarbeit?",
+          "Was würde Ihre Position am ehesten widerlegen?",
+          "Wer sollte das bezahlen, wenn es Geld kostet?"
+        ],
+        "themen": [
+          {
+            "titel": "Sollte jedes Kind in der Schule schwimmen lernen müssen?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Ich möchte heute über die Frage sprechen, ob …",
+              "Zunächst beschreibe ich kurz, wie es damit heute aussieht.",
+              "Ein Beispiel aus meinem eigenen Umfeld ist …",
+              "Für eine Pflicht spricht vor allem, dass …",
+              "Dagegen wird eingewendet, dass den Schulen die Bäder fehlen.",
+              "Wenn man beide Seiten abwägt, überwiegt für mich …",
+              "Ich komme damit zum Schluss und fasse zusammen: …"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob jedes Kind in der Schule schwimmen lernen sollte. Das Thema interessiert mich, weil ich selbst erst mit vierundzwanzig schwimmen gelernt habe, und zwar in einem Kurs für Erwachsene, in dem außer mir nur Erwachsene saßen, denen es genauso ging.\n\nZur Lage: In vielen Gegenden ist das Schulschwimmen gestrichen worden, meist nicht aus Überzeugung, sondern weil das nächste Bad zu weit weg ist. Eine Bekannte unterrichtet an einer Grundschule, die für eine Schwimmstunde vierzig Minuten Busfahrt einrechnen muss. Bei zwei Schulstunden bleibt für das Wasser fast nichts übrig.\n\nFür eine Pflicht spricht aus meiner Sicht vor allem, dass Schwimmen keine Freizeitfähigkeit ist, sondern eine Sicherheitsfrage. Wer es als Kind nicht lernt, lernt es meistens gar nicht — dafür bin ich selbst das Beispiel. Dagegen wird eingewendet, dass eine Pflicht nichts nützt, wenn die Bäder fehlen, und dieses Argument nehme ich ernst. Eine Vorschrift ohne Becken ist nur eine Vorschrift.\n\nWenn ich abwäge, komme ich zu folgendem Schluss: Die Pflicht allein wäre zu wenig. Richtig wäre eine Pflicht zusammen mit der Zusage, die Fahrt zum nächsten Bad zu bezahlen. Sonst verschiebt man das Problem von der Schule zu den Eltern. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Sollten Arbeitgeber Sport während der Arbeitszeit ermöglichen?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Mein Thema lautet … Ich habe es gewählt, weil es meinen Arbeitsalltag betrifft.",
+              "Man muss dabei zwei Gruppen auseinanderhalten: … und …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Der größte Vorteil liegt für mich darin, dass …",
+              "Problematisch finde ich allerdings, dass …",
+              "Entscheidend ist meiner Meinung nach nicht ob, sondern für wen …",
+              "Abschließend möchte ich festhalten: …"
+            ],
+            "musterantwort": "Mein Thema lautet: Sollten Arbeitgeber Sport während der Arbeitszeit ermöglichen? Ich habe es gewählt, weil mein Betrieb das seit einem Jahr anbietet und ich sehen kann, wer es nutzt und wer nicht.\n\nMan muss dabei zwei Gruppen auseinanderhalten. Bei uns im Büro sitzen die Leute acht Stunden, und für sie ist das Angebot ein echter Gewinn. In der Werkstatt nebenan stehen die Kollegen den ganzen Tag; von ihnen geht niemand hin, und ich verstehe das vollkommen. Konkret heißt das: Von zwölf Anmeldungen kommen elf aus der Verwaltung.\n\nDer größte Vorteil liegt für mich darin, dass eine bezahlte halbe Stunde etwas anderes ist als ein Rabatt fürs Fitnessstudio. Ein Rabatt sagt: Mach das in deiner Freizeit. Bezahlte Zeit sagt: Das gehört zur Arbeit. Problematisch finde ich allerdings, dass solche Angebote fast immer dort entstehen, wo die Arbeitsbedingungen ohnehin die besseren sind.\n\nAbschließend möchte ich festhalten: Entscheidend ist nicht ob, sondern für wen. Ein Angebot, das nur die Verwaltung erreicht, ist besser als nichts, aber es ist kein Gesundheitsprogramm — es ist eine Zusatzleistung für die, die ohnehin am wenigsten gefährdet sind. Vielen Dank."
+          }
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihren Vortrag. Eine Frage dazu: Sie haben von Ihren eigenen Erfahrungen berichtet — wie wäre das denn für jemanden, der in Schichten arbeitet?",
+            "wartenSek": 45,
+            "hinweis": "Antworten Sie in zwei bis drei Sätzen und räumen Sie ein, wo Ihre Position nicht trägt."
+          },
+          {
+            "text": "Das leuchtet mir ein. Und was würde Ihre Position am ehesten widerlegen?",
+            "wartenSek": 45,
+            "hinweis": "Nennen Sie ein echtes Gegenargument — nicht das schwächste, das Ihnen einfällt."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "diskussion",
+        "titel": "Eine Debatte führen",
+        "anweisung": "Diskutieren Sie mit Ihrer Gesprächspartnerin über die folgende Frage. Tauschen Sie Argumente aus, gehen Sie auf die Gegenseite ein und kommen Sie am Ende zu einem gemeinsamen Fazit.",
+        "dauerMinuten": 5,
+        "punkte": 50,
+        "situation": "Sollen Betriebe verpflichtet werden, nach Feierabend keine dienstlichen Nachrichten mehr zu verschicken?",
+        "planungspunkte": [
+          "Wer hätte etwas davon, wer eher Nachteile?",
+          "Was bedeutet es für Menschen, die ihre Arbeitszeit selbst einteilen?",
+          "Ließe sich eine solche Pflicht überhaupt kontrollieren?",
+          "Welche Alternative wäre denkbar, wenn es keine Pflicht gibt?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Ich fange einmal an, und ich bin dafür. Wer abends Nachrichten bekommt, erholt sich schlechter, das ist inzwischen gut belegt. Ohne eine klare Regel traut sich niemand, nicht zu antworten — man will ja nicht der Einzige sein.",
+            "wartenSek": 40,
+            "hinweis": "Gehen Sie zuerst auf ihren Punkt ein: Braucht es dafür wirklich eine Pflicht?"
+          },
+          {
+            "text": "Gut, das verstehe ich. Aber sehen Sie: Wenn ich abends nicht schreiben darf, arbeite ich am nächsten Morgen doppelt. Und die Leute, die ihre Zeit selbst einteilen, trifft so eine Sperre am härtesten.",
+            "wartenSek": 40,
+            "hinweis": "Stimmen Sie zu oder widersprechen Sie — und machen Sie einen Vorschlag, der beides berücksichtigt."
+          },
+          {
+            "text": "Das wäre ein Weg, ja. Ehrlich gesagt frage ich mich aber, ob wir das eigentliche Problem treffen. Wenn zu wenig Personal da ist, wandert die Arbeit doch trotzdem in den Abend — nur eben unsichtbar.",
+            "wartenSek": 40,
+            "hinweis": "Ein starkes Argument. Geben Sie zu, was daran stimmt, und ziehen Sie eine Folgerung daraus."
+          },
+          {
+            "text": "Da sind wir uns näher, als es am Anfang aussah. Wollen wir das zusammenfassen? Sagen Sie doch, worauf wir uns einigen könnten.",
+            "wartenSek": 45,
+            "hinweis": "Fassen Sie beide Positionen zusammen und formulieren Sie ein gemeinsames Fazit."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "der Anstoß",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Anstöße",
+      "bedeutung_de": "der Auslöser, der etwas in Gang bringt",
+      "bedeutung_en": "impetus, the push that gets something going",
+      "beispiel": "sind sie oft der Anstoß, der jahrelang gefehlt hat",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "willkürlich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne sachlichen Grund gewählt",
+      "bedeutung_en": "arbitrary",
+      "beispiel": "Zehntausend Schritte sind eine willkürliche Zahl",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "zwiespältig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "geteilt, mit guten und schlechten Seiten",
+      "bedeutung_en": "mixed, of two minds",
+      "beispiel": "mein Urteil fällt zwiespältig aus",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Messgenauigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "wie genau ein Gerät misst",
+      "bedeutung_en": "measurement accuracy",
+      "beispiel": "Über die Messgenauigkeit dieser Geräte wird viel geschrieben",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "unstrittig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass niemand daran zweifelt",
+      "bedeutung_en": "undisputed",
+      "beispiel": "Schritte zählen sie zuverlässig, das ist unstrittig.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "weitergeben",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "gibt weiter",
+        "praeteritum": "gab weiter",
+        "perfekt": "hat weitergegeben",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "an eine andere Stelle übermitteln",
+      "bedeutung_en": "to pass on, to share (data)",
+      "beispiel": "dass Daten an Partnerunternehmen weitergegeben werden dürfen",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Hygiene",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "alles, was der Sauberkeit und Gesundheit dient",
+      "bedeutung_en": "hygiene",
+      "beispiel": "Sie entstand aus zwei sehr nüchternen Gründen: Hygiene und Unfallzahlen.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "nüchtern",
+      "wortart": "adjektiv",
+      "bedeutung_de": "sachlich, ohne Gefühl; auch: ohne gegessen zu haben",
+      "bedeutung_en": "sober, matter-of-fact; also: on an empty stomach",
+      "beispiel": "aus zwei sehr nüchternen Gründen",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Aufsicht",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Aufsichten",
+      "bedeutung_de": "das Beaufsichtigen; auch die Person, die aufpasst",
+      "bedeutung_en": "supervision; also the person supervising",
+      "beispiel": "tat das ohne Aufsicht und ohne es gelernt zu haben",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "unterhalten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "unterhält",
+        "praeteritum": "unterhielt",
+        "perfekt": "hat unterhalten",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "auf eigene Kosten betreiben und in Ordnung halten",
+      "bedeutung_en": "to maintain, to run (a facility)",
+      "beispiel": "die eine Gemeinde unterhalten kann",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Nachfolge",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Nachfolgen",
+      "bedeutung_de": "die Person, die eine Stelle danach übernimmt",
+      "bedeutung_en": "succession, a successor",
+      "beispiel": "hatte sie vier Jahre lang eine Nachfolge gesucht",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "übernehmen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "übernimmt",
+        "praeteritum": "übernahm",
+        "perfekt": "hat übernommen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "etwas von jemandem weiterführen oder auf sich nehmen",
+      "bedeutung_en": "to take over, to take on",
+      "beispiel": "Wer eine Praxis übernimmt, übernimmt einen Betrieb mit Personal, Miete und Kredit",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "das Gefälle",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Gefälle",
+      "bedeutung_de": "ein Unterschied im Niveau zwischen zwei Seiten",
+      "bedeutung_en": "gap, disparity",
+      "beispiel": "entstehe am Ende ein Gefälle zwischen reichen und armen Gemeinden",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "aufbringen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "bringt auf",
+        "praeteritum": "brachte auf",
+        "perfekt": "hat aufgebracht"
+      },
+      "bedeutung_de": "eine Summe oder Kraft zusammenbekommen",
+      "bedeutung_en": "to raise, to muster (a sum)",
+      "beispiel": "dass nicht jede Gemeinde vierhunderttausend Euro aufbringen könne",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Zumutung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Zumutungen",
+      "bedeutung_de": "etwas, das man niemandem zumuten sollte",
+      "bedeutung_en": "an imposition, something unreasonable to ask",
+      "beispiel": "Für mich wäre so eine Regel eine Zumutung.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Betriebsvereinbarung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Betriebsvereinbarungen",
+      "bedeutung_de": "eine schriftliche Regel zwischen Betrieb und Belegschaft",
+      "bedeutung_en": "works agreement",
+      "beispiel": "Wir haben es mit einer Betriebsvereinbarung versucht",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "durchsetzen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "setzt durch",
+        "praeteritum": "setzte durch",
+        "perfekt": "hat durchgesetzt"
+      },
+      "bedeutung_de": "dafür sorgen, dass etwas tatsächlich gilt",
+      "bedeutung_en": "to enforce; reflexively: to catch on",
+      "beispiel": "sind daran gescheitert, dass niemand sie durchsetzen wollte",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "erfassen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "erfasst",
+        "praeteritum": "erfasste",
+        "perfekt": "hat erfasst"
+      },
+      "bedeutung_de": "festhalten und dokumentieren; auch: verstehen",
+      "bedeutung_en": "to record, to log; also: to grasp",
+      "beispiel": "und die ist zu erfassen und zu vergüten",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "vergüten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vergütet",
+        "praeteritum": "vergütete",
+        "perfekt": "hat vergütet"
+      },
+      "bedeutung_de": "für eine Leistung bezahlen",
+      "bedeutung_en": "to remunerate, to pay for",
+      "beispiel": "zu erfassen und zu vergüten",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "unbesetzt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne eine Person, die die Stelle ausfüllt",
+      "bedeutung_en": "vacant, unfilled",
+      "beispiel": "sind zwei Stellen seit einem Jahr unbesetzt",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Vormerkung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Vormerkungen",
+      "bedeutung_de": "die Reservierung eines ausgeliehenen Mediums",
+      "bedeutung_en": "reservation, hold (on a borrowed item)",
+      "beispiel": "sofern keine Vormerkung vorliegt",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "pfleglich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "sorgsam, schonend",
+      "bedeutung_en": "with due care",
+      "beispiel": "Medien sind pfleglich zu behandeln.",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Wiederbeschaffungswert",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Wiederbeschaffungswerte",
+      "bedeutung_de": "was es kostet, denselben Gegenstand neu zu kaufen",
+      "bedeutung_en": "replacement value",
+      "beispiel": "ist Ersatz in Höhe des Wiederbeschaffungswertes zu leisten",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Fortbildung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Fortbildungen",
+      "bedeutung_de": "eine Schulung, die man neben dem Beruf besucht",
+      "bedeutung_en": "further training, professional development",
+      "beispiel": "Frau Doktor ist an dem Tag leider bei einer Fortbildung",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "wechselhaft",
+      "wortart": "adjektiv",
+      "bedeutung_de": "sich ständig ändernd, unbeständig",
+      "bedeutung_en": "changeable, unsettled (weather)",
+      "beispiel": "In der neuen Woche bleibt es wechselhaft",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "bespielbar",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass darauf gespielt werden kann",
+      "bedeutung_en": "playable (of a pitch)",
+      "beispiel": "deren Platz ist bespielbar, unserer nicht",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Streuung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Streuungen",
+      "bedeutung_de": "wie weit einzelne Werte auseinanderliegen",
+      "bedeutung_en": "spread, variance",
+      "beispiel": "mit einer enormen Streuung",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Auslöser",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Auslöser",
+      "bedeutung_de": "das, was eine Handlung in Gang setzt",
+      "bedeutung_en": "trigger, cue",
+      "beispiel": "Der Auslöser entscheidet.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Rückfall",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Rückfälle",
+      "bedeutung_de": "das Zurückfallen in ein altes Verhalten",
+      "bedeutung_en": "relapse, lapse",
+      "beispiel": "dem Rückfall",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Fehltritt",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Fehltritte",
+      "bedeutung_de": "ein einzelner Fehler im Verhalten",
+      "bedeutung_en": "slip, lapse",
+      "beispiel": "Der Vorsatz scheitert an der Bewertung des Fehltritts, nicht am Fehltritt.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Vorsatz",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Vorsätze",
+      "bedeutung_de": "das feste Vorhaben, etwas zu tun",
+      "bedeutung_en": "resolution, intention",
+      "beispiel": "Vorsätze ohne festen Anlass halten im Schnitt drei Wochen.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "abschrecken",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "schreckt ab",
+        "praeteritum": "schreckte ab",
+        "perfekt": "hat abgeschreckt"
+      },
+      "bedeutung_de": "jemanden von etwas fernhalten, weil es zu schwer wirkt",
+      "bedeutung_en": "to put off, to deter",
+      "beispiel": "weil die Zehntausend viele abschreckt",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "aufrechnen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "rechnet auf",
+        "praeteritum": "rechnete auf",
+        "perfekt": "hat aufgerechnet"
+      },
+      "bedeutung_de": "das eine gegen das andere verrechnen",
+      "bedeutung_en": "to offset one thing against another",
+      "beispiel": "Man kann eine Stunde Training nicht gegen neun Stunden Sitzen aufrechnen.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Faustregel",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Faustregeln",
+      "bedeutung_de": "eine einfache Regel, die meistens zutrifft",
+      "bedeutung_en": "rule of thumb",
+      "beispiel": "Eine gute Faustregel ist der Sprechtest",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Zuschuss",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Zuschüsse",
+      "bedeutung_de": "Geld, das jemand beisteuert, damit etwas möglich ist",
+      "bedeutung_en": "subsidy, contribution",
+      "beispiel": "rund vierhundertsechzigtausend Euro Zuschuss",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "der Posten",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Posten",
+      "bedeutung_de": "eine einzelne Position in einer Rechnung",
+      "bedeutung_en": "item, line in a budget",
+      "beispiel": "der größte einzelne Posten in unserem Freizeitbereich",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "sanieren",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "saniert",
+        "praeteritum": "sanierte",
+        "perfekt": "hat saniert"
+      },
+      "bedeutung_de": "gründlich instand setzen",
+      "bedeutung_en": "to refurbish, to renovate",
+      "beispiel": "Damit lässt sich kein Becken sanieren.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Fixkosten",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Fixkosten",
+      "bedeutung_de": "Kosten, die unabhängig von der Nutzung anfallen",
+      "bedeutung_en": "fixed costs",
+      "beispiel": "Die Fixkosten laufen aber ab dem ersten Öffnungstag.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2+"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "an einem Strang ziehen",
+      "typ": "redewendung",
+      "bedeutung_de": "gemeinsam auf dasselbe Ziel hinarbeiten",
+      "bedeutung_en": "to pull in the same direction",
+      "beispiel": "Ärzte, Turnvereine und Versicherungen zogen an einem Strang",
+      "fundstelle": "Lesen Teil 2"
+    },
+    {
+      "wendung": "kein Beinbruch sein",
+      "typ": "redewendung",
+      "bedeutung_de": "nicht weiter schlimm sein",
+      "bedeutung_en": "to be no great disaster",
+      "beispiel": "Das ist für den Alltag kein Beinbruch",
+      "fundstelle": "Lesen Teil 1"
+    },
+    {
+      "wendung": "jemandem etwas vormachen",
+      "typ": "redewendung",
+      "bedeutung_de": "jemanden über etwas täuschen",
+      "bedeutung_en": "to kid someone, to sell someone a story",
+      "beispiel": "Wer etwas anderes verspricht, macht den Leuten etwas vor.",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "ins Schwitzen kommen",
+      "typ": "redewendung",
+      "bedeutung_de": "sich anstrengen müssen; auch: in Bedrängnis geraten",
+      "bedeutung_en": "to break a sweat; also: to be put on the spot",
+      "beispiel": "Muss man ins Schwitzen kommen?",
+      "fundstelle": "Hören Teil 2"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Der Vergleichssatz mit „als“ im Konjunktiv II",
+      "erklaerung_de": "Nach einem Komparativ vergleicht „als“ mit dem, was tatsächlich der Fall ist. Steht dahinter ein Konjunktiv II, vergleicht der Satz dagegen mit einer Erwartung, die sich nicht bestätigt hat: „besser, als ich erwartet hatte“. Diese Form trennt im Hörverstehen die Tatsache von der Annahme.",
+      "erklaerung_en": "„besser als erwartet“ tells you two things at once: what is the case, and what the speaker had assumed. Listening past the Konjunktiv makes the assumption sound like the finding, which is the most common way to mis-hear a research interview.",
+      "belegSatz": "die ersten Zahlen sind besser, als ich erwartet hatte",
+      "fundstelle": "Hören Teil 3",
+      "uebungen": [
+        {
+          "aufgabe": "Was ist der Fall? „Der Kurs war voller, als wir gedacht hatten.“",
+          "loesung": "Er war voll — voller als die Erwartung.",
+          "hinweis": "Der Hauptsatz nennt die Tatsache, der als-Satz die Annahme."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Das Ergebnis fiel schlechter aus, ___ die Fachleute vorhergesagt hatten.",
+          "loesung": "als",
+          "hinweis": "Nach dem Komparativ steht immer „als“."
+        },
+        {
+          "aufgabe": "Wahr oder falsch? „Die Zahlen sind besser als erwartet“ heißt, dass die Zahlen gut sind.",
+          "loesung": "Nicht unbedingt — sie sind nur besser als die Erwartung, die schlecht gewesen sein kann.",
+          "hinweis": "Der Vergleich sagt nichts über das absolute Niveau."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Der zweiteilige Konnektor „nicht … sondern“ über zwei Sätze",
+      "erklaerung_de": "Die beiden Teile müssen nicht im selben Satz stehen. Oft nennt ein Satz, was nicht zutrifft, und der nächste erst das Richtige — verbunden durch „sondern“ oder durch ein aufnehmendes „Es ist …“. Wer nach dem ersten Satz aufhört zu lesen, versteht das Gegenteil.",
+      "erklaerung_en": "The pair often straddles a sentence boundary in written German. That is deliberate: the correction lands with more weight when it gets its own sentence. It is also the single most reliable trap in a B2 reading part.",
+      "belegSatz": "Was schadet, ist nicht der ausgelassene Tag, sondern die Schlussfolgerung daraus.",
+      "fundstelle": "Hören Teil 4",
+      "uebungen": [
+        {
+          "aufgabe": "Verbinden Sie: „Das Problem ist nicht das Geld.“ + „Das Problem ist die Zeit.“",
+          "loesung": "Das Problem ist nicht das Geld, sondern die Zeit.",
+          "hinweis": "Nach einer Verneinung steht „sondern“, nicht „aber“."
+        },
+        {
+          "aufgabe": "Was trifft zu? „Nicht die Menge schreckt ab, sondern die Zahl selbst.“",
+          "loesung": "Die Zahl schreckt ab; die Menge nicht.",
+          "hinweis": "Der zweite Teil trägt die Aussage."
+        },
+        {
+          "aufgabe": "„aber“ oder „sondern“? Der Weg ist weit, ___ er lohnt sich.",
+          "loesung": "aber",
+          "hinweis": "Keine Verneinung davor, also „aber“."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Der Relativsatz mit „was“ und „wer“",
+      "erklaerung_de": "Bezieht sich ein Relativsatz nicht auf ein Nomen, sondern auf einen ganzen Gedanken oder auf eine unbestimmte Person, stehen „was“ und „wer“ statt „der/die/das“. „Was mich stört, ist …“ nennt zuerst die Sache und dann erst ihren Inhalt.",
+      "erklaerung_en": "These build the sentence back-to-front: the relative clause comes first and the main clause delivers the point. Very common in argumentative writing, and worth copying — it puts your emphasis exactly where you want it.",
+      "belegSatz": "Was mich stört, ist etwas anderes",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um: „Mich ärgert vor allem der Ton.“ — mit „was“.",
+          "loesung": "Was mich ärgert, ist vor allem der Ton.",
+          "hinweis": "Der was-Satz steht vorn, das Verb des Hauptsatzes folgt direkt."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: ___ zu spät kommt, findet keinen Platz mehr.",
+          "loesung": "Wer",
+          "hinweis": "Unbestimmte Person, kein Nomen davor."
+        },
+        {
+          "aufgabe": "„was“ oder „das“? Er hat gekündigt, ___ mich sehr überrascht hat.",
+          "loesung": "was",
+          "hinweis": "Bezug auf den ganzen vorangehenden Satz, nicht auf ein Nomen."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Modalverben in der Vergangenheit",
+      "erklaerung_de": "Mit einem zweiten Infinitiv bildet ein Modalverb das Perfekt ohne Partizip: „hat kommen müssen“, nicht „hat gemusst“. Im Nebensatz rutscht das Hilfsverb dabei vor die beiden Infinitive — eine Stellung, die es sonst nirgends gibt.",
+      "erklaerung_en": "The double infinitive. Two things to remember: no ge- participle, and in a subordinate clause the auxiliary jumps in front of both infinitives instead of going last. In speech the simple past (musste, konnte) is usually easier and just as correct.",
+      "belegSatz": "Nüchtern kommen müssen Sie diesmal nicht",
+      "fundstelle": "Hören Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Perfekt bilden: „Ich muss lange warten.“",
+          "loesung": "Ich habe lange warten müssen.",
+          "hinweis": "Kein „gemusst“, wenn ein zweiter Infinitiv dabei ist."
+        },
+        {
+          "aufgabe": "Nebensatz: „…, dass ich lange ___ ___ ___.“ (warten / müssen / haben)",
+          "loesung": "…, dass ich lange habe warten müssen.",
+          "hinweis": "Das Hilfsverb steht vor den beiden Infinitiven."
+        },
+        {
+          "aufgabe": "Ohne zweiten Infinitiv: „Ich muss das nicht.“ im Perfekt.",
+          "loesung": "Ich habe das nicht gemusst.",
+          "hinweis": "Ohne Infinitiv steht die normale Partizipform."
+        }
+      ]
+    }
+  ]
+}

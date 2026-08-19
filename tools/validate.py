@@ -312,6 +312,23 @@ def _beispiel_list(teil: dict[str, Any]) -> list[dict[str, Any]]:
     return [b] if b else []
 
 
+def ohne_platzhalter(wendung: str) -> str:
+    """Strip what a dictionary writes but a running text never says.
+
+    Citation forms carry articles, reflexive pronouns and placeholder objects —
+    "sich etwas abschauen", "jemandem etwas vormachen", "die Gebühr". None of
+    them survive into prose in that order, so both the glossary and the idiom
+    list match against the reduced form.
+    """
+    bare = re.sub(
+        r"\b(sich|der|die|das|etwas|etw\.?|jemanden|jemandem|jemand|jdn\.?|jdm\.?)\b",
+        " ",
+        wendung,
+        flags=re.IGNORECASE,
+    )
+    return re.sub(r"\s+", " ", bare).strip()
+
+
 def lemma_variants(entry: dict[str, Any]) -> list[str]:
     """Surface forms that should count as an occurrence of this lemma.
 
@@ -322,16 +339,7 @@ def lemma_variants(entry: dict[str, Any]) -> list[str]:
     lemma = entry["lemma"]
     out = {lemma}
 
-    # Reduce the dictionary citation form to something that can actually appear
-    # in running text: drop the article, the reflexive pronoun, and placeholder
-    # objects. "sich etwas abschauen" -> "abschauen"; "die Gebühr" -> "Gebühr".
-    bare = re.sub(
-        r"\b(sich|der|die|das|etwas|etw\.?|jemanden|jemandem|jemand|jdn\.?|jdm\.?)\b",
-        " ",
-        lemma,
-        flags=re.IGNORECASE,
-    )
-    bare = re.sub(r"\s+", " ", bare).strip()
+    bare = ohne_platzhalter(lemma)
     out.add(bare)
 
     if entry["wortart"] == "verb":
@@ -931,9 +939,9 @@ def check_glossar(exam: dict[str, Any], spec: Format, rep: Report) -> None:
 
     for r in exam.get("redewendungen", []):
         wendung = normalise(r["wendung"])
-        ohne_reflexiv = re.sub(r"^sich\s+", "", wendung)
+        knapp = normalise(ohne_platzhalter(r["wendung"]))
         w = f"redewendungen/{r['wendung']}"
-        if wendung not in prose and ohne_reflexiv not in prose:
+        if wendung not in prose and knapp not in prose:
             rep.error(w, "does not occur in this paper")
         check_fundstelle(r["fundstelle"], spec, w, rep)
 

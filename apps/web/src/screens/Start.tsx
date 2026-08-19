@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { STUFEN, STUFEN_REIHE, type Stufe } from '@pruefung/core';
+import { STUFEN, STUFEN_REIHE, kursstufe, type Stufe } from '@pruefung/core';
 import { registryLaden, type RegistryEintrag } from '../lib/content';
 import { alleVersuche, loeschen, type GespeicherterVersuch } from '../lib/db';
 import { Druckbogen } from '../components/Druckbogen';
@@ -210,13 +210,23 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
             >
               <strong>{p.titel}</strong>
               <span className="pruefungskarte__meta">
-                Niveau {p.niveau} · {p.variante}
+                {kursstufe(p.stufe, p.niveau)} · {p.variante}
                 {p.hatAudio && ` · ${Math.round(p.audioDauerSek / 60)} Min. Audio`}
               </span>
               <span className="pruefungskarte__themen">{p.themen.join(' · ')}</span>
             </button>
           ))}
         </div>
+
+        {sichtbar.length > 0 && (
+          <p className="notiz kursstufe">
+            <strong>{stufe}.1</strong> und <strong>{stufe}.2</strong> sind Kursstufen,
+            keine Prüfungsteile: Das Zertifikat {stufe} ist <em>eine</em> Prüfung aus vier
+            Modulen, die man zusammen oder einzeln ablegen kann. Ein {stufe}.1-Satz ist
+            etwas langsamer gesprochen und stellt die falschen Antworten durchsichtiger,
+            ein {stufe}.2-Satz entspricht dem Prüfungstag.
+          </p>
+        )}
 
         <fieldset className="modulwahl">
           <legend>Welche Module möchten Sie ablegen?</legend>

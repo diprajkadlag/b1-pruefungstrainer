@@ -1,7 +1,7 @@
 name: Release
 
-# Audio and PDFs are not committed — five papers of listening audio is around
-# 200 MB. They are built here and attached to the release instead.
+# Audio and PDFs are not committed — ten papers of listening audio is around
+# 180 MB. They are built here and attached to the release instead.
 on:
   push:
     tags: ['v*']
@@ -98,7 +98,7 @@ jobs:
             - **`audio-<paper>.zip`** — the listening tracks for one paper.
 
             Or just use the hosted app, no download needed:
-            https://diprajkadlag.github.io/b1-pruefungstrainer/
+            https://diprajkadlag.github.io/german-exam-trainer/
 
             ---
             Practice material only — not an official examination, and not

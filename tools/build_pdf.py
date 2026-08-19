@@ -202,6 +202,20 @@ def teilname(teil: dict[str, Any], stufe: str = "B1") -> str:
     return TEIL_NAMEN.get(stufe, {}).get((modul, teil["nummer"]), "")
 
 
+def kursstufe(meta: dict[str, Any]) -> str:
+    """The course stage a paper is pitched at, e.g. "B2.1".
+
+    Language schools split each CEFR level into two teaching stages and
+    learners ask for papers in those terms. The *exam* has no such split: a
+    Zertifikat B2 is one certificate with four modules, sat together or one at
+    a time. So this is a study label; the cover prints it as one.
+
+    Mirrors kursstufe() in packages/core/src/stufen.ts.
+    """
+    erste = meta.get("niveau") == "mittel-leicht"
+    return f"{meta['stufe']}.{1 if erste else 2}"
+
+
 def luecken(value: Any) -> str:
     """Escape a text and turn its [10] gap markers into printed blanks."""
     return GAP.sub(lambda m: f"\\luecke{{{m.group(1)}}}", texpar(value))
@@ -340,6 +354,7 @@ def environment(stufe: str = "B1"):
         teilname=lambda teil: teilname(teil, stufe),
         aufgabenname=aufgabenname, alle_items=alle_items, itemmacro=itemmacro,
         glossarformen=glossarformen, luecken=luecken, bogenspalten=bogenspalten,
+        kursstufe=kursstufe,
     )
     return env
 

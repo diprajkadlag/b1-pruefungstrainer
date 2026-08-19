@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/diprajkadlag/b1-pruefungstrainer/packages/schema/exam.schema.json",
+  "$id": "https://github.com/diprajkadlag/german-exam-trainer/packages/schema/exam.schema.json",
   "title": "Übungsprüfung B1 / B2",
   "description": "Single source of truth for one complete practice examination. Drives the PDF paper, the solution booklet, the listening audio script, the web app and the glossary. Shape is enforced here; the per-level specification (item counts per part, points, repeat counts) is enforced by tools/validate.py, which reads it from one table per level. See docs/EXAM-FORMAT.md.",
   "type": "object",

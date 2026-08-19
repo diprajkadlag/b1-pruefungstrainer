@@ -161,6 +161,29 @@ actually argues the other side.
 - `meta.stufe` matches the folder name: `pruefung-NN` is B1, `b2-pruefung-NN`
   is B2.
 
+## Difficulty bands, and what B2.1 does *not* mean
+
+`meta.niveau` is one of two values and is the only thing that varies between
+papers of the same level:
+
+| `niveau` | `sprechtempoProzent` | Distractors | Shown as |
+|---|---|---|---|
+| `mittel-leicht` | `-8` | more transparent, one clearly off-topic | B1.1 / B2.1 |
+| `mittel` | `0` | all three plausible on a careless reading | B1.2 / B2.2 |
+
+The format does not change: item counts, times, repeat pattern and marking
+maxima are identical either way, and validate.py enforces the same table for
+both.
+
+**B2.1 and B2.2 are course stages, not exam parts.** Language schools teach a
+level in two blocks and name them that way, so learners ask for papers in those
+terms — which is why the app prints the label. The examination has no such
+split. A Goethe-Zertifikat B2 is one certificate made of four modules (Lesen,
+Hören, Schreiben, Sprechen) which, since the 2019 revision, may be sat in one
+sitting or one module at a time; there is no separate "B2.1 examination" to
+enter or pass. Anything downstream that treats a `.1` paper as a different
+format is wrong.
+
 ## Audio
 
 Both levels target ~135 wpm delivered pace and roughly half an hour of audio
@@ -173,5 +196,7 @@ for the module; `sprechtempoProzent` shifts that down for a gentler paper
 The structure above comes from the Goethe-Institut's own published material for
 each level: the online model sets ([B2](https://bfu.goethe.de/b2_mod_2MX6/),
 which lists every part with its item numbers and repeat count), the downloadable
-model sets, and the Durchführungsbestimmungen for the marking maxima. Only the
-format was taken from these — never a text, an item or a script.
+model sets, and the Durchführungsbestimmungen for the marking maxima — which
+are also where the modular structure of the certificate comes from, and with it
+the fact that the level has no examination-side subdivision. Only the format was
+taken from these — never a text, an item or a script.
