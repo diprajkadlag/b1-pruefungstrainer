@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { STUFEN, STUFEN_REIHE, stufeVonId } from './stufen.js';
+import { STUFEN, STUFEN_REIHE, kursstufe, stufeVonId } from './stufen.js';
 import type { Modul } from './scoring.js';
 import type { Stufe } from './types.js';
 
@@ -65,5 +65,27 @@ describe('STUFEN', () => {
     // candidate a quarter of an hour they would not have.
     expect(STUFEN.B1.module.schreiben.minuten).toBe(60);
     expect(STUFEN.B2.module.schreiben.minuten).toBe(75);
+  });
+});
+
+describe('kursstufe', () => {
+  it('maps the gentler band to the first stage of a course', () => {
+    expect(kursstufe('B2', 'mittel-leicht')).toBe('B2.1');
+    expect(kursstufe('B1', 'mittel-leicht')).toBe('B1.1');
+  });
+
+  it('maps full exam pressure to the second', () => {
+    expect(kursstufe('B2', 'mittel')).toBe('B2.2');
+    expect(kursstufe('B1', 'mittel')).toBe('B1.2');
+  });
+
+  it.each(STUFEN_REIHE)('%s names a stage for both bands', (stufe) => {
+    // A course stage is a study label. The certificate itself has no such
+    // split, so nothing downstream may treat B2.1 as a separate exam.
+    const stufen = ['mittel-leicht', 'mittel'].map((n) =>
+      kursstufe(stufe, n as 'mittel' | 'mittel-leicht'),
+    );
+    expect(new Set(stufen).size).toBe(2);
+    expect(stufen).toEqual([`${stufe}.1`, `${stufe}.2`]);
   });
 });

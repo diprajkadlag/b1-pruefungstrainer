@@ -8,6 +8,9 @@
  * Nothing here ever leaves the device. See docs/PRIVACY.md.
  */
 
+// Frozen at the project's first name on purpose. The database belongs to the
+// browser, not to us: renaming it would leave every saved attempt sitting in
+// an orphaned database that nothing ever opens again.
 const DB_NAME = 'b1-pruefungstrainer';
 const DB_VERSION = 1;
 const STORE = 'versuche';

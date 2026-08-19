@@ -12,6 +12,8 @@
 *.tex   text eol=lf
 *.j2    text eol=lf
 *.sh    text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
 
 # Windows launchers must keep CRLF or cmd.exe mis-parses them.
 *.cmd   text eol=crlf

@@ -10,6 +10,7 @@
 import type {
   AudioManifest,
   Lernhilfe,
+  Niveau,
   OeffentlichePruefung,
   Schluesseldaten,
   Stufe,
@@ -20,7 +21,7 @@ export interface RegistryEintrag {
   titel: string;
   stufe: Stufe;
   variante: string;
-  niveau: string;
+  niveau: Niveau;
   contentVersion: string;
   themen: string[];
   hatAudio: boolean;
@@ -51,7 +52,7 @@ export const PDF_BESCHREIBUNG: Record<PdfName, string> = {
 
 /** Where a release download lives, for when the PDFs were not built locally. */
 export const RELEASE_URL =
-  'https://github.com/diprajkadlag/b1-pruefungstrainer/releases/latest';
+  'https://github.com/diprajkadlag/german-exam-trainer/releases/latest';
 
 const BASIS = `${import.meta.env.BASE_URL}content`;
 

@@ -19,7 +19,7 @@ cd /d "%~dp0"
 
 set PORT=8123
 set URL=http://localhost:%PORT%/
-set REPO=https://github.com/diprajkadlag/b1-pruefungstrainer
+set REPO=https://github.com/diprajkadlag/german-exam-trainer
 
 echo.
 echo   GermanExamTrainer  -  Deutsch B1 und B2
@@ -37,7 +37,7 @@ if errorlevel 1 (
   echo   Install the LTS version from https://nodejs.org/ and run this again.
   echo.
   echo   Or skip installing altogether and use the hosted version:
-  echo     https://diprajkadlag.github.io/b1-pruefungstrainer/
+  echo     https://diprajkadlag.github.io/german-exam-trainer/
   echo.
   pause
   exit /b 1
@@ -61,7 +61,7 @@ if not defined PY (
   echo   "Add python.exe to PATH" - then run this file again.
   echo.
   echo   Or use the hosted version, where nothing needs installing:
-  echo     https://diprajkadlag.github.io/b1-pruefungstrainer/
+  echo     https://diprajkadlag.github.io/german-exam-trainer/
   echo.
   pause
   exit /b 1
@@ -136,7 +136,7 @@ where tar  >nul 2>&1 || goto :audio_no_tools
 echo.
 rem  Every paper that ships, at either level. The release names its audio
 rem  archive after the paper id, so this list is the only thing to extend.
-for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03) do (
+for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03 b2-pruefung-04 b2-pruefung-05) do (
   echo   Downloading audio for %%P...
   if not exist "content\exams\%%P\audio" mkdir "content\exams\%%P\audio"
   curl -sSL -o "%TEMP%\pruef-audio-%%P.zip" "%REPO%/releases/latest/download/audio-%%P.zip"

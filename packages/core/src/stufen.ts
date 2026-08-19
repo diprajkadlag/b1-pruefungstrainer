@@ -13,7 +13,7 @@
  */
 
 import type { Modul } from './scoring.js';
-import type { Stufe } from './types.js';
+import type { Niveau, Stufe } from './types.js';
 
 export interface ModulFormat {
   /** Countdown length. Speaking is paced by the recorder, so it has none. */
@@ -61,4 +61,20 @@ export const STUFEN_REIHE: Stufe[] = ['B1', 'B2'];
 /** The level a paper id belongs to. Unprefixed ids are the original B1 papers. */
 export function stufeVonId(examId: string): Stufe {
   return examId.startsWith('b2-') ? 'B2' : 'B1';
+}
+
+/**
+ * The course stage a paper is pitched at, e.g. "B2.1".
+ *
+ * Language schools split each CEFR level into two teaching stages — B2.1 and
+ * B2.2 — and learners ask for papers in those terms. The *exam* has no such
+ * split: a Goethe-Zertifikat B2 is one certificate with four modules, which
+ * since 2019 may be sat together or one at a time. So this is a study label,
+ * not an exam format, and the UI says so where it prints it.
+ *
+ * The first stage maps to the gentler band (`mittel-leicht`: slower speech,
+ * more transparent distractors), the second to full exam pressure.
+ */
+export function kursstufe(stufe: Stufe, niveau: Niveau): string {
+  return `${stufe}.${niveau === 'mittel-leicht' ? 1 : 2}`;
 }

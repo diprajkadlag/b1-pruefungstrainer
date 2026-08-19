@@ -1,5 +1,5 @@
 {
-  "name": "b1-pruefungstrainer",
+  "name": "german-exam-trainer",
   "version": "0.1.0",
   "private": true,
   "description": "Open-source practice examinations for German B1 and B2 certificate exams \u2014 timed mock papers, generated listening audio, auto-grading, speaking recorder.",
@@ -8,7 +8,7 @@
   "author": "Dipraj Kadlag",
   "repository": {
     "type": "git",
-    "url": "https://github.com/diprajkadlag/b1-pruefungstrainer.git"
+    "url": "https://github.com/diprajkadlag/german-exam-trainer.git"
   },
   "engines": {
     "node": ">=20"

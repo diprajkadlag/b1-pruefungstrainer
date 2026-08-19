@@ -2,12 +2,12 @@
 
 **Free, open-source practice examinations for German B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
 
-[![CI](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/ci.yml)
-[![Content](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/b1-pruefungstrainer/actions/workflows/content-validate.yml)
+[![CI](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml)
+[![Content](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-green.svg)](LICENSE-CONTENT)
 
-**▶ [Try it in your browser](https://diprajkadlag.github.io/b1-pruefungstrainer/)** — nothing to install, works offline after the first visit.
+**▶ [Try it in your browser](https://diprajkadlag.github.io/german-exam-trainer/)** — nothing to install, works offline after the first visit.
 
 > ### ⚠️ Not an official examination
 > This project provides practice material in the **format** of standard German B1 and B2 certificate examinations. It is **not affiliated with, endorsed by, or connected to Goethe-Institut e. V., telc gGmbH or the ÖSD**, and sitting these papers confers no certification. All exam content is original work written for this project. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
@@ -29,7 +29,7 @@
 
 ## What it does
 
-**Sits a real paper, at B1 or B2.** Four modules on the published specification for the level you pick: Lesen 65 min / 30 items, Hören 40 min / 30 items, then Schreiben 60 min / 3 tasks and three speaking parts at B1, or Schreiben 75 min / 2 tasks and a talk plus a debate at B2. 100 points per module, 60 to pass, each module passed on its own.
+**Sits a real paper, at B1 or B2.** Ten complete papers — five at each level — each with its own texts, listening audio, speaking topics and glossary. Four modules on the published specification for the level you pick: Lesen 65 min / 30 items, Hören 40 min / 30 items, then Schreiben 60 min / 3 tasks and three speaking parts at B1, or Schreiben 75 min / 2 tasks and a talk plus a debate at B2. 100 points per module, 60 to pass, each module passed on its own.
 
 **Under exam conditions.** The countdown derives from a wall-clock deadline, so reloading the page does not hand back minutes, and running out hard-submits the module. The listening player gives you one start button and nothing else — no pause, no seek, no second listen. Parts you are entitled to hear twice contain the repeat inside the audio, exactly as in the hall.
 
@@ -49,7 +49,7 @@
 
 ### For learners — nothing to install
 
-Open **[the hosted app](https://diprajkadlag.github.io/b1-pruefungstrainer/)** and press *Prüfung starten*. Your browser will offer to **install** it; accept, and it lands in your Start menu or home screen and works with no connection.
+Open **[the hosted app](https://diprajkadlag.github.io/german-exam-trainer/)** and press *Prüfung starten*. Your browser will offer to **install** it; accept, and it lands in your Start menu or home screen and works with no connection.
 
 Nothing you do is uploaded anywhere. See [docs/PRIVACY.md](docs/PRIVACY.md).
 
@@ -58,8 +58,8 @@ Nothing you do is uploaded anywhere. See [docs/PRIVACY.md](docs/PRIVACY.md).
 ### For developers — clone and run
 
 ```bash
-git clone https://github.com/diprajkadlag/b1-pruefungstrainer.git
-cd b1-pruefungstrainer
+git clone https://github.com/diprajkadlag/german-exam-trainer.git
+cd german-exam-trainer
 ```
 
 Then **double-click `Start-Trainer.bat`** (Windows). It checks for Node and
@@ -83,8 +83,8 @@ npm run preview --workspace=@pruefung/web
 ### For teachers — keep submissions on disk
 
 ```bash
-git clone https://github.com/diprajkadlag/b1-pruefungstrainer.git
-cd b1-pruefungstrainer
+git clone https://github.com/diprajkadlag/german-exam-trainer.git
+cd german-exam-trainer
 npm install
 npm run content:export      # prepare the exams for the app
 npm run serve               # http://localhost:8130
@@ -104,7 +104,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 
 | Route | Needs | Good for |
 |---|---|---|
-| [Hosted app](https://diprajkadlag.github.io/b1-pruefungstrainer/) | nothing | most people |
+| [Hosted app](https://diprajkadlag.github.io/german-exam-trainer/) | nothing | most people |
 | `Start-Trainer.cmd` from a [release](../../releases) | nothing | Windows, offline, no terminal |
 | `npm run serve` | Node 20+ | teachers marking work |
 | `docker compose up` | Docker | classrooms |
@@ -113,7 +113,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 
 ## Rebuilding the content
 
-Audio and PDFs are generated, not committed — eight papers of listening audio is well over 300 MB, which does not belong in git. Releases carry them; to build locally:
+Audio and PDFs are generated, not committed — ten papers of listening audio is around 180 MB, which does not belong in git. Releases carry them; to build locally:
 
 ```bash
 pip install -r tools/requirements.txt
@@ -150,6 +150,19 @@ answer sheet; picking a tab switches all of them. Every number above is
 enforced by `tools/validate.py` against
 [docs/EXAM-FORMAT.md](docs/EXAM-FORMAT.md), which records where each one comes
 from.
+
+### B1.1, B1.2, B2.1, B2.2 — course stages, not exam parts
+
+Every paper card carries a label like **B2.1** or **B2.2**. These are the
+stages a language school splits a level into for teaching, and the label says
+which one a paper is pitched at: a `.1` paper is spoken a little slower and
+keeps its wrong answers more transparent, a `.2` paper is full exam pressure.
+
+The examination itself has no such split. A Zertifikat B1 or B2 is **one**
+certificate made of four modules, and since 2019 you may sit them together or
+one at a time — but there is no "B2.1 exam" to pass. Two papers at each level
+are pitched at the first stage and three at the second, which is only a
+difficulty band in `meta.niveau`; the format is identical.
 
 ---
 
@@ -203,7 +216,7 @@ New papers are extremely welcome, and you need to touch no code:
 
 ```bash
 python tools/new_exam.py pruefung-06        # B1, scaffolded with the right item counts
-python tools/new_exam.py b2-pruefung-02    # B2 — the level comes from the id
+python tools/new_exam.py b2-pruefung-06    # B2 — the level comes from the id
 # write the content
 python tools/validate.py pruefung-06 --strict
 ```

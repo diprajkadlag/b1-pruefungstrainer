@@ -1,0 +1,2440 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "b2-pruefung-05",
+    "titel": "Übungsprüfung B2 5 — Reparieren, Lernen und Bezahlen",
+    "stufe": "B2",
+    "variante": "erwachsene",
+    "niveau": "mittel-leicht",
+    "contentVersion": "1.0.0",
+    "sprechtempoProzent": -8,
+    "themen": [
+      "Reparieren und Wegwerfen",
+      "Hausarbeit und Technikgeschichte",
+      "Weiterbildung im Beruf",
+      "Bargeld und Bezahlen",
+      "Wohnen im Wohnheim",
+      "Gedächtnis und Lernen"
+    ],
+    "autor": "GermanExamTrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true
+  },
+  "lesen": {
+    "zeitMinuten": 65,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "zuordnung_person",
+        "anweisung": "Sie lesen in einem Forum, wie vier Menschen über Reparieren statt Wegwerfen denken. Auf welche der vier Personen treffen die Aussagen 1 bis 9 zu? Die Personen können mehrmals gewählt werden.",
+        "richtzeitMinuten": 18,
+        "texte": [
+          {
+            "id": "person_a",
+            "buchstabe": "a",
+            "titel": "Kunigunde Perlbach, Elektrikermeisterin",
+            "inhalt": "Ich repariere seit dreißig Jahren Haushaltsgeräte und höre seit dreißig Jahren denselben Satz: Das lohnt sich nicht mehr. Meistens stimmt er sogar, nur liegt es nicht an mir. Eine Stunde Arbeit kostet bei mir sechzig Euro, und viele Geräte kosten neu hundertzwanzig.\n\nWoran es tatsächlich hakt, sind die Ersatzteile. Für eine Waschmaschine von zweitausendzehn bekomme ich meist noch alles. Bei einem Gerät von vor drei Jahren stehe ich regelmäßig vor der Auskunft, das Teil werde nicht mehr geführt — bei einer Maschine, die technisch tadellos ist bis auf ein Kunststoffteil für vier Euro.\n\nDas ärgert mich mehr als die Kundschaft, die neu kauft. Die entscheidet ja vernünftig. Unvernünftig ist, dass ich ihr nichts anderes anbieten kann."
+          },
+          {
+            "id": "person_b",
+            "buchstabe": "b",
+            "titel": "Dr. Ansgar Wollenweber, Ökonom",
+            "inhalt": "Die Diskussion wird fast immer moralisch geführt, und das halte ich für einen Fehler. Wer neu kauft, handelt nicht gedankenlos, sondern reagiert auf Preise, die genau so gesetzt sind. Reparieren ist teuer, weil Arbeit hier teuer ist; Neuware ist billig, weil Arbeit anderswo billig ist.\n\nWollte man das ändern, müsste man an den Preisen ansetzen, nicht an der Einstellung. Ein niedrigerer Steuersatz auf Reparaturleistungen ist in mehreren Ländern erprobt, und die Wirkung ist bescheiden, aber messbar.\n\nEines sollte man dabei allerdings nicht verschweigen: Auch die längere Nutzung hat Grenzen. Ein zwanzig Jahre alter Kühlschrank verbraucht so viel Strom, dass ein neuer ökologisch die bessere Wahl ist. Pauschale Regeln taugen hier nichts."
+          },
+          {
+            "id": "person_c",
+            "buchstabe": "c",
+            "titel": "Mareike Lohsträter, Repair-Café",
+            "inhalt": "Bei uns kommen samstags zwischen dreißig und fünfzig Leute vorbei, und wir bekommen ungefähr die Hälfte der Geräte wieder zum Laufen. Was mich nach vier Jahren immer noch überrascht: Die meisten kommen gar nicht wegen des Geldes.\n\nSie kommen mit Dingen, die kaputt sind und an denen etwas hängt — die Lampe der Großmutter, das erste eigene Radio. Und sie bleiben oft zwei Stunden, obwohl die Reparatur zwanzig Minuten dauert.\n\nWas mir Sorgen macht, ist unser Nachwuchs. Unsere Reparierenden sind im Schnitt über sechzig. Sie haben ihr Wissen in Berufen erworben, die es so nicht mehr gibt. Wenn wir in zehn Jahren niemanden nachgezogen haben, nützt uns das beste Recht auf Reparatur nichts."
+          },
+          {
+            "id": "person_d",
+            "buchstabe": "d",
+            "titel": "Ferdi Osterloh, Student",
+            "inhalt": "Ich habe mein Handy letztes Jahr selbst repariert, mit einer Anleitung aus dem Netz und einem Werkzeugsatz für neun Euro. Der Akku hat achtzehn gekostet, ein neues Gerät hätte sechshundert gekostet. Gedauert hat es vierzig Minuten und ich habe zweimal geflucht.\n\nWas mich daran am meisten geärgert hat, war nicht die Technik, sondern der Klebstoff. Man merkt beim Öffnen genau, dass niemand wollte, dass ich da hineinschaue. Das ist eine Entscheidung, die jemand am Reißbrett getroffen hat.\n\nSeitdem schaue ich vor jedem Kauf nach, wie leicht sich ein Gerät öffnen lässt. Das ist mir inzwischen wichtiger als die Bildschirmgröße, und ich bin damit unter meinen Freunden ziemlich allein."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_person",
+          "frage": "Diese Person repariert beruflich Geräte.",
+          "optionen": {
+            "a": "Kunigunde Perlbach",
+            "b": "Ansgar Wollenweber",
+            "c": "Mareike Lohsträter",
+            "d": "Ferdi Osterloh"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Kunigunde Perlbach ist Elektrikermeisterin und repariert seit dreißig Jahren Haushaltsgeräte.",
+            "en": "Worked example. c also repairs things, but in a volunteer café rather than for a living."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt fehlende Ersatzteile als eigentliches Hindernis.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "a",
+            "beleg": "Woran es tatsächlich hakt, sind die Ersatzteile.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie belegt es mit dem Kunststoffteil für vier Euro, das nicht mehr geführt wird.",
+              "en": "She names the labour cost first and then sets it aside — „tatsächlich“ marks the real obstacle."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält es für falsch, die Frage moralisch zu stellen.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "b",
+            "beleg": "Die Diskussion wird fast immer moralisch geführt, und das halte ich für einen Fehler.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er begründet es damit, dass Käufer auf Preise reagieren, nicht gedankenlos handeln.",
+              "en": "a says something similar about her customers, but as an observation from the counter, not as a criticism of the debate."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat ein Gerät mit einer Anleitung aus dem Internet repariert.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "d",
+            "beleg": "Ich habe mein Handy letztes Jahr selbst repariert, mit einer Anleitung aus dem Netz und einem Werkzeugsatz für neun Euro.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er nennt sogar die Dauer und die Kosten für Werkzeug und Akku.",
+              "en": "Only d repairs something himself as a private person; the others repair professionally or organise a café."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sorgt sich darum, wer künftig reparieren soll.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "c",
+            "beleg": "Was mir Sorgen macht, ist unser Nachwuchs. Unsere Reparierenden sind im Schnitt über sechzig.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie zieht daraus die Folgerung, dass das beste Recht auf Reparatur ohne Menschen nichts nützt.",
+              "en": "a is a professional who could train people, but she worries about parts, not about successors."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person sagt, dass ein sehr altes Gerät nicht immer die bessere Wahl ist.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "b",
+            "beleg": "Ein zwanzig Jahre alter Kühlschrank verbraucht so viel Strom, dass ein neuer ökologisch die bessere Wahl ist.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er leitet den Absatz ausdrücklich damit ein, dass man das nicht verschweigen sollte.",
+              "en": "He is arguing for repair overall — this is the qualification he insists on adding, not a change of side."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person beobachtet, dass es den Leuten selten ums Geld geht.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "c",
+            "beleg": "Die meisten kommen gar nicht wegen des Geldes.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Absatz nennt den tatsächlichen Grund: Dinge, an denen etwas hängt.",
+              "en": "b argues the exact opposite about buyers in general, which is what the pair of posts is built on."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person achtet beim Kauf darauf, ob sich ein Gerät öffnen lässt.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "d",
+            "beleg": "Seitdem schaue ich vor jedem Kauf nach, wie leicht sich ein Gerät öffnen lässt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er sagt selbst, dass ihm das inzwischen wichtiger ist als die Bildschirmgröße.",
+              "en": "„Seitdem“ ties it back to the glue — the repair changed how he shops."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person schlägt eine Änderung bei den Steuern vor.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "b",
+            "beleg": "Ein niedrigerer Steuersatz auf Reparaturleistungen ist in mehreren Ländern erprobt, und die Wirkung ist bescheiden, aber messbar.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er nennt die Wirkung ausdrücklich bescheiden und trotzdem messbar — keine Übertreibung.",
+              "en": "He is the only one proposing a policy; the others describe what they do or see."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person ärgert sich über eine Entscheidung der Hersteller, nicht über die Kundschaft.",
+            "optionen": {
+              "a": "Kunigunde Perlbach",
+              "b": "Ansgar Wollenweber",
+              "c": "Mareike Lohsträter",
+              "d": "Ferdi Osterloh"
+            },
+            "loesung": "a",
+            "beleg": "Das ärgert mich mehr als die Kundschaft, die neu kauft. Die entscheidet ja vernünftig.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie stellt beides ausdrücklich gegeneinander und nennt das Kaufverhalten vernünftig.",
+              "en": "d is also annoyed at a manufacturer's decision — the glue — but he never contrasts it with customers."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "satz_einfuegen",
+        "anweisung": "Sie lesen in einer Zeitschrift einen Artikel über die Geschichte der Waschmaschine. Welche der Sätze a bis h passen in die Lücken 10 bis 15? Ein Satz steht bereits als Beispiel im Text, ein weiterer Satz passt in keine Lücke.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Der Montag, den es nicht mehr gibt",
+            "quelle": "Sallberger Blätter für Kulturgeschichte",
+            "inhalt": "Fragt man ältere Menschen, woran sie die Woche ihrer Kindheit erinnern, kommt erstaunlich oft der Montag. Montag war Waschtag, und das war kein Ausdruck, sondern eine Tatsache: Ein ganzer Tag, manchmal zwei, gingen für eine einzige Aufgabe drauf.\n\nDie Zahlen dazu sind heute schwer zu glauben. [10] Kochen, Einweichen, Schrubben, Spülen, Wringen, Aufhängen — Untersuchungen aus den zwanziger Jahren kommen für einen Haushalt auf bis zu zwanzig Stunden pro Woche allein für die Wäsche.\n\nDie ersten Maschinen änderten daran weniger, als man denkt. [11] Sie mussten von Hand gefüllt, beheizt und entleert werden, und wer sie bediente, stand trotzdem den halben Tag daneben.\n\nDer eigentliche Sprung kam später und hatte zwei Voraussetzungen. [12] Ohne Strom in jeder Wohnung und ohne Wasseranschluss im Haus blieb die Maschine ein Gerät für wenige.\n\nWas dann geschah, ist gut dokumentiert und wird trotzdem selten erzählt. [13] Zwischen 1950 und 1970 sank die Zeit für Hausarbeit in westeuropäischen Haushalten um etwa die Hälfte, und zwar fast vollständig zugunsten von Erwerbsarbeit von Frauen.\n\nGanz so einfach ist die Rechnung allerdings nicht. [14] Mit den Maschinen stiegen nämlich die Ansprüche: Was früher zweimal im Monat gewaschen wurde, wurde nun zweimal in der Woche gewaschen, und aus einer Tischdecke für Gäste wurde eine für jeden Tag.\n\nHeute ist die Maschine so selbstverständlich, dass sie erst auffällt, wenn sie stehen bleibt. [15] Wer sie repariert bekommt, gewinnt ein Gerät zurück, das einmal einen ganzen Wochentag abgeschafft hat."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Ein Teil der gewonnenen Zeit ging sofort wieder verloren."
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Waschen war körperlich schwere Arbeit, und sie bestand aus vielen Schritten."
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Vielleicht ist das der beste Grund, sie nicht gleich zu ersetzen."
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Sie nahmen den schwersten Handgriff ab, aber nicht die Aufsicht."
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Beide hatten mit der Maschine selbst nichts zu tun."
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Auch der Kühlschrank setzte sich in dieser Zeit in den Haushalten durch."
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Kaum eine Erfindung hat den Alltag so verändert wie diese."
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Montag war Waschtag, und das war kein Ausdruck, sondern eine Tatsache."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Die erste Lücke im ersten Absatz ist bereits gefüllt.",
+          "loesung": "h",
+          "begruendung": {
+            "de": "Der Satz erklärt, warum ältere Menschen sich ausgerechnet an den Montag erinnern.",
+            "en": "Shown filled in, so letter h is used up and cannot answer 10 to 15."
+          }
+        },
+        "items": [
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 10?",
+            "loesung": "b",
+            "beleg": "Kochen, Einweichen, Schrubben, Spülen, Wringen, Aufhängen — Untersuchungen aus den zwanziger Jahren kommen für einen Haushalt auf bis zu zwanzig Stunden pro Woche allein für die Wäsche.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Aus vielen Schritten“ kündigt genau die Aufzählung an, die unmittelbar folgt.",
+              "en": "The list of six verbs is the evidence, so the gap has to announce that there were many steps."
+            }
+          },
+          {
+            "nr": 11,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 11?",
+            "loesung": "d",
+            "beleg": "Sie mussten von Hand gefüllt, beheizt und entleert werden, und wer sie bediente, stand trotzdem den halben Tag daneben.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Aber nicht die Aufsicht“ wird durch das Danebenstehen im nächsten Satz belegt.",
+              "en": "The paragraph says the first machines changed less than expected; only d says in what way."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 12?",
+            "loesung": "e",
+            "beleg": "Ohne Strom in jeder Wohnung und ohne Wasseranschluss im Haus blieb die Maschine ein Gerät für wenige.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Beide“ verweist auf die zwei angekündigten Voraussetzungen, die der folgende Satz nennt: Strom und Wasser.",
+              "en": "„Beide“ needs two things already announced, and „zwei Voraussetzungen“ is what announces them."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 13?",
+            "loesung": "g",
+            "beleg": "Zwischen 1950 und 1970 sank die Zeit für Hausarbeit in westeuropäischen Haushalten um etwa die Hälfte, und zwar fast vollständig zugunsten von Erwerbsarbeit von Frauen.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz formuliert die Behauptung, die der folgende mit Zahlen belegt.",
+              "en": "The paragraph promises something well documented and rarely told; the gap has to state the claim itself."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 14?",
+            "loesung": "a",
+            "beleg": "Mit den Maschinen stiegen nämlich die Ansprüche: Was früher zweimal im Monat gewaschen wurde, wurde nun zweimal in der Woche gewaschen",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "„Nämlich“ im Folgesatz erklärt, wieso ein Teil der gewonnenen Zeit sofort wieder verloren ging.",
+              "en": "„Ganz so einfach ist die Rechnung nicht“ sets up a qualification, and only a states what was lost again."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welcher Satz passt in Lücke 15?",
+            "loesung": "c",
+            "beleg": "Wer sie repariert bekommt, gewinnt ein Gerät zurück, das einmal einen ganzen Wochentag abgeschafft hat.",
+            "kompetenz": "textstruktur",
+            "begruendung": {
+              "de": "Der Satz stellt die Verbindung zur Reparatur her, die der Schlusssatz ausführt.",
+              "en": "The closing sentence is about getting it repaired, so the gap has to turn from noticing the breakdown to not replacing it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Sie lesen in einer Zeitung einen Artikel über Weiterbildung neben dem Beruf. Wählen Sie bei den Aufgaben 16 bis 21 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 12,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "Abends noch die Schulbank",
+            "quelle": "Weidenbacher Wochenblatt",
+            "inhalt": "Rund jede vierte erwerbstätige Person in Deutschland hat im vergangenen Jahr an einer beruflichen Weiterbildung teilgenommen. Diese Zahl klingt zunächst ordentlich. Sieht man genauer hin, zerfällt sie in zwei sehr ungleiche Hälften.\n\nDenn wer teilnimmt, hat meist ohnehin schon einen Abschluss. Unter Beschäftigten mit Hochschulabschluss liegt der Anteil bei über vierzig Prozent, unter Beschäftigten ohne abgeschlossene Ausbildung bei unter zehn. „Weiterbildung verstärkt bestehende Unterschiede, statt sie auszugleichen“, sagt die Bildungsforscherin Petra Sudmann, die diese Zahlen seit Jahren erhebt.\n\nAls Grund vermuten viele die Kosten. Sudmanns Befragungen zeigen etwas anderes: Genannt werden zuerst die Zeit und, mit deutlichem Abstand dahinter, die Sorge, sich zu blamieren. Wer dreißig Jahre nicht in einem Kursraum gesessen hat, meldet sich nicht leichtfertig zu einem Kurs an, in dem alle anderen jünger sind und schneller mitschreiben.\n\nEinige Betriebe haben darauf reagiert, und zwar mit erstaunlich schlichten Mitteln. Die Sallberger Kunststoffwerke haben ihre Kurse aus dem Abend in die Arbeitszeit verlegt und die Gruppen nach Vorkenntnissen getrennt. Die Teilnahme unter angelernten Beschäftigten stieg innerhalb von zwei Jahren von acht auf einunddreißig Prozent.\n\nÜbertragbar ist das nur bedingt. Ein Betrieb mit vierhundert Beschäftigten kann Kurse selbst anbieten; ein Handwerksbetrieb mit sechs kann das nicht, und für ihn bedeutet jede Freistellung eine spürbare Lücke. Die Handwerkskammer fordert deshalb einen Ausgleich für kleine Betriebe und verweist darauf, dass es genau dort am meisten fehle.\n\nSudmann sieht das ähnlich, warnt aber vor zu viel Hoffnung auf Geld allein: „Wir haben Programme gesehen, die vollständig finanziert waren und trotzdem leer blieben. Wer nicht hingeht, geht meistens nicht wegen des Preises nicht hin.“"
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Was zeigt sich, wenn man die Teilnahmezahl genauer betrachtet?",
+            "optionen": {
+              "a": "Sie ist in Wirklichkeit deutlich höher.",
+              "b": "Sie verteilt sich sehr ungleich auf verschiedene Gruppen.",
+              "c": "Sie ist seit Jahren rückläufig."
+            },
+            "loesung": "b",
+            "beleg": "Sieht man genauer hin, zerfällt sie in zwei sehr ungleiche Hälften.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der nächste Absatz beziffert es: über vierzig Prozent gegen unter zehn.",
+              "en": "The article never gives a trend over time, which is what makes c sound plausible."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "multiple_choice",
+            "frage": "Was sagt Petra Sudmann über die Wirkung von Weiterbildung?",
+            "optionen": {
+              "a": "Sie gleicht Unterschiede zwischen den Gruppen aus.",
+              "b": "Sie hat auf die Unterschiede keinen Einfluss.",
+              "c": "Sie verstärkt bestehende Unterschiede."
+            },
+            "loesung": "c",
+            "beleg": "Weiterbildung verstärkt bestehende Unterschiede, statt sie auszugleichen",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Zitat nennt beides: was geschieht und was man erwarten würde.",
+              "en": "a is in the same sentence — after „statt“, which is what marks it as the thing that does not happen."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "multiple_choice",
+            "frage": "Was nennen die Befragten als wichtigsten Grund für eine Nichtteilnahme?",
+            "optionen": {
+              "a": "Die fehlende Zeit.",
+              "b": "Die Kosten.",
+              "c": "Das fehlende Interesse."
+            },
+            "loesung": "a",
+            "beleg": "Genannt werden zuerst die Zeit und, mit deutlichem Abstand dahinter, die Sorge, sich zu blamieren.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Kosten werden im Satz davor ausdrücklich als bloße Vermutung eingeführt und dann verworfen.",
+              "en": "„Als Grund vermuten viele die Kosten“ is the assumption the next sentence corrects."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "multiple_choice",
+            "frage": "Was haben die Sallberger Kunststoffwerke verändert?",
+            "optionen": {
+              "a": "Sie zahlen den Teilnehmenden eine Prämie.",
+              "b": "Sie schicken alle Beschäftigten verpflichtend in Kurse.",
+              "c": "Sie bieten die Kurse in der Arbeitszeit und nach Vorkenntnissen getrennt an."
+            },
+            "loesung": "c",
+            "beleg": "haben ihre Kurse aus dem Abend in die Arbeitszeit verlegt und die Gruppen nach Vorkenntnissen getrennt",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Beide Maßnahmen antworten genau auf die beiden genannten Gründe: Zeit und Sorge vor Blamage.",
+              "en": "The article calls the measures „erstaunlich schlicht“, which rules out anything as heavy-handed as b."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "multiple_choice",
+            "frage": "Was fordert die Handwerkskammer?",
+            "optionen": {
+              "a": "Einen Ausgleich für kleine Betriebe.",
+              "b": "Eine Pflicht zur Weiterbildung für alle Betriebe.",
+              "c": "Kürzere Kurse für Handwerksberufe."
+            },
+            "loesung": "a",
+            "beleg": "Die Handwerkskammer fordert deshalb einen Ausgleich für kleine Betriebe und verweist darauf, dass es genau dort am meisten fehle.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor erklärt, warum: Für einen Betrieb mit sechs Beschäftigten ist jede Freistellung eine Lücke.",
+              "en": "The demand follows from the gap between a firm of four hundred and one of six."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "multiple_choice",
+            "frage": "Wovor warnt Sudmann am Ende?",
+            "optionen": {
+              "a": "Davor, Kurse in die Arbeitszeit zu legen.",
+              "b": "Davor, sich allein von Geld eine Lösung zu erhoffen.",
+              "c": "Davor, kleine Betriebe zu unterstützen."
+            },
+            "loesung": "b",
+            "beleg": "Wer nicht hingeht, geht meistens nicht wegen des Preises nicht hin.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie stimmt der Forderung zu und schränkt nur die Erwartung an ihre Wirkung ein.",
+              "en": "„Sudmann sieht das ähnlich“ rules out c — she agrees with the chamber and adds a caveat."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_aeusserungen",
+        "anweisung": "Sie lesen in einer Zeitschrift Meinungsäußerungen zum Thema Bargeld oder Karte. Welche Äußerung a bis h passt zu welcher Überschrift 22 bis 27? Eine Äußerung dient als Beispiel, eine weitere passt zu keiner Überschrift.",
+        "richtzeitMinuten": 12,
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "titel": "Sigrun Delfs",
+            "inhalt": "Ich zahle seit vier Jahren fast alles mit Karte und wollte das eigentlich nicht. Angefangen hat es damit, dass ich im Ausland war und es dort nicht anders ging. Zurück in Deutschland habe ich gemerkt, dass ich die Umstellung gar nicht rückgängig machen möchte — obwohl ich vorher ziemlich laut gegen das bargeldlose Bezahlen gewettert hatte."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Hussein Kassab",
+            "inhalt": "In meinem Imbiss kostet mich jede Kartenzahlung eine Gebühr, und bei einem Kaffee für zwei Euro fünfzig ist das spürbar. Ich biete Karte trotzdem an, weil ich sonst Gäste verliere. Ich sage aber jedem, der es hören will: Wer bar zahlt, will dem kleinen Laden einen Gefallen tun, und dem Konzern ist es egal."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Prof. Ilona Wrasmann",
+            "inhalt": "In unseren Versuchen geben dieselben Menschen mit Karte durchschnittlich zwischen zehn und zwanzig Prozent mehr aus als mit Bargeld — bei gleichem Einkommen und gleichem Einkaufszettel. Der Grund ist vermutlich, dass das Weggeben von Scheinen körperlich spürbar ist und das Auflegen einer Karte nicht."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Reinhold Achterberg",
+            "inhalt": "Meine Mutter ist siebenundachtzig und kommt mit dem Kartenlesegerät nicht zurecht. Sie hat es zweimal versucht, sich beide Male vor einer Schlange geschämt und benutzt seitdem nur noch Bargeld. Wenn der Bäcker im Ort irgendwann keins mehr nimmt, kauft sie dort nicht mehr ein. So einfach ist das, und so wenig kommt es in dieser Debatte vor."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Yannic Störmer",
+            "inhalt": "Mich stört an dieser Diskussion die Übertreibung auf beiden Seiten. Die einen tun so, als stünde die Überwachung vor der Tür, die anderen, als sei ein Geldschein ein Zeichen von Rückständigkeit. Tatsächlich benutzen die meisten Menschen längst beides, je nach Betrag und Situation, und kommen damit gut zurecht."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Dr. Beate Kienzler",
+            "inhalt": "Was in einer solchen Debatte leicht zu kurz kommen kann, ist die Frage nach dem Ausfall. Ein Kartensystem hängt an Strom und Netz. Als bei uns im Winter für neun Stunden der Strom weg war, konnte in der ganzen Innenstadt niemand mehr etwas kaufen — außer in zwei Läden, die Bargeld nahmen und Wechselgeld in der Schublade hatten."
+          },
+          {
+            "buchstabe": "g",
+            "titel": "Malte Grönebaum",
+            "inhalt": "Für mich ist es eine reine Frage der Übersicht. Seit ich alles mit Karte zahle, sehe ich am Monatsende, wohin das Geld geht — vorher war das Bargeld einfach weg und ich wusste nicht, wofür. Dass ich dabei angeblich mehr ausgebe, glaube ich nicht; bei mir ist es seitdem eher weniger geworden."
+          },
+          {
+            "buchstabe": "h",
+            "titel": "Tanja Ruppersberg",
+            "inhalt": "Ich arbeite in der Schuldnerberatung, und ich sehe die andere Seite. Wer den Überblick verloren hat, dem empfehlen wir als Erstes, für vier Wochen nur mit Bargeld zu zahlen und sich das Wochenbudget abzuheben. Das klingt altmodisch und wirkt zuverlässiger als jede App, die ich bisher gesehen habe."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "Ich war dagegen und habe mich selbst umgestimmt",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Sigrun Delfs hatte laut gegen das bargeldlose Bezahlen gewettert und möchte die Umstellung heute nicht zurücknehmen.",
+            "en": "Shown as the worked example, so letter a is used up and cannot answer 22 to 27."
+          }
+        },
+        "items": [
+          {
+            "nr": 22,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Jede Kartenzahlung kostet meinen Laden Geld",
+            "loesung": "b",
+            "beleg": "In meinem Imbiss kostet mich jede Kartenzahlung eine Gebühr, und bei einem Kaffee für zwei Euro fünfzig ist das spürbar.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Hussein Kassab bietet Karte trotzdem an, weil er sonst Gäste verliert — die Gebühr bleibt sein Punkt.",
+              "en": "He is not refusing cards; the heading is about what they cost him, which is exactly what he says."
+            }
+          },
+          {
+            "nr": 23,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Mit Karte geben dieselben Leute mehr aus",
+            "loesung": "c",
+            "beleg": "geben dieselben Menschen mit Karte durchschnittlich zwischen zehn und zwanzig Prozent mehr aus als mit Bargeld",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Zusatz „bei gleichem Einkommen und gleichem Einkaufszettel“ macht daraus einen belastbaren Vergleich.",
+              "en": "g disputes exactly this finding from his own experience, which is what the pair is built on."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Ältere Menschen fallen dabei hinten herunter",
+            "loesung": "d",
+            "beleg": "Sie hat es zweimal versucht, sich beide Male vor einer Schlange geschämt und benutzt seitdem nur noch Bargeld.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Reinhold Achterberg beklagt ausdrücklich, wie wenig dieser Fall in der Debatte vorkommt.",
+              "en": "The shame in the queue, not the technology, is what settled it — which is the observation the heading names."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Beide Seiten übertreiben",
+            "loesung": "e",
+            "beleg": "Mich stört an dieser Diskussion die Übertreibung auf beiden Seiten.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Er führt beide Übertreibungen aus und stellt fest, dass die meisten längst beides benutzen.",
+              "en": "Only e comments on the debate itself; everyone else takes a position within it."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Ohne Strom geht plötzlich gar nichts mehr",
+            "loesung": "f",
+            "beleg": "Als bei uns im Winter für neun Stunden der Strom weg war, konnte in der ganzen Innenstadt niemand mehr etwas kaufen — außer in zwei Läden, die Bargeld nahmen",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Beate Kienzler nennt das die Frage nach dem Ausfall, die in der Debatte zu kurz komme.",
+              "en": "Her argument is about resilience, not about cost, privacy or age — the only one on that ground."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Bei Geldproblemen raten wir zum Umstieg auf Bargeld",
+            "loesung": "h",
+            "beleg": "dem empfehlen wir als Erstes, für vier Wochen nur mit Bargeld zu zahlen und sich das Wochenbudget abzuheben",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Tanja Ruppersberg spricht aus der Schuldnerberatung und nennt das Verfahren zuverlässiger als jede App.",
+              "en": "g uses cards precisely to keep an overview — h recommends the opposite, for people who have lost it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 5,
+        "typ": "zuordnung_ueberschriften",
+        "anweisung": "Sie ziehen in ein Studentenwohnheim und lesen die Hausordnung. Welche der Überschriften a bis h aus dem Inhaltsverzeichnis passen zu den Paragraphen 28 bis 30? Vier Überschriften passen zu keinem der Paragraphen.",
+        "richtzeitMinuten": 6,
+        "texte": [
+          {
+            "id": "text_5",
+            "titel": "Hausordnung des Studentenwohnheims Weidenbach — Auszug",
+            "inhalt": "§ 1 Geltung\nDiese Hausordnung gilt für alle Bewohnerinnen und Bewohner sowie für deren Gäste. Sie ist Bestandteil des Mietvertrages; mit dem Einzug wird sie anerkannt.\n\n§ 2 [28]\nIn der Zeit von zweiundzwanzig bis sieben Uhr sowie sonntags ganztägig ist Lärm zu vermeiden, der außerhalb des eigenen Zimmers zu hören ist. Musikinstrumente dürfen werktags zwischen zehn und zwanzig Uhr höchstens zwei Stunden gespielt werden. Feiern in den Gemeinschaftsräumen sind bis Mitternacht möglich und drei Tage vorher der Verwaltung anzuzeigen.\n\n§ 3 [29]\nKüche, Bad und Aufenthaltsraum sind nach der Benutzung gereinigt zu hinterlassen. Geschirr ist unverzüglich zu spülen und wegzuräumen; stehen gelassenes Geschirr wird nach achtundvierzig Stunden entfernt. Der Reinigungsplan im Flur ist verbindlich, die Verteilung regelt die Etage selbst.\n\n§ 4 [30]\nBesuch ist willkommen und bis zu drei Nächte im Monat ohne Anmeldung möglich. Wer länger bleibt, ist der Verwaltung zu melden; eine dauerhafte Aufnahme weiterer Personen ist ausgeschlossen. Für das Verhalten der Gäste haftet die einladende Person."
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Geltung"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Ruhezeiten und Musik"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Gemeinschaftsräume und Reinigung"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Besuch und Übernachtungen"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Miete und Kaution"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Fahrräder und Keller"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Kündigung und Auszug"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Internet und Fernsehen"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "§ 1 trägt bereits seine Überschrift.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Der Paragraph sagt, für wen die Ordnung gilt und wodurch sie anerkannt wird.",
+            "en": "Shown filled in, so letter a is used up and cannot answer 28 to 30."
+          }
+        },
+        "items": [
+          {
+            "nr": 28,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 2?",
+            "loesung": "b",
+            "beleg": "In der Zeit von zweiundzwanzig bis sieben Uhr sowie sonntags ganztägig ist Lärm zu vermeiden, der außerhalb des eigenen Zimmers zu hören ist.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Der Paragraph regelt Ruhezeiten und daneben ausdrücklich das Musizieren.",
+              "en": "The last sentence is about parties in the common rooms, which pulls towards c — but it is there as a noise rule."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 3?",
+            "loesung": "c",
+            "beleg": "Küche, Bad und Aufenthaltsraum sind nach der Benutzung gereinigt zu hinterlassen.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Geschirr, Reinigungsplan und Etagenregelung betreffen alle die gemeinsam genutzten Räume.",
+              "en": "Two ideas, one heading: which rooms are shared and in what state they are left."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Welche Überschrift passt zu § 4?",
+            "loesung": "d",
+            "beleg": "Besuch ist willkommen und bis zu drei Nächte im Monat ohne Anmeldung möglich.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Dauer, Meldepflicht und Haftung für Gäste gehören alle zur Frage des Besuchs.",
+              "en": "„haftet“ appears here too, which is the standard hook towards a liability heading that this list does not offer."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 40,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte: Ansagen, Nachrichten und Durchsagen. Zu jedem Text lösen Sie zwei Aufgaben. Sie hören jeden Text einmal.",
+        "wiederholungen": 1,
+        "sprecher": [
+          {
+            "rolle": "Kundendienst",
+            "geschlecht": "f",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Kaufhaussprecher",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage im Kaufhaus"
+          },
+          {
+            "rolle": "Kurssprecherin",
+            "geschlecht": "f",
+            "beschreibung": "Ansage der Volkshochschule"
+          },
+          {
+            "rolle": "Vermieter",
+            "geschlecht": "m",
+            "beschreibung": "Sprachnachricht an den Mieter"
+          },
+          {
+            "rolle": "Bankangestellte",
+            "geschlecht": "f",
+            "beschreibung": "Ansage in der Filiale"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben: Sie entscheiden, ob eine Aussage richtig oder falsch ist, und Sie wählen bei der zweiten Aufgabe die richtige Lösung a, b oder c. Sie hören jeden Text einmal. Lesen Sie jetzt die Aufgaben eins bis zehn.",
+            "pauseDanachSek": 40,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text eins.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Kundendienst",
+            "text": "Guten Tag, Herr Baumhauer, hier ist der Kundendienst von Elektro Rhode, Frau Sanftleben. Es geht um Ihre Spülmaschine. Wir haben das Ersatzteil geprüft: Die Pumpe ist lieferbar und kostet achtundvierzig Euro, dazu kommt eine Stunde Arbeit. Damit liegen wir bei ungefähr hundertzehn Euro. Ein neues Gerät derselben Klasse würde bei uns vierhundertneunzig kosten. Die Reparatur lohnt sich also klar, das wollte ich Ihnen ehrlich sagen. Wenn Sie einverstanden sind, könnten wir am Freitagvormittag kommen. Rufen Sie kurz zurück, dann trage ich Sie ein.",
+            "pauseDanachSek": 15,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text zwei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Kaufhaussprecher",
+            "text": "Sehr geehrte Kundinnen und Kunden, eine Information für Sie. Wegen einer technischen Störung können wir im gesamten Haus derzeit keine Kartenzahlungen annehmen. Die Kassen sind geöffnet, Sie können bar bezahlen; ein Geldautomat befindet sich im Untergeschoss neben dem Aufzug. Wir rechnen damit, dass die Störung im Laufe des Nachmittags behoben ist. Bereits reservierte Waren halten wir selbstverständlich bis morgen für Sie zurück. Wir bitten Sie für die Unannehmlichkeiten um Entschuldigung.",
+            "pauseDanachSek": 15,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text drei.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Kurssprecherin",
+            "text": "Ein Hinweis zum Kurs „Nähen für Anfänger“, der am Dienstag beginnt. Der Kurs ist ausgebucht, es gibt aber eine Warteliste, und in aller Regel wird ein Platz frei. Die Kursleitung bittet darum, keine eigene Maschine mitzubringen — da genügend Geräte zur Verfügung stehen und die Einweisung an diesen erfolgt. Mitzubringen sind lediglich Stoffreste, falls vorhanden. Wer den Kurs bereits bezahlt hat und doch nicht teilnehmen kann, meldet sich bitte bis Montagmittag; danach ist eine Erstattung nicht mehr möglich.",
+            "pauseDanachSek": 15,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text vier.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Vermieter",
+            "text": "Guten Abend, Frau Tiedemann, hier ist Bergmeier, Ihr Vermieter. Zwei Dinge. Erstens: Der Schornsteinfeger kommt am Mittwoch zwischen acht und zehn. Sie müssen nicht da sein, ich habe ja einen Schlüssel, aber sagen Sie mir bitte kurz, ob Ihnen das recht ist. Zweitens, und das ist die bessere Nachricht: Die Nebenkostenabrechnung ist fertig, und Sie bekommen etwas zurück, knapp zweihundert Euro. Das überweise ich Ihnen Ende des Monats. Die Abrechnung selbst lege ich Ihnen in den Briefkasten.",
+            "pauseDanachSek": 15,
+            "akustik": "telefon",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text fünf.",
+            "pauseDanachSek": 1.5,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Bankangestellte",
+            "text": "Liebe Kundinnen und Kunden, wir möchten Sie darüber informieren, dass unsere Filiale ab dem ersten des kommenden Monats nur noch vormittags besetzt ist, von neun bis dreizehn Uhr. Der Automatenraum bleibt weiterhin rund um die Uhr zugänglich. Für Beratungsgespräche vereinbaren Sie bitte einen Termin; diese sind auch nachmittags möglich, dann allerdings nach Anmeldung. Die Filiale wird nicht geschlossen — anderslautende Gerüchte sind uns bekannt und treffen nicht zu.",
+            "pauseDanachSek": 15,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Der erste Text ist eine Nachricht auf einer Mailbox.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Die Anruferin nennt Firma und Namen und bittet um Rückruf.",
+            "en": "Worked example, so you can hear how the two questions per text work."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Der Kundendienst rät zur Reparatur.",
+            "loesung": "richtig",
+            "beleg": "Die Reparatur lohnt sich also klar, das wollte ich Ihnen ehrlich sagen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Anruferin rechnet beide Beträge vor und zieht daraus ausdrücklich diesen Schluss.",
+              "en": "The firm sells appliances too, which is what makes the recommendation worth stating explicitly."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was kostet die Reparatur ungefähr?",
+            "optionen": {
+              "a": "Etwa fünfzig Euro.",
+              "b": "Etwa hundertzehn Euro.",
+              "c": "Etwa vierhundertneunzig Euro."
+            },
+            "loesung": "b",
+            "beleg": "Damit liegen wir bei ungefähr hundertzehn Euro.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Achtundvierzig Euro sind nur das Ersatzteil; vierhundertneunzig kostet ein neues Gerät.",
+              "en": "Three numbers, and each of the other two belongs to something else in the same message."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Im Kaufhaus kann heute nur mit Karte bezahlt werden.",
+            "loesung": "falsch",
+            "beleg": "Wegen einer technischen Störung können wir im gesamten Haus derzeit keine Kartenzahlungen annehmen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Es ist genau umgekehrt: Bar geht, Karte nicht.",
+              "en": "The next sentence points people to a cash machine, which settles it beyond doubt."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was gilt für bereits reservierte Waren?",
+            "optionen": {
+              "a": "Sie werden bis morgen zurückgehalten.",
+              "b": "Sie müssen heute abgeholt werden.",
+              "c": "Sie werden nach Hause geliefert."
+            },
+            "loesung": "a",
+            "beleg": "Bereits reservierte Waren halten wir selbstverständlich bis morgen für Sie zurück.",
+            "kompetenz": "selektivverstehen",
+            "begruendung": {
+              "de": "Die Ansage nennt es als Ausgleich für die Störung, die im Laufe des Nachmittags behoben sein soll.",
+              "en": "The fault is expected to be fixed this afternoon, which is what makes b sound reasonable."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Wer teilnehmen möchte, muss eine eigene Nähmaschine mitbringen.",
+            "loesung": "falsch",
+            "beleg": "Die Kursleitung bittet darum, keine eigene Maschine mitzubringen — es stehen genügend Geräte zur Verfügung",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Mitzubringen sind laut Ansage nur Stoffreste, und auch die nur, falls vorhanden.",
+              "en": "The request is the opposite of what you would expect for a sewing course, which is the point of the item."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was gilt für die Erstattung des Kursbeitrags?",
+            "optionen": {
+              "a": "Sie ist nur bis Montagmittag möglich.",
+              "b": "Sie ist bis zum ersten Kurstag möglich.",
+              "c": "Sie ist grundsätzlich ausgeschlossen."
+            },
+            "loesung": "a",
+            "beleg": "meldet sich bitte bis Montagmittag; danach ist eine Erstattung nicht mehr möglich",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Kurs beginnt am Dienstag; die Frist liegt ausdrücklich davor.",
+              "en": "The course starts Tuesday, so „until the first day“ would be a day too late — that is the distinction."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Frau Tiedemann muss am Mittwoch zu Hause sein.",
+            "loesung": "falsch",
+            "beleg": "Sie müssen nicht da sein, ich habe ja einen Schlüssel, aber sagen Sie mir bitte kurz, ob Ihnen das recht ist.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie soll nur Bescheid geben, ob ihr das recht ist — anwesend sein muss sie nicht.",
+              "en": "Something is asked of her, just not her presence, which is what makes the item worth listening past."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was ist die zweite Nachricht des Vermieters?",
+            "optionen": {
+              "a": "Die Miete wird erhöht.",
+              "b": "Sie bekommt Geld zurück.",
+              "c": "Die Wohnung wird renoviert."
+            },
+            "loesung": "b",
+            "beleg": "Die Nebenkostenabrechnung ist fertig, und Sie bekommen etwas zurück, knapp zweihundert Euro.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er kündigt sie selbst als „die bessere Nachricht“ an.",
+              "en": "A Nebenkostenabrechnung usually means paying more, which is exactly why a is offered."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_5",
+            "frage": "Die Filiale wird geschlossen.",
+            "loesung": "falsch",
+            "beleg": "Die Filiale wird nicht geschlossen — anderslautende Gerüchte sind uns bekannt und treffen nicht zu.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Verkürzte Öffnungszeiten sind keine Schließung; die Ansage stellt das im letzten Satz eigens klar.",
+              "en": "The announcement anticipates the rumour and denies it — but only at the very end."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was gilt künftig für Beratungsgespräche?",
+            "optionen": {
+              "a": "Sie sind nur noch vormittags möglich.",
+              "b": "Sie sind auch nachmittags möglich, nach Anmeldung.",
+              "c": "Sie werden nur noch telefonisch geführt."
+            },
+            "loesung": "b",
+            "beleg": "diese sind auch nachmittags möglich, dann allerdings nach Anmeldung",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Vormittagszeiten gelten für die offene Filiale, nicht für vereinbarte Termine.",
+              "en": "The morning hours are stated first and apply to something else — the classic overlap this item tests."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "interview",
+        "anweisung": "Sie hören im Radio ein Interview mit einer Materialforscherin über die Haltbarkeit von Geräten. Wählen Sie bei den Aufgaben 11 bis 16 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Radiosendung „Wissen am Abend“ — Interview mit Dr. Ilva Trostmann, Materialforscherin.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "führt das Interview"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "geschlecht": "f",
+            "beschreibung": "Dr. Ilva Trostmann, untersucht Bauteile und ihre Lebensdauer"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Interview mit einer Materialforscherin. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben elf bis sechzehn.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Trostmann, fast jeder glaubt, dass Geräte absichtlich so gebaut werden, dass sie nach der Garantie kaputtgehen. Stimmt das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "In dieser Form fast nie, und ich sage das nach zwanzig Jahren, in denen ich kaputte Geräte aufschraube. Einen eingebauten Zähler, der ein Gerät abschaltet, habe ich in dieser Zeit zweimal gesehen, beides Einzelfälle.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Was ich dagegen ständig sehe, ist etwas Unspektakuläreres: Ein Gerät für neunundneunzig Euro enthält Bauteile für neunundneunzig Euro. Das billigste Teil bestimmt, wie lange das Ganze hält, und das ist keine Absicht, sondern eine Rechnung.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Also ist der Preis der beste Hinweis auf die Haltbarkeit?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Leider nein, und das ist die unbequemste Erkenntnis unserer Untersuchungen. Zwischen Preis und Lebensdauer gibt es einen Zusammenhang, aber nur im untersten Bereich. Oberhalb von etwa dreihundert Euro verschwindet er fast völlig.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Sehr teure Geräte halten in unseren Tests nicht länger als mittlere. Was sie mitbringen, sind mehr Funktionen und ein schöneres Gehäuse — und manchmal sogar mehr Elektronik, die zusätzlich ausfallen kann.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Woran erkennt man denn ein langlebiges Gerät?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "An etwas, das man vor dem Kauf tatsächlich prüfen kann: ob es Schrauben hat. Ein Gehäuse, das verschraubt und nicht verklebt ist, sagt mir mehr über die Absicht des Herstellers als jede Werbeaussage.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Denn ein verklebtes Gerät ist nicht nur schwer zu öffnen. Es ist ein Gerät, bei dem im Entwurf niemand damit gerechnet hat, dass es jemals wieder geöffnet wird. Das entscheidet sich Jahre vor dem Schaden.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Es gibt inzwischen ein Recht auf Reparatur. Reicht das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Es ist ein wichtiger Anfang, aber es greift an einer Stelle zu spät. Vorgeschrieben wird, dass Ersatzteile verfügbar sein müssen. Nicht vorgeschrieben ist, dass man ohne Spezialwerkzeug an sie herankommt.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Ein Ersatzteil, das man nur mit einem Werkzeug für zweihundert Euro einbauen kann, ist für eine Privatperson kein Ersatzteil. Da müsste man nachbessern, und zwar bei der Konstruktion, nicht beim Lager.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Was raten Sie jemandem, der morgen etwas kaufen muss?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Materialforscherin",
+            "text": "Mittlere Preisklasse, wenige Funktionen, sichtbare Schrauben. Und wenn es geht: die Marke wählen, für die es in der Nähe eine Werkstatt gibt. Das klingt altmodisch, entscheidet aber am Ende darüber, ob ein Schaden repariert wird oder nicht.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Trostmann, vielen Dank für das Gespräch.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Was sagt Frau Trostmann zum absichtlich eingebauten Verschleiß?",
+            "optionen": {
+              "a": "Sie hat ihn in dieser Form fast nie gefunden.",
+              "b": "Er ist in den meisten Geräten nachweisbar.",
+              "c": "Er lässt sich technisch nicht untersuchen."
+            },
+            "loesung": "a",
+            "beleg": "Einen eingebauten Zähler, der ein Gerät abschaltet, habe ich in dieser Zeit zweimal gesehen, beides Einzelfälle.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie hat es zweimal gesehen und nennt beides ausdrücklich Einzelfälle.",
+              "en": "„zweimal“ is not „nie“ — she does not deny it exists, which is the precision the item tests."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Was bestimmt nach ihren Worten die Lebensdauer eines Geräts?",
+            "optionen": {
+              "a": "Die Zahl der Funktionen.",
+              "b": "Das billigste eingebaute Teil.",
+              "c": "Das Alter der Konstruktion."
+            },
+            "loesung": "b",
+            "beleg": "Das billigste Teil bestimmt, wie lange das Ganze hält, und das ist keine Absicht, sondern eine Rechnung.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor macht es anschaulich: Ein Gerät für neunundneunzig Euro enthält Bauteile für neunundneunzig Euro.",
+              "en": "„keine Absicht, sondern eine Rechnung“ is also the answer to the first question, stated a second way."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Wie hängen Preis und Haltbarkeit zusammen?",
+            "optionen": {
+              "a": "Je teurer ein Gerät, desto länger hält es.",
+              "b": "Nur im untersten Preisbereich gibt es einen Zusammenhang.",
+              "c": "Teure Geräte halten regelmäßig kürzer."
+            },
+            "loesung": "b",
+            "beleg": "Zwischen Preis und Lebensdauer gibt es einen Zusammenhang, aber nur im untersten Bereich. Oberhalb von etwa dreihundert Euro verschwindet er fast völlig.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt es die unbequemste Erkenntnis und beziffert die Grenze mit dreihundert Euro.",
+              "en": "She says expensive ones do not last *longer*, not that they last *less* — c overshoots."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Woran erkennt man laut ihr ein langlebiges Gerät?",
+            "optionen": {
+              "a": "An der Länge der Garantie.",
+              "b": "An sichtbaren Schrauben statt Klebstoff.",
+              "c": "An der Herkunft des Herstellers."
+            },
+            "loesung": "b",
+            "beleg": "Ein Gehäuse, das verschraubt und nicht verklebt ist, sagt mir mehr über die Absicht des Herstellers als jede Werbeaussage.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie hebt hervor, dass man genau das vor dem Kauf tatsächlich prüfen kann.",
+              "en": "The point is that it is checkable in the shop, which no claim about warranty or origin is."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Was fehlt ihr am Recht auf Reparatur?",
+            "optionen": {
+              "a": "Dass Ersatzteile überhaupt vorgeschrieben sind.",
+              "b": "Dass man ohne Spezialwerkzeug an die Teile herankommt.",
+              "c": "Dass die Preise für Ersatzteile begrenzt werden."
+            },
+            "loesung": "b",
+            "beleg": "Nicht vorgeschrieben ist, dass man ohne Spezialwerkzeug an sie herankommt.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Sie nennt das Recht einen wichtigen Anfang und sagt genau, an welcher Stelle es zu spät greift.",
+              "en": "The availability of parts is what the law does cover — that is the half she is not complaining about."
+            }
+          },
+          {
+            "nr": 16,
+            "typ": "multiple_choice",
+            "frage": "Was rät sie beim Kauf?",
+            "optionen": {
+              "a": "Das teuerste Gerät der Klasse zu nehmen.",
+              "b": "Möglichst viele Funktionen mitzunehmen.",
+              "c": "Mittlere Preisklasse und eine Werkstatt in der Nähe."
+            },
+            "loesung": "c",
+            "beleg": "Mittlere Preisklasse, wenige Funktionen, sichtbare Schrauben. Und wenn es geht: die Marke wählen, für die es in der Nähe eine Werkstatt gibt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie zählt drei Merkmale auf und nennt die Werkstatt als das, was am Ende entscheidet.",
+              "en": "„wenige Funktionen“ is in the same sentence, which makes b the exact opposite of her advice."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gespraech",
+        "anweisung": "Sie hören im Radio ein Gespräch mit mehreren Personen über Erwachsenenbildung. Wer sagt was? Ordnen Sie die Aussagen 17 bis 22 den Personen zu. Sie hören den Text einmal.",
+        "wiederholungen": 1,
+        "situation": "Radiosendung „Weidenbach diskutiert“ — im Studio: der Volkshochschulleiter Gernot Pflüger und die Betriebsrätin Sabine Kortlang.",
+        "sprecher": [
+          {
+            "rolle": "Moderatorin",
+            "geschlecht": "f",
+            "beschreibung": "moderiert die Sendung"
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "geschlecht": "m",
+            "beschreibung": "Gernot Pflüger, leitet die Volkshochschule"
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "geschlecht": "f",
+            "beschreibung": "Sabine Kortlang, Betriebsrätin in einem Industriebetrieb"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören ein Gespräch mit drei Personen. Ordnen Sie die Aussagen den Personen zu. Sie hören den Text einmal. Lesen Sie jetzt die Aufgaben siebzehn bis zweiundzwanzig.",
+            "pauseDanachSek": 50,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Guten Abend. Ich habe für diese Sendung selbst einen Kurs besucht, einen Abendkurs für Buchführung, drei Wochen lang. Was mich überrascht hat: Ich war mit Abstand die Jüngste, und ich bin einundvierzig.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Pflüger, Frau Kortlang, schön, dass Sie da sind. Herr Pflüger, wer kommt eigentlich zu Ihnen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "text": "Ihre Beobachtung passt leider gut zu unseren Zahlen. Zwei Drittel unserer Teilnehmenden in den beruflichen Kursen sind über fünfundvierzig, und drei Viertel haben bereits einen Abschluss, auf dem sie aufbauen.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "text": "Diejenigen, für die unser Angebot am meisten bringen würde, sitzen bei uns am seltensten im Raum. Daran hat sich in den zwölf Jahren, die ich das Haus leite, wenig geändert, und ich sage offen: Wir haben es nicht gelöst.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Kortlang, in Ihrem Betrieb gibt es Weiterbildung während der Arbeitszeit. Wie läuft das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "text": "Besser, seit wir einen Fehler korrigiert haben. Anfangs haben wir die Kurse angeboten und uns gewundert, dass niemand kam. Dann haben wir gefragt — und die Antwort war fast immer dieselbe: Angst, sich vor den Kollegen zu blamieren.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "text": "Seitdem laufen die Kurse nach Vorkenntnissen getrennt, und niemand erfährt, wer in welcher Gruppe sitzt. Das war der ganze Unterschied. Es hat uns keinen Cent gekostet und die Teilnahme verdreifacht.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Pflüger, ließe sich das übertragen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "text": "Teilweise. Wir trennen schon lange nach Vorkenntnissen. Was wir nicht können, ist das Entscheidende an ihrem Modell: Bei uns muss jemand abends kommen, nach der Arbeit, freiwillig und meist auf eigene Kosten.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "text": "Eine Volkshochschule kann viel, aber sie kann niemandem Arbeitszeit schenken. Das können nur Betriebe, und deshalb halte ich Frau Kortlangs Weg für den wirksameren.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Kortlang, und wenn ein Betrieb sagt, dafür fehlt die Zeit?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "text": "Dann stimmt das oft sogar. Bei uns arbeiten achthundert Leute; wenn zwölf in einem Kurs sitzen, merkt das niemand. In einem Betrieb mit acht Beschäftigten ist einer davon fünfzehn Prozent der Belegschaft.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "text": "Ich finde es unehrlich, so zu tun, als wäre das eine Frage des guten Willens. Kleine Betriebe brauchen dafür einen Ausgleich, sonst bleibt es bei den großen.",
+            "pauseDanachSek": 0.6,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Ein Schlusssatz von jedem. Herr Pflüger?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Volkshochschulleiter",
+            "text": "Wir sollten aufhören, immer neue Programme aufzulegen, und stattdessen die bestehenden endlich dorthin bringen, wo die Leute ohnehin sind — in den Betrieb, in die Kita, in die Bibliothek.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Kortlang, Ihr Schlusssatz?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Betriebsraetin",
+            "text": "Ich würde jedem Betrieb raten, nicht mit dem Programm anzufangen, sondern mit einer einzigen Frage: Was hält Sie eigentlich davon ab? Wir haben das gemacht, und die Antworten hatten mit unserem Angebot wenig zu tun. Der Umbau danach hat uns kaum etwas gekostet, ein paar Stunden Planung und ein neuer Aushang. Wer stattdessen zuerst einen Katalog druckt, gibt viel Geld dafür aus, an den Leuten vorbeizureden, und wundert sich am Ende über die leeren Stühle.",
+            "pauseDanachSek": 0.4,
+            "akustik": "radio",
+            "betont": true
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Herr Pflüger, Frau Kortlang, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 17,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hat für die Sendung selbst einen Kurs besucht.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "a",
+            "beleg": "Ich habe für diese Sendung selbst einen Kurs besucht, einen Abendkurs für Buchführung, drei Wochen lang.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Moderatorin berichtet aus eigener Anschauung; die Gäste sprechen aus ihren Einrichtungen.",
+              "en": "Both guests run courses — only she attended one."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person räumt ein, ein Problem seit Jahren nicht gelöst zu haben.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "b",
+            "beleg": "Daran hat sich in den zwölf Jahren, die ich das Haus leite, wenig geändert, und ich sage offen: Wir haben es nicht gelöst.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er bezieht es darauf, dass gerade die Zielgruppe am seltensten im Raum sitzt.",
+              "en": "c also reports a mistake, but one she corrected — he reports one that stands."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person nennt die Angst vor Blamage als Hauptgrund.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "c",
+            "beleg": "die Antwort war fast immer dieselbe: Angst, sich vor den Kollegen zu blamieren",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie hat danach gefragt, nachdem die angebotenen Kurse leer geblieben waren.",
+              "en": "The finding comes from her own survey in her own plant, not from his statistics."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person hält den Weg der anderen Seite für den wirksameren.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "b",
+            "beleg": "deshalb halte ich Frau Kortlangs Weg für den wirksameren",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er begründet es damit, dass eine Volkshochschule niemandem Arbeitszeit schenken kann.",
+              "en": "He gives away the point to the other guest, which is unusual enough to be worth attributing carefully."
+            }
+          },
+          {
+            "nr": 21,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person rechnet vor, was eine Freistellung einen kleinen Betrieb kostet.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "c",
+            "beleg": "In einem Betrieb mit acht Beschäftigten ist einer davon fünfzehn Prozent der Belegschaft.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie stellt es ihrem eigenen Betrieb mit achthundert Beschäftigten gegenüber.",
+              "en": "She works in the large plant and argues for the small ones, which is the turn the item tests."
+            }
+          },
+          {
+            "nr": 22,
+            "typ": "zuordnung_person",
+            "frage": "Diese Person will bestehende Angebote dorthin bringen, wo die Menschen ohnehin sind.",
+            "optionen": {
+              "a": "die Moderatorin",
+              "b": "der Volkshochschulleiter",
+              "c": "die Betriebsrätin"
+            },
+            "loesung": "b",
+            "beleg": "stattdessen die bestehenden endlich dorthin bringen, wo die Leute ohnehin sind — in den Betrieb, in die Kita, in die Bibliothek",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sein Schlusssatz wendet sich ausdrücklich gegen immer neue Programme.",
+              "en": "„aufhören, immer neue Programme aufzulegen“ is the half that makes it his and not hers."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "vortrag",
+        "anweisung": "Sie hören einen kurzen Vortrag über das Vergessen. Wählen Sie bei den Aufgaben 23 bis 30 die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+        "wiederholungen": 2,
+        "situation": "Vortragsreihe der Volkshochschule Weidenbach: „Warum wir vergessen“ — Dr. Constanze Rehbein.",
+        "sprecher": [
+          {
+            "rolle": "Vortragende",
+            "geschlecht": "f",
+            "beschreibung": "Dr. Constanze Rehbein, Gedächtnisforscherin"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören einen kurzen Vortrag. Sie hören den Text zweimal. Lesen Sie jetzt die Aufgaben dreiundzwanzig bis dreißig.",
+            "pauseDanachSek": 60,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Guten Abend. Ich beginne mit einer Behauptung, die den meisten zunächst falsch vorkommt: Vergessen ist keine Schwäche des Gedächtnisses. Es ist eine seiner Leistungen.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Es gibt sehr wenige dokumentierte Fälle von Menschen, die kaum etwas vergessen. Was man aus ihren Berichten lernt, ist ernüchternd: Sie leiden darunter. Wer jede Kränkung von vor zwanzig Jahren so frisch vor sich hat wie die von gestern, kommt schwer zur Ruhe.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Für das Lernen ist die entscheidende Beobachtung eine andere, und sie ist über hundert Jahre alt. Das Vergessen verläuft nicht gleichmäßig. Der größte Teil dessen, was Sie heute Abend hören, ist innerhalb der ersten vierundzwanzig Stunden weg — danach flacht die Kurve stark ab.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Daraus folgt etwas sehr Praktisches. Die erste Wiederholung ist die wertvollste, und sie muss früh kommen. Zehn Minuten am nächsten Morgen bringen mehr als eine Stunde in der Woche darauf.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Wie man wiederholt, ist dabei wichtiger als wie lange. Der verbreitetste Fehler beim Lernen ist das erneute Lesen. Es fühlt sich gut an, weil der Text vertraut wirkt, und genau diese Vertrautheit verwechseln wir mit Können.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Wirksam ist stattdessen das Gegenteil: das Buch zuzuklappen und zu versuchen, den Inhalt aus dem Kopf wiederzugeben. Das ist unangenehm, weil man merkt, was fehlt — und dieses Merken ist der eigentliche Lernvorgang.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Ein zweiter Punkt betrifft den Ort und die Zeit. Viele raten, immer am selben Schreibtisch zu lernen. Unsere Versuche zeigen das Gegenteil: Wer an wechselnden Orten lernt, erinnert sich später besser, weil die Erinnerung nicht an eine einzige Umgebung gebunden ist.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Und ein dritter, der oft übersehen wird: der Schlaf. Wer nach dem Lernen schläft, behält deutlich mehr als jemand, der dieselbe Zeit wach verbringt. Das gilt auch für einen Mittagsschlaf von zwanzig Minuten.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Zum Schluss noch eine Warnung vor einer verbreiteten Selbsttäuschung. In Befragungen halten sich fast alle für schlechter im Namenmerken als der Durchschnitt. Das kann statistisch nicht sein.",
+            "pauseDanachSek": 0.8,
+            "akustik": "raum",
+            "betont": true
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Die Erklärung ist einfach: Wir bemerken jeden Namen, den wir vergessen haben, und keinen einzigen von denen, die uns eingefallen sind. Unser Urteil über das eigene Gedächtnis beruht auf einer Stichprobe, die nur aus Misserfolgen besteht. Ich danke Ihnen.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Vortragende",
+            "text": "Wenn Sie heute Abend nur einen Satz mitnehmen, dann diesen: Wiederholen Sie früh, wiederholen Sie mit zugeklapptem Buch, und schlafen Sie darüber. Alles andere — der feste Platz, der Textmarker, das Gefühl, es doch gekonnt zu haben — kostet Sie mehr Zeit, als es Ihnen bringt. Vielen Dank für Ihre Aufmerksamkeit.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 23,
+            "typ": "multiple_choice",
+            "frage": "Wie beurteilt die Rednerin das Vergessen?",
+            "optionen": {
+              "a": "Als eine Leistung des Gedächtnisses.",
+              "b": "Als eine Schwäche, die man trainieren kann.",
+              "c": "Als eine Folge von zu wenig Schlaf."
+            },
+            "loesung": "a",
+            "beleg": "Vergessen ist keine Schwäche des Gedächtnisses. Es ist eine seiner Leistungen.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Sie kündigt die Behauptung als etwas an, das den meisten zunächst falsch vorkommt.",
+              "en": "b is named in the same breath in order to be denied."
+            }
+          },
+          {
+            "nr": 24,
+            "typ": "multiple_choice",
+            "frage": "Was zeigen die Berichte von Menschen, die kaum vergessen?",
+            "optionen": {
+              "a": "Sie sind im Beruf besonders erfolgreich.",
+              "b": "Sie leiden darunter.",
+              "c": "Sie merken selbst keinen Unterschied."
+            },
+            "loesung": "b",
+            "beleg": "Was man aus ihren Berichten lernt, ist ernüchternd: Sie leiden darunter.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Satz erklärt es mit der Kränkung von vor zwanzig Jahren, die so frisch bleibt wie die von gestern.",
+              "en": "„ernüchternd“ signals the answer will disappoint the expectation, which rules out a."
+            }
+          },
+          {
+            "nr": 25,
+            "typ": "multiple_choice",
+            "frage": "Wann geht der größte Teil des Gehörten verloren?",
+            "optionen": {
+              "a": "In den ersten vierundzwanzig Stunden.",
+              "b": "Erst nach etwa einer Woche.",
+              "c": "Gleichmäßig über mehrere Monate."
+            },
+            "loesung": "a",
+            "beleg": "ist innerhalb der ersten vierundzwanzig Stunden weg — danach flacht die Kurve stark ab",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt ausdrücklich, das Vergessen verlaufe nicht gleichmäßig, was c ausschließt.",
+              "en": "The flattening curve is the whole shape of the finding, and it is why the first repetition matters."
+            }
+          },
+          {
+            "nr": 26,
+            "typ": "multiple_choice",
+            "frage": "Was folgt daraus für das Wiederholen?",
+            "optionen": {
+              "a": "Es lohnt sich erst nach einer Woche.",
+              "b": "Die erste Wiederholung sollte früh kommen.",
+              "c": "Man sollte möglichst lange am Stück wiederholen."
+            },
+            "loesung": "b",
+            "beleg": "Die erste Wiederholung ist die wertvollste, und sie muss früh kommen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie rechnet es vor: zehn Minuten am nächsten Morgen gegen eine Stunde in der Woche darauf.",
+              "en": "The comparison of ten minutes against an hour is precisely the argument against c."
+            }
+          },
+          {
+            "nr": 27,
+            "typ": "multiple_choice",
+            "frage": "Was hält sie für den verbreitetsten Fehler beim Lernen?",
+            "optionen": {
+              "a": "Das erneute Lesen.",
+              "b": "Zu kurze Pausen.",
+              "c": "Das Lernen am Abend."
+            },
+            "loesung": "a",
+            "beleg": "Der verbreitetste Fehler beim Lernen ist das erneute Lesen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie erklärt auch, warum es sich trotzdem gut anfühlt: Vertrautheit wird mit Können verwechselt.",
+              "en": "The feeling of familiarity is the trap, and she names it in the next sentence."
+            }
+          },
+          {
+            "nr": 28,
+            "typ": "multiple_choice",
+            "frage": "Was empfiehlt sie zum Ort des Lernens?",
+            "optionen": {
+              "a": "Immer am selben Schreibtisch zu lernen.",
+              "b": "An wechselnden Orten zu lernen.",
+              "c": "Möglichst an einem stillen Ort zu lernen."
+            },
+            "loesung": "b",
+            "beleg": "Wer an wechselnden Orten lernt, erinnert sich später besser, weil die Erinnerung nicht an eine einzige Umgebung gebunden ist.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie stellt es ausdrücklich gegen den verbreiteten Rat, immer am selben Schreibtisch zu sitzen.",
+              "en": "a is the common advice she introduces in order to contradict it — „Unsere Versuche zeigen das Gegenteil“."
+            }
+          },
+          {
+            "nr": 29,
+            "typ": "multiple_choice",
+            "frage": "Was sagt sie über den Schlaf?",
+            "optionen": {
+              "a": "Nur eine volle Nacht hilft dem Behalten.",
+              "b": "Auch ein kurzer Mittagsschlaf hilft.",
+              "c": "Schlaf hat auf das Behalten keinen Einfluss."
+            },
+            "loesung": "b",
+            "beleg": "Das gilt auch für einen Mittagsschlaf von zwanzig Minuten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz davor nennt den Vergleich: schlafen gegen dieselbe Zeit wach verbringen.",
+              "en": "The twenty-minute nap is added specifically to rule out a."
+            }
+          },
+          {
+            "nr": 30,
+            "typ": "multiple_choice",
+            "frage": "Warum halten sich fast alle für schlecht im Namenmerken?",
+            "optionen": {
+              "a": "Weil Namen tatsächlich schwerer zu merken sind.",
+              "b": "Weil man nur die vergessenen Namen bemerkt.",
+              "c": "Weil das Gedächtnis dafür früher nachlässt."
+            },
+            "loesung": "b",
+            "beleg": "Wir bemerken jeden Namen, den wir vergessen haben, und keinen einzigen von denen, die uns eingefallen sind.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Sie nennt es eine Stichprobe, die nur aus Misserfolgen besteht — deshalb kann das Urteil statistisch nicht stimmen.",
+              "en": "„Das kann statistisch nicht sein“ rules out a: not everyone can be below average."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 75,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "forumsbeitrag",
+        "situation": "In einem Onlineforum wird darüber diskutiert, ob Hersteller gesetzlich verpflichtet werden sollten, Ersatzteile zehn Jahre lang anzubieten. Sie lesen den folgenden Beitrag und möchten darauf antworten.",
+        "impuls": "Ludmilla_K: Zehn Jahre Ersatzteile klingt gut, kostet aber jemand. Die Hersteller müssten Lager unterhalten, und diese Kosten stehen am Ende auf meinem Kassenbon — bei jedem Gerät, auch bei denen, die ich sowieso nie reparieren lassen würde. Ehrlich gesagt bringe ich einen Toaster für zwanzig Euro nicht in die Werkstatt, egal wie viele Ersatzteile es gibt. Ich fände es sinnvoller, wenn jeder selbst entscheidet, ob er Wegwerfware kauft oder etwas Ordentliches.",
+        "aufgabenstellung": "Schreiben Sie einen Beitrag für dieses Forum. Gehen Sie auf alle vier Leitpunkte ein, ordnen Sie Ihren Text sinnvoll und schreiben Sie mindestens 150 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, was Sie selbst von einer solchen Pflicht halten, und begründen Sie Ihre Meinung.",
+          "Gehen Sie auf ein Argument von Ludmilla_K ein.",
+          "Beschreiben Sie, wie in Ihrem Heimatland mit kaputten Geräten umgegangen wird.",
+          "Machen Sie einen Vorschlag, wie man Reparaturen für alle attraktiver machen könnte."
+        ],
+        "anrede": "Hallo zusammen",
+        "woerter": 150,
+        "zeitMinuten": 50,
+        "punkte": 60,
+        "redemittel": [
+          "Ich lese hier schon eine Weile mit und möchte gern etwas ergänzen.",
+          "Ludmilla_K schreibt, dass … — dieser Einwand ist berechtigt, allerdings …",
+          "Man müsste die Pflicht deshalb nicht für alle Geräte gleich gestalten.",
+          "Bei uns ist das ganz anders: …",
+          "Aus meiner Sicht wäre es wirksamer, zunächst … und erst danach …",
+          "Ich schlage deshalb vor, … Damit ließe sich erreichen, dass …",
+          "Zusammenfassend halte ich beides für nötig: … und …"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo zusammen,\n\nich bin für eine solche Pflicht, aber nicht für alle Geräte gleich.\n\nLudmilla_K schreibt, dass ein Toaster für zwanzig Euro nicht in die Werkstatt kommt. Das stimmt natürlich. Bei einer Waschmaschine für sechshundert Euro sieht es aber ganz anders aus. Man müsste also unterscheiden, statt für alles dieselbe Regel zu machen.\n\nIn meinem Heimatland gibt es viele kleine Werkstätten, auch für sehr alte Geräte. Ersatzteile werden dort oft von Hand angefertigt oder aus anderen Geräten ausgebaut. Das funktioniert erstaunlich gut, ist aber auch nötig, weil neue Geräte für viele Leute teuer sind. Viele Familien behalten ein Gerät deshalb sehr lange, manchmal zwanzig Jahre.\n\nMein Vorschlag wäre, die Pflicht nach dem Preis zu staffeln. Bei teuren Geräten zehn Jahre, bei billigen gar nicht. Außerdem sollte die Reparatur billiger werden, zum Beispiel durch weniger Steuern darauf. Dann könnte sich eine Reparatur auch bei günstigeren Geräten lohnen, und mehr Leute würden sie machen lassen.\n\nViele Grüße\nRavi",
+            "kommentar": "Alle vier Leitpunkte sind bearbeitet, die Position ist differenziert und der Vorschlag greift den Einwand auf. Auf „ausreichend“ hält den Text die Sprache: überwiegend kurze Hauptsätze, wenige Konnektoren („aber“, „also“, „außerdem“), und die Auseinandersetzung bleibt bei „das stimmt natürlich“ stehen."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo zusammen,\n\nLudmilla_K hat mit ihrem Toaster recht — und widerlegt damit trotzdem nicht die Pflicht, sondern nur eine schlecht gemachte Version davon.\n\nRichtig ist: Bei einem Gerät für zwanzig Euro wird niemand eine Werkstatt aufsuchen, und ein Ersatzteillager dafür wäre wirklich verschenktes Geld. Daraus folgt für mich aber nicht, dass man es lassen sollte, sondern dass die Pflicht nach Gerätewert gestaffelt werden müsste. Bei einer Waschmaschine, einem Fahrrad oder einem Handy ändert sich die Rechnung vollständig: Dort scheitern Reparaturen regelmäßig an einem Bauteil für wenige Euro, das nach drei Jahren nicht mehr geführt wird.\n\nIn meinem Heimatland stellt sich die Frage gar nicht erst. Dort gibt es in jeder Straße eine Werkstatt, Ersatzteile werden notfalls aus anderen Geräten ausgebaut, und geworfen wird fast nichts weg. Das liegt allerdings weniger an der Einstellung als daran, dass ein neues Gerät für viele unerschwinglich ist.\n\nDeshalb mein Vorschlag: eine Pflicht erst ab einem bestimmten Neupreis, dafür verbunden mit einer niedrigeren Steuer auf Reparaturleistungen. Das Erste sorgt dafür, dass es das Teil gibt, das Zweite dafür, dass sich der Einbau lohnt. Einzeln bringt keines von beiden viel.\n\nViele Grüße\nRavi",
+            "kommentar": "Deutlich über dem Mindestmaß, ohne zu schwätzen. Der Beitrag trennt sauber zwischen dem, was am Gegenargument stimmt, und dem Schluss, der daraus nicht folgt, und begründet am Ende, warum die beiden Maßnahmen zusammengehören. Sprachlich fallen die Konnektoren „daraus folgt aber nicht“, „dafür“, „allerdings“ sowie mehrere Relativsätze und ein Passiv ins Gewicht."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "nachricht_formell",
+        "situation": "Sie wohnen im Studentenwohnheim Weidenbach und möchten im Gemeinschaftsraum eine Feier zu Ihrem Abschluss veranstalten. Aus der Hausordnung wissen Sie, dass Feiern bis Mitternacht möglich sind und drei Tage vorher angezeigt werden müssen.",
+        "aufgabenstellung": "Schreiben Sie eine Nachricht an die Heimverwaltung, Herrn Sedlmeier. Achten Sie auf eine angemessene Anrede und einen passenden Schluss und schreiben Sie mindestens 100 Wörter.",
+        "leitpunkte": [
+          "Nennen Sie den Grund für Ihr Schreiben.",
+          "Geben Sie an, wann und für wie viele Personen die Feier geplant ist.",
+          "Fragen Sie, ob die Feier ausnahmsweise etwas länger dauern darf.",
+          "Sagen Sie zu, wie Sie für Ordnung und Ruhe sorgen wollen."
+        ],
+        "anrede": "Sehr geehrter Herr Sedlmeier",
+        "woerter": 100,
+        "zeitMinuten": 25,
+        "punkte": 40,
+        "redemittel": [
+          "ich wohne seit … im Haus B und möchte eine Feier im Gemeinschaftsraum anmelden.",
+          "Geplant ist der …, voraussichtlich von … bis … Uhr, mit etwa … Personen.",
+          "Der Hausordnung entnehme ich, dass Feiern bis Mitternacht möglich sind.",
+          "Nun wäre meine Frage, ob ausnahmsweise … möglich wäre.",
+          "Selbstverständlich werde ich dafür sorgen, dass …",
+          "Die Nachbarschaft werde ich vorher informieren.",
+          "Über eine kurze Rückmeldung wäre ich Ihnen dankbar."
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrter Herr Sedlmeier,\n\nich wohne seit zwei Jahren im Haus B, Zimmer 214, und möchte eine Feier anmelden.\n\nIch habe mein Studium abgeschlossen und möchte das am Samstag, dem 12. Juli, im Gemeinschaftsraum feiern. Wir wären ungefähr fünfundzwanzig Personen, von neunzehn Uhr an.\n\nIn der Hausordnung steht, dass Feiern bis Mitternacht erlaubt sind. Meine Frage ist, ob es an diesem Abend ausnahmsweise bis ein Uhr gehen darf. Es ist ein Samstag, und am Sonntag muss niemand früh raus.\n\nIch verspreche Ihnen, dass wir ab Mitternacht die Musik leiser machen und den Raum am Sonntag früh aufräumen. Die Nachbarn sage ich vorher Bescheid.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle vier Punkte kommen vor, und der Bezug auf die Hausordnung zeigt, dass sie gelesen wurde. Auf „ausreichend“ hält den Text die einfache Syntax, die direkte Frage statt einer Konjunktivform — und ein echter Fehler am Schluss: „Die Nachbarn sage ich vorher Bescheid“ braucht den Dativ (den Nachbarn)."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrter Herr Sedlmeier,\n\nseit zwei Jahren wohne ich im Haus B, Zimmer 214, und möchte hiermit eine Feier im Gemeinschaftsraum anmelden.\n\nAnlass ist mein Studienabschluss. Geplant ist Samstag, der 12. Juli, ab neunzehn Uhr, mit voraussichtlich fünfundzwanzig Gästen, von denen etwa die Hälfte im Haus wohnt.\n\nDer Hausordnung entnehme ich, dass Feiern bis Mitternacht möglich sind und drei Tage vorher anzuzeigen sind; diese Frist halte ich mit diesem Schreiben ein. Nun wäre meine Frage, ob ausnahmsweise eine Verlängerung bis ein Uhr möglich wäre. Da es sich um einen Samstag handelt, wäre der Sonntag als Ruhetag davon nicht betroffen.\n\nSelbstverständlich werde ich dafür sorgen, dass die Musik ab Mitternacht deutlich leiser läuft und niemand sich im Innenhof aufhält. Den Raum werde ich am Sonntagvormittag gereinigt übergeben, und die Nachbarschaft informiere ich in dieser Woche persönlich.\n\nÜber eine kurze Rückmeldung wäre ich Ihnen sehr dankbar.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Durchgehend halbformelles Register. Die Bitte steht im Konjunktiv II („wäre möglich“, „wäre ich dankbar“), die eigene Frist wird ausdrücklich mit der Hausordnung abgeglichen, und die Zusagen sind konkret genug, um überprüfbar zu sein. Auffällig sind außerdem die Umstellungen im Vorfeld und der Nebensatz mit „von denen“, der die Gästezahl einordnet."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 15,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "vortrag",
+        "titel": "Einen kurzen Vortrag halten",
+        "anweisung": "Wählen Sie eines der beiden Themen und halten Sie dazu einen Vortrag von etwa vier Minuten. Gliedern Sie ihn in Einleitung, Hauptteil und Schluss. Ihre Gesprächspartnerin stellt Ihnen anschließend Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 50,
+        "fragen": [
+          "Sie haben ein eigenes Beispiel genannt — gilt das auch für Menschen mit wenig Geld?",
+          "Was müsste geschehen, damit sich daran wirklich etwas ändert?",
+          "Wenn es nur eine Maßnahme geben könnte — welche wäre die wichtigste?"
+        ],
+        "themen": [
+          {
+            "titel": "Sollten Geräte gesetzlich länger halten müssen?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Ich möchte heute über die Frage sprechen, ob …",
+              "Zunächst beschreibe ich kurz, wie es damit heute aussieht.",
+              "Ein Beispiel aus meinem eigenen Haushalt ist …",
+              "Für eine gesetzliche Vorgabe spricht vor allem, dass …",
+              "Dagegen wird eingewendet, dass die Preise dadurch steigen.",
+              "Wenn man beide Seiten abwägt, überwiegt für mich …",
+              "Ich komme damit zum Schluss und fasse zusammen: …"
+            ],
+            "musterantwort": "Ich möchte heute über die Frage sprechen, ob Geräte gesetzlich länger halten müssen. Das Thema interessiert mich, weil bei mir im letzten Jahr zwei Geräte ausgefallen sind, beide kurz nach der Garantie, und ich beide Male dieselbe Auskunft bekommen habe.\n\nZur Lage: Bei meinem Staubsauger war ein Zahnrad aus Kunststoff gebrochen. Das Teil kostet nach Auskunft der Werkstatt etwa drei Euro — es wird aber nicht einzeln verkauft, sondern nur zusammen mit dem ganzen Motorblock für hundertvierzig. Neu kostet der Sauger hundertsechzig. Damit ist die Entscheidung gefallen, ohne dass sie jemand bewusst getroffen hätte.\n\nFür eine gesetzliche Vorgabe spricht aus meiner Sicht vor allem, dass die einzelne Kundin an dieser Stelle nichts ausrichten kann. Ich kann nicht erkennen, wie ein Gerät im Inneren gebaut ist, bevor ich es gekauft habe. Dagegen wird eingewendet, dass Vorschriften die Preise erhöhen, und das stimmt vermutlich. Nur zahle ich heute auch — nur eben alle vier Jahre den vollen Preis.\n\nWenn ich abwäge, komme ich zu folgendem Schluss: Eine Vorschrift für die Lebensdauer selbst halte ich für schwierig, weil sie kaum zu prüfen wäre. Sinnvoll wäre eine Vorschrift für die Ersatzteile: einzeln erhältlich, zehn Jahre lang, ohne Spezialwerkzeug einzubauen. Vielen Dank für Ihre Aufmerksamkeit."
+          },
+          {
+            "titel": "Lohnt sich Weiterbildung neben dem Beruf?",
+            "folien": [
+              "Einleitung — Nennen Sie das Thema und sagen Sie kurz, warum es Sie interessiert.",
+              "Hauptteil — Beschreiben Sie die Situation und nennen Sie mindestens ein konkretes Beispiel.",
+              "Hauptteil — Wägen Sie Vor- und Nachteile gegeneinander ab.",
+              "Schluss — Fassen Sie zusammen und begründen Sie Ihre eigene Position."
+            ],
+            "redemittel": [
+              "Mein Thema lautet … Ich habe es gewählt, weil ich selbst davorstehe.",
+              "Man muss dabei zwei Fragen auseinanderhalten: … und …",
+              "Aus eigener Erfahrung kann ich sagen, dass …",
+              "Der größte Vorteil liegt für mich darin, dass …",
+              "Problematisch finde ich allerdings, dass …",
+              "Entscheidend ist meiner Meinung nach nicht ob, sondern wann …",
+              "Abschließend möchte ich festhalten: …"
+            ],
+            "musterantwort": "Mein Thema lautet: Lohnt sich Weiterbildung neben dem Beruf? Ich habe es gewählt, weil ich selbst gerade davorstehe und mich seit Monaten nicht entscheiden kann.\n\nMan muss dabei zwei Fragen auseinanderhalten. Die erste ist, ob sich das Wissen lohnt; die zweite, ob sich der Abschluss lohnt. Das ist nicht dasselbe. Eine Kollegin von mir hat zwei Jahre lang abends studiert, drei Abende pro Woche, und hat danach dieselbe Stelle behalten wie vorher. Gelernt hat sie viel. Verdient hat sie keinen Euro mehr.\n\nDer größte Vorteil liegt für mich trotzdem im Wissen selbst — man arbeitet danach anders, auch ohne neuen Titel. Problematisch finde ich allerdings, was in solchen Rechnungen nie auftaucht: zwei Jahre lang keine freien Abende. Wer Kinder hat oder pflegt, kann diesen Preis nicht zahlen, und für den ist die Frage schon entschieden, bevor sie sich stellt.\n\nAbschließend möchte ich festhalten: Entscheidend ist nicht ob, sondern wann. Neben dem Beruf lohnt sich Weiterbildung dann, wenn der Betrieb Zeit dafür freigibt. Muss man sie vollständig aus der eigenen Freizeit nehmen, ist die Rechnung für die meisten Menschen ehrlicherweise negativ. Vielen Dank."
+          }
+        ],
+        "partnerSkript": [
+          {
+            "text": "Vielen Dank für Ihren Vortrag. Eine Frage dazu: Sie haben ein eigenes Beispiel genannt — gilt das auch für Menschen, die sehr wenig Geld haben?",
+            "wartenSek": 45,
+            "hinweis": "Antworten Sie in zwei bis drei Sätzen und räumen Sie ein, wo Ihre Position nicht trägt."
+          },
+          {
+            "text": "Das leuchtet mir ein. Und was müsste geschehen, damit sich daran wirklich etwas ändert?",
+            "wartenSek": 45,
+            "hinweis": "Nennen Sie eine Bedingung und sagen Sie, wer dafür zuständig wäre."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "diskussion",
+        "titel": "Eine Debatte führen",
+        "anweisung": "Diskutieren Sie mit Ihrer Gesprächspartnerin über die folgende Frage. Tauschen Sie Argumente aus, gehen Sie auf die Gegenseite ein und kommen Sie am Ende zu einem gemeinsamen Fazit.",
+        "dauerMinuten": 5,
+        "punkte": 50,
+        "situation": "Soll Bargeld überall angenommen werden müssen?",
+        "planungspunkte": [
+          "Wer wäre auf Bargeld angewiesen, wer nicht?",
+          "Was bedeutet eine solche Pflicht für kleine Läden?",
+          "Welche Rolle spielen Ausfälle von Strom und Netz?",
+          "Welche Alternative wäre denkbar, wenn es keine Pflicht gibt?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Ich fange einmal an, und ich bin dagegen. Eine Pflicht klingt sozial, trifft aber vor allem kleine Läden: Kasse, Wechselgeld, der Weg zur Bank, das Risiko im Laden — das kostet alles Zeit und Geld. Wer bargeldlos arbeitet, spart sich das.",
+            "wartenSek": 40,
+            "hinweis": "Gehen Sie zuerst auf ihren Punkt ein: Trifft eine Pflicht wirklich vor allem die Kleinen?"
+          },
+          {
+            "text": "Gut, den Einwand verstehe ich. Aber sehen Sie: Wer heute kein Konto oder keine Karte hat, kommt auch ohne Pflicht zurecht — es gibt ja noch genug Läden, die Bargeld nehmen. Das regelt der Markt doch von selbst.",
+            "wartenSek": 40,
+            "hinweis": "Stimmen Sie zu oder widersprechen Sie — und fragen Sie nach, wie lange das noch gilt."
+          },
+          {
+            "text": "Da haben Sie vielleicht recht. Ehrlich gesagt frage ich mich aber, ob wir das Richtige regeln würden. Wenn der Strom ausfällt, hilft mir eine Pflicht auch nicht, wenn niemand mehr Wechselgeld vorrätig hat.",
+            "wartenSek": 40,
+            "hinweis": "Ein starkes Argument. Geben Sie zu, was daran stimmt, und ziehen Sie eine Folgerung daraus."
+          },
+          {
+            "text": "Da sind wir uns näher, als es am Anfang aussah. Wollen wir das zusammenfassen? Sagen Sie doch, worauf wir uns einigen könnten.",
+            "wartenSek": 45,
+            "hinweis": "Fassen Sie beide Positionen zusammen und formulieren Sie ein gemeinsames Fazit."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "das Ersatzteil",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Ersatzteile",
+      "bedeutung_de": "ein Teil, mit dem man ein defektes Teil ersetzt",
+      "bedeutung_en": "spare part",
+      "beispiel": "Woran es tatsächlich hakt, sind die Ersatzteile.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "haken",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "hakt",
+        "praeteritum": "hakte",
+        "perfekt": "hat gehakt"
+      },
+      "bedeutung_de": "nicht weitergehen, an einer Stelle klemmen",
+      "bedeutung_en": "to snag, to be the sticking point",
+      "beispiel": "Woran es tatsächlich hakt",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "tadellos",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne jeden Mangel",
+      "bedeutung_en": "flawless, in perfect order",
+      "beispiel": "bei einer Maschine, die technisch tadellos ist bis auf ein Kunststoffteil für vier Euro",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "gedankenlos",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne nachzudenken",
+      "bedeutung_en": "thoughtless, unthinking",
+      "beispiel": "Wer neu kauft, handelt nicht gedankenlos",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "erprobt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "in der Praxis schon ausprobiert",
+      "bedeutung_en": "tried and tested",
+      "beispiel": "ist in mehreren Ländern erprobt",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "bescheiden",
+      "wortart": "adjektiv",
+      "bedeutung_de": "klein, ohne große Ansprüche",
+      "bedeutung_en": "modest",
+      "beispiel": "die Wirkung ist bescheiden, aber messbar",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "der Nachwuchs",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "—",
+      "bedeutung_de": "die jüngeren Menschen, die nachkommen",
+      "bedeutung_en": "the next generation, new recruits",
+      "beispiel": "Was mir Sorgen macht, ist unser Nachwuchs.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Wäsche",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "die Kleidung, die gewaschen wird oder wurde",
+      "bedeutung_en": "laundry, washing",
+      "beispiel": "zwanzig Stunden pro Woche allein für die Wäsche",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Erwerbsarbeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "bezahlte Arbeit, im Unterschied zur Hausarbeit",
+      "bedeutung_en": "paid employment",
+      "beispiel": "und zwar fast vollständig zugunsten von Erwerbsarbeit von Frauen",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Anspruch",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Ansprüche",
+      "bedeutung_de": "das, was jemand erwartet oder fordert",
+      "bedeutung_en": "expectation, standard; also: entitlement",
+      "beispiel": "Mit den Maschinen stiegen nämlich die Ansprüche",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Voraussetzung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Voraussetzungen",
+      "bedeutung_de": "eine Bedingung, die erfüllt sein muss",
+      "bedeutung_en": "prerequisite",
+      "beispiel": "Der eigentliche Sprung kam später und hatte zwei Voraussetzungen.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Weiterbildung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Weiterbildungen",
+      "bedeutung_de": "Kurse, mit denen man beruflich dazulernt",
+      "bedeutung_en": "further training, continuing education",
+      "beispiel": "hat im vergangenen Jahr an einer beruflichen Weiterbildung teilgenommen",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "ausgleichen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "gleicht aus",
+        "praeteritum": "glich aus",
+        "perfekt": "hat ausgeglichen",
+        "unregelmaessig": true
+      },
+      "bedeutung_de": "einen Unterschied kleiner machen oder aufheben",
+      "bedeutung_en": "to balance out, to compensate for",
+      "beispiel": "Weiterbildung verstärkt bestehende Unterschiede, statt sie auszugleichen",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "sich blamieren",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "blamiert sich",
+        "praeteritum": "blamierte sich",
+        "perfekt": "hat sich blamiert"
+      },
+      "bedeutung_de": "sich vor anderen lächerlich machen",
+      "bedeutung_en": "to embarrass oneself",
+      "beispiel": "die Sorge, sich zu blamieren",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "leichtfertig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "ohne die nötige Überlegung",
+      "bedeutung_en": "casually, without proper thought",
+      "beispiel": "meldet sich nicht leichtfertig zu einem Kurs an",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Freistellung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Freistellungen",
+      "bedeutung_de": "die Befreiung von der Arbeit bei fortlaufender Bezahlung",
+      "bedeutung_en": "release from work, paid leave",
+      "beispiel": "für ihn bedeutet jede Freistellung eine spürbare Lücke",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "angelernt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "im Betrieb eingearbeitet, ohne formale Ausbildung",
+      "bedeutung_en": "semi-skilled, trained on the job",
+      "beispiel": "Die Teilnahme unter angelernten Beschäftigten stieg",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Gebühr",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Gebühren",
+      "bedeutung_de": "ein fester Betrag für eine Leistung",
+      "bedeutung_en": "fee, charge",
+      "beispiel": "kostet mich jede Kartenzahlung eine Gebühr",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1"
+    },
+    {
+      "lemma": "die Übersicht",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Übersichten",
+      "bedeutung_de": "der Überblick über etwas",
+      "bedeutung_en": "overview, a clear picture",
+      "beispiel": "Für mich ist es eine reine Frage der Übersicht.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Rückständigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "der Zustand, hinter der Entwicklung zurückzuliegen",
+      "bedeutung_en": "backwardness",
+      "beispiel": "als sei ein Geldschein ein Zeichen von Rückständigkeit",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "der Ausfall",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "die Ausfälle",
+      "bedeutung_de": "das Nichtfunktionieren einer Technik oder das Fehlen",
+      "bedeutung_en": "outage, failure",
+      "beispiel": "ist die Frage nach dem Ausfall",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "verbindlich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man sich daran halten muss",
+      "bedeutung_en": "binding",
+      "beispiel": "Der Reinigungsplan im Flur ist verbindlich",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "anzeigen",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "zeigt an",
+        "praeteritum": "zeigte an",
+        "perfekt": "hat angezeigt"
+      },
+      "bedeutung_de": "einer Stelle offiziell mitteilen",
+      "bedeutung_en": "to notify, to register (with an office)",
+      "beispiel": "sind bis Mitternacht möglich und drei Tage vorher der Verwaltung anzuzeigen",
+      "fundstelle": "Lesen Teil 5",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Belegschaft",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Belegschaften",
+      "bedeutung_de": "alle Beschäftigten eines Betriebes",
+      "bedeutung_en": "workforce, staff",
+      "beispiel": "ist einer davon fünfzehn Prozent der Belegschaft",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "unehrlich",
+      "wortart": "adjektiv",
+      "bedeutung_de": "nicht aufrichtig",
+      "bedeutung_en": "dishonest, disingenuous",
+      "beispiel": "Ich finde es unehrlich, so zu tun, als wäre das eine Frage des guten Willens.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Lebensdauer",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Lebensdauern",
+      "bedeutung_de": "wie lange ein Gerät hält",
+      "bedeutung_en": "service life, lifespan",
+      "beispiel": "Zwischen Preis und Lebensdauer gibt es einen Zusammenhang",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "das Bauteil",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "die Bauteile",
+      "bedeutung_de": "ein einzelnes Teil in einem Gerät",
+      "bedeutung_en": "component",
+      "beispiel": "Ein Gerät für neunundneunzig Euro enthält Bauteile für neunundneunzig Euro.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "verklebt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "mit Klebstoff verbunden statt verschraubt",
+      "bedeutung_en": "glued shut",
+      "beispiel": "Denn ein verklebtes Gerät ist nicht nur schwer zu öffnen.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "nachbessern",
+      "wortart": "verb",
+      "trennbar": true,
+      "stammformen": {
+        "praesens_3sg": "bessert nach",
+        "praeteritum": "besserte nach",
+        "perfekt": "hat nachgebessert"
+      },
+      "bedeutung_de": "etwas nachträglich verbessern",
+      "bedeutung_en": "to improve after the fact, to amend",
+      "beispiel": "Da müsste man nachbessern",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Störung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Störungen",
+      "bedeutung_de": "ein technischer Fehler im Betrieb",
+      "bedeutung_en": "fault, disruption",
+      "beispiel": "Wegen einer technischen Störung können wir im gesamten Haus derzeit keine Kartenzahlungen annehmen.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B1+"
+    },
+    {
+      "lemma": "die Erstattung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Erstattungen",
+      "bedeutung_de": "die Rückzahlung eines gezahlten Betrages",
+      "bedeutung_en": "refund, reimbursement",
+      "beispiel": "danach ist eine Erstattung nicht mehr möglich",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "B2"
+    },
+    {
+      "lemma": "die Selbsttäuschung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Selbsttäuschungen",
+      "bedeutung_de": "der Irrtum über sich selbst",
+      "bedeutung_en": "self-deception",
+      "beispiel": "noch eine Warnung vor einer verbreiteten Selbsttäuschung",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Stichprobe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Stichproben",
+      "bedeutung_de": "eine Auswahl, aus der man auf das Ganze schließt",
+      "bedeutung_en": "sample",
+      "beispiel": "beruht auf einer Stichprobe, die nur aus Misserfolgen besteht",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Kränkung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "die Kränkungen",
+      "bedeutung_de": "eine Verletzung der Gefühle",
+      "bedeutung_en": "slight, hurt",
+      "beispiel": "Wer jede Kränkung von vor zwanzig Jahren so frisch vor sich hat wie die von gestern",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "die Vertrautheit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "—",
+      "bedeutung_de": "das Gefühl, etwas schon zu kennen",
+      "bedeutung_en": "familiarity",
+      "beispiel": "genau diese Vertrautheit verwechseln wir mit Können",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B2+"
+    },
+    {
+      "lemma": "verwechseln",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verwechselt",
+        "praeteritum": "verwechselte",
+        "perfekt": "hat verwechselt"
+      },
+      "praeposition": {
+        "wort": "mit",
+        "kasus": "Dativ"
+      },
+      "bedeutung_de": "eine Sache für eine andere halten",
+      "bedeutung_en": "to confuse one thing with another",
+      "beispiel": "verwechseln wir mit Können",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "B1+"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "sich lohnen",
+      "typ": "kollokation",
+      "bedeutung_de": "den Aufwand oder das Geld wert sein",
+      "bedeutung_en": "to be worth it",
+      "beispiel": "Die Reparatur lohnt sich also klar",
+      "fundstelle": "Hören Teil 1"
+    },
+    {
+      "wendung": "zur Verfügung stehen",
+      "typ": "nomen_verb_verbindung",
+      "bedeutung_de": "verfügbar sein",
+      "bedeutung_en": "to be available",
+      "beispiel": "es stehen genügend Geräte zur Verfügung",
+      "fundstelle": "Hören Teil 1"
+    },
+    {
+      "wendung": "jemandem einen Gefallen tun",
+      "typ": "redewendung",
+      "bedeutung_de": "etwas tun, das jemandem hilft",
+      "bedeutung_en": "to do someone a favour",
+      "beispiel": "Wer bar zahlt, tut dem kleinen Laden einen Gefallen",
+      "fundstelle": "Lesen Teil 4"
+    },
+    {
+      "wendung": "zu kurz kommen",
+      "typ": "redewendung",
+      "bedeutung_de": "zu wenig Beachtung oder Anteil bekommen",
+      "bedeutung_en": "to get short shrift, to be neglected",
+      "beispiel": "Was in einer solchen Debatte leicht zu kurz kommen kann, ist die Frage nach dem Ausfall.",
+      "fundstelle": "Lesen Teil 4"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Der Konjunktiv II in der irrealen Bedingung",
+      "erklaerung_de": "„Wollte man das ändern, müsste man …“ ist ein wenn-Satz ohne „wenn“: Das Verb rückt an den Anfang, und beide Teile stehen im Konjunktiv II. Die Form sagt, dass der Fall nicht eingetreten ist — hier: dass niemand es bisher ändert.",
+      "erklaerung_en": "German drops „wenn“ and moves the verb to the front instead. Both halves must be Konjunktiv II, and that is the only signal that you are reading a hypothetical rather than a report. It reads as more formal than the wenn-version, which is why it turns up in argument.",
+      "belegSatz": "Wollte man das ändern, müsste man an den Preisen ansetzen, nicht an der Einstellung.",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um mit „wenn“: „Hätte ich mehr Zeit, käme ich mit.“",
+          "loesung": "Wenn ich mehr Zeit hätte, käme ich mit.",
+          "hinweis": "Das Verb rückt vom Anfang wieder ans Ende."
+        },
+        {
+          "aufgabe": "Formen Sie um ohne „wenn“: „Wenn man das ernst nähme, müsste man handeln.“",
+          "loesung": "Nähme man das ernst, müsste man handeln.",
+          "hinweis": "Der Nebensatz beginnt mit dem konjugierten Verb."
+        },
+        {
+          "aufgabe": "Ist die Bedingung eingetreten? „Wollte man das ändern, müsste man an den Preisen ansetzen.“",
+          "loesung": "Nein — der Konjunktiv II sagt, dass es niemand tut.",
+          "hinweis": "Indikativ wäre ein Bericht, Konjunktiv II ist eine Überlegung."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Der Zustandspassiv und seine Abgrenzung",
+      "erklaerung_de": "„wird verschraubt“ beschreibt einen Vorgang, „ist verschraubt“ dessen Ergebnis. Das Zustandspassiv mit „sein“ sagt nichts darüber, wer etwas getan hat oder wann — es beschreibt nur, wie etwas jetzt ist. In technischen Texten steht es fast überall.",
+      "erklaerung_en": "Two passives, one letter apart in meaning: werden = it is being done, sein = it has been done and now stands that way. Reading „ist geschlossen“ as an event rather than a state is a classic way to mis-time a sentence.",
+      "belegSatz": "Ein Gehäuse, das verschraubt und nicht verklebt ist, sagt mir mehr über die Absicht des Herstellers als jede Werbeaussage.",
+      "fundstelle": "Hören Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Vorgang oder Zustand? „Die Tür wird um acht geschlossen.“",
+          "loesung": "Vorgang — jemand schließt sie um acht.",
+          "hinweis": "„werden“ zeigt den Vorgang an."
+        },
+        {
+          "aufgabe": "Vorgang oder Zustand? „Die Tür ist seit acht geschlossen.“",
+          "loesung": "Zustand — sie ist zu, seit acht.",
+          "hinweis": "„sein“ + Partizip beschreibt das Ergebnis."
+        },
+        {
+          "aufgabe": "Bilden Sie das Zustandspassiv: „Das Gerät wurde verklebt.“",
+          "loesung": "Das Gerät ist verklebt.",
+          "hinweis": "Aus dem Vorgang wird der Zustand, den er hinterlässt."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Nomen aus Verben: die Endungen -ung, -heit, -keit",
+      "erklaerung_de": "Schriftliche Texte packen Handlungen in Nomen: „reparieren“ wird zur „Reparatur“, „erstatten“ zur „Erstattung“, „haltbar“ zur „Haltbarkeit“. Nomen auf -ung, -heit, -keit und -schaft sind ausnahmslos feminin — eine der wenigen Artikelregeln ohne Ausnahme.",
+      "erklaerung_en": "Worth memorising because it is free: every noun ending in -ung, -heit, -keit or -schaft takes „die“. No exceptions. It settles the article for a large slice of the abstract vocabulary a B2 text is built from.",
+      "belegSatz": "danach ist eine Erstattung nicht mehr möglich",
+      "fundstelle": "Hören Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Artikel? ___ Haltbarkeit, ___ Störung, ___ Belegschaft",
+          "loesung": "die, die, die",
+          "hinweis": "-keit, -ung, -schaft sind immer feminin."
+        },
+        {
+          "aufgabe": "Bilden Sie das Nomen: „etwas anzeigen“ →",
+          "loesung": "die Anzeige (auch: die Anzeigung, seltener)",
+          "hinweis": "Nicht jede Ableitung endet auf -ung."
+        },
+        {
+          "aufgabe": "Verbalisieren Sie: „bei der Anmeldung“ →",
+          "loesung": "wenn man sich anmeldet",
+          "hinweis": "Präposition + Nomen wird zum Nebensatz."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Vergleichende Nebensätze: „als ob“ und „als“",
+      "erklaerung_de": "Für einen Vergleich mit etwas Unwirklichem gibt es zwei Formen: „als ob“ mit dem Verb am Ende, oder „als“ mit dem Verb direkt danach. Beide stehen im Konjunktiv II, weil der Vergleich gerade nicht zutrifft: „als sei ein Geldschein ein Zeichen von Rückständigkeit“.",
+      "erklaerung_en": "„als ob er reich wäre“ and „als wäre er reich“ mean the same thing; only the word order differs. The Konjunktiv is doing the real work — it marks the comparison as false, which is usually the writer's whole point.",
+      "belegSatz": "die anderen, als sei ein Geldschein ein Zeichen von Rückständigkeit",
+      "fundstelle": "Lesen Teil 4",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um mit „als ob“: „Er tut, als wüsste er alles.“",
+          "loesung": "Er tut, als ob er alles wüsste.",
+          "hinweis": "Mit „als ob“ steht das Verb am Ende."
+        },
+        {
+          "aufgabe": "Formen Sie um ohne „ob“: „Sie klingt, als ob sie krank wäre.“",
+          "loesung": "Sie klingt, als wäre sie krank.",
+          "hinweis": "Ohne „ob“ folgt das Verb direkt."
+        },
+        {
+          "aufgabe": "Trifft der Vergleich zu? „Sie tun so, als stünde die Überwachung vor der Tür.“",
+          "loesung": "Nein — der Konjunktiv sagt, dass der Schreiber das gerade nicht glaubt.",
+          "hinweis": "„als ob“ leitet immer einen unwirklichen Vergleich ein."
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,7 @@ You need to touch **no code**:
 
 ```bash
 python tools/new_exam.py pruefung-06        # B1
-# or: python tools/new_exam.py b2-pruefung-02   # B2 — the level comes from the id
+# or: python tools/new_exam.py b2-pruefung-06   # B2 — the level comes from the id
 # write the content
 python tools/validate.py pruefung-06 --strict
 ```

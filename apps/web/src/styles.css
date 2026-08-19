@@ -654,6 +654,13 @@ audio {
   color: var(--mute);
 }
 
+/* Says what B2.1 and B2.2 mean, so nobody reads them as exam parts. */
+.notiz.kursstufe {
+  margin: 0.75rem 0 0;
+  line-height: 1.5;
+  max-width: 62ch;
+}
+
 .modulwahl {
   border: none;
   padding: 0;

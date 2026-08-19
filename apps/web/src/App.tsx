@@ -383,7 +383,7 @@ export default function App() {
           Übungsmaterial CC BY 4.0 · Code MIT · keine offizielle Prüfung, keine Verbindung
           zum Goethe-Institut e.&nbsp;V.
         </span>
-        <a href="https://github.com/diprajkadlag/b1-pruefungstrainer">Quellcode</a>
+        <a href="https://github.com/diprajkadlag/german-exam-trainer">Quellcode</a>
       </footer>
     </div>
   );
