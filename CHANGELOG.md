@@ -7,6 +7,21 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.7.1] — 2026-08-20
+
+### Fixed
+
+- **The explanation was gone before it could be read.** A correct answer held
+  the card for 900 ms — long enough to see the tick, nowhere near long enough
+  to read the reason underneath it, which is the part that does the teaching.
+  Both pauses are two seconds longer: **2.9 s** after a right answer and
+  **4.6 s** after a wrong one, measured on screen at 3.4 s and 5.0 s.
+- The end-to-end tests waited a hand-tuned number of milliseconds between
+  cards, so they had to be retuned for the new pauses and would have needed it
+  again on the next change. They now wait for the round to advance instead, and
+  the two tests that play all twelve cards say out loud that a whole round
+  takes longer than the default per-test budget.
+
 ## [1.7.0] — 2026-08-20
 
 ### Added

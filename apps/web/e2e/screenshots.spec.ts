@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import { alleFragen, leererFortschritt, rundeBauen } from '@pruefung/core';
@@ -90,6 +90,8 @@ test('Spickzettel-Screenshots erzeugen', async ({ page }) => {
 });
 
 test('Spiel-Screenshots erzeugen', async ({ page }) => {
+  // Plays several cards to reach an article one, at reading speed.
+  test.setTimeout(120_000);
   // Pinned seed, so the card in the README is the same card every time and a
   // rebuild does not produce a diff for no reason.
   await page.goto('/?saat=20260820');
@@ -116,6 +118,7 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
 
   await page.getByRole('button', { name: /Wortschatz/ }).click();
   await page.locator('.karte-spiel').waitFor();
+  let erledigt = 0;
   for (const frage of runde) {
     if (frage.art === 'artikel') break;
     await page
@@ -123,7 +126,12 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
       .filter({ hasText: new RegExp(`^${frage.loesung}$`) })
       .first()
       .click();
-    await page.waitForTimeout(1100);
+    // Wait for the card to turn over rather than for a fixed number of
+    // milliseconds, which would need retuning whenever the pause changes.
+    erledigt += 1;
+    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(erledigt, {
+      timeout: 15_000,
+    });
   }
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: `${OUT}10-spiel-artikel.png`, fullPage: false });

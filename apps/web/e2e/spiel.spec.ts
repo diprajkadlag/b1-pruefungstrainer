@@ -65,6 +65,19 @@ async function rundeStarten(page: Page, stufe: Stufe, kategorie: Kategorie) {
   await page.locator('.karte-spiel').waitFor();
 }
 
+/**
+ * Wait for the card to turn over on its own.
+ *
+ * Never a fixed sleep: the pause between cards is a product decision that has
+ * already moved once, and a test that hard-codes it silently starts clicking
+ * into the previous card the moment it changes again.
+ */
+async function naechsteKarte(page: Page, fertig: number) {
+  await expect(page.locator('.pfad__halt--fertig')).toHaveCount(fertig, {
+    timeout: 15_000,
+  });
+}
+
 async function beantworten(page: Page, frage: Frage, richtig: boolean) {
   if (frage.art === 'bauen') {
     const woerter = richtig ? frage.loesung.split(' ') : [...frage.optionen].reverse();
@@ -211,15 +224,21 @@ test.describe('Sprachschatz', () => {
   });
 
   test('plays a whole round to the end', async ({ page }) => {
+    // Twelve cards at roughly three seconds of reading time each: the default
+    // per-test budget is not enough, and raising it here is honest about why.
+    test.setTimeout(120_000);
     const runde = rundeVorhersagen('B1', 'wortschatz');
     await rundeStarten(page, 'B1', 'wortschatz');
 
-    for (const frage of runde) {
+    for (const [i, frage] of runde.entries()) {
       await beantworten(page, frage, true);
-      await page.waitForTimeout(1000);
+      // The last card ends the round rather than advancing the path.
+      if (i < runde.length - 1) await naechsteKarte(page, i + 1);
     }
 
-    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible({
+      timeout: 15_000,
+    });
     await expect(page.getByRole('button', { name: 'Noch eine Runde' })).toBeVisible();
     // 10+20+30+40 then 50 for the rest: 100 + 8x50.
     await expect(page.locator('.bilanz dd').first()).toHaveText('500');
@@ -231,9 +250,12 @@ test.describe('Sprachschatz', () => {
 
     for (let i = 0; i < 3; i++) {
       await beantworten(page, runde[i]!, false);
-      await page.waitForTimeout(2800);
+      // A wrong answer still advances the path; the third one ends the round.
+      if (i < 2) await naechsteKarte(page, i + 1);
     }
-    await expect(page.getByRole('heading', { name: 'Runde vorbei' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Runde vorbei' })).toBeVisible({
+      timeout: 15_000,
+    });
   });
 
   test('keeps each level and area on its own scoreboard', async ({ page }) => {
@@ -255,13 +277,16 @@ test.describe('Sprachschatz', () => {
   });
 
   test('remembers a finished round after a reload', async ({ page }) => {
+    test.setTimeout(120_000);
     const runde = rundeVorhersagen('A2', 'grammatik');
     await rundeStarten(page, 'A2', 'grammatik');
-    for (const frage of runde) {
+    for (const [i, frage] of runde.entries()) {
       await beantworten(page, frage, true);
-      await page.waitForTimeout(1000);
+      if (i < runde.length - 1) await naechsteKarte(page, i + 1);
     }
-    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible({
+      timeout: 15_000,
+    });
 
     await page.reload();
     await page.getByRole('tab', { name: 'A2' }).click();
