@@ -41,9 +41,16 @@ interface Props {
 
 type Phase = 'wahl' | 'spiel' | 'ende';
 
-/** How long the answer stays on screen before the next card, in ms. */
-const PAUSE_RICHTIG = 900;
-const PAUSE_FALSCH = 2600;
+/**
+ * How long the answer stays on screen before the next card, in ms.
+ *
+ * The first version gave a correct answer 900 ms, which is long enough to see
+ * that you were right and nowhere near long enough to read *why* — so the
+ * explanation, which is the part that does the teaching, was gone before it
+ * could be read. Both pauses are two seconds longer than that.
+ */
+const PAUSE_RICHTIG = 2900;
+const PAUSE_FALSCH = 4600;
 
 /**
  * The seed for the next round. `?saat=123` pins it, so a round can be replayed
