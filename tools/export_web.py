@@ -55,6 +55,20 @@ def strip_item(item: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in item.items() if k not in GEHEIM}
 
 
+def oeffentliche_aufgabe(aufgabe: dict[str, Any]) -> dict[str, Any]:
+    """One writing task as a candidate may see it before submitting.
+
+    The A1 form is the one place where a task carries answers the candidate
+    must nevertheless see part of: they need the field labels to fill it in,
+    and must not have what belongs in them. So `formular` survives the split
+    with its labels and nothing else.
+    """
+    out = {k: v for k, v in aufgabe.items() if k not in GEHEIM and k != "redemittel"}
+    if aufgabe.get("formular"):
+        out["formular"] = [{"feld": f["feld"]} for f in aufgabe["formular"]]
+    return out
+
+
 def public_half(exam: dict[str, Any]) -> dict[str, Any]:
     """The exam as a candidate may see it before submitting."""
     out: dict[str, Any] = {"meta": exam["meta"]}
@@ -72,8 +86,7 @@ def public_half(exam: dict[str, Any]) -> dict[str, Any]:
 
     out["schreiben"] = {
         "zeitMinuten": exam["schreiben"]["zeitMinuten"],
-        "aufgaben": [{k: v for k, v in a.items() if k not in GEHEIM and k != "redemittel"}
-                     for a in exam["schreiben"]["aufgaben"]],
+        "aufgaben": [oeffentliche_aufgabe(a) for a in exam["schreiben"]["aufgaben"]],
     }
 
     sprechen_teile = []
@@ -114,7 +127,9 @@ def keyed_half(exam: dict[str, Any]) -> dict[str, Any]:
         ],
         "schreiben": [
             {"nummer": a["nummer"], "redemittel": a.get("redemittel", []),
-             "musterloesungen": a["musterloesungen"]}
+             # A form has no model answers; it has five right entries instead.
+             "musterloesungen": a.get("musterloesungen", []),
+             "formular": a.get("formular", [])}
             for a in exam["schreiben"]["aufgaben"]
         ],
         "sprechen": [
@@ -297,7 +312,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         # One sheet per level, and the app is told which levels actually have
         # one so it can offer the button only where it leads somewhere.
         # In level order, so the app's tabs and this list agree.
-        stufen = [s for s in ("A2", "B1", "B2") if export_lernhilfe(s)]
+        stufen = [s for s in ("A1", "A2", "B1", "B2") if export_lernhilfe(s)]
         (TARGET / "index.json").write_text(
             json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen},
                        ensure_ascii=False, indent=2) + "\n",

@@ -1,0 +1,1686 @@
+{
+  "titel": "A1 Grundwortschatz",
+  "hinweis": "Alles hier kommt in den Übungsprüfungen wirklich vor. Lernen Sie Nomen immer mit Artikel und Plural — auf A1 wird der Artikel schon geprüft, und später wird er nur schwerer nachzulernen.",
+  "verben": [
+    {
+      "gruppe": "Die ersten fünfzig — ohne diese geht nichts",
+      "eintraege": [
+        {
+          "inf": "sein",
+          "en": "to be",
+          "er": "ist",
+          "prät": "war",
+          "perf": "ist gewesen",
+          "unreg": true,
+          "bsp": "Ich **bin** aus Indien."
+        },
+        {
+          "inf": "haben",
+          "en": "to have",
+          "er": "hat",
+          "prät": "hatte",
+          "perf": "hat gehabt",
+          "unreg": true,
+          "bsp": "Ich **habe** zwei Kinder."
+        },
+        {
+          "inf": "werden",
+          "en": "to become",
+          "er": "wird",
+          "prät": "wurde",
+          "perf": "ist geworden",
+          "unreg": true,
+          "bsp": "Es **wird** kalt."
+        },
+        {
+          "inf": "heißen",
+          "en": "to be called",
+          "er": "heißt",
+          "prät": "hieß",
+          "perf": "hat geheißen",
+          "unreg": true,
+          "bsp": "Ich **heiße** Ravi."
+        },
+        {
+          "inf": "kommen",
+          "en": "to come",
+          "er": "kommt",
+          "prät": "kam",
+          "perf": "ist gekommen",
+          "unreg": true,
+          "bsp": "Ich **komme** um acht."
+        },
+        {
+          "inf": "gehen",
+          "en": "to go",
+          "er": "geht",
+          "prät": "ging",
+          "perf": "ist gegangen",
+          "unreg": true,
+          "bsp": "Wir **gehen** ins Kino."
+        },
+        {
+          "inf": "wohnen",
+          "en": "to live",
+          "er": "wohnt",
+          "prät": "wohnte",
+          "perf": "hat gewohnt",
+          "unreg": false,
+          "bsp": "Ich **wohne** in Weidenbach."
+        },
+        {
+          "inf": "arbeiten",
+          "en": "to work",
+          "er": "arbeitet",
+          "prät": "arbeitete",
+          "perf": "hat gearbeitet",
+          "unreg": false,
+          "bsp": "Sie **arbeitet** als Köchin."
+        },
+        {
+          "inf": "lernen",
+          "en": "to learn",
+          "er": "lernt",
+          "prät": "lernte",
+          "perf": "hat gelernt",
+          "unreg": false,
+          "bsp": "Ich **lerne** Deutsch."
+        },
+        {
+          "inf": "sprechen",
+          "en": "to speak",
+          "er": "spricht",
+          "prät": "sprach",
+          "perf": "hat gesprochen",
+          "unreg": true,
+          "bsp": "**Sprechen** Sie Englisch?"
+        },
+        {
+          "inf": "verstehen",
+          "en": "to understand",
+          "er": "versteht",
+          "prät": "verstand",
+          "perf": "hat verstanden",
+          "unreg": true,
+          "bsp": "Ich **habe** Sie nicht **verstanden**."
+        },
+        {
+          "inf": "machen",
+          "en": "to do, to make",
+          "er": "macht",
+          "prät": "machte",
+          "perf": "hat gemacht",
+          "unreg": false,
+          "bsp": "Was **machen** Sie am Wochenende?"
+        },
+        {
+          "inf": "essen",
+          "en": "to eat",
+          "er": "isst",
+          "prät": "aß",
+          "perf": "hat gegessen",
+          "unreg": true,
+          "bsp": "Was **essen** Sie gern?"
+        },
+        {
+          "inf": "trinken",
+          "en": "to drink",
+          "er": "trinkt",
+          "prät": "trank",
+          "perf": "hat getrunken",
+          "unreg": true,
+          "bsp": "Ich **trinke** morgens Kaffee."
+        },
+        {
+          "inf": "kaufen",
+          "en": "to buy",
+          "er": "kauft",
+          "prät": "kaufte",
+          "perf": "hat gekauft",
+          "unreg": false,
+          "bsp": "Ich **kaufe** Brot."
+        },
+        {
+          "inf": "kosten",
+          "en": "to cost",
+          "er": "kostet",
+          "prät": "kostete",
+          "perf": "hat gekostet",
+          "unreg": false,
+          "bsp": "Das **kostet** vier Euro."
+        },
+        {
+          "inf": "zahlen",
+          "en": "to pay",
+          "er": "zahlt",
+          "prät": "zahlte",
+          "perf": "hat gezahlt",
+          "unreg": false,
+          "bsp": "Sie können bar oder mit Karte **zahlen**."
+        },
+        {
+          "inf": "fahren",
+          "en": "to go, to drive",
+          "er": "fährt",
+          "prät": "fuhr",
+          "perf": "ist gefahren",
+          "unreg": true,
+          "bsp": "Ich **fahre** mit dem Bus."
+        },
+        {
+          "inf": "laufen",
+          "en": "to walk, to run",
+          "er": "läuft",
+          "prät": "lief",
+          "perf": "ist gelaufen",
+          "unreg": true,
+          "bsp": "Wir **sind** nach Hause **gelaufen**."
+        },
+        {
+          "inf": "fliegen",
+          "en": "to fly",
+          "er": "fliegt",
+          "prät": "flog",
+          "perf": "ist geflogen",
+          "unreg": true,
+          "bsp": "Er **ist** nach Wien **geflogen**."
+        },
+        {
+          "inf": "schlafen",
+          "en": "to sleep",
+          "er": "schläft",
+          "prät": "schlief",
+          "perf": "hat geschlafen",
+          "unreg": true,
+          "bsp": "Das Kind **schläft** noch."
+        },
+        {
+          "inf": "stehen",
+          "en": "to stand",
+          "er": "steht",
+          "prät": "stand",
+          "perf": "hat gestanden",
+          "unreg": true,
+          "bsp": "Der Bus **steht** vor der Tür."
+        },
+        {
+          "inf": "sitzen",
+          "en": "to sit",
+          "er": "sitzt",
+          "prät": "saß",
+          "perf": "hat gesessen",
+          "unreg": true,
+          "bsp": "Ich **sitze** draußen."
+        },
+        {
+          "inf": "liegen",
+          "en": "to lie",
+          "er": "liegt",
+          "prät": "lag",
+          "perf": "hat gelegen",
+          "unreg": true,
+          "bsp": "Der Schlüssel **liegt** bei der Nachbarin."
+        },
+        {
+          "inf": "bleiben",
+          "en": "to stay",
+          "er": "bleibt",
+          "prät": "blieb",
+          "perf": "ist geblieben",
+          "unreg": true,
+          "bsp": "Ich **bleibe** zu Hause."
+        }
+      ]
+    },
+    {
+      "gruppe": "Sprechen, fragen, antworten",
+      "eintraege": [
+        {
+          "inf": "sagen",
+          "en": "to say",
+          "er": "sagt",
+          "prät": "sagte",
+          "perf": "hat gesagt",
+          "unreg": false,
+          "bsp": "**Sagen** Sie Bescheid."
+        },
+        {
+          "inf": "fragen",
+          "en": "to ask",
+          "er": "fragt",
+          "prät": "fragte",
+          "perf": "hat gefragt",
+          "unreg": false,
+          "bsp": "Ich **frage** meine Kollegin."
+        },
+        {
+          "inf": "antworten",
+          "en": "to answer",
+          "er": "antwortet",
+          "prät": "antwortete",
+          "perf": "hat geantwortet",
+          "unreg": false,
+          "bsp": "Sie **hat** noch nicht **geantwortet**."
+        },
+        {
+          "inf": "anrufen",
+          "en": "to phone",
+          "er": "ruft an",
+          "prät": "rief an",
+          "perf": "hat angerufen",
+          "unreg": true,
+          "bsp": "**Rufen** Sie mich bitte **an**."
+        },
+        {
+          "inf": "schreiben",
+          "en": "to write",
+          "er": "schreibt",
+          "prät": "schrieb",
+          "perf": "hat geschrieben",
+          "unreg": true,
+          "bsp": "Ich **schreibe** eine Nachricht."
+        },
+        {
+          "inf": "lesen",
+          "en": "to read",
+          "er": "liest",
+          "prät": "las",
+          "perf": "hat gelesen",
+          "unreg": true,
+          "bsp": "Ich **lese** gern."
+        },
+        {
+          "inf": "hören",
+          "en": "to hear",
+          "er": "hört",
+          "prät": "hörte",
+          "perf": "hat gehört",
+          "unreg": false,
+          "bsp": "Ich **höre** gern Musik."
+        },
+        {
+          "inf": "buchstabieren",
+          "en": "to spell",
+          "er": "buchstabiert",
+          "prät": "buchstabierte",
+          "perf": "hat buchstabiert",
+          "unreg": false,
+          "bsp": "**Buchstabieren** Sie bitte Ihren Namen."
+        },
+        {
+          "inf": "wiederholen",
+          "en": "to repeat",
+          "er": "wiederholt",
+          "prät": "wiederholte",
+          "perf": "hat wiederholt",
+          "unreg": false,
+          "bsp": "Können Sie das bitte **wiederholen**?"
+        },
+        {
+          "inf": "danken",
+          "en": "to thank",
+          "er": "dankt",
+          "prät": "dankte",
+          "perf": "hat gedankt",
+          "unreg": false,
+          "bsp": "Ich **danke** Ihnen."
+        },
+        {
+          "inf": "helfen",
+          "en": "to help",
+          "er": "hilft",
+          "prät": "half",
+          "perf": "hat geholfen",
+          "unreg": true,
+          "bsp": "Können Sie mir **helfen**?"
+        },
+        {
+          "inf": "erklären",
+          "en": "to explain",
+          "er": "erklärt",
+          "prät": "erklärte",
+          "perf": "hat erklärt",
+          "unreg": false,
+          "bsp": "Sie **erklärt** es noch einmal."
+        }
+      ]
+    },
+    {
+      "gruppe": "Termine, Wege, Alltag",
+      "eintraege": [
+        {
+          "inf": "aufstehen",
+          "en": "to get up",
+          "er": "steht auf",
+          "prät": "stand auf",
+          "perf": "ist aufgestanden",
+          "unreg": true,
+          "bsp": "Ich **stehe** um sechs **auf**."
+        },
+        {
+          "inf": "anfangen",
+          "en": "to begin",
+          "er": "fängt an",
+          "prät": "fing an",
+          "perf": "hat angefangen",
+          "unreg": true,
+          "bsp": "Der Kurs **fängt** um neun **an**."
+        },
+        {
+          "inf": "aufhören",
+          "en": "to stop",
+          "er": "hört auf",
+          "prät": "hörte auf",
+          "perf": "hat aufgehört",
+          "unreg": false,
+          "bsp": "Es **hat** **aufgehört** zu regnen."
+        },
+        {
+          "inf": "abholen",
+          "en": "to collect",
+          "er": "holt ab",
+          "prät": "holte ab",
+          "perf": "hat abgeholt",
+          "unreg": false,
+          "bsp": "Ich **hole** das Paket **ab**."
+        },
+        {
+          "inf": "mitbringen",
+          "en": "to bring",
+          "er": "bringt mit",
+          "prät": "brachte mit",
+          "perf": "hat mitgebracht",
+          "unreg": true,
+          "bsp": "**Bring** bitte ein Heft **mit**."
+        },
+        {
+          "inf": "einsteigen",
+          "en": "to get on",
+          "er": "steigt ein",
+          "prät": "stieg ein",
+          "perf": "ist eingestiegen",
+          "unreg": true,
+          "bsp": "Bitte hinten **einsteigen**."
+        },
+        {
+          "inf": "aussteigen",
+          "en": "to get off",
+          "er": "steigt aus",
+          "prät": "stieg aus",
+          "perf": "ist ausgestiegen",
+          "unreg": true,
+          "bsp": "Wo **steigen** Sie **aus**?"
+        },
+        {
+          "inf": "warten",
+          "en": "to wait",
+          "er": "wartet",
+          "prät": "wartete",
+          "perf": "hat gewartet",
+          "unreg": false,
+          "bsp": "Ich **warte** vor dem Kino."
+        },
+        {
+          "inf": "suchen",
+          "en": "to look for",
+          "er": "sucht",
+          "prät": "suchte",
+          "perf": "hat gesucht",
+          "unreg": false,
+          "bsp": "Ich **suche** eine Wohnung."
+        },
+        {
+          "inf": "finden",
+          "en": "to find",
+          "er": "findet",
+          "prät": "fand",
+          "perf": "hat gefunden",
+          "unreg": true,
+          "bsp": "Ich **habe** eine Tasche **gefunden**."
+        },
+        {
+          "inf": "brauchen",
+          "en": "to need",
+          "er": "braucht",
+          "prät": "brauchte",
+          "perf": "hat gebraucht",
+          "unreg": false,
+          "bsp": "Dafür **brauchen** Sie einen Ausweis."
+        },
+        {
+          "inf": "öffnen",
+          "en": "to open",
+          "er": "öffnet",
+          "prät": "öffnete",
+          "perf": "hat geöffnet",
+          "unreg": false,
+          "bsp": "Wir **haben** bis achtzehn Uhr **geöffnet**."
+        },
+        {
+          "inf": "schließen",
+          "en": "to close",
+          "er": "schließt",
+          "prät": "schloss",
+          "perf": "hat geschlossen",
+          "unreg": true,
+          "bsp": "Das Bad **schließt** um zwanzig Uhr."
+        },
+        {
+          "inf": "kochen",
+          "en": "to cook",
+          "er": "kocht",
+          "prät": "kochte",
+          "perf": "hat gekocht",
+          "unreg": false,
+          "bsp": "Heute **koche** ich."
+        },
+        {
+          "inf": "wohnen bleiben",
+          "en": "to stay living",
+          "er": "bleibt wohnen",
+          "prät": "blieb wohnen",
+          "perf": "ist wohnen geblieben",
+          "unreg": false,
+          "bsp": "Wir **bleiben** hier **wohnen**."
+        },
+        {
+          "inf": "spielen",
+          "en": "to play",
+          "er": "spielt",
+          "prät": "spielte",
+          "perf": "hat gespielt",
+          "unreg": false,
+          "bsp": "Er **spielt** Fußball."
+        },
+        {
+          "inf": "besuchen",
+          "en": "to visit",
+          "er": "besucht",
+          "prät": "besuchte",
+          "perf": "hat besucht",
+          "unreg": false,
+          "bsp": "Ich **besuche** meine Oma."
+        },
+        {
+          "inf": "mitkommen",
+          "en": "to come along",
+          "er": "kommt mit",
+          "prät": "kam mit",
+          "perf": "ist mitgekommen",
+          "unreg": true,
+          "bsp": "**Kommst** du **mit**?"
+        },
+        {
+          "inf": "reservieren",
+          "en": "to reserve",
+          "er": "reserviert",
+          "prät": "reservierte",
+          "perf": "hat reserviert",
+          "unreg": false,
+          "bsp": "Ihr Zimmer ist **reserviert**."
+        },
+        {
+          "inf": "bestellen",
+          "en": "to order",
+          "er": "bestellt",
+          "prät": "bestellte",
+          "perf": "hat bestellt",
+          "unreg": false,
+          "bsp": "Ich **bestelle** das Rezept."
+        }
+      ]
+    },
+    {
+      "gruppe": "Sich fühlen, mögen, wollen",
+      "eintraege": [
+        {
+          "inf": "mögen",
+          "en": "to like",
+          "er": "mag",
+          "prät": "mochte",
+          "perf": "hat gemocht",
+          "unreg": true,
+          "bsp": "Ich **mag** keinen Kaffee."
+        },
+        {
+          "inf": "gefallen",
+          "en": "to please",
+          "er": "gefällt",
+          "prät": "gefiel",
+          "perf": "hat gefallen",
+          "unreg": true,
+          "bsp": "Die Wohnung **gefällt** mir."
+        },
+        {
+          "inf": "wehtun",
+          "en": "to hurt",
+          "er": "tut weh",
+          "prät": "tat weh",
+          "perf": "hat wehgetan",
+          "unreg": true,
+          "bsp": "Mein Kopf **tut weh**."
+        },
+        {
+          "inf": "sich fühlen",
+          "en": "to feel",
+          "er": "fühlt sich",
+          "prät": "fühlte sich",
+          "perf": "hat sich gefühlt",
+          "unreg": false,
+          "bsp": "Ich **fühle mich** nicht gut."
+        },
+        {
+          "inf": "sich freuen",
+          "en": "to be glad",
+          "er": "freut sich",
+          "prät": "freute sich",
+          "perf": "hat sich gefreut",
+          "unreg": false,
+          "bsp": "Ich **freue mich** auf den Urlaub."
+        },
+        {
+          "inf": "sich melden",
+          "en": "to get in touch",
+          "er": "meldet sich",
+          "prät": "meldete sich",
+          "perf": "hat sich gemeldet",
+          "unreg": false,
+          "bsp": "Ich **melde mich** später."
+        },
+        {
+          "inf": "passen",
+          "en": "to fit, to suit",
+          "er": "passt",
+          "prät": "passte",
+          "perf": "hat gepasst",
+          "unreg": false,
+          "bsp": "**Passt** Ihnen der Freitag?"
+        },
+        {
+          "inf": "gehören",
+          "en": "to belong",
+          "er": "gehört",
+          "prät": "gehörte",
+          "perf": "hat gehört",
+          "unreg": false,
+          "bsp": "Wem **gehört** das Fahrrad?"
+        },
+        {
+          "inf": "vergessen",
+          "en": "to forget",
+          "er": "vergisst",
+          "prät": "vergaß",
+          "perf": "hat vergessen",
+          "unreg": true,
+          "bsp": "Ich **habe** den Schlüssel **vergessen**."
+        },
+        {
+          "inf": "verlieren",
+          "en": "to lose",
+          "er": "verliert",
+          "prät": "verlor",
+          "perf": "hat verloren",
+          "unreg": true,
+          "bsp": "Sie **hat** die Karte **verloren**."
+        }
+      ]
+    },
+    {
+      "gruppe": "Noch dreißig, die immer wieder vorkommen",
+      "eintraege": [
+        {
+          "inf": "geben",
+          "en": "to give",
+          "er": "gibt",
+          "prät": "gab",
+          "perf": "hat gegeben",
+          "unreg": true,
+          "bsp": "**Geben** Sie mir bitte das Salz."
+        },
+        {
+          "inf": "nehmen",
+          "en": "to take",
+          "er": "nimmt",
+          "prät": "nahm",
+          "perf": "hat genommen",
+          "unreg": true,
+          "bsp": "**Nehmen** Sie den Bus."
+        },
+        {
+          "inf": "bringen",
+          "en": "to bring",
+          "er": "bringt",
+          "prät": "brachte",
+          "perf": "hat gebracht",
+          "unreg": true,
+          "bsp": "Sie **hat** uns Suppe **gebracht**."
+        },
+        {
+          "inf": "holen",
+          "en": "to fetch",
+          "er": "holt",
+          "prät": "holte",
+          "perf": "hat geholt",
+          "unreg": false,
+          "bsp": "Ich **hole** Brot."
+        },
+        {
+          "inf": "zeigen",
+          "en": "to show",
+          "er": "zeigt",
+          "prät": "zeigte",
+          "perf": "hat gezeigt",
+          "unreg": false,
+          "bsp": "Er **zeigt** mir den Weg."
+        },
+        {
+          "inf": "sehen",
+          "en": "to see",
+          "er": "sieht",
+          "prät": "sah",
+          "perf": "hat gesehen",
+          "unreg": true,
+          "bsp": "Ich **habe** den Aushang **gesehen**."
+        },
+        {
+          "inf": "wissen",
+          "en": "to know",
+          "er": "weiß",
+          "prät": "wusste",
+          "perf": "hat gewusst",
+          "unreg": true,
+          "bsp": "Ich **weiß** es nicht."
+        },
+        {
+          "inf": "kennen",
+          "en": "to know (a person)",
+          "er": "kennt",
+          "prät": "kannte",
+          "perf": "hat gekannt",
+          "unreg": true,
+          "bsp": "**Kennen** Sie Frau Pelz?"
+        },
+        {
+          "inf": "denken",
+          "en": "to think",
+          "er": "denkt",
+          "prät": "dachte",
+          "perf": "hat gedacht",
+          "unreg": true,
+          "bsp": "Ich **denke**, das geht."
+        },
+        {
+          "inf": "glauben",
+          "en": "to believe",
+          "er": "glaubt",
+          "prät": "glaubte",
+          "perf": "hat geglaubt",
+          "unreg": false,
+          "bsp": "Ich **glaube** ja."
+        },
+        {
+          "inf": "dauern",
+          "en": "to last",
+          "er": "dauert",
+          "prät": "dauerte",
+          "perf": "hat gedauert",
+          "unreg": false,
+          "bsp": "Das **dauert** zehn Minuten."
+        },
+        {
+          "inf": "beginnen",
+          "en": "to begin",
+          "er": "beginnt",
+          "prät": "begann",
+          "perf": "hat begonnen",
+          "unreg": true,
+          "bsp": "Der Film **beginnt** um acht."
+        },
+        {
+          "inf": "aufmachen",
+          "en": "to open",
+          "er": "macht auf",
+          "prät": "machte auf",
+          "perf": "hat aufgemacht",
+          "unreg": false,
+          "bsp": "**Machen** Sie bitte das Fenster **auf**."
+        },
+        {
+          "inf": "zumachen",
+          "en": "to close",
+          "er": "macht zu",
+          "prät": "machte zu",
+          "perf": "hat zugemacht",
+          "unreg": false,
+          "bsp": "**Machen** Sie bitte die Tür **zu**."
+        },
+        {
+          "inf": "anmachen",
+          "en": "to switch on",
+          "er": "macht an",
+          "prät": "machte an",
+          "perf": "hat angemacht",
+          "unreg": false,
+          "bsp": "**Machen** Sie bitte das Licht **an**."
+        },
+        {
+          "inf": "ausmachen",
+          "en": "to switch off",
+          "er": "macht aus",
+          "prät": "machte aus",
+          "perf": "hat ausgemacht",
+          "unreg": false,
+          "bsp": "**Machen** Sie bitte das Radio **aus**."
+        },
+        {
+          "inf": "putzen",
+          "en": "to clean",
+          "er": "putzt",
+          "prät": "putzte",
+          "perf": "hat geputzt",
+          "unreg": false,
+          "bsp": "Ich **putze** das Bad."
+        },
+        {
+          "inf": "waschen",
+          "en": "to wash",
+          "er": "wäscht",
+          "prät": "wusch",
+          "perf": "hat gewaschen",
+          "unreg": true,
+          "bsp": "Ich **wasche** die Wäsche."
+        },
+        {
+          "inf": "aufräumen",
+          "en": "to tidy up",
+          "er": "räumt auf",
+          "prät": "räumte auf",
+          "perf": "hat aufgeräumt",
+          "unreg": false,
+          "bsp": "Ich **räume** das Zimmer **auf**."
+        },
+        {
+          "inf": "einkaufen",
+          "en": "to shop",
+          "er": "kauft ein",
+          "prät": "kaufte ein",
+          "perf": "hat eingekauft",
+          "unreg": false,
+          "bsp": "Ich **kaufe** samstags **ein**."
+        },
+        {
+          "inf": "kaputtgehen",
+          "en": "to break",
+          "er": "geht kaputt",
+          "prät": "ging kaputt",
+          "perf": "ist kaputtgegangen",
+          "unreg": true,
+          "bsp": "Der Drucker **ist** wieder **kaputtgegangen**."
+        },
+        {
+          "inf": "reparieren",
+          "en": "to repair",
+          "er": "repariert",
+          "prät": "reparierte",
+          "perf": "hat repariert",
+          "unreg": false,
+          "bsp": "Der Aufzug wird **repariert**."
+        },
+        {
+          "inf": "ausfallen",
+          "en": "to be cancelled",
+          "er": "fällt aus",
+          "prät": "fiel aus",
+          "perf": "ist ausgefallen",
+          "unreg": true,
+          "bsp": "Das Training **fällt** morgen **aus**."
+        },
+        {
+          "inf": "verschieben",
+          "en": "to postpone",
+          "er": "verschiebt",
+          "prät": "verschob",
+          "perf": "hat verschoben",
+          "unreg": true,
+          "bsp": "Können wir den Termin **verschieben**?"
+        },
+        {
+          "inf": "mitnehmen",
+          "en": "to take along",
+          "er": "nimmt mit",
+          "prät": "nahm mit",
+          "perf": "hat mitgenommen",
+          "unreg": true,
+          "bsp": "Ich **nehme** die Post **mit**."
+        },
+        {
+          "inf": "zurückbringen",
+          "en": "to bring back",
+          "er": "bringt zurück",
+          "prät": "brachte zurück",
+          "perf": "hat zurückgebracht",
+          "unreg": true,
+          "bsp": "Wann kann ich sie **zurückbringen**?"
+        },
+        {
+          "inf": "leihen",
+          "en": "to lend, to borrow",
+          "er": "leiht",
+          "prät": "lieh",
+          "perf": "hat geliehen",
+          "unreg": true,
+          "bsp": "Können Sie mir das **leihen**?"
+        },
+        {
+          "inf": "gießen",
+          "en": "to water",
+          "er": "gießt",
+          "prät": "goss",
+          "perf": "hat gegossen",
+          "unreg": true,
+          "bsp": "Können Sie meine Blumen **gießen**?"
+        },
+        {
+          "inf": "füttern",
+          "en": "to feed",
+          "er": "füttert",
+          "prät": "fütterte",
+          "perf": "hat gefüttert",
+          "unreg": false,
+          "bsp": "Können Sie unsere Katze **füttern**?"
+        },
+        {
+          "inf": "klingeln",
+          "en": "to ring",
+          "er": "klingelt",
+          "prät": "klingelte",
+          "perf": "hat geklingelt",
+          "unreg": false,
+          "bsp": "Sie **hat** am Abend **geklingelt**."
+        },
+        {
+          "inf": "regnen",
+          "en": "to rain",
+          "er": "regnet",
+          "prät": "regnete",
+          "perf": "hat geregnet",
+          "unreg": false,
+          "bsp": "Heute **regnet** es."
+        },
+        {
+          "inf": "scheinen",
+          "en": "to shine",
+          "er": "scheint",
+          "prät": "schien",
+          "perf": "hat geschienen",
+          "unreg": true,
+          "bsp": "Die Sonne **scheint**."
+        },
+        {
+          "inf": "ausschalten",
+          "en": "to switch off",
+          "er": "schaltet aus",
+          "prät": "schaltete aus",
+          "perf": "hat ausgeschaltet",
+          "unreg": false,
+          "bsp": "Handys bitte **ausschalten**."
+        }
+      ]
+    }
+  ],
+  "nomen": [
+    {
+      "gruppe": "Person und Familie",
+      "eintraege": [
+        {
+          "art": "der",
+          "wort": "Name",
+          "pl": "die Namen",
+          "en": "name"
+        },
+        {
+          "art": "der",
+          "wort": "Vorname",
+          "pl": "die Vornamen",
+          "en": "first name"
+        },
+        {
+          "art": "der",
+          "wort": "Familienname",
+          "pl": "die Familiennamen",
+          "en": "surname"
+        },
+        {
+          "art": "die",
+          "wort": "Familie",
+          "pl": "die Familien",
+          "en": "family"
+        },
+        {
+          "art": "die",
+          "wort": "Frau",
+          "pl": "die Frauen",
+          "en": "woman, wife"
+        },
+        {
+          "art": "der",
+          "wort": "Mann",
+          "pl": "die Männer",
+          "en": "man, husband"
+        },
+        {
+          "art": "das",
+          "wort": "Kind",
+          "pl": "die Kinder",
+          "en": "child"
+        },
+        {
+          "art": "der",
+          "wort": "Sohn",
+          "pl": "die Söhne",
+          "en": "son"
+        },
+        {
+          "art": "die",
+          "wort": "Tochter",
+          "pl": "die Töchter",
+          "en": "daughter"
+        },
+        {
+          "art": "die",
+          "wort": "Eltern",
+          "pl": "die Eltern",
+          "en": "parents"
+        },
+        {
+          "art": "der",
+          "wort": "Freund",
+          "pl": "die Freunde",
+          "en": "friend"
+        },
+        {
+          "art": "die",
+          "wort": "Freundin",
+          "pl": "die Freundinnen",
+          "en": "friend (f)"
+        },
+        {
+          "art": "der",
+          "wort": "Nachbar",
+          "pl": "die Nachbarn",
+          "en": "neighbour"
+        },
+        {
+          "art": "die",
+          "wort": "Kollegin",
+          "pl": "die Kolleginnen",
+          "en": "colleague (f)"
+        },
+        {
+          "art": "der",
+          "wort": "Beruf",
+          "pl": "die Berufe",
+          "en": "occupation"
+        }
+      ]
+    },
+    {
+      "gruppe": "Wohnen",
+      "eintraege": [
+        {
+          "art": "die",
+          "wort": "Wohnung",
+          "pl": "die Wohnungen",
+          "en": "flat"
+        },
+        {
+          "art": "das",
+          "wort": "Haus",
+          "pl": "die Häuser",
+          "en": "house"
+        },
+        {
+          "art": "das",
+          "wort": "Zimmer",
+          "pl": "die Zimmer",
+          "en": "room"
+        },
+        {
+          "art": "die",
+          "wort": "Küche",
+          "pl": "die Küchen",
+          "en": "kitchen"
+        },
+        {
+          "art": "das",
+          "wort": "Bad",
+          "pl": "die Bäder",
+          "en": "bathroom"
+        },
+        {
+          "art": "der",
+          "wort": "Flur",
+          "pl": "die Flure",
+          "en": "hallway"
+        },
+        {
+          "art": "der",
+          "wort": "Keller",
+          "pl": "die Keller",
+          "en": "cellar"
+        },
+        {
+          "art": "der",
+          "wort": "Garten",
+          "pl": "die Gärten",
+          "en": "garden"
+        },
+        {
+          "art": "die",
+          "wort": "Treppe",
+          "pl": "die Treppen",
+          "en": "stairs"
+        },
+        {
+          "art": "der",
+          "wort": "Aufzug",
+          "pl": "die Aufzüge",
+          "en": "lift"
+        },
+        {
+          "art": "der",
+          "wort": "Schlüssel",
+          "pl": "die Schlüssel",
+          "en": "key"
+        },
+        {
+          "art": "die",
+          "wort": "Straße",
+          "pl": "die Straßen",
+          "en": "street"
+        },
+        {
+          "art": "die",
+          "wort": "Hausnummer",
+          "pl": "die Hausnummern",
+          "en": "house number"
+        },
+        {
+          "art": "die",
+          "wort": "Postleitzahl",
+          "pl": "die Postleitzahlen",
+          "en": "postcode"
+        },
+        {
+          "art": "der",
+          "wort": "Hausmeister",
+          "pl": "die Hausmeister",
+          "en": "caretaker"
+        }
+      ]
+    },
+    {
+      "gruppe": "Einkaufen, Geld und Papiere",
+      "eintraege": [
+        {
+          "art": "das",
+          "wort": "Geld",
+          "pl": "die Geldbeträge",
+          "en": "money"
+        },
+        {
+          "art": "der",
+          "wort": "Euro",
+          "pl": "die Euro",
+          "en": "euro"
+        },
+        {
+          "art": "der",
+          "wort": "Preis",
+          "pl": "die Preise",
+          "en": "price"
+        },
+        {
+          "art": "die",
+          "wort": "Kasse",
+          "pl": "die Kassen",
+          "en": "till"
+        },
+        {
+          "art": "die",
+          "wort": "Karte",
+          "pl": "die Karten",
+          "en": "card, ticket"
+        },
+        {
+          "art": "das",
+          "wort": "Geschäft",
+          "pl": "die Geschäfte",
+          "en": "shop"
+        },
+        {
+          "art": "der",
+          "wort": "Markt",
+          "pl": "die Märkte",
+          "en": "market"
+        },
+        {
+          "art": "das",
+          "wort": "Brot",
+          "pl": "die Brote",
+          "en": "bread"
+        },
+        {
+          "art": "das",
+          "wort": "Formular",
+          "pl": "die Formulare",
+          "en": "form"
+        },
+        {
+          "art": "der",
+          "wort": "Ausweis",
+          "pl": "die Ausweise",
+          "en": "ID card"
+        },
+        {
+          "art": "die",
+          "wort": "Anmeldung",
+          "pl": "die Anmeldungen",
+          "en": "registration"
+        },
+        {
+          "art": "das",
+          "wort": "Rezept",
+          "pl": "die Rezepte",
+          "en": "prescription"
+        },
+        {
+          "art": "die",
+          "wort": "Nummer",
+          "pl": "die Nummern",
+          "en": "number"
+        },
+        {
+          "art": "das",
+          "wort": "Datum",
+          "pl": "die Daten",
+          "en": "date"
+        },
+        {
+          "art": "die",
+          "wort": "Unterschrift",
+          "pl": "die Unterschriften",
+          "en": "signature"
+        }
+      ]
+    },
+    {
+      "gruppe": "Unterwegs",
+      "eintraege": [
+        {
+          "art": "der",
+          "wort": "Bus",
+          "pl": "die Busse",
+          "en": "bus"
+        },
+        {
+          "art": "der",
+          "wort": "Zug",
+          "pl": "die Züge",
+          "en": "train"
+        },
+        {
+          "art": "das",
+          "wort": "Auto",
+          "pl": "die Autos",
+          "en": "car"
+        },
+        {
+          "art": "das",
+          "wort": "Fahrrad",
+          "pl": "die Fahrräder",
+          "en": "bicycle"
+        },
+        {
+          "art": "die",
+          "wort": "Fahrkarte",
+          "pl": "die Fahrkarten",
+          "en": "ticket"
+        },
+        {
+          "art": "die",
+          "wort": "Haltestelle",
+          "pl": "die Haltestellen",
+          "en": "stop"
+        },
+        {
+          "art": "der",
+          "wort": "Bahnhof",
+          "pl": "die Bahnhöfe",
+          "en": "station"
+        },
+        {
+          "art": "das",
+          "wort": "Gleis",
+          "pl": "die Gleise",
+          "en": "platform"
+        },
+        {
+          "art": "der",
+          "wort": "Weg",
+          "pl": "die Wege",
+          "en": "way"
+        },
+        {
+          "art": "das",
+          "wort": "Paket",
+          "pl": "die Pakete",
+          "en": "parcel"
+        }
+      ]
+    },
+    {
+      "gruppe": "Zeit",
+      "eintraege": [
+        {
+          "art": "der",
+          "wort": "Tag",
+          "pl": "die Tage",
+          "en": "day"
+        },
+        {
+          "art": "die",
+          "wort": "Woche",
+          "pl": "die Wochen",
+          "en": "week"
+        },
+        {
+          "art": "der",
+          "wort": "Monat",
+          "pl": "die Monate",
+          "en": "month"
+        },
+        {
+          "art": "das",
+          "wort": "Jahr",
+          "pl": "die Jahre",
+          "en": "year"
+        },
+        {
+          "art": "die",
+          "wort": "Stunde",
+          "pl": "die Stunden",
+          "en": "hour"
+        },
+        {
+          "art": "die",
+          "wort": "Minute",
+          "pl": "die Minuten",
+          "en": "minute"
+        },
+        {
+          "art": "der",
+          "wort": "Morgen",
+          "pl": "die Morgen",
+          "en": "morning"
+        },
+        {
+          "art": "der",
+          "wort": "Abend",
+          "pl": "die Abende",
+          "en": "evening"
+        },
+        {
+          "art": "die",
+          "wort": "Zeit",
+          "pl": "die Zeiten",
+          "en": "time"
+        },
+        {
+          "art": "der",
+          "wort": "Termin",
+          "pl": "die Termine",
+          "en": "appointment"
+        },
+        {
+          "art": "der",
+          "wort": "Geburtstag",
+          "pl": "die Geburtstage",
+          "en": "birthday"
+        },
+        {
+          "art": "der",
+          "wort": "Urlaub",
+          "pl": "die Urlaube",
+          "en": "holiday"
+        }
+      ]
+    },
+    {
+      "gruppe": "Lernen, Arbeit und Gesundheit",
+      "eintraege": [
+        {
+          "art": "der",
+          "wort": "Kurs",
+          "pl": "die Kurse",
+          "en": "course"
+        },
+        {
+          "art": "der",
+          "wort": "Unterricht",
+          "pl": "die Unterrichtsstunden",
+          "en": "lessons"
+        },
+        {
+          "art": "das",
+          "wort": "Heft",
+          "pl": "die Hefte",
+          "en": "exercise book"
+        },
+        {
+          "art": "der",
+          "wort": "Stift",
+          "pl": "die Stifte",
+          "en": "pen"
+        },
+        {
+          "art": "das",
+          "wort": "Buch",
+          "pl": "die Bücher",
+          "en": "book"
+        },
+        {
+          "art": "die",
+          "wort": "Arbeit",
+          "pl": "die Arbeiten",
+          "en": "work"
+        },
+        {
+          "art": "das",
+          "wort": "Büro",
+          "pl": "die Büros",
+          "en": "office"
+        },
+        {
+          "art": "der",
+          "wort": "Chef",
+          "pl": "die Chefs",
+          "en": "boss"
+        },
+        {
+          "art": "die",
+          "wort": "Pause",
+          "pl": "die Pausen",
+          "en": "break"
+        },
+        {
+          "art": "der",
+          "wort": "Arzt",
+          "pl": "die Ärzte",
+          "en": "doctor"
+        },
+        {
+          "art": "die",
+          "wort": "Praxis",
+          "pl": "die Praxen",
+          "en": "surgery"
+        },
+        {
+          "art": "die",
+          "wort": "Apotheke",
+          "pl": "die Apotheken",
+          "en": "pharmacy"
+        },
+        {
+          "art": "das",
+          "wort": "Medikament",
+          "pl": "die Medikamente",
+          "en": "medicine"
+        }
+      ]
+    },
+    {
+      "gruppe": "Freizeit und Essen",
+      "eintraege": [
+        {
+          "art": "das",
+          "wort": "Essen",
+          "pl": "die Essen",
+          "en": "food, meal"
+        },
+        {
+          "art": "das",
+          "wort": "Getränk",
+          "pl": "die Getränke",
+          "en": "drink"
+        },
+        {
+          "art": "der",
+          "wort": "Kaffee",
+          "pl": "die Kaffees",
+          "en": "coffee"
+        },
+        {
+          "art": "das",
+          "wort": "Wasser",
+          "pl": "die Wasser",
+          "en": "water"
+        },
+        {
+          "art": "der",
+          "wort": "Kuchen",
+          "pl": "die Kuchen",
+          "en": "cake"
+        },
+        {
+          "art": "das",
+          "wort": "Kino",
+          "pl": "die Kinos",
+          "en": "cinema"
+        },
+        {
+          "art": "die",
+          "wort": "Musik",
+          "pl": "die Musikrichtungen",
+          "en": "music"
+        },
+        {
+          "art": "der",
+          "wort": "Sport",
+          "pl": "die Sportarten",
+          "en": "sport"
+        },
+        {
+          "art": "das",
+          "wort": "Schwimmbad",
+          "pl": "die Schwimmbäder",
+          "en": "swimming pool"
+        },
+        {
+          "art": "die",
+          "wort": "Bibliothek",
+          "pl": "die Bibliotheken",
+          "en": "library"
+        },
+        {
+          "art": "das",
+          "wort": "Fest",
+          "pl": "die Feste",
+          "en": "party"
+        },
+        {
+          "art": "das",
+          "wort": "Wetter",
+          "pl": "die Wetterlagen",
+          "en": "weather"
+        },
+        {
+          "art": "der",
+          "wort": "Regen",
+          "pl": "die Regenfälle",
+          "en": "rain"
+        },
+        {
+          "art": "das",
+          "wort": "Tier",
+          "pl": "die Tiere",
+          "en": "animal"
+        },
+        {
+          "art": "die",
+          "wort": "Katze",
+          "pl": "die Katzen",
+          "en": "cat"
+        },
+        {
+          "art": "der",
+          "wort": "Hund",
+          "pl": "die Hunde",
+          "en": "dog"
+        },
+        {
+          "art": "die",
+          "wort": "Sonne",
+          "pl": "die Sonnen",
+          "en": "sun"
+        },
+        {
+          "art": "der",
+          "wort": "Film",
+          "pl": "die Filme",
+          "en": "film"
+        },
+        {
+          "art": "das",
+          "wort": "Handy",
+          "pl": "die Handys",
+          "en": "mobile phone"
+        },
+        {
+          "art": "der",
+          "wort": "Computer",
+          "pl": "die Computer",
+          "en": "computer"
+        }
+      ]
+    }
+  ],
+  "adjektive": [
+    {
+      "wort": "gut",
+      "gegenteil": "schlecht",
+      "en": "good / bad"
+    },
+    {
+      "wort": "groß",
+      "gegenteil": "klein",
+      "en": "big / small"
+    },
+    {
+      "wort": "alt",
+      "gegenteil": "neu",
+      "en": "old / new"
+    },
+    {
+      "wort": "alt",
+      "gegenteil": "jung",
+      "en": "old / young (people)"
+    },
+    {
+      "wort": "teuer",
+      "gegenteil": "billig",
+      "en": "expensive / cheap"
+    },
+    {
+      "wort": "warm",
+      "gegenteil": "kalt",
+      "en": "warm / cold"
+    },
+    {
+      "wort": "früh",
+      "gegenteil": "spät",
+      "en": "early / late"
+    },
+    {
+      "wort": "lang",
+      "gegenteil": "kurz",
+      "en": "long / short"
+    },
+    {
+      "wort": "richtig",
+      "gegenteil": "falsch",
+      "en": "right / wrong"
+    },
+    {
+      "wort": "offen",
+      "gegenteil": "geschlossen",
+      "en": "open / closed"
+    },
+    {
+      "wort": "gesund",
+      "gegenteil": "krank",
+      "en": "healthy / ill"
+    },
+    {
+      "wort": "leicht",
+      "gegenteil": "schwer",
+      "en": "easy / difficult"
+    },
+    {
+      "wort": "schnell",
+      "gegenteil": "langsam",
+      "en": "fast / slow"
+    },
+    {
+      "wort": "nass",
+      "gegenteil": "trocken",
+      "en": "wet / dry"
+    },
+    {
+      "wort": "voll",
+      "gegenteil": "leer",
+      "en": "full / empty"
+    },
+    {
+      "wort": "kaputt",
+      "gegenteil": "ganz",
+      "en": "broken / intact"
+    },
+    {
+      "wort": "frei",
+      "gegenteil": "besetzt",
+      "en": "free / occupied"
+    },
+    {
+      "wort": "nett",
+      "gegenteil": "unfreundlich",
+      "en": "kind / unfriendly"
+    }
+  ],
+  "kleineWoerter": [
+    {
+      "gruppe": "Fragewörter",
+      "woerter": "wer · was · wo · wohin · woher · wann · wie · warum · welcher · wie viel · wie lange · wie oft"
+    },
+    {
+      "gruppe": "Verbinden — Verb bleibt an Position 2",
+      "woerter": "und · aber · oder · denn"
+    },
+    {
+      "gruppe": "Verbinden — Verb ans Satzende",
+      "woerter": "weil · dass · wenn"
+    },
+    {
+      "gruppe": "Wie oft",
+      "woerter": "immer · oft · manchmal · selten · nie · jeden Tag · einmal in der Woche"
+    },
+    {
+      "gruppe": "Zeit",
+      "woerter": "heute · morgen · gestern · jetzt · später · zuerst · dann · am Montag · um acht · im Mai"
+    },
+    {
+      "gruppe": "Die kleinen Wörter, die eine Aufgabe entscheiden",
+      "woerter": "nur · nicht · kein · schon · noch · erst · auch · wieder · bitte · leider"
+    }
+  ]
+}

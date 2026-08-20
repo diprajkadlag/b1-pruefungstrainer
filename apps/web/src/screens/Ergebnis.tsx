@@ -329,6 +329,28 @@ export function Ergebnis({
                     ))}
                   </ul>
                 )}
+                {a.formular.length > 0 && (
+                  <table className="formular__loesung">
+                    <thead>
+                      <tr>
+                        <th>Feld</th>
+                        <th>Richtig</th>
+                        <th>Warum</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {a.formular.map((f) => (
+                        <tr key={f.feld}>
+                          <td>{f.feld}</td>
+                          <td>
+                            <strong>{f.loesung}</strong>
+                          </td>
+                          <td>{f.begruendung}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
                 {a.musterloesungen.map((m) => (
                   <article key={m.niveau} className="muster">
                     <h5>Musterlösung — {m.niveau}</h5>

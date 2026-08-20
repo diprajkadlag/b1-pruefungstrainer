@@ -5,7 +5,7 @@
  * Python validator enforces it on every content change. Keep them in step.
  */
 
-export type Stufe = 'A2' | 'B1' | 'B2';
+export type Stufe = 'A1' | 'A2' | 'B1' | 'B2';
 export type Variante = 'erwachsene' | 'jugendliche';
 export type Niveau = 'mittel-leicht' | 'mittel';
 
@@ -99,18 +99,43 @@ export interface HoerenTeil {
   items: OeffentlichesItem[];
 }
 
+/** One blank on the A1 form, with the answer and where it comes from. */
+export interface FormularFeld {
+  feld: string;
+  loesung: string;
+  begruendung: string;
+}
+
 export interface SchreibenAufgabe {
   nummer: number;
-  typ: 'email_informell' | 'forumsbeitrag' | 'email_halbformell' | 'nachricht_formell';
+  typ:
+    | 'formular'
+    | 'kurzmitteilung'
+    | 'sms'
+    | 'email_informell'
+    | 'forumsbeitrag'
+    | 'email_halbformell'
+    | 'nachricht_formell';
   situation: string;
   impuls?: string;
   aufgabenstellung: string;
   leitpunkte: string[];
   anrede?: string;
-  /** A target at B1, a minimum at B2 — which is why the app labels it per level. */
-  woerter: 40 | 80 | 100 | 150;
+  /**
+   * How long the text should be, read differently at every level: a target at
+   * A1 and B1, a range at A2 (with `woerterMax`), a minimum at B2. `0` on a
+   * form, which has no word count at all.
+   */
+  woerter: number;
+  /** Upper end of the range, where the level states one. A2 only. */
+  woerterMax?: number;
   zeitMinuten: number;
   punkte: number;
+  /**
+   * A1 Schreiben Teil 1 only: the five blanks in the form. Present exactly
+   * where `typ` is `formular`, and the task has no model answers when it is.
+   */
+  formular?: FormularFeld[];
 }
 
 export interface SprechenThema {
@@ -224,6 +249,8 @@ export interface Schluesseldaten {
     nummer: number;
     redemittel: string[];
     musterloesungen: { niveau: string; text: string; kommentar: string }[];
+    /** A1 Schreiben Teil 1: the five right entries, with where each comes from. */
+    formular: FormularFeld[];
   }[];
   sprechen: {
     nummer: number;

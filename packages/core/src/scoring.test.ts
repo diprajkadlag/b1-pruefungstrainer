@@ -260,3 +260,76 @@ describe('A2 scoring', () => {
     expect(gesamtergebnis({ lesen: 80 }, 'B2').gesamt).toBeNull();
   });
 });
+
+/**
+ * A1 is the second non-modular level, and it is not a copy of A2. Its parts are
+ * recorded as raw points out of 15 and multiplied by 1.66 only when the overall
+ * score is worked out, and it sets exactly one pass condition where A2 sets
+ * three.
+ */
+describe('A1 scoring', () => {
+  it('records a part as raw points out of 15', () => {
+    const keys = schluesselFuer('lesen', { 1: 'a', 2: 'b', 3: 'c', 4: 'a', 5: 'b' });
+    const erg = bewerteModul(
+      'lesen',
+      { 1: 'a', 2: 'b', 3: 'c', 4: 'a', 5: 'b' },
+      keys,
+      'A1',
+    );
+    expect(erg.maximum).toBe(15);
+    expect(erg.punkte).toBe(15);
+    expect(erg.bestanden).toBeNull();
+    expect(erg.note).toBeNull();
+  });
+
+  it('multiplies by 1.66 and rounds only the total', () => {
+    // 60 raw x 1.66 is 99.6, which the regulations round to 100 — not to 99,
+    // and not by rounding each part to 25 first.
+    const voll = gesamtergebnis(
+      { lesen: 15, hoeren: 15, schreiben: 15, sprechen: 15 },
+      'A1',
+    );
+    expect(voll.gesamt?.punkte).toBe(100);
+    expect(voll.gesamt?.bestanden).toBe(true);
+  });
+
+  it('puts the pass mark where 36 raw points fall', () => {
+    // 36 x 1.66 = 59.76, which rounds to 60 and passes. 35 gives 58.1 and does
+    // not. That one raw point is the whole boundary.
+    const knapp = gesamtergebnis(
+      { lesen: 9, hoeren: 9, schreiben: 9, sprechen: 9 },
+      'A1',
+    );
+    expect(knapp.gesamt?.punkte).toBe(60);
+    expect(knapp.gesamt?.bestanden).toBe(true);
+
+    const daneben = gesamtergebnis(
+      { lesen: 9, hoeren: 9, schreiben: 9, sprechen: 8 },
+      'A1',
+    );
+    expect(daneben.gesamt?.punkte).toBe(58);
+    expect(daneben.gesamt?.bestanden).toBe(false);
+    expect(daneben.gesamt?.maengel).toHaveLength(1);
+  });
+
+  it('sets no floor for the written parts or for Sprechen', () => {
+    // A candidate with nothing at all in Sprechen still passes A1 on 60 points,
+    // which is exactly what separates it from A2. The regulations name one
+    // condition and this is it.
+    const ohneSprechen = gesamtergebnis(
+      { lesen: 15, hoeren: 15, schreiben: 15, sprechen: 0 },
+      'A1',
+    );
+    expect(ohneSprechen.gesamt?.punkte).toBe(75);
+    expect(ohneSprechen.gesamt?.bestanden).toBe(true);
+    expect(ohneSprechen.gesamt?.maengel).toEqual([]);
+
+    // The same shape at A2 fails, on the Sprechen floor.
+    const a2 = gesamtergebnis(
+      { lesen: 25, hoeren: 25, schreiben: 25, sprechen: 0 },
+      'A2',
+    );
+    expect(a2.gesamt?.bestanden).toBe(false);
+    expect(a2.gesamt?.maengel[0]).toContain('Sprechen');
+  });
+});

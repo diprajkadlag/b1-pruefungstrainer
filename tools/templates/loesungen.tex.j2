@@ -18,10 +18,7 @@ allen Wortformen und ein Grammatik-Teil mit Übungen.}
 
 \vspace{0.6em}
 \noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
-\small\textbf{Bewertung.} Lesen und Hören: je 30 Aufgaben, jede Aufgabe
-1 Punkt. Die Rohpunkte werden auf 100 Punkte umgerechnet
-(Punkte $=$ richtige Aufgaben $\times\ 10/3$). Bestanden ab \textbf{60 Punkten}
-pro Modul.\\[3pt]
+\small\textbf{Bewertung.} << bewertung.rezeptiv >> << bewertung.grenze >>\\[3pt]
 \textbf{sehr gut} 100–90 \quad \textbf{gut} 89–80 \quad
 \textbf{befriedigend} 79–70 \quad \textbf{ausreichend} 69–60 \quad
 \textbf{nicht bestanden} unter 60
@@ -107,8 +104,19 @@ pro Modul.\\[3pt]
 
 <% for a in schreiben.aufgaben %>
 \vspace{0.7em}
-{\large\bfseries Aufgabe << a.nummer >>}\quad{\color{pruefmute}\small << a | aufgabenname | tex >> · ca. << a.woerter >> Wörter · << a.punkte >> Punkte}\par
+{\large\bfseries Aufgabe << a.nummer >>}\quad{\color{pruefmute}\small << a | aufgabenname | tex >> · <% if a.get('formular') %>5 Felder<% else %>ca. << a.woerter >> Wörter<% endif %> · << a.punkte >> Punkte}\par
 {\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
+
+<# The A1 form has no model answer: it has five right entries, each with the
+   line in the situation that gives it away. #>
+<% if a.get('formular') %>
+\begin{itemize}[leftmargin=1.4em,itemsep=3pt,topsep=3pt,label=\textbullet]
+<% for f in a.get('formular') %>
+\item \textbf{<< f.feld | tex >>:} << f.loesung | tex >>\\
+{\small\color{pruefmute}<< f.begruendung | tex >>}
+<% endfor %>
+\end{itemize}
+<% endif %>
 
 <% if a.get('redemittel') %>
 {\bfseries\small Nützliche Redemittel}
@@ -118,7 +126,7 @@ pro Modul.\\[3pt]
 \end{itemize}
 <% endif %>
 
-<% for m in a.musterloesungen | sort(attribute='niveau') %>
+<% for m in a.get('musterloesungen', []) | sort(attribute='niveau') %>
 \vspace{0.3em}
 \pruefungstext{Musterlösung — << m.niveau | tex >>}{}{<< m.text | texpar >>}
 \warum{\textbf{Kommentar:} << m.kommentar | tex >>}
@@ -127,10 +135,7 @@ pro Modul.\\[3pt]
 
 \vspace{0.8em}
 \noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
-\small\textbf{Bewertungsraster Schreiben.} Aufgaben 1 und 2: je 10 Punkte für
-Erfüllung, Kohärenz, Wortschatz und Strukturen (40 Punkte).
-Aufgabe 3: 4 Punkte für Erfüllung, 4 für Kohärenz, 6 für Wortschatz,
-6 für Strukturen (20 Punkte). Zusammen 100 Punkte.\\[3pt]
+\small\textbf{Bewertungsraster Schreiben.} << bewertung.schreiben >>\\[3pt]
 \textbf{Wichtig:} Fehlt ein Leitpunkt vollständig, kann die Aufgabe bei
 „Erfüllung“ nicht mehr als die Hälfte der Punkte bekommen.
 \end{minipage}}
@@ -156,18 +161,13 @@ Aufgabe 3: 4 Punkte für Erfüllung, 4 für Kohärenz, 6 für Wortschatz,
 <% for p in teil.get('partnerSkript') or [] %>
 \noindent\makebox[6em][l]{\small\bfseries\color{pruefmute}Partner}%
 \begin{minipage}[t]{\dimexpr\linewidth-6em\relax}<< p.text | tex >>\par
-{\small\color{pruefmute}$
-ightarrow$ << p.get('hinweis') | default('') | tex >> (ca. << p.wartenSek >> Sekunden)}\end{minipage}\par\vspace{3pt}
+{\small\color{pruefmute}$\rightarrow$ << p.get('hinweis') | default('') | tex >> (ca. << p.wartenSek >> Sekunden)}\end{minipage}\par\vspace{3pt}
 <% endfor %>
 <% endfor %>
 
 \vspace{0.6em}
 \noindent\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
-\small\textbf{Bewertungsraster Sprechen.}
-Teil 1 (28): Erfüllung 8, Interaktion 4, Wortschatz 8, Strukturen 8.
-Teil 2 (40): Erfüllung 12, Interaktion 4, Wortschatz 12, Strukturen 12.
-Teil 3 (16): Erfüllung 16.
-Aussprache über alle Teile: 16. Zusammen 100 Punkte.
+\small\textbf{Bewertungsraster Sprechen.} << bewertung.sprechen >>
 \end{minipage}}
 
 %% ---------------- Glossar ----------------

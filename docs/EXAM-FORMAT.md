@@ -5,17 +5,101 @@ level it claims to test. Every number it enforces is written down here, with
 where it comes from. Change a number in the validator and change it here in the
 same commit, or the next person cannot tell a rule from a typo.
 
-Three levels are supported. They share a pipeline and almost nothing else:
-**A2** is short, concrete and — unlike the other two — certified as a single
-examination rather than four separate modules; **B1** has three writing tasks
-and five speaking slides; **B2** has two writing tasks, a debate, and three
-matching task types B1 never uses.
+Four levels are supported. They share a pipeline and almost nothing else.
+**A1** and **A2** are certified as a single examination; **B1** and **B2** are
+modular, and each of their four modules is passed on its own. A1 has three
+parts per receptive module rather than four, answers one reading task with just
+*a* or *b*, and opens its writing with a **form** rather than a text. A2 is
+short and concrete. B1 has three writing tasks and five speaking slides. B2 has
+two writing tasks, a debate, and three matching task types B1 never uses.
 
 > **On what is being copied.** A format is a published set of facts: how many
 > parts, how long, how many items, heard once or twice. Following it is what
 > makes a practice paper useful. The *content* — texts, items, scripts — is
 > written from scratch for this project and is never taken from a model set, a
 > past paper or a preparation book. See [AUTHORING.md](AUTHORING.md).
+
+---
+
+## A1
+
+The shortest paper in the collection, and the only one that asks a candidate to
+fill in a **form**. Nothing runs long: three parts per receptive module, fifteen
+items each, and a written text of about thirty words.
+
+| Modul | Zeit | Teile | Rohpunkte |
+|---|---|---|---|
+| Hören | ca. 20 min | 3 | 6 + 4 + 5 = **15 items** |
+| Lesen | ca. 25 min | 3 | 5 + 5 + 5 = **15 items** |
+| Schreiben | ca. 20 min | 2 | 5 (Formular) + 10 (Text) = **15** |
+| Sprechen | ca. 15 min | 3 | 3 + 6 + 6 = **15** |
+
+### A1 is one examination, and the arithmetic is its own
+
+Sixty raw points in total, fifteen from each part. Every one of them is
+**multiplied by 1.66** and the result rounded to whole points, which turns 60
+into 100 — 75 for the written parts and 25 for Sprechen. The pass mark is
+**60 of 100**, and there is exactly one condition:
+
+> Die Prüfung ist bestanden, wenn mindestens 60 Punkte (60 % der
+> Maximalpunktzahl) erreicht und alle Prüfungsteile abgelegt wurden.
+
+That is the whole rule. A1 has **no** separate floor for the written parts and
+none for Sprechen — which is what distinguishes it from A2, where three
+conditions must hold at once. The regulations do note that a candidate below 35
+written points cannot reach 60 even with a perfect Sprechen, but that is advice
+about whether to sit the oral, not a fourth pass condition, and this project
+does not treat it as one.
+
+### Hören
+
+| Teil | Aufgabe | Items | Gehört | Item-Typ |
+|---|---|---|---|---|
+| 1 | Six short exchanges and announcements | 6 | **twice** | `multiple_choice` |
+| 2 | Four public announcements | 4 | once | `richtig_falsch` |
+| 3 | Five answerphone messages | 5 | **twice** | `multiple_choice` |
+
+Only Teil 2 is heard once. Teil 1 and Teil 3 are both heard twice, which is a
+third repeat pattern again — A2 and B1 repeat parts 1 and 4, B2 repeats 2 and 4.
+
+### Lesen
+
+| Teil | Aufgabe | Items | Richtzeit | Item-Typ |
+|---|---|---|---|---|
+| 1 | Two short personal messages | 5 | 8 min | `richtig_falsch` |
+| 2 | Where would you find this? Two small ads per item | 5 | 9 min | `zwei_optionen` |
+| 3 | Signs and notices | 5 | 8 min | `richtig_falsch` |
+
+**Teil 2 answers `a` or `b` and nothing else.** Each item names a need and
+offers two places; one of them has what the person wants. It is the only task in
+the whole collection with two options rather than three, and `zwei_optionen`
+exists as its own item type so that no renderer has to guess.
+
+### Schreiben
+
+| Teil | Aufgabe | Punkte | Zeit |
+|---|---|---|---|
+| 1 | Fill in five gaps in a form | 5 | 8 min |
+| 2 | A short message of about 30 words | 10 | 12 min |
+
+**Teil 1 is not free writing.** The candidate is given a short situation and a
+form with five fields left blank, and each correct entry is worth one point.
+The paper stores it as `formular`: a list of fields, each with its label, the
+expected answer and what makes it right. Teil 2 is marked on three criteria at
+3 points each plus one at 1, which is where the ten comes from.
+
+### Sprechen
+
+| Teil | Aufgabe | Punkte |
+|---|---|---|
+| 1 | Introduce yourself from a set of keywords | 3 |
+| 2 | Ask for and give information, on two subjects | 6 |
+| 3 | Make a request from a picture card and respond to one | 6 |
+
+Teil 1 works from single-word cards (`karten`, as at A2). Teil 2 gives each
+candidate a subject word to ask about and answer on — the paper stores the pair
+as `themenkarten`. Teil 3 gives an object to ask for; there are no slides and no
+preparation time.
 
 ---
 
@@ -251,14 +335,14 @@ actually argues the other side.
 
 ## What both levels enforce
 
-- Items numbered 1–20 (A2) or 1–30 (B1, B2) exactly once per module, in part
-  order.
+- Items numbered 1–15 (A1), 1–20 (A2) or 1–30 (B1, B2) exactly once per
+  module, in part order.
 - Every scored item carries `beleg`: the one sentence that settles it.
 - Every `glossar` lemma really occurs in the paper; every `grammatik.belegSatz`
   is a real sentence from it.
 - Speaking topics never repeat across papers of the same level.
-- `meta.stufe` matches the folder name: `pruefung-NN` is B1, `a2-pruefung-NN`
-  is A2, `b2-pruefung-NN` is B2. The B1 papers are unprefixed because they
+- `meta.stufe` matches the folder name: `pruefung-NN` is B1, `a1-pruefung-NN`
+  is A1, `a2-pruefung-NN` is A2, `b2-pruefung-NN` is B2. The B1 papers are unprefixed because they
   shipped before a second level existed and renaming them would strand attempts
   already saved in a learner's browser.
 
@@ -295,14 +379,20 @@ for the module; `sprechtempoProzent` shifts that down for a gentler paper
 ## Sources
 
 The structure above comes from the Goethe-Institut's own published material for
-each level: the online model sets ([A2](https://bfu.goethe.de/a2_mod_2MX5/),
+each level: the online model sets ([A1](https://bfu.goethe.de/a1_sd1/),
+[A2](https://bfu.goethe.de/a2_mod_2MX5/),
 [B2](https://bfu.goethe.de/b2_mod_2MX6/), which list every part with its item
 numbers and repeat count), the downloadable model and practice sets
 ([A2 Modellsatz](https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Modellsatz_Erwachsene.pdf),
 [A2 Übungssatz](https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Uebungssatz_Erwachsene.pdf)
 — both carry the *Prüfungsteile im Überblick* table the A2 numbers above are
-taken from, and the Bewertungsbogen the A2 point split comes from), and the
-Durchführungsbestimmungen for the marking maxima — which
+taken from, and the Bewertungsbogen the A2 point split comes from;
+[A1 Modellsatz](https://www.goethe.de/pro/relaunch/prf/materialien/A1_sd1/sd_1_modellsatz.pdf),
+whose Antwortbogen gives the item ranges for every A1 part), and the
+Durchführungsbestimmungen for the marking maxima —
+[A1](https://www.goethe.de/pro/relaunch/prf/de/Durchfuehrungsbestimmungen_A1_Start_Deutsch_1.pdf)
+§ 6.1 and § 6.3 are where the factor 1.66 and the single 60-point pass condition
+come from — which
 are also where the modular structure of the certificate comes from, and with it
 the fact that the level has no examination-side subdivision. Only the format was
 taken from these — never a text, an item or a script.

@@ -1,0 +1,1574 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "a1-pruefung-01",
+    "stufe": "A1",
+    "variante": "erwachsene",
+    "contentVersion": "1.0.0",
+    "autor": "GermanExamTrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true,
+    "titel": "Übungsprüfung A1 1 — Wohnen, Nachbarn und Termine",
+    "niveau": "mittel-leicht",
+    "sprechtempoProzent": -8,
+    "themen": [
+      "Nachrichten an Nachbarn",
+      "Auskunft im Internet",
+      "Schilder im Alltag",
+      "Termine und Verabredungen",
+      "Durchsagen unterwegs",
+      "Anmeldung in der Bibliothek"
+    ]
+  },
+  "lesen": {
+    "zeitMinuten": 25,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurzmitteilungen",
+        "anweisung": "Lesen Sie die beiden Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.",
+        "richtzeitMinuten": 8,
+        "texte": [
+          {
+            "id": "text_1_1",
+            "titel": "Nachricht an die Nachbarin",
+            "quelle": "Zettel im Hausflur",
+            "inhalt": "Liebe Frau Osterloh,\n\nich bin ab Montag für eine Woche bei meiner Schwester in Hamburg. Können Sie bitte meine Blumen gießen? Der Schlüssel liegt wie immer bei Frau Pelz im ersten Stock.\n\nDie Post nehme ich nicht mit. Legen Sie sie einfach auf den Tisch in der Küche.\n\nVielen Dank und bis Sonntag!\nIhre Nadja Sedlmeier"
+          },
+          {
+            "id": "text_1_2",
+            "titel": "Nachricht von Jonas",
+            "quelle": "Kurznachricht",
+            "inhalt": "Hallo Tobias,\n\nwir treffen uns am Samstag um vier vor dem Kino, nicht um drei. Der Film fängt erst um halb fünf an.\n\nBring bitte das Buch mit, das du dir letzte Woche geliehen hast. Und kannst du Melike anrufen? Ich habe ihre Nummer nicht.\n\nBis Samstag!\nJonas"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Frau Sedlmeier fährt nach Hamburg.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Sie schreibt es im ersten Satz.",
+            "en": "Worked example, so you can see how the two texts are used."
+          }
+        },
+        "items": [
+          {
+            "nr": 1,
+            "typ": "richtig_falsch",
+            "textId": "text_1_1",
+            "frage": "Frau Osterloh soll die Blumen gießen.",
+            "loesung": "richtig",
+            "beleg": "Können Sie bitte meine Blumen gießen?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das ist die Bitte, um die es in der Nachricht geht.",
+              "en": "The question is asked directly, in one short sentence."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "richtig_falsch",
+            "textId": "text_1_1",
+            "frage": "Der Schlüssel ist bei Frau Sedlmeier.",
+            "loesung": "falsch",
+            "beleg": "Der Schlüssel liegt wie immer bei Frau Pelz im ersten Stock.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Schlüssel liegt bei Frau Pelz, nicht bei der Schreiberin.",
+              "en": "Three names appear in this note; only one of them has the key."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "richtig_falsch",
+            "textId": "text_1_1",
+            "frage": "Die Post soll in die Küche.",
+            "loesung": "richtig",
+            "beleg": "Legen Sie sie einfach auf den Tisch in der Küche.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„sie“ ist die Post aus dem Satz davor.",
+              "en": "You have to carry „die Post“ over from the previous sentence."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "richtig_falsch",
+            "textId": "text_1_2",
+            "frage": "Jonas und Tobias treffen sich um drei Uhr.",
+            "loesung": "falsch",
+            "beleg": "wir treffen uns am Samstag um vier vor dem Kino, nicht um drei.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt beide Zeiten und sagt, welche gilt.",
+              "en": "„nicht um drei“ is there because three was the old plan."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "richtig_falsch",
+            "textId": "text_1_2",
+            "frage": "Tobias soll Melike anrufen.",
+            "loesung": "richtig",
+            "beleg": "Und kannst du Melike anrufen?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Jonas fragt danach, weil er die Nummer nicht hat.",
+              "en": "A question with „kannst du“ is a request, not a query."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "wo_finde_ich",
+        "anweisung": "Lesen Sie die Aufgaben 6 bis 10. Wo finden Sie die Information? Kreuzen Sie an: a oder b.",
+        "richtzeitMinuten": 9,
+        "beispiel": {
+          "nr": 0,
+          "typ": "zwei_optionen",
+          "frage": "Sie wollen wissen, wann der Zug nach Hamburg fährt.",
+          "optionen": {
+            "a": "www.bahn-auskunft.de — Fahrpläne und Verspätungen",
+            "b": "www.hamburg-hotels.de — Zimmer ab 49 Euro"
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Fahrpläne stehen bei der Bahnauskunft.",
+            "en": "Worked example. Match the need, not the city name."
+          }
+        },
+        "items": [
+          {
+            "nr": 6,
+            "typ": "zwei_optionen",
+            "frage": "Sie suchen einen Arzt, der am Samstag geöffnet hat.",
+            "optionen": {
+              "a": "www.apotheke-weidenbach.de — Notdienst und Medikamente",
+              "b": "www.aerzte-weidenbach.de — Praxen, Sprechzeiten, Wochenenddienst"
+            },
+            "loesung": "b",
+            "beleg": "www.aerzte-weidenbach.de — Praxen, Sprechzeiten, Wochenenddienst",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Nur die zweite Seite nennt Praxen und den Wochenenddienst.",
+              "en": "A pharmacy is not a doctor, however close the two sound."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zwei_optionen",
+            "frage": "Sie möchten wissen, was ein Zimmer im Studentenwohnheim kostet.",
+            "optionen": {
+              "a": "www.studentenwerk-weidenbach.de — Wohnen, Preise, Anmeldung",
+              "b": "www.uni-weidenbach.de — Studiengänge und Prüfungen"
+            },
+            "loesung": "a",
+            "beleg": "www.studentenwerk-weidenbach.de — Wohnen, Preise, Anmeldung",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Wohnen, Preise“ steht direkt in der ersten Zeile.",
+              "en": "Both sites belong to the same university town — read what each one is about."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zwei_optionen",
+            "frage": "Sie wollen am Sonntag im Park Fußball spielen und wissen, ob das erlaubt ist.",
+            "optionen": {
+              "a": "www.sportverein-weidenbach.de — Training und Spiele unserer Mannschaften",
+              "b": "www.weidenbach.de/parkordnung — Was im Stadtpark erlaubt ist"
+            },
+            "loesung": "b",
+            "beleg": "www.weidenbach.de/parkordnung — Was im Stadtpark erlaubt ist",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Es geht nicht um einen Verein, sondern um die Regeln im Park.",
+              "en": "The word „Fußball“ pulls you towards a, and the actual question is about permission."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zwei_optionen",
+            "frage": "Sie brauchen einen Tisch für acht Personen am Freitagabend.",
+            "optionen": {
+              "a": "www.restaurant-sonne.de — Speisekarte und Reservierung",
+              "b": "www.kochkurse-weidenbach.de — Kochen lernen am Abend"
+            },
+            "loesung": "a",
+            "beleg": "www.restaurant-sonne.de — Speisekarte und Reservierung",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Reservierung“ ist genau das, was Sie brauchen.",
+              "en": "Both are about food in the evening; only one takes bookings."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "zwei_optionen",
+            "frage": "Sie möchten Ihren alten Schrank abholen lassen.",
+            "optionen": {
+              "a": "www.moebelhaus-rhode.de — Neue Möbel, Lieferung frei Haus",
+              "b": "www.weidenbach.de/sperrmuell — Termine für große Möbelstücke"
+            },
+            "loesung": "b",
+            "beleg": "www.weidenbach.de/sperrmuell — Termine für große Möbelstücke",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sie wollen etwas wegbringen, nicht etwas kaufen.",
+              "en": "„abholen lassen“ is the direction that decides it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "hinweisschilder",
+        "anweisung": "Lesen Sie die Schilder und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.",
+        "richtzeitMinuten": 8,
+        "texte": [
+          {
+            "id": "schild_1",
+            "titel": "An der Tür der Bäckerei",
+            "quelle": "Aushang",
+            "inhalt": "Wegen Urlaub vom 3. bis 17. August geschlossen.\nAb dem 18. August sind wir wieder für Sie da."
+          },
+          {
+            "id": "schild_2",
+            "titel": "Im Bus",
+            "quelle": "Aushang",
+            "inhalt": "Bitte hinten einsteigen.\nFahrkarten kaufen Sie beim Fahrer vorne."
+          },
+          {
+            "id": "schild_3",
+            "titel": "Am Eingang des Schwimmbads",
+            "quelle": "Aushang",
+            "inhalt": "Hunde müssen draußen bleiben.\nEssen und Trinken nur im Café."
+          },
+          {
+            "id": "schild_4",
+            "titel": "Im Treppenhaus",
+            "quelle": "Aushang",
+            "inhalt": "Der Aufzug wird am Mittwoch repariert.\nBitte benutzen Sie an diesem Tag die Treppe."
+          },
+          {
+            "id": "schild_5",
+            "titel": "In der Bibliothek",
+            "quelle": "Aushang",
+            "inhalt": "Handys bitte ausschalten.\nGespräche führen Sie bitte im Foyer."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Am 10. August können Sie hier Brot kaufen.",
+          "loesung": "falsch",
+          "begruendung": {
+            "de": "Der 10. August liegt zwischen dem 3. und dem 17.",
+            "en": "Worked example. A date has to be checked against the range, not just read."
+          }
+        },
+        "items": [
+          {
+            "nr": 11,
+            "typ": "richtig_falsch",
+            "textId": "schild_1",
+            "frage": "Am 20. August hat die Bäckerei geöffnet.",
+            "loesung": "richtig",
+            "beleg": "Ab dem 18. August sind wir wieder für Sie da.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der 20. liegt nach dem 18.",
+              "en": "Two dates and one word — „ab“ — decide this."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "richtig_falsch",
+            "textId": "schild_2",
+            "frage": "Sie können die Fahrkarte hinten im Bus kaufen.",
+            "loesung": "falsch",
+            "beleg": "Fahrkarten kaufen Sie beim Fahrer vorne.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Einsteigen hinten, Fahrkarte vorne — das Schild trennt beides.",
+              "en": "Both directions appear on the sign, each with its own purpose."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "richtig_falsch",
+            "textId": "schild_3",
+            "frage": "Sie dürfen Ihren Hund mit ins Schwimmbad nehmen.",
+            "loesung": "falsch",
+            "beleg": "Hunde müssen draußen bleiben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„müssen draußen bleiben“ heißt: nicht hinein.",
+              "en": "The first line answers it; the second is about something else."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "richtig_falsch",
+            "textId": "schild_4",
+            "frage": "Am Mittwoch fährt der Aufzug nicht.",
+            "loesung": "richtig",
+            "beleg": "Der Aufzug wird am Mittwoch repariert.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der zweite Satz sagt, was man stattdessen tun soll.",
+              "en": "Being repaired and being usable are not the same thing — the second line confirms which."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "richtig_falsch",
+            "textId": "schild_5",
+            "frage": "In der Bibliothek dürfen Sie telefonieren.",
+            "loesung": "falsch",
+            "beleg": "Handys bitte ausschalten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Telefonieren geht nur im Foyer, nicht im Lesesaal.",
+              "en": "The second line offers the place where you may — which is what makes the first line a rule."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 20,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurzgespraeche",
+        "anweisung": "Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          {
+            "rolle": "Kollegin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Verkäufer",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Nachbarin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Arzthelferin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Vater",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Freundin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-ramona-low"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Der erste Text kommt aus einem Büro.",
+          "optionen": {
+            "a": "Richtig.",
+            "b": "Nein, aus einem Geschäft.",
+            "c": "Nein, aus einer Praxis."
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Es geht um eine Besprechung und um den Chef.",
+            "en": "Worked example, so you can hear how one question per text works."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören sechs kurze Texte. Zu jedem Text lösen Sie eine Aufgabe: Sie wählen die richtige Lösung a, b oder c. Sie hören jeden Text zweimal. Lesen Sie jetzt die Aufgaben eins bis sechs.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 1.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Kollegin",
+            "text": "Herr Delfs, die Besprechung ist heute nicht um zehn, sondern erst um elf. Der Chef kommt später aus Kirchdorf zurück.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 2.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Verkäufer",
+            "text": "Das Brot kostet zwei Euro achtzig, die zwei Brötchen siebzig Cent. Zusammen also drei Euro fünfzig, bitte.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 3.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Nachbarin",
+            "text": "Frau Kortlang, Ihr Paket ist gekommen. Ich habe es angenommen. Klingeln Sie einfach, ich bin den ganzen Abend da.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 4.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Arzthelferin",
+            "text": "Guten Tag, Herr Weiler. Ihr Termin am Dienstag um vierzehn Uhr steht. Bringen Sie bitte Ihre Versichertenkarte mit.",
+            "pauseDanachSek": 10,
+            "akustik": "telefon",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 5.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Vater",
+            "text": "Lisa, ich hole dich heute nicht ab. Nimm bitte den Bus, die Linie zwölf. Ich bin erst um sieben zu Hause.",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 6.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_6"
+          },
+          {
+            "rolle": "Freundin",
+            "text": "Du, ich bin schon im Café am Markt. Komm einfach her, wenn du fertig bist. Ich sitze draußen.",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_6"
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Wann ist die Besprechung?",
+            "optionen": {
+              "a": "Um zehn Uhr.",
+              "b": "Um elf Uhr.",
+              "c": "Um zwölf Uhr."
+            },
+            "loesung": "b",
+            "beleg": "Herr Delfs, die Besprechung ist heute nicht um zehn, sondern erst um elf.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„nicht … sondern“ nennt erst die alte, dann die neue Zeit.",
+              "en": "Both times are said in one sentence; the second is the one that counts."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was bezahlt der Kunde?",
+            "optionen": {
+              "a": "Zwei Euro achtzig.",
+              "b": "Drei Euro fünfzig.",
+              "c": "Siebzig Cent."
+            },
+            "loesung": "b",
+            "beleg": "Zusammen also drei Euro fünfzig, bitte.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die beiden ersten Zahlen sind Teilbeträge.",
+              "en": "Three figures, and only the last is the total."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Wo ist das Paket?",
+            "optionen": {
+              "a": "Bei der Nachbarin.",
+              "b": "Bei der Post.",
+              "c": "Vor der Tür."
+            },
+            "loesung": "a",
+            "beleg": "Ihr Paket ist gekommen. Ich habe es angenommen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Ich habe es angenommen“ heißt: sie hat es.",
+              "en": "The neighbour is speaking, so „ich“ is where the parcel is."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was soll Herr Weiler mitbringen?",
+            "optionen": {
+              "a": "Ein Rezept.",
+              "b": "Geld.",
+              "c": "Die Versichertenkarte."
+            },
+            "loesung": "c",
+            "beleg": "Bringen Sie bitte Ihre Versichertenkarte mit.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Nur eine Sache wird genannt.",
+              "en": "Only one item is asked for, and it is named in full."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Wie soll Lisa nach Hause kommen?",
+            "optionen": {
+              "a": "Mit dem Bus.",
+              "b": "Mit dem Fahrrad.",
+              "c": "Der Vater holt sie ab."
+            },
+            "loesung": "a",
+            "beleg": "Nimm bitte den Bus, die Linie zwölf.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der erste Satz sagt ausdrücklich, dass er sie nicht abholt.",
+              "en": "The message opens by ruling out c."
+            }
+          },
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "abschnitt": "text_6",
+            "frage": "Wo wartet die Freundin?",
+            "optionen": {
+              "a": "Zu Hause.",
+              "b": "Im Café am Markt.",
+              "c": "Vor dem Kino."
+            },
+            "loesung": "b",
+            "beleg": "Du, ich bin schon im Café am Markt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt es im ersten Satz.",
+              "en": "„schon“ tells you she is already there, not on her way."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "durchsagen",
+        "anweisung": "Kreuzen Sie an: Richtig oder Falsch. Sie hören jeden Text einmal.",
+        "wiederholungen": 1,
+        "sprecher": [
+          {
+            "rolle": "Bahnansage",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Kaufhaus",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Schwimmbad",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Museum",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-ramona-low"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Die erste Durchsage hört man an einem Bahnhof.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Es geht um ein Gleis und um einen Zug.",
+            "en": "Worked example, so you can hear how a true/false item is set up."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören vier Durchsagen. Sie hören jeden Text einmal. Entscheiden Sie bei den Aufgaben sieben bis zehn, ob die Aussage richtig oder falsch ist. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 7.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Bahnansage",
+            "text": "Achtung an Gleis zwei. Der Zug nach Kirchdorf, Abfahrt sechzehn Uhr zehn, hat heute etwa zwanzig Minuten Verspätung.",
+            "pauseDanachSek": 10,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 8.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Kaufhaus",
+            "text": "Liebe Kundinnen und Kunden, unser Haus schließt in zehn Minuten. Bitte jetzt zur Kasse kommen.",
+            "pauseDanachSek": 10,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 9.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Schwimmbad",
+            "text": "Eine Durchsage für alle Gäste: Das große Becken wird heute um siebzehn Uhr geschlossen. Das kleine Becken bleibt offen.",
+            "pauseDanachSek": 10,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 10.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Museum",
+            "text": "Sehr geehrte Besucher, die Führung durch das Museum beginnt in fünf Minuten am Eingang. Karten bekommen Sie an der Kasse.",
+            "pauseDanachSek": 10,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_4"
+          }
+        ],
+        "items": [
+          {
+            "nr": 7,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_1",
+            "frage": "Der Zug nach Kirchdorf kommt später.",
+            "loesung": "richtig",
+            "beleg": "hat heute etwa zwanzig Minuten Verspätung.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Verspätung“ heißt: später als geplant.",
+              "en": "The departure time is given, and then corrected by the delay."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_2",
+            "frage": "Das Kaufhaus schließt in einer Stunde.",
+            "loesung": "falsch",
+            "beleg": "unser Haus schließt in zehn Minuten.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Zehn Minuten sind keine Stunde.",
+              "en": "The announcement gives a number; the statement changes it."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_3",
+            "frage": "Man kann heute nach 17 Uhr im kleinen Becken schwimmen.",
+            "loesung": "richtig",
+            "beleg": "Das kleine Becken bleibt offen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Nur das große Becken wird geschlossen.",
+              "en": "Two pools, two different rules, one sentence each."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "richtig_falsch",
+            "abschnitt": "text_4",
+            "frage": "Die Führung beginnt an der Kasse.",
+            "loesung": "falsch",
+            "beleg": "die Führung durch das Museum beginnt in fünf Minuten am Eingang.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Führung beginnt am Eingang; an der Kasse gibt es nur Karten.",
+              "en": "Both places are named — one for the tour, one for the tickets."
+            }
+          }
+        ],
+        "situation": "Vier Durchsagen an öffentlichen Orten."
+      },
+      {
+        "nummer": 3,
+        "typ": "ansagen",
+        "anweisung": "Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          {
+            "rolle": "Werkstatt",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Praxis",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Bruder",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Kursleiterin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Hausmeister",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der Texte",
+            "stimme": "de_DE-thorsten-high"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Die erste Ansage kommt von einer Werkstatt.",
+          "optionen": {
+            "a": "Richtig.",
+            "b": "Nein, von einem Geschäft.",
+            "c": "Nein, von einer Praxis."
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Die Anruferin nennt die Werkstatt im ersten Satz.",
+            "en": "Worked example, so you can hear how the part is built."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören fünf Ansagen auf dem Anrufbeantworter. Sie hören jeden Text zweimal. Wählen Sie bei den Aufgaben elf bis fünfzehn die richtige Lösung a, b oder c. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 11.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Werkstatt",
+            "text": "Guten Tag, Frau Ivanovic, Werkstatt Rhode. Ihr Fahrrad ist fertig. Sie können es ab morgen abholen, wir haben bis achtzehn Uhr geöffnet.",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 12.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Praxis",
+            "text": "Hier ist die Praxis Dr. Weiler. Ihr Termin am Donnerstag muss leider ausfallen. Rufen Sie uns bitte zurück, dann finden wir einen neuen.",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 13.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Bruder",
+            "text": "Hallo, ich bin's. Ich komme am Sonntag mit dem Zug, nicht mit dem Auto. Kannst du mich um vier vom Bahnhof abholen?",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 14.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Kursleiterin",
+            "text": "Guten Tag, hier ist die Volkshochschule. Ihr Kurs beginnt nächste Woche im Raum zwölf, nicht im Raum acht. Sonst bleibt alles gleich.",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Nummer 15.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Hausmeister",
+            "text": "Frau Sedlmeier, hier ist der Hausmeister. Am Freitag kommt der Schornsteinfeger zwischen acht und zehn. Sind Sie da?",
+            "pauseDanachSek": 10,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was sagt die Werkstatt?",
+            "optionen": {
+              "a": "Das Fahrrad ist kaputt.",
+              "b": "Das Fahrrad ist fertig.",
+              "c": "Das Fahrrad kommt morgen."
+            },
+            "loesung": "b",
+            "beleg": "Ihr Fahrrad ist fertig.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der zweite Satz sagt, wann man es holen kann.",
+              "en": "The bike is ready now; only the collection waits until tomorrow."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was soll Frau Kortlang tun?",
+            "optionen": {
+              "a": "Am Donnerstag kommen.",
+              "b": "Einen neuen Termin machen.",
+              "c": "Ein Rezept abholen."
+            },
+            "loesung": "b",
+            "beleg": "Rufen Sie uns bitte zurück, dann finden wir einen neuen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Termin fällt aus, also braucht es einen neuen.",
+              "en": "„einen neuen“ refers back to „Termin“ in the sentence before."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Wie kommt der Bruder?",
+            "optionen": {
+              "a": "Mit dem Auto.",
+              "b": "Mit dem Bus.",
+              "c": "Mit dem Zug."
+            },
+            "loesung": "c",
+            "beleg": "Ich komme am Sonntag mit dem Zug, nicht mit dem Auto.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz nennt beides und sagt, was stimmt.",
+              "en": "The correction is there because the car was expected."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was hat sich beim Kurs geändert?",
+            "optionen": {
+              "a": "Der Raum.",
+              "b": "Der Tag.",
+              "c": "Die Uhrzeit."
+            },
+            "loesung": "a",
+            "beleg": "Ihr Kurs beginnt nächste Woche im Raum zwölf, nicht im Raum acht.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Sonst bleibt alles gleich“ schließt Tag und Uhrzeit aus.",
+              "en": "The last sentence rules out everything the change is not."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was will der Hausmeister wissen?",
+            "optionen": {
+              "a": "Ob Frau Sedlmeier am Freitag zu Hause ist.",
+              "b": "Wann der Schornsteinfeger kommt.",
+              "c": "Ob sie einen Schlüssel hat."
+            },
+            "loesung": "a",
+            "beleg": "Sind Sie da?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er nennt zuerst den Termin und stellt dann seine Frage.",
+              "en": "The time is information he gives, not something he asks."
+            }
+          }
+        ],
+        "situation": "Fünf Nachrichten auf dem Anrufbeantworter."
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 20,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "formular",
+        "situation": "Ihre Freundin Maria Kovac möchte in der Stadtbibliothek Weidenbach einen Leseausweis. Sie ist am 14. März 1996 geboren, kommt aus Kroatien und wohnt seit zwei Jahren in der Bahnhofstraße 7 in Weidenbach. Sie arbeitet als Köchin. Maria füllt das Formular nicht selbst aus — Sie helfen ihr.",
+        "aufgabenstellung": "Füllen Sie für Maria die fünf Felder im Formular aus.",
+        "leitpunkte": [
+          "Alle Angaben stehen in der Situation.",
+          "Schreiben Sie nur, was gefragt ist — keine ganzen Sätze.",
+          "Jedes richtige Feld ist einen Punkt wert."
+        ],
+        "woerter": 0,
+        "zeitMinuten": 8,
+        "punkte": 5,
+        "formular": [
+          {
+            "feld": "Familienname",
+            "loesung": "Kovac",
+            "begruendung": "Ihre Freundin heißt Maria Kovac — Kovac ist der Familienname, Maria der Vorname."
+          },
+          {
+            "feld": "Geburtsdatum",
+            "loesung": "14.03.1996",
+            "begruendung": "Die Situation nennt den 14. März 1996."
+          },
+          {
+            "feld": "Straße und Hausnummer",
+            "loesung": "Bahnhofstraße 7",
+            "begruendung": "Sie wohnt in der Bahnhofstraße 7."
+          },
+          {
+            "feld": "Wohnort",
+            "loesung": "Weidenbach",
+            "begruendung": "Die Straße liegt in Weidenbach; Kroatien ist das Herkunftsland, nicht der Wohnort."
+          },
+          {
+            "feld": "Beruf",
+            "loesung": "Köchin",
+            "begruendung": "Sie arbeitet als Köchin. Die weibliche Form gehört dazu."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "kurzmitteilung",
+        "situation": "Sie sind mit Ihrer Kollegin Frau Osterloh am Freitag um 18 Uhr zum Essen verabredet. Sie können aber nicht kommen, weil Sie länger arbeiten müssen.",
+        "aufgabenstellung": "Schreiben Sie eine kurze Nachricht an Frau Osterloh. Schreiben Sie zu allen drei Punkten und schreiben Sie ungefähr 30 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, dass Sie nicht kommen können.",
+          "Sagen Sie warum.",
+          "Schlagen Sie einen neuen Tag vor."
+        ],
+        "anrede": "Liebe Frau Osterloh",
+        "woerter": 30,
+        "zeitMinuten": 12,
+        "punkte": 10,
+        "redemittel": [
+          "es tut mir leid.",
+          "Ich kann am Freitag leider nicht kommen.",
+          "Ich muss länger arbeiten.",
+          "Geht es auch am Samstag?",
+          "Passt Ihnen nächste Woche?",
+          "Viele Grüße"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Liebe Frau Osterloh,\n\nes tut mir leid. Ich kann am Freitag nicht kommen. Ich muss arbeiten. Geht es auch am Samstag?\n\nViele Grüße\nRavi",
+            "kommentar": "Alle drei Punkte sind da, die Anrede stimmt und der Text ist verständlich. Auf „ausreichend“ hält ihn die Sprache: vier kurze Hauptsätze ohne jede Verbindung."
+          },
+          {
+            "niveau": "gut",
+            "text": "Liebe Frau Osterloh,\n\nes tut mir leid, aber ich kann am Freitag leider nicht kommen, weil ich länger arbeiten muss. Geht es vielleicht auch am Samstag?\n\nViele Grüße\nRavi",
+            "kommentar": "Derselbe Inhalt, aber verbunden statt aneinandergereiht: „aber“ setzt die Absage dagegen und „weil“ hängt den Grund an. Schon auf A1 ist ein „weil“-Satz das, was einen Text über „ausreichend“ hebt."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 0,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "sich_vorstellen",
+        "titel": "Sich vorstellen",
+        "anweisung": "Sie bekommen sieben Karten. Sagen Sie zu jedem Stichwort einen Satz über sich. Danach buchstabieren Sie Ihren Namen und nennen eine Nummer.",
+        "dauerMinuten": 3,
+        "punkte": 3,
+        "karten": ["Name", "Alter", "Land", "Wohnort", "Sprachen", "Beruf", "Hobby"],
+        "partnerSkript": [
+          {
+            "text": "Danke. Können Sie Ihren Familiennamen bitte buchstabieren?",
+            "wartenSek": 20,
+            "hinweis": "Buchstabieren Sie langsam und deutlich, Buchstabe für Buchstabe."
+          },
+          {
+            "text": "Und wie ist Ihre Telefonnummer?",
+            "wartenSek": 15,
+            "hinweis": "Nennen Sie die Ziffern einzeln, nicht in Paaren."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "informationen_erfragen",
+        "titel": "Um Informationen bitten",
+        "anweisung": "Sie bekommen zwei Karten mit einem Thema. Stellen Sie zu jedem Thema eine Frage an Ihren Partner und antworten Sie auf seine Fragen.",
+        "dauerMinuten": 5,
+        "punkte": 6,
+        "karten": ["Wohnen", "Essen"],
+        "planungspunkte": [
+          "Bilden Sie eine ganze Frage, nicht nur ein Wort.",
+          "Fragen Sie nach etwas Konkretem: wo, wann, wie viel, wie oft.",
+          "Antworten Sie in einem Satz, nicht nur mit „ja“ oder „nein“."
+        ],
+        "partnerSkript": [
+          {
+            "text": "Wo wohnen Sie?",
+            "wartenSek": 20,
+            "hinweis": "Antworten Sie in einem ganzen Satz und sagen Sie ein Detail dazu."
+          },
+          {
+            "text": "Was essen Sie gern zum Frühstück?",
+            "wartenSek": 20,
+            "hinweis": "Nennen Sie ein oder zwei Dinge und sagen Sie, wann Sie frühstücken."
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "bitten_formulieren",
+        "titel": "Bitten formulieren",
+        "anweisung": "Sie bekommen drei Karten mit einem Gegenstand. Bitten Sie Ihren Partner darum. Danach bittet Ihr Partner Sie um etwas, und Sie reagieren.",
+        "dauerMinuten": 5,
+        "punkte": 6,
+        "karten": ["ein Glas Wasser", "ein Stück Papier", "das Fenster"],
+        "partnerSkript": [
+          {
+            "text": "Können Sie mir bitte das Salz geben?",
+            "wartenSek": 15,
+            "hinweis": "Reagieren Sie freundlich: „Ja, gern“ oder „Hier, bitte“."
+          },
+          {
+            "text": "Machen Sie bitte die Tür zu, es zieht.",
+            "wartenSek": 15,
+            "hinweis": "Sagen Sie zu und antworten Sie in einem ganzen Satz."
+          },
+          {
+            "text": "Haben Sie einen Stift für mich?",
+            "wartenSek": 15,
+            "hinweis": "Auch ein Nein ist eine Antwort — sagen Sie dann, warum nicht."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "gießen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "gießt",
+        "praeteritum": "goss",
+        "perfekt": "hat gegossen"
+      },
+      "bedeutung_de": "Wasser auf Pflanzen geben",
+      "bedeutung_en": "to water (plants)",
+      "beispiel": "Können Sie bitte meine Blumen gießen?",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Schlüssel",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Schlüssel",
+      "bedeutung_de": "womit man eine Tür auf- und zuschließt",
+      "bedeutung_en": "key",
+      "beispiel": "Der Schlüssel liegt wie immer bei Frau Pelz im ersten Stock.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Post",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Postsendungen",
+      "bedeutung_de": "die Briefe und Pakete, die man bekommt",
+      "bedeutung_en": "post, mail",
+      "beispiel": "Die Post nehme ich nicht mit.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Stock",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Stockwerke",
+      "bedeutung_de": "eine Ebene in einem Haus",
+      "bedeutung_en": "floor, storey",
+      "beispiel": "Der Schlüssel liegt wie immer bei Frau Pelz im ersten Stock.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "anrufen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "ruft an",
+        "praeteritum": "rief an",
+        "perfekt": "hat angerufen"
+      },
+      "bedeutung_de": "mit dem Telefon sprechen",
+      "bedeutung_en": "to phone",
+      "beispiel": "Und kannst du Melike anrufen?",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "mitbringen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "bringt mit",
+        "praeteritum": "brachte mit",
+        "perfekt": "hat mitgebracht"
+      },
+      "bedeutung_de": "etwas dabei haben, wenn man kommt",
+      "bedeutung_en": "to bring along",
+      "beispiel": "Bring bitte das Buch mit, das du dir letzte Woche geliehen hast.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Sprechzeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Sprechzeiten",
+      "bedeutung_de": "wann ein Arzt Patienten sieht",
+      "bedeutung_en": "consultation hours",
+      "beispiel": "www.aerzte-weidenbach.de — Praxen, Sprechzeiten, Wochenenddienst",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Anmeldung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Anmeldungen",
+      "bedeutung_de": "wenn man sich für etwas einträgt",
+      "bedeutung_en": "registration",
+      "beispiel": "www.studentenwerk-weidenbach.de — Wohnen, Preise, Anmeldung",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Preis",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Preise",
+      "bedeutung_de": "was etwas kostet",
+      "bedeutung_en": "price",
+      "beispiel": "www.studentenwerk-weidenbach.de — Wohnen, Preise, Anmeldung",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "erlaubt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass man es tun darf",
+      "bedeutung_en": "allowed",
+      "beispiel": "www.weidenbach.de/parkordnung — Was im Stadtpark erlaubt ist",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Speisekarte",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Speisekarten",
+      "bedeutung_de": "die Liste mit dem Essen im Restaurant",
+      "bedeutung_en": "menu",
+      "beispiel": "www.restaurant-sonne.de — Speisekarte und Reservierung",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Urlaub",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Urlaube",
+      "bedeutung_de": "die freie Zeit, in der man nicht arbeitet",
+      "bedeutung_en": "holiday",
+      "beispiel": "Wegen Urlaub vom 3. bis 17. August geschlossen.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "einsteigen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "steigt ein",
+        "praeteritum": "stieg ein",
+        "perfekt": "ist eingestiegen"
+      },
+      "bedeutung_de": "in einen Bus oder Zug hineingehen",
+      "bedeutung_en": "to get on, to board",
+      "beispiel": "Bitte hinten einsteigen.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Fahrkarte",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Fahrkarten",
+      "bedeutung_de": "das Ticket für Bus oder Bahn",
+      "bedeutung_en": "ticket",
+      "beispiel": "Fahrkarten kaufen Sie beim Fahrer vorne.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Aufzug",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Aufzüge",
+      "bedeutung_de": "was Menschen nach oben und unten fährt",
+      "bedeutung_en": "lift, elevator",
+      "beispiel": "Der Aufzug wird am Mittwoch repariert.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Treppe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Treppen",
+      "bedeutung_de": "die Stufen zwischen zwei Stockwerken",
+      "bedeutung_en": "stairs",
+      "beispiel": "Bitte benutzen Sie an diesem Tag die Treppe.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "ausschalten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "schaltet aus",
+        "praeteritum": "schaltete aus",
+        "perfekt": "hat ausgeschaltet"
+      },
+      "bedeutung_de": "ein Gerät abstellen",
+      "bedeutung_en": "to switch off",
+      "beispiel": "Handys bitte ausschalten.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Besprechung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Besprechungen",
+      "bedeutung_de": "ein Treffen über die Arbeit",
+      "bedeutung_en": "meeting",
+      "beispiel": "Herr Delfs, die Besprechung ist heute nicht um zehn, sondern erst um elf.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Paket",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Pakete",
+      "bedeutung_de": "was der Bote bringt, größer als ein Brief",
+      "bedeutung_en": "parcel",
+      "beispiel": "Ihr Paket ist gekommen.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Termin",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Termine",
+      "bedeutung_de": "eine feste Zeit für ein Treffen",
+      "bedeutung_en": "appointment",
+      "beispiel": "Ihr Termin am Dienstag um vierzehn Uhr steht.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Verspätung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Verspätungen",
+      "bedeutung_de": "wenn etwas später kommt als geplant",
+      "bedeutung_en": "delay",
+      "beispiel": "hat heute etwa zwanzig Minuten Verspätung.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Kasse",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Kassen",
+      "bedeutung_de": "wo man im Geschäft bezahlt",
+      "bedeutung_en": "till, checkout",
+      "beispiel": "Bitte jetzt zur Kasse kommen.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Führung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Führungen",
+      "bedeutung_de": "wenn jemand eine Gruppe herumführt und erklärt",
+      "bedeutung_en": "guided tour",
+      "beispiel": "die Führung durch das Museum beginnt in fünf Minuten am Eingang.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "abholen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "holt ab",
+        "praeteritum": "holte ab",
+        "perfekt": "hat abgeholt"
+      },
+      "bedeutung_de": "hingehen und etwas oder jemanden mitnehmen",
+      "bedeutung_en": "to collect, to pick up",
+      "beispiel": "Sie können es ab morgen abholen, wir haben bis achtzehn Uhr geöffnet.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "ausfallen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "fällt aus",
+        "praeteritum": "fiel aus",
+        "perfekt": "ist ausgefallen"
+      },
+      "bedeutung_de": "nicht stattfinden",
+      "bedeutung_en": "to be cancelled",
+      "beispiel": "Ihr Termin am Donnerstag muss leider ausfallen.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "A1"
+    },
+    {
+      "lemma": "Hausmeister",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Hausmeister",
+      "bedeutung_de": "wer sich um ein Haus kümmert",
+      "bedeutung_en": "caretaker",
+      "beispiel": "Frau Sedlmeier, hier ist der Hausmeister.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "A1"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "es tut mir leid",
+      "typ": "redewendung",
+      "bedeutung_de": "so entschuldigt man sich",
+      "bedeutung_en": "I am sorry",
+      "beispiel": "es tut mir leid. Ich kann am Freitag nicht kommen.",
+      "fundstelle": "Schreiben Teil 2"
+    },
+    {
+      "wendung": "viele Grüße",
+      "typ": "redewendung",
+      "bedeutung_de": "der übliche Schluss einer privaten Nachricht",
+      "bedeutung_en": "best wishes (letter closing)",
+      "beispiel": "Viele Grüße",
+      "fundstelle": "Schreiben Teil 2"
+    },
+    {
+      "wendung": "zur Kasse kommen",
+      "typ": "kollokation",
+      "bedeutung_de": "zum Bezahlen nach vorn gehen",
+      "bedeutung_en": "to come to the till",
+      "beispiel": "Bitte jetzt zur Kasse kommen.",
+      "fundstelle": "Hören Teil 2"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "W-Fragen und Ja/Nein-Fragen",
+      "erklaerung_de": "Bei einer W-Frage steht das Fragewort vorn und das Verb direkt danach: „Wo wohnen Sie?“ Bei einer Ja/Nein-Frage steht das Verb ganz vorn: „Wohnen Sie hier?“ Beides brauchen Sie im Sprechen Teil 1 und 2.",
+      "erklaerung_en": "In a wh-question the question word comes first and the verb straight after. In a yes/no question the verb comes first of all. A1 speaking is built almost entirely out of these two patterns.",
+      "belegSatz": "Wo wohnen Sie?",
+      "fundstelle": "Sprechen Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Bilden Sie eine Frage: (wie alt / Sie / sein)",
+          "loesung": "Wie alt sind Sie?",
+          "hinweis": "Fragewort, dann Verb, dann Person."
+        },
+        {
+          "aufgabe": "Ja/Nein-Frage: Sie kommen aus Kroatien.",
+          "loesung": "Kommen Sie aus Kroatien?",
+          "hinweis": "Das Verb rutscht ganz nach vorn."
+        },
+        {
+          "aufgabe": "Ergänzen Sie das Fragewort: ___ kostet das Brot?",
+          "loesung": "Was",
+          "hinweis": "Nach einem Preis fragt man mit „was“ oder „wie viel“."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Trennbare Verben im Satz",
+      "erklaerung_de": "Bei Verben wie abholen, anrufen, mitbringen und einsteigen geht die Vorsilbe ans Satzende: „Ich hole dich ab.“ Nur im Infinitiv bleibt sie am Verb: „Ich kann dich abholen.“",
+      "erklaerung_en": "Verbs like abholen, anrufen and mitbringen split: the prefix goes to the end of the sentence and only rejoins the verb in the infinitive. It is the first German structure that sounds wrong when you get it wrong.",
+      "belegSatz": "Bring bitte das Buch mit, das du dir letzte Woche geliehen hast.",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "(anrufen) ___ du Melike bitte ___?",
+          "loesung": "Rufst … an",
+          "hinweis": "Die Vorsilbe wandert ans Ende."
+        },
+        {
+          "aufgabe": "(abholen) Ich kann dich um vier ___.",
+          "loesung": "abholen",
+          "hinweis": "Nach einem Modalverb bleibt das Verb zusammen."
+        },
+        {
+          "aufgabe": "(einsteigen) Bitte ___ Sie hinten ___.",
+          "loesung": "steigen … ein",
+          "hinweis": "Auch im Imperativ trennt sich das Verb."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Uhrzeit und Datum",
+      "erklaerung_de": "Vor der Uhrzeit steht „um“: um vier, um halb fünf. „halb fünf“ heißt 4.30 Uhr — eine halbe Stunde **vor** fünf, nicht danach. Vor einem Datum steht „am“: am 14. März, am Freitag.",
+      "erklaerung_en": "Clock times take „um“, days and dates take „am“. Note that „halb fünf“ is 4.30, not 5.30: German counts towards the coming hour, and this catches out almost every learner once.",
+      "belegSatz": "Der Film fängt erst um halb fünf an.",
+      "fundstelle": "Lesen Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "Wie spät ist „halb sieben“?",
+          "loesung": "6.30 Uhr",
+          "hinweis": "Eine halbe Stunde vor sieben."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Wir treffen uns ___ vier ___ Freitag.",
+          "loesung": "um … am",
+          "hinweis": "„um“ für die Uhrzeit, „am“ für den Tag."
+        },
+        {
+          "aufgabe": "Schreiben Sie das Datum: 14. März 1996",
+          "loesung": "14.03.1996",
+          "hinweis": "Im Formular schreibt man Tag, Monat, Jahr mit Punkten."
+        }
+      ]
+    }
+  ]
+}

@@ -23,10 +23,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'GermanExamTrainer — Deutsch B1 & B2',
+        name: 'GermanExamTrainer — Deutsch A1 bis B2',
         short_name: 'GermanExamTrainer',
         description:
-          'Übungsprüfungen im Format der deutschen B1- und B2-Zertifikatsprüfungen — mit Timer, Hörtexten und automatischer Auswertung.',
+          'Übungsprüfungen im Format der deutschen A1-, A2-, B1- und B2-Zertifikatsprüfungen — mit Timer, Hörtexten und automatischer Auswertung.',
         lang: 'de',
         start_url: base,
         scope: base,

@@ -34,7 +34,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^((a2|b2)-)?pruefung-[0-9]{2}$",
+          "pattern": "^((a1|a2|b2)-)?pruefung-[0-9]{2}$",
           "description": "Folder name and stable identifier. B1 papers are pruefung-01; B2 papers carry the level as a prefix, b2-pruefung-01. The unprefixed form means B1 because those five papers shipped before the second level existed, and renaming them would have broken every stored attempt."
         },
         "titel": {
@@ -42,7 +42,7 @@
           "minLength": 3
         },
         "stufe": {
-          "enum": ["A2", "B1", "B2"],
+          "enum": ["A1", "A2", "B1", "B2"],
           "description": "Which examination format this paper follows. Must agree with the id prefix. Selects the whole rule set: item counts, task types, module times, marking maxima."
         },
         "variante": {
@@ -92,17 +92,17 @@
       "additionalProperties": false,
       "properties": {
         "zeitMinuten": {
-          "enum": [30, 65],
+          "enum": [25, 30, 65],
           "description": "30 at A2, 65 at B1 and B2 — half the clock for two thirds of the items."
         },
         "teile": {
           "type": "array",
-          "minItems": 4,
+          "minItems": 3,
           "maxItems": 5,
           "items": {
             "$ref": "#/$defs/lesenTeil"
           },
-          "description": "Four parts at A2, five at B1 and B2."
+          "description": "Three parts at A1, four at A2, five at B1 and B2."
         }
       }
     },
@@ -112,17 +112,17 @@
       "additionalProperties": false,
       "properties": {
         "zeitMinuten": {
-          "enum": [30, 40],
+          "enum": [20, 30, 40],
           "description": "30 at A2, 40 at B1 and B2."
         },
         "teile": {
           "type": "array",
-          "minItems": 4,
+          "minItems": 3,
           "maxItems": 4,
           "items": {
             "$ref": "#/$defs/hoerenTeil"
           },
-          "description": "Four parts at every level."
+          "description": "Three parts at A1, four at every other level."
         }
       }
     },
@@ -132,7 +132,7 @@
       "additionalProperties": false,
       "properties": {
         "zeitMinuten": {
-          "enum": [30, 60, 75],
+          "enum": [20, 30, 60, 75],
           "description": "30 at A2 (two short messages), 60 at B1 (three tasks), 75 at B2 (two, and far longer)."
         },
         "aufgaben": {
@@ -307,8 +307,8 @@
         },
         "inhalt": {
           "type": "string",
-          "minLength": 100,
-          "description": "The running text. Where the task is to fill gaps (B2 Lesen Teile 2 and 5) each gap appears as its item number in square brackets, e.g. [10]."
+          "minLength": 30,
+          "description": "The text itself. 30 characters is the floor because an A1 sign really is one line — „Kein Zutritt“ is a whole reading task at that level."
         }
       }
     },
@@ -324,6 +324,9 @@
         },
         "typ": {
           "enum": [
+            "kurzmitteilungen",
+            "wo_finde_ich",
+            "hinweisschilder",
             "richtig_falsch",
             "multiple_choice",
             "zuordnung_anzeigen",
@@ -334,7 +337,7 @@
             "zuordnung_aeusserungen",
             "zuordnung_ueberschriften"
           ],
-          "description": "The task, not the item control. The last four are B2: match statements to one of four people, insert sentences into gaps, match opinions to headings, match regulation paragraphs to a table of contents."
+          "description": "The task, not the item control. The last four are B2: match statements to one of four people, insert sentences into gaps, match opinions to headings, match regulation paragraphs to a table of contents. The first three are A1: two short personal messages, 'where would you find this?' with two places per item, and signs read one question at a time."
         },
         "anweisung": {
           "type": "string",
@@ -427,6 +430,8 @@
         },
         "typ": {
           "enum": [
+            "durchsagen",
+            "ansagen",
             "kurztexte",
             "monolog",
             "gespraech",
@@ -435,7 +440,7 @@
             "vortrag",
             "kurzgespraeche"
           ],
-          "description": "'interview' and 'vortrag' are the B2 shapes: a radio interview heard twice, and a short lecture heard twice. 'kurzgespraeche' is the A2 shape: five unrelated short exchanges in one part."
+          "description": "'interview' and 'vortrag' are the B2 shapes: a radio interview heard twice, and a short lecture heard twice. 'kurzgespraeche' is the A2 shape: five unrelated short exchanges in one part. 'durchsagen' and 'ansagen' are the A1 shapes: public announcements heard once, and answerphone messages heard twice."
         },
         "anweisung": {
           "type": "string",
@@ -574,6 +579,7 @@
         },
         "typ": {
           "enum": [
+            "zwei_optionen",
             "richtig_falsch",
             "multiple_choice",
             "zuordnung_anzeigen",
@@ -581,7 +587,7 @@
             "zuordnung_person",
             "zuordnung_buchstabe"
           ],
-          "description": "The control the candidate uses. 'zuordnung_buchstabe' covers every B2 task where the answer is one letter from the Teil's optionenliste — inserting a sentence, matching an opinion, matching a paragraph. The three read very differently on paper but are one and the same decision, so they share an item type and are told apart by the Teil's typ."
+          "description": "The control the candidate uses. 'zuordnung_buchstabe' covers every B2 task where the answer is one letter from the Teil's optionenliste — inserting a sentence, matching an opinion, matching a paragraph. The three read very differently on paper but are one and the same decision, so they share an item type and are told apart by the Teil's typ. 'zwei_optionen' is A1 Lesen Teil 2 and the only item in the collection with two options rather than three."
         },
         "frage": {
           "type": "string",
@@ -598,7 +604,7 @@
         "optionen": {
           "type": "object",
           "additionalProperties": false,
-          "description": "Multiple choice and person-matching only. Three options everywhere except B2 Lesen Teil 1, which matches statements to four named people.",
+          "description": "Three options everywhere except two places: B2 Lesen Teil 1 matches statements to four named people, and A1 Lesen Teil 2 offers two places to look and nothing else.",
           "properties": {
             "a": {
               "type": "string",
@@ -617,7 +623,7 @@
               "minLength": 1
             }
           },
-          "required": ["a", "b", "c"]
+          "required": ["a", "b"]
         },
         "loesung": {
           "description": "Which key is legal depends on the item's typ; that pairing is enforced by tools/validate.py (VALID_LOESUNG), not here. anyOf, not oneOf: 'a'-'c' are legal both as multiple-choice keys and as letters from a list, and oneOf would reject them for matching twice.",
@@ -656,7 +662,33 @@
           ],
           "description": "Skill tested. Drives the personalised weak-spot report. 'textstruktur' is what B2's sentence-insertion task actually measures: following how a text is put together."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "typ": {
+                "const": "zwei_optionen"
+              }
+            },
+            "required": ["typ"]
+          },
+          "then": {
+            "properties": {
+              "optionen": {
+                "maxProperties": 2
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "optionen": {
+                "required": ["a", "b", "c"]
+              }
+            }
+          }
+        }
+      ]
     },
     "schreibenAufgabe": {
       "type": "object",
@@ -668,8 +700,7 @@
         "leitpunkte",
         "woerter",
         "zeitMinuten",
-        "punkte",
-        "musterloesungen"
+        "punkte"
       ],
       "additionalProperties": false,
       "properties": {
@@ -680,13 +711,15 @@
         },
         "typ": {
           "enum": [
+            "formular",
+            "kurzmitteilung",
             "sms",
             "email_informell",
             "forumsbeitrag",
             "email_halbformell",
             "nachricht_formell"
           ],
-          "description": "'nachricht_formell' is the B2 second task: a message to a superior or an institution, where register carries marks. 'sms' is the short A2 message to a friend."
+          "description": "'nachricht_formell' is the B2 second task: a message to a superior or an institution, where register carries marks. 'sms' is the short A2 message to a friend. 'formular' is A1 Schreiben Teil 1 — five gaps in a form rather than free writing — and 'kurzmitteilung' is its short Teil 2."
         },
         "situation": {
           "type": "string",
@@ -715,16 +748,16 @@
         },
         "woerter": {
           "type": "integer",
-          "enum": [20, 30, 40, 80, 100, 150],
-          "description": "A2 asks for 20-30 and 30-40 (see woerterMax); B1 targets 80/80/40; B2 asks for a minimum of 150 and 100."
+          "enum": [0, 20, 30, 40, 80, 100, 150],
+          "description": "0 for a form, which has no word count at all. A1 asks for about 30 words; A2 for 20-30 and 30-40 (see woerterMax); B1 targets 80/80/40; B2 asks for a minimum of 150 and 100."
         },
         "zeitMinuten": {
           "type": "integer",
-          "enum": [10, 15, 20, 25, 50]
+          "enum": [8, 10, 12, 15, 20, 25, 50]
         },
         "punkte": {
           "type": "integer",
-          "enum": [10, 20, 40, 60],
+          "enum": [5, 10, 20, 40, 60],
           "description": "10 at A2 — the raw Messpunkte for one task, 5 for Aufgabenerfüllung and 5 for Sprache. B1 and B2 award certificate points directly."
         },
         "redemittel": {
@@ -762,6 +795,33 @@
           "type": "integer",
           "minimum": 1,
           "description": "Upper end of the required range, where the level states one. A2 asks for 20-30 and 30-40 words; B1 and B2 state a target or a minimum and omit this."
+        },
+        "formular": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "description": "A1 Schreiben Teil 1 only: the five fields the candidate has to fill in, each with the answer and why it is that answer.",
+          "items": {
+            "type": "object",
+            "required": ["feld", "loesung", "begruendung"],
+            "additionalProperties": false,
+            "properties": {
+              "feld": {
+                "type": "string",
+                "minLength": 2,
+                "description": "The label printed on the form."
+              },
+              "loesung": {
+                "type": "string",
+                "minLength": 1
+              },
+              "begruendung": {
+                "type": "string",
+                "minLength": 10,
+                "description": "Where in the situation this answer comes from."
+              }
+            }
+          }
         }
       }
     },
@@ -777,6 +837,9 @@
         },
         "typ": {
           "enum": [
+            "sich_vorstellen",
+            "informationen_erfragen",
+            "bitten_formulieren",
             "fragen_zur_person",
             "ueber_sich_erzaehlen",
             "gemeinsam_planen",
@@ -785,7 +848,7 @@
             "vortrag",
             "diskussion"
           ],
-          "description": "'vortrag' and 'diskussion' are the two B2 parts: a structured talk with follow-up questions, then a debate on a set question. 'fragen_zur_person' and 'ueber_sich_erzaehlen' are the two A2 parts: a card-driven exchange of personal questions, then a short talk about one's own life."
+          "description": "'vortrag' and 'diskussion' are the two B2 parts: a structured talk with follow-up questions, then a debate on a set question. 'fragen_zur_person' and 'ueber_sich_erzaehlen' are the two A2 parts: a card-driven exchange of personal questions, then a short talk about one's own life. The first three are the A1 parts: introducing yourself from keywords, asking and answering about two subjects, and making a request from a card."
         },
         "titel": {
           "type": "string"
@@ -801,7 +864,7 @@
         },
         "punkte": {
           "type": "integer",
-          "enum": [4, 8, 16, 28, 40, 50],
+          "enum": [3, 4, 6, 8, 16, 28, 40, 50],
           "description": "A2 splits 20 across 4/8/8 and scores Aussprache separately out of 5."
         },
         "situation": {
@@ -888,7 +951,7 @@
             "type": "string",
             "minLength": 1
           },
-          "description": "A2 Teil 1 only: the single-word prompts printed on the candidate's cards (\"Beruf?\", \"Hobby?\"), one question to be formed from each."
+          "description": "The prompts printed on the candidate's cards. A1 uses them in all three parts — seven keywords, two subjects, three things to ask for — and A2 in Teil 1 only."
         }
       }
     },
@@ -979,7 +1042,7 @@
           "description": "Where in the paper it occurred."
         },
         "niveau": {
-          "enum": ["A2", "B1", "B1+", "B2", "B2+"],
+          "enum": ["A1", "A2", "B1", "B1+", "B2", "B2+"],
           "default": "B1"
         }
       }

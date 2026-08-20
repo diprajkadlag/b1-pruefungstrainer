@@ -654,6 +654,65 @@ audio {
   color: var(--mute);
 }
 
+/* A1 Schreiben Teil 1: a form, laid out like the one on the paper. */
+.formular {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 34rem;
+  margin: 0.75rem 0 0;
+}
+.formular__zeile {
+  display: grid;
+  grid-template-columns: minmax(9rem, 14rem) 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+.formular__feld {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+}
+.formular__nr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--edge);
+  font-size: 0.8rem;
+}
+.formular input {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  font: inherit;
+  background: transparent;
+  color: inherit;
+}
+@media (max-width: 34rem) {
+  .formular__zeile {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+/* The five right entries, after submission. */
+.formular__loesung {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+}
+.formular__loesung th,
+.formular__loesung td {
+  border-bottom: 1px solid var(--edge);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
 /* A2 Teil 1: four single-word prompts, printed like the cards they are. */
 .karten {
   display: flex;

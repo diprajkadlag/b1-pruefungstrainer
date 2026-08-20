@@ -2,7 +2,8 @@
 """Scaffold a new exam with the right shape already in place.
 
     python tools/new_exam.py pruefung-06                  # B1
-    python tools/new_exam.py a2-pruefung-01               # A2, from the id
+    python tools/new_exam.py a1-pruefung-01               # A1, from the id
+    python tools/new_exam.py a2-pruefung-01               # A2
     python tools/new_exam.py b2-pruefung-02               # B2, from the id
     python tools/new_exam.py pruefung-06 --variante jugendliche --niveau mittel
 
@@ -34,6 +35,33 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
 
 TODO = "TODO"
+
+# --------------------------------------------------------------------------
+# A1
+# --------------------------------------------------------------------------
+
+A1_LESEN = [
+    (1, "kurzmitteilungen", 5, 8, "Zwei kurze Mitteilungen, richtig oder falsch"),
+    (2, "wo_finde_ich", 5, 9, "Wo finden Sie das? Zwei Orte pro Aufgabe"),
+    (3, "hinweisschilder", 5, 8, "Fünf Schilder, je eine Aufgabe"),
+]
+
+A1_HOEREN = [
+    (1, "kurzgespraeche", 6, 2, "Sechs kurze Texte, je ein MC-Item"),
+    (2, "durchsagen", 4, 1, "Vier öffentliche Durchsagen, richtig oder falsch"),
+    (3, "ansagen", 5, 2, "Fünf Ansagen auf dem Anrufbeantworter"),
+]
+
+A1_SCHREIBEN = [
+    (1, "formular", 0, 8, 5),
+    (2, "kurzmitteilung", 30, 12, 10),
+]
+
+A1_SPRECHEN = [
+    (1, "sich_vorstellen", "Sich vorstellen", 3, 3),
+    (2, "informationen_erfragen", "Um Informationen bitten", 5, 6),
+    (3, "bitten_formulieren", "Bitten formulieren", 5, 6),
+]
 
 # --------------------------------------------------------------------------
 # A2
@@ -201,6 +229,85 @@ def optionenliste(anzahl: int, was: str, mit_titel: bool) -> list[dict[str, Any]
         eintrag["inhalt"] = f"{TODO}: {was} {b}"
         out.append(eintrag)
     return out
+
+
+# --------------------------------------------------------------------------
+# A1 skeleton
+# --------------------------------------------------------------------------
+
+
+def a1_lesen_teil(nummer: int, typ: str, anzahl: int, minuten: int,
+                  hinweis: str, start: int) -> dict[str, Any]:
+    teil: dict[str, Any] = {
+        "nummer": nummer,
+        "typ": typ,
+        "anweisung": f"{TODO}: Arbeitsanweisung. {hinweis}",
+        "richtzeitMinuten": minuten,
+    }
+
+    if nummer == 2:
+        # No text of its own: each item names a need and offers two places.
+        teil["beispiel"] = beispiel("zwei_optionen", "a", True, "ab")
+        teil["items"] = [item(start + i, "zwei_optionen", True, "ab", dreh=i)
+                         for i in range(anzahl)]
+        return teil
+
+    anzahl_texte = 2 if nummer == 1 else 5
+    quelle = ("kurze persönliche Mitteilung, etwa 40 bis 60 Wörter"
+              if nummer == 1 else "Schild oder Aushang, ein bis drei Zeilen")
+    teil["texte"] = [{
+        "id": f"text_{nummer}_{i + 1}",
+        "titel": f"{TODO}: Überschrift",
+        "quelle": f"{TODO}: erfundene Quelle — niemals eine echte Publikation",
+        "inhalt": f"{TODO}: {quelle}. Komplett selbst verfasst.",
+    } for i in range(anzahl_texte)]
+
+    teil["beispiel"] = beispiel("richtig_falsch", "richtig")
+    teil["items"] = [item(start + i, "richtig_falsch", False, dreh=i)
+                     for i in range(anzahl)]
+    for i, eintrag in enumerate(teil["items"]):
+        # Teil 1 splits five items over two messages; Teil 3 gives each sign
+        # exactly one item.
+        eintrag["textId"] = (f"text_1_{1 if i < 3 else 2}" if nummer == 1
+                             else f"text_3_{i + 1}")
+    return teil
+
+
+def a1_hoeren_teil(nummer: int, typ: str, anzahl: int, wiederholungen: int,
+                   hinweis: str, start: int) -> dict[str, Any]:
+    sprecher = [
+        {"rolle": f"Sprecher {i + 1}", "geschlecht": "f" if i % 2 else "m",
+         "beschreibung": f"{TODO}: wer spricht und wo"}
+        for i in range(min(anzahl, 3))
+    ]
+    teil = hoeren_geruest(nummer, typ, wiederholungen, hinweis, sprecher,
+                          kurztexte=False)
+
+    # Every A1 listening part is a handful of unrelated recordings, so the
+    # skeleton lays one out per item rather than one long script.
+    teil["skript"] = [teil["skript"][0]]
+    for i in range(anzahl):
+        marke = f"text_{i + 1}"
+        teil["skript"].append({
+            "rolle": "Sprecher", "text": f"Nummer {start + i}.",
+            "pauseDanachSek": 1.2, "akustik": "studio", "abschnitt": marke,
+        })
+        teil["skript"].append({
+            "rolle": sprecher[i % len(sprecher)]["rolle"],
+            "text": f"{TODO}: kurzer Text {i + 1}, etwa 40 Wörter.",
+            "pauseDanachSek": 10, "akustik": "mailbox", "betont": True,
+            "abschnitt": marke,
+        })
+
+    item_typ = "richtig_falsch" if nummer == 2 else "multiple_choice"
+    teil["items"] = []
+    for i in range(anzahl):
+        eintrag = item(start + i, item_typ, item_typ == "multiple_choice", dreh=i)
+        eintrag["abschnitt"] = f"text_{i + 1}"
+        teil["items"].append(eintrag)
+    teil["beispiel"] = beispiel(item_typ, "richtig" if nummer == 2 else "a",
+                                item_typ == "multiple_choice")
+    return teil
 
 
 # --------------------------------------------------------------------------
@@ -609,6 +716,24 @@ def b2_hoeren_teil(nummer: int, typ: str, anzahl: int, wiederholungen: int,
 def schreiben_aufgabe(nummer: int, typ: str, woerter: int, minuten: int,
                       punkte: int, mit_impuls: bool,
                       woerter_max: int | None = None) -> dict[str, Any]:
+    if typ == "formular":
+        return {
+            "nummer": nummer,
+            "typ": typ,
+            "situation": f"{TODO}: die Situation, aus der die fünf Angaben hervorgehen",
+            "aufgabenstellung": f"{TODO}: die Aufgabenstellung",
+            "leitpunkte": [f"{TODO}: Hinweis {i + 1}" for i in range(3)],
+            "woerter": 0,
+            "zeitMinuten": minuten,
+            "punkte": punkte,
+            "formular": [
+                {"feld": f"{TODO}: Feldname {i + 1}",
+                 "loesung": f"{TODO}: Eintrag",
+                 "begruendung": f"{TODO}: Woraus in der Situation folgt das?"}
+                for i in range(5)
+            ],
+        }
+
     # A2 asks for three points and a word *range*; B1 and B2 ask for four and
     # state a target or a floor.
     punkte_anzahl = 3 if woerter_max else 4
@@ -646,7 +771,34 @@ def sprechen_teil(nummer: int, typ: str, titel: str, dauer: float, punkte: int,
         "punkte": punkte,
     }
 
-    if typ == "fragen_zur_person":
+    if typ == "sich_vorstellen":
+        teil["karten"] = [f"{TODO}: Stichwort {i + 1}, z. B. „Name“" for i in range(7)]
+        teil["partnerSkript"] = [
+            {"text": f"{TODO}: Rückfrage der Prüferin {i + 1}",
+             "wartenSek": 15,
+             "hinweis": f"{TODO}: Was soll die Kandidatin jetzt sagen?"}
+            for i in range(2)
+        ]
+    elif typ == "informationen_erfragen":
+        teil["karten"] = [f"{TODO}: Thema {i + 1}, z. B. „Wohnen“" for i in range(2)]
+        teil["planungspunkte"] = [f"{TODO}: Wonach soll gefragt werden? {i + 1}"
+                                  for i in range(3)]
+        teil["partnerSkript"] = [
+            {"text": f"{TODO}: Frage des simulierten Partners {i + 1}",
+             "wartenSek": 20,
+             "hinweis": f"{TODO}: Hinweis für die Kandidatin"}
+            for i in range(2)
+        ]
+    elif typ == "bitten_formulieren":
+        teil["karten"] = [f"{TODO}: Gegenstand {i + 1}, z. B. „ein Glas Wasser“"
+                          for i in range(3)]
+        teil["partnerSkript"] = [
+            {"text": f"{TODO}: Bitte des simulierten Partners {i + 1}",
+             "wartenSek": 15,
+             "hinweis": f"{TODO}: Wie soll die Kandidatin reagieren?"}
+            for i in range(3)
+        ]
+    elif typ == "fragen_zur_person":
         teil["karten"] = [f"{TODO}: Stichwort {i + 1}, z. B. „Beruf?“" for i in range(4)]
         teil["partnerSkript"] = [
             {"text": f"{TODO}: Frage des simulierten Partners {i + 1}",
@@ -713,7 +865,15 @@ def geruest(exam_id: str, stufe: str, variante: str, niveau: str) -> dict[str, A
     # A2 is short everywhere: 30 minutes per written module rather than 60-75,
     # and no preparation time at all — the cards are handed out during the test.
     modulzeiten = {"lesen": 65, "hoeren": 40, "vorbereitung": 15}
-    if stufe == "A2":
+    if stufe == "A1":
+        lesen_spec, hoeren_spec = A1_LESEN, A1_HOEREN
+        schreiben_spec, sprechen_spec = A1_SCHREIBEN, A1_SPRECHEN
+        lesen_bau, hoeren_bau = a1_lesen_teil, a1_hoeren_teil
+        folien, schreiben_zeit = [], 20
+        impuls_bei = set()
+        wortschatzniveau = "A1"
+        modulzeiten = {"lesen": 25, "hoeren": 20, "vorbereitung": 0}
+    elif stufe == "A2":
         lesen_spec, hoeren_spec = A2_LESEN, A2_HOEREN
         schreiben_spec, sprechen_spec = A2_SCHREIBEN, A2_SPRECHEN
         lesen_bau, hoeren_bau = a2_lesen_teil, a2_hoeren_teil
@@ -826,7 +986,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("exam", help="new exam id, e.g. pruefung-06 or b2-pruefung-02")
-    ap.add_argument("--stufe", choices=["A2", "B1", "B2"],
+    ap.add_argument("--stufe", choices=["A1", "A2", "B1", "B2"],
                     help="level; inferred from the id when omitted")
     ap.add_argument("--variante", choices=["erwachsene", "jugendliche"],
                     default="erwachsene")
@@ -839,7 +999,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             stream.reconfigure(encoding="utf-8", errors="replace")
 
     # The id carries the level, so the two cannot disagree silently.
-    aus_id = next((s for p, s in (("a2-", "A2"), ("b2-", "B2"))
+    aus_id = next((s for p, s in (("a1-", "A1"), ("a2-", "A2"), ("b2-", "B2"))
                    if args.exam.startswith(p)), "B1")
     stufe = args.stufe or aus_id
     if stufe != aus_id:
