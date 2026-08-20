@@ -22,6 +22,7 @@ import { fileURLToPath } from 'node:url';
 import {
   bewerteModul,
   gesamtergebnis,
+  stufeVonId,
   type Modul,
   type Schluessel,
 } from '@pruefung/core';
@@ -133,12 +134,16 @@ app.post('/api/abgabe', upload.array('aufnahmen'), async (req, res) => {
     // the examiner's copy should not depend on the candidate's browser.
     const keys = await schluesselLesen(daten.examId);
     const auswertung: Record<string, number> = {};
+    // The level decides what a module is worth — 25 points at A2, 100 at B1
+    // and B2 — so it has to be read off the paper, not assumed.
+    const stufe = stufeVonId(daten.examId);
     for (const modul of ['lesen', 'hoeren'] as Modul[]) {
       if (!daten.module.includes(modul)) continue;
       auswertung[modul] = bewerteModul(
         modul,
         daten.antworten[modul as 'lesen' | 'hoeren'] ?? {},
         keys,
+        stufe,
       ).punkte;
     }
 
@@ -217,12 +222,15 @@ app.post('/api/abgabe/:pfad(*)/bewertung', async (req, res) => {
     await writeFile(pfad, JSON.stringify(daten, null, 2), 'utf-8');
     res.json({
       ok: true,
-      gesamt: gesamtergebnis({
-        lesen: daten.auswertung?.lesen,
-        hoeren: daten.auswertung?.hoeren,
-        schreiben: daten.bewertung.schreiben,
-        sprechen: daten.bewertung.sprechen,
-      }),
+      gesamt: gesamtergebnis(
+        {
+          lesen: daten.auswertung?.lesen,
+          hoeren: daten.auswertung?.hoeren,
+          schreiben: daten.bewertung.schreiben,
+          sprechen: daten.bewertung.sprechen,
+        },
+        stufeVonId(daten.examId),
+      ),
     });
   } catch (err) {
     console.error('Bewertung fehlgeschlagen:', err);

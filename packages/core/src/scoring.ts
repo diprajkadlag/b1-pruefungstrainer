@@ -1,22 +1,90 @@
 /**
  * Scoring for the objectively-marked modules.
  *
- * Reading and listening each contain 30 items worth one point apiece. That raw
- * score is converted to a 100-point scale, and 60 points is the pass mark.
- * Writing and speaking are marked by a human against published criteria, so
- * this module only carries their maxima and combines a mark once one exists.
+ * Reading and listening are answer sheets: every item is worth one raw point,
+ * and the raw score is converted to the scale the certificate uses. Writing and
+ * speaking are marked by a human against published criteria, so this module
+ * only carries their maxima and combines a mark once one exists.
  *
  * Shared by the web app and the server so a result cannot be computed two
  * different ways depending on where it was calculated.
+ *
+ * **The levels do not agree on what a module is worth, or on what passing
+ * means.** B1 and B2 are modular: 100 points per module, 60 to pass, and each
+ * module is certified on its own. A2 is one examination worth 100 points in
+ * total — each part contributes at most 25, and it is passed or failed as a
+ * whole. Everything level-dependent lives in BEWERTUNG below and nowhere else.
  */
 
-export const ITEMS_PRO_MODUL = 30;
-export const PUNKTE_PRO_MODUL = 100;
-export const BESTEHENSGRENZE = 60;
+import type { Stufe } from './types.js';
 
 export type Modul = 'lesen' | 'hoeren' | 'schreiben' | 'sprechen';
 export type Note =
   'sehr gut' | 'gut' | 'befriedigend' | 'ausreichend' | 'nicht bestanden';
+
+/** What the whole examination requires, where it is certified as one. */
+export interface GesamtRegel {
+  /** Points for the examination as a whole. */
+  punkte: number;
+  /** Overall pass mark. */
+  grenze: number;
+  /** The written modules, and the floor they must clear together. */
+  schriftlich: { module: Modul[]; punkte: number; grenze: number };
+  /** The oral module, and its own floor. */
+  muendlich: { modul: Modul; punkte: number; grenze: number };
+}
+
+export interface Bewertung {
+  /** What one module is worth on the certificate. */
+  punkteProModul: number;
+  /**
+   * Pass mark for a single module, or `null` where a module carries no verdict
+   * of its own because the level is certified as one examination.
+   */
+  modulGrenze: number | null;
+  /**
+   * Decimal places to keep when converting a raw score.
+   *
+   * 30 items do not divide 100 evenly, so B1 and B2 round to whole points and
+   * the boundary lands where the published tables put it. A2 multiplies 20 raw
+   * Messpunkte by exactly 1.25, which is quarter-point exact — rounding it to
+   * whole points would silently move marks.
+   */
+  nachkommastellen: number;
+  /** Set only where the level is one examination rather than four modules. */
+  gesamt: GesamtRegel | null;
+}
+
+/** B1 and B2: four modules, each certified on its own. */
+const MODULAR: Bewertung = {
+  punkteProModul: 100,
+  modulGrenze: 60,
+  nachkommastellen: 0,
+  gesamt: null,
+};
+
+export const BEWERTUNG: Record<Stufe, Bewertung> = {
+  // A2 is passed as a whole and only as a whole: 60 of 100 overall, 45 of 75
+  // across the three written parts, and 15 of 25 in Sprechen. Miss any one and
+  // "gilt die gesamte Prüfung als nicht bestanden".
+  A2: {
+    punkteProModul: 25,
+    modulGrenze: null,
+    nachkommastellen: 2,
+    gesamt: {
+      punkte: 100,
+      grenze: 60,
+      schriftlich: { module: ['lesen', 'hoeren', 'schreiben'], punkte: 75, grenze: 45 },
+      muendlich: { modul: 'sprechen', punkte: 25, grenze: 15 },
+    },
+  },
+  B1: MODULAR,
+  B2: MODULAR,
+};
+
+export const ITEMS_PRO_MODUL = 30;
+export const PUNKTE_PRO_MODUL = 100;
+export const BESTEHENSGRENZE = 60;
 
 /**
  * Grade bands. Ordered high to low; the first band whose floor is met wins.
@@ -40,16 +108,26 @@ export function bestanden(punkte: number): boolean {
 }
 
 /**
- * Convert a raw item count to the 100-point scale.
+ * Convert a raw item count to the scale a module is marked on.
  *
- * 30 items do not divide 100 evenly, so every conversion is a rounding
- * decision. Round half up on the exact 10/3 ratio: 18/30 becomes 60 and passes,
- * 17/30 becomes 57 and does not. Getting this wrong moves the pass boundary.
+ * At B1 and B2 that is 100 points from 30 items, which does not divide evenly,
+ * so every conversion is a rounding decision. Round half up on the exact 10/3
+ * ratio: 18/30 becomes 60 and passes, 17/30 becomes 57 and does not. Getting
+ * this wrong moves the pass boundary.
+ *
+ * At A2 it is 25 points from 20 items — the official ×1.25 — which is exact to
+ * the quarter point and must not be rounded to whole points.
  */
-export function rohZuPunkten(richtig: number, gesamt: number = ITEMS_PRO_MODUL): number {
+export function rohZuPunkten(
+  richtig: number,
+  gesamt: number = ITEMS_PRO_MODUL,
+  stufe: Stufe = 'B1',
+): number {
   if (gesamt <= 0) return 0;
+  const { punkteProModul, nachkommastellen } = BEWERTUNG[stufe];
   const geklemmt = Math.max(0, Math.min(richtig, gesamt));
-  return Math.round((geklemmt * PUNKTE_PRO_MODUL) / gesamt);
+  const faktor = 10 ** nachkommastellen;
+  return Math.round((geklemmt * punkteProModul * faktor) / gesamt) / faktor;
 }
 
 export interface ItemErgebnis {
@@ -72,8 +150,12 @@ export interface ModulErgebnis {
   richtig: number;
   gesamt: number;
   punkte: number;
-  note: Note;
-  bestanden: boolean;
+  /** What this module is marked out of at this level: 25 at A2, 100 otherwise. */
+  maximum: number;
+  /** `null` at a level where one module carries no verdict of its own. */
+  note: Note | null;
+  /** `null` at A2, which is passed as a whole examination or not at all. */
+  bestanden: boolean | null;
   proTeil: TeilErgebnis[];
   items: ItemErgebnis[];
 }
@@ -94,6 +176,7 @@ export function bewerteModul(
   modul: Modul,
   antworten: Readonly<Record<string, string | null | undefined>>,
   schluessel: Readonly<Record<string, Schluessel>>,
+  stufe: Stufe = 'B1',
 ): ModulErgebnis {
   const items: ItemErgebnis[] = [];
   const proTeil = new Map<number, TeilErgebnis>();
@@ -127,15 +210,22 @@ export function bewerteModul(
 
   items.sort((a, b) => a.nr - b.nr);
   const richtig = items.filter((i) => i.korrekt).length;
-  const punkte = rohZuPunkten(richtig, items.length || ITEMS_PRO_MODUL);
+  const { punkteProModul, modulGrenze } = BEWERTUNG[stufe];
+  const punkte = rohZuPunkten(richtig, items.length || ITEMS_PRO_MODUL, stufe);
+
+  // A grade and a verdict belong to whatever is certified. Where that is the
+  // module, both are reported; where it is the whole examination, neither can
+  // be known from one answer sheet, and saying "bestanden" here would be a lie.
+  const anteil = punkteProModul > 0 ? (punkte / punkteProModul) * 100 : 0;
 
   return {
     modul,
     richtig,
     gesamt: items.length,
     punkte,
-    note: note(punkte),
-    bestanden: bestanden(punkte),
+    maximum: punkteProModul,
+    note: modulGrenze === null ? null : note(anteil),
+    bestanden: modulGrenze === null ? null : anteil >= modulGrenze,
     proTeil: [...proTeil.values()].sort((a, b) => a.teil - b.teil),
     items,
   };
@@ -183,32 +273,106 @@ export function schwachstellen(
     .sort((a, b) => b.quote - a.quote || b.verloren - a.verloren);
 }
 
+/** The whole-examination verdict, at a level that has one. */
+export interface GesamtWertung {
+  /** Points over all four parts. */
+  punkte: number;
+  /** Lesen + Hören + Schreiben together. */
+  schriftlich: number;
+  /** Sprechen on its own. */
+  muendlich: number;
+  bestanden: boolean;
+  /** Every condition that was not met, in the wording of the regulations. */
+  maengel: string[];
+}
+
 export interface Gesamtergebnis {
   module: Partial<Record<Modul, number>>;
   durchschnitt: number | null;
   alleBestanden: boolean;
   vollstaendig: boolean;
+  /** Set only where the level is certified as one examination — A2. */
+  gesamt: GesamtWertung | null;
 }
+
+const ALLE_MODULE = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const;
 
 /**
  * Combine module scores.
  *
- * The modules are certified separately, so there is no single overall pass:
- * a candidate passes each module or does not. The average is reported for
- * orientation only, and only once all four marks exist.
+ * At B1 and B2 the modules are certified separately, so there is no single
+ * overall pass: a candidate passes each module or does not, and the average is
+ * reported for orientation only.
+ *
+ * At A2 the opposite holds. The examination is one certificate, and passing it
+ * requires all three of the published conditions at once — the total, the floor
+ * across the written parts, and the floor in Sprechen. A candidate can clear
+ * 60 overall and still fail on Sprechen alone, so the conditions are reported
+ * individually rather than collapsed into one number.
  */
-export function gesamtergebnis(module: Partial<Record<Modul, number>>): Gesamtergebnis {
+export function gesamtergebnis(
+  module: Partial<Record<Modul, number>>,
+  stufe: Stufe = 'B1',
+): Gesamtergebnis {
   const werte = Object.values(module).filter((v): v is number => typeof v === 'number');
-  const vollstaendig = (['lesen', 'hoeren', 'schreiben', 'sprechen'] as const).every(
-    (m) => typeof module[m] === 'number',
-  );
+  const vollstaendig = ALLE_MODULE.every((m) => typeof module[m] === 'number');
+  const regel = BEWERTUNG[stufe].gesamt;
+
+  const durchschnitt = vollstaendig
+    ? Math.round(werte.reduce((a, b) => a + b, 0) / werte.length)
+    : null;
+
+  if (!regel) {
+    return {
+      module,
+      durchschnitt,
+      alleBestanden: vollstaendig && werte.every(bestanden),
+      vollstaendig,
+      gesamt: null,
+    };
+  }
+
+  const summe = (module_: readonly Modul[]) =>
+    module_.reduce((a, m) => a + (module[m] ?? 0), 0);
+
+  const punkte = runde(summe(ALLE_MODULE));
+  const schriftlich = runde(summe(regel.schriftlich.module));
+  const muendlich = runde(module[regel.muendlich.modul] ?? 0);
+
+  const maengel: string[] = [];
+  if (punkte < regel.grenze) {
+    maengel.push(`unter ${regel.grenze} von ${regel.punkte} Punkten insgesamt`);
+  }
+  if (schriftlich < regel.schriftlich.grenze) {
+    maengel.push(
+      `unter ${regel.schriftlich.grenze} von ${regel.schriftlich.punkte} Punkten ` +
+        'in Lesen, Hören und Schreiben zusammen',
+    );
+  }
+  if (muendlich < regel.muendlich.grenze) {
+    maengel.push(
+      `unter ${regel.muendlich.grenze} von ${regel.muendlich.punkte} Punkten im Sprechen`,
+    );
+  }
+
+  const geschafft = vollstaendig && maengel.length === 0;
 
   return {
     module,
-    durchschnitt: vollstaendig
-      ? Math.round(werte.reduce((a, b) => a + b, 0) / werte.length)
-      : null,
-    alleBestanden: vollstaendig && werte.every(bestanden),
+    durchschnitt,
+    alleBestanden: geschafft,
     vollstaendig,
+    gesamt: {
+      punkte,
+      schriftlich,
+      muendlich,
+      bestanden: geschafft,
+      maengel,
+    },
   };
+}
+
+/** Quarter points are real at A2; float noise from summing them is not. */
+function runde(wert: number): number {
+  return Math.round(wert * 100) / 100;
 }

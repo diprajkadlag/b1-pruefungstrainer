@@ -163,3 +163,100 @@ describe('gesamtergebnis', () => {
     expect(voll.durchschnitt).toBe(90);
   });
 });
+
+/**
+ * A2 is the level that breaks the shape the other two share: 25 points per
+ * part, quarter-point exact, and one verdict for the whole examination rather
+ * than four independent ones. These assert the published rule, not the code.
+ */
+describe('A2 scoring', () => {
+  it('multiplies 20 raw Messpunkte by exactly 1.25', () => {
+    expect(rohZuPunkten(20, 20, 'A2')).toBe(25);
+    expect(rohZuPunkten(16, 20, 'A2')).toBe(20);
+    expect(rohZuPunkten(0, 20, 'A2')).toBe(0);
+  });
+
+  it('keeps the quarter points instead of rounding them away', () => {
+    // 17 x 1.25 is 21.25. Rounding to whole points would quietly take a
+    // quarter of a mark off a candidate on every part of every paper.
+    expect(rohZuPunkten(17, 20, 'A2')).toBe(21.25);
+    expect(rohZuPunkten(13, 20, 'A2')).toBe(16.25);
+  });
+
+  it('leaves B1 and B2 rounding exactly as they were', () => {
+    expect(rohZuPunkten(18, 30, 'B1')).toBe(60);
+    expect(rohZuPunkten(17, 30, 'B1')).toBe(57);
+    expect(rohZuPunkten(18, 30, 'B2')).toBe(60);
+  });
+
+  it('gives a module no verdict of its own', () => {
+    const keys = schluesselFuer('lesen', { 1: 'a', 2: 'b', 3: 'c', 4: 'a' });
+    const erg = bewerteModul('lesen', { 1: 'a', 2: 'b', 3: 'c', 4: 'a' }, keys, 'A2');
+    expect(erg.maximum).toBe(25);
+    expect(erg.punkte).toBe(25);
+    // Full marks, and still no "bestanden": at A2 that is not a fact about one
+    // answer sheet.
+    expect(erg.bestanden).toBeNull();
+    expect(erg.note).toBeNull();
+  });
+
+  it('still grades and certifies a B1 module on its own', () => {
+    const keys = schluesselFuer('lesen', { 1: 'a', 2: 'b', 3: 'c', 4: 'a' });
+    const erg = bewerteModul('lesen', { 1: 'a', 2: 'b', 3: 'c', 4: 'a' }, keys, 'B1');
+    expect(erg.maximum).toBe(100);
+    expect(erg.bestanden).toBe(true);
+    expect(erg.note).toBe('sehr gut');
+  });
+
+  it('passes only when all three published conditions hold', () => {
+    const voll = gesamtergebnis(
+      { lesen: 20, hoeren: 20, schreiben: 15, sprechen: 16 },
+      'A2',
+    );
+    expect(voll.gesamt?.punkte).toBe(71);
+    expect(voll.gesamt?.schriftlich).toBe(55);
+    expect(voll.gesamt?.muendlich).toBe(16);
+    expect(voll.gesamt?.bestanden).toBe(true);
+    expect(voll.gesamt?.maengel).toEqual([]);
+    expect(voll.alleBestanden).toBe(true);
+  });
+
+  it('fails on Sprechen alone even with a comfortable total', () => {
+    // 25+25+21 = 71 written, well past 45, and 85 overall — but 14 in Sprechen
+    // is under the floor of 15, and that fails the whole examination.
+    const voll = gesamtergebnis(
+      { lesen: 25, hoeren: 25, schreiben: 21, sprechen: 14 },
+      'A2',
+    );
+    expect(voll.gesamt?.punkte).toBe(85);
+    expect(voll.gesamt?.bestanden).toBe(false);
+    expect(voll.gesamt?.maengel).toHaveLength(1);
+    expect(voll.gesamt?.maengel[0]).toContain('Sprechen');
+  });
+
+  it('fails on the written floor even when the total is met', () => {
+    // 60 overall exactly, but only 39 of 75 written: still not a pass.
+    const voll = gesamtergebnis(
+      { lesen: 13, hoeren: 13, schreiben: 13, sprechen: 21 },
+      'A2',
+    );
+    expect(voll.gesamt?.punkte).toBe(60);
+    expect(voll.gesamt?.schriftlich).toBe(39);
+    expect(voll.gesamt?.bestanden).toBe(false);
+    expect(voll.gesamt?.maengel[0]).toContain('Lesen, Hören und Schreiben');
+  });
+
+  it('adds quarter points without float noise', () => {
+    const voll = gesamtergebnis(
+      { lesen: 21.25, hoeren: 18.75, schreiben: 16.25, sprechen: 17.5 },
+      'A2',
+    );
+    expect(voll.gesamt?.punkte).toBe(73.75);
+    expect(voll.gesamt?.schriftlich).toBe(56.25);
+  });
+
+  it('reports no whole-examination verdict at B1 or B2', () => {
+    expect(gesamtergebnis({ lesen: 80 }, 'B1').gesamt).toBeNull();
+    expect(gesamtergebnis({ lesen: 80 }, 'B2').gesamt).toBeNull();
+  });
+});

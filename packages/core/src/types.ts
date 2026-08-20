@@ -5,7 +5,7 @@
  * Python validator enforces it on every content change. Keep them in step.
  */
 
-export type Stufe = 'B1' | 'B2';
+export type Stufe = 'A2' | 'B1' | 'B2';
 export type Variante = 'erwachsene' | 'jugendliche';
 export type Niveau = 'mittel-leicht' | 'mittel';
 
@@ -143,6 +143,8 @@ export interface SprechenTeil {
   themen?: SprechenThema[];
   partnerSkript?: PartnerTurn[];
   fragen?: string[];
+  /** A2 Teil 1 only: the single-word prompts the candidate forms a question from. */
+  karten?: string[];
 }
 
 export interface OeffentlichePruefung {

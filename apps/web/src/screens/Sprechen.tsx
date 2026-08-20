@@ -35,35 +35,51 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
 
   return (
     <div className="modul">
-      <section className="teil">
-        <header className="teil__kopf">
-          <h2>Vorbereitung</h2>
-          <span className="teil__meta">
-            {pruefung.sprechen.vorbereitungMinuten} Minuten
-          </span>
-        </header>
-        <p className="teil__anweisung">
-          Lesen Sie zuerst alle Aufgaben und machen Sie sich Stichworte. Ganze Sätze
-          aufzuschreiben und später abzulesen kostet in der Prüfung Punkte.
-        </p>
-        {vorbereitungBis === null ? (
-          <button
-            type="button"
-            className="knopf knopf--gross"
-            onClick={() =>
-              setVorbereitungBis(
-                Date.now() + pruefung.sprechen.vorbereitungMinuten * 60_000,
-              )
-            }
-          >
-            Vorbereitungszeit starten
-          </button>
-        ) : (
-          <p className="vorbereitung">
-            Verbleibend: <strong>{formatiereZeit(rest)}</strong>
+      {/* A2 gives no preparation time at all — the cards are handed out during
+          the test — so it gets an honest note instead of a zero-minute timer. */}
+      {pruefung.sprechen.vorbereitungMinuten === 0 ? (
+        <section className="teil">
+          <header className="teil__kopf">
+            <h2>Vorbereitung</h2>
+            <span className="teil__meta">keine</span>
+          </header>
+          <p className="teil__anweisung">
+            In dieser Prüfung gibt es keine Vorbereitungszeit. Sie bekommen die Karten
+            erst im Prüfungsraum und sehen sie etwa zwanzig Sekunden an. Üben Sie hier
+            also so, wie Sie dort sprechen müssen: sofort und ohne Notizen.
           </p>
-        )}
-      </section>
+        </section>
+      ) : (
+        <section className="teil">
+          <header className="teil__kopf">
+            <h2>Vorbereitung</h2>
+            <span className="teil__meta">
+              {pruefung.sprechen.vorbereitungMinuten} Minuten
+            </span>
+          </header>
+          <p className="teil__anweisung">
+            Lesen Sie zuerst alle Aufgaben und machen Sie sich Stichworte. Ganze Sätze
+            aufzuschreiben und später abzulesen kostet in der Prüfung Punkte.
+          </p>
+          {vorbereitungBis === null ? (
+            <button
+              type="button"
+              className="knopf knopf--gross"
+              onClick={() =>
+                setVorbereitungBis(
+                  Date.now() + pruefung.sprechen.vorbereitungMinuten * 60_000,
+                )
+              }
+            >
+              Vorbereitungszeit starten
+            </button>
+          ) : (
+            <p className="vorbereitung">
+              Verbleibend: <strong>{formatiereZeit(rest)}</strong>
+            </p>
+          )}
+        </section>
+      )}
 
       {pruefung.sprechen.teile.map((teil) => {
         const partner = manifest?.sprechen.filter((s) => s.teil === teil.nummer) ?? [];
@@ -81,6 +97,20 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
             </header>
             <p className="teil__anweisung">{teil.anweisung}</p>
             {teil.situation && <p className="situation">{teil.situation}</p>}
+
+            {teil.karten && (
+              <div className="karten">
+                {teil.karten.map((k) => (
+                  <span className="karte__stichwort" key={k}>
+                    {k}
+                  </span>
+                ))}
+                <p className="notiz">
+                  Bilden Sie zu jedem Stichwort eine <strong>ganze Frage</strong>. Ein
+                  einzelnes Wort ist keine Frage und bringt keine Punkte.
+                </p>
+              </div>
+            )}
 
             {teil.planungspunkte && (
               <ul className="leitpunkte">

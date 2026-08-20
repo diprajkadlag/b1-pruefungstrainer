@@ -654,6 +654,32 @@ audio {
   color: var(--mute);
 }
 
+/* A2 Teil 1: four single-word prompts, printed like the cards they are. */
+.karten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0.5rem 0 0.75rem;
+}
+.karte__stichwort {
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+}
+.karten .notiz {
+  flex-basis: 100%;
+  margin: 0.25rem 0 0;
+}
+
+/* Why an A2 result screen shows points but no per-part verdict. */
+.notiz.gesamtregel {
+  margin: 1rem 0 0;
+  line-height: 1.55;
+  max-width: 68ch;
+}
+
 /* Says what B2.1 and B2.2 mean, so nobody reads them as exam parts. */
 .notiz.kursstufe {
   margin: 0.75rem 0 0;

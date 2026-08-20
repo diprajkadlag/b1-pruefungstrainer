@@ -1,15 +1,18 @@
 import type { Beispiel, OeffentlichesItem } from '@pruefung/core';
 
-const ANZEIGEN_BUCHSTABEN = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', '0'];
-
 interface Props {
   item: OeffentlichesItem;
   wert: string | undefined;
   onChange: (wert: string) => void;
   disabled?: boolean;
   /**
-   * The letters this item may be answered with, for the B2 tasks whose
-   * alternatives live on the Teil rather than on the item. Ignored otherwise.
+   * The letters this item may be answered with, for every task whose
+   * alternatives live on the Teil rather than on the item — the B2 matching
+   * tasks, and the small ads at A2 and B1. Ignored otherwise.
+   *
+   * It has to be passed rather than assumed: B1 offers ten ads and a 0, A2
+   * offers six and an x, and printing ten boxes under a paper that has six
+   * would be wrong on the page as well as in the answer.
    */
   buchstaben?: string[];
 }
@@ -34,9 +37,9 @@ export function Item({ item, wert, onChange, disabled, buchstaben }: Props) {
             { value: 'nein', label: 'Nein — dagegen' },
           ]
         : item.typ === 'zuordnung_anzeigen'
-          ? ANZEIGEN_BUCHSTABEN.map((b) => ({
+          ? (buchstaben ?? []).map((b) => ({
               value: b,
-              label: b === '0' ? '0 — keine passt' : b,
+              label: /^[a-j]$/.test(b) ? b : `${b} — keine passt`,
             }))
           : item.typ === 'zuordnung_buchstabe'
             ? (buchstaben ?? []).map((b) => ({ value: b, label: b }))

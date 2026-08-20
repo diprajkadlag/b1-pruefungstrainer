@@ -296,7 +296,8 @@ def main(argv: Iterable[str] | None = None) -> int:
     if not args.exam:
         # One sheet per level, and the app is told which levels actually have
         # one so it can offer the button only where it leads somewhere.
-        stufen = [s for s in ("B1", "B2") if export_lernhilfe(s)]
+        # In level order, so the app's tabs and this list agree.
+        stufen = [s for s in ("A2", "B1", "B2") if export_lernhilfe(s)]
         (TARGET / "index.json").write_text(
             json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen},
                        ensure_ascii=False, indent=2) + "\n",

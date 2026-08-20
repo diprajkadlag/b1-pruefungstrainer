@@ -43,12 +43,22 @@ DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen
 
 # Levels that can carry their own cheat sheet. Ones without a
 # content/lernhilfe/<stufe>/ directory are skipped silently.
-STUFEN = ("B1", "B2")
+STUFEN = ("A2", "B1", "B2")
 
 # What each part actually is, per level. Printed next to the part number so a
 # candidate leafing through the paper knows what is coming. The two levels
 # share no single line here, which is why this is keyed by level.
 TEIL_NAMEN = {
+    "A2": {
+        ("lesen", 1): "Kurzer Artikel",
+        ("lesen", 2): "Tafel oder Programm",
+        ("lesen", 3): "Private E-Mail",
+        ("lesen", 4): "Kleinanzeigen zuordnen",
+        ("hoeren", 1): "Fünf kurze Texte",
+        ("hoeren", 2): "Ein Gespräch, neun Stichwörter",
+        ("hoeren", 3): "Fünf kurze Gespräche",
+        ("hoeren", 4): "Radiointerview",
+    },
     "B1": {
         ("lesen", 1): "Blog / persönlicher Bericht",
         ("lesen", 2): "Zeitungsartikel",
@@ -74,6 +84,7 @@ TEIL_NAMEN = {
 }
 
 AUFGABEN_NAMEN = {
+    "sms": "Kurznachricht (SMS)",
     "email_informell": "Informelle E-Mail",
     "forumsbeitrag": "Forumsbeitrag",
     "email_halbformell": "Halbformelle E-Mail",

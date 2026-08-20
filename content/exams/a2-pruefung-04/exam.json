@@ -1,0 +1,1935 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "a2-pruefung-04",
+    "stufe": "A2",
+    "variante": "erwachsene",
+    "contentVersion": "1.0.0",
+    "autor": "GermanExamTrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true,
+    "titel": "Übungsprüfung A2 4 — Tiere, Gesundheit und Bücher",
+    "niveau": "mittel",
+    "sprechtempoProzent": 0,
+    "themen": [
+      "Tierheim und Haustiere",
+      "Arztpraxis und Rezepte",
+      "Bibliothek und Lesen",
+      "Angebote rund um Tiere",
+      "Unterwegs mit Bus und Bahn",
+      "Ehrenamt und Freiwillige"
+    ]
+  },
+  "lesen": {
+    "zeitMinuten": 30,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie den Text aus der Zeitung. Wählen Sie bei den Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 7,
+        "texte": [
+          {
+            "id": "text_1",
+            "titel": "Vierzig Katzen und ein Esel",
+            "quelle": "Weidenbacher Wochenblatt",
+            "inhalt": "Im Tierheim Weidenbach leben zurzeit vierzig Katzen, achtzehn Hunde und ein Esel. Der Esel heißt Fridolin, ist seit sechs Jahren da und wird wahrscheinlich bleiben. „Für einen Esel findet man kaum jemanden“, sagt die Leiterin Frau Rhode.\n\nAm schnellsten weg sind junge Katzen. Für sie gibt es oft schon eine Warteliste, bevor sie überhaupt im Internet stehen. Schwer ist es dagegen bei alten Tieren und bei allen, die eine Krankheit haben.\n\nWer ein Tier mitnehmen möchte, kann das nicht spontan tun. Zuerst kommt ein Gespräch, dann mindestens zwei Besuche, und bei Hunden schaut sich jemand die Wohnung an. „Das ärgert manche Leute“, sagt Frau Rhode. „Aber wir bekommen sonst die Hälfte der Tiere nach vier Wochen zurück.“\n\nGeld ist immer knapp. Die Stadt zahlt einen Teil, den Rest bringen Spenden. Am meisten fehlt es aber an Menschen: Fünfzehn Freiwillige führen jeden Tag die Hunde aus, und im Winter sind es deutlich weniger."
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "multiple_choice",
+            "frage": "Warum bleibt Fridolin wahrscheinlich im Tierheim?",
+            "optionen": {
+              "a": "Weil er krank ist.",
+              "b": "Weil kaum jemand einen Esel nimmt.",
+              "c": "Weil er zu alt ist."
+            },
+            "loesung": "b",
+            "beleg": "Für einen Esel findet man kaum jemanden",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Frau Rhode nennt den Grund direkt im Zitat.",
+              "en": "Age and illness are named later, but for other animals."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "frage": "Welche Tiere finden am schnellsten ein Zuhause?",
+            "optionen": {
+              "a": "Junge Katzen.",
+              "b": "Alte Hunde.",
+              "c": "Kranke Tiere."
+            },
+            "loesung": "a",
+            "beleg": "Am schnellsten weg sind junge Katzen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz danach nennt sogar die Warteliste.",
+              "en": "The next sentence names the opposite group, which is where b and c come from."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "multiple_choice",
+            "frage": "Was muss man tun, bevor man ein Tier mitnehmen darf?",
+            "optionen": {
+              "a": "Nur ein Formular ausfüllen.",
+              "b": "Mehrmals kommen.",
+              "c": "Eine Gebühr zahlen."
+            },
+            "loesung": "b",
+            "beleg": "Zuerst kommt ein Gespräch, dann mindestens zwei Besuche, und bei Hunden schaut sich jemand die Wohnung an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ein Gespräch und zwei Besuche heißt: mehr als einmal.",
+              "en": "The sentence before says it cannot be done spontaneously — this one says why."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "frage": "Warum macht das Tierheim das so?",
+            "optionen": {
+              "a": "Weil die Stadt es verlangt.",
+              "b": "Weil sonst viele Tiere zurückkommen.",
+              "c": "Weil es zu wenige Tiere gibt."
+            },
+            "loesung": "b",
+            "beleg": "Aber wir bekommen sonst die Hälfte der Tiere nach vier Wochen zurück.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„sonst“ verbindet die Regel mit ihrer Begründung.",
+              "en": "She concedes it annoys people first, then gives the reason she does it anyway."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "multiple_choice",
+            "frage": "Woran fehlt es dem Tierheim am meisten?",
+            "optionen": {
+              "a": "An Geld.",
+              "b": "An Platz.",
+              "c": "An Menschen."
+            },
+            "loesung": "c",
+            "beleg": "Am meisten fehlt es aber an Menschen: Fünfzehn Freiwillige führen jeden Tag die Hunde aus, und im Winter sind es deutlich weniger.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Geld ist knapp, aber „am meisten“ fehlt etwas anderes.",
+              "en": "The paragraph opens with money precisely so that „aber“ can outrank it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die Hinweise der Arztpraxis. Wählen Sie bei den Aufgaben 6 bis 10 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 7,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Praxis Dr. Weiler",
+            "quelle": "Aushang im Wartezimmer",
+            "inhalt": "Praxis Dr. Weiler — Wichtige Hinweise\n\nSprechzeiten\nMontag, Dienstag, Donnerstag 8–12 und 15–18 Uhr\nMittwoch und Freitag nur 8–12 Uhr\n\nOhne Termin\nFür akute Fälle halten wir täglich von 8 bis 9 Uhr Zeit frei. Rechnen Sie trotzdem mit Wartezeit.\n\nGut zu wissen\nRezepte für Medikamente, die Sie regelmäßig nehmen, bestellen Sie bitte telefonisch und holen sie am nächsten Werktag ab. Ein Termin ist dafür nicht nötig. Bringen Sie zu jedem Besuch Ihre Versichertenkarte mit. Befunde besprechen wir grundsätzlich nicht am Telefon, sondern nur persönlich. Bei einem Notfall am Wochenende rufen Sie bitte die 116117 an."
+          }
+        ],
+        "items": [
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "frage": "Sie brauchen am Freitag um 16 Uhr einen Termin. Was ist?",
+            "optionen": {
+              "a": "Das geht.",
+              "b": "Die Praxis ist nachmittags zu.",
+              "c": "Nur mit Termin möglich."
+            },
+            "loesung": "b",
+            "beleg": "Mittwoch und Freitag nur 8–12 Uhr",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "An zwei Tagen der Woche gibt es keine Nachmittagszeit.",
+              "en": "Three days do have afternoon hours, which is what makes this worth checking."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "multiple_choice",
+            "frage": "Wann kann man ohne Termin kommen?",
+            "optionen": {
+              "a": "Jeden Tag von 8 bis 9 Uhr.",
+              "b": "Nur mittwochs.",
+              "c": "Gar nicht."
+            },
+            "loesung": "a",
+            "beleg": "Für akute Fälle halten wir täglich von 8 bis 9 Uhr Zeit frei.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„täglich“ heißt: an jedem Tag mit Sprechzeit.",
+              "en": "The warning about waiting time is not a restriction on when."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "frage": "Wie bekommt man ein Rezept für ein Medikament, das man regelmäßig nimmt?",
+            "optionen": {
+              "a": "Man braucht einen Termin.",
+              "b": "Man bestellt es am Telefon.",
+              "c": "Man schreibt eine E-Mail."
+            },
+            "loesung": "b",
+            "beleg": "Rezepte für Medikamente, die Sie regelmäßig nehmen, bestellen Sie bitte telefonisch und holen sie am nächsten Werktag ab.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Satz sagt ausdrücklich, dass kein Termin nötig ist.",
+              "en": "The practice contradicts a directly, in its own next sentence."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "multiple_choice",
+            "frage": "Wie erfährt man ein Untersuchungsergebnis?",
+            "optionen": {
+              "a": "Am Telefon.",
+              "b": "Per Post.",
+              "c": "Nur im Gespräch in der Praxis."
+            },
+            "loesung": "c",
+            "beleg": "Befunde besprechen wir grundsätzlich nicht am Telefon, sondern nur persönlich.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„nicht … sondern“ sagt beides: was nicht geht und was gilt.",
+              "en": "„grundsätzlich“ means there are no exceptions to ask for."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "frage": "Was tun Sie bei einem Notfall am Sonntag?",
+            "optionen": {
+              "a": "Sie warten bis Montag.",
+              "b": "Sie rufen die 116117 an.",
+              "c": "Sie kommen um 8 Uhr in die Praxis."
+            },
+            "loesung": "b",
+            "beleg": "Bei einem Notfall am Wochenende rufen Sie bitte die 116117 an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der letzte Satz regelt genau diesen Fall.",
+              "en": "The 8–9 slot is on working days only; the practice is shut at weekends."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die E-Mail. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 8,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "E-Mail an die Bibliothekarin",
+            "quelle": "private E-Mail",
+            "inhalt": "Liebe Frau Osterloh,\n\nvielen Dank für Ihre Nachricht und für die Bücher, die Sie mir letzte Woche empfohlen haben.\n\nDen Roman habe ich in drei Abenden gelesen — so etwas ist mir seit Jahren nicht passiert. Das zweite Buch, das über die Nordsee, habe ich nach vierzig Seiten weggelegt. Zu viele Namen, ich kam nicht hinein.\n\nMeine Tochter fragt inzwischen jeden Freitag, ob wir in die Bibliothek gehen. Das hätte ich vor einem Jahr nicht gedacht. Sie sucht sich alles selbst aus, und ich sage nichts dazu, auch wenn es zum dritten Mal dasselbe Buch ist.\n\nEine Frage noch: Gibt es bei Ihnen einen Lesekreis für Erwachsene? Ich habe einen Aushang gesehen, aber ohne Datum. Wenn ja, würde ich gern einmal vorbeikommen.\n\nHerzliche Grüße\nBirgit Sanftleben"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Wie hat Frau Sanftleben den Roman gefunden?",
+            "optionen": {
+              "a": "Sehr gut.",
+              "b": "Zu schwer.",
+              "c": "Zu lang."
+            },
+            "loesung": "a",
+            "beleg": "Den Roman habe ich in drei Abenden gelesen — so etwas ist mir seit Jahren nicht passiert.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "Drei Abende für ein ganzes Buch ist hier das Lob.",
+              "en": "She never uses the word „gut“ — the speed is the judgement."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Was ist mit dem zweiten Buch passiert?",
+            "optionen": {
+              "a": "Sie hat es verschenkt.",
+              "b": "Sie hat es nicht zu Ende gelesen.",
+              "c": "Sie hat es zweimal gelesen."
+            },
+            "loesung": "b",
+            "beleg": "Das zweite Buch, das über die Nordsee, habe ich nach vierzig Seiten weggelegt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„weggelegt“ nach vierzig Seiten heißt: abgebrochen.",
+              "en": "Reading something twice is what her daughter does, one paragraph later."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was macht ihre Tochter jetzt jeden Freitag?",
+            "optionen": {
+              "a": "Sie liest zu Hause vor.",
+              "b": "Sie fragt nach der Bibliothek.",
+              "c": "Sie geht in einen Lesekreis."
+            },
+            "loesung": "b",
+            "beleg": "Meine Tochter fragt inzwischen jeden Freitag, ob wir in die Bibliothek gehen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„inzwischen“ zeigt: das ist neu.",
+              "en": "The reading circle in the last paragraph is for adults."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Was sagt Frau Sanftleben zur Buchauswahl ihrer Tochter?",
+            "optionen": {
+              "a": "Sie sucht die Bücher aus.",
+              "b": "Sie lässt die Tochter selbst wählen.",
+              "c": "Die Bibliothekarin hilft dabei."
+            },
+            "loesung": "b",
+            "beleg": "Sie sucht sich alles selbst aus, und ich sage nichts dazu, auch wenn es zum dritten Mal dasselbe Buch ist.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "„ich sage nichts dazu“ ist eine bewusste Entscheidung.",
+              "en": "The „auch wenn“ clause shows she has a view and holds it back on purpose."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Was möchte Frau Sanftleben wissen?",
+            "optionen": {
+              "a": "Ob es einen Lesekreis gibt.",
+              "b": "Wann die Bibliothek öffnet.",
+              "c": "Ob sie das Buch länger behalten darf."
+            },
+            "loesung": "a",
+            "beleg": "Eine Frage noch: Gibt es bei Ihnen einen Lesekreis für Erwachsene?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Doppelpunkt kündigt genau eine Frage an.",
+              "en": "„Eine Frage noch“ tells you there is exactly one thing to look for."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_anzeigen",
+        "anweisung": "Fünf Personen interessieren sich für Tiere. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine Lösung. Schreiben Sie dort ein x. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+        "richtzeitMinuten": 8,
+        "anzeigen": [
+          {
+            "buchstabe": "a",
+            "titel": "Katzensitter gesucht",
+            "inhalt": "Wir fahren zwei Wochen weg und suchen jemanden, der zweimal am Tag nach unseren zwei Katzen schaut. Wohnung im Zentrum. Bezahlung nach Absprache, Schlüssel bekommen Sie vorher."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Hundeschule für Anfänger",
+            "inhalt": "Zehn Termine, samstags um 10 Uhr auf der Wiese hinter dem Sportplatz. Für junge Hunde bis zu einem Jahr. Bitte Leine und viele kleine Leckerlis mitbringen."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Vogelfreunde treffen sich",
+            "inhalt": "Jeden ersten Sonntag im Monat um 7 Uhr am Waldrand. Wir beobachten Vögel und bestimmen sie gemeinsam. Ein Fernglas ist nötig, Bücher haben wir dabei."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Reiten für Kinder",
+            "inhalt": "Kleine Gruppen für Kinder von acht bis zwölf Jahren, mittwochs um 15 Uhr. Helme stellen wir. Die ersten drei Stunden führen wir die Pferde noch am Strick."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Hilfe im Tierheim",
+            "inhalt": "Wir suchen Freiwillige, die vormittags Hunde ausführen. Zwei Stunden in der Woche reichen. Sie sollten kräftig genug sein — manche Hunde ziehen. Anmeldung im Büro."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Aquarium abzugeben",
+            "inhalt": "Zweihundert Liter, komplett mit Pumpe und Licht, gut erhalten. Fische sind keine dabei. Abholung nur mit eigenem Transport, das Becken ist schwer."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_anzeigen",
+          "frage": "Frau Delfs wohnt im Zentrum und möchte in den Ferien etwas Kleines dazuverdienen.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Anzeige a sucht genau das, und die Wohnung liegt im Zentrum.",
+            "en": "Worked example. Ad a is used up and cannot answer any item."
+          }
+        },
+        "items": [
+          {
+            "nr": 16,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Baumhauer hat einen acht Monate alten Hund und möchte samstags mit ihm üben.",
+            "loesung": "b",
+            "beleg": "Zehn Termine, samstags um 10 Uhr auf der Wiese hinter dem Sportplatz.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Acht Monate ist unter einem Jahr, und der Tag stimmt.",
+              "en": "The age limit is the second condition — check it before you commit."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Kortlang hat vormittags Zeit und möchte etwas für Tiere tun, ohne selbst eines zu haben.",
+            "loesung": "e",
+            "beleg": "Wir suchen Freiwillige, die vormittags Hunde ausführen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Vormittags, ehrenamtlich, und kein eigenes Tier nötig.",
+              "en": "Ad a also involves someone else's animals, but it is paid and taken by the example."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Pflüger steht gern sehr früh auf und beobachtet gern die Natur.",
+            "loesung": "c",
+            "beleg": "Jeden ersten Sonntag im Monat um 7 Uhr am Waldrand.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Sieben Uhr am Sonntag ist der früheste Termin in allen Anzeigen.",
+              "en": "Only one ad combines an early hour with watching rather than handling animals."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Tiedemann sucht für ihre zehnjährige Tochter etwas mit Pferden am Nachmittag.",
+            "loesung": "d",
+            "beleg": "Kleine Gruppen für Kinder von acht bis zwölf Jahren, mittwochs um 15 Uhr.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Zehn Jahre liegt zwischen acht und zwölf, und 15 Uhr ist Nachmittag.",
+              "en": "Both halves of the age range have to be checked, not just the lower one."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Sanftleben möchte sich Zierfische für sein neues Aquarium kaufen.",
+            "loesung": "x",
+            "beleg": "Fische sind keine dabei.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Anzeige f gibt ein Aquarium ab, aber ohne Fische, und er hat schon eins. Hier ist x richtig.",
+              "en": "The ad matches the topic and fails the need — the most common shape of a trap at this level."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 30,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie eine Aufgabe. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          {
+            "rolle": "Tierarztpraxis",
+            "geschlecht": "f",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Bahnansage",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage am Gleis"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "geschlecht": "f",
+            "beschreibung": "Tipp im Radio"
+          },
+          {
+            "rolle": "Apothekenansage",
+            "geschlecht": "m",
+            "beschreibung": "Durchsage in der Apotheke"
+          },
+          {
+            "rolle": "Freund",
+            "geschlecht": "m",
+            "beschreibung": "Sprachnachricht eines Freundes"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Der erste Text kommt von einer Tierarztpraxis.",
+          "optionen": {
+            "a": "Richtig.",
+            "b": "Nein, von einer Apotheke.",
+            "c": "Nein, von einem Tierheim."
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Die Anruferin nennt die Praxis im ersten Satz.",
+            "en": "Worked example, so you can hear how one question per text works."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte: Nachrichten auf dem Anrufbeantworter, Durchsagen und Meldungen aus dem Radio. Zu jedem Text lösen Sie eine Aufgabe: Sie wählen die richtige Lösung a, b oder c. Sie hören jeden Text zweimal. Lesen Sie jetzt die Aufgaben eins bis fünf.",
+            "pauseDanachSek": 25,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 1.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Tierarztpraxis",
+            "text": "Guten Tag, Herr Pflüger, Praxis Dr. Ramsauer. Die Untersuchung bei Ihrer Katze war in Ordnung, es ist alles gut. Die Tabletten können Sie ab sofort weglassen. Nur zum Zahnstein sollten wir noch einmal sprechen — rufen Sie dazu bitte in den nächsten Wochen an.",
+            "pauseDanachSek": 12,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 2.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Bahnansage",
+            "text": "Sehr geehrte Fahrgäste, wegen eines Notarzteinsatzes am Gleis verzögert sich die Abfahrt um voraussichtlich fünfzehn Minuten. Wir bitten um Ihr Verständnis. Der Anschluss in Kirchdorf wartet auf diesen Zug, Sie erreichen ihn also.",
+            "pauseDanachSek": 12,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 3.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Radiosprecherin",
+            "text": "Zum Schluss noch ein Tipp: Die Stadtbibliothek verlängert am Samstag ihre Öffnungszeiten bis zwanzig Uhr, weil die lange Lesenacht stattfindet. Der Eintritt ist frei, Karten braucht man nicht. Für Kinder gibt es ab siebzehn Uhr ein eigenes Programm.",
+            "pauseDanachSek": 12,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 4.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Apothekenansage",
+            "text": "Liebe Kundinnen und Kunden, unser Kartengerät funktioniert im Moment nicht. Sie können bar bezahlen oder wir schreiben es an, wenn Sie bei uns bekannt sind. Ein Geldautomat ist gleich gegenüber. Es tut uns leid.",
+            "pauseDanachSek": 12,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 5.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Freund",
+            "text": "Hallo Birgit, hier ist Jonas. Ich wollte dir sagen: Der Lesekreis trifft sich doch nicht am Dienstag, sondern am Mittwoch, immer noch um neunzehn Uhr. Der Raum ist auch ein anderer, jetzt im ersten Stock. Bis dann!",
+            "pauseDanachSek": 12,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was soll Herr Pflüger tun?",
+            "optionen": {
+              "a": "Die Tabletten weiter geben.",
+              "b": "Sofort wiederkommen.",
+              "c": "Wegen der Zähne noch einmal anrufen."
+            },
+            "loesung": "c",
+            "beleg": "Nur zum Zahnstein sollten wir noch einmal sprechen — rufen Sie dazu bitte in den nächsten Wochen an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Tabletten soll er gerade weglassen; bleibt der Anruf.",
+              "en": "„in den nächsten Wochen“ is the opposite of the urgency b suggests."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was sagt die Ansage über den Anschluss?",
+            "optionen": {
+              "a": "Er ist schon weg.",
+              "b": "Er wartet.",
+              "c": "Er fällt aus."
+            },
+            "loesung": "b",
+            "beleg": "Der Anschluss in Kirchdorf wartet auf diesen Zug, Sie erreichen ihn also.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Nachsatz sagt es noch einmal mit anderen Worten.",
+              "en": "The fifteen-minute delay is what makes a plausible, and the announcement answers it directly."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was ist am Samstag in der Bibliothek?",
+            "optionen": {
+              "a": "Sie ist geschlossen.",
+              "b": "Man braucht Karten.",
+              "c": "Sie hat länger geöffnet."
+            },
+            "loesung": "c",
+            "beleg": "Die Stadtbibliothek verlängert am Samstag ihre Öffnungszeiten bis zwanzig Uhr, weil die lange Lesenacht stattfindet.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„verlängert“ heißt: länger als sonst.",
+              "en": "The text says explicitly that no tickets are needed, which is where b comes from."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Wie kann man in der Apotheke bezahlen?",
+            "optionen": {
+              "a": "Nur mit Karte.",
+              "b": "Bar oder anschreiben lassen.",
+              "c": "Gar nicht, man muss später kommen."
+            },
+            "loesung": "b",
+            "beleg": "Sie können bar bezahlen oder wir schreiben es an, wenn Sie bei uns bekannt sind.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Karte ist gerade das, was nicht geht.",
+              "en": "The cash machine opposite is a suggestion, not a payment method inside the shop."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Was hat sich beim Lesekreis geändert?",
+            "optionen": {
+              "a": "Nur der Tag.",
+              "b": "Nur der Raum.",
+              "c": "Tag und Raum."
+            },
+            "loesung": "c",
+            "beleg": "Der Raum ist auch ein anderer, jetzt im ersten Stock.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„auch“ zeigt, dass zur neuen Zeit noch etwas dazukommt.",
+              "en": "The time of day is the one thing that has not changed — he says so."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "gespraech",
+        "anweisung": "Sie hören ein Gespräch zwischen zwei Eheleuten. Sie hören den Text einmal. Wo war Herr Osterloh wann? Wählen Sie für die Aufgaben 6 bis 10 ein passendes Stichwort aus a bis i. Wählen Sie jeden Buchstaben nur einmal.",
+        "wiederholungen": 1,
+        "situation": "Am Abend erzählt Herr Osterloh, wo er den Tag verbracht hat.",
+        "sprecher": [
+          {
+            "rolle": "Ehefrau",
+            "geschlecht": "f",
+            "beschreibung": "fragt den Tag durch"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "geschlecht": "m",
+            "beschreibung": "erzählt"
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "in der Apotheke"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "beim Tierarzt"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "in der Bibliothek"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "im Park"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "beim Bäcker"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "in der Werkstatt"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "bei der Nachbarin"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "im Krankenhaus"
+          },
+          {
+            "buchstabe": "i",
+            "inhalt": "auf der Post"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "am Abend",
+          "loesung": "g",
+          "begruendung": {
+            "de": "Beispiel: Am Abend war er bei der Nachbarin — Stichwort g.",
+            "en": "Worked example. Letter g is used up and cannot answer any item."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Gespräch. Sie hören den Text einmal. Wo war Herr Osterloh wann? Wählen Sie für die Aufgaben sechs bis zehn ein passendes Stichwort aus a bis i. Wählen Sie jeden Buchstaben nur einmal. Lesen Sie jetzt die Stichwörter.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Du warst ja den ganzen Tag unterwegs. Erzähl mal.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Ja. Um acht war ich beim Bäcker, wie immer, das war das Angenehmste am ganzen Tag.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Und danach? Du wolltest doch die Katze wegbringen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Um neun, ja. Beim Tierarzt hat sie geschrien wie am Spieß, aber es ist alles in Ordnung.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Und das Rezept?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Das habe ich um elf eingelöst. In der Apotheke war eine Schlange bis zur Tür, das hat gedauert.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Und mittags? Du warst um zwei noch nicht da.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Da war ich in der Werkstatt. Das Auto macht wieder dieses Geräusch, und diesmal haben sie es gleich behalten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Und am Nachmittag?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Am Nachmittag musste ich noch das Paket abgeben, also auf die Post. Danach bin ich zu Fuß nach Hause, ohne Auto ging es ja nicht anders.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Ehefrau",
+            "text": "Und dann warst du noch schnell bei der Nachbarin, wegen des Schlüssels.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Herr Osterloh",
+            "text": "Genau, am Abend. Danach war ich fertig.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 6,
+            "typ": "zuordnung_buchstabe",
+            "frage": "um 9 Uhr",
+            "loesung": "b",
+            "beleg": "Beim Tierarzt hat sie geschrien wie am Spieß, aber es ist alles in Ordnung.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Ehefrau nennt die Uhrzeit, er nennt den Ort.",
+              "en": "The time comes from his own „Um neun, ja“, which answers her question."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_buchstabe",
+            "frage": "um 11 Uhr",
+            "loesung": "a",
+            "beleg": "In der Apotheke war eine Schlange bis zur Tür, das hat gedauert.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Das habe ich um elf eingelöst“ — gemeint ist das Rezept.",
+              "en": "The prescription is the link between the time and the place."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_buchstabe",
+            "frage": "um 14 Uhr",
+            "loesung": "f",
+            "beleg": "Da war ich in der Werkstatt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„um zwei“ in der Frage und „Da“ in der Antwort meinen dieselbe Zeit.",
+              "en": "„um zwei“ has to be converted to 14 Uhr before you can match it."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_buchstabe",
+            "frage": "am Nachmittag",
+            "loesung": "i",
+            "beleg": "Am Nachmittag musste ich noch das Paket abgeben, also auf die Post.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„also auf die Post“ nennt den Ort direkt.",
+              "en": "The parcel is the reason, the post office is the place."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "um 8 Uhr",
+            "loesung": "e",
+            "beleg": "Um acht war ich beim Bäcker, wie immer, das war das Angenehmste am ganzen Tag.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Er nennt Zeit und Ort in einem Satz.",
+              "en": "This one is out of order on the answer sheet — the items do not follow the conversation."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "kurzgespraeche",
+        "anweisung": "Sie hören fünf kurze Gespräche. Sie hören jeden Text einmal. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+        "wiederholungen": 1,
+        "situation": "Fünf kurze Gespräche aus dem Alltag, die nichts miteinander zu tun haben.",
+        "sprecher": [
+          {
+            "rolle": "Sprechstundenhilfe",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Patient",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Apothekerin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Kunde",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Leser",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Besucher",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Tierpflegerin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Nachbarin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Nachbar",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören fünf kurze Gespräche. Sie hören jeden Text einmal. Wählen Sie bei den Aufgaben elf bis fünfzehn die richtige Lösung a, b oder c. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 20,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 1. In der Arztpraxis.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Sprechstundenhilfe",
+            "text": "Der Doktor ist heute leider sehr spät dran. Etwa eine Stunde.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Patient",
+            "text": "Eine Stunde? Kann ich in der Zeit kurz weggehen und wiederkommen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Sprechstundenhilfe",
+            "text": "Machen Sie das. Seien Sie aber um halb elf wieder hier.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 2. In der Apotheke.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Apothekerin",
+            "text": "Das gibt es leider nur auf Rezept.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Kunde",
+            "text": "Und etwas Ähnliches ohne Rezept?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Apothekerin",
+            "text": "Da hätte ich einen Tee und ein Spray. Beides hilft, aber langsamer.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 3. In der Bibliothek.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Leser",
+            "text": "Ich habe das Buch leider verloren. Was passiert jetzt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "text": "Sie ersetzen es. Entweder Sie kaufen dasselbe neu oder Sie zahlen zwanzig Euro.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Leser",
+            "text": "Dann kaufe ich es neu, das ist günstiger.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 4. Im Tierheim.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Besucher",
+            "text": "Der kleine schwarze Hund — kann ich den heute mitnehmen?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Tierpflegerin",
+            "text": "Heute nicht. Erst kommt ein Gespräch, dann besuchen Sie ihn noch zweimal.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Besucher",
+            "text": "Gut, dann komme ich am Samstag wieder.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 5. Im Treppenhaus.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Nachbarin",
+            "text": "Ihre Katze war heute wieder bei uns auf dem Balkon.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Nachbar",
+            "text": "Oh, Entschuldigung. Hat sie etwas kaputt gemacht?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Nachbarin",
+            "text": "Nein, gar nichts. Ich wollte es nur sagen, damit Sie sich keine Sorgen machen.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_1",
+            "frage": "Was darf der Patient tun?",
+            "optionen": {
+              "a": "Nach Hause gehen.",
+              "b": "Kurz weggehen und zurückkommen.",
+              "c": "Einen neuen Termin machen."
+            },
+            "loesung": "b",
+            "beleg": "Machen Sie das. Seien Sie aber um halb elf wieder hier.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie erlaubt es und nennt gleich die Uhrzeit für die Rückkehr.",
+              "en": "Going home for good is not what he asked and not what she allows."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_2",
+            "frage": "Was bekommt der Kunde?",
+            "optionen": {
+              "a": "Nichts.",
+              "b": "Das Medikament vom Rezept.",
+              "c": "Zwei andere Mittel zur Auswahl."
+            },
+            "loesung": "c",
+            "beleg": "Da hätte ich einen Tee und ein Spray. Beides hilft, aber langsamer.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie bietet zwei Alternativen an.",
+              "en": "The refusal in the first line is real, but it is not the end of the conversation."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_3",
+            "frage": "Was macht der Leser?",
+            "optionen": {
+              "a": "Er zahlt zwanzig Euro.",
+              "b": "Er kauft das Buch neu.",
+              "c": "Er sucht weiter."
+            },
+            "loesung": "b",
+            "beleg": "Dann kaufe ich es neu, das ist günstiger.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Er entscheidet sich für die erste der beiden Möglichkeiten.",
+              "en": "Both options are offered; only one is chosen, in the last line."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_4",
+            "frage": "Warum kann der Besucher den Hund nicht mitnehmen?",
+            "optionen": {
+              "a": "Der Hund ist krank.",
+              "b": "Der Hund ist schon vergeben.",
+              "c": "Es sind erst mehrere Besuche nötig."
+            },
+            "loesung": "c",
+            "beleg": "Erst kommt ein Gespräch, dann besuchen Sie ihn noch zweimal.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Pflegerin nennt das Verfahren, nicht ein Problem mit dem Hund.",
+              "en": "Nothing at all is said about the dog's health or about another family."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_5",
+            "frage": "Warum spricht die Nachbarin ihn an?",
+            "optionen": {
+              "a": "Sie ärgert sich.",
+              "b": "Sie will ihn nur informieren.",
+              "c": "Sie möchte Geld für den Schaden."
+            },
+            "loesung": "b",
+            "beleg": "Ich wollte es nur sagen, damit Sie sich keine Sorgen machen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt ausdrücklich, dass nichts kaputt ist.",
+              "en": "The apology comes from him, not from her — she is not complaining."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "interview",
+        "anweisung": "Sie hören ein Interview aus dem Radio. Sie hören den Text zweimal. Entscheiden Sie bei den Aufgaben 16 bis 20, ob die Aussage richtig oder falsch ist.",
+        "wiederholungen": 2,
+        "situation": "Ein Radiointerview mit der Leiterin eines Tierheims.",
+        "sprecher": [
+          {
+            "rolle": "Moderator",
+            "geschlecht": "m",
+            "beschreibung": "führt durch das Interview"
+          },
+          {
+            "rolle": "Leiterin",
+            "geschlecht": "f",
+            "beschreibung": "leitet das Tierheim seit elf Jahren"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Frau Rhode leitet das Tierheim seit mehr als zehn Jahren.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Der Moderator sagt es in der Anmoderation.",
+            "en": "Worked example, so you can hear how a true/false item is set up."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören ein Interview. Sie hören den Text zweimal. Entscheiden Sie bei den Aufgaben sechzehn bis zwanzig, ob die Aussage richtig oder falsch ist. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 25,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Heute zu Gast: Frau Rhode. Sie leitet das Tierheim Weidenbach, seit elf Jahren. Frau Rhode, was war Ihr Beruf davor?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Leiterin",
+            "text": "Ich war Krankenschwester. Das klingt weit weg, ist es aber nicht: Ich habe vorher schon gelernt, mit Menschen zu sprechen, die gerade eine Entscheidung treffen müssen, und meistens keine leichte. Genau das mache ich hier den ganzen Tag.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Wie viele Tiere haben Sie im Moment?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Leiterin",
+            "text": "Knapp sechzig. Im Sommer sind es immer mehr, das hat mit den Ferien zu tun. Manche Leute geben ihr Tier ab, weil sie verreisen — nicht viele, aber es kommt vor.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Bekommen Sie genug Spenden?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Leiterin",
+            "text": "Geld schon, überraschenderweise. Was fehlt, sind Menschen. Wir haben fünfzehn Freiwillige, und wir bräuchten dreißig. Im Winter kommt kaum jemand, dabei müssen die Hunde auch im Januar raus.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Nehmen Sie jedes Tier auf?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Leiterin",
+            "text": "Aus unserer Stadt ja, immer. Von weiter weg können wir es nicht, sonst wären wir in einer Woche voll. Wir vermitteln dann an ein anderes Heim weiter.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Was sollte man sich überlegen, bevor man ein Tier holt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Leiterin",
+            "text": "Wer zahlt die Tierarztrechnung, wenn es teuer wird? Und wer nimmt das Tier, wenn Sie im Krankenhaus liegen? Wer darauf keine Antwort hat, sollte lieber noch warten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderator",
+            "text": "Frau Rhode, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "richtig_falsch",
+            "frage": "Frau Rhode hat vorher in einem anderen Beruf gearbeitet.",
+            "loesung": "richtig",
+            "beleg": "Ich war Krankenschwester.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie nennt den früheren Beruf sofort.",
+              "en": "She then argues the two jobs are related, but that does not make them the same job."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "richtig_falsch",
+            "frage": "Im Sommer hat das Tierheim weniger Tiere als sonst.",
+            "loesung": "falsch",
+            "beleg": "Im Sommer sind es immer mehr, das hat mit den Ferien zu tun.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt das Gegenteil: im Sommer sind es mehr.",
+              "en": "The holidays are given as the reason, which only makes sense in one direction."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "richtig_falsch",
+            "frage": "Dem Tierheim fehlt vor allem Geld.",
+            "loesung": "falsch",
+            "beleg": "Geld schon, überraschenderweise. Was fehlt, sind Menschen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Zwei Sätze, die genau diese Verwechslung ausschließen.",
+              "en": "„überraschenderweise“ is there because most listeners would assume otherwise."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "richtig_falsch",
+            "frage": "Das Tierheim nimmt auch Tiere aus anderen Städten auf.",
+            "loesung": "falsch",
+            "beleg": "Aus unserer Stadt ja, immer. Von weiter weg können wir es nicht, sonst wären wir in einer Woche voll.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie trennt beide Fälle ausdrücklich.",
+              "en": "Passing an animal on to another shelter is not the same as taking it in."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "richtig_falsch",
+            "frage": "Sie rät, vorher über Geld und Vertretung nachzudenken.",
+            "loesung": "richtig",
+            "beleg": "Wer zahlt die Tierarztrechnung, wenn es teuer wird? Und wer nimmt das Tier, wenn Sie im Krankenhaus liegen?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Genau diese zwei Fragen stellt sie.",
+              "en": "Two questions, two topics — money and who steps in."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 30,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "sms",
+        "situation": "Sie sollten heute Nachmittag den Hund Ihrer Freundin Nadja ausführen. Sie haben Rückenschmerzen und schaffen es nicht.",
+        "aufgabenstellung": "Schreiben Sie eine Kurznachricht an Nadja. Schreiben Sie zu allen drei Punkten und schreiben Sie 20 bis 30 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie ab.",
+          "Nennen Sie den Grund.",
+          "Machen Sie einen Vorschlag, wer es stattdessen macht."
+        ],
+        "anrede": "Hallo Nadja",
+        "woerter": 20,
+        "woerterMax": 30,
+        "zeitMinuten": 10,
+        "punkte": 10,
+        "redemittel": [
+          "Ich schaffe es heute leider nicht.",
+          "Mein Rücken tut sehr weh.",
+          "Ich kann kaum laufen.",
+          "Frag doch bitte Tobias.",
+          "Morgen geht es bestimmt wieder.",
+          "Tut mir leid!"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Hallo Nadja,\n\nich schaffe es heute nicht. Mein Rücken tut weh. Ich kann kaum laufen. Frag doch bitte Tobias.\n\nTut mir leid!\nRavi",
+            "kommentar": "Alle drei Punkte sind da und die Nachricht ist höflich. Auf „ausreichend“ hält sie ihre Syntax: vier kurze Hauptsätze ohne Verbindung, und der Grund steht in zwei getrennten Sätzen nebeneinander."
+          },
+          {
+            "niveau": "gut",
+            "text": "Hallo Nadja,\n\nleider schaffe ich es heute nicht, weil mein Rücken so weh tut, dass ich kaum laufen kann. Kann Tobias einspringen?\n\nTut mir leid!\nRavi",
+            "kommentar": "Derselbe Inhalt in zwei Sätzen: „weil“ hängt den Grund an, „so … dass“ macht daraus eine Folge, und der Vorschlag kommt als Frage statt als Befehl."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "email_halbformell",
+        "situation": "Sie möchten im Tierheim Weidenbach als Freiwillige oder Freiwilliger Hunde ausführen. Sie haben den Aushang gelesen.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an das Tierheim. Schreiben Sie zu allen drei Punkten und schreiben Sie 30 bis 40 Wörter.",
+        "leitpunkte": [
+          "Sagen Sie, warum Sie schreiben.",
+          "Sagen Sie, wann Sie Zeit haben.",
+          "Fragen Sie, wie es weitergeht."
+        ],
+        "anrede": "Sehr geehrte Frau Rhode",
+        "woerter": 30,
+        "woerterMax": 40,
+        "zeitMinuten": 20,
+        "punkte": 10,
+        "redemittel": [
+          "ich habe Ihren Aushang gelesen und möchte gern mithelfen.",
+          "Ich könnte zweimal in der Woche kommen.",
+          "Vormittags habe ich Zeit, nachmittags leider nicht.",
+          "Ich habe selbst einen Hund gehabt.",
+          "Wie soll ich weiter vorgehen?",
+          "Soll ich einfach im Büro vorbeikommen?",
+          "Mit freundlichen Grüßen"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Frau Rhode,\n\nich habe Ihren Aushang gelesen. Ich möchte gern helfen und Hunde ausführen. Ich habe vormittags Zeit, zweimal in der Woche. Wie soll ich weiter vorgehen?\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle drei Punkte kommen vor. Auf „ausreichend“ hält den Text die Reihung aus vier kurzen Sätzen, von denen drei mit „Ich“ anfangen."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Frau Rhode,\n\nich habe Ihren Aushang gelesen und würde gern zweimal in der Woche Hunde ausführen. Vormittags habe ich Zeit, nachmittags leider nicht. Wie soll ich weiter vorgehen?\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Zwei Informationen pro Satz statt einer: „und“ verbindet Anlass und Angebot, der Konjunktiv „würde gern“ ist höflicher, und der Nachsatz zur Uhrzeit nennt gleich die Einschränkung mit."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 0,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "fragen_zur_person",
+        "titel": "Fragen zur Person",
+        "anweisung": "Sie bekommen vier Karten. Bilden Sie zu jedem Stichwort eine Frage und stellen Sie sie Ihrem Partner. Danach fragt Ihr Partner und Sie antworten.",
+        "dauerMinuten": 3,
+        "punkte": 4,
+        "karten": ["Tiere?", "Lesen?", "Arzt?", "Nachbarn?"],
+        "partnerSkript": [
+          {
+            "text": "Haben Sie ein Haustier?",
+            "wartenSek": 15,
+            "hinweis": "Auch ein Nein ist eine Antwort — sagen Sie, warum."
+          },
+          {
+            "text": "Lesen Sie gern?",
+            "wartenSek": 15,
+            "hinweis": "Nennen Sie, was Sie lesen und wann."
+          },
+          {
+            "text": "Wann waren Sie zuletzt beim Arzt?",
+            "wartenSek": 15,
+            "hinweis": "Ein Zeitpunkt genügt, aber sagen Sie warum."
+          },
+          {
+            "text": "Kennen Sie Ihre Nachbarn?",
+            "wartenSek": 15,
+            "hinweis": "Sagen Sie, wie gut, und geben Sie ein Beispiel."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "ueber_sich_erzaehlen",
+        "titel": "Von sich erzählen",
+        "anweisung": "Sie bekommen eine Karte mit einer Frage und einigen Stichwörtern. Erzählen Sie zusammenhängend. Danach stellt die Prüferin noch ein bis zwei Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 8,
+        "situation": "Was machen Sie, wenn Sie krank sind?",
+        "planungspunkte": [
+          "zum Arzt oder erst abwarten?",
+          "wer hilft Ihnen?",
+          "Medikamente oder Hausmittel?",
+          "arbeiten Sie trotzdem?"
+        ],
+        "fragen": [
+          "Und was machen Sie, damit Sie gar nicht erst krank werden?",
+          "War das in Ihrem Heimatland anders?"
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gemeinsam_planen",
+        "titel": "Gemeinsam etwas planen",
+        "anweisung": "Eine Kollegin liegt seit einer Woche im Krankenhaus. Sie möchten sie zusammen mit Ihrem Partner besuchen. Planen Sie und einigen Sie sich.",
+        "dauerMinuten": 5,
+        "punkte": 8,
+        "situation": "Besuchszeit ist täglich von 15 bis 18 Uhr. Sie arbeiten beide bis 16 Uhr, und das Krankenhaus liegt außerhalb.",
+        "planungspunkte": [
+          "An welchem Tag?",
+          "Wie kommen Sie hin?",
+          "Was bringen Sie mit?",
+          "Wie lange bleiben Sie?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Am besten gleich morgen, oder? Lange soll sie ja nicht allein sein.",
+            "wartenSek": 20,
+            "hinweis": "Stimmen Sie zu oder schlagen Sie einen anderen Tag vor — denken Sie an die Besuchszeit."
+          },
+          {
+            "text": "Und wie kommen wir hin? Mit dem Bus dauert es eine Dreiviertelstunde.",
+            "wartenSek": 20,
+            "hinweis": "Machen Sie einen konkreten Vorschlag und rechnen Sie die Zeit mit."
+          },
+          {
+            "text": "Sollen wir etwas mitbringen? Blumen sind auf manchen Stationen nicht erlaubt.",
+            "wartenSek": 25,
+            "hinweis": "Schlagen Sie etwas anderes vor und begründen Sie es."
+          },
+          {
+            "text": "Und wie lange bleiben wir? Ich möchte sie nicht müde machen.",
+            "wartenSek": 20,
+            "hinweis": "Nennen Sie eine Dauer und fassen Sie am Ende zusammen, worauf Sie sich geeinigt haben."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "Tierheim",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Tierheime",
+      "bedeutung_de": "ein Haus, in dem Tiere ohne Zuhause leben",
+      "bedeutung_en": "animal shelter",
+      "beispiel": "Im Tierheim Weidenbach leben zurzeit vierzig Katzen, achtzehn Hunde und ein Esel.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Warteliste",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Wartelisten",
+      "bedeutung_de": "eine Liste mit Namen von Menschen, die noch warten",
+      "bedeutung_en": "waiting list",
+      "beispiel": "Für sie gibt es oft schon eine Warteliste, bevor sie überhaupt im Internet stehen.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Spende",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Spenden",
+      "bedeutung_de": "Geld, das jemand freiwillig gibt",
+      "bedeutung_en": "donation",
+      "beispiel": "Die Stadt zahlt einen Teil, den Rest bringen Spenden.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Freiwillige",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Freiwilligen",
+      "bedeutung_de": "eine Person, die ohne Bezahlung hilft",
+      "bedeutung_en": "volunteer",
+      "beispiel": "Fünfzehn Freiwillige führen jeden Tag die Hunde aus, und im Winter sind es deutlich weniger.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "knapp",
+      "wortart": "adjektiv",
+      "bedeutung_de": "gerade noch ausreichend, zu wenig",
+      "bedeutung_en": "scarce, tight",
+      "beispiel": "Geld ist immer knapp.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Sprechzeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Sprechzeiten",
+      "bedeutung_de": "die Stunden, in denen ein Arzt Patienten sieht",
+      "bedeutung_en": "consultation hours",
+      "beispiel": "Montag, Dienstag, Donnerstag 8–12 und 15–18 Uhr",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Werktag",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Werktage",
+      "bedeutung_de": "ein Tag von Montag bis Samstag, kein Sonn- oder Feiertag",
+      "bedeutung_en": "working day",
+      "beispiel": "Rezepte für Medikamente, die Sie regelmäßig nehmen, bestellen Sie bitte telefonisch und holen sie am nächsten Werktag ab.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Befund",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Befunde",
+      "bedeutung_de": "das Ergebnis einer ärztlichen Untersuchung",
+      "bedeutung_en": "medical findings",
+      "beispiel": "Befunde besprechen wir grundsätzlich nicht am Telefon, sondern nur persönlich.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Notfall",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Notfälle",
+      "bedeutung_de": "eine plötzliche Situation, in der man sofort Hilfe braucht",
+      "bedeutung_en": "emergency",
+      "beispiel": "Bei einem Notfall am Wochenende rufen Sie bitte die 116117 an.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "empfehlen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "empfiehlt",
+        "praeteritum": "empfahl",
+        "perfekt": "hat empfohlen"
+      },
+      "bedeutung_de": "jemandem raten, etwas zu nehmen oder zu tun",
+      "bedeutung_en": "to recommend",
+      "beispiel": "vielen Dank für Ihre Nachricht und für die Bücher, die Sie mir letzte Woche empfohlen haben.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Roman",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Romane",
+      "bedeutung_de": "ein langes erzählendes Buch",
+      "bedeutung_en": "novel",
+      "beispiel": "Den Roman habe ich in drei Abenden gelesen — so etwas ist mir seit Jahren nicht passiert.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "weglegen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "legt weg",
+        "praeteritum": "legte weg",
+        "perfekt": "hat weggelegt"
+      },
+      "bedeutung_de": "etwas zur Seite legen und nicht weitermachen",
+      "bedeutung_en": "to put aside",
+      "beispiel": "Das zweite Buch, das über die Nordsee, habe ich nach vierzig Seiten weggelegt.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Aushang",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Aushänge",
+      "bedeutung_de": "ein Zettel, den man öffentlich aufhängt",
+      "bedeutung_en": "notice",
+      "beispiel": "Ich habe einen Aushang gesehen, aber ohne Datum.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Leine",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Leinen",
+      "bedeutung_de": "das Band, an dem man einen Hund führt",
+      "bedeutung_en": "lead, leash",
+      "beispiel": "Bitte Leine und viele kleine Leckerlis mitbringen.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Fernglas",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Ferngläser",
+      "bedeutung_de": "ein Gerät, mit dem man Entferntes größer sieht",
+      "bedeutung_en": "binoculars",
+      "beispiel": "Ein Fernglas ist nötig, Bücher haben wir dabei.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "beobachten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "beobachtet",
+        "praeteritum": "beobachtete",
+        "perfekt": "hat beobachtet"
+      },
+      "bedeutung_de": "etwas längere Zeit genau ansehen",
+      "bedeutung_en": "to observe, to watch",
+      "beispiel": "Wir beobachten Vögel und bestimmen sie gemeinsam.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Untersuchung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Untersuchungen",
+      "bedeutung_de": "wenn ein Arzt nachsieht, ob alles gesund ist",
+      "bedeutung_en": "examination",
+      "beispiel": "Die Untersuchung bei Ihrer Katze war in Ordnung, es ist alles gut.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Fahrgast",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Fahrgäste",
+      "bedeutung_de": "eine Person, die mit Bus oder Bahn fährt",
+      "bedeutung_en": "passenger",
+      "beispiel": "Sehr geehrte Fahrgäste, wegen eines Notarzteinsatzes am Gleis verzögert sich die Abfahrt um voraussichtlich fünfzehn Minuten.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Anschluss",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Anschlüsse",
+      "bedeutung_de": "der nächste Zug oder Bus, in den man umsteigt",
+      "bedeutung_en": "connection",
+      "beispiel": "Der Anschluss in Kirchdorf wartet auf diesen Zug, Sie erreichen ihn also.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "verlängern",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "verlängert",
+        "praeteritum": "verlängerte",
+        "perfekt": "hat verlängert"
+      },
+      "bedeutung_de": "länger machen",
+      "bedeutung_en": "to extend",
+      "beispiel": "Die Stadtbibliothek verlängert am Samstag ihre Öffnungszeiten bis zwanzig Uhr, weil die lange Lesenacht stattfindet.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Schlange",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Schlangen",
+      "bedeutung_de": "eine Reihe wartender Menschen",
+      "bedeutung_en": "queue",
+      "beispiel": "In der Apotheke war eine Schlange bis zur Tür, das hat gedauert.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "einlösen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "löst ein",
+        "praeteritum": "löste ein",
+        "perfekt": "hat eingelöst"
+      },
+      "bedeutung_de": "ein Rezept oder einen Gutschein benutzen",
+      "bedeutung_en": "to redeem",
+      "beispiel": "Das habe ich um elf eingelöst.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "ersetzen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "ersetzt",
+        "praeteritum": "ersetzte",
+        "perfekt": "hat ersetzt"
+      },
+      "bedeutung_de": "etwas Verlorenes durch etwas Neues austauschen",
+      "bedeutung_en": "to replace",
+      "beispiel": "Sie ersetzen es.",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "vermitteln",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "vermittelt",
+        "praeteritum": "vermittelte",
+        "perfekt": "hat vermittelt"
+      },
+      "bedeutung_de": "jemanden oder etwas an eine andere Stelle weitergeben",
+      "bedeutung_en": "to place, to refer",
+      "beispiel": "Wir vermitteln dann an ein anderes Heim weiter.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "überraschenderweise",
+      "wortart": "adverb",
+      "bedeutung_de": "anders, als man erwartet hätte",
+      "bedeutung_en": "surprisingly",
+      "beispiel": "Geld schon, überraschenderweise.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Entscheidung",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Entscheidungen",
+      "bedeutung_de": "das Ergebnis, wenn man sich für etwas entscheidet",
+      "bedeutung_en": "decision",
+      "beispiel": "Ich habe vorher schon gelernt, mit Menschen zu sprechen, die gerade eine Entscheidung treffen müssen, und meistens keine leichte.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "in Ordnung",
+      "typ": "kollokation",
+      "bedeutung_de": "so, wie es sein soll; ohne Probleme",
+      "bedeutung_en": "fine, all right",
+      "beispiel": "Die Untersuchung bei Ihrer Katze war in Ordnung, es ist alles gut.",
+      "fundstelle": "Hören Teil 1"
+    },
+    {
+      "wendung": "eine Entscheidung treffen",
+      "typ": "nomen_verb_verbindung",
+      "bedeutung_de": "sich für eine von mehreren Möglichkeiten entscheiden",
+      "bedeutung_en": "to make a decision",
+      "beispiel": "Ich habe vorher schon gelernt, mit Menschen zu sprechen, die gerade eine Entscheidung treffen müssen.",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "sich Sorgen machen",
+      "typ": "kollokation",
+      "bedeutung_de": "Angst haben, dass etwas Schlimmes passiert",
+      "bedeutung_en": "to worry",
+      "beispiel": "Ich wollte es nur sagen, damit Sie sich keine Sorgen machen.",
+      "fundstelle": "Hören Teil 3"
+    },
+    {
+      "wendung": "auf Rezept",
+      "typ": "kollokation",
+      "bedeutung_de": "nur mit einem Papier vom Arzt erhältlich",
+      "bedeutung_en": "on prescription",
+      "beispiel": "Das gibt es leider nur auf Rezept.",
+      "fundstelle": "Hören Teil 3"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Dativ nach Verben und Präpositionen",
+      "erklaerung_de": "Einige Verben verlangen immer den Dativ: helfen, danken, gefallen, gehören, passen. Ebenso die Präpositionen mit, nach, bei, seit, von, zu, aus. Merken Sie sich den Dativ Plural: dort endet fast jedes Nomen zusätzlich auf „-n“ — „mit den Kindern“.",
+      "erklaerung_en": "A handful of verbs take the dative rather than the accusative — helfen, danken, gefallen, gehören, passen — as do the prepositions mit, nach, bei, seit, von, zu, aus. In the dative plural the noun itself usually gains an extra „-n“.",
+      "belegSatz": "Ich möchte gern helfen und Hunde ausführen.",
+      "fundstelle": "Schreiben Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: Ich helfe ___ (die Nachbarin) im Garten.",
+          "loesung": "der Nachbarin",
+          "hinweis": "„helfen“ steht immer mit Dativ."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Wir sprechen mit ___ (die Leute).",
+          "loesung": "den Leuten",
+          "hinweis": "Dativ Plural — und das Nomen bekommt ein „-n“."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Das Buch gehört ___ (mein Sohn).",
+          "loesung": "meinem Sohn",
+          "hinweis": "„gehören“ verlangt den Dativ."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Indirekte Fragen mit ob und Fragewort",
+      "erklaerung_de": "Aus „Gibt es einen Lesekreis?“ wird „Ich frage, ob es einen Lesekreis gibt.“ Ohne Fragewort steht „ob“, mit Fragewort bleibt das Fragewort: „Wie geht es weiter?“ → „Ich frage, wie es weitergeht.“ In beiden Fällen wandert das Verb ans Ende.",
+      "erklaerung_en": "Indirect questions use „ob“ when the direct question had no question word, and keep the question word otherwise. Either way the verb moves to the end. This is the single most useful structure for writing a polite A2 email.",
+      "belegSatz": "Wie soll ich weiter vorgehen?",
+      "fundstelle": "Schreiben Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Formen Sie um: Gibt es einen Lesekreis?  →  Ich möchte wissen, …",
+          "loesung": "ob es einen Lesekreis gibt",
+          "hinweis": "Keine Fragewörter — also „ob“."
+        },
+        {
+          "aufgabe": "Formen Sie um: Wann beginnt der Kurs?  →  Können Sie mir sagen, …",
+          "loesung": "wann der Kurs beginnt",
+          "hinweis": "Das Fragewort bleibt, das Verb geht ans Ende."
+        },
+        {
+          "aufgabe": "Formen Sie um: Ist das Tier gesund?  →  Er fragt, …",
+          "loesung": "ob das Tier gesund ist",
+          "hinweis": "Auch hier fehlt ein Fragewort."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Zeitangaben: am, um, im, von … bis",
+      "erklaerung_de": "„am“ steht vor Tagen und Tageszeiten (am Montag, am Abend), „um“ vor Uhrzeiten (um acht), „im“ vor Monaten und Jahreszeiten (im Juli, im Winter). Ein Zeitraum heißt „von … bis“. Ohne Präposition stehen nur „heute“, „morgen“, „jeden Tag“.",
+      "erklaerung_en": "Days and parts of the day take „am“, clock times take „um“, months and seasons take „im“. Spans use „von … bis“. Words like „heute“ and „jeden Tag“ take no preposition at all — adding one is a common and very audible error.",
+      "belegSatz": "Um acht war ich beim Bäcker, wie immer, das war das Angenehmste am ganzen Tag.",
+      "fundstelle": "Hören Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: ___ Mittwoch habe ich einen Termin.",
+          "loesung": "Am",
+          "hinweis": "Wochentage nehmen „am“."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Der Kurs geht ___ 15 ___ 18 Uhr.",
+          "loesung": "von … bis",
+          "hinweis": "Ein Zeitraum, kein Zeitpunkt."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: ___ Sommer sind es immer mehr Tiere.",
+          "loesung": "Im",
+          "hinweis": "Jahreszeiten nehmen „im“."
+        }
+      ]
+    }
+  ]
+}

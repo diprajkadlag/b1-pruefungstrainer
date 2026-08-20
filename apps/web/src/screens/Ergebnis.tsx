@@ -64,13 +64,18 @@ export function Ergebnis({
     'uebersicht',
   );
 
+  // The level decides what a module is worth and whether it carries a verdict
+  // of its own: 100 points and a pass mark at B1 and B2, 25 points and no
+  // separate verdict at A2, which is passed as one examination.
+  const stufe = pruefung.meta.stufe;
+
   const lesen = useMemo(
-    () => bewerteModul('lesen', versuch.antworten.lesen, schluessel.keys),
-    [versuch, schluessel],
+    () => bewerteModul('lesen', versuch.antworten.lesen, schluessel.keys, stufe),
+    [versuch, schluessel, stufe],
   );
   const hoeren = useMemo(
-    () => bewerteModul('hoeren', versuch.antworten.hoeren, schluessel.keys),
-    [versuch, schluessel],
+    () => bewerteModul('hoeren', versuch.antworten.hoeren, schluessel.keys, stufe),
+    [versuch, schluessel, stufe],
   );
 
   const gemacht = [
@@ -104,13 +109,21 @@ export function Ergebnis({
         `Begonnen:  ${new Date(versuch.gestartet).toLocaleString('de-DE')}`,
         `Module:    ${versuch.module.join(', ')}`,
         '',
-        ...gemacht.map(
-          (m) =>
-            `${m.modul.padEnd(10)} ${m.richtig}/${m.gesamt} richtig  = ${m.punkte}/100 ` +
-            `(${m.note}) ${m.bestanden ? 'bestanden' : 'nicht bestanden'}`,
-        ),
+        ...gemacht.map((m) => {
+          const kopf = `${m.modul.padEnd(10)} ${m.richtig}/${m.gesamt} richtig  = ${m.punkte}/${m.maximum}`;
+          return m.bestanden === null
+            ? kopf
+            : `${kopf} (${m.note}) ${m.bestanden ? 'bestanden' : 'nicht bestanden'}`;
+        }),
         '',
         'Schreiben und Sprechen werden von einer Lehrkraft bewertet.',
+        ...(stufe === 'A2'
+          ? [
+              'A2 wird als eine Prüfung bewertet: 60 von 100 Punkten insgesamt,',
+              'davon mindestens 45 von 75 in Lesen, Hören und Schreiben zusammen',
+              'und mindestens 15 von 25 im Sprechen.',
+            ]
+          : []),
       ].join('\n'),
     });
 
@@ -159,14 +172,16 @@ export function Ergebnis({
             {gemacht.map((m) => (
               <article
                 key={m.modul}
-                className={`karte karte--${m.bestanden ? 'bestanden' : 'gefallen'}`}
+                className={`karte karte--${
+                  m.bestanden === null ? 'offen' : m.bestanden ? 'bestanden' : 'gefallen'
+                }`}
               >
                 <h3>{m.modul === 'lesen' ? 'Lesen' : 'Hören'}</h3>
                 <p className="karte__punkte">
                   {m.punkte}
-                  <span className="karte__max">/100</span>
+                  <span className="karte__max">/{m.maximum}</span>
                 </p>
-                <p className="karte__note">{m.note}</p>
+                {m.note !== null && <p className="karte__note">{m.note}</p>}
                 <p className="karte__roh">
                   {m.richtig} von {m.gesamt} Aufgaben richtig
                 </p>
@@ -191,6 +206,17 @@ export function Ergebnis({
               </article>
             )}
           </div>
+
+          {stufe === 'A2' && (
+            <p className="notiz gesamtregel">
+              <strong>A2 ist eine Prüfung, keine vier.</strong> Jeder Teil bringt
+              höchstens 25 Punkte, und bestanden ist erst, wer <strong>60 von 100</strong>{' '}
+              Punkten insgesamt erreicht, davon mindestens 45 von 75 in Lesen, Hören und
+              Schreiben zusammen und mindestens 15 von 25 im Sprechen. Deshalb steht hier
+              kein „bestanden“ pro Teil: Das Ergebnis steht erst fest, wenn auch Schreiben
+              und Sprechen bewertet sind.
+            </p>
+          )}
 
           {schwach.length > 0 && (
             <section className="schwachstellen">
