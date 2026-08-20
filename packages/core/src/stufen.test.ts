@@ -17,6 +17,8 @@ describe('stufeVonId', () => {
   it('reads the level off the folder name', () => {
     expect(stufeVonId('b2-pruefung-01')).toBe('B2');
     expect(stufeVonId('b2-pruefung-14')).toBe('B2');
+    expect(stufeVonId('a2-pruefung-01')).toBe('A2');
+    expect(stufeVonId('a2-pruefung-05')).toBe('A2');
   });
 
   it('treats an unprefixed id as B1', () => {
@@ -57,6 +59,25 @@ describe('STUFEN', () => {
     expect(STUFEN.B2.module.lesen.minuten).toBe(65);
     expect(STUFEN.B1.module.hoeren.minuten).toBe(40);
     expect(STUFEN.B2.module.hoeren.minuten).toBe(40);
+  });
+
+  it('knows how each level writes "none of these fits"', () => {
+    // The same decision on the candidate's part, but a different box on the
+    // paper: B1 prints 0 and A2 prints x. B2 has no such task at all, and a
+    // stray extra box under a B2 item would simply be wrong.
+    expect(STUFEN.A2.ohneTreffer).toBe('x');
+    expect(STUFEN.B1.ohneTreffer).toBe('0');
+    expect(STUFEN.B2.ohneTreffer).toBeNull();
+  });
+
+  it('gives A2 its own, much shorter clock', () => {
+    // Half the reading time of B1 for two thirds of the items, and a writing
+    // module of 30 minutes for two short messages rather than 60 for three
+    // compositions. Reading these off the wrong level hands a candidate
+    // upwards of half an hour they would not have.
+    expect(STUFEN.A2.module.lesen.minuten).toBe(30);
+    expect(STUFEN.A2.module.hoeren.minuten).toBe(30);
+    expect(STUFEN.A2.module.schreiben.minuten).toBe(30);
   });
 
   it('keeps the one module length that really does differ', () => {

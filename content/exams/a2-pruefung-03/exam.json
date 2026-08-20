@@ -1,0 +1,1917 @@
+{
+  "$schema": "../../../packages/schema/exam.schema.json",
+  "meta": {
+    "id": "a2-pruefung-03",
+    "stufe": "A2",
+    "variante": "erwachsene",
+    "contentVersion": "1.0.0",
+    "autor": "GermanExamTrainer",
+    "lizenz": "CC-BY-4.0",
+    "originalitaet": true,
+    "titel": "Übungsprüfung A2 3 — Kleidung, Ämter und Arbeit",
+    "niveau": "mittel",
+    "sprechtempoProzent": 0,
+    "themen": [
+      "Kleidung tauschen",
+      "Behörden und Termine",
+      "Praktikum und Kollegen",
+      "Nebenjobs",
+      "Feste im Betrieb",
+      "Nähen und Reparieren"
+    ]
+  },
+  "lesen": {
+    "zeitMinuten": 30,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie den Text aus der Zeitung. Wählen Sie bei den Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 7,
+        "texte": [
+          {
+            "id": "text_1",
+            "titel": "Ein Geschäft, in dem niemand zahlt",
+            "quelle": "Sallberger Rundschau",
+            "inhalt": "Einmal im Monat wird die Turnhalle der Grundschule in Sallberg zu einem Geschäft ohne Geld. Wer kommt, bringt Kleidung mit, die er nicht mehr trägt, und nimmt dafür etwas anderes mit nach Hause.\n\nAngefangen haben drei Mütter, die sich am Elternabend kennengelernt haben. „Unsere Kinder wachsen so schnell“, sagt Frau Tiedemann. „Nach einem halben Jahr passt nichts mehr, und wegwerfen wollte keine von uns.“\n\nDie Regeln sind einfach. Man bringt höchstens zehn Stücke, und sie müssen sauber und ganz sein. Wer nichts bringt, darf trotzdem etwas mitnehmen — das war den Frauen von Anfang an wichtig. Gezählt wird nicht.\n\nInzwischen kommen an einem Nachmittag über hundert Menschen, und nicht nur Familien. „Am Anfang dachten wir, das sei etwas für junge Eltern“, sagt Frau Tiedemann. „Heute steht hier auch ein Herr von achtzig und sucht sich ein Hemd aus.“ Was übrig bleibt, geht an ein Sozialkaufhaus in der Nachbarstadt."
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "multiple_choice",
+            "frage": "Was passiert einmal im Monat in der Turnhalle?",
+            "optionen": {
+              "a": "Kleidung wird verkauft.",
+              "b": "Kleidung wird getauscht.",
+              "c": "Kleidung wird repariert."
+            },
+            "loesung": "b",
+            "beleg": "Wer kommt, bringt Kleidung mit, die er nicht mehr trägt, und nimmt dafür etwas anderes mit nach Hause.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "„ein Geschäft ohne Geld“ heißt: es wird nicht verkauft.",
+              "en": "The headline and the first sentence say the same thing twice, in different words."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "frage": "Wer hat damit angefangen?",
+            "optionen": {
+              "a": "Die Schule.",
+              "b": "Die Stadt.",
+              "c": "Drei Mütter."
+            },
+            "loesung": "c",
+            "beleg": "Angefangen haben drei Mütter, die sich am Elternabend kennengelernt haben.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Schule stellt nur die Halle; angefangen haben die Mütter.",
+              "en": "A gym in a school is not the same as the school running the event."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "multiple_choice",
+            "frage": "Wie viele Stücke darf man mitbringen?",
+            "optionen": {
+              "a": "Höchstens zehn.",
+              "b": "So viele man will.",
+              "c": "Genau so viele, wie man mitnimmt."
+            },
+            "loesung": "a",
+            "beleg": "Man bringt höchstens zehn Stücke, und sie müssen sauber und ganz sein.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„höchstens“ nennt eine Obergrenze.",
+              "en": "„Gezählt wird nicht“ refers to what you take, not to what you bring."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "frage": "Was gilt für Menschen, die nichts mitbringen?",
+            "optionen": {
+              "a": "Sie müssen zahlen.",
+              "b": "Sie dürfen trotzdem etwas mitnehmen.",
+              "c": "Sie dürfen nicht hinein."
+            },
+            "loesung": "b",
+            "beleg": "Wer nichts bringt, darf trotzdem etwas mitnehmen — das war den Frauen von Anfang an wichtig.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Nachsatz zeigt, dass das kein Zufall ist, sondern Absicht.",
+              "en": "This is the one rule the article marks as deliberate."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "multiple_choice",
+            "frage": "Wer kommt heute zu der Veranstaltung?",
+            "optionen": {
+              "a": "Nur junge Eltern.",
+              "b": "Nur Kinder.",
+              "c": "Menschen jeden Alters."
+            },
+            "loesung": "c",
+            "beleg": "Heute steht hier auch ein Herr von achtzig und sucht sich ein Hemd aus.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„Am Anfang dachten wir …“ zeigt, dass sich die Erwartung nicht bestätigt hat.",
+              "en": "a is what the founders expected, and the quote exists to correct it."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die Informationen des Bürgeramts. Wählen Sie bei den Aufgaben 6 bis 10 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 7,
+        "texte": [
+          {
+            "id": "text_2",
+            "titel": "Bürgeramt Weidenbach",
+            "quelle": "Aushang im Eingang",
+            "inhalt": "Bürgeramt Weidenbach — Was Sie wissen müssen\n\nÖffnungszeiten\nMontag, Dienstag, Donnerstag 8–15 Uhr\nMittwoch 8–12 Uhr · Freitag 8–13 Uhr · Samstag geschlossen\n\nWo Sie hinmüssen\nZimmer 4: Anmeldung und Abmeldung · Zimmer 7: Ausweis und Reisepass\nZimmer 12: Führerschein · Zimmer 15: Kasse\n\nBitte beachten Sie\nOhne Termin warten Sie oft über eine Stunde. Termine bekommen Sie nur online. Bringen Sie immer Ihren Ausweis mit; ohne Ausweis können wir nichts bearbeiten. Gebühren zahlen Sie in Zimmer 15, und zwar nur mit Karte — Bargeld nehmen wir seit Januar nicht mehr an. Für Fragen zum Kindergeld sind wir nicht zuständig, wenden Sie sich bitte an die Familienkasse."
+          }
+        ],
+        "items": [
+          {
+            "nr": 6,
+            "typ": "multiple_choice",
+            "frage": "Sie kommen am Mittwoch um 14 Uhr. Was ist dann?",
+            "optionen": {
+              "a": "Das Amt ist offen.",
+              "b": "Das Amt hat schon zu.",
+              "c": "Nur die Kasse ist offen."
+            },
+            "loesung": "b",
+            "beleg": "Mittwoch 8–12 Uhr · Freitag 8–13 Uhr · Samstag geschlossen",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Am Mittwoch schließt das Amt schon um 12 Uhr.",
+              "en": "Three of the five open days end at 15 Uhr, which is the trap."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "multiple_choice",
+            "frage": "Sie brauchen einen neuen Reisepass. Wohin gehen Sie?",
+            "optionen": {
+              "a": "Zimmer 4.",
+              "b": "Zimmer 7.",
+              "c": "Zimmer 12."
+            },
+            "loesung": "b",
+            "beleg": "Zimmer 4: Anmeldung und Abmeldung · Zimmer 7: Ausweis und Reisepass",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Ausweis und Reisepass stehen zusammen in Zimmer 7.",
+              "en": "Room 12 is for driving licences — a different document entirely."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "multiple_choice",
+            "frage": "Wie bekommt man einen Termin?",
+            "optionen": {
+              "a": "Am Telefon.",
+              "b": "Im Internet.",
+              "c": "Direkt am Schalter."
+            },
+            "loesung": "b",
+            "beleg": "Termine bekommen Sie nur online.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„nur online“ schließt alle anderen Wege aus.",
+              "en": "The sentence before explains why it matters: an hour of queuing without one."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "multiple_choice",
+            "frage": "Wie zahlt man die Gebühren?",
+            "optionen": {
+              "a": "Nur mit Karte.",
+              "b": "Nur bar.",
+              "c": "Bar oder mit Karte."
+            },
+            "loesung": "a",
+            "beleg": "Gebühren zahlen Sie in Zimmer 15, und zwar nur mit Karte — Bargeld nehmen wir seit Januar nicht mehr an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Satz sagt beides: was geht und was seit Januar nicht mehr geht.",
+              "en": "The change is recent, which is exactly why it is spelled out."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "multiple_choice",
+            "frage": "Sie haben eine Frage zum Kindergeld. Was tun Sie?",
+            "optionen": {
+              "a": "Sie gehen in Zimmer 4.",
+              "b": "Sie fragen an der Kasse.",
+              "c": "Sie wenden sich an die Familienkasse."
+            },
+            "loesung": "c",
+            "beleg": "Für Fragen zum Kindergeld sind wir nicht zuständig, wenden Sie sich bitte an die Familienkasse.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Amt sagt selbst, dass es dafür nicht zuständig ist.",
+              "en": "„Kasse“ appears in the text as room 15 — for paying, not for child benefit."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "multiple_choice",
+        "anweisung": "Lesen Sie die E-Mail. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+        "richtzeitMinuten": 8,
+        "texte": [
+          {
+            "id": "text_3",
+            "titel": "E-Mail von Jonas",
+            "quelle": "private E-Mail",
+            "inhalt": "Hallo Amira,\n\ndu wolltest wissen, wie die erste Woche im Praktikum war. Kurz gesagt: besser als gedacht.\n\nAm Montag war ich furchtbar nervös. Ich habe drei Stunden nur zugeschaut und dachte, ich bin überflüssig. Ab Dienstag durfte ich dann selbst telefonieren, und seitdem geht es.\n\nDie Kollegen sind in Ordnung, besonders eine Frau aus meinem Zimmer. Sie erklärt alles zweimal, ohne dass ich fragen muss. Nur mein Chef ist schwer einzuschätzen — er sagt fast nichts, weder Gutes noch Schlechtes.\n\nAnstrengend ist der Weg. Ich fahre um Viertel nach sechs los und bin erst um halb sieben abends wieder zu Hause. Das halte ich drei Monate aus, aber keine drei Jahre.\n\nWollen wir am Samstag etwas trinken gehen? Ich erzähle dir den Rest dann in Ruhe. Ruf mich einfach an.\n\nBis bald\nJonas"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "frage": "Wie war die erste Woche für Jonas?",
+            "optionen": {
+              "a": "Schlimmer als erwartet.",
+              "b": "Besser als erwartet.",
+              "c": "Genau wie erwartet."
+            },
+            "loesung": "b",
+            "beleg": "Kurz gesagt: besser als gedacht.",
+            "kompetenz": "globalverstehen",
+            "begruendung": {
+              "de": "Der Satz fasst die ganze E-Mail in drei Wörtern zusammen.",
+              "en": "Everything that follows qualifies this, but never reverses it."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "frage": "Was hat Jonas am Montag gemacht?",
+            "optionen": {
+              "a": "Er hat telefoniert.",
+              "b": "Er hat nur zugeschaut.",
+              "c": "Er war nicht da."
+            },
+            "loesung": "b",
+            "beleg": "Ich habe drei Stunden nur zugeschaut und dachte, ich bin überflüssig.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Telefoniert hat er erst ab Dienstag.",
+              "en": "The two days are contrasted in consecutive sentences."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "frage": "Was schreibt Jonas über die Kollegin aus seinem Zimmer?",
+            "optionen": {
+              "a": "Sie erklärt ihm Dinge von selbst.",
+              "b": "Sie hat wenig Zeit für ihn.",
+              "c": "Sie ist seine Chefin."
+            },
+            "loesung": "a",
+            "beleg": "Sie erklärt alles zweimal, ohne dass ich fragen muss.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„ohne dass ich fragen muss“ ist der Kern des Lobes.",
+              "en": "The boss is a separate person, described in the very next sentence."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "frage": "Was sagt Jonas über seinen Chef?",
+            "optionen": {
+              "a": "Er kritisiert viel.",
+              "b": "Er lobt viel.",
+              "c": "Man weiß nicht, was er denkt."
+            },
+            "loesung": "c",
+            "beleg": "Nur mein Chef ist schwer einzuschätzen — er sagt fast nichts, weder Gutes noch Schlechtes.",
+            "kompetenz": "meinung_haltung",
+            "begruendung": {
+              "de": "„weder … noch“ schließt Lob und Kritik zugleich aus.",
+              "en": "This is the one item where both a and b are ruled out by the same phrase."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "frage": "Was findet Jonas anstrengend?",
+            "optionen": {
+              "a": "Die Arbeit selbst.",
+              "b": "Den langen Weg.",
+              "c": "Die Kollegen."
+            },
+            "loesung": "b",
+            "beleg": "Anstrengend ist der Weg.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der nächste Satz rechnet es vor: von Viertel nach sechs bis halb sieben.",
+              "en": "He is explicit that this, and not the work, is what he could not keep up for years."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "zuordnung_anzeigen",
+        "anweisung": "Fünf Personen suchen einen Nebenjob. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine Lösung. Schreiben Sie dort ein x. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+        "richtzeitMinuten": 8,
+        "anzeigen": [
+          {
+            "buchstabe": "a",
+            "titel": "Zeitungen austragen",
+            "inhalt": "Zwei Stunden am frühen Morgen, Montag bis Samstag. Sie müssen um fünf Uhr aufstehen können und brauchen ein Fahrrad. Bezahlung pro Zeitung, nicht pro Stunde."
+          },
+          {
+            "buchstabe": "b",
+            "titel": "Aushilfe im Café",
+            "inhalt": "Samstags und sonntags von 9 bis 15 Uhr. Erfahrung ist nicht nötig, wir zeigen alles. Nur für Personen ab 18 Jahren, weil wir auch Wein ausschenken."
+          },
+          {
+            "buchstabe": "c",
+            "titel": "Nachhilfe in Mathematik",
+            "inhalt": "Für Schülerinnen und Schüler der Klassen 5 bis 8, zweimal in der Woche nachmittags. Sie sollten selbst mindestens Abitur haben. Ort und Zeit nach Absprache."
+          },
+          {
+            "buchstabe": "d",
+            "titel": "Hunde ausführen",
+            "inhalt": "Wir suchen jemanden, der unsere beiden Hunde mittags eine Stunde ausführt. Montag bis Freitag. Erfahrung mit großen Hunden ist Bedingung, sie ziehen kräftig."
+          },
+          {
+            "buchstabe": "e",
+            "titel": "Küchenhilfe in der Kantine",
+            "inhalt": "Vorbereiten, spülen, aufräumen. Montag bis Freitag von 11 bis 14 Uhr, mitten am Tag. Deutschkenntnisse müssen nicht perfekt sein, Zuverlässigkeit schon."
+          },
+          {
+            "buchstabe": "f",
+            "titel": "Regale einräumen",
+            "inhalt": "Dienstags und donnerstags ab 20 Uhr, wenn der Markt geschlossen ist. Etwa drei Stunden. Sie sollten schwer heben können. Auch für Studierende gut geeignet."
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_anzeigen",
+          "frage": "Herr Delfs steht gern sehr früh auf und hat ein Fahrrad.",
+          "loesung": "a",
+          "begruendung": {
+            "de": "Anzeige a verlangt genau beides.",
+            "en": "Worked example. Ad a is used up and cannot answer any item."
+          }
+        },
+        "items": [
+          {
+            "nr": 16,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Pelz hat Abitur und möchte nachmittags mit Kindern arbeiten.",
+            "loesung": "c",
+            "beleg": "Für Schülerinnen und Schüler der Klassen 5 bis 8, zweimal in der Woche nachmittags.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Anzeige nennt den Nachmittag und verlangt Abitur.",
+              "en": "Both her conditions appear in the same ad, one in each sentence."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Sanftleben ist 17 und kann nur am Wochenende.",
+            "loesung": "x",
+            "beleg": "Nur für Personen ab 18 Jahren, weil wir auch Wein ausschenken.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Nur Anzeige b ist am Wochenende, und die ist erst ab 18. Hier ist x richtig.",
+              "en": "The one ad that fits his days excludes him by age. Do not force it — that is what x is for."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Ivanovic sucht Arbeit über Mittag und spricht noch nicht perfekt Deutsch.",
+            "loesung": "e",
+            "beleg": "Deutschkenntnisse müssen nicht perfekt sein, Zuverlässigkeit schon.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Anzeige nennt die Mittagszeit und sagt ausdrücklich etwas zur Sprache.",
+              "en": "An ad that addresses your worry directly is nearly always the intended match."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Herr Baumhauer studiert und kann nur spät am Abend.",
+            "loesung": "f",
+            "beleg": "Dienstags und donnerstags ab 20 Uhr, wenn der Markt geschlossen ist.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Die Anzeige nennt den späten Abend und Studierende.",
+              "en": "20 Uhr is the only time in any ad that counts as late evening."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "zuordnung_anzeigen",
+            "frage": "Frau Kortlang hat zwei große Hunde und sucht mittags eine Aufgabe an der frischen Luft.",
+            "loesung": "d",
+            "beleg": "Wir suchen jemanden, der unsere beiden Hunde mittags eine Stunde ausführt.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Mittags, draußen, und Erfahrung mit großen Hunden hat sie.",
+              "en": "Her own dogs are what satisfy the ad's one condition."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hoeren": {
+    "zeitMinuten": 30,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "kurztexte",
+        "anweisung": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie eine Aufgabe. Sie hören jeden Text zweimal.",
+        "wiederholungen": 2,
+        "sprecher": [
+          {
+            "rolle": "Malermeister",
+            "geschlecht": "m",
+            "beschreibung": "ruft auf der Mailbox an"
+          },
+          {
+            "rolle": "Museumsansage",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage im Museum"
+          },
+          {
+            "rolle": "Radiosprecher",
+            "geschlecht": "m",
+            "beschreibung": "Hinweis im Radio"
+          },
+          {
+            "rolle": "Firmenansage",
+            "geschlecht": "f",
+            "beschreibung": "Durchsage in der Firma"
+          },
+          {
+            "rolle": "Schwester",
+            "geschlecht": "f",
+            "beschreibung": "Sprachnachricht der Schwester"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "multiple_choice",
+          "frage": "Der erste Text ist eine Nachricht auf dem Anrufbeantworter.",
+          "optionen": {
+            "a": "Richtig.",
+            "b": "Nein, eine Durchsage.",
+            "c": "Nein, eine Radiomeldung."
+          },
+          "loesung": "a",
+          "begruendung": {
+            "de": "Der Handwerker nennt seinen Namen und bittet um Rückruf.",
+            "en": "Worked example, so you can hear how one question per text works."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil eins. Sie hören fünf kurze Texte: Nachrichten auf dem Anrufbeantworter, Durchsagen und Meldungen aus dem Radio. Zu jedem Text lösen Sie eine Aufgabe: Sie wählen die richtige Lösung a, b oder c. Sie hören jeden Text zweimal. Lesen Sie jetzt die Aufgaben eins bis fünf.",
+            "pauseDanachSek": 25,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 1.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Malermeister",
+            "text": "Guten Tag, Frau Ivanovic, hier ist Malermeister Rhode. Wir wollten ja am Donnerstag bei Ihnen anfangen. Das schaffen wir leider nicht, die Baustelle davor dauert länger. Ginge auch der Montag darauf? Wir wären dann drei Tage bei Ihnen. Rufen Sie mich bitte zurück.",
+            "pauseDanachSek": 12,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 2.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Museumsansage",
+            "text": "Sehr geehrte Besucherinnen und Besucher, wir schließen heute in dreißig Minuten. Die Sonderausstellung im ersten Stock ist bereits geschlossen. Der Museumsshop hat noch bis zur letzten Minute geöffnet. Wir danken für Ihren Besuch.",
+            "pauseDanachSek": 12,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 3.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Radiosprecher",
+            "text": "Und noch ein Hinweis für alle, die morgen in die Stadt wollen: Wegen des Stadtfestes ist die Innenstadt von zehn bis zweiundzwanzig Uhr für Autos gesperrt. Die Busse fahren, aber über eine andere Strecke. Parken können Sie am Bahnhof.",
+            "pauseDanachSek": 12,
+            "akustik": "radio",
+            "betont": true,
+            "abschnitt": "text_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 4.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Firmenansage",
+            "text": "Liebe Kolleginnen und Kollegen, eine kurze Information: Der Aufzug im Haus B wird morgen den ganzen Tag repariert. Bitte benutzen Sie die Treppe oder den Aufzug im Haus A. Wer nicht Treppen steigen kann, meldet sich bitte im Sekretariat.",
+            "pauseDanachSek": 12,
+            "akustik": "durchsage",
+            "betont": true,
+            "abschnitt": "text_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Text 5.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "text_5"
+          },
+          {
+            "rolle": "Schwester",
+            "text": "Hallo, ich bin's. Du, ich stehe hier vor deiner Tür und du machst nicht auf. Ich habe den Kuchen für morgen dabei. Ich stelle ihn bei deiner Nachbarin ab, die ist da. Ruf mich an, wenn du zu Hause bist.",
+            "pauseDanachSek": 12,
+            "akustik": "mailbox",
+            "betont": true,
+            "abschnitt": "text_5"
+          }
+        ],
+        "items": [
+          {
+            "nr": 1,
+            "typ": "multiple_choice",
+            "abschnitt": "text_1",
+            "frage": "Was schlägt der Handwerker vor?",
+            "optionen": {
+              "a": "Am Montag anzufangen.",
+              "b": "Am Donnerstag anzufangen.",
+              "c": "Die Arbeit abzusagen."
+            },
+            "loesung": "a",
+            "beleg": "Ginge auch der Montag darauf?",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Donnerstag war der alte Termin und fällt weg.",
+              "en": "The question form is the proposal — he is not cancelling, he is moving it."
+            }
+          },
+          {
+            "nr": 2,
+            "typ": "multiple_choice",
+            "abschnitt": "text_2",
+            "frage": "Was ist im Museum noch offen?",
+            "optionen": {
+              "a": "Die Sonderausstellung.",
+              "b": "Der Museumsshop.",
+              "c": "Nichts mehr."
+            },
+            "loesung": "b",
+            "beleg": "Der Museumsshop hat noch bis zur letzten Minute geöffnet.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Sonderausstellung ist im Satz davor als geschlossen genannt.",
+              "en": "The whole museum closes in thirty minutes, so c is too early."
+            }
+          },
+          {
+            "nr": 3,
+            "typ": "multiple_choice",
+            "abschnitt": "text_3",
+            "frage": "Was gilt morgen in der Innenstadt?",
+            "optionen": {
+              "a": "Die Busse fahren nicht.",
+              "b": "Man kann nicht am Bahnhof parken.",
+              "c": "Autos dürfen nicht hinein."
+            },
+            "loesung": "c",
+            "beleg": "Wegen des Stadtfestes ist die Innenstadt von zehn bis zweiundzwanzig Uhr für Autos gesperrt.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Busse fahren, nur anders — das steht im nächsten Satz.",
+              "en": "Both other options invert something the announcement says positively."
+            }
+          },
+          {
+            "nr": 4,
+            "typ": "multiple_choice",
+            "abschnitt": "text_4",
+            "frage": "Was sollen die Kollegen morgen tun?",
+            "optionen": {
+              "a": "Zu Hause bleiben.",
+              "b": "Die Treppe oder den anderen Aufzug nehmen.",
+              "c": "Sich im Sekretariat anmelden."
+            },
+            "loesung": "b",
+            "beleg": "Bitte benutzen Sie die Treppe oder den Aufzug im Haus A.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Das Sekretariat ist nur für die, die keine Treppen steigen können.",
+              "en": "c is real advice, but only for one group — read who it is addressed to."
+            }
+          },
+          {
+            "nr": 5,
+            "typ": "multiple_choice",
+            "abschnitt": "text_5",
+            "frage": "Wo ist der Kuchen?",
+            "optionen": {
+              "a": "Vor der Tür.",
+              "b": "Wieder zu Hause.",
+              "c": "Bei der Nachbarin."
+            },
+            "loesung": "c",
+            "beleg": "Ich stelle ihn bei deiner Nachbarin ab, die ist da.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt, was sie jetzt tut, nicht was sie vorhatte.",
+              "en": "She is standing at the door, but the cake is not staying there."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "gespraech",
+        "anweisung": "Sie hören ein Gespräch unter Kollegen. Sie hören den Text einmal. Wer bringt was zum Sommerfest mit? Wählen Sie für die Aufgaben 6 bis 10 ein passendes Stichwort aus a bis i. Wählen Sie jeden Buchstaben nur einmal.",
+        "wiederholungen": 1,
+        "situation": "Zwei Kollegen gehen die Liste für das Sommerfest durch.",
+        "sprecher": [
+          {
+            "rolle": "Organisatorin",
+            "geschlecht": "f",
+            "beschreibung": "hat die Liste geschrieben"
+          },
+          {
+            "rolle": "Kollege",
+            "geschlecht": "m",
+            "beschreibung": "fragt die Namen durch"
+          }
+        ],
+        "optionenliste": [
+          {
+            "buchstabe": "a",
+            "inhalt": "Getränke"
+          },
+          {
+            "buchstabe": "b",
+            "inhalt": "Salat"
+          },
+          {
+            "buchstabe": "c",
+            "inhalt": "Musik"
+          },
+          {
+            "buchstabe": "d",
+            "inhalt": "Stühle"
+          },
+          {
+            "buchstabe": "e",
+            "inhalt": "Kuchen"
+          },
+          {
+            "buchstabe": "f",
+            "inhalt": "Teller und Gläser"
+          },
+          {
+            "buchstabe": "g",
+            "inhalt": "Blumen"
+          },
+          {
+            "buchstabe": "h",
+            "inhalt": "Grill"
+          },
+          {
+            "buchstabe": "i",
+            "inhalt": "Brot und Brötchen"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "zuordnung_buchstabe",
+          "frage": "die Organisatorin",
+          "loesung": "a",
+          "begruendung": {
+            "de": "„Getränke bringe ich selbst mit“ — das ist Stichwort a.",
+            "en": "Worked example. Letter a is used up and cannot answer any item."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil zwei. Sie hören ein Gespräch. Sie hören den Text einmal. Wer bringt was mit? Wählen Sie für die Aufgaben sechs bis zehn ein passendes Stichwort aus a bis i. Wählen Sie jeden Buchstaben nur einmal. Lesen Sie jetzt die Stichwörter.",
+            "pauseDanachSek": 22,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "So, Sommerfest am Samstag. Ich habe schon aufgeschrieben, wer was macht. Getränke bringe ich selbst mit, das ist geklärt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Kollege",
+            "text": "Und Frau Pelz? Sie hat doch gesagt, sie backt gern.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "Genau, Frau Pelz kümmert sich um den Kuchen. Zwei Bleche, hat sie gesagt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Kollege",
+            "text": "Gut. Und Herr Sanftleben?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "Herr Sanftleben hat einen großen Wagen, deshalb holt er die Stühle aus dem Keller und fährt sie in den Garten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Kollege",
+            "text": "Und was ist mit dem Essen? Wir wollten doch grillen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "Ja, den Grill bringt Herr Delfs mit, den großen von seinem Bruder. Ohne den wird das nichts bei zwanzig Leuten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Kollege",
+            "text": "Und ich? Ich habe noch gar nichts.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "Du machst den Salat. Du hast letztes Jahr diesen mit den Bohnen gemacht, den haben alle gelobt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Kollege",
+            "text": "Einverstanden. Und Musik?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum"
+          },
+          {
+            "rolle": "Organisatorin",
+            "text": "Das übernimmt die Auszubildende, die hat sich sofort gemeldet.",
+            "pauseDanachSek": 1.0,
+            "akustik": "raum"
+          }
+        ],
+        "items": [
+          {
+            "nr": 6,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Frau Pelz",
+            "loesung": "e",
+            "beleg": "Genau, Frau Pelz kümmert sich um den Kuchen.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Kollege deutet es an, die Organisatorin bestätigt es.",
+              "en": "„sie backt gern“ points at it, but the confirmation is the evidence."
+            }
+          },
+          {
+            "nr": 7,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Herr Sanftleben",
+            "loesung": "d",
+            "beleg": "Herr Sanftleben hat einen großen Wagen, deshalb holt er die Stühle aus dem Keller und fährt sie in den Garten.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der große Wagen ist der Grund, die Stühle sind die Aufgabe.",
+              "en": "Read past „deshalb“ — what comes before it is the reason, not the answer."
+            }
+          },
+          {
+            "nr": 8,
+            "typ": "zuordnung_buchstabe",
+            "frage": "Herr Delfs",
+            "loesung": "h",
+            "beleg": "Ja, den Grill bringt Herr Delfs mit, den großen von seinem Bruder.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "Der Grill gehört dem Bruder, mitgebracht wird er von Herrn Delfs.",
+              "en": "The brother is mentioned only as the owner and is not one of the people asked about."
+            }
+          },
+          {
+            "nr": 9,
+            "typ": "zuordnung_buchstabe",
+            "frage": "der Kollege",
+            "loesung": "b",
+            "beleg": "Du machst den Salat.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Du“ ist der Kollege, der gerade gefragt hat.",
+              "en": "This is the one item answered with „du“ rather than a name."
+            }
+          },
+          {
+            "nr": 10,
+            "typ": "zuordnung_buchstabe",
+            "frage": "die Auszubildende",
+            "loesung": "c",
+            "beleg": "Das übernimmt die Auszubildende, die hat sich sofort gemeldet.",
+            "kompetenz": "zuordnen",
+            "begruendung": {
+              "de": "„Das“ verweist auf die Musik aus der Frage davor.",
+              "en": "The answer is a pronoun; you have to carry „Musik“ over from the question."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "kurzgespraeche",
+        "anweisung": "Sie hören fünf kurze Gespräche. Sie hören jeden Text einmal. Wählen Sie bei den Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+        "wiederholungen": 1,
+        "situation": "Fünf kurze Gespräche aus dem Alltag, die nichts miteinander zu tun haben.",
+        "sprecher": [
+          {
+            "rolle": "Kundin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Schneider",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Sachbearbeiterin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Antragsteller",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Chefin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Praktikant",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          },
+          {
+            "rolle": "Frisörin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-ramona-low"
+          },
+          {
+            "rolle": "Kunde",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-karlsson-low"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "geschlecht": "f",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-kerstin-low"
+          },
+          {
+            "rolle": "Leser",
+            "geschlecht": "m",
+            "beschreibung": "spricht in einem der fünf Gespräche",
+            "stimme": "de_DE-thorsten-high"
+          }
+        ],
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil drei. Sie hören fünf kurze Gespräche. Sie hören jeden Text einmal. Wählen Sie bei den Aufgaben elf bis fünfzehn die richtige Lösung a, b oder c. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 20,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 1. Beim Schneider.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Kundin",
+            "text": "Können Sie die Hose noch kürzer machen? Sie ist mir zu lang.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Schneider",
+            "text": "Klar. Bis Freitag, geht das?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Kundin",
+            "text": "Freitag ist knapp, ich brauche sie am Donnerstagabend.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_1"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 2. Im Amt.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Sachbearbeiterin",
+            "text": "Haben Sie das Formular ausgefüllt?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Antragsteller",
+            "text": "Ja, aber bei Punkt vier wusste ich nicht weiter. Da geht es um das Einkommen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Sachbearbeiterin",
+            "text": "Das lassen Sie frei, das trage ich ein.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_2"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 3. Im Büro.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Chefin",
+            "text": "Wie weit sind Sie mit der Liste?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Praktikant",
+            "text": "Fast fertig. Mir fehlen nur noch die Adressen von zwei Firmen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Chefin",
+            "text": "Die finden Sie im alten Ordner im Regal. Dann bis nachher.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_3"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 4. Beim Friseur.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Frisörin",
+            "text": "Wie hätten Sie es denn gern?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Kunde",
+            "text": "Nur die Spitzen, bitte. Und die Seiten so lassen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Frisörin",
+            "text": "Also wirklich nur wenig. Das dauert keine zwanzig Minuten.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_4"
+          },
+          {
+            "rolle": "Sprecher",
+            "text": "Gespräch 5. In der Bibliothek.",
+            "pauseDanachSek": 1.2,
+            "akustik": "studio",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "text": "Das Buch ist leider ausgeliehen, noch bis zum Zwanzigsten.",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Leser",
+            "text": "So lange kann ich nicht warten. Gibt es das auch als Hörbuch?",
+            "pauseDanachSek": 0.5,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          },
+          {
+            "rolle": "Bibliothekarin",
+            "text": "Als Hörbuch nicht, aber im zweiten Stock steht ein ähnliches.",
+            "pauseDanachSek": 10,
+            "akustik": "raum",
+            "abschnitt": "gespraech_5"
+          }
+        ],
+        "items": [
+          {
+            "nr": 11,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_1",
+            "frage": "Wann braucht die Kundin die Hose?",
+            "optionen": {
+              "a": "Am Donnerstag.",
+              "b": "Am Freitag.",
+              "c": "Nächste Woche."
+            },
+            "loesung": "a",
+            "beleg": "Freitag ist knapp, ich brauche sie am Donnerstagabend.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Der Schneider schlägt den Freitag vor, sie braucht sie früher.",
+              "en": "The tailor's date is the offer; hers is the requirement."
+            }
+          },
+          {
+            "nr": 12,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_2",
+            "frage": "Was soll der Mann tun?",
+            "optionen": {
+              "a": "Punkt vier frei lassen.",
+              "b": "Das Formular neu ausfüllen.",
+              "c": "Später wiederkommen."
+            },
+            "loesung": "a",
+            "beleg": "Das lassen Sie frei, das trage ich ein.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie übernimmt die Stelle selbst.",
+              "en": "The form is otherwise complete, which is why nothing has to be redone."
+            }
+          },
+          {
+            "nr": 13,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_3",
+            "frage": "Was fehlt dem Praktikanten?",
+            "optionen": {
+              "a": "Die ganze Liste.",
+              "b": "Zwei Adressen.",
+              "c": "Der Ordner."
+            },
+            "loesung": "b",
+            "beleg": "Mir fehlen nur noch die Adressen von zwei Firmen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„fast fertig“ und „nur noch“ zeigen, wie wenig fehlt.",
+              "en": "The folder is where the answer is, not what is missing."
+            }
+          },
+          {
+            "nr": 14,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_4",
+            "frage": "Was möchte der Kunde?",
+            "optionen": {
+              "a": "Eine ganz neue Frisur.",
+              "b": "Nur wenig geschnitten.",
+              "c": "Nur die Seiten kürzer."
+            },
+            "loesung": "b",
+            "beleg": "Nur die Spitzen, bitte. Und die Seiten so lassen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Frisörin fasst es selbst zusammen: „wirklich nur wenig“.",
+              "en": "c inverts his instruction — the sides are the part he wants left alone."
+            }
+          },
+          {
+            "nr": 15,
+            "typ": "multiple_choice",
+            "abschnitt": "gespraech_5",
+            "frage": "Was bietet die Bibliothekarin an?",
+            "optionen": {
+              "a": "Ein Hörbuch.",
+              "b": "Ein ähnliches Buch.",
+              "c": "Eine Vormerkung."
+            },
+            "loesung": "b",
+            "beleg": "Als Hörbuch nicht, aber im zweiten Stock steht ein ähnliches.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie sagt erst, was nicht geht, dann was geht.",
+              "en": "„aber“ marks where the refusal ends and the offer begins."
+            }
+          }
+        ]
+      },
+      {
+        "nummer": 4,
+        "typ": "interview",
+        "anweisung": "Sie hören ein Interview aus dem Radio. Sie hören den Text zweimal. Entscheiden Sie bei den Aufgaben 16 bis 20, ob die Aussage richtig oder falsch ist.",
+        "wiederholungen": 2,
+        "situation": "Ein Radiointerview mit einer Schneiderin, die Kleidung repariert.",
+        "sprecher": [
+          {
+            "rolle": "Moderatorin",
+            "geschlecht": "f",
+            "beschreibung": "führt durch das Interview"
+          },
+          {
+            "rolle": "Schneiderin",
+            "geschlecht": "f",
+            "beschreibung": "repariert Kleidung in einem kleinen Laden"
+          }
+        ],
+        "beispiel": {
+          "nr": 0,
+          "typ": "richtig_falsch",
+          "frage": "Frau Sanftleben hat einen eigenen Laden.",
+          "loesung": "richtig",
+          "begruendung": {
+            "de": "Sie spricht selbst von „einem kleinen Laden“.",
+            "en": "Worked example, so you can hear how a true/false item is set up."
+          }
+        },
+        "skript": [
+          {
+            "rolle": "Sprecher",
+            "text": "Teil vier. Sie hören ein Interview. Sie hören den Text zweimal. Entscheiden Sie bei den Aufgaben sechzehn bis zwanzig, ob die Aussage richtig oder falsch ist. Lesen Sie jetzt die Aufgaben.",
+            "pauseDanachSek": 25,
+            "akustik": "studio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Mein Gast heute ist Frau Sanftleben. Sie näht Kleidung, aber sie verkauft keine — sie repariert sie. Frau Sanftleben, kann man davon leben?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schneiderin",
+            "text": "Gerade so. Ich arbeite allein, in einem kleinen Laden, und ich nehme keine Preise, die sich niemand leisten kann. Reich wird man damit nicht, aber ich komme aus.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Was bringen die Leute Ihnen denn am häufigsten?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schneiderin",
+            "text": "Hosen. Immer Hosen. Meistens sind sie zu lang, manchmal ist der Reißverschluss kaputt. Das ist in zwanzig Minuten erledigt und kostet weniger als eine neue Hose.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Hat sich das in den letzten Jahren verändert?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schneiderin",
+            "text": "Ja, deutlich. Vor zehn Jahren kamen fast nur ältere Kundinnen. Heute stehen junge Leute im Laden, und die fragen zuerst, ob sich eine Reparatur überhaupt lohnen kann. Das haben sie früher nicht gefragt.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Bilden Sie auch aus?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schneiderin",
+            "text": "Nein, dafür ist der Laden zu klein. Ich zeige aber jeden Monat einen Abend lang, wie man einen Knopf annäht und einen Saum macht. Der Kurs ist immer voll.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Was raten Sie jemandem, der anfangen möchte?",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Schneiderin",
+            "text": "Kaufen Sie keine teure Maschine. Fangen Sie mit Nadel und Faden an. Wer damit einen Knopf ordentlich annäht, kann später alles andere auch lernen.",
+            "pauseDanachSek": 0.5,
+            "akustik": "radio"
+          },
+          {
+            "rolle": "Moderatorin",
+            "text": "Frau Sanftleben, vielen Dank.",
+            "pauseDanachSek": 1.0,
+            "akustik": "radio"
+          }
+        ],
+        "items": [
+          {
+            "nr": 16,
+            "typ": "richtig_falsch",
+            "frage": "Frau Sanftleben verkauft auch neue Kleidung.",
+            "loesung": "falsch",
+            "beleg": "Sie näht Kleidung, aber sie verkauft keine — sie repariert sie.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Die Moderatorin stellt sie genau so vor.",
+              "en": "The contrast is built into the introduction, before she says a word."
+            }
+          },
+          {
+            "nr": 17,
+            "typ": "richtig_falsch",
+            "frage": "Sie arbeitet ohne Angestellte.",
+            "loesung": "richtig",
+            "beleg": "Ich arbeite allein, in einem kleinen Laden, und ich nehme keine Preise, die sich niemand leisten kann.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "„allein“ heißt: niemand sonst arbeitet dort.",
+              "en": "„allein“ and „ohne Angestellte“ are the same fact in different words."
+            }
+          },
+          {
+            "nr": 18,
+            "typ": "richtig_falsch",
+            "frage": "Am häufigsten bringen die Leute Hosen.",
+            "loesung": "richtig",
+            "beleg": "Hosen. Immer Hosen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie wiederholt es sofort, um es zu betonen.",
+              "en": "The repetition is the emphasis — she is answering „am häufigsten“ directly."
+            }
+          },
+          {
+            "nr": 19,
+            "typ": "richtig_falsch",
+            "frage": "Ihre Kundschaft ist heute jünger als früher.",
+            "loesung": "richtig",
+            "beleg": "Vor zehn Jahren kamen fast nur ältere Kundinnen.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Zwei Sätze, zwei Zeiten, ein klarer Unterschied.",
+              "en": "The follow-up about whether repairs are worth it is a second change, not this one."
+            }
+          },
+          {
+            "nr": 20,
+            "typ": "richtig_falsch",
+            "frage": "Sie empfiehlt Anfängern, sich eine Nähmaschine zu kaufen.",
+            "loesung": "falsch",
+            "beleg": "Kaufen Sie keine teure Maschine. Fangen Sie mit Nadel und Faden an.",
+            "kompetenz": "detailverstehen",
+            "begruendung": {
+              "de": "Sie rät ausdrücklich davon ab.",
+              "en": "Her advice is the opposite, and she gives it as the first thing in her answer."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schreiben": {
+    "zeitMinuten": 30,
+    "aufgaben": [
+      {
+        "nummer": 1,
+        "typ": "sms",
+        "situation": "Ihre Kollegin Amira hat morgen Geburtstag. Sie haben einen Kuchen gebacken und möchten ihn morgen früh mitbringen.",
+        "aufgabenstellung": "Schreiben Sie eine Kurznachricht an Amira. Schreiben Sie zu allen drei Punkten und schreiben Sie 20 bis 30 Wörter.",
+        "leitpunkte": [
+          "Gratulieren Sie.",
+          "Sagen Sie, was Sie mitbringen.",
+          "Fragen Sie, wann Sie morgen kommen sollen."
+        ],
+        "anrede": "Liebe Amira",
+        "woerter": 20,
+        "woerterMax": 30,
+        "zeitMinuten": 10,
+        "punkte": 10,
+        "redemittel": [
+          "Alles Gute zum Geburtstag!",
+          "Ich habe einen Kuchen gebacken.",
+          "Den bringe ich morgen mit.",
+          "Wann soll ich da sein?",
+          "Passt neun Uhr?",
+          "Bis morgen!"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Liebe Amira,\n\nalles Gute zum Geburtstag! Ich habe einen Kuchen gebacken. Ich bringe ihn morgen mit. Wann soll ich kommen?\n\nBis morgen!\nRavi",
+            "kommentar": "Alle drei Punkte sind da und der Ton passt. Auf „ausreichend“ hält die Nachricht ihre Syntax: vier kurze Hauptsätze ohne jede Verbindung, zweimal hintereinander mit „Ich“ begonnen."
+          },
+          {
+            "niveau": "gut",
+            "text": "Liebe Amira,\n\nalles Gute zum Geburtstag! Ich habe einen Kuchen gebacken und bringe ihn morgen früh mit. Wann soll ich da sein — passt neun Uhr?\n\nBis morgen!\nRavi",
+            "kommentar": "Derselbe Inhalt, aber verbunden: „und“ fasst Backen und Mitbringen zusammen, und die Frage macht gleich einen konkreten Vorschlag. Beide bleiben unter dreißig Wörtern."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "email_halbformell",
+        "situation": "Sie haben sich beim Bürgeramt für Dienstag einen Termin geben lassen. An diesem Tag müssen Sie aber arbeiten.",
+        "aufgabenstellung": "Schreiben Sie eine E-Mail an das Bürgeramt. Schreiben Sie zu allen drei Punkten und schreiben Sie 30 bis 40 Wörter.",
+        "leitpunkte": [
+          "Nennen Sie Ihren Termin.",
+          "Sagen Sie, warum Sie nicht kommen können.",
+          "Bitten Sie um einen neuen Termin."
+        ],
+        "anrede": "Sehr geehrte Damen und Herren",
+        "woerter": 30,
+        "woerterMax": 40,
+        "zeitMinuten": 20,
+        "punkte": 10,
+        "redemittel": [
+          "ich habe am Dienstag um 10 Uhr einen Termin bei Ihnen.",
+          "Leider muss ich an diesem Tag arbeiten.",
+          "Ich kann den Termin nicht wahrnehmen.",
+          "Könnten Sie mir einen anderen Termin geben?",
+          "Am Freitagvormittag hätte ich Zeit.",
+          "Vielen Dank für Ihre Mühe.",
+          "Mit freundlichen Grüßen"
+        ],
+        "musterloesungen": [
+          {
+            "niveau": "ausreichend",
+            "text": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag einen Termin bei Ihnen. Ich kann nicht kommen. Ich muss arbeiten. Bitte geben Sie mir einen anderen Termin.\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Register und Aufbau stimmen, alle drei Punkte kommen vor. Auf „ausreichend“ hält den Text die Reihung aus vier kurzen Hauptsätzen und die direkte Bitte im Imperativ."
+          },
+          {
+            "niveau": "gut",
+            "text": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin bei Ihnen, kann ihn aber leider nicht wahrnehmen, weil ich arbeiten muss. Könnten Sie mir einen anderen Termin geben?\n\nMit freundlichen Grüßen\nRavi Kadlag",
+            "kommentar": "Ein Satz statt drei: „aber“ setzt die Absage dagegen, „weil“ hängt den Grund an, und die Bitte steht im Konjunktiv statt im Imperativ. Genau das trennt hier „gut“ von „ausreichend“."
+          }
+        ]
+      }
+    ]
+  },
+  "sprechen": {
+    "vorbereitungMinuten": 0,
+    "teile": [
+      {
+        "nummer": 1,
+        "typ": "fragen_zur_person",
+        "titel": "Fragen zur Person",
+        "anweisung": "Sie bekommen vier Karten. Bilden Sie zu jedem Stichwort eine Frage und stellen Sie sie Ihrem Partner. Danach fragt Ihr Partner und Sie antworten.",
+        "dauerMinuten": 3,
+        "punkte": 4,
+        "karten": ["Arbeit?", "Wochenende?", "Musik?", "Deutschkurs?"],
+        "partnerSkript": [
+          {
+            "text": "Was arbeiten Sie?",
+            "wartenSek": 15,
+            "hinweis": "Nennen Sie den Beruf und sagen Sie, wie lange schon."
+          },
+          {
+            "text": "Was machen Sie am Wochenende?",
+            "wartenSek": 15,
+            "hinweis": "Eine Sache genügt, aber sagen Sie, mit wem."
+          },
+          {
+            "text": "Hören Sie gern Musik?",
+            "wartenSek": 15,
+            "hinweis": "Sagen Sie welche Art und wann Sie sie hören."
+          },
+          {
+            "text": "Wie lange lernen Sie schon Deutsch?",
+            "wartenSek": 15,
+            "hinweis": "Nennen Sie einen Zeitraum und wo Sie lernen."
+          }
+        ]
+      },
+      {
+        "nummer": 2,
+        "typ": "ueber_sich_erzaehlen",
+        "titel": "Von sich erzählen",
+        "anweisung": "Sie bekommen eine Karte mit einer Frage und einigen Stichwörtern. Erzählen Sie zusammenhängend. Danach stellt die Prüferin noch ein bis zwei Fragen.",
+        "dauerMinuten": 4,
+        "punkte": 8,
+        "situation": "Wie feiern Sie Ihren Geburtstag?",
+        "planungspunkte": [
+          "zu Hause oder woanders?",
+          "wie viele Personen?",
+          "was gibt es zu essen?",
+          "Geschenke — ja oder nein?"
+        ],
+        "fragen": [
+          "Und wie war das früher, als Sie ein Kind waren?",
+          "Gibt es in Ihrem Heimatland andere Feste, die wichtiger sind?"
+        ]
+      },
+      {
+        "nummer": 3,
+        "typ": "gemeinsam_planen",
+        "titel": "Gemeinsam etwas planen",
+        "anweisung": "Ihr Deutschkurs möchte einen Ausflug machen. Planen Sie ihn zusammen mit Ihrem Partner und einigen Sie sich.",
+        "dauerMinuten": 5,
+        "punkte": 8,
+        "situation": "Der Kurs hat zwölf Teilnehmende. Der Ausflug soll an einem Samstag stattfinden und höchstens zwanzig Euro pro Person kosten.",
+        "planungspunkte": [
+          "Wohin?",
+          "Wie kommen Sie hin?",
+          "Wann treffen Sie sich?",
+          "Was nehmen Sie zu essen mit?"
+        ],
+        "partnerSkript": [
+          {
+            "text": "Ich wäre für einen Ausflug an den See. Zwanzig Euro reichen da locker.",
+            "wartenSek": 20,
+            "hinweis": "Stimmen Sie zu oder schlagen Sie ein anderes Ziel vor — und sagen Sie warum."
+          },
+          {
+            "text": "Und wie kommen wir hin? Mit zwölf Leuten in Autos wird das kompliziert.",
+            "wartenSek": 20,
+            "hinweis": "Machen Sie einen konkreten Vorschlag zum Verkehrsmittel."
+          },
+          {
+            "text": "Gut. Wann treffen wir uns? Ich bin morgens ungern früh unterwegs.",
+            "wartenSek": 20,
+            "hinweis": "Nennen Sie eine Uhrzeit und einen Treffpunkt."
+          },
+          {
+            "text": "Und das Essen? Sollen alle etwas mitbringen oder kaufen wir vor Ort?",
+            "wartenSek": 25,
+            "hinweis": "Entscheiden Sie sich und fassen Sie am Ende zusammen, worauf Sie sich geeinigt haben."
+          }
+        ]
+      }
+    ]
+  },
+  "glossar": [
+    {
+      "lemma": "wegwerfen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "wirft weg",
+        "praeteritum": "warf weg",
+        "perfekt": "hat weggeworfen"
+      },
+      "bedeutung_de": "etwas in den Müll tun",
+      "bedeutung_en": "to throw away",
+      "beispiel": "Nach einem halben Jahr passt nichts mehr, und wegwerfen wollte keine von uns.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "wachsen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "wächst",
+        "praeteritum": "wuchs",
+        "perfekt": "ist gewachsen"
+      },
+      "bedeutung_de": "größer werden",
+      "bedeutung_en": "to grow",
+      "beispiel": "Unsere Kinder wachsen so schnell",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Regel",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Regeln",
+      "bedeutung_de": "eine Vorschrift, an die sich alle halten",
+      "bedeutung_en": "rule",
+      "beispiel": "Die Regeln sind einfach.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Hemd",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Hemden",
+      "bedeutung_de": "ein Kleidungsstück für den Oberkörper mit Knöpfen",
+      "bedeutung_en": "shirt",
+      "beispiel": "Heute steht hier auch ein Herr von achtzig und sucht sich ein Hemd aus.",
+      "fundstelle": "Lesen Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Gebühr",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Gebühren",
+      "bedeutung_de": "Geld, das man an ein Amt zahlt",
+      "bedeutung_en": "fee",
+      "beispiel": "Gebühren zahlen Sie in Zimmer 15, und zwar nur mit Karte — Bargeld nehmen wir seit Januar nicht mehr an.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Ausweis",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Ausweise",
+      "bedeutung_de": "das amtliche Papier mit Foto, das zeigt, wer man ist",
+      "bedeutung_en": "ID card",
+      "beispiel": "Bringen Sie immer Ihren Ausweis mit; ohne Ausweis können wir nichts bearbeiten.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "zuständig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "verantwortlich für eine Sache",
+      "bedeutung_en": "responsible, in charge",
+      "beispiel": "Für Fragen zum Kindergeld sind wir nicht zuständig, wenden Sie sich bitte an die Familienkasse.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "bearbeiten",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "bearbeitet",
+        "praeteritum": "bearbeitete",
+        "perfekt": "hat bearbeitet"
+      },
+      "bedeutung_de": "sich um einen Antrag oder eine Sache kümmern",
+      "bedeutung_en": "to process",
+      "beispiel": "Bringen Sie immer Ihren Ausweis mit; ohne Ausweis können wir nichts bearbeiten.",
+      "fundstelle": "Lesen Teil 2",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Praktikum",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Praktika",
+      "bedeutung_de": "eine Zeit, in der man einen Beruf kennenlernt",
+      "bedeutung_en": "internship",
+      "beispiel": "du wolltest wissen, wie die erste Woche im Praktikum war.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "nervös",
+      "wortart": "adjektiv",
+      "bedeutung_de": "unruhig, weil man Angst vor etwas hat",
+      "bedeutung_en": "nervous",
+      "beispiel": "Am Montag war ich furchtbar nervös.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "überflüssig",
+      "wortart": "adjektiv",
+      "bedeutung_de": "nicht nötig, nicht gebraucht",
+      "bedeutung_en": "superfluous, unnecessary",
+      "beispiel": "Ich habe drei Stunden nur zugeschaut und dachte, ich bin überflüssig.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "anstrengend",
+      "wortart": "adjektiv",
+      "bedeutung_de": "so, dass es viel Kraft kostet",
+      "bedeutung_en": "tiring, exhausting",
+      "beispiel": "Anstrengend ist der Weg.",
+      "fundstelle": "Lesen Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Aushilfe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Aushilfen",
+      "bedeutung_de": "eine Person, die für kurze Zeit mithilft",
+      "bedeutung_en": "temporary help",
+      "beispiel": "Samstags und sonntags von 9 bis 15 Uhr.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Nachhilfe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Nachhilfen",
+      "bedeutung_de": "zusätzlicher Unterricht für einen Schüler",
+      "bedeutung_en": "private tuition",
+      "beispiel": "Für Schülerinnen und Schüler der Klassen 5 bis 8, zweimal in der Woche nachmittags.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Zuverlässigkeit",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Zuverlässigkeiten",
+      "bedeutung_de": "die Eigenschaft, dass man sich auf jemanden verlassen kann",
+      "bedeutung_en": "reliability",
+      "beispiel": "Deutschkenntnisse müssen nicht perfekt sein, Zuverlässigkeit schon.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "ausführen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "führt aus",
+        "praeteritum": "führte aus",
+        "perfekt": "hat ausgeführt"
+      },
+      "bedeutung_de": "mit einem Hund spazieren gehen",
+      "bedeutung_en": "to walk (a dog)",
+      "beispiel": "Wir suchen jemanden, der unsere beiden Hunde mittags eine Stunde ausführt.",
+      "fundstelle": "Lesen Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Baustelle",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Baustellen",
+      "bedeutung_de": "ein Ort, an dem gebaut wird",
+      "bedeutung_en": "building site",
+      "beispiel": "Das schaffen wir leider nicht, die Baustelle davor dauert länger.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Treppe",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Treppen",
+      "bedeutung_de": "die Stufen, über die man in ein anderes Stockwerk kommt",
+      "bedeutung_en": "stairs",
+      "beispiel": "Bitte benutzen Sie die Treppe oder den Aufzug im Haus A.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "gesperrt",
+      "wortart": "adjektiv",
+      "bedeutung_de": "geschlossen, sodass niemand durchkommt",
+      "bedeutung_en": "closed off",
+      "beispiel": "Wegen des Stadtfestes ist die Innenstadt von zehn bis zweiundzwanzig Uhr für Autos gesperrt.",
+      "fundstelle": "Hören Teil 1",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Formular",
+      "wortart": "nomen",
+      "artikel": "das",
+      "plural": "Formulare",
+      "bedeutung_de": "ein Blatt mit Feldern, die man ausfüllt",
+      "bedeutung_en": "form",
+      "beispiel": "Haben Sie das Formular ausgefüllt?",
+      "fundstelle": "Hören Teil 3",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Reißverschluss",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Reißverschlüsse",
+      "bedeutung_de": "der Verschluss an Hose oder Jacke zum Auf- und Zuziehen",
+      "bedeutung_en": "zip",
+      "beispiel": "Meistens sind sie zu lang, manchmal ist der Reißverschluss kaputt.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Knopf",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Knöpfe",
+      "bedeutung_de": "die kleine runde Scheibe zum Schließen von Kleidung",
+      "bedeutung_en": "button",
+      "beispiel": "Wer damit einen Knopf ordentlich annäht, kann später alles andere auch lernen.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Saum",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Säume",
+      "bedeutung_de": "der umgenähte Rand unten an Hose oder Rock",
+      "bedeutung_en": "hem",
+      "beispiel": "Ich zeige aber jeden Monat einen Abend lang, wie man einen Knopf annäht und einen Saum macht.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "annähen",
+      "wortart": "verb",
+      "stammformen": {
+        "praesens_3sg": "näht an",
+        "praeteritum": "nähte an",
+        "perfekt": "hat angenäht"
+      },
+      "bedeutung_de": "etwas mit Nadel und Faden befestigen",
+      "bedeutung_en": "to sew on",
+      "beispiel": "Wer damit einen Knopf ordentlich annäht, kann später alles andere auch lernen.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Faden",
+      "wortart": "nomen",
+      "artikel": "der",
+      "plural": "Fäden",
+      "bedeutung_de": "der dünne lange Strang zum Nähen",
+      "bedeutung_en": "thread",
+      "beispiel": "Fangen Sie mit Nadel und Faden an.",
+      "fundstelle": "Hören Teil 4",
+      "niveau": "A2"
+    },
+    {
+      "lemma": "Auszubildende",
+      "wortart": "nomen",
+      "artikel": "die",
+      "plural": "Auszubildenden",
+      "bedeutung_de": "eine junge Person, die einen Beruf lernt",
+      "bedeutung_en": "apprentice, trainee",
+      "beispiel": "Das übernimmt die Auszubildende, die hat sich sofort gemeldet.",
+      "fundstelle": "Hören Teil 2",
+      "niveau": "A2"
+    }
+  ],
+  "redewendungen": [
+    {
+      "wendung": "sich lohnen",
+      "typ": "kollokation",
+      "bedeutung_de": "die Mühe oder das Geld wert sein",
+      "bedeutung_en": "to be worth it",
+      "beispiel": "Heute stehen junge Leute im Laden, und die fragen zuerst, ob sich eine Reparatur überhaupt lohnen kann.",
+      "fundstelle": "Hören Teil 4"
+    },
+    {
+      "wendung": "alles Gute zum Geburtstag",
+      "typ": "redewendung",
+      "bedeutung_de": "der übliche Glückwunsch am Geburtstag",
+      "bedeutung_en": "happy birthday",
+      "beispiel": "alles Gute zum Geburtstag! Ich habe einen Kuchen gebacken.",
+      "fundstelle": "Schreiben Teil 1"
+    },
+    {
+      "wendung": "nach Absprache",
+      "typ": "kollokation",
+      "bedeutung_de": "so, wie man es vorher miteinander vereinbart",
+      "bedeutung_en": "by arrangement",
+      "beispiel": "Ort und Zeit nach Absprache.",
+      "fundstelle": "Lesen Teil 4"
+    },
+    {
+      "wendung": "in Ordnung",
+      "typ": "kollokation",
+      "bedeutung_de": "annehmbar, nett, so wie es sein soll",
+      "bedeutung_en": "all right, fine",
+      "beispiel": "Die Kollegen sind in Ordnung, besonders eine Frau aus meinem Zimmer.",
+      "fundstelle": "Lesen Teil 3"
+    }
+  ],
+  "grammatik": [
+    {
+      "phaenomen": "Possessivartikel im Akkusativ und Dativ",
+      "erklaerung_de": "mein, dein, sein, ihr, unser, euer, Ihr bekommen dieselben Endungen wie „ein“ und „kein“. Im Akkusativ ändert sich nur das Maskulinum: „Ich bringe meinen Kuchen mit“, aber „meine Tasche“, „mein Buch“. Im Dativ heißt es meinem, meiner, meinem, meinen.",
+      "erklaerung_en": "Possessives take the same endings as „ein“ and „kein“. In the accusative only the masculine changes — which is why „meinen“ appears so much less often than learners expect. The dative set (meinem/meiner/meinem/meinen) has to be learnt as a block.",
+      "belegSatz": "Bringen Sie immer Ihren Ausweis mit; ohne Ausweis können wir nichts bearbeiten.",
+      "fundstelle": "Lesen Teil 2",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: Ich zeige Ihnen ___ (mein) Ausweis.",
+          "loesung": "meinen",
+          "hinweis": "„der Ausweis“ ist maskulin, und „zeigen“ verlangt hier den Akkusativ."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Sie erklärt alles ___ (ihr) Kollegen. (Dativ, Plural)",
+          "loesung": "ihren",
+          "hinweis": "Im Dativ Plural endet fast alles auf „-n“."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Herr Delfs bringt ___ (sein) Grill mit.",
+          "loesung": "seinen",
+          "hinweis": "Maskulinum im Akkusativ."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Nebensatz mit wenn und als",
+      "erklaerung_de": "„wenn“ steht für etwas, das mehrmals passiert oder erst noch kommt; „als“ nur für einen einzelnen Moment in der Vergangenheit. „Wenn ich Zeit habe, gehe ich schwimmen“ — aber „Als ich ein Kind war, …“. Das Verb steht in beiden Fällen am Ende.",
+      "erklaerung_en": "„wenn“ covers repeated or future events; „als“ is only for a single point in the past. English uses „when“ for both, which is exactly why this is worth drilling. The verb goes to the end either way.",
+      "belegSatz": "Ruf mich an, wenn du zu Hause bist.",
+      "fundstelle": "Hören Teil 1",
+      "uebungen": [
+        {
+          "aufgabe": "wenn oder als? ___ ich ein Kind war, habe ich viel gelesen.",
+          "loesung": "Als",
+          "hinweis": "Eine Kindheit ist ein einziger Abschnitt in der Vergangenheit."
+        },
+        {
+          "aufgabe": "wenn oder als? Ich gehe schwimmen, ___ ich Zeit habe.",
+          "loesung": "wenn",
+          "hinweis": "Das passiert immer wieder."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Ruf mich an, wenn du zu Hause ___ (sein).",
+          "loesung": "bist",
+          "hinweis": "Im Nebensatz steht das Verb ganz am Ende."
+        }
+      ]
+    },
+    {
+      "phaenomen": "Adjektive nach dem bestimmten Artikel",
+      "erklaerung_de": "Nach der, die, das heißt die Endung im Nominativ „-e“ und sonst fast immer „-en“: der kleine Laden, den kleinen Laden, dem kleinen Laden. Nur Nominativ Singular und Akkusativ bei Femininum und Neutrum enden auf „-e“.",
+      "erklaerung_en": "After the definite article the ending is „-e“ in the nominative singular (and the accusative of feminine and neuter), and „-en“ everywhere else. That single rule covers most of what A2 needs.",
+      "belegSatz": "Ich arbeite allein, in einem kleinen Laden, und ich nehme keine Preise, die sich niemand leisten kann.",
+      "fundstelle": "Hören Teil 4",
+      "uebungen": [
+        {
+          "aufgabe": "Ergänzen Sie: Der ___ (klein) Laden ist immer voll.",
+          "loesung": "kleine",
+          "hinweis": "Nominativ Singular — die kurze Endung."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: Ich nehme den ___ (groß) Grill mit.",
+          "loesung": "großen",
+          "hinweis": "Akkusativ Maskulinum."
+        },
+        {
+          "aufgabe": "Ergänzen Sie: In der ___ (alt) Turnhalle ist der Tausch.",
+          "loesung": "alten",
+          "hinweis": "Dativ — hier endet es immer auf „-en“."
+        }
+      ]
+    }
+  ]
+}

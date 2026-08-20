@@ -57,9 +57,17 @@ PAUSE_NACH_WIEDERHOLUNG = 10.0  # to mark the two answers for that text
 PAUSE_TEILENDE = 10.0           # after the last item of a part
 PAUSE_ZWISCHEN_TEILEN = 5.0     # between parts on the combined track
 
-# The real module is 40 minutes including transferring answers to the answer
-# sheet. The audio itself runs a little over half an hour.
-ZIELDAUER_MIN, ZIELDAUER_MAX = 27.0, 36.0
+# How long the finished module should run, per level. The B1 and B2 module is
+# 40 minutes including transferring answers to the answer sheet, so the audio
+# itself runs a little over half an hour. A2 is a 30-minute module built from
+# four parts of five items, and its audio is correspondingly shorter — holding
+# it to the B1 window would mean padding every script.
+ZIELDAUER = {
+    "A2": (14.0, 22.0),
+    "B1": (27.0, 36.0),
+    "B2": (27.0, 36.0),
+}
+ZIELDAUER_MIN, ZIELDAUER_MAX = ZIELDAUER["B1"]
 
 # Delivery pace, in words per minute, for a paper at sprechtempoProzent 0.
 # Examination recordings sit around 130-140 wpm — clearly slower than casual
@@ -762,9 +770,11 @@ def generate_exam(exam_id: str, exam: dict[str, Any], provider, args) -> None:
         total = len(joined) / sr / 60
         print(f"    komplett: {total:5.2f} min  → {path.name}")
         manifest["komplett"] = {"datei": path.name, "dauerSek": round(len(joined) / sr, 2)}
-        if not ZIELDAUER_MIN <= total <= ZIELDAUER_MAX:
+        stufe = exam.get("meta", {}).get("stufe", "B1")
+        min_dauer, max_dauer = ZIELDAUER.get(stufe, ZIELDAUER["B1"])
+        if not min_dauer <= total <= max_dauer:
             print(f"    ! module audio runs {total:.1f} min; expected "
-                  f"{ZIELDAUER_MIN:.0f}-{ZIELDAUER_MAX:.0f} min. Scripts are likely "
+                  f"{min_dauer:.0f}-{max_dauer:.0f} min at {stufe}. Scripts are likely "
                   f"too short or too long for a realistic paper.")
 
     if not args.teil:

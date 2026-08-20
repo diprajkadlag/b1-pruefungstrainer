@@ -136,7 +136,7 @@ where tar  >nul 2>&1 || goto :audio_no_tools
 echo.
 rem  Every paper that ships, at either level. The release names its audio
 rem  archive after the paper id, so this list is the only thing to extend.
-for %%P in (pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03 b2-pruefung-04 b2-pruefung-05) do (
+for %%P in (a2-pruefung-01 a2-pruefung-02 a2-pruefung-03 a2-pruefung-04 a2-pruefung-05 pruefung-01 pruefung-02 pruefung-03 pruefung-04 pruefung-05 b2-pruefung-01 b2-pruefung-02 b2-pruefung-03 b2-pruefung-04 b2-pruefung-05) do (
   echo   Downloading audio for %%P...
   if not exist "content\exams\%%P\audio" mkdir "content\exams\%%P\audio"
   curl -sSL -o "%TEMP%\pruef-audio-%%P.zip" "%REPO%/releases/latest/download/audio-%%P.zip"

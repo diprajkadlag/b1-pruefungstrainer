@@ -29,9 +29,31 @@ export interface StufenFormat {
   module: Record<Modul, ModulFormat>;
   /** Heading for the presentation card: slides at B1, an outline at B2. */
   gliederungTitel: string;
+  /**
+   * What the answer sheet prints for "none of these fits" in the matching
+   * task, or `null` where the level has no such task.
+   *
+   * B1 says 0 and A2 says x. It is the same decision either way, but the
+   * candidate must tick what their own paper tells them to.
+   */
+  ohneTreffer: string | null;
 }
 
 export const STUFEN: Record<Stufe, StufenFormat> = {
+  A2: {
+    stufe: 'A2',
+    kurz: '4 Leseteile, 4 Hörteile, SMS und E-Mail, 3 Sprechteile',
+    module: {
+      lesen: { minuten: 30, anzeige: '30 Min.' },
+      hoeren: { minuten: 30, anzeige: '30 Min.' },
+      schreiben: { minuten: 30, anzeige: '30 Min.' },
+      sprechen: { minuten: null, anzeige: 'ca. 15 Min. zu zweit' },
+    },
+    // A2 has no presentation at all, so nothing is ever printed under this
+    // heading; it is here because the type demands it, not because it is used.
+    gliederungTitel: 'Ihre Karten',
+    ohneTreffer: 'x',
+  },
   B1: {
     stufe: 'B1',
     kurz: '5 Leseteile, 4 Hörteile, 3 Schreibaufgaben, 3 Sprechteile',
@@ -42,6 +64,7 @@ export const STUFEN: Record<Stufe, StufenFormat> = {
       sprechen: { minuten: null, anzeige: '15 Min. + 15 Min. Vorbereitung' },
     },
     gliederungTitel: 'Ihre Folien',
+    ohneTreffer: '0',
   },
   B2: {
     stufe: 'B2',
@@ -53,14 +76,17 @@ export const STUFEN: Record<Stufe, StufenFormat> = {
       sprechen: { minuten: null, anzeige: '10 Min. + 15 Min. Vorbereitung' },
     },
     gliederungTitel: 'Ihre Gliederung',
+    ohneTreffer: null,
   },
 };
 
-export const STUFEN_REIHE: Stufe[] = ['B1', 'B2'];
+export const STUFEN_REIHE: Stufe[] = ['A2', 'B1', 'B2'];
 
 /** The level a paper id belongs to. Unprefixed ids are the original B1 papers. */
 export function stufeVonId(examId: string): Stufe {
-  return examId.startsWith('b2-') ? 'B2' : 'B1';
+  if (examId.startsWith('a2-')) return 'A2';
+  if (examId.startsWith('b2-')) return 'B2';
+  return 'B1';
 }
 
 /**

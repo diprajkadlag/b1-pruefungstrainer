@@ -25,6 +25,14 @@ Zeit zum Antworten. Ihre Antworten werden aufgezeichnet.}
 \pruefungstext{Situation}{}{<< teil.get('situation') | texpar >>}
 <% endif %>
 
+<# A2 Teil 1: four single-word cards, one question to be formed from each. #>
+<% if teil.get('karten') %>
+\leitpunkte{<% for k in teil.get('karten') %>\item 	extbf{<< k | tex >>}
+<% endfor %>}
+{\small\color{pruefmute}Bilden Sie zu jedem Stichwort eine Frage und stellen Sie
+sie Ihrem Partner. Danach fragt Ihr Partner und Sie antworten.}
+<% endif %>
+
 <% if teil.get('planungspunkte') %>
 \leitpunkte{<% for p in teil.get('planungspunkte') %>\item << p | tex >>
 <% endfor %>}
@@ -32,6 +40,10 @@ Zeit zum Antworten. Ihre Antworten werden aufgezeichnet.}
 {\small\color{pruefmute}Tauschen Sie Argumente aus, gehen Sie auf die Einwände
 Ihrer Partnerin ein und fassen Sie am Ende zusammen, worauf Sie sich einigen
 können.}
+<% elif teil.typ == 'ueber_sich_erzaehlen' %>
+{\small\color{pruefmute}Erzählen Sie zusammenhängend. Die Stichwörter sind
+Anregungen — Sie müssen nicht jedes davon behandeln, aber sprechen Sie nicht
+nur in einzelnen Sätzen.}
 <% else %>
 {\small\color{pruefmute}Machen Sie Vorschläge, reagieren Sie auf die Vorschläge
 Ihres Partners und einigen Sie sich am Ende auf eine gemeinsame Lösung.}
@@ -67,10 +79,17 @@ Ihres Partners und einigen Sie sich am Ende auf eine gemeinsame Lösung.}
 
 \clearpage
 
-\modulkopf{Notizblatt}{15 Minuten Vorbereitung}{wird nicht bewertet}
+<% set vorbereitung = sprechen.get('vorbereitungMinuten', 15) %>
+\modulkopf{Notizblatt}{<% if vorbereitung %><< vorbereitung >> Minuten Vorbereitung<% else %>ohne Vorbereitungszeit<% endif %>}{wird nicht bewertet}
 
+<% if vorbereitung %>
 {\small Notieren Sie hier Stichworte — keine ganzen Sätze. Sie dürfen dieses
 Blatt in die Prüfung mitnehmen.}
+<% else %>
+{\small In der Prüfung gibt es keine Vorbereitungszeit: Sie bekommen die Karten
+erst im Prüfungsraum und sehen sie etwa zwanzig Sekunden an. Nutzen Sie dieses
+Blatt daher zum Üben, nicht als Vorlage für den Prüfungstag.}
+<% endif %>
 
 <% for teil in sprechen.teile %>
 \vspace{0.5em}

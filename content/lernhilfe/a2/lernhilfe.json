@@ -1,0 +1,487 @@
+{
+  "titel": "A2 Spickzettel",
+  "untertitel": "Strategie, Redemittel, Grammatik und Wortschatz für das Zertifikat A2",
+  "version": "1.0.0",
+  "ueberblick": {
+    "einleitung": "A2 ist **eine** Prüfung, nicht vier. Sie können insgesamt 100 Punkte erreichen, und jeder der vier Teile bringt höchstens 25. Bestanden haben Sie, wenn drei Dinge zugleich stimmen: mindestens 60 von 100 Punkten insgesamt, mindestens 45 von 75 in Lesen, Hören und Schreiben zusammen, und mindestens 15 von 25 im Sprechen. Fehlt eines davon, ist die ganze Prüfung nicht bestanden — auch bei sonst guten Ergebnissen. Wer im Sprechen schwach ist, kann das also nicht durch Lesen ausgleichen, und genau darin unterscheidet sich A2 von B1 und B2, wo jedes Modul für sich zählt.",
+    "module": [
+      {
+        "modul": "Lesen",
+        "zeit": "30 Min.",
+        "teile": "4 Teile, 20 Aufgaben",
+        "punkte": "25",
+        "kern": "Jede Aufgabe zählt 1 Messpunkt, das Ergebnis wird mit 1,25 multipliziert. 16 richtige Aufgaben sind 20 Punkte."
+      },
+      {
+        "modul": "Hören",
+        "zeit": "30 Min.",
+        "teile": "4 Teile, 20 Aufgaben",
+        "punkte": "25",
+        "kern": "Teil 1 und Teil 4 hören Sie zweimal, Teil 2 und Teil 3 nur einmal. Das ist die wichtigste Zahl im ganzen Modul."
+      },
+      {
+        "modul": "Schreiben",
+        "zeit": "30 Min.",
+        "teile": "2 Aufgaben",
+        "punkte": "25",
+        "kern": "SMS 20–30 Wörter, E-Mail 30–40 Wörter. Je 5 Punkte für Aufgabenerfüllung und 5 für Sprache. Wird die Aufgabenerfüllung mit E bewertet, ist die ganze Aufgabe 0 Punkte."
+      },
+      {
+        "modul": "Sprechen",
+        "zeit": "ca. 15 Min. zu zweit",
+        "teile": "3 Teile",
+        "punkte": "25",
+        "kern": "4 + 8 + 8 Punkte für die drei Teile, dazu 5 Punkte für die Aussprache über die ganze Prüfung hinweg. Keine Vorbereitungszeit."
+      }
+    ],
+    "noten": [
+      {
+        "note": "sehr gut",
+        "von": 100,
+        "bis": 90
+      },
+      {
+        "note": "gut",
+        "von": 89,
+        "bis": 80
+      },
+      {
+        "note": "befriedigend",
+        "von": 79,
+        "bis": 70
+      },
+      {
+        "note": "ausreichend",
+        "von": 69,
+        "bis": 60
+      },
+      {
+        "note": "nicht bestanden",
+        "von": 59,
+        "bis": 0
+      }
+    ]
+  },
+  "strategie": [
+    {
+      "modul": "Lesen",
+      "zeitplan": "T1 7 · T2 7 · T3 8 · T4 8 Min. Übertragen Sie die Lösungen sofort in den Antwortbogen, nicht am Ende — bei 30 Minuten bleibt dafür keine Reserve.",
+      "goldregeln": [
+        "Lesen Sie **zuerst die Aufgaben**, dann den Text. Bei nur fünf Fragen pro Teil wissen Sie danach genau, wonach Sie suchen.",
+        "In Teil 4 setzen Sie zuerst die sicheren Treffer und streichen jede verbrauchte Anzeige durch. Am Ende entscheiden Sie zwischen zwei Möglichkeiten, nicht zwischen sechs.",
+        "Genau **eine** Person in Teil 4 findet nichts. Suchen Sie sie nicht als Erstes, sondern lassen Sie sie am Ende übrig — dort steht das x.",
+        "Achten Sie auf die kleinen Wörter: „nur“, „nicht“, „ab“, „bis“, „außer“. Sie drehen bei einer Tafel oder einem Aushang die halbe Aussage um.",
+        "Wenn zwei Antworten richtig aussehen, steht eine davon meist wörtlich im Text und ist trotzdem falsch. Die richtige sagt dasselbe mit anderen Wörtern."
+      ]
+    },
+    {
+      "modul": "Hören",
+      "zeitplan": "Die Pausen sind vorgegeben. Nutzen Sie jede Lesepause vollständig, um die nächsten fünf Aufgaben zu lesen.",
+      "goldregeln": [
+        "Merken Sie sich: **Teil 1 und Teil 4 zweimal**, Teil 2 und Teil 3 nur einmal. Bei Teil 2 und 3 gibt es keine zweite Chance — kreuzen Sie auch bei Unsicherheit sofort an.",
+        "In Teil 2 wird jeder Buchstabe **nur einmal** gebraucht. Streichen Sie ihn durch, sobald er vergeben ist; das schließt Fehler bei den letzten Aufgaben aus.",
+        "Bei Teil 1 hören Sie beim ersten Mal auf die Situation, beim zweiten Mal auf die Einzelheit. Wer beim ersten Hören schon ankreuzen will, verpasst meistens beides.",
+        "Zahlen, Uhrzeiten und Wochentage kommen fast immer doppelt vor — einmal falsch als alter Stand, einmal richtig als neuer. Hören Sie auf „nicht … sondern“ und „statt“.",
+        "Eine Aussage in Teil 4 ist falsch, wenn nur ein Wort nicht stimmt. Lesen Sie die Aussage genau, bevor der Text beginnt."
+      ]
+    },
+    {
+      "modul": "Schreiben",
+      "zeitplan": "SMS 10 · E-Mail 20 Min. Lesen Sie am Ende beide Texte einmal laut im Kopf — die meisten Fehler hört man, bevor man sie sieht.",
+      "goldregeln": [
+        "Beantworten Sie **alle drei Punkte**. Ein fehlender Punkt kostet mehr als jeder Grammatikfehler; bei zwei fehlenden Punkten ist die Aufgabe kaum noch zu retten.",
+        "Halten Sie den Rahmen ein: 20–30 und 30–40 Wörter. Zu lang ist hier genauso falsch wie zu kurz, und unter der Hälfte gibt es null Punkte.",
+        "Anrede und Gruß gehören dazu und zählen mit. „Hallo Milan“ und „Sehr geehrte Damen und Herren“ sind zwei verschiedene Welten — verwechseln Sie sie nicht.",
+        "Verbinden Sie zwei Sätze mit „weil“, „aber“ oder „und“, statt vier kurze nebeneinanderzustellen. Genau das trennt „gut“ von „ausreichend“.",
+        "Schreiben Sie eine Bitte im Konjunktiv: „Könnten Sie …?“ statt „Können Sie …?“. Ein Wort, ein deutlich besserer Eindruck."
+      ]
+    },
+    {
+      "modul": "Sprechen",
+      "zeitplan": "Es gibt **keine** Vorbereitungszeit. Sie sehen jede Karte etwa zwanzig Sekunden an und sprechen dann.",
+      "goldregeln": [
+        "In Teil 1 bilden Sie aus dem Stichwort eine **ganze Frage**: aus „Beruf?“ wird „Was sind Sie von Beruf?“. Ein einzelnes Wort ist keine Frage und bringt keine Punkte.",
+        "Antworten Sie nie nur mit einem Wort. Nennen Sie die Sache und ein Detail dazu: nicht „Berlin“, sondern „Ich wohne seit zwei Jahren in Berlin, zusammen mit meiner Schwester.“",
+        "In Teil 2 sind die Stichwörter Anregungen, keine Liste zum Abhaken. Sprechen Sie zusammenhängend und lassen Sie ruhig eines aus.",
+        "In Teil 3 geht es ums **Einigen**, nicht ums Vortragen. Reagieren Sie auf jeden Vorschlag Ihres Partners, bevor Sie einen eigenen machen.",
+        "Fassen Sie am Ende von Teil 3 in einem Satz zusammen, worauf Sie sich geeinigt haben. Das ist der einfachste Punkt der ganzen Prüfung.",
+        "Sprechen Sie lieber langsam und deutlich als schnell und undeutlich. Die Aussprache zählt 5 der 25 Punkte — ein Fünftel."
+      ]
+    }
+  ],
+  "redemittel": [
+    {
+      "bereich": "Sprechen Teil 1 — Fragen zur Person",
+      "gruppen": [
+        {
+          "funktion": "Aus einem Stichwort eine Frage machen",
+          "phrasen": [
+            "Wo wohnen Sie?",
+            "Was sind Sie von Beruf?",
+            "Welche Sprachen sprechen Sie?",
+            "Was machen Sie in Ihrer Freizeit?",
+            "Haben Sie Geschwister?",
+            "Wie lange lernen Sie schon Deutsch?"
+          ]
+        },
+        {
+          "funktion": "Antworten mit einem Detail",
+          "phrasen": [
+            "Ich wohne seit … in …, zusammen mit …",
+            "Ich arbeite als … bei …",
+            "Ich spreche … und ein bisschen …",
+            "Am liebsten … ich, meistens am Wochenende.",
+            "Ja, ich habe … Geschwister. Sie leben in …"
+          ]
+        },
+        {
+          "funktion": "Nachfragen, wenn Sie etwas nicht verstanden haben",
+          "phrasen": [
+            "Entschuldigung, können Sie das bitte wiederholen?",
+            "Wie bitte? Ich habe Sie nicht ganz verstanden.",
+            "Meinen Sie …?"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 2 — Von sich erzählen",
+      "gruppen": [
+        {
+          "funktion": "Anfangen",
+          "phrasen": [
+            "Also, bei mir ist das so: …",
+            "Ich fange mit … an.",
+            "Das ist bei mir jede Woche gleich.",
+            "Das kommt darauf an, ob …"
+          ]
+        },
+        {
+          "funktion": "Weitererzählen und verbinden",
+          "phrasen": [
+            "Zuerst …, danach …, und am Ende …",
+            "Meistens …, aber manchmal auch …",
+            "Das mache ich, weil …",
+            "Früher war das anders: Damals …",
+            "Zum Beispiel letzte Woche: Da habe ich …"
+          ]
+        },
+        {
+          "funktion": "Bewerten",
+          "phrasen": [
+            "Das gefällt mir gut, weil …",
+            "Das mag ich überhaupt nicht.",
+            "Am liebsten mache ich …",
+            "Das ist mir wichtig.",
+            "Das ist mir ehrlich gesagt egal."
+          ]
+        },
+        {
+          "funktion": "Auf eine Nachfrage reagieren",
+          "phrasen": [
+            "Ja, das stimmt, und außerdem …",
+            "Das habe ich noch nie gemacht.",
+            "Doch, einmal — das war …"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 3 — Gemeinsam etwas planen",
+      "gruppen": [
+        {
+          "funktion": "Vorschlagen",
+          "phrasen": [
+            "Wollen wir am … treffen?",
+            "Wie wäre es mit …?",
+            "Ich würde vorschlagen, dass wir …",
+            "Vielleicht könnten wir …",
+            "Was hältst du von …?"
+          ]
+        },
+        {
+          "funktion": "Zustimmen",
+          "phrasen": [
+            "Ja, das passt mir gut.",
+            "Einverstanden, machen wir das so.",
+            "Gute Idee, das finde ich auch.",
+            "Ja, gern. Dann treffen wir uns um …"
+          ]
+        },
+        {
+          "funktion": "Ablehnen und einen anderen Vorschlag machen",
+          "phrasen": [
+            "Da kann ich leider nicht, weil …",
+            "Das ist mir zu früh. Ginge auch …?",
+            "Lieber nicht — wie wäre stattdessen …?",
+            "Das finde ich schwierig, weil …"
+          ]
+        },
+        {
+          "funktion": "Sich einigen und zusammenfassen",
+          "phrasen": [
+            "Gut, dann halten wir fest: …",
+            "Also: Wir treffen uns am … um … Uhr.",
+            "Du bringst …, und ich kümmere mich um …",
+            "Sind wir uns einig?"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 1 — Kurznachricht",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Schluss",
+          "phrasen": [
+            "Hallo …,",
+            "Liebe …, / Lieber …,",
+            "Bis später! / Bis morgen!",
+            "Viele Grüße"
+          ]
+        },
+        {
+          "funktion": "Sich entschuldigen und absagen",
+          "phrasen": [
+            "Es tut mir leid, aber …",
+            "Ich schaffe es heute leider nicht.",
+            "Leider muss ich absagen.",
+            "Tut mir leid!"
+          ]
+        },
+        {
+          "funktion": "Einen Grund nennen",
+          "phrasen": [
+            "…, weil ich krank bin.",
+            "…, weil mein Bus im Stau steht.",
+            "Ich muss noch arbeiten."
+          ]
+        },
+        {
+          "funktion": "Einen Vorschlag machen",
+          "phrasen": [
+            "Passt dir …?",
+            "Können wir uns stattdessen … treffen?",
+            "Sollen wir es auf … verschieben?",
+            "Warte bitte im … auf mich."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Aufgabe 2 — Halbformelle E-Mail",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Schluss",
+          "phrasen": [
+            "Sehr geehrte Damen und Herren,",
+            "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+            "Mit freundlichen Grüßen",
+            "Vielen Dank im Voraus."
+          ]
+        },
+        {
+          "funktion": "Den Anlass nennen",
+          "phrasen": [
+            "ich bin für den Kurs … angemeldet.",
+            "ich habe bei Ihnen … gekauft.",
+            "ich habe Ihren Aushang gelesen und möchte gern …",
+            "ich habe am … einen Termin bei Ihnen."
+          ]
+        },
+        {
+          "funktion": "Ein Problem schildern",
+          "phrasen": [
+            "Leider kann ich an diesem Tag nicht kommen, weil …",
+            "Leider habe ich … verloren.",
+            "Ich war krank und konnte nicht kommen."
+          ]
+        },
+        {
+          "funktion": "Höflich bitten und fragen",
+          "phrasen": [
+            "Könnten Sie mir bitte sagen, ob …?",
+            "Wäre es möglich, den Termin zu verschieben?",
+            "Ich würde gern wissen, wie ich weiter vorgehen soll.",
+            "Gibt es die Möglichkeit, den Termin nachzuholen?"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Universell — kleine Wörter, die überall Punkte bringen",
+      "gruppen": [
+        {
+          "funktion": "Verbinden",
+          "phrasen": [
+            "und · aber · oder · denn (Verb bleibt an Position 2)",
+            "weil · dass · wenn · ob (Verb ans Satzende)",
+            "deshalb · dann · trotzdem (Verb direkt danach)"
+          ]
+        },
+        {
+          "funktion": "Zeit",
+          "phrasen": [
+            "zuerst · danach · später · am Ende",
+            "am Montag · um acht · im Juli · von … bis …"
+          ]
+        }
+      ]
+    }
+  ],
+  "grammatik": [
+    {
+      "thema": "Perfekt — haben oder sein",
+      "erklaerung": "Über Vergangenes sprechen Sie auf A2 fast immer im Perfekt. Die meisten Verben nehmen „haben“; Verben der Bewegung und der Veränderung nehmen „sein“. Das Partizip steht immer ganz am Ende.",
+      "tabelle": {
+        "kopf": ["Hilfsverb", "wann", "Beispiel"],
+        "zeilen": [
+          ["haben", "die meisten Verben", "Ich **habe** den Kuchen **gebacken**."],
+          ["sein", "Bewegung von A nach B", "Ich **bin** ins Kino **gegangen**."],
+          ["sein", "Veränderung eines Zustands", "Er **ist** krank **geworden**."],
+          ["sein", "sein, bleiben, passieren", "Wir **sind** dort **gewesen**."]
+        ]
+      }
+    },
+    {
+      "thema": "Wortstellung im Haupt- und Nebensatz",
+      "erklaerung": "Im Hauptsatz steht das Verb an zweiter Stelle. Nach „weil“, „dass“, „wenn“ und „ob“ wandert es ganz ans Ende. Das ist der häufigste Fehler auf A2 — und der auffälligste.",
+      "tabelle": {
+        "kopf": ["Satzart", "Verbstellung", "Beispiel"],
+        "zeilen": [
+          ["Hauptsatz", "Position 2", "Ich **komme** heute später."],
+          [
+            "Hauptsatz mit Angabe vorn",
+            "Position 2, Subjekt danach",
+            "Heute **komme** ich später."
+          ],
+          ["Nebensatz", "ganz am Ende", "…, weil der Bus im Stau **steht**."],
+          ["Frage ohne Fragewort", "Position 1", "**Kommst** du mit?"]
+        ]
+      }
+    },
+    {
+      "thema": "Trennbare Verben",
+      "erklaerung": "Die Vorsilbe geht im Hauptsatz ans Ende, bleibt aber im Nebensatz und im Infinitiv am Verb. Im Perfekt steht „ge“ in der Mitte.",
+      "tabelle": {
+        "kopf": ["Form", "Beispiel mit „abholen“", "Hinweis"],
+        "zeilen": [
+          ["Hauptsatz", "Ich **hole** das Paket **ab**.", "Vorsilbe ans Ende"],
+          ["Nebensatz", "…, weil ich das Paket **abhole**.", "bleibt zusammen"],
+          ["Infinitiv mit zu", "…, um das Paket **abzuholen**.", "„zu“ in die Mitte"],
+          ["Perfekt", "Ich habe das Paket **abgeholt**.", "„ge“ in die Mitte"]
+        ]
+      }
+    },
+    {
+      "thema": "Akkusativ und Dativ",
+      "erklaerung": "Der Akkusativ ist das direkte Objekt, der Dativ meist die Person, für die etwas getan wird. Nur das Maskulinum ändert sich im Akkusativ sichtbar — merken Sie sich vor allem die Dativformen.",
+      "tabelle": {
+        "kopf": ["", "maskulin", "feminin", "neutral", "Plural"],
+        "zeilen": [
+          ["Nominativ", "der / ein", "die / eine", "das / ein", "die / –"],
+          ["Akkusativ", "**den / einen**", "die / eine", "das / ein", "die / –"],
+          [
+            "Dativ",
+            "**dem / einem**",
+            "**der / einer**",
+            "**dem / einem**",
+            "**den … -n**"
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Wechselpräpositionen: wo? oder wohin?",
+      "erklaerung": "Nach in, an, auf, unter, über, vor, hinter, neben, zwischen steht der Dativ bei der Frage „wo?“ und der Akkusativ bei „wohin?“. Deshalb „im Kino“, aber „ins Kino“.",
+      "tabelle": {
+        "kopf": ["Frage", "Fall", "Beispiel"],
+        "zeilen": [
+          ["wo? (Ort)", "Dativ", "Ich bin **im** Schwimmbad."],
+          ["wohin? (Richtung)", "Akkusativ", "Ich gehe **ins** Schwimmbad."],
+          ["wo?", "Dativ", "Das Buch liegt **auf dem** Tisch."],
+          ["wohin?", "Akkusativ", "Ich lege das Buch **auf den** Tisch."]
+        ]
+      }
+    },
+    {
+      "thema": "Modalverben",
+      "erklaerung": "Das Modalverb steht an zweiter Stelle, das zweite Verb geht als Infinitiv ans Ende. Im Präteritum fällt der Umlaut weg. „möchte“ ist die höfliche Form von „wollen“.",
+      "tabelle": {
+        "kopf": ["Verb", "Bedeutung", "Präteritum", "Beispiel"],
+        "zeilen": [
+          [
+            "können",
+            "Fähigkeit / Möglichkeit",
+            "konnte",
+            "Ich **kann** heute nicht **kommen**."
+          ],
+          ["müssen", "Notwendigkeit", "musste", "Ich **muss** **arbeiten**."],
+          ["dürfen", "Erlaubnis", "durfte", "Hier **darf** man nicht **parken**."],
+          [
+            "möchten",
+            "höflicher Wunsch",
+            "wollte",
+            "Ich **möchte** einen Kaffee **bestellen**."
+          ],
+          ["sollen", "Auftrag / Rat", "sollte", "Was **soll** ich jetzt **tun**?"]
+        ]
+      }
+    },
+    {
+      "thema": "Komparativ und Superlativ",
+      "erklaerung": "Der Vergleich läuft mit „-er … als“, nie mit „wie“. Viele kurze Adjektive bekommen zusätzlich einen Umlaut. Vier Formen sind unregelmäßig und müssen sitzen.",
+      "tabelle": {
+        "kopf": ["Grundform", "Komparativ", "Superlativ"],
+        "zeilen": [
+          ["billig", "billiger", "am billigsten"],
+          ["alt", "**älter**", "am ältesten"],
+          ["gut", "**besser**", "**am besten**"],
+          ["viel", "**mehr**", "**am meisten**"],
+          ["gern", "**lieber**", "**am liebsten**"]
+        ]
+      }
+    },
+    {
+      "thema": "Höflichkeit: Konjunktiv II",
+      "erklaerung": "Für Bitten und Vorschläge nehmen Sie „würde“, „könnte“ oder „hätte“. In einer E-Mail an ein Amt oder eine Firma ist das fast Pflicht — und es kostet Sie nur ein Wort.",
+      "tabelle": {
+        "kopf": ["statt", "besser", "Wirkung"],
+        "zeilen": [
+          ["Können Sie …?", "**Könnten** Sie …?", "höfliche Bitte"],
+          ["Ich will …", "Ich **würde** gern …", "höflicher Wunsch"],
+          ["Haben Sie Zeit?", "**Hätten** Sie Zeit?", "höfliche Frage"],
+          ["Geben Sie mir …", "Ich **hätte** gern …", "Bestellung im Geschäft"]
+        ]
+      }
+    },
+    {
+      "thema": "Possessivartikel",
+      "erklaerung": "mein, dein, sein, ihr, unser, euer, Ihr bekommen dieselben Endungen wie „ein“ und „kein“. Achten Sie besonders auf „ihr“ (ihr Auto = das Auto von ihr) und „Ihr“ (höflich, groß geschrieben).",
+      "tabelle": {
+        "kopf": ["Person", "Possessiv", "Beispiel"],
+        "zeilen": [
+          ["ich", "mein", "**Mein** Bruder wohnt in Köln."],
+          ["du", "dein", "Ist das **dein** Fahrrad?"],
+          ["er / es", "sein", "Er bringt **seinen** Grill mit."],
+          ["sie", "ihr", "Sie sucht **ihre** Tasche."],
+          ["Sie (höflich)", "Ihr", "Bringen Sie bitte **Ihren** Ausweis mit."]
+        ]
+      }
+    },
+    {
+      "thema": "Zeitangaben",
+      "erklaerung": "Tage und Tageszeiten nehmen „am“, Uhrzeiten „um“, Monate und Jahreszeiten „im“. Ein Zeitraum heißt „von … bis“. „heute“, „morgen“ und „jeden Tag“ stehen ohne Präposition.",
+      "tabelle": {
+        "kopf": ["Präposition", "wofür", "Beispiel"],
+        "zeilen": [
+          ["am", "Tage, Tageszeiten", "**am** Montag, **am** Abend"],
+          ["um", "Uhrzeiten", "**um** halb neun"],
+          ["im", "Monate, Jahreszeiten", "**im** Juli, **im** Winter"],
+          ["von … bis", "Zeiträume", "**von** 9 **bis** 13 Uhr"],
+          ["ohne", "heute, morgen, jeden Tag", "Ich komme **morgen**."]
+        ]
+      }
+    }
+  ]
+}

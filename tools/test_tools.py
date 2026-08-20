@@ -415,29 +415,62 @@ def strukturfehler(rep: validate.Report) -> list[str]:
 
 
 class TestGeruestPasstZurSpezifikation:
-    """What new_exam.py builds is what validate.py demands, at both levels."""
+    """What new_exam.py builds is what validate.py demands, at every level."""
 
     @pytest.mark.parametrize(
-        "exam_id,stufe", [("pruefung-99", "B1"), ("b2-pruefung-99", "B2")]
+        "exam_id,stufe",
+        [
+            ("a2-pruefung-99", "A2"),
+            ("pruefung-99", "B1"),
+            ("b2-pruefung-99", "B2"),
+        ],
     )
     def test_scaffold_is_structurally_valid(self, exam_id, stufe):
         rep = geruest_pruefen(exam_id, stufe)
         assert strukturfehler(rep) == [], "\n".join(strukturfehler(rep))
 
-    @pytest.mark.parametrize("stufe", ["B1", "B2"])
-    def test_every_module_is_worth_one_hundred_points(self, stufe):
+    @pytest.mark.parametrize("stufe", ["A2", "B1", "B2"])
+    def test_every_module_is_worth_what_the_level_says(self, stufe):
         spec = validate.FORMATE[stufe]
-        assert sum(spec.schreiben_punkte) == 100
-        assert sum(spec.sprechen_punkte) + spec.sprechen_aussprache == 100
+        assert sum(spec.schreiben_punkte) == spec.schreiben_maximum
+        assert sum(spec.sprechen_punkte) + spec.sprechen_aussprache == spec.modul_punkte
 
-    @pytest.mark.parametrize("stufe", ["B1", "B2"])
-    def test_both_receptive_modules_have_thirty_items(self, stufe):
+    def test_a2_writing_is_marked_raw_and_speaking_is_not(self):
+        """The one asymmetry in A2's marking, and it is easy to miss.
+
+        Lesen, Hören and Schreiben are each marked out of 20 raw Messpunkte and
+        multiplied by 1.25 to reach 25. Sprechen is scored out of 25 directly,
+        criterion by criterion, with no conversion at all. Treating Schreiben
+        like Sprechen would inflate it by a quarter.
+        """
+        a2 = validate.FORMATE["A2"]
+        assert a2.schreiben_maximum == 20
+        assert a2.schreiben_maximum * 1.25 == a2.modul_punkte
+        assert sum(a2.sprechen_punkte) + a2.sprechen_aussprache == 25
+        for stufe in ("B1", "B2"):
+            spec = validate.FORMATE[stufe]
+            assert spec.schreiben_maximum == spec.modul_punkte
+
+    @pytest.mark.parametrize("stufe", ["A2", "B1", "B2"])
+    def test_both_receptive_modules_have_the_same_item_count(self, stufe):
         spec = validate.FORMATE[stufe]
-        assert sum(spec.lesen_items) == validate.GESAMT_ITEMS
-        assert sum(spec.hoeren_items) == validate.GESAMT_ITEMS
+        assert sum(spec.lesen_items) == spec.gesamt_items
+        assert sum(spec.hoeren_items) == spec.gesamt_items
+
+    def test_a2_is_scored_as_one_examination(self):
+        """A2 is not modular, and nothing downstream may assume it is.
+
+        100 points across four parts of 25, rather than 100 per part. Reading
+        this off the B1 table would quadruple every A2 candidate's score.
+        """
+        assert validate.FORMATE["A2"].modul_punkte == 25
+        assert validate.FORMATE["A2"].gesamt_items == 20
+        assert validate.FORMATE["B1"].modul_punkte == 100
+        assert validate.FORMATE["B2"].modul_punkte == 100
 
     def test_the_levels_disagree_about_which_parts_repeat(self):
         """The single easiest thing to get wrong when adapting a B1 paper."""
+        assert validate.FORMATE["A2"].hoeren_wiederholungen == (2, 1, 1, 2)
         assert validate.FORMATE["B1"].hoeren_wiederholungen == (2, 1, 1, 2)
         assert validate.FORMATE["B2"].hoeren_wiederholungen == (1, 2, 1, 2)
 

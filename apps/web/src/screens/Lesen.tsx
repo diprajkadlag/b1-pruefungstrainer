@@ -1,4 +1,10 @@
-import type { LesenTeil, OeffentlichePruefung, PruefungsText } from '@pruefung/core';
+import { STUFEN } from '@pruefung/core';
+import type {
+  LesenTeil,
+  OeffentlichePruefung,
+  PruefungsText,
+  Stufe,
+} from '@pruefung/core';
 import { BeispielItem, Item } from '../components/Item';
 
 interface Props {
@@ -15,6 +21,7 @@ export function Lesen({ pruefung, antworten, onAntwort, abgelaufen }: Props) {
         <TeilAnsicht
           key={teil.nummer}
           teil={teil}
+          stufe={pruefung.meta.stufe}
           antworten={antworten}
           onAntwort={onAntwort}
           abgelaufen={abgelaufen}
@@ -76,17 +83,28 @@ function Lesetext({ text }: { text: PruefungsText }) {
 
 function TeilAnsicht({
   teil,
+  stufe,
   antworten,
   onAntwort,
   abgelaufen,
 }: {
   teil: LesenTeil;
+  stufe: Stufe;
   antworten: Record<string, string>;
   onAntwort: (nr: number, wert: string) => void;
   abgelaufen: boolean;
 }) {
   const beantwortet = teil.items.filter((i) => antworten[String(i.nr)]).length;
-  const buchstaben = teil.optionenliste?.map((o) => o.buchstabe);
+
+  // Every task whose answers are letters takes them from the Teil: the B2
+  // matching tasks from their option list, the small ads from the ads
+  // themselves plus the level's marker for "none of these fits".
+  const ohneTreffer = STUFEN[stufe].ohneTreffer;
+  const buchstaben =
+    teil.optionenliste?.map((o) => o.buchstabe) ??
+    (teil.anzeigen
+      ? [...teil.anzeigen.map((a) => a.buchstabe), ...(ohneTreffer ? [ohneTreffer] : [])]
+      : undefined);
 
   return (
     <section className="teil" aria-labelledby={`lesen-teil-${teil.nummer}`}>

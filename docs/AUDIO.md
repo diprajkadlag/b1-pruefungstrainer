@@ -14,7 +14,7 @@ Output lands in `content/exams/<id>/audio/` — one MP3 per part, one combined
 track for the whole module, the simulated speaking partner's turns, and a
 `manifest.json` of durations and cue points that the app reads.
 
-Audio is **never committed**. Ten papers is around 180 MB. It is rebuilt by
+Audio is **never committed**. Fifteen papers is around 270 MB. It is rebuilt by
 `pages.yml` for the hosted app and attached to releases as `audio-<paper>.zip`.
 
 ---

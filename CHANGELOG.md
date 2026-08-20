@@ -7,6 +7,65 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.5.0] — 2026-08-19
+
+### Added
+
+- **A2 as a third examination level**, with **five complete papers**
+  (`a2-pruefung-01` to `-05`) — fifteen in all, five at each level. Every A2
+  paper has four reading and four listening parts of five items each, an SMS
+  and a half-formal email, three speaking parts, a glossary built from its own
+  sentences and around seventeen minutes of generated listening audio. Their
+  subjects are living and shopping; food, sport and travelling; clothes,
+  offices and work; animals, health and books; and the post, courses and a
+  community garden.
+- **An A2 Spickzettel**, so all three levels have one: strategy and a timing
+  plan for the four modules, 83 Redemittel weighted towards Sprechen and
+  Schreiben, ten grammar tables covering what the level really tests — Perfekt
+  with haben and sein, word order, separable verbs, the two cases, Konjunktiv
+  for politeness — plus 103 verbs with all principal parts and 100 nouns with
+  article and plural. In the app and as a 12-page PDF.
+- End-to-end coverage for A2 (`apps/web/e2e/a2.spec.ts`), including the two
+  things no other test would notice: that a full reading module scores **25**
+  rather than 100, and that 17 of 20 right is **21.25** points and not 21.
+
+### Changed
+
+- **Scoring is level-aware, because A2 is not modular.** B1 and B2 award 100
+  points per module and certify each on its own; A2 is one examination of 100
+  points in which each part contributes at most 25, and passing it requires
+  all three published conditions at once — 60 of 100 overall, 45 of 75 across
+  Lesen, Hören and Schreiben together, and 15 of 25 in Sprechen. Miss any one
+  and *"gilt die gesamte Prüfung als nicht bestanden"*.
+
+  Everything that depends on this now reads it from one table (`BEWERTUNG` in
+  `packages/core/src/scoring.ts`) instead of from constants: `bewerteModul`
+  takes the level, `gesamtergebnis` reports the three conditions separately
+  rather than collapsing them, and the examiner server derives the level from
+  the paper id instead of assuming B1. A module at A2 carries **no verdict of
+  its own** — `bestanden` and `note` are `null`, because neither is a fact
+  about one answer sheet — and the result screen says why instead of leaving
+  a blank card.
+- Lesen, Hören and Schreiben at A2 are marked out of 20 raw Messpunkte and
+  multiplied by **1.25**; Sprechen is scored out of 25 directly. Those quarter
+  points are kept rather than rounded away, which is worth a quarter of a mark
+  on every part of every paper.
+- The validator, the scaffolder and the PDF builder all learned A2: its own
+  `FORMATE` entry and part checks, a skeleton from `new_exam.py a2-pruefung-06`
+  that `validate.py --strict` accepts, part names on the printed paper,
+  speaking cards with prompt cards instead of slides, and a shorter target
+  window for the listening audio (14–22 minutes rather than 27–36).
+- An item may now legitimately have **no answer**: A2's small-ad task keys one
+  item `x`, and the validator insists on exactly one such item per paper and
+  refuses an ad used twice.
+
+### Fixed
+
+- `check_lernhilfe` did not require `ueberblick.noten`, so a cheat sheet
+  missing its grade table failed later, inside LaTeX, with an error naming a
+  template line rather than the field. That is precisely what that function
+  exists to prevent.
+
 ## [1.4.0] — 2026-08-19
 
 ### Added

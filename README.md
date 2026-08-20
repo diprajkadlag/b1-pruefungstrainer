@@ -1,6 +1,6 @@
 # GermanExamTrainer
 
-**Free, open-source practice examinations for German B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
+**Free, open-source practice examinations for German A2, B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
 
 [![CI](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml)
 [![Content](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml)
@@ -10,7 +10,7 @@
 **▶ [Try it in your browser](https://diprajkadlag.github.io/german-exam-trainer/)** — nothing to install, works offline after the first visit.
 
 > ### ⚠️ Not an official examination
-> This project provides practice material in the **format** of standard German B1 and B2 certificate examinations. It is **not affiliated with, endorsed by, or connected to Goethe-Institut e. V., telc gGmbH or the ÖSD**, and sitting these papers confers no certification. All exam content is original work written for this project. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
+> This project provides practice material in the **format** of standard German A2, B1 and B2 certificate examinations. It is **not affiliated with, endorsed by, or connected to Goethe-Institut e. V., telc gGmbH or the ÖSD**, and sitting these papers confers no certification. All exam content is original work written for this project. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
 
 ---
 
@@ -29,7 +29,9 @@
 
 ## What it does
 
-**Sits a real paper, at B1 or B2.** Ten complete papers — five at each level — each with its own texts, listening audio, speaking topics and glossary. Four modules on the published specification for the level you pick: Lesen 65 min / 30 items, Hören 40 min / 30 items, then Schreiben 60 min / 3 tasks and three speaking parts at B1, or Schreiben 75 min / 2 tasks and a talk plus a debate at B2. 100 points per module, 60 to pass, each module passed on its own.
+**Sits a real paper, at A2, B1 or B2.** Fifteen complete papers — five at each level — each with its own texts, listening audio, speaking topics and glossary. Four modules on the published specification for the level you pick: at A2, 30 minutes and 20 items each for Lesen and Hören, then two short messages and three speaking parts; at B1 and B2, 65 and 40 minutes and 30 items each, then three writing tasks and five slides, or two writing tasks and a debate.
+
+**And it marks them the way each certificate actually does.** B1 and B2 are modular: 100 points per module, 60 to pass, each module passed on its own. **A2 is not.** It is one examination worth 100 points, in which every part contributes at most 25 and all three published conditions must hold at once — 60 of 100 overall, 45 of 75 across the written parts, and 15 of 25 in Sprechen. Miss one and the whole examination is failed, however good the rest.
 
 **Under exam conditions.** The countdown derives from a wall-clock deadline, so reloading the page does not hand back minutes, and running out hard-submits the module. The listening player gives you one start button and nothing else — no pause, no seek, no second listen. Parts you are entitled to hear twice contain the repeat inside the audio, exactly as in the hall.
 
@@ -39,7 +41,7 @@
 
 **Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
 
-**Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
+**Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. A2: 83 Redemittel, 10 grammar tables covering the whole of what the level tests — Perfekt, word order, separable verbs, the two cases, Konjunktiv for politeness — plus 103 verbs with all principal parts and 100 nouns with article and plural. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 
@@ -113,7 +115,7 @@ That generates a self-signed certificate; the browser warns once, then remembers
 
 ## Rebuilding the content
 
-Audio and PDFs are generated, not committed — ten papers of listening audio is around 180 MB, which does not belong in git. Releases carry them; to build locally:
+Audio and PDFs are generated, not committed — fifteen papers of listening audio is around 270 MB, which does not belong in git. Releases carry them; to build locally:
 
 ```bash
 pip install -r tools/requirements.txt
@@ -128,25 +130,29 @@ The first audio run downloads the voice models (~200 MB) into `tools/.voices/`.
 
 ---
 
-## Two levels
+## Three levels
 
-Pick B1 or B2 on the start screen. They share the pipeline and almost nothing
-else — B2 is not a harder B1, it is a different paper:
+Pick A2, B1 or B2 on the start screen. They share the pipeline and almost nothing
+else — none of them is simply a harder version of the one below:
 
-| | B1 | B2 |
-|---|---|---|
-| **Lesen** | 65 min · 6/6/7/7/4 items | 65 min · 9/6/6/6/3 items |
-| **Hören** | 40 min · 10/5/7/8 · parts **1 and 4** heard twice | 40 min · 10/6/6/8 · parts **2 and 4** heard twice |
-| **Schreiben** | 60 min · 3 tasks (80/80/40 words) | 75 min · 2 tasks (min. 150/100 words) |
-| **Sprechen** | 3 parts: plan together, present, respond | 2 parts: a structured talk, then a debate |
+| | A2 | B1 | B2 |
+|---|---|---|---|
+| **Lesen** | 30 min · 5/5/5/5 items | 65 min · 6/6/7/7/4 items | 65 min · 9/6/6/6/3 items |
+| **Hören** | 30 min · 5/5/5/5 · parts **1 and 4** heard twice | 40 min · 10/5/7/8 · parts **1 and 4** heard twice | 40 min · 10/6/6/8 · parts **2 and 4** heard twice |
+| **Schreiben** | 30 min · 2 messages (20–30 / 30–40 words) | 60 min · 3 tasks (80/80/40 words) | 75 min · 2 tasks (min. 150/100 words) |
+| **Sprechen** | 3 parts: ask, tell, plan together | 3 parts: plan together, present, respond | 2 parts: a structured talk, then a debate |
+| **Marking** | **one exam of 100**, 25 per part | 100 per module, passed separately | 100 per module, passed separately |
 
+A2 asks for a word range rather than a target, and going over it costs as much as
+falling short. Its one matching task keys an item **`x`** where no ad fits at all.
 Three B2 reading tasks have no B1 equivalent at all: inserting sentences into
 gaps in a text, matching opinions to headings, and matching the paragraphs of a
 set of regulations to its table of contents. Reading part 1 also matches
 statements to **four** people rather than three, so its answers run `a`–`d`.
 
 Each level has its own papers, its own cheat sheet and its own printable
-answer sheet; picking a tab switches all of them. Every number above is
+answer sheet; picking a tab switches all of them, and the result screen follows
+the level's own marking rules. Every number above is
 enforced by `tools/validate.py` against
 [docs/EXAM-FORMAT.md](docs/EXAM-FORMAT.md), which records where each one comes
 from.
@@ -183,6 +189,7 @@ build_pdf.py  generate_audio  export_web.py   validate.py
                                └── @pruefung/core: scoring shared by both
 
 content/lernhilfe/*.json              ← the B1 cheat sheet, belonging to no paper
+content/lernhilfe/a2/*.json           ← the A2 one
 content/lernhilfe/b2/*.json           ← the B2 one
                  └── build_pdf.py → spickzettel.pdf · export_web.py → app tab
 ```
@@ -191,9 +198,9 @@ content/lernhilfe/b2/*.json           ← the B2 one
 
 `tools/validate.py` encodes the examination specification as executable rules, not comments:
 
-- item counts per part — B1: 6/6/7/7/4 reading, 10/5/7/8 listening; B2: 9/6/6/6/3 and 10/6/6/8
-- which listening parts are heard twice — B1 hears parts 1 and 4 twice, **B2 hears 2 and 4**, and getting that backwards is the single easiest mistake when adapting a paper
-- exactly 100 points per module, and 60 as the pass mark
+- item counts per part — A2: 5/5/5/5 reading and listening; B1: 6/6/7/7/4 reading, 10/5/7/8 listening; B2: 9/6/6/6/3 and 10/6/6/8
+- which listening parts are heard twice — A2 and B1 hear parts 1 and 4 twice, **B2 hears 2 and 4**, and getting that backwards is the single easiest mistake when adapting a paper
+- what a module is worth and what passing means — 100 points per module and 60 to   pass at B1 and B2, but **25 points per part and one pass mark for the whole examination** at A2, which is not modular
 - every scored item quotes the sentence that proves its key, and carries a German rationale plus an English distractor analysis
 - every glossary lemma **actually occurs** in that paper's texts — matched through inflection, separable prefixes and dictionary placeholders
 - speaking topics and themes never repeat across papers
@@ -216,7 +223,8 @@ New papers are extremely welcome, and you need to touch no code:
 
 ```bash
 python tools/new_exam.py pruefung-06        # B1, scaffolded with the right item counts
-python tools/new_exam.py b2-pruefung-06    # B2 — the level comes from the id
+python tools/new_exam.py a2-pruefung-06    # A2 — the level comes from the id
+python tools/new_exam.py b2-pruefung-06    # B2
 # write the content
 python tools/validate.py pruefung-06 --strict
 ```
