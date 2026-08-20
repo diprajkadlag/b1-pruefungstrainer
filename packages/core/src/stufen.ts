@@ -40,6 +40,19 @@ export interface StufenFormat {
 }
 
 export const STUFEN: Record<Stufe, StufenFormat> = {
+  A1: {
+    stufe: 'A1',
+    kurz: '3 Leseteile, 3 Hörteile, Formular und Kurztext, 3 Sprechteile',
+    module: {
+      lesen: { minuten: 25, anzeige: 'ca. 25 Min.' },
+      hoeren: { minuten: 20, anzeige: 'ca. 20 Min.' },
+      schreiben: { minuten: 20, anzeige: 'ca. 20 Min.' },
+      sprechen: { minuten: null, anzeige: 'ca. 15 Min. in der Gruppe' },
+    },
+    // A1 has no presentation either; nothing is printed under this heading.
+    gliederungTitel: 'Ihre Karten',
+    ohneTreffer: null,
+  },
   A2: {
     stufe: 'A2',
     kurz: '4 Leseteile, 4 Hörteile, SMS und E-Mail, 3 Sprechteile',
@@ -80,12 +93,13 @@ export const STUFEN: Record<Stufe, StufenFormat> = {
   },
 };
 
-export const STUFEN_REIHE: Stufe[] = ['A2', 'B1', 'B2'];
+export const STUFEN_REIHE: Stufe[] = ['A1', 'A2', 'B1', 'B2'];
 
 /** The level a paper id belongs to. Unprefixed ids are the original B1 papers. */
 export function stufeVonId(examId: string): Stufe {
-  if (examId.startsWith('a2-')) return 'A2';
-  if (examId.startsWith('b2-')) return 'B2';
+  for (const stufe of ['A1', 'A2', 'B2'] as const) {
+    if (examId.startsWith(`${stufe.toLowerCase()}-`)) return stufe;
+  }
   return 'B1';
 }
 

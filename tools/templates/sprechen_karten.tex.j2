@@ -7,7 +7,7 @@
 
 \begin{document}
 
-\modulkopf{Modul Sprechen}{ca. << sprechen.teile | sum(attribute='dauerMinuten') * 2 | round | int >> Minuten · << sprechen.vorbereitungMinuten >> Minuten Vorbereitung}{100 Punkte}
+\modulkopf{Modul Sprechen}{ca. << sprechen.teile | sum(attribute='dauerMinuten') * 2 | round | int >> Minuten · << sprechen.vorbereitungMinuten >> Minuten Vorbereitung}{<< sprechen.teile | sum(attribute='punkte') + (16 if meta.stufe == 'B1' else 5 if meta.stufe == 'A2' else 0) >> Punkte}
 \hinweisblock
 
 Das Modul Sprechen hat << sprechen.teile | length >> Teile und wird normalerweise zu zweit abgelegt.

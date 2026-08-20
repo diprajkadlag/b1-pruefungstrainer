@@ -1,6 +1,6 @@
 # --- generated exam assets -------------------------------------------------
 # Audio and PDFs are built by tools/ and published as GitHub Release assets,
-# not committed. Fifteen exams of listening audio is ~270 MB; git is the wrong
+# not committed. Twenty exams of listening audio is ~340 MB; git is the wrong
 # place for it. See docs/AUDIO.md.
 content/exams/*/audio/
 content/exams/*/pdf/

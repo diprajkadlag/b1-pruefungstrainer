@@ -5,7 +5,8 @@ validator tell you what is still wrong:
 
 ```bash
 python tools/new_exam.py pruefung-06        # B1
-python tools/new_exam.py a2-pruefung-06    # A2 — the level comes from the id
+python tools/new_exam.py a1-pruefung-06    # A1 — the level comes from the id
+python tools/new_exam.py a2-pruefung-06    # A2
 python tools/new_exam.py b2-pruefung-06    # B2
 python tools/validate.py pruefung-06 --strict
 ```

@@ -111,8 +111,14 @@ class Format:
     # for 20-30 and 30-40 words; the other two state a target or a floor.
     schreiben_woerter_max: tuple[int, ...] = ()
     # Items per short text in listening Teil 1: two at B1 and B2 (one
-    # true/false and one multiple choice), one at A2.
+    # true/false and one multiple choice), one at A2 and A1.
     hoeren_teil1_pro_text: int = 2
+    # How many cards each speaking part hands the candidate, 0 where a part
+    # works from something else. A1 uses cards in all three parts; A2 in one.
+    sprechen_karten: tuple[int, ...] = ()
+    # Listening parts whose items must each name the short text they belong to,
+    # with the number of texts expected. A1 splits every part this way.
+    hoeren_abschnitte: dict[int, int] = field(default_factory=dict)
 
     @property
     def gesamt_items(self) -> int:
@@ -131,6 +137,43 @@ class Format:
 
 
 FORMATE: dict[str, Format] = {
+    "A1": Format(
+        stufe="A1",
+        # Three parts per receptive module rather than four, and fifteen items
+        # rather than twenty or thirty. Nothing at A1 runs long.
+        lesen_items=(5, 5, 5),
+        lesen_typ=("kurzmitteilungen", "wo_finde_ich", "hinweisschilder"),
+        lesen_item_typ=("richtig_falsch", "zwei_optionen", "richtig_falsch"),
+        # Every A1 part carries a worked example, including the first.
+        lesen_ohne_beispiel=(),
+        hoeren_items=(6, 4, 5),
+        hoeren_typ=("kurzgespraeche", "durchsagen", "ansagen"),
+        hoeren_item_typ=("multiple_choice", "richtig_falsch", "multiple_choice"),
+        # A third pattern again: A2 and B1 repeat 1 and 4, B2 repeats 2 and 4,
+        # and A1 repeats 1 and 3 — only the announcements are heard once.
+        hoeren_wiederholungen=(2, 1, 2),
+        hoeren_zuordnung_teil=0,
+        hoeren_teil1_pro_text=1,
+        hoeren_abschnitte={1: 6, 2: 4, 3: 5},
+        schreiben_typ=("formular", "kurzmitteilung"),
+        schreiben_punkte=(5, 10),
+        schreiben_zeit=(8, 12),
+        # Teil 1 is a form and has no word count at all; Teil 2 asks for about
+        # thirty words, as a target rather than a range.
+        schreiben_woerter=(0, 30),
+        schreiben_impuls_bei=(),
+        woerter_ist_mindestmass=False,
+        sprechen_typ=(
+            "sich_vorstellen", "informationen_erfragen", "bitten_formulieren",
+        ),
+        sprechen_punkte=(3, 6, 6),
+        sprechen_aussprache=0,
+        sprechen_themen_teil=0,
+        folien=0,
+        sprechen_karten=(7, 2, 3),
+        modul_punkte=15,
+        schreiben_maximum=15,
+    ),
     "A2": Format(
         stufe="A2",
         # Four parts of five everywhere, which is the first thing that makes an
@@ -175,6 +218,8 @@ FORMATE: dict[str, Format] = {
         # No presentation, so no choice of topic and no outline to print.
         sprechen_themen_teil=0,
         folien=0,
+        # Only Teil 1 works from cards at A2.
+        sprechen_karten=(4, 0, 0),
         modul_punkte=25,
         schreiben_maximum=20,
     ),
@@ -246,6 +291,9 @@ FORMATE: dict[str, Format] = {
 
 VALID_LOESUNG = {
     "richtig_falsch": {"richtig", "falsch"},
+    # A1 Lesen Teil 2 offers two places and asks which one has the answer. It
+    # is the only task in the collection with two options rather than three.
+    "zwei_optionen": {"a", "b"},
     "ja_nein": {"ja", "nein"},
     "multiple_choice": {"a", "b", "c"},
     "zuordnung_person": {"a", "b", "c", "d"},
@@ -510,7 +558,9 @@ def check_lesen(exam: dict[str, Any], spec: Format, rep: Report) -> None:
             seen_nrs.append(item["nr"])
             check_item(item, spec.lesen_item_typ[idx], f"{w}/item{item['nr']}", rep)
 
-        if spec.stufe == "A2":
+        if spec.stufe == "A1":
+            check_lesen_teil_a1(idx, teil, w, rep)
+        elif spec.stufe == "A2":
             check_lesen_teil_a2(idx, teil, w, rep)
         elif spec.stufe == "B1":
             check_lesen_teil_b1(idx, teil, w, rep)
@@ -523,6 +573,53 @@ def check_lesen(exam: dict[str, Any], spec: Format, rep: Report) -> None:
             rep.warn(w, "no Beispiel - this Teil shows a worked example in the real paper")
 
     check_numbering(seen_nrs, "lesen", sum(spec.lesen_items), rep)
+
+
+def check_lesen_teil_a1(idx: int, teil: dict[str, Any], w: str, rep: Report) -> None:
+    """The three reading sources at A1.
+
+    Teil 1 rests on two short personal messages, Teil 3 on five separate signs
+    and notices — one per item, so every item has to say which sign it is
+    about. Teil 2 carries no text of its own at all: each item *is* the task,
+    naming a need and offering two places to look.
+    """
+    texte = teil.get("texte") or []
+
+    if idx == 0:
+        if len(texte) != 2:
+            rep.error(w, f"needs exactly 2 short messages, found {len(texte)}")
+        ids = {x["id"] for x in texte}
+        for item in teil["items"]:
+            if item.get("textId") not in ids:
+                rep.error(f"{w}/item{item['nr']}",
+                          "no 'textId' - with two messages side by side, an item "
+                          "must say which one it is about")
+
+    if idx == 1:
+        if texte:
+            rep.error(w, "Teil 2 carries no text of its own; the two places to "
+                         "choose between belong to each item")
+        for item in teil["items"]:
+            optionen = item.get("optionen") or {}
+            if sorted(optionen) != ["a", "b"]:
+                rep.error(f"{w}/item{item['nr']}",
+                          f"needs exactly two options a and b, found {sorted(optionen)}")
+
+    if idx == 2:
+        if len(texte) != 5:
+            rep.error(w, f"needs exactly 5 signs or notices, one per item, "
+                         f"found {len(texte)}")
+        ids = {x["id"] for x in texte}
+        gesehen = set()
+        for item in teil["items"]:
+            tid = item.get("textId")
+            if tid not in ids:
+                rep.error(f"{w}/item{item['nr']}", "no 'textId' naming its sign")
+            elif tid in gesehen:
+                rep.error(f"{w}/item{item['nr']}",
+                          f"sign '{tid}' already has an item; A1 asks one question "
+                          f"per sign")
+            gesehen.add(tid)
 
 
 def check_lesen_teil_a2(idx: int, teil: dict[str, Any], w: str, rep: Report) -> None:
@@ -776,9 +873,14 @@ def check_hoeren(exam: dict[str, Any], spec: Format, rep: Report) -> None:
             for item in items:
                 check_item(item, erwarteter_typ, f"{w}/item{item['nr']}", rep)
             # A2 keeps the five-short-texts shape but hangs one item off each
-            # rather than two, so the grouping still has to be checked.
-            if idx == 0 and spec.hoeren_teil1_pro_text == 1:
+            # rather than two, so the grouping still has to be checked. A1 has
+            # its own count per part and is covered by check_abschnitte below.
+            if (idx == 0 and spec.hoeren_teil1_pro_text == 1
+                    and not spec.hoeren_abschnitte):
                 check_hoeren_teil1(teil, spec, w, rep)
+
+        if teil["nummer"] in spec.hoeren_abschnitte:
+            check_abschnitte(teil, spec.hoeren_abschnitte[teil["nummer"]], w, rep)
 
         if teil["nummer"] in spec.hoeren_optionenliste:
             check_optionenliste(teil, spec.hoeren_optionenliste[teil["nummer"]], w, rep)
@@ -824,6 +926,31 @@ def check_hoeren_teil1(teil: dict[str, Any], spec: Format, w: str, rep: Report) 
         if pro_text != 1:
             for item in items:
                 check_item(item, item["typ"], f"{w}/item{item['nr']}", rep)
+
+
+def check_abschnitte(teil: dict[str, Any], erwartet: int, w: str, rep: Report) -> None:
+    """One short text per item, and every item saying which one it belongs to.
+
+    At A1 every listening part is a handful of unrelated recordings rather than
+    one continuous text, so a candidate who loses their place has no way back.
+    The `abschnitt` marker is what lets the app and the printed paper show where
+    each recording starts.
+    """
+    gesehen: dict[str, int] = {}
+    for item in teil["items"]:
+        marke = item.get("abschnitt")
+        if not marke:
+            rep.error(f"{w}/item{item['nr']}",
+                      "no 'abschnitt'; every item must say which recording it "
+                      "belongs to")
+            continue
+        gesehen[marke] = gesehen.get(marke, 0) + 1
+
+    if gesehen and len(gesehen) != erwartet:
+        rep.error(w, f"must contain exactly {erwartet} recordings, found {len(gesehen)}")
+    mehrfach = sorted(k for k, n in gesehen.items() if n > 1)
+    if mehrfach:
+        rep.error(w, f"one question per recording; these carry more: {mehrfach}")
 
 
 def check_mehrere_sprecher(teil: dict[str, Any], w: str, rep: Report) -> None:
@@ -875,14 +1002,15 @@ def check_item(item: dict[str, Any], expected_typ: str, w: str, rep: Report) -> 
         rep.error(w, f"loesung '{item['loesung']}' is not valid for typ '{item['typ']}' "
                      f"(expected one of {sorted(valid)})")
 
-    is_mc = item["typ"] in {"multiple_choice", "zuordnung_person"}
+    is_mc = item["typ"] in {"multiple_choice", "zuordnung_person", "zwei_optionen"}
     if is_mc and not item.get("optionen"):
         rep.error(w, "multiple choice item has no 'optionen'")
     if not is_mc and item.get("optionen"):
         rep.error(w, f"item of typ '{item['typ']}' must not carry 'optionen'")
 
     # An item that carries its own options is the authority on which keys exist:
-    # three at B1, four where B2 matches statements to four writers.
+    # two at A1 Lesen Teil 2, three at B1, four where B2 matches statements to
+    # four writers.
     if is_mc and item.get("optionen") and item["loesung"] not in item["optionen"]:
         rep.error(w, f"loesung '{item['loesung']}' is not one of this item's options "
                      f"{sorted(item['optionen'])}")
@@ -963,6 +1091,12 @@ def check_schreiben(exam: dict[str, Any], spec: Format, rep: Report) -> None:
             if auf[feld] != erwartet:
                 rep.error(w, f"{feld} is {auf[feld]!r}, {spec.stufe} requires {erwartet!r}")
 
+        # A form has no model answers and no word count: five fields, five
+        # right entries, five points. It is checked on its own terms.
+        if auf["typ"] == "formular":
+            check_formular(auf, w, rep)
+            continue
+
         niveaus = sorted(m["niveau"] for m in auf["musterloesungen"])
         if niveaus != ["ausreichend", "gut"]:
             rep.error(w, f"needs exactly one 'ausreichend' and one 'gut' model answer, "
@@ -1008,6 +1142,32 @@ def check_schreiben(exam: dict[str, Any], spec: Format, rep: Report) -> None:
                                f"{exam['schreiben']['zeitMinuten']} min")
 
 
+def check_formular(auf: dict[str, Any], w: str, rep: Report) -> None:
+    """A1 Schreiben Teil 1: five gaps in a form, one point each.
+
+    Every field needs the answer *and* where in the situation that answer comes
+    from. Without that a learner sees only a mark and cannot tell whether they
+    misread the form or missed the detail.
+    """
+    felder = auf.get("formular") or []
+    if len(felder) != 5:
+        rep.error(w, f"the form must leave exactly 5 fields blank, found {len(felder)}")
+
+    for i, feld in enumerate(felder):
+        wo = f"{w}/feld{i + 1}"
+        for schluessel in ("feld", "loesung", "begruendung"):
+            if not feld.get(schluessel):
+                rep.error(wo, f"missing {schluessel!r}")
+
+    beschriftungen = [f.get("feld") for f in felder]
+    doppelt = sorted({b for b in beschriftungen if beschriftungen.count(b) > 1 and b})
+    if doppelt:
+        rep.error(w, f"two fields carry the same label: {doppelt}")
+
+    if auf.get("musterloesungen"):
+        rep.error(w, "a form has no model answers - the five entries are the answer")
+
+
 def check_sprechen(exam: dict[str, Any], spec: Format, rep: Report) -> None:
     teile = exam["sprechen"]["teile"]
 
@@ -1045,10 +1205,25 @@ def check_sprechen(exam: dict[str, Any], spec: Format, rep: Report) -> None:
         if typ == "vortrag" and not teil.get("fragen"):
             rep.error(w, "the talk is followed by questions - add 'fragen'")
 
-        if typ == "fragen_zur_person":
+        erwartete_karten = (spec.sprechen_karten[idx] if idx < len(spec.sprechen_karten)
+                            else 0)
+        if erwartete_karten:
             karten = teil.get("karten") or []
-            if len(karten) != 4:
-                rep.error(w, f"each candidate draws exactly 4 cards, found {len(karten)}")
+            if len(karten) != erwartete_karten:
+                rep.error(w, f"this Teil hands out exactly {erwartete_karten} cards, "
+                             f"found {len(karten)}")
+        elif teil.get("karten"):
+            rep.error(w, "this Teil works from something other than cards")
+
+        if typ == "fragen_zur_person":
+            pass
+        if typ == "informationen_erfragen" and not teil.get("planungspunkte"):
+            rep.error(w, "this task needs 'planungspunkte' - what the candidate is "
+                         "expected to ask about each subject")
+        if typ == "bitten_formulieren" and not teil.get("partnerSkript"):
+            rep.error(w, "no 'partnerSkript' - a request needs somebody to answer it, "
+                         "and a solo candidate needs the other side")
+
         if typ == "ueber_sich_erzaehlen":
             if not teil.get("situation"):
                 rep.error(w, "this task needs a 'situation' - the question the "
@@ -1179,7 +1354,7 @@ def stufe_von(exam_id: str) -> str:
     existed, and renaming them would strand attempts already saved in a
     learner's browser.
     """
-    for prefix, stufe in (("a2-", "A2"), ("b2-", "B2")):
+    for prefix, stufe in (("a1-", "A1"), ("a2-", "A2"), ("b2-", "B2")):
         if exam_id.startswith(prefix):
             return stufe
     return "B1"

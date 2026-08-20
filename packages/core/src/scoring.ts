@@ -24,14 +24,31 @@ export type Note =
 
 /** What the whole examination requires, where it is certified as one. */
 export interface GesamtRegel {
-  /** Points for the examination as a whole. */
+  /** Points for the examination as a whole, after any conversion. */
   punkte: number;
   /** Overall pass mark. */
   grenze: number;
-  /** The written modules, and the floor they must clear together. */
-  schriftlich: { module: Modul[]; punkte: number; grenze: number };
-  /** The oral module, and its own floor. */
-  muendlich: { modul: Modul; punkte: number; grenze: number };
+  /**
+   * What each part's points are multiplied by before they are added.
+   *
+   * A1's answer sheet records raw points out of 15 per part and the
+   * regulations multiply by 1.66 only when the overall score is worked out.
+   * A2 converts per part instead, so its parts already sit on the
+   * certificate's scale and its factor is 1.
+   */
+  faktor: number;
+  /** Round the converted total to whole points, as A1 requires and A2 does not. */
+  runden: boolean;
+  /**
+   * Extra floors beyond the overall pass mark, where the level has any.
+   *
+   * A2 has two and all three conditions must hold at once. **A1 has none** —
+   * its regulations state exactly one condition, and the remark that a
+   * candidate under 35 written points cannot reach 60 is advice about whether
+   * to sit the oral, not a further way to fail.
+   */
+  schriftlich: { module: Modul[]; punkte: number; grenze: number } | null;
+  muendlich: { modul: Modul; punkte: number; grenze: number } | null;
 }
 
 export interface Bewertung {
@@ -64,6 +81,22 @@ const MODULAR: Bewertung = {
 };
 
 export const BEWERTUNG: Record<Stufe, Bewertung> = {
+  // A1 records 15 raw points per part — that is what the Antwortbogen has a box
+  // for — and multiplies the lot by 1.66 to reach 100. One condition and one
+  // only: 60 of those 100 points.
+  A1: {
+    punkteProModul: 15,
+    modulGrenze: null,
+    nachkommastellen: 0,
+    gesamt: {
+      punkte: 100,
+      grenze: 60,
+      faktor: 1.66,
+      runden: true,
+      schriftlich: null,
+      muendlich: null,
+    },
+  },
   // A2 is passed as a whole and only as a whole: 60 of 100 overall, 45 of 75
   // across the three written parts, and 15 of 25 in Sprechen. Miss any one and
   // "gilt die gesamte Prüfung als nicht bestanden".
@@ -74,6 +107,8 @@ export const BEWERTUNG: Record<Stufe, Bewertung> = {
     gesamt: {
       punkte: 100,
       grenze: 60,
+      faktor: 1,
+      runden: false,
       schriftlich: { module: ['lesen', 'hoeren', 'schreiben'], punkte: 75, grenze: 45 },
       muendlich: { modul: 'sprechen', punkte: 25, grenze: 15 },
     },
@@ -275,11 +310,11 @@ export function schwachstellen(
 
 /** The whole-examination verdict, at a level that has one. */
 export interface GesamtWertung {
-  /** Points over all four parts. */
+  /** Points over all four parts, on the certificate's own scale. */
   punkte: number;
-  /** Lesen + Hören + Schreiben together. */
+  /** Lesen + Hören + Schreiben together, or 0 where the level sets no floor. */
   schriftlich: number;
-  /** Sprechen on its own. */
+  /** Sprechen on its own, or 0 where the level sets no floor. */
   muendlich: number;
   bestanden: boolean;
   /** Every condition that was not met, in the wording of the regulations. */
@@ -332,24 +367,31 @@ export function gesamtergebnis(
     };
   }
 
+  // The factor converts raw part scores to the certificate's scale, and only
+  // the total is rounded — a part on its own is never rounded at A1, because
+  // the regulations add first and round afterwards.
   const summe = (module_: readonly Modul[]) =>
-    module_.reduce((a, m) => a + (module[m] ?? 0), 0);
+    module_.reduce((a, m) => a + (module[m] ?? 0) * regel.faktor, 0);
 
-  const punkte = runde(summe(ALLE_MODULE));
-  const schriftlich = runde(summe(regel.schriftlich.module));
-  const muendlich = runde(module[regel.muendlich.modul] ?? 0);
+  const glaetten = (wert: number) => (regel.runden ? Math.round(wert) : runde(wert));
+
+  const punkte = glaetten(summe(ALLE_MODULE));
+  const schriftlich = regel.schriftlich ? glaetten(summe(regel.schriftlich.module)) : 0;
+  const muendlich = regel.muendlich
+    ? glaetten((module[regel.muendlich.modul] ?? 0) * regel.faktor)
+    : 0;
 
   const maengel: string[] = [];
   if (punkte < regel.grenze) {
     maengel.push(`unter ${regel.grenze} von ${regel.punkte} Punkten insgesamt`);
   }
-  if (schriftlich < regel.schriftlich.grenze) {
+  if (regel.schriftlich && schriftlich < regel.schriftlich.grenze) {
     maengel.push(
       `unter ${regel.schriftlich.grenze} von ${regel.schriftlich.punkte} Punkten ` +
         'in Lesen, Hören und Schreiben zusammen',
     );
   }
-  if (muendlich < regel.muendlich.grenze) {
+  if (regel.muendlich && muendlich < regel.muendlich.grenze) {
     maengel.push(
       `unter ${regel.muendlich.grenze} von ${regel.muendlich.punkte} Punkten im Sprechen`,
     );

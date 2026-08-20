@@ -9,7 +9,7 @@
 
 %% ===================== LESEN =====================
 \modulname{Lesen}
-\modulkopf{Modul Lesen}{<< lesen.zeitMinuten >> Minuten}{30 Aufgaben · 100 Punkte}
+\modulkopf{Modul Lesen}{<< lesen.zeitMinuten >> Minuten}{<< lesen | alle_items | length >> Aufgaben · << modulpunkte >> Punkte}
 \hinweisblock
 
 Das Modul Lesen hat << lesen.teile | length >> Teile. Sie lesen mehrere Texte und lösen dazu
@@ -59,7 +59,7 @@ Wörterbücher und Mobiltelefone sind nicht erlaubt.
 
 %% ===================== HÖREN =====================
 \modulname{Hören}
-\modulkopf{Modul Hören}{ca. << hoeren.zeitMinuten >> Minuten}{30 Aufgaben · 100 Punkte}
+\modulkopf{Modul Hören}{ca. << hoeren.zeitMinuten >> Minuten}{<< hoeren | alle_items | length >> Aufgaben · << modulpunkte >> Punkte}
 
 Das Modul Hören hat << hoeren.teile | length >> Teile. Sie hören mehrere Texte und lösen dazu
 Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
@@ -91,12 +91,24 @@ Aufgaben. Lesen Sie zuerst die Aufgaben, hören Sie dann den Text dazu.
 
 %% ===================== SCHREIBEN =====================
 \modulname{Schreiben}
-\modulkopf{Modul Schreiben}{<< schreiben.zeitMinuten >> Minuten}{<< schreiben.aufgaben | length >> Aufgaben · 100 Punkte}
+\modulkopf{Modul Schreiben}{<< schreiben.zeitMinuten >> Minuten}{<< schreiben.aufgaben | length >> Aufgaben · << schreiben.aufgaben | sum(attribute='punkte') >> Punkte}
 
 Das Modul Schreiben hat << schreiben.aufgaben | length >> Aufgaben. Schreiben Sie Ihre Texte auf den
 Antwortbogen. Achten Sie auf Anrede, Gruß und die vorgegebene Länge.
 
 <% for a in schreiben.aufgaben %>
+<# A1 opens with a form: five numbered blanks rather than a text, and no word
+   count to print. Everything else in this loop assumes free writing. #>
+<% if a.get('formular') %>
+\schreibaufgabe{<< a.nummer >>}{<< a | aufgabenname | tex >>}{<< a.zeitMinuten >> Min.}{<< a.punkte >>}{5 Felder}{<< a.get('situation') | tex >>}{<< a.aufgabenstellung | tex >>}
+
+\vspace{0.6em}
+<% for f in a.get('formular') %>
+\formularzeile{<< loop.index >>}{<< f.feld | tex >>}
+<% endfor %>
+\vspace{0.6em}
+<% if not loop.last %>\clearpage<% endif %>
+<% else %>
 \schreibaufgabe{<< a.nummer >>}{<< a | aufgabenname | tex >>}{<< a.zeitMinuten >> Min.}{<< a.punkte >>}{<% if meta.stufe == 'B2' %>mind. <% else %>ca. <% endif %><< a.woerter >>}{<< a.get('situation') | tex >>}{<< a.aufgabenstellung | tex >>}
 
 <% if a.get('impuls') %>
@@ -111,6 +123,7 @@ Antwortbogen. Achten Sie auf Anrede, Gruß und die vorgegebene Länge.
 
 \schreiblinien{<< a.woerter | zeilen >>}
 <% if not loop.last %>\clearpage<% endif %>
+<% endif %>
 <% endfor %>
 
 \end{document}

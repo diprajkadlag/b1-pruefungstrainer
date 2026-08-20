@@ -10,6 +10,26 @@ interface Props {
 const zaehleWoerter = (text: string): number =>
   text.trim() ? text.trim().split(/\s+/).length : 0;
 
+/**
+ * The A1 form travels through the same single-string channel as every other
+ * written answer, as `Feld: Eintrag` lines. That keeps the submission ZIP
+ * readable for the teacher who marks it, and lets the entries survive a reload
+ * without a second store.
+ */
+function formularLesen(text: string): Record<string, string> {
+  const werte: Record<string, string> = {};
+  for (const zeile of text.split('\n')) {
+    const trenner = zeile.indexOf(':');
+    if (trenner > 0)
+      werte[zeile.slice(0, trenner).trim()] = zeile.slice(trenner + 1).trim();
+  }
+  return werte;
+}
+
+function formularSchreiben(felder: string[], werte: Record<string, string>): string {
+  return felder.map((f) => `${f}: ${werte[f] ?? ''}`).join('\n');
+}
+
 export function Schreiben({ pruefung, texte, onText, abgelaufen }: Props) {
   // B2 states a floor — "mindestens 150 Wörter" — and marks a text that falls
   // under it down for content. B1 states a target you can also overshoot. The
@@ -38,6 +58,51 @@ export function Schreiben({ pruefung, texte, onText, abgelaufen }: Props) {
               : woerter > aufgabe.woerter * 1.8
                 ? 'lang'
                 : 'gut';
+
+        // A1 opens with a form rather than a text: five labelled blanks, one
+        // point each, and no word count to show.
+        if (aufgabe.formular) {
+          const labels = aufgabe.formular.map((f) => f.feld);
+          const werte = formularLesen(text);
+          return (
+            <section className="teil" key={aufgabe.nummer}>
+              <header className="teil__kopf">
+                <h2>Aufgabe {aufgabe.nummer}</h2>
+                <span className="teil__meta">
+                  {aufgabe.zeitMinuten} Min. · {aufgabe.punkte} Punkte
+                </span>
+              </header>
+
+              <p className="situation">{aufgabe.situation}</p>
+              <p className="teil__anweisung">{aufgabe.aufgabenstellung}</p>
+
+              <div className="formular">
+                {labels.map((label, i) => (
+                  <label className="formular__zeile" key={label}>
+                    <span className="formular__feld">
+                      <span className="formular__nr">{i + 1}</span>
+                      {label}
+                    </span>
+                    <input
+                      type="text"
+                      value={werte[label] ?? ''}
+                      disabled={abgelaufen}
+                      onChange={(e) =>
+                        onText(
+                          aufgabe.nummer,
+                          formularSchreiben(labels, {
+                            ...werte,
+                            [label]: e.target.value,
+                          }),
+                        )
+                      }
+                    />
+                  </label>
+                ))}
+              </div>
+            </section>
+          );
+        }
 
         return (
           <section className="teil" key={aufgabe.nummer}>

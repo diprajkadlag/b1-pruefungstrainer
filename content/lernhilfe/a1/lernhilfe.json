@@ -1,0 +1,437 @@
+{
+  "titel": "A1 Spickzettel",
+  "untertitel": "Strategie, Redemittel, Grammatik und Wortschatz für Start Deutsch 1",
+  "version": "1.0.0",
+  "ueberblick": {
+    "einleitung": "A1 ist **eine** Prüfung mit vier Teilen. In jedem Teil können Sie 15 Rohpunkte erreichen, zusammen also 60. Für das Zeugnis wird jeder Punkt mit **1,66** multipliziert — damit werden aus 60 Punkten 100. Bestanden haben Sie ab **60 von 100 Punkten**, und das ist die einzige Bedingung: Es gibt keine Mindestpunktzahl für einen einzelnen Teil. Wer im Sprechen schwach ist, kann das also mit Lesen und Hören ausgleichen — anders als auf A2, wo drei Bedingungen gleichzeitig erfüllt sein müssen.",
+    "module": [
+      {
+        "modul": "Hören",
+        "zeit": "ca. 20 Min.",
+        "teile": "3 Teile, 15 Aufgaben",
+        "punkte": "15",
+        "kern": "Teil 1 und Teil 3 hören Sie **zweimal**, Teil 2 nur einmal. Das ist die wichtigste Zahl im ganzen Modul."
+      },
+      {
+        "modul": "Lesen",
+        "zeit": "ca. 25 Min.",
+        "teile": "3 Teile, 15 Aufgaben",
+        "punkte": "15",
+        "kern": "Teil 1 und 3 sind richtig/falsch. Teil 2 hat nur **zwei** Antworten, a oder b."
+      },
+      {
+        "modul": "Schreiben",
+        "zeit": "ca. 20 Min.",
+        "teile": "2 Teile",
+        "punkte": "15",
+        "kern": "Teil 1 ist ein Formular: fünf Felder, je 1 Punkt. Teil 2 ist eine kurze Nachricht von etwa 30 Wörtern, 10 Punkte."
+      },
+      {
+        "modul": "Sprechen",
+        "zeit": "ca. 15 Min. in der Gruppe",
+        "teile": "3 Teile",
+        "punkte": "15",
+        "kern": "3 + 6 + 6 Punkte. Keine Vorbereitungszeit — Sie bekommen die Karten im Prüfungsraum."
+      }
+    ],
+    "noten": [
+      {
+        "note": "sehr gut",
+        "von": 100,
+        "bis": 90
+      },
+      {
+        "note": "gut",
+        "von": 89,
+        "bis": 80
+      },
+      {
+        "note": "befriedigend",
+        "von": 79,
+        "bis": 70
+      },
+      {
+        "note": "ausreichend",
+        "von": 69,
+        "bis": 60
+      },
+      {
+        "note": "nicht bestanden",
+        "von": 59,
+        "bis": 0
+      }
+    ]
+  },
+  "strategie": [
+    {
+      "modul": "Hören",
+      "zeitplan": "Die Pausen sind vorgegeben. Nutzen Sie jede Lesepause, um die nächsten Aufgaben zu lesen — nicht, um über die letzte nachzudenken.",
+      "goldregeln": [
+        "Merken Sie sich: **Teil 1 und 3 zweimal, Teil 2 nur einmal.** Bei Teil 2 gibt es keine zweite Chance — kreuzen Sie auch bei Unsicherheit sofort an.",
+        "Beim ersten Hören achten Sie darauf, **worum** es geht; beim zweiten auf die Einzelheit. Wer sofort ankreuzen will, verpasst meistens beides.",
+        "Zahlen und Uhrzeiten kommen fast immer doppelt vor — einmal als alter Stand, einmal als neuer. Hören Sie auf „nicht … sondern“, „statt“ und „erst“.",
+        "Lassen Sie keine Aufgabe leer. Es gibt keinen Abzug für eine falsche Antwort, und geraten ist besser als nichts.",
+        "Wenn Sie eine Aufgabe verpassen, hören Sie beim nächsten Text sofort weiter. Jeder Text ist ein neuer Anfang."
+      ]
+    },
+    {
+      "modul": "Lesen",
+      "zeitplan": "T1 8 · T2 9 · T3 8 Min. Übertragen Sie die Lösungen sofort in den Antwortbogen, nicht am Ende.",
+      "goldregeln": [
+        "Lesen Sie **zuerst die Aufgabe**, dann den Text. Bei fünf Fragen pro Teil wissen Sie danach genau, wonach Sie suchen.",
+        "In Teil 2 geht es nicht um das Thema, sondern um die **Frage**: Wo steht die Information, die Sie brauchen? Beide Seiten passen zum Thema — nur eine zur Frage.",
+        "Achten Sie auf die kleinen Wörter: „nur“, „nicht“, „ab“, „bis“, „kein“. Auf einem Schild dreht ein einziges davon die halbe Aussage um.",
+        "Ein Schild sagt oft zweierlei: was verboten ist und was stattdessen gilt. Lesen Sie beide Zeilen, bevor Sie ankreuzen.",
+        "Wenn ein Wort im Text und in der Aufgabe gleich lautet, ist das noch kein Beweis. Prüfen Sie, ob auch die Aussage stimmt."
+      ]
+    },
+    {
+      "modul": "Schreiben",
+      "zeitplan": "Formular 8 · Nachricht 12 Min. Lesen Sie am Ende beides einmal durch.",
+      "goldregeln": [
+        "Im Formular schreiben Sie **nur das Wort**, nicht einen ganzen Satz. „Köchin“ genügt; „Sie ist Köchin“ ist zu viel.",
+        "Jede Angabe im Formular steht irgendwo in der Situation. Suchen Sie sie dort — raten Sie nichts dazu.",
+        "Achten Sie auf Vorname und Familienname: Die Reihenfolge im Text ist nicht die Reihenfolge im Formular.",
+        "In Teil 2 müssen **alle drei Punkte** vorkommen. Ein fehlender Punkt kostet mehr als jeder Grammatikfehler.",
+        "Anrede und Gruß gehören dazu: „Hallo …“ und „Sehr geehrte Damen und Herren“ sind zwei verschiedene Welten.",
+        "Ein einziger Satz mit **weil** hebt Ihren Text über das Mindestmaß. Das Verb steht dann am Ende."
+      ]
+    },
+    {
+      "modul": "Sprechen",
+      "zeitplan": "Es gibt **keine** Vorbereitungszeit. Sie sehen jede Karte kurz an und sprechen dann.",
+      "goldregeln": [
+        "In Teil 2 bilden Sie aus dem Stichwort eine **ganze Frage**: aus „Wohnen“ wird „Wo wohnen Sie?“. Ein einzelnes Wort ist keine Frage.",
+        "Antworten Sie nie nur mit einem Wort. Nennen Sie die Sache und ein Detail: nicht „Berlin“, sondern „Ich wohne seit zwei Jahren in Berlin.“",
+        "In Teil 1 dürfen Sie ruhig einfache Sätze sagen. Wichtig ist, dass Sie zu **jedem** Stichwort etwas sagen.",
+        "Üben Sie das Buchstabieren und die Zahlen. Beides wird in Teil 1 gefragt, und beides kann man zu Hause in zehn Minuten lernen.",
+        "In Teil 3 gehört zur Bitte immer ein **bitte**. Ohne es klingt die Frage wie ein Befehl.",
+        "Sprechen Sie langsam und deutlich. Auf A1 erwartet niemand Tempo — verstanden werden ist alles."
+      ]
+    }
+  ],
+  "redemittel": [
+    {
+      "bereich": "Sprechen Teil 1 — Sich vorstellen",
+      "gruppen": [
+        {
+          "funktion": "Die sieben Karten",
+          "phrasen": [
+            "Ich heiße … und mein Familienname ist …",
+            "Ich bin … Jahre alt.",
+            "Ich komme aus … / Ich bin in … geboren.",
+            "Ich wohne in …, seit … Jahren.",
+            "Ich spreche … und ein bisschen …",
+            "Ich bin … von Beruf. / Ich arbeite als …",
+            "In meiner Freizeit … ich gern."
+          ]
+        },
+        {
+          "funktion": "Buchstabieren und Zahlen",
+          "phrasen": [
+            "Das schreibt man: K – A – D – L – A – G.",
+            "Meine Telefonnummer ist null eins sieben null …",
+            "Meine Postleitzahl ist vier acht zwei neun eins."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 2 — Um Informationen bitten",
+      "gruppen": [
+        {
+          "funktion": "Fragen bilden",
+          "phrasen": [
+            "Wo wohnen Sie?",
+            "Was essen Sie gern?",
+            "Wann stehen Sie auf?",
+            "Wie kommen Sie zur Arbeit?",
+            "Wie oft machen Sie Sport?",
+            "Mit wem wohnen Sie zusammen?",
+            "Haben Sie ein Auto?"
+          ]
+        },
+        {
+          "funktion": "Antworten mit einem Detail",
+          "phrasen": [
+            "Ich wohne in …, zusammen mit …",
+            "Am liebsten esse ich …, meistens am Abend.",
+            "Ich stehe um … auf, weil ich um … anfange.",
+            "Ich fahre mit dem … , das dauert … Minuten.",
+            "Zweimal in der Woche, immer … und …"
+          ]
+        },
+        {
+          "funktion": "Nachfragen",
+          "phrasen": [
+            "Wie bitte?",
+            "Können Sie das bitte wiederholen?",
+            "Entschuldigung, ich habe das nicht verstanden."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Sprechen Teil 3 — Bitten formulieren",
+      "gruppen": [
+        {
+          "funktion": "Bitten",
+          "phrasen": [
+            "Können Sie mir bitte … geben?",
+            "Könnten Sie bitte …?",
+            "Machen Sie bitte …?",
+            "Ich hätte gern …",
+            "Entschuldigung, haben Sie …?"
+          ]
+        },
+        {
+          "funktion": "Zusagen",
+          "phrasen": [
+            "Ja, gern.",
+            "Natürlich, hier bitte.",
+            "Ja, sofort.",
+            "Kein Problem."
+          ]
+        },
+        {
+          "funktion": "Ablehnen",
+          "phrasen": [
+            "Tut mir leid, ich habe kein …",
+            "Leider nicht, ich brauche es selbst.",
+            "Im Moment nicht, aber später gern."
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Teil 1 — Formular",
+      "gruppen": [
+        {
+          "funktion": "Typische Felder",
+          "phrasen": [
+            "Familienname · Vorname · Geburtsdatum",
+            "Straße und Hausnummer · Postleitzahl · Wohnort",
+            "Telefon · E-Mail · Beruf",
+            "Datum · Anzahl der Personen · Unterschrift"
+          ]
+        },
+        {
+          "funktion": "Wie man Angaben schreibt",
+          "phrasen": [
+            "Datum: 14.03.1996 (Tag, Monat, Jahr, mit Punkten)",
+            "Beruf: Köchin (nicht: „Sie ist Köchin“)",
+            "Zahl: 25 (nicht: „etwa fünfundzwanzig Personen“)"
+          ]
+        }
+      ]
+    },
+    {
+      "bereich": "Schreiben Teil 2 — Kurze Nachricht",
+      "gruppen": [
+        {
+          "funktion": "Anrede und Gruß",
+          "phrasen": [
+            "Hallo … , / Liebe … , / Lieber … ,",
+            "Sehr geehrte Damen und Herren,",
+            "Viele Grüße / Bis bald",
+            "Mit freundlichen Grüßen"
+          ]
+        },
+        {
+          "funktion": "Absagen und sich entschuldigen",
+          "phrasen": [
+            "leider kann ich am … nicht kommen.",
+            "es tut mir leid, aber …",
+            "Ich muss leider absagen."
+          ]
+        },
+        {
+          "funktion": "Einen Grund nennen",
+          "phrasen": [
+            "…, weil ich krank bin.",
+            "…, weil ich arbeiten muss.",
+            "…, weil ich nicht in der Stadt bin."
+          ]
+        },
+        {
+          "funktion": "Fragen und vorschlagen",
+          "phrasen": [
+            "Geht es auch am …?",
+            "Passt Ihnen …?",
+            "Können wir uns … treffen?",
+            "Wann kann ich vorbeikommen?"
+          ]
+        }
+      ]
+    }
+  ],
+  "grammatik": [
+    {
+      "thema": "Die Verbformen im Präsens",
+      "erklaerung": "Das Verb richtet sich nach der Person. Die Endungen sind bei fast allen Verben gleich; nur ein paar wichtige Verben ändern zusätzlich den Vokal.",
+      "tabelle": {
+        "kopf": ["Person", "wohnen", "sprechen", "sein", "haben"],
+        "zeilen": [
+          ["ich", "wohn**e**", "sprech**e**", "**bin**", "**habe**"],
+          ["du", "wohn**st**", "spr**i**chst", "**bist**", "**hast**"],
+          ["er/sie/es", "wohn**t**", "spr**i**cht", "**ist**", "**hat**"],
+          ["wir", "wohn**en**", "sprech**en**", "**sind**", "**haben**"],
+          ["ihr", "wohn**t**", "sprech**t**", "**seid**", "**habt**"],
+          ["sie/Sie", "wohn**en**", "sprech**en**", "**sind**", "**haben**"]
+        ]
+      }
+    },
+    {
+      "thema": "Der Artikel: der, die, das",
+      "erklaerung": "Jedes Nomen hat ein Geschlecht, und man lernt es mit dem Wort. Ein paar Endungen helfen aber fast immer.",
+      "tabelle": {
+        "kopf": ["Endung", "Artikel", "Beispiel"],
+        "zeilen": [
+          ["-ung, -heit, -keit, -ion", "**die**", "die Wohn**ung**, die Anmeld**ung**"],
+          ["-e (oft)", "**die**", "die Straß**e**, die Frag**e**"],
+          ["-er (Person, Gerät)", "**der**", "der Lehr**er**, der Druck**er**"],
+          ["-chen, -lein", "**das**", "das Mäd**chen**, das Bröt**chen**"],
+          ["-um", "**das**", "das Museum, das Praktikum"]
+        ]
+      }
+    },
+    {
+      "thema": "Wortstellung: Aussage, Frage, Befehl",
+      "erklaerung": "Die Stelle des Verbs sagt, was für ein Satz es ist. Das ist die wichtigste Regel auf A1 überhaupt.",
+      "tabelle": {
+        "kopf": ["Satzart", "Verb", "Beispiel"],
+        "zeilen": [
+          ["Aussage", "Position 2", "Ich **komme** um acht."],
+          ["Aussage mit Angabe vorn", "Position 2", "Um acht **komme** ich."],
+          ["W-Frage", "nach dem Fragewort", "Wann **kommen** Sie?"],
+          ["Ja/Nein-Frage", "Position 1", "**Kommen** Sie mit?"],
+          ["Bitte / Befehl", "Position 1", "**Kommen** Sie bitte herein."]
+        ]
+      }
+    },
+    {
+      "thema": "Nominativ und Akkusativ",
+      "erklaerung": "Der Nominativ ist, wer etwas tut; der Akkusativ, was oder wen es trifft. Sichtbar ändert sich nur das Maskulinum — das ist die gute Nachricht.",
+      "tabelle": {
+        "kopf": ["", "maskulin", "feminin", "neutral", "Plural"],
+        "zeilen": [
+          ["Nominativ", "der / ein", "die / eine", "das / ein", "die"],
+          ["Akkusativ", "**den / einen**", "die / eine", "das / ein", "die"],
+          [
+            "Beispiel",
+            "Ich sehe **den** Mann.",
+            "Ich sehe **die** Frau.",
+            "Ich sehe **das** Kind.",
+            "Ich sehe **die** Kinder."
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Trennbare Verben",
+      "erklaerung": "Die Vorsilbe geht im Hauptsatz ans Ende. Diese Verben kommen in jeder A1-Prüfung vor, vor allem im Hören.",
+      "tabelle": {
+        "kopf": ["Verb", "im Satz", "im Perfekt"],
+        "zeilen": [
+          ["abholen", "Ich hole dich **ab**.", "Ich habe dich **abgeholt**."],
+          ["anrufen", "Ruf mich **an**!", "Ich habe dich **angerufen**."],
+          ["mitbringen", "Bring das Buch **mit**.", "Ich habe es **mitgebracht**."],
+          [
+            "einsteigen",
+            "Steigen Sie hinten **ein**.",
+            "Ich bin hinten **eingestiegen**."
+          ],
+          [
+            "aufstehen",
+            "Ich stehe um sechs **auf**.",
+            "Ich bin um sechs **aufgestanden**."
+          ]
+        ]
+      }
+    },
+    {
+      "thema": "Modalverben",
+      "erklaerung": "Das Modalverb steht an zweiter Stelle, das andere Verb geht als Infinitiv ans Ende. „möchten“ ist die höfliche Form von „wollen“.",
+      "tabelle": {
+        "kopf": ["Verb", "Bedeutung", "Beispiel"],
+        "zeilen": [
+          ["können", "Fähigkeit, Möglichkeit", "Ich **kann** heute nicht **kommen**."],
+          ["müssen", "Notwendigkeit", "Ich **muss** **arbeiten**."],
+          ["dürfen", "Erlaubnis", "Hier **darf** man nicht **parken**."],
+          ["möchten", "höflicher Wunsch", "Ich **möchte** einen Kaffee."],
+          ["wollen", "Absicht", "Wir **wollen** ins Kino **gehen**."]
+        ]
+      }
+    },
+    {
+      "thema": "Verneinung: nicht oder kein",
+      "erklaerung": "„kein“ steht vor einem Nomen, das sonst „ein“ oder gar keinen Artikel hätte. „nicht“ verneint alles andere.",
+      "tabelle": {
+        "kopf": ["Was wird verneint", "Wort", "Beispiel"],
+        "zeilen": [
+          ["Nomen mit ein/ohne Artikel", "**kein**", "Ich habe **keine** Zeit."],
+          ["Verb", "**nicht**", "Ich komme **nicht**."],
+          ["Nomen mit der/die/das", "**nicht**", "Das ist **nicht** der richtige Raum."],
+          ["Adjektiv", "**nicht**", "Das ist **nicht** teuer."]
+        ]
+      }
+    },
+    {
+      "thema": "Präpositionen für Zeit und Ort",
+      "erklaerung": "Ein paar Präpositionen decken fast alles ab, was auf A1 gefragt wird. Merken Sie sich die Beispiele, nicht die Regeln.",
+      "tabelle": {
+        "kopf": ["Präposition", "wofür", "Beispiel"],
+        "zeilen": [
+          ["am", "Tage, Tageszeiten", "**am** Montag, **am** Abend"],
+          ["um", "Uhrzeiten", "**um** halb acht"],
+          ["im", "Monate, Jahreszeiten", "**im** Mai, **im** Winter"],
+          ["in", "Ort (wo?)", "**in** der Stadt, **im** Büro"],
+          ["nach / zu", "Richtung", "**nach** Hause, **zum** Arzt"],
+          ["mit", "Verkehrsmittel", "**mit** dem Bus"]
+        ]
+      }
+    },
+    {
+      "thema": "Perfekt: haben oder sein",
+      "erklaerung": "Über Gestern spricht man im Perfekt. Die meisten Verben nehmen „haben“; Bewegung und Veränderung nehmen „sein“.",
+      "tabelle": {
+        "kopf": ["Hilfsverb", "wann", "Beispiel"],
+        "zeilen": [
+          ["haben", "die meisten Verben", "Ich **habe** eine Tasche **gefunden**."],
+          ["sein", "Bewegung", "Ich **bin** nach Hamburg **gefahren**."],
+          ["sein", "Veränderung", "Er **ist** krank **geworden**."],
+          ["sein", "sein, bleiben, passieren", "Wir **sind** dort **gewesen**."]
+        ]
+      }
+    },
+    {
+      "thema": "Höflich bitten",
+      "erklaerung": "Auf A1 wird nicht nur geprüft, **ob** Sie fragen, sondern **wie**. Ein einziges Wort macht den Unterschied.",
+      "tabelle": {
+        "kopf": ["statt", "besser", "warum"],
+        "zeilen": [
+          [
+            "Geben Sie mir das Salz.",
+            "Geben Sie mir **bitte** das Salz.",
+            "ohne „bitte“ ein Befehl"
+          ],
+          [
+            "Ich will einen Kaffee.",
+            "Ich **möchte** einen Kaffee.",
+            "„will“ klingt fordernd"
+          ],
+          [
+            "Können Sie helfen?",
+            "**Könnten** Sie bitte helfen?",
+            "Konjunktiv ist höflicher"
+          ],
+          [
+            "Wo ist der Bahnhof?",
+            "**Entschuldigung**, wo ist der Bahnhof?",
+            "Fremde spricht man an"
+          ]
+        ]
+      }
+    }
+  ]
+}

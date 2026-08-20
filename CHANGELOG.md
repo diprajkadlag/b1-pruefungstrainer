@@ -7,6 +7,68 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.6.0] — 2026-08-20
+
+### Added
+
+- **A1 as a fourth examination level**, with **five complete papers**
+  (`a1-pruefung-01` to `-05`) — twenty in all, five at each level. An A1
+  paper is the shortest in the collection: three parts per receptive module,
+  fifteen items each, a form and a thirty-word message, three speaking parts,
+  a glossary built from its own sentences and about fourteen minutes of
+  generated listening audio.
+- **An A1 Spickzettel**, so all four levels have one: strategy for the four
+  parts, 58 Redemittel, ten grammar tables covering exactly what the level
+  tests — present-tense endings, the three articles, word order, the two
+  cases, negation — plus 100 verbs with all principal parts and 100 nouns
+  with article and plural. In the app and as an 11-page PDF.
+- End-to-end coverage for A1 (`apps/web/e2e/a1.spec.ts`), including the three
+  things no other test would catch: that a part scores **15 raw points** rather
+  than a converted figure, that reading Teil 2 renders **two** answer boxes and
+  not three, and that the form keeps its five entries across a reload.
+
+### Changed
+
+- **Scoring knows a third way of marking a paper.** B1 and B2 are modular. A2
+  is one examination of 100 points with three pass conditions. **A1 is one
+  examination with one condition**: 15 raw points per part, all sixty
+  multiplied by **1.66** to reach 100, and 60 needed to pass. It sets no floor
+  for the written parts and none for Sprechen — the regulations name a
+  single condition, and the remark that a candidate under 35 written points
+  cannot reach 60 is advice about whether to sit the oral, not a further way to
+  fail. `GesamtRegel` therefore carries the factor, the rounding rule and two
+  *optional* floors rather than assuming A2's shape.
+- **Two task shapes the collection did not have.** A1 reading Teil 2 asks where
+  a piece of information is to be found and offers exactly **two** places, so
+  `zwei_optionen` exists as its own item type and prints two boxes on paper and
+  on the answer sheet. A1 writing Teil 1 is a **form**: five labelled blanks,
+  one point each, no word count and no model answer. Its labels reach the
+  browser and its answers do not — `export_web.py` splits it field by field,
+  and the entries travel to the teacher as readable `Feld: Eintrag` lines.
+- The validator, the scaffolder and the PDF builder learned A1: its own
+  `FORMATE` entry and part checks, a skeleton from `new_exam.py a1-pruefung-06`
+  that `--strict` accepts, part names on the printed paper, speaking cards in
+  all three parts, and an 8–16 minute window for the listening audio.
+
+### Fixed
+
+- **Every printed paper claimed the same totals.** The candidate sheet, the
+  answer sheet and the speaking cards had “30 Aufgaben · 100 Punkte”
+  hard-coded in the shared template, so every A2 paper released in 1.5.0 told
+  its reader that a 20-item module was worth 100 points. All four documents now
+  derive the counts and the maxima from the paper in hand.
+- **The solution booklet explained B1's marking to every level.** Three
+  paragraphs of B1 prose — the ×10/3 conversion, the 60-point module
+  pass mark, the B1 criteria grid — were fixed in `loesungen.tex.j2`. They
+  now come from a per-level table, so an A1 booklet describes A1's factor of
+  1.66 and its single pass condition.
+- The speaking section of every solution booklet printed the literal word
+  “ightarrow” where an arrow belonged, from a `\rightarrow` that had
+  lost its backslash.
+- `check_lernhilfe` accepted a cheat sheet whose grade table was missing, which
+  then failed inside LaTeX with an error naming a template line rather than the
+  field.
+
 ## [1.5.0] — 2026-08-19
 
 ### Added

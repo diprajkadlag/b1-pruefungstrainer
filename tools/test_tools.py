@@ -420,6 +420,7 @@ class TestGeruestPasstZurSpezifikation:
     @pytest.mark.parametrize(
         "exam_id,stufe",
         [
+            ("a1-pruefung-99", "A1"),
             ("a2-pruefung-99", "A2"),
             ("pruefung-99", "B1"),
             ("b2-pruefung-99", "B2"),
@@ -429,7 +430,7 @@ class TestGeruestPasstZurSpezifikation:
         rep = geruest_pruefen(exam_id, stufe)
         assert strukturfehler(rep) == [], "\n".join(strukturfehler(rep))
 
-    @pytest.mark.parametrize("stufe", ["A2", "B1", "B2"])
+    @pytest.mark.parametrize("stufe", ["A1", "A2", "B1", "B2"])
     def test_every_module_is_worth_what_the_level_says(self, stufe):
         spec = validate.FORMATE[stufe]
         assert sum(spec.schreiben_punkte) == spec.schreiben_maximum
@@ -451,7 +452,7 @@ class TestGeruestPasstZurSpezifikation:
             spec = validate.FORMATE[stufe]
             assert spec.schreiben_maximum == spec.modul_punkte
 
-    @pytest.mark.parametrize("stufe", ["A2", "B1", "B2"])
+    @pytest.mark.parametrize("stufe", ["A1", "A2", "B1", "B2"])
     def test_both_receptive_modules_have_the_same_item_count(self, stufe):
         spec = validate.FORMATE[stufe]
         assert sum(spec.lesen_items) == spec.gesamt_items
@@ -465,11 +466,18 @@ class TestGeruestPasstZurSpezifikation:
         """
         assert validate.FORMATE["A2"].modul_punkte == 25
         assert validate.FORMATE["A2"].gesamt_items == 20
+        assert validate.FORMATE["A1"].modul_punkte == 15
+        assert validate.FORMATE["A1"].gesamt_items == 15
         assert validate.FORMATE["B1"].modul_punkte == 100
         assert validate.FORMATE["B2"].modul_punkte == 100
 
     def test_the_levels_disagree_about_which_parts_repeat(self):
-        """The single easiest thing to get wrong when adapting a B1 paper."""
+        """The single easiest thing to get wrong when adapting a paper.
+
+        Three different patterns across four levels, and A1's is a different
+        length again because it has three listening parts rather than four.
+        """
+        assert validate.FORMATE["A1"].hoeren_wiederholungen == (2, 1, 2)
         assert validate.FORMATE["A2"].hoeren_wiederholungen == (2, 1, 1, 2)
         assert validate.FORMATE["B1"].hoeren_wiederholungen == (2, 1, 1, 2)
         assert validate.FORMATE["B2"].hoeren_wiederholungen == (1, 2, 1, 2)

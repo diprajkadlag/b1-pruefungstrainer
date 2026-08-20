@@ -11,6 +11,8 @@
 \newcommand{\rfpaar}{\antwortkasten\ R\quad\antwortkasten\ F}
 \newcommand{\jnpaar}{\antwortkasten\ Ja\quad\antwortkasten\ Nein}
 \newcommand{\abcdrei}{\antwortkasten\ a\quad\antwortkasten\ b\quad\antwortkasten\ c}
+% A1 Lesen Teil 2 offers two places, so it gets two boxes and not three.
+\newcommand{\abzwei}{\antwortkasten\ a\quad\antwortkasten\ b}
 \newcommand{\abcvier}{\abcdrei\quad\antwortkasten\ d}
 \newcommand{\kastenfeld}{\framebox[3em][c]{\rule{0pt}{1.3em}}}
 
@@ -22,7 +24,8 @@
 {\small Übertragen Sie Ihre Lösungen hier. Nur dieser Bogen wird bewertet.
 Kreuzen Sie eindeutig an. Wo ein Kästchen zum Eintragen steht, schreiben Sie
 den Buchstaben der passenden Anzeige, Äußerung oder Überschrift hinein<% if meta.stufe == 'B1' %>, oder
-\textbf{0}, wenn keine passt<% endif %>.}
+\textbf{0}, wenn keine passt<% elif meta.stufe == 'A2' %>, oder
+\textbf{x}, wenn keine passt<% endif %>.}
 
 <% for modul, name in [(lesen, 'Lesen'), (hoeren, 'Hören')] %>
 <% set spalten = modul | bogenspalten %>
@@ -51,8 +54,8 @@ den Buchstaben der passenden Anzeige, Äußerung oder Überschrift hinein<% if m
 
 \vspace{0.8em}
 \noindent\fbox{\begin{minipage}{0.9\linewidth}\small
-Punkte << name >>: \rule{1.5cm}{0.4pt} / 30 Aufgaben\\[2pt]
-Ergebnis: \rule{1.5cm}{0.4pt} / 100 Punkte
+Punkte << name >>: \rule{1.5cm}{0.4pt} / << modul | alle_items | length >> Aufgaben\\[2pt]
+Ergebnis: \rule{1.5cm}{0.4pt} / << modulpunkte >> Punkte
 \end{minipage}}
 \end{minipage}
 
@@ -64,7 +67,7 @@ Ergebnis: \rule{1.5cm}{0.4pt} / 100 Punkte
 
 \clearpage
 
-\modulkopf{Antwortbogen — Schreiben}{<< schreiben.zeitMinuten >> Minuten}{100 Punkte}
+\modulkopf{Antwortbogen — Schreiben}{<< schreiben.zeitMinuten >> Minuten}{<< schreiben.aufgaben | sum(attribute='punkte') >> Punkte}
 
 {\small Schreiben Sie hier Ihre Texte. Bitte gut lesbar.}
 

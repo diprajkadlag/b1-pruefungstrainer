@@ -157,6 +157,38 @@
   \endgroup
 }
 
+% \formularzeile{nr}{label}
+% One blank on the A1 form: a numbered label and a rule to write on. The number
+% is the item number on the answer sheet, so a candidate can transfer entries
+% without counting lines.
+\newcommand{\formularzeile}[2]{%
+  \par\vspace{0.35em}
+  \noindent
+  \makebox[2.1em][l]{\small\color{pruefmute}(#1)}%
+  \makebox[9em][l]{#2}%
+  \rule{0pt}{1.4em}\dotfill\hspace{0.5em}\rule{0pt}{1.4em}%
+  \par
+}
+
+% \itemzwei{nr}{question}{a}{b}
+% A1 Lesen Teil 2 asks where a piece of information is to be found and offers
+% exactly two places to look. A third box would offer an answer that cannot be
+% right, so the three-option macro below is not reusable here.
+\newcommand{\itemzwei}[4]{%
+  \needspace{4\baselineskip}
+  \par\vspace{0.45em}
+  \begingroup
+  \setlength{\parskip}{0pt}
+  \noindent\itemnr{#1}\begin{minipage}[t]{\dimexpr\linewidth-2.8em\relax}
+    #2\par\vspace{3pt}
+    \begin{list}{}{\leftmargin=1.6em\itemsep=1pt\parsep=0pt\topsep=0pt}
+      \item[\antwortkasten\ \textbf{a}] #3
+      \item[\antwortkasten\ \textbf{b}] #4
+    \end{list}
+  \end{minipage}\par
+  \endgroup
+}
+
 % \itemmc{nr}{question}{a}{b}{c}
 \newcommand{\itemmc}[5]{%
   \needspace{5\baselineskip}

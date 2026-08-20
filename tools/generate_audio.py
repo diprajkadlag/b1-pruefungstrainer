@@ -63,6 +63,9 @@ PAUSE_ZWISCHEN_TEILEN = 5.0     # between parts on the combined track
 # four parts of five items, and its audio is correspondingly shorter — holding
 # it to the B1 window would mean padding every script.
 ZIELDAUER = {
+    # A1 is fifteen short recordings in a 20-minute module, so its audio is
+    # shorter again than A2's.
+    "A1": (8.0, 16.0),
     "A2": (14.0, 22.0),
     "B1": (27.0, 36.0),
     "B2": (27.0, 36.0),

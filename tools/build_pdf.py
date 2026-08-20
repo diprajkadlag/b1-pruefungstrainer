@@ -43,12 +43,20 @@ DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen
 
 # Levels that can carry their own cheat sheet. Ones without a
 # content/lernhilfe/<stufe>/ directory are skipped silently.
-STUFEN = ("A2", "B1", "B2")
+STUFEN = ("A1", "A2", "B1", "B2")
 
 # What each part actually is, per level. Printed next to the part number so a
 # candidate leafing through the paper knows what is coming. The two levels
 # share no single line here, which is why this is keyed by level.
 TEIL_NAMEN = {
+    "A1": {
+        ("lesen", 1): "Zwei kurze Mitteilungen",
+        ("lesen", 2): "Wo finden Sie das?",
+        ("lesen", 3): "Schilder und Aushänge",
+        ("hoeren", 1): "Sechs kurze Texte",
+        ("hoeren", 2): "Vier Durchsagen",
+        ("hoeren", 3): "Fünf Ansagen am Telefon",
+    },
     "A2": {
         ("lesen", 1): "Kurzer Artikel",
         ("lesen", 2): "Tafel oder Programm",
@@ -83,7 +91,78 @@ TEIL_NAMEN = {
     },
 }
 
+# Points per module on the certificate. A1 records 15 raw points per part and
+# converts only at the end; A2 caps each part at 25; B1 and B2 award 100 each.
+# Mirrors BEWERTUNG in packages/core/src/scoring.ts and FORMATE below.
+MODULPUNKTE = {"A1": 15, "A2": 25, "B1": 100, "B2": 100}
+
+# How each level is marked, in the words the solution booklet prints. This used
+# to be three paragraphs of B1 prose hard-coded in loesungen.tex.j2, which meant
+# every A2 booklet told its reader that the modules were worth 100 points each.
+# The text differs per level far more than the numbers do, so it lives here
+# whole rather than as a pile of template branches.
+BEWERTUNGSTEXT = {
+    "A1": {
+        "rezeptiv": r"Hören und Lesen: je 15 Aufgaben, jede Aufgabe 1 Punkt. Auch "
+                    r"Schreiben und Sprechen zählen je 15 Punkte, zusammen also 60. "
+                    r"Für das Gesamtergebnis wird jeder Punkt mit $1{,}66$ "
+                    r"multipliziert; das ergibt 100.",
+        "grenze": r"Bestanden ist die \emph{ganze} Prüfung ab \textbf{60 von 100 "
+                  r"Punkten}. Weitere Bedingungen gibt es nicht.",
+        "schreiben": r"Teil 1 ist ein Formular: fünf Felder, je 1 Punkt. Teil 2 wird "
+                     r"mit 10 Punkten bewertet. Zusammen 15 Punkte.",
+        "sprechen": r"Teil 1 (3): sich vorstellen. Teil 2 (6): nach Informationen "
+                    r"fragen und antworten. Teil 3 (6): bitten und darauf reagieren. "
+                    r"Zusammen 15 Punkte.",
+    },
+    "A2": {
+        "rezeptiv": r"Lesen und Hören: je 20 Aufgaben, jede Aufgabe 1 Punkt. Die "
+                    r"Rohpunkte werden mit $1{,}25$ multipliziert; jeder Prüfungsteil "
+                    r"zählt damit höchstens 25 Punkte, zusammen 100.",
+        "grenze": r"A2 ist \emph{eine} Prüfung: bestanden ab \textbf{60 von 100 "
+                  r"Punkten}, davon mindestens 45 von 75 in Lesen, Hören und Schreiben "
+                  r"zusammen und mindestens 15 von 25 im Sprechen.",
+        "schreiben": r"Aufgabe 1 (SMS) und Aufgabe 2 (E-Mail): je 5 Punkte für die "
+                     r"Erfüllung der Aufgabe und 5 für die Sprache, zusammen 20 "
+                     r"Messpunkte. Wird die Erfüllung mit E bewertet, ist die ganze "
+                     r"Aufgabe 0 Punkte.",
+        "sprechen": r"Teil 1 (4): Fragen zur Person. Teil 2 (8): von sich erzählen. "
+                    r"Teil 3 (8): gemeinsam planen. Aussprache über alle Teile: 5. "
+                    r"Zusammen 25 Punkte.",
+    },
+    "B1": {
+        "rezeptiv": r"Lesen und Hören: je 30 Aufgaben, jede Aufgabe 1 Punkt. Die "
+                    r"Rohpunkte werden auf 100 Punkte umgerechnet (Punkte $=$ richtige "
+                    r"Aufgaben $\times\ 10/3$).",
+        "grenze": r"Bestanden ab \textbf{60 Punkten} pro Modul; jedes Modul wird "
+                  r"einzeln bestanden.",
+        "schreiben": r"Aufgaben 1 und 2: je 10 Punkte für Erfüllung, Kohärenz, "
+                     r"Wortschatz und Strukturen (40 Punkte). Aufgabe 3: 4 Punkte für "
+                     r"Erfüllung, 4 für Kohärenz, 6 für Wortschatz, 6 für Strukturen "
+                     r"(20 Punkte). Zusammen 100 Punkte.",
+        "sprechen": r"Teil 1 (28): Erfüllung 8, Interaktion 4, Wortschatz 8, "
+                    r"Strukturen 8. Teil 2 (40): Erfüllung 12, Interaktion 4, "
+                    r"Wortschatz 12, Strukturen 12. Teil 3 (16): Erfüllung 16. "
+                    r"Aussprache über alle Teile: 16. Zusammen 100 Punkte.",
+    },
+    "B2": {
+        "rezeptiv": r"Lesen und Hören: je 30 Aufgaben, jede Aufgabe 1 Punkt. Die "
+                    r"Rohpunkte werden auf 100 Punkte umgerechnet (Punkte $=$ richtige "
+                    r"Aufgaben $\times\ 10/3$).",
+        "grenze": r"Bestanden ab \textbf{60 Punkten} pro Modul; jedes Modul wird "
+                  r"einzeln bestanden.",
+        "schreiben": r"Aufgabe 1 (Forumsbeitrag): 60 Punkte. Aufgabe 2 (formelle "
+                     r"Nachricht): 40 Punkte. Bewertet werden Erfüllung, Kohärenz, "
+                     r"Wortschatz und Strukturen. Zusammen 100 Punkte.",
+        "sprechen": r"Teil 1 (50): Vortrag mit anschließenden Fragen. Teil 2 (50): "
+                    r"Debatte. Die Aussprache wird innerhalb der beiden Teile "
+                    r"bewertet, nicht getrennt. Zusammen 100 Punkte.",
+    },
+}
+
 AUFGABEN_NAMEN = {
+    "formular": "Formular ausfüllen",
+    "kurzmitteilung": "Kurze Mitteilung",
     "sms": "Kurznachricht (SMS)",
     "email_informell": "Informelle E-Mail",
     "forumsbeitrag": "Forumsbeitrag",
@@ -98,6 +177,9 @@ BOGEN_ART = {
     "richtig_falsch": "rf",
     "ja_nein": "ja",
     "multiple_choice": "abc",
+    # A1 Lesen Teil 2 offers two places, so the answer sheet needs two boxes,
+    # not three. Printing three would invite an answer that cannot be right.
+    "zwei_optionen": "ab",
     "zuordnung_anzeigen": "kasten",
     "zuordnung_buchstabe": "kasten",
 }
@@ -107,6 +189,7 @@ BOGEN_ART = {
 BOGEN_LABEL = {
     "rf": ("richtig / falsch", "\\rfpaar"),
     "ja": ("dafür / dagegen", "\\jnpaar"),
+    "ab": ("a / b", "\\abzwei"),
     "abc": ("a / b / c", "\\abcdrei"),
     "abcd": ("a / b / c / d", "\\abcvier"),
     "kasten": ("Buchstabe eintragen", "\\kastenfeld"),
@@ -285,6 +368,10 @@ def itemmacro(item: dict[str, Any]) -> str:
     nr = "Bsp." if item["nr"] == 0 else str(item["nr"])
     typ = item["typ"]
 
+    if typ == "zwei_optionen":
+        o = item["optionen"]
+        return (f"\\itemzwei{{{nr}}}{{{tex(item['frage'])}}}"
+                f"{{{tex(o['a'])}}}{{{tex(o['b'])}}}")
     if typ in ("multiple_choice", "zuordnung_person"):
         o = item["optionen"]
         gemeinsam = (f"{{{nr}}}{{{tex(item['frage'])}}}"
@@ -356,6 +443,13 @@ def environment(stufe: str = "B1"):
         undefined=jinja2.StrictUndefined,
         autoescape=False,
     )
+    # What a module is worth, per level. The printed header used to say
+    # "30 Aufgaben - 100 Punkte" on every paper, which is right at B1 and B2
+    # and wrong at A1 and A2 — on the candidate's own sheet.
+    env.globals["stufe"] = stufe
+    env.globals["modulpunkte"] = MODULPUNKTE.get(stufe, 100)
+    env.globals["bewertung"] = BEWERTUNGSTEXT.get(stufe, BEWERTUNGSTEXT["B1"])
+
     env.filters.update(
         tex=tex, texpar=texpar, betont=betont, kuerzen=kuerzen,
         folientext=folientext, zeilen=zeilen, kurz=kurz,
