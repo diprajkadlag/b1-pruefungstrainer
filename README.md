@@ -24,6 +24,8 @@
 | Vocabulary with all word forms → Anki | The grammar the paper actually tested |
 | ![Cheat sheet](docs/screenshots/07-spickzettel.png) | ![Core vocabulary](docs/screenshots/08-wortschatz.png) |
 | Redemittel for every part of Sprechen and Schreiben | The core vocabulary, searchable, with every verb form |
+| ![Sprachschatz](docs/screenshots/09-spiel.png) | ![Article colours](docs/screenshots/10-spiel-artikel.png) |
+| **Sprachschatz** — the same material, asked instead of read | der is blue, die is red, das is green — everywhere, every time |
 
 ---
 
@@ -42,6 +44,33 @@
 **Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
 
 **Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. A2: 83 Redemittel, 10 grammar tables covering the whole of what the level tests — Perfekt, word order, separable verbs, the two cases, Konjunktiv for politeness — plus 103 verbs with all principal parts and 100 nouns with article and plural. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
+
+**And turns all of that into a game.** The cheat sheet is a reference, and
+re-reading a reference is one of the least effective things a learner can do
+with their time. **Sprachschatz** asks instead: pick a level, pick
+**Wortschatz**, **Grammatik**, **Redemittel** or all three mixed, and get twelve
+cards and three lives. Eleven kinds of question are generated from the same
+files the cheat sheet is printed from — the article and plural of a noun, the
+Perfekt of an irregular verb, a gap in a grammar table, what a set phrase is
+*for*, and a word-order task that hands you the words of a sentence shuffled and
+asks for them back in order.
+
+It is built around what is known about remembering rather than what is easy to
+build. **Every wrong answer is drawn from the same drawer as the right one** —
+another form of the same verb, another row of the same table — because a
+distractor picked at random is ruled out on sight and teaches nothing. **Every
+answer, right or wrong, comes with the reason.** Question kinds are
+**interleaved** rather than blocked. A miss drops the card to the bottom of a
+**Leitner** schedule so it comes back almost immediately, while a card you know
+goes quiet for longer; the schedule is per level and per category, and lives on
+your device.
+
+And **articles carry a colour** — der blue, die red, das green, on every
+screen, always the same. A noun's gender follows no rule worth learning, so it
+has to be stored as a property of the word itself, and a second, non-verbal
+channel is the cheapest way to make that stick. Add a streak that multiplies
+the score, a path with a visible finish, and a card that shakes when you get it
+wrong. Pin a round with `?saat=12345` to replay it exactly.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 

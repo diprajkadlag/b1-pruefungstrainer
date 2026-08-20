@@ -7,6 +7,78 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.7.0] — 2026-08-20
+
+### Added
+
+- **Sprachschatz — a learning game over the material that was already
+  there.** Pick a level, pick **Wortschatz**, **Grammatik**, **Redemittel** or
+  all three mixed, and get twelve cards and three lives. Nothing new had to be
+  written: every question is generated from the same `lernhilfe.json` and
+  `wortschatz.json` the cheat sheets are printed from, which is between 74 and
+  976 distinct cards depending on the level and category.
+- **Eleven question generators.** Article and plural of a noun, its meaning
+  either way round, the opposite of an adjective, the Perfekt of an irregular
+  verb, and a gap in the verb's own example sentence. A gap in a grammar table,
+  and the rule behind a worked example. What a set phrase is *for*, which word
+  is missing from it, and a word-order task that hands the words back shuffled.
+- **A round can be replayed.** `?saat=12345` pins the seed, so a round deals
+  the same twelve cards in the same order — useful when someone reports that
+  a question was wrong, and what lets the end-to-end test play a whole round
+  without the answers being written into the page for it to read.
+
+### Changed
+
+- **The design follows what is known about remembering, not what was easy to
+  build.** Every distractor is drawn from the same group as the answer —
+  another form of the same verb, another row of the same table, another noun
+  from the same topic — because a wrong answer sampled at random is ruled
+  out on sight without the memory ever being touched. Every answer carries its
+  reason, right or wrong. Question kinds are interleaved rather than blocked. A
+  miss drops a card to the bottom of a Leitner schedule and it returns almost
+  immediately; a card you know goes quiet for longer. Progress is kept per
+  level and per category, on the device, in `localStorage` — deliberately
+  not in the IndexedDB database that holds every saved exam attempt.
+- **Articles carry a colour**: der blue, die red, das green, on every screen and
+  always the same. A noun's gender follows no rule worth learning, so it has to
+  be stored as a property of the word itself, and a second, non-verbal channel
+  is the cheapest way to make that stick. The verdict on an answered article
+  card is drawn as a ring *around* the option rather than painted over it —
+  repainting it green at the moment the answer lands would undo the association
+  the game exists to build.
+- Ten scenes are drawn as inline SVG in `currentColor`, so a card has a picture
+  without a network request, a dark-mode variant of each file, or a licence
+  question. Everything that moves is switched off under
+  `prefers-reduced-motion`, and the game still reads and plays with all of it
+  off.
+
+### Fixed
+
+- **The grammar generator asked nonsense on two thirds of the tables.** It took
+  the last column of a table as the rule and the one before it as the example,
+  which is true of `Satztyp · Beispiel · Regel` and false of most of
+  the rest: it asked which "rule" applied to `den/dem/des Kunden` and offered
+  four English glosses as the options, and on another table it showed the case
+  column as the example and whole sentences as the rules. The columns are now
+  identified from the header, and a table that does not clearly have both
+  produces no questions at all — a missing question is better for a learner
+  than a confusing one.
+- **Wrong plurals had to be spellable to be worth offering.** The first version
+  built distractors by concatenation and produced "die Nameer" and "die Fraü",
+  which are ruled out without knowing anything. Endings now depend on the stem,
+  `au` umlauts as a unit to `äu`, and the capital that starts every German
+  noun is umlauted too, so Apfel → Äpfel is available as the near miss
+  it really is.
+- **A word could be marked wrong for being right.** "alt" is listed twice at A1,
+  against "neu" for things and "jung" for people. Both are correct, and the
+  first version offered each as a distractor for the other. Alternatives
+  belonging to the same headword are now kept out of the distractor pool, the
+  sense is named in the hint, and the two entries no longer collide in the
+  Leitner schedule.
+- Separable verbs mark both halves of the example — "Dagegen **wendet** er
+  **ein**" — and only the first was being replaced by the gap, so the
+  content's `**` markup reached the card as literal asterisks.
+
 ## [1.6.0] — 2026-08-20
 
 ### Added
