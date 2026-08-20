@@ -1,6 +1,7 @@
 import { test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import { alleFragen, leererFortschritt, rundeBauen } from '@pruefung/core';
 
 /**
  * Not a test — this drives the app through its main screens and saves the
@@ -86,4 +87,44 @@ test('Spickzettel-Screenshots erzeugen', async ({ page }) => {
   await page.locator('.spick__tabelle').first().waitFor();
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: `${OUT}08-wortschatz.png`, fullPage: false });
+});
+
+test('Spiel-Screenshots erzeugen', async ({ page }) => {
+  // Pinned seed, so the card in the README is the same card every time and a
+  // rebuild does not produce a diff for no reason.
+  await page.goto('/?saat=20260820');
+  await page.getByRole('button', { name: /Spiel starten/ }).click();
+  await page.locator('.kachel').first().waitFor();
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: `${OUT}09-spiel.png`, fullPage: false });
+
+  // Play forward to the first article card: the colour coding is the thing
+  // worth showing, and it only appears on that kind of question. The answers
+  // come from rebuilding the pinned round, because clicking blindly burns
+  // three lives and ends the round before an article card ever comes up.
+  const lh = JSON.parse(
+    readFileSync(
+      fileURLToPath(new URL('../public/content/lernhilfe.json', import.meta.url)),
+      'utf-8',
+    ),
+  );
+  const runde = rundeBauen(
+    alleFragen(lh, 'wortschatz', lh.titel.length),
+    leererFortschritt(),
+    20260820,
+  );
+
+  await page.getByRole('button', { name: /Wortschatz/ }).click();
+  await page.locator('.karte-spiel').waitFor();
+  for (const frage of runde) {
+    if (frage.art === 'artikel') break;
+    await page
+      .locator('.option')
+      .filter({ hasText: new RegExp(`^${frage.loesung}$`) })
+      .first()
+      .click();
+    await page.waitForTimeout(1100);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: `${OUT}10-spiel-artikel.png`, fullPage: false });
 });

@@ -21,9 +21,10 @@ interface Props {
   onWeiter: (versuchId: string) => void;
   onErgebnis: (versuchId: string) => void;
   onSpickzettel: (stufe: Stufe) => void;
+  onSpiel: (stufe: Stufe) => void;
 }
 
-export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
+export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel, onSpiel }: Props) {
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
   const [lernhilfeStufen, setLernhilfeStufen] = useState<Stufe[]>([]);
   const [versuche, setVersuche] = useState<GespeicherterVersuch[]>([]);
@@ -132,6 +133,29 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel }: Props) {
             onClick={() => onSpickzettel(stufe)}
           >
             Spickzettel öffnen
+          </button>
+        </section>
+      )}
+
+      {lernhilfeStufen.includes(stufe) && (
+        <section className="teil spick__einstieg spiel__einstieg">
+          <div>
+            <h2>
+              <span aria-hidden="true">✨</span> Sprachschatz {stufe}
+            </h2>
+            <p className="notiz">
+              Dieselben Redemittel, Grammatiktabellen und Wörter — aber gefragt statt
+              nachgeschlagen. Zwölf Karten pro Runde, drei Leben, und was danebengeht,
+              kommt zuerst zurück. Abgefragt zu werden bleibt deutlich besser hängen als
+              noch einmal zu lesen.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="knopf knopf--primaer"
+            onClick={() => onSpiel(stufe)}
+          >
+            Spiel starten
           </button>
         </section>
       )}

@@ -24,8 +24,9 @@ import { Schreiben } from './screens/Schreiben';
 import { Sprechen } from './screens/Sprechen';
 import { Ergebnis } from './screens/Ergebnis';
 import { Spickzettel } from './screens/Spickzettel';
+import { Spiel } from './screens/Spiel';
 
-type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis' | 'spickzettel';
+type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis' | 'spickzettel' | 'spiel';
 
 /**
  * How long the current module runs, taken from the paper itself rather than a
@@ -205,6 +206,19 @@ export default function App() {
     }
   }
 
+  async function spielOeffnen(stufe: Stufe) {
+    setFehler(null);
+    try {
+      const geladen =
+        lernhilfe?.stufe === stufe ? lernhilfe : await lernhilfeLaden(stufe);
+      setLernhilfe(geladen);
+      setPhase('spiel');
+      window.scrollTo({ top: 0 });
+    } catch {
+      setFehler('Das Spiel konnte nicht geladen werden.');
+    }
+  }
+
   async function spickzettelOeffnen(stufe: Stufe) {
     setFehler(null);
     try {
@@ -259,11 +273,16 @@ export default function App() {
             onWeiter={fortsetzen}
             onErgebnis={ergebnisAnsehen}
             onSpickzettel={spickzettelOeffnen}
+            onSpiel={spielOeffnen}
           />
         )}
 
         {phase === 'spickzettel' && lernhilfe && (
           <Spickzettel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
+        )}
+
+        {phase === 'spiel' && lernhilfe && (
+          <Spiel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
         )}
 
         {phase === 'pruefung' && pruefung && versuch && aktuellesModul && (
