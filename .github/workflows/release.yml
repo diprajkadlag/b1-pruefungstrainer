@@ -66,8 +66,15 @@ jobs:
           zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf \n            content/lernhilfe/*/pdf
           # Also on their own: most people want a cheat sheet without
           # downloading two dozen exam PDFs to find it.
+          # B1's sheet sits at the top of content/lernhilfe/ because it was
+          # there before a second level existed; every other level has its own
+          # sub-folder. Naming the levels one by one is what left A1 and A2 out
+          # of earlier releases, so derive them instead.
           cp content/lernhilfe/pdf/spickzettel.pdf release/spickzettel-b1.pdf
-          cp content/lernhilfe/b2/pdf/spickzettel.pdf release/spickzettel-b2.pdf
+          for d in content/lernhilfe/*/pdf/spickzettel.pdf; do
+            stufe=$(basename "$(dirname "$(dirname "$d")")")
+            cp "$d" "release/spickzettel-$stufe.pdf"
+          done
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
