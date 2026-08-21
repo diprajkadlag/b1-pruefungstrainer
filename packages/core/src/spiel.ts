@@ -796,6 +796,40 @@ export function antworten(stand: Stand, richtig: boolean): Stand {
   };
 }
 
+// --- how long the answer stays up -------------------------------------------
+
+/** Time to register the verdict, before any reading. */
+export const PAUSE_GRUND_RICHTIG = 1800;
+export const PAUSE_GRUND_FALSCH = 2600;
+
+/** Roughly 158 words a minute — a learner reading German, not a native skim. */
+export const LESEZEIT_PRO_WORT = 380;
+
+/** Nobody is held longer than this; the Weiter button covers the rest. */
+export const PAUSE_MAX = 16_000;
+
+/**
+ * How long to leave an answered card on screen.
+ *
+ * A single fixed pause cannot work here, and two rounds of guessing at one
+ * proved it. The explanations differ by more than tenfold: an article card
+ * says "der Vorteil (advantage) — Plural: die Vorteile" in seven words, while
+ * a grammar-table card carries the row *and* the rule behind it, which runs to
+ * thirty-five words and past fifty at the top end. Any single number is either
+ * a wait on the short cards or a snatched-away explanation on the long ones.
+ *
+ * So the pause is the time to register right-or-wrong plus the time to read
+ * what is actually there. It is capped, because an auto-advance is a floor
+ * under progress rather than a reading test — anyone who wants longer has
+ * the Weiter button, and anyone who reads faster has it too.
+ */
+export function lesepause(erklaerung: string, richtig: boolean): number {
+  const grund = richtig ? PAUSE_GRUND_RICHTIG : PAUSE_GRUND_FALSCH;
+  const text = erklaerung.trim();
+  const woerter = text ? text.split(/\s+/).length : 0;
+  return Math.min(PAUSE_MAX, grund + woerter * LESEZEIT_PRO_WORT);
+}
+
 /** Checking an answer. `bauen` compares the assembled sentence. */
 export function istRichtig(frage: Frage, antwort: string): boolean {
   const norm = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase();

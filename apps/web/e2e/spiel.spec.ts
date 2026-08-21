@@ -66,13 +66,15 @@ async function rundeStarten(page: Page, stufe: Stufe, kategorie: Kategorie) {
 }
 
 /**
- * Wait for the card to turn over on its own.
+ * Move to the next card the way a learner does, by clicking Weiter.
  *
- * Never a fixed sleep: the pause between cards is a product decision that has
- * already moved once, and a test that hard-codes it silently starts clicking
- * into the previous card the moment it changes again.
+ * Never a fixed sleep, and never waiting out the auto-advance either: that is
+ * now scaled to the length of the explanation and runs to sixteen seconds on a
+ * grammar card, so a twelve-card round would spend three minutes waiting. The
+ * button is faster and tests the control that actually matters.
  */
 async function naechsteKarte(page: Page, fertig: number) {
+  await page.locator('.weiter').click();
   await expect(page.locator('.pfad__halt--fertig')).toHaveCount(fertig, {
     timeout: 15_000,
   });
@@ -156,7 +158,8 @@ test.describe('Sprachschatz', () => {
     await expect(page.locator('.karte-spiel--gut')).toBeVisible();
     await expect(page.locator('.rueckmeldung')).toContainText('Richtig.');
     await expect(page.locator('.punktestand__zahl')).toHaveText('10');
-    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(1, { timeout: 5000 });
+    // Left alone, the card still turns over by itself.
+    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(1, { timeout: 20_000 });
   });
 
   test('costs a life on a wrong answer and shows what was right', async ({ page }) => {
@@ -177,9 +180,7 @@ test.describe('Sprachschatz', () => {
 
     for (let i = 0; i < 3; i++) {
       await beantworten(page, runde[i]!, true);
-      await expect(page.locator('.pfad__halt--fertig')).toHaveCount(i + 1, {
-        timeout: 5000,
-      });
+      await naechsteKarte(page, i + 1);
     }
     await expect(page.locator('.punktestand__zahl')).toHaveText('60');
     await expect(page.locator('.serie')).toContainText('3');
@@ -190,13 +191,41 @@ test.describe('Sprachschatz', () => {
     await rundeStarten(page, 'B1', 'wortschatz');
 
     await beantworten(page, runde[0]!, true);
-    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(1, { timeout: 5000 });
+    await naechsteKarte(page, 1);
     await beantworten(page, runde[1]!, false);
-    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(2, { timeout: 6000 });
+    await naechsteKarte(page, 2);
     await beantworten(page, runde[2]!, true);
 
     // 10, then nothing, then 10 again — not 30.
     await expect(page.locator('.punktestand__zahl')).toHaveText('20');
+  });
+
+  test('offers Weiter only once the card is answered', async ({ page }) => {
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await expect(page.locator('.weiter')).toHaveCount(0);
+
+    await beantworten(page, rundeVorhersagen('B1', 'wortschatz')[0]!, true);
+    await expect(page.locator('.weiter')).toBeVisible();
+  });
+
+  test('Weiter moves on immediately, without a second advance behind it', async ({
+    page,
+  }) => {
+    // The button and the timer both advance the round. If clicking Weiter did
+    // not cancel the pending timer, the card after it would be skipped a
+    // second or two later — and the learner would never see it.
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+
+    await page.locator('.weiter').click();
+    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(1);
+    await expect(page.locator('.karte-spiel__frage')).toHaveText(runde[1]!.frage);
+
+    // Well past the pause the cancelled timer would have fired at.
+    await page.waitForTimeout(9000);
+    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(1);
+    await expect(page.locator('.karte-spiel__frage')).toHaveText(runde[1]!.frage);
   });
 
   test('colours der, die and das apart', async ({ page }) => {
@@ -209,9 +238,7 @@ test.describe('Sprachschatz', () => {
     await rundeStarten(page, 'A1', 'wortschatz');
     for (let i = 0; i < wo; i++) {
       await beantworten(page, runde[i]!, true);
-      await expect(page.locator('.pfad__halt--fertig')).toHaveCount(i + 1, {
-        timeout: 5000,
-      });
+      await naechsteKarte(page, i + 1);
     }
 
     const optionen = page.locator('.optionen--artikel .option');
@@ -232,13 +259,12 @@ test.describe('Sprachschatz', () => {
 
     for (const [i, frage] of runde.entries()) {
       await beantworten(page, frage, true);
-      // The last card ends the round rather than advancing the path.
       if (i < runde.length - 1) await naechsteKarte(page, i + 1);
+      // The last Weiter ends the round rather than advancing the path.
+      else await page.locator('.weiter').click();
     }
 
-    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible({
-      timeout: 15_000,
-    });
+    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Noch eine Runde' })).toBeVisible();
     // 10+20+30+40 then 50 for the rest: 100 + 8x50.
     await expect(page.locator('.bilanz dd').first()).toHaveText('500');
@@ -252,10 +278,9 @@ test.describe('Sprachschatz', () => {
       await beantworten(page, runde[i]!, false);
       // A wrong answer still advances the path; the third one ends the round.
       if (i < 2) await naechsteKarte(page, i + 1);
+      else await page.locator('.weiter').click();
     }
-    await expect(page.getByRole('heading', { name: 'Runde vorbei' })).toBeVisible({
-      timeout: 15_000,
-    });
+    await expect(page.getByRole('heading', { name: 'Runde vorbei' })).toBeVisible();
   });
 
   test('keeps each level and area on its own scoreboard', async ({ page }) => {
@@ -283,10 +308,9 @@ test.describe('Sprachschatz', () => {
     for (const [i, frage] of runde.entries()) {
       await beantworten(page, frage, true);
       if (i < runde.length - 1) await naechsteKarte(page, i + 1);
+      else await page.locator('.weiter').click();
     }
-    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible({
-      timeout: 15_000,
-    });
+    await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible();
 
     await page.reload();
     await page.getByRole('tab', { name: 'A2' }).click();

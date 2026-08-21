@@ -7,6 +7,34 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.7.2] — 2026-08-21
+
+### Added
+
+- **A Weiter button on every answered card.** However long the pause is, it is
+  wrong for somebody — too slow for a reader who has finished, too fast for
+  one who has not. The card still turns over on its own, so the round keeps
+  flowing for anyone who leaves it alone, but nobody has to wait for it.
+
+### Changed
+
+- **The pause now scales with how much there is to read**, because a single
+  number could never have worked. The explanations differ by more than
+  elevenfold: an article card says its piece in six or seven words, while a
+  grammar-table card carries the row *and* the rule behind it — thirty-five
+  words at the median and past fifty at the top. 1.7.1 raised the pause by two
+  seconds for everything, which left the short cards slightly slow and the long
+  ones still unreadable. The pause is now the time to register right-or-wrong
+  plus 380 ms a word, capped at 16 s.
+  Measured on screen: a six-word plural card holds for **4.4 s**, a
+  thirty-five-word grammar card for **15.2 s**. Both were 3.4 s.
+
+### Fixed
+
+- Clicking Weiter now cancels the pending auto-advance. Without that the timer
+  would have fired behind the button a moment later and skipped the following
+  card, which the learner would never have seen.
+
 ## [1.7.1] — 2026-08-20
 
 ### Fixed

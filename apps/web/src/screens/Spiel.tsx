@@ -7,6 +7,7 @@ import {
   istRichtig,
   kategorieTitel,
   leererStand,
+  lesepause,
   naechsteBox,
   punkteFuer,
   rundeBauen,
@@ -40,17 +41,6 @@ interface Props {
 }
 
 type Phase = 'wahl' | 'spiel' | 'ende';
-
-/**
- * How long the answer stays on screen before the next card, in ms.
- *
- * The first version gave a correct answer 900 ms, which is long enough to see
- * that you were right and nowhere near long enough to read *why* — so the
- * explanation, which is the part that does the teaching, was gone before it
- * could be read. Both pauses are two seconds longer than that.
- */
-const PAUSE_RICHTIG = 2900;
-const PAUSE_FALSCH = 4600;
 
 /**
  * The seed for the next round. `?saat=123` pins it, so a round can be replayed
@@ -124,6 +114,10 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
   }
 
   function weiter(neuerStand: Stand, laenge: number) {
+    // Whichever of the two got here first wins; the other must not fire.
+    uhren.current.forEach(window.clearTimeout);
+    uhren.current = [];
+
     if (neuerStand.leben <= 0 || nr + 1 >= laenge) {
       const f = fortschrittLesen(stufe, kategorie);
       fortschrittSchreiben(stufe, kategorie, {
@@ -161,7 +155,7 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
     uhren.current.push(
       window.setTimeout(
         () => weiter(neuerStand, runde.length),
-        richtig ? PAUSE_RICHTIG : PAUSE_FALSCH,
+        lesepause(frage.erklaerung, richtig),
       ),
     );
   }
@@ -396,6 +390,20 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
             </strong>
             <span>{frage.erklaerung}</span>
           </div>
+        )}
+
+        {/* The card turns over on its own after a pause long enough to read
+            what is on it. This is for everyone that pause is wrong for —
+            which, whatever number it carries, is somebody. */}
+        {beantwortet && (
+          <button
+            type="button"
+            className="knopf weiter"
+            onClick={() => weiter(stand, runde.length)}
+            autoFocus
+          >
+            Weiter →
+          </button>
         )}
       </article>
     </div>

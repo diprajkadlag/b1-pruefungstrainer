@@ -1646,6 +1646,20 @@ code {
   animation: karte-rein 0.24s ease-out;
 }
 
+/* The way out of an answered card. Aligned right, where the eye lands after
+   reading the explanation, and self-aligned so it does not stretch across the
+   card the way a flex child otherwise would. */
+.weiter {
+  align-self: flex-end;
+  font-weight: 700;
+  border-color: var(--rule);
+  animation: karte-rein 0.24s ease-out;
+}
+.weiter:hover:not(:disabled) {
+  background: var(--rule);
+  color: var(--bg);
+}
+
 /* --- the word-order task -------------------------------------------------- */
 .bauen {
   display: flex;
@@ -1798,6 +1812,7 @@ code {
   .karte-spiel,
   .karte-spiel--schlecht,
   .rueckmeldung,
+  .weiter,
   .option--richtig,
   .truhe--offen,
   .serie,
