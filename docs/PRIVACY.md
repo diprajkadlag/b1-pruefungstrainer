@@ -15,7 +15,7 @@ This is the default and what the public demo runs.
 | Writing texts | Browser IndexedDB | No |
 | **Speaking recordings** | Browser IndexedDB, as `.webm` blobs | **No** |
 | Results and scores | Browser IndexedDB | No |
-| Sprachschatz scores and card schedule | Browser localStorage | No |
+| Sprachschatz scores, card schedule and sound setting | Browser localStorage | No |
 | **Sprachschatz answer history** | Browser localStorage | **No** |
 | Exam content and audio | Cache Storage (service worker) | Downloaded to you |
 

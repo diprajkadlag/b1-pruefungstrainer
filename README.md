@@ -69,8 +69,10 @@ And **articles carry a colour** — der blue, die red, das green, on every
 screen, always the same. A noun's gender follows no rule worth learning, so it
 has to be stored as a property of the word itself, and a second, non-verbal
 channel is the cheapest way to make that stick. Add a streak that multiplies
-the score, a path with a visible finish, and a card that shakes when you get it
-wrong. **And you can go back.** Every card you have answered stays reachable — the
+the score, a path with a visible finish, a card that shakes when you get it
+wrong, and a short rising chime for right against a low falling one for wrong —
+synthesised from six numbers rather than shipped as files, and mutable from the
+bar. **And you can go back.** Every card you have answered stays reachable — the
 stations on the path are the way back to them mid-round, the result screen lists
 the whole round, and **Frühere Karten** keeps the lot across sessions, with a
 filter for the ones you got wrong. So a reason you read too quickly is never

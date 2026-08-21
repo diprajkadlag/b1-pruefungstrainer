@@ -915,6 +915,57 @@ export function verlaufSchluessel(stufe: Stufe): string {
   return `sprachschatz:verlauf:${stufe}`;
 }
 
+// --- the two sounds ---------------------------------------------------------
+
+/** One note in a short sequence. Times are seconds from the sequence start. */
+export interface Ton {
+  hz: number;
+  ab: number;
+  dauer: number;
+}
+
+/**
+ * Right and wrong, as sound.
+ *
+ * Synthesised from these numbers rather than played from a file, for the same
+ * reasons the scenes are inline SVG: nothing to fetch, nothing to cache,
+ * nothing to license, and no binary in a repository whose whole premise is
+ * that the content is text.
+ *
+ * The shapes are not arbitrary. **Rising means yes and falling means no** in
+ * more or less every interface anyone has used, and a learner should not have
+ * to work out which is which. The correct sound is a rising fifth, the wrong
+ * one a falling third pitched well below it — distinguishable even at low
+ * volume, and distinguishable from each other by contour alone, which matters
+ * for anyone who cannot hear the difference in pitch clearly.
+ *
+ * Both are short and quiet on purpose. A game that startles someone on a train
+ * gets muted permanently within about two rounds.
+ */
+export const KLANG_RICHTIG: readonly Ton[] = [
+  { hz: 659.25, ab: 0, dauer: 0.09 }, // E5
+  { hz: 987.77, ab: 0.075, dauer: 0.17 }, // B5
+];
+
+export const KLANG_FALSCH: readonly Ton[] = [
+  { hz: 233.08, ab: 0, dauer: 0.12 }, // B♭3
+  { hz: 174.61, ab: 0.1, dauer: 0.22 }, // F3
+];
+
+/** Quiet. This is feedback, not a fanfare. */
+export const KLANG_LAUTSTAERKE = 0.09;
+
+export function klangFuer(richtig: boolean): readonly Ton[] {
+  return richtig ? KLANG_RICHTIG : KLANG_FALSCH;
+}
+
+/** How long a sequence runs, in seconds. */
+export function klangDauer(toene: readonly Ton[]): number {
+  return toene.reduce((max, t) => Math.max(max, t.ab + t.dauer), 0);
+}
+
+export const KLANG_SCHLUESSEL = 'sprachschatz:klang';
+
 /** Checking an answer. `bauen` compares the assembled sentence. */
 export function istRichtig(frage: Frage, antwort: string): boolean {
   const norm = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase();

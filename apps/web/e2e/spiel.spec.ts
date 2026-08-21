@@ -51,6 +51,34 @@ function rundeVorhersagen(stufe: Stufe, kategorie: Kategorie): Frage[] {
   );
 }
 
+/**
+ * Record every note the page schedules.
+ *
+ * Web Audio cannot be observed from the outside, so createOscillator is
+ * wrapped before any application code runs and each frequency is pushed onto a
+ * list on window. Nothing is heard in a headless browser either way; what is
+ * being checked is that the right notes were asked for.
+ */
+async function toeneMitschneiden(page: Page) {
+  await page.addInitScript(() => {
+    const w = window as unknown as { __toene: number[] };
+    w.__toene = [];
+    const echt = AudioContext.prototype.createOscillator;
+    AudioContext.prototype.createOscillator = function (this: AudioContext) {
+      const osz = echt.call(this);
+      const setzen = osz.frequency.setValueAtTime.bind(osz.frequency);
+      osz.frequency.setValueAtTime = (wert: number, zeit: number) => {
+        w.__toene.push(wert);
+        return setzen(wert, zeit);
+      };
+      return osz;
+    };
+  });
+}
+
+const toene = (page: Page) =>
+  page.evaluate(() => (window as unknown as { __toene: number[] }).__toene);
+
 async function spielOeffnen(page: Page, stufe: Stufe) {
   await page.goto(`/?saat=${SAAT}`);
   await page.getByRole('tab', { name: stufe }).click();
@@ -478,6 +506,63 @@ test.describe('Sprachschatz', () => {
     await expect(page.locator('.verlauf')).toContainText('2 beantwortet');
     await expect(page.locator('.verlauf details')).toHaveCount(1);
     await expect(page.locator('.verlauf details')).toContainText('Vorteil');
+  });
+
+  test('sounds a rising note for a right answer', async ({ page }) => {
+    await toeneMitschneiden(page);
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    expect(await toene(page)).toEqual([]);
+
+    await beantworten(page, runde[0]!, true);
+    const gehoert = await toene(page);
+    expect(gehoert).toHaveLength(2);
+    // Rising means yes, in this and in every other interface anyone has used.
+    expect(gehoert[1]!).toBeGreaterThan(gehoert[0]!);
+  });
+
+  test('sounds a lower, falling note for a wrong one', async ({ page }) => {
+    await toeneMitschneiden(page);
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, false);
+
+    const gehoert = await toene(page);
+    expect(gehoert).toHaveLength(2);
+    expect(gehoert[1]!).toBeLessThan(gehoert[0]!);
+    // And well below the right answer, so the two are never confusable.
+    expect(Math.max(...gehoert)).toBeLessThan(400);
+  });
+
+  test('the switch really silences it, and is remembered', async ({ page }) => {
+    await toeneMitschneiden(page);
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+
+    const schalter = page.locator('.tonknopf');
+    await expect(schalter).toHaveAttribute('aria-pressed', 'true');
+    await schalter.click();
+    await expect(schalter).toHaveAttribute('aria-pressed', 'false');
+
+    const vorher = (await toene(page)).length;
+    await beantworten(page, runde[0]!, true);
+    expect(await toene(page)).toHaveLength(vorher);
+
+    // Still off after a reload.
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await page.getByRole('button', { name: /Wortschatz/ }).click();
+    await expect(page.locator('.tonknopf')).toHaveAttribute('aria-pressed', 'false');
+  });
+
+  test('switching the sound back on says so out loud', async ({ page }) => {
+    // A sound switch that confirms itself silently is telling you nothing.
+    await toeneMitschneiden(page);
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await page.locator('.tonknopf').click();
+    const stumm = (await toene(page)).length;
+    await page.locator('.tonknopf').click();
+    expect((await toene(page)).length).toBeGreaterThan(stumm);
   });
 
   test('colours der, die and das apart', async ({ page }) => {
