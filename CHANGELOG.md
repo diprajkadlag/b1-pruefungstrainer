@@ -7,6 +7,38 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.10.0] — 2026-08-21
+
+### Added
+
+- **The game makes a sound when you answer.** A rising fifth for right, a
+  falling third pitched well below it for wrong — rising means yes and
+  falling means no in every interface anyone has used, and the two differ by
+  contour as well as pitch, so they stay apart for anyone who does not hear the
+  interval clearly. Both are short and quiet: this is feedback, not a fanfare,
+  and a game that startles someone on a train gets muted for good within two
+  rounds.
+- **A sound switch in the bar**, next to the lives and the score. On unless
+  switched off, remembered between sessions, and switching it back on plays the
+  sound — which is the only confirmation a sound switch can meaningfully
+  give.
+
+### Changed
+
+- **Nothing was added to the repository to do it.** The notes are six numbers
+  in `@pruefung/core` and are synthesised through Web Audio, for the same
+  reasons the scenes are inline SVG: nothing to fetch, nothing to cache,
+  nothing to license, and no binary in a repository whose premise is that the
+  content is text. It also means the sounds work on a first visit offline,
+  which a file pulled from the network would not.
+- The audio context is created on first use rather than at load, because
+  browsers refuse to start one outside a user gesture and an eagerly created
+  context is born suspended and silent. It is also resumed if the tab suspended
+  it, so coming back to a tab does not leave the rest of the session mute.
+- Every part of this fails silently. No Web Audio, no output device, a policy
+  that blocks the context — none of that is a reason to interrupt a round,
+  and none of it is worth an error message about a beep.
+
 ## [1.9.0] — 2026-08-21
 
 ### Added

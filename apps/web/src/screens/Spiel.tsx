@@ -22,6 +22,7 @@ import {
   type Stand,
 } from '@pruefung/core';
 import { Szene } from '../components/Szene';
+import { antwortKlang, klangAn, klangSetzen } from '../lib/klang';
 import {
   fortschrittLesen,
   fortschrittSchreiben,
@@ -103,6 +104,7 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
     verlaufLesen(lernhilfe.stufe),
   );
   const [nurFalsche, setNurFalsche] = useState(false);
+  const [ton, setTon] = useState(klangAn);
 
   // Every pending "next card" timer, so leaving mid-round cannot fire a state
   // update into an unmounted screen.
@@ -197,6 +199,7 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
     };
     verlaufNotieren(stufe, notiz);
     setVerlaufAlt((v) => [notiz, ...v]);
+    antwortKlang(richtig);
     setGewaehlt(antwort);
     setStand(neuerStand);
     setZuletzt(richtig ? punkteFuer(neuerStand.serie) : null);
@@ -497,6 +500,24 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
             </span>
           ))}
         </div>
+        <button
+          type="button"
+          className="tonknopf"
+          aria-pressed={ton}
+          title={ton ? 'Ton ausschalten' : 'Ton einschalten'}
+          onClick={() => {
+            const neu = !ton;
+            setTon(neu);
+            klangSetzen(neu);
+            // A confirmation you can hear, which is the only kind that means
+            // anything for a sound switch.
+            if (neu) antwortKlang(true);
+          }}
+        >
+          <span aria-hidden="true">{ton ? '🔊' : '🔇'}</span>
+          <span className="nur-vorleser">{ton ? 'Ton ist an' : 'Ton ist aus'}</span>
+        </button>
+
         <div className="punktestand">
           <span className="punktestand__zahl">{stand.punkte}</span>
           {stand.serie >= 2 && (

@@ -1929,6 +1929,42 @@ button.pfad__halt:focus-visible {
   margin-top: 0;
 }
 
+/* --- the sound switch ----------------------------------------------------- */
+.tonknopf {
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  min-height: 2.4rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+.tonknopf:hover,
+.tonknopf:focus-visible {
+  border-color: var(--edge);
+  background: var(--soft);
+}
+.tonknopf[aria-pressed='false'] {
+  opacity: 0.55;
+}
+
+/* Read aloud, never drawn: the switch shows its state as an icon, and an icon
+   alone tells a screen reader nothing. */
+.nur-vorleser {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* --- motion --------------------------------------------------------------- */
 @keyframes karte-rein {
   from {

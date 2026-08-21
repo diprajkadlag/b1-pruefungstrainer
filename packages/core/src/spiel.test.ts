@@ -4,6 +4,11 @@ import { fileURLToPath, URL } from 'node:url';
 import {
   ARTIKEL,
   KATEGORIEN,
+  KLANG_FALSCH,
+  KLANG_LAUTSTAERKE,
+  KLANG_RICHTIG,
+  klangDauer,
+  klangFuer,
   LEBEN,
   RUNDE_LAENGE,
   alleFragen,
@@ -736,6 +741,49 @@ describe('the history that outlives the round', () => {
     expect(verlaufSchluessel('B2')).toContain('B2');
     // And it is a different key from the per-category scoreboard.
     expect(verlaufSchluessel('B1')).not.toBe(spielSchluessel('B1', 'wortschatz'));
+  });
+});
+
+describe('the two sounds', () => {
+  it('rises for right and falls for wrong', () => {
+    // Rising means yes and falling means no in every interface anyone has
+    // used. Getting this backwards would be worse than having no sound.
+    expect(KLANG_RICHTIG[1]!.hz).toBeGreaterThan(KLANG_RICHTIG[0]!.hz);
+    expect(KLANG_FALSCH[1]!.hz).toBeLessThan(KLANG_FALSCH[0]!.hz);
+  });
+
+  it('keeps the wrong sound well below the right one', () => {
+    // Distinguishable on a phone speaker, not only on headphones.
+    const tiefstesRichtig = Math.min(...KLANG_RICHTIG.map((t) => t.hz));
+    const hoechstesFalsch = Math.max(...KLANG_FALSCH.map((t) => t.hz));
+    expect(tiefstesRichtig).toBeGreaterThan(hoechstesFalsch * 2);
+  });
+
+  it('stays short enough not to outlast the card', () => {
+    // Both must finish well inside the shortest pause the game ever uses,
+    // or a sound plays over the next question.
+    for (const klang of [KLANG_RICHTIG, KLANG_FALSCH])
+      expect(klangDauer(klang) * 1000).toBeLessThan(lesepause('', true));
+  });
+
+  it('stays quiet', () => {
+    expect(KLANG_LAUTSTAERKE).toBeGreaterThan(0);
+    expect(KLANG_LAUTSTAERKE).toBeLessThan(0.2);
+  });
+
+  it('picks by outcome', () => {
+    expect(klangFuer(true)).toBe(KLANG_RICHTIG);
+    expect(klangFuer(false)).toBe(KLANG_FALSCH);
+  });
+
+  it('measures a sequence from its last note ending', () => {
+    expect(
+      klangDauer([
+        { hz: 100, ab: 0, dauer: 0.1 },
+        { hz: 200, ab: 0.5, dauer: 0.2 },
+      ]),
+    ).toBeCloseTo(0.7);
+    expect(klangDauer([])).toBe(0);
   });
 });
 
