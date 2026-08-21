@@ -7,6 +7,45 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.8.0] — 2026-08-21
+
+### Added
+
+- **You can go back to a card you have already answered.** The explanation is
+  the part of the game that teaches, and until now it existed for one pause and
+  was then gone for good — there was no way to look at it again, however
+  much you wanted to. Every answered card is kept for the round, and **the
+  stations on the path are the way back to them**: click one to reopen that
+  card with what you picked, what was right, and the reason. Vorige and
+  Nächste page through the ones you have done, and Zurück zur Runde
+  puts you back where you were.
+- **The result screen now lists the whole round**, every card with its
+  question, your answer and the reason, each one expandable. The end of a round
+  is exactly when you want to see what went wrong and why, and until now that
+  screen showed four numbers and nothing to learn from.
+- A missed station is marked **red** on the path and the one you are reading is
+  **gold**, so a glance says which cards are worth going back to.
+
+### Changed
+
+- Reviewing is reading, never re-answering: the score, the streak and the lives
+  cannot move while you look, and the answer buttons are not on screen at all.
+  A reopened card is a different thing from a playing card, so it does not
+  pretend to be one with its buttons greyed out.
+
+### Fixed
+
+- **Opening a past card cancels the pending auto-advance.** Without it the
+  round moves on underneath someone who stepped back to read — they lose
+  their place in the very act of trying to keep it. Coming back leaves the
+  current card answered and waiting on its Weiter button rather than restarting
+  a clock nobody was watching.
+- A revisited station on the path lost its colour to the hover state and grew
+  to the height of its (deliberately larger) touch target, because the hover
+  rule out-specified the state classes and the `background` shorthand resets
+  `background-clip`. Hover and focus are drawn as an outline now, so the colour
+  on that path always means what it says.
+
 ## [1.7.2] — 2026-08-21
 
 ### Added

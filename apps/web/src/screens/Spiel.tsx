@@ -42,6 +42,13 @@ interface Props {
 
 type Phase = 'wahl' | 'spiel' | 'ende';
 
+/** One answered card, kept so the learner can read the reason again. */
+interface Protokoll {
+  frage: Frage;
+  antwort: string;
+  richtig: boolean;
+}
+
 /**
  * The seed for the next round. `?saat=123` pins it, so a round can be replayed
  * card for card — worth having when someone reports that a question was
@@ -77,6 +84,10 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
   const [gewaehlt, setGewaehlt] = useState<string | null>(null);
   const [gebaut, setGebaut] = useState<string[]>([]);
   const [zuletzt, setZuletzt] = useState<number | null>(null);
+  /** Every card answered so far this round, so it can be read again. */
+  const [verlauf, setVerlauf] = useState<Protokoll[]>([]);
+  /** Which past card is open, or null while playing. */
+  const [rueckschau, setRueckschau] = useState<number | null>(null);
 
   // Every pending "next card" timer, so leaving mid-round cannot fire a state
   // update into an unmounted screen.
@@ -110,6 +121,8 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
     setGewaehlt(null);
     setGebaut([]);
     setZuletzt(null);
+    setVerlauf([]);
+    setRueckschau(null);
     setPhase('spiel');
   }
 
@@ -149,6 +162,7 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
       boxen: { ...f.boxen, [frage.id]: naechsteBox(f.boxen[frage.id] ?? 0, richtig) },
     });
 
+    setVerlauf((v) => [...v, { frage, antwort, richtig }]);
     setGewaehlt(antwort);
     setStand(neuerStand);
     setZuletzt(richtig ? punkteFuer(neuerStand.serie) : null);
@@ -158,6 +172,21 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
         lesepause(frage.erklaerung, richtig),
       ),
     );
+  }
+
+  /**
+   * Open a past card.
+   *
+   * The pending auto-advance has to go: without that, the round moves on
+   * underneath someone who stepped back to read, and they lose their place in
+   * the very act of trying to keep it. Coming back leaves the current card
+   * answered and waiting on its Weiter button rather than restarting a clock
+   * the learner was not watching.
+   */
+  function rueckschauOeffnen(i: number) {
+    uhren.current.forEach(window.clearTimeout);
+    uhren.current = [];
+    setRueckschau(i);
   }
 
   // --- the picker -----------------------------------------------------------
@@ -259,6 +288,49 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
           immer seltener.
         </p>
 
+        {verlauf.length > 0 && (
+          <section className="durchsicht">
+            <h2>Die Runde durchsehen</h2>
+            <p className="notiz">
+              Jede Karte noch einmal, mit der Begründung. Aufklappen, so lange Sie
+              möchten.
+            </p>
+            <ol className="durchsicht__liste">
+              {verlauf.map((v, i) => (
+                <li key={v.frage.id}>
+                  <details className={v.richtig ? '' : 'durchsicht--daneben'}>
+                    <summary>
+                      <span className="durchsicht__nr">{i + 1}</span>
+                      <span className="durchsicht__frage">{v.frage.frage}</span>
+                      <span
+                        className={`durchsicht__urteil ${
+                          v.richtig ? 'schau--gut' : 'schau--schlecht'
+                        }`}
+                      >
+                        {v.richtig ? '✓' : '✗'}
+                      </span>
+                    </summary>
+                    {v.frage.vorlage && <p className="vorlage">{v.frage.vorlage}</p>}
+                    <p className="durchsicht__zeile">
+                      Ihre Antwort:{' '}
+                      <b className={v.richtig ? 'schau--gut' : 'schau--schlecht'}>
+                        {v.antwort || '—'}
+                      </b>
+                      {!v.richtig && (
+                        <>
+                          {' '}
+                          · richtig: <b className="schau--gut">{v.frage.loesung}</b>
+                        </>
+                      )}
+                    </p>
+                    <p className="durchsicht__grund">{v.frage.erklaerung}</p>
+                  </details>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
         <div className="spiel__knoepfe">
           <button
             type="button"
@@ -308,105 +380,228 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
       </div>
 
       {/* The path. Twelve stations, so the end of the round is always in
-          sight — an open-ended drill is much easier to abandon. */}
+          sight — an open-ended drill is much easier to abandon. A finished
+          station is also the way back to that card: the explanation is the
+          part that teaches, and it used to exist for one pause and then be
+          gone for good. */}
       <ol className="pfad" aria-label={`Karte ${nr + 1} von ${runde.length}`}>
-        {runde.map((_, i) => (
-          <li
-            key={i}
-            className={`pfad__halt ${i < nr ? 'pfad__halt--fertig' : ''} ${
-              i === nr ? 'pfad__halt--jetzt' : ''
-            }`}
-          />
-        ))}
-      </ol>
+        {runde.map((_, i) => {
+          const erledigt = i < verlauf.length;
+          const klasse = [
+            'pfad__halt',
+            erledigt ? 'pfad__halt--fertig' : '',
+            i < verlauf.length && !verlauf[i]!.richtig ? 'pfad__halt--daneben' : '',
+            i === nr && rueckschau === null ? 'pfad__halt--jetzt' : '',
+            i === rueckschau ? 'pfad__halt--schau' : '',
+          ]
+            .filter(Boolean)
+            .join(' ');
 
-      <article
-        className={`karte-spiel ${
-          beantwortet
-            ? richtigBeantwortet
-              ? 'karte-spiel--gut'
-              : 'karte-spiel--schlecht'
-            : ''
-        }`}
-        key={frage.id}
-      >
-        <header className="karte-spiel__kopf">
-          <Szene name={frage.szene} />
-          <div>
-            <p className="karte-spiel__hinweis">{frage.hinweis}</p>
-            <h2 className="karte-spiel__frage">{frage.frage}</h2>
-          </div>
-        </header>
-
-        {frage.vorlage && <p className="vorlage">{frage.vorlage}</p>}
-
-        {frage.art === 'bauen' ? (
-          <Bauen
-            frage={frage}
-            gebaut={gebaut}
-            setGebaut={setGebaut}
-            beantwortet={beantwortet}
-            onFertig={beantworten}
-          />
-        ) : (
-          <div
-            className={`optionen ${frage.art === 'artikel' ? 'optionen--artikel' : ''}`}
-          >
-            {frage.optionen.map((o) => {
-              const istLoesung = o === frage.loesung;
-              const istGewaehlt = o === gewaehlt;
-              return (
+          return (
+            <li key={i} className="pfad__feld">
+              {erledigt ? (
                 <button
                   type="button"
-                  key={o}
-                  className={[
-                    'option',
-                    frage.art === 'artikel' ? `artikel artikel--${o}` : '',
-                    beantwortet && istLoesung ? 'option--richtig' : '',
-                    beantwortet && istGewaehlt && !istLoesung ? 'option--falsch' : '',
-                  ]
-                    .filter(Boolean)
-                    .join(' ')}
-                  disabled={beantwortet}
-                  onClick={() => beantworten(o)}
-                >
-                  {o}
-                </button>
-              );
-            })}
-          </div>
-        )}
+                  className={klasse}
+                  onClick={() => rueckschauOeffnen(i)}
+                  aria-label={`Karte ${i + 1} noch einmal ansehen — ${
+                    verlauf[i]!.richtig ? 'richtig' : 'falsch'
+                  }`}
+                />
+              ) : (
+                <span className={klasse} />
+              )}
+            </li>
+          );
+        })}
+      </ol>
 
-        {zuletzt !== null && (
-          <span className="gutschrift" aria-hidden="true">
-            +{zuletzt}
-          </span>
-        )}
+      {rueckschau !== null && verlauf[rueckschau] && (
+        <Rueckschau
+          protokoll={verlauf[rueckschau]!}
+          nummer={rueckschau + 1}
+          anzahl={verlauf.length}
+          onSpringen={setRueckschau}
+          onSchliessen={() => setRueckschau(null)}
+        />
+      )}
 
-        {beantwortet && (
-          <div className="rueckmeldung" role="status">
-            <strong>
-              {richtigBeantwortet ? 'Richtig.' : `Richtig wäre: ${frage.loesung}`}
-            </strong>
-            <span>{frage.erklaerung}</span>
-          </div>
-        )}
+      {rueckschau === null && (
+        <article
+          className={`karte-spiel ${
+            beantwortet
+              ? richtigBeantwortet
+                ? 'karte-spiel--gut'
+                : 'karte-spiel--schlecht'
+              : ''
+          }`}
+          key={frage.id}
+        >
+          <header className="karte-spiel__kopf">
+            <Szene name={frage.szene} />
+            <div>
+              <p className="karte-spiel__hinweis">{frage.hinweis}</p>
+              <h2 className="karte-spiel__frage">{frage.frage}</h2>
+            </div>
+          </header>
 
-        {/* The card turns over on its own after a pause long enough to read
+          {frage.vorlage && <p className="vorlage">{frage.vorlage}</p>}
+
+          {frage.art === 'bauen' ? (
+            <Bauen
+              frage={frage}
+              gebaut={gebaut}
+              setGebaut={setGebaut}
+              beantwortet={beantwortet}
+              onFertig={beantworten}
+            />
+          ) : (
+            <div
+              className={`optionen ${frage.art === 'artikel' ? 'optionen--artikel' : ''}`}
+            >
+              {frage.optionen.map((o) => {
+                const istLoesung = o === frage.loesung;
+                const istGewaehlt = o === gewaehlt;
+                return (
+                  <button
+                    type="button"
+                    key={o}
+                    className={[
+                      'option',
+                      frage.art === 'artikel' ? `artikel artikel--${o}` : '',
+                      beantwortet && istLoesung ? 'option--richtig' : '',
+                      beantwortet && istGewaehlt && !istLoesung ? 'option--falsch' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    disabled={beantwortet}
+                    onClick={() => beantworten(o)}
+                  >
+                    {o}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {zuletzt !== null && (
+            <span className="gutschrift" aria-hidden="true">
+              +{zuletzt}
+            </span>
+          )}
+
+          {beantwortet && (
+            <div className="rueckmeldung" role="status">
+              <strong>
+                {richtigBeantwortet ? 'Richtig.' : `Richtig wäre: ${frage.loesung}`}
+              </strong>
+              <span>{frage.erklaerung}</span>
+            </div>
+          )}
+
+          {/* The card turns over on its own after a pause long enough to read
             what is on it. This is for everyone that pause is wrong for —
             which, whatever number it carries, is somebody. */}
-        {beantwortet && (
-          <button
-            type="button"
-            className="knopf weiter"
-            onClick={() => weiter(stand, runde.length)}
-            autoFocus
-          >
-            Weiter →
-          </button>
-        )}
-      </article>
+          {beantwortet && (
+            <button
+              type="button"
+              className="knopf weiter"
+              onClick={() => weiter(stand, runde.length)}
+              autoFocus
+            >
+              Weiter →
+            </button>
+          )}
+        </article>
+      )}
     </div>
+  );
+}
+
+/**
+ * A card the learner has already answered, opened again.
+ *
+ * Deliberately not the playing card with its buttons disabled: nothing here
+ * can be clicked to answer, so nothing here should look like it could. It
+ * shows what was asked, what they picked, what was right, and — the reason
+ * anyone comes back — the explanation, for as long as they want it.
+ */
+function Rueckschau({
+  protokoll,
+  nummer,
+  anzahl,
+  onSpringen,
+  onSchliessen,
+}: {
+  protokoll: Protokoll;
+  nummer: number;
+  anzahl: number;
+  onSpringen: (i: number) => void;
+  onSchliessen: () => void;
+}) {
+  const { frage, antwort, richtig } = protokoll;
+
+  return (
+    <article className={`karte-spiel schau ${richtig ? '' : 'schau--daneben'}`}>
+      <header className="karte-spiel__kopf">
+        <Szene name={frage.szene} />
+        <div>
+          <p className="karte-spiel__hinweis">
+            Karte {nummer} von {anzahl} · schon beantwortet
+          </p>
+          <h2 className="karte-spiel__frage">{frage.frage}</h2>
+        </div>
+      </header>
+
+      {frage.vorlage && <p className="vorlage">{frage.vorlage}</p>}
+
+      <dl className="schau__antworten">
+        <div>
+          <dt>Ihre Antwort</dt>
+          <dd className={richtig ? 'schau--gut' : 'schau--schlecht'}>
+            {antwort || '—'} {richtig ? '✓' : '✗'}
+          </dd>
+        </div>
+        {!richtig && (
+          <div>
+            <dt>Richtig</dt>
+            <dd className="schau--gut">{frage.loesung}</dd>
+          </div>
+        )}
+      </dl>
+
+      <div className="rueckmeldung">
+        <strong>{richtig ? 'Richtig.' : `Richtig wäre: ${frage.loesung}`}</strong>
+        <span>{frage.erklaerung}</span>
+      </div>
+
+      <div className="schau__blaettern">
+        <button
+          type="button"
+          className="knopf"
+          disabled={nummer <= 1}
+          onClick={() => onSpringen(nummer - 2)}
+        >
+          ← Vorige
+        </button>
+        <button
+          type="button"
+          className="knopf"
+          disabled={nummer >= anzahl}
+          onClick={() => onSpringen(nummer)}
+        >
+          Nächste →
+        </button>
+        <button
+          type="button"
+          className="knopf knopf--primaer"
+          onClick={onSchliessen}
+          autoFocus
+        >
+          Zurück zur Runde
+        </button>
+      </div>
+    </article>
   );
 }
 

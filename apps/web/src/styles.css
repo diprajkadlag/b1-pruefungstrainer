@@ -1741,6 +1741,162 @@ code {
   font-variant-numeric: tabular-nums;
 }
 
+/* --- looking back at an answered card ------------------------------------- */
+/* The explanation is the part of the game that teaches, and it used to last
+   one pause and then be gone. A finished station on the path is now the way
+   back to it, and the result screen lists the whole round. */
+
+.pfad__feld {
+  flex: 1;
+  display: flex;
+}
+
+/* A station that can be revisited is a button, so it has to shed every button
+   default and keep looking like a bar on the path. */
+button.pfad__halt {
+  flex: 1;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  /* The hit area is bigger than the 6px bar: a target that thin is unusable
+     on a phone. The bar stays 6px; the padding around it is transparent. */
+  background-clip: content-box;
+  border-block: 7px solid transparent;
+  height: 20px;
+  margin-block: -7px;
+}
+/* Hover and focus are drawn as an outline rather than a colour. Repainting
+   the bar would say the wrong thing: on this path the colour carries meaning
+   — green passed, red missed, gold being read — and a `button.pfad__halt`
+   rule out-specifies every one of those state classes. */
+button.pfad__halt:hover,
+button.pfad__halt:focus-visible {
+  outline: 2px solid var(--rule);
+  outline-offset: 3px;
+}
+
+/* background-color, never the `background` shorthand: the shorthand resets
+   background-clip, and the bar then paints across its whole transparent hit
+   area instead of staying a 6px bar. */
+.pfad__halt--daneben {
+  background-color: var(--bad);
+}
+.pfad__halt--schau {
+  background-color: var(--gold);
+  animation: pulsieren 1.4s ease-in-out infinite;
+}
+
+.schau {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 22%, transparent);
+}
+.schau--daneben {
+  border-color: var(--bad);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--bad) 18%, transparent);
+}
+.schau--gut {
+  color: var(--mark);
+  font-weight: 700;
+}
+.schau--schlecht {
+  color: var(--bad);
+  font-weight: 700;
+}
+
+.schau__antworten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.75rem;
+  margin: 0;
+}
+.schau__antworten dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.schau__antworten dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+}
+
+.schau__blaettern {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.schau__blaettern .knopf--primaer {
+  margin-left: auto;
+}
+
+/* --- the whole round, on the result screen -------------------------------- */
+.durchsicht {
+  margin-top: 0.5rem;
+}
+.durchsicht h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+.durchsicht__liste {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.durchsicht details {
+  border: 1px solid var(--edge);
+  border-left: 4px solid var(--mark);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+.durchsicht--daneben {
+  border-left-color: var(--bad);
+}
+.durchsicht summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.durchsicht__nr {
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 99px;
+  background: var(--soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.durchsicht__frage {
+  flex: 1;
+  min-width: 0;
+}
+.durchsicht__urteil {
+  flex: none;
+  font-size: 1.05rem;
+}
+.durchsicht__zeile,
+.durchsicht__grund {
+  margin: 0 0.8rem 0.7rem;
+}
+.durchsicht__grund {
+  color: var(--mute);
+  font-size: 0.92rem;
+  white-space: pre-line;
+}
+.durchsicht .vorlage {
+  margin: 0 0.8rem 0.7rem;
+  font-size: 0.95rem;
+}
+
 /* --- motion --------------------------------------------------------------- */
 @keyframes karte-rein {
   from {
@@ -1817,6 +1973,7 @@ code {
   .truhe--offen,
   .serie,
   .pfad__halt--jetzt,
+  .pfad__halt--schau,
   .gutschrift {
     animation: none;
   }

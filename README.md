@@ -70,7 +70,11 @@ screen, always the same. A noun's gender follows no rule worth learning, so it
 has to be stored as a property of the word itself, and a second, non-verbal
 channel is the cheapest way to make that stick. Add a streak that multiplies
 the score, a path with a visible finish, and a card that shakes when you get it
-wrong. Pin a round with `?saat=12345` to replay it exactly.
+wrong. **And you can go back.** Every card you have answered stays reachable for the
+round — the stations on the path are the way back to them, so a reason you
+read too quickly is never gone. The result screen lists the whole round, every
+card with its answer and its explanation. Pin a round with `?saat=12345` to
+replay it exactly.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 
