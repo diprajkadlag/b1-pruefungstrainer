@@ -24,12 +24,14 @@ import {
   kategorieTitel,
   leererFortschritt,
   leererStand,
+  lesepause,
   mische,
   naechsteBox,
   ohneFett,
   optionenBauen,
   pluralKandidaten,
   punkteFuer,
+  PAUSE_MAX,
   rundeBauen,
   spielSchluessel,
   szeneFuer,
@@ -596,6 +598,52 @@ describe('urteil', () => {
 
   it('does not divide by zero on an empty round', () => {
     expect(urteil(leererStand(), 0).titel).toBe('Geschafft');
+  });
+});
+
+describe('lesepause', () => {
+  it('gives a wrong answer longer than a right one', () => {
+    const text = 'der Vorteil (advantage) — Plural: die Vorteile.';
+    expect(lesepause(text, false)).toBeGreaterThan(lesepause(text, true));
+  });
+
+  it('scales with how much there is to read', () => {
+    // The whole point: an article card carries seven words and a grammar-table
+    // card carries thirty-five, so one fixed pause cannot serve both.
+    const kurz = 'der Vorteil (advantage) — Plural: die Vorteile.';
+    const lang = Array.from({ length: 35 }, (_, i) => `wort${i}`).join(' ');
+    expect(lesepause(lang, true)).toBeGreaterThan(lesepause(kurz, true) * 2);
+  });
+
+  it('leaves a short card long enough to read it twice over', () => {
+    // Seven words at any plausible reading speed is under three seconds.
+    expect(
+      lesepause('der Vorteil (advantage) — Plural: die Vorteile.', true),
+    ).toBeGreaterThan(4000);
+  });
+
+  it('caps, because an auto-advance is a floor and not a reading test', () => {
+    const sehrLang = Array.from({ length: 400 }, () => 'wort').join(' ');
+    expect(lesepause(sehrLang, false)).toBe(PAUSE_MAX);
+  });
+
+  it('still pauses when there is nothing to read', () => {
+    expect(lesepause('', true)).toBeGreaterThan(0);
+    expect(lesepause('   ', true)).toBeGreaterThan(0);
+  });
+  it('is worth scaling: the real cards differ by more than fivefold', () => {
+    // The justification for scaling at all, asserted against shipped content
+    // rather than an assumption: an article card explains itself in about
+    // seven words, a grammar-table card in about thirty-five.
+    const laenge = (art: string) => {
+      const treffer = alleFragen(ECHT.B1, 'gemischt', 7).filter((f) => f.art === art);
+      const woerter = treffer.map((f) => f.erklaerung.trim().split(/\s+/).length);
+      return woerter.reduce((a, b) => a + b, 0) / woerter.length;
+    };
+    expect(laenge('tabelle')).toBeGreaterThan(laenge('artikel') * 3);
+    expect(lesepause('x '.repeat(35), true)).toBeGreaterThan(
+      lesepause('x '.repeat(7), true) * 2,
+    );
   });
 });
 

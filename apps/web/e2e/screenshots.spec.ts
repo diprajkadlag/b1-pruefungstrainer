@@ -126,8 +126,9 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
       .filter({ hasText: new RegExp(`^${frage.loesung}$`) })
       .first()
       .click();
-    // Wait for the card to turn over rather than for a fixed number of
-    // milliseconds, which would need retuning whenever the pause changes.
+    // Click on rather than waiting out the pause, which is scaled to the
+    // length of the explanation and runs to sixteen seconds on a long card.
+    await page.locator('.weiter').click();
     erledigt += 1;
     await expect(page.locator('.pfad__halt--fertig')).toHaveCount(erledigt, {
       timeout: 15_000,
