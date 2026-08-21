@@ -7,6 +7,43 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.9.0] — 2026-08-21
+
+### Added
+
+- **The history now outlives the round.** 1.8.0 let you go back to a card inside
+  the round you were playing; this keeps them. **Frühere Karten** on the
+  Sprachschatz screen lists every card you have answered at that level, newest
+  first, each one expandable to its answer and its reason — including from
+  rounds you played days ago.
+- **Nur die falschen zeigen**, which is the useful view: the cards you actually
+  keep getting wrong, in one list, with the explanation attached. Plus a running
+  count — how many answered, how many wrong, what share right.
+- **Verlauf löschen** clears that level's history on its own, without
+  touching scores, the card schedule or anything the exam side stores.
+
+### Changed
+
+- **Only the record is stored, never the card.** An entry is the question's id,
+  what you answered, whether it was right, and when — a few dozen bytes. The
+  question, its solution and its explanation are generated again from the same
+  cheat sheet that produced them in the first place. That keeps 300 answers per
+  level well inside `localStorage`, and it means a correction to the content
+  reaches the history too instead of leaving the old wording sitting in the
+  browser for good. An entry whose card has since been edited out of the content
+  drops out of the list quietly rather than rendering an empty row.
+- History is kept per level and capped at the last 300 answers. The same card
+  answered twice stays as two entries: getting it wrong in March and right in
+  April is exactly the improvement worth being able to see.
+- `docs/PRIVACY.md` now lists what the game stores, where, and how to clear it.
+
+### Fixed
+
+- The list of answered cards was styled through its container rather than
+  through itself, so the copy of it on the Sprachschatz screen lost its layout:
+  the tick sat jammed against the question instead of at the right-hand edge,
+  and the browser's own disclosure triangles reappeared.
+
 ## [1.8.0] — 2026-08-21
 
 ### Added

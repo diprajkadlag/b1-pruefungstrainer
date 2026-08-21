@@ -830,6 +830,91 @@ export function lesepause(erklaerung: string, richtig: boolean): number {
   return Math.min(PAUSE_MAX, grund + woerter * LESEZEIT_PRO_WORT);
 }
 
+// --- a history that outlives the round --------------------------------------
+
+/**
+ * One answer, kept for good.
+ *
+ * Only the *record* is stored, never the card: the question, its solution and
+ * its explanation are all generated deterministically from the cheat sheet, so
+ * they can be looked up again by id whenever the history is shown. That keeps
+ * an entry at a few dozen bytes instead of a few hundred, and it means a
+ * correction to the content reaches the history too rather than leaving a
+ * stale copy of the old wording sitting in the browser forever.
+ *
+ * The one thing not recoverable that way is which options were on offer, since
+ * those are shuffled per round. Nothing in the review needs them: it shows
+ * what was answered and what was right.
+ */
+export interface Antwortnotiz {
+  /** The question's stable id, used to find it again. */
+  id: string;
+  kategorie: Exclude<Kategorie, 'gemischt'>;
+  antwort: string;
+  richtig: boolean;
+  /** Epoch ms, so the list can be shown newest first. */
+  zeit: number;
+}
+
+/**
+ * How many answers are kept per level.
+ *
+ * A cap rather than everything: this lives in localStorage, which is a few
+ * megabytes for the whole origin and is shared with the rest of the app. Three
+ * hundred entries is twenty-five rounds of history at a few dozen bytes each,
+ * which is far more than anyone scrolls back through and still nowhere near
+ * the limit.
+ */
+export const VERLAUF_MAX = 300;
+
+/** Newest first, oldest dropped once the cap is reached. */
+export function verlaufErgaenzen(
+  alt: readonly Antwortnotiz[],
+  neu: Antwortnotiz,
+  max = VERLAUF_MAX,
+): Antwortnotiz[] {
+  return [neu, ...alt].slice(0, max);
+}
+
+export interface VerlaufZahlen {
+  gesamt: number;
+  richtig: number;
+  falsch: number;
+  /** Share correct, 0 to 1. Zero when nothing has been answered yet. */
+  quote: number;
+}
+
+export function verlaufZahlen(notizen: readonly Antwortnotiz[]): VerlaufZahlen {
+  const richtig = notizen.filter((n) => n.richtig).length;
+  return {
+    gesamt: notizen.length,
+    richtig,
+    falsch: notizen.length - richtig,
+    quote: notizen.length ? richtig / notizen.length : 0,
+  };
+}
+
+/**
+ * The cards behind a history, in the order the answers were given.
+ *
+ * An entry whose question no longer exists is dropped rather than shown empty:
+ * the cheat sheets do change, and a card that has been edited out of the
+ * content should leave the history quietly instead of rendering a blank row.
+ */
+export function verlaufKarten(
+  notizen: readonly Antwortnotiz[],
+  pool: readonly Frage[],
+): { notiz: Antwortnotiz; frage: Frage }[] {
+  const nachId = new Map(pool.map((f) => [f.id, f]));
+  return notizen
+    .map((notiz) => ({ notiz, frage: nachId.get(notiz.id) }))
+    .filter((x): x is { notiz: Antwortnotiz; frage: Frage } => x.frage !== undefined);
+}
+
+export function verlaufSchluessel(stufe: Stufe): string {
+  return `sprachschatz:verlauf:${stufe}`;
+}
+
 /** Checking an answer. `bauen` compares the assembled sentence. */
 export function istRichtig(frage: Frage, antwort: string): boolean {
   const norm = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase();

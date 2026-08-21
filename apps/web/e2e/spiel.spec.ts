@@ -348,6 +348,138 @@ test.describe('Sprachschatz', () => {
     await expect(erste).toContainText(runde[0]!.erklaerung.split('\n')[0]!);
   });
 
+  test('keeps answers after the round is over and the page reloaded', async ({
+    page,
+  }) => {
+    // The point of the whole feature: a card answered in an earlier session is
+    // still there to be looked up.
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    for (let i = 0; i < 3; i++) {
+      await beantworten(page, runde[i]!, i !== 1);
+      await naechsteKarte(page, i + 1);
+    }
+
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+
+    const verlauf = page.locator('.verlauf');
+    await expect(verlauf).toBeVisible();
+    await expect(verlauf.locator('details')).toHaveCount(3);
+    await expect(verlauf).toContainText('3 beantwortet');
+    await expect(verlauf).toContainText('1 falsch');
+    // Newest first.
+    await expect(verlauf.locator('details').first()).toContainText(runde[2]!.frage);
+  });
+
+  test('rebuilds the explanation from the content, not from what was stored', async ({
+    page,
+  }) => {
+    // Only the record is kept, so the reason has to come back from the cheat
+    // sheet. If it did not, the history would show empty rows.
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, false);
+    await naechsteKarte(page, 1);
+
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    const erste = page.locator('.verlauf details').first();
+    await erste.locator('summary').click();
+    await expect(erste).toContainText(runde[0]!.erklaerung.split('\n')[0]!);
+    await expect(erste).toContainText(runde[0]!.loesung);
+  });
+
+  test('filters the history down to the ones that went wrong', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    for (let i = 0; i < 4; i++) {
+      await beantworten(page, runde[i]!, i % 2 === 0);
+      await naechsteKarte(page, i + 1);
+    }
+
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await expect(page.locator('.verlauf details')).toHaveCount(4);
+
+    await page.getByText('Nur die falschen zeigen').click();
+    await expect(page.locator('.verlauf details')).toHaveCount(2);
+  });
+
+  test('clears the history when asked, and stays cleared', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await page.getByRole('button', { name: 'Verlauf löschen' }).click();
+    await expect(page.locator('.verlauf')).toHaveCount(0);
+
+    await page.reload();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await expect(page.locator('.verlauf')).toHaveCount(0);
+  });
+
+  test('keeps one level’s history away from another’s', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+
+    await page.reload();
+    await page.getByRole('tab', { name: 'A2' }).click();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await expect(page.locator('.verlauf')).toHaveCount(0);
+
+    await page.getByRole('button', { name: /Zurück/ }).click();
+    await page.getByRole('tab', { name: 'B1' }).click();
+    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await expect(page.locator('.verlauf details')).toHaveCount(1);
+  });
+
+  test('shrugs off a corrupt history rather than failing to open', async ({ page }) => {
+    await page.goto('/');
+    await page.evaluate(() => {
+      localStorage.setItem('sprachschatz:verlauf:B1', '{ not an array at all');
+    });
+    await spielOeffnen(page, 'B1');
+    await expect(page.locator('.kachel')).toHaveCount(4);
+    await expect(page.locator('.verlauf')).toHaveCount(0);
+  });
+
+  test('drops a history entry whose card no longer exists', async ({ page }) => {
+    await page.goto('/');
+    await page.evaluate(() => {
+      localStorage.setItem(
+        'sprachschatz:verlauf:B1',
+        JSON.stringify([
+          {
+            id: 'artikel:GibtesNichtMehr',
+            kategorie: 'wortschatz',
+            antwort: 'der',
+            richtig: false,
+            zeit: 2,
+          },
+          {
+            id: 'artikel:Vorteil',
+            kategorie: 'wortschatz',
+            antwort: 'der',
+            richtig: true,
+            zeit: 1,
+          },
+        ]),
+      );
+    });
+    await spielOeffnen(page, 'B1');
+    // Both are counted — they were answered — but only the one still in the
+    // content can be shown.
+    await expect(page.locator('.verlauf')).toContainText('2 beantwortet');
+    await expect(page.locator('.verlauf details')).toHaveCount(1);
+    await expect(page.locator('.verlauf details')).toContainText('Vorteil');
+  });
+
   test('colours der, die and das apart', async ({ page }) => {
     // The one memory device the whole game is built around. If these three
     // ever render in the same colour the point of it is gone.
