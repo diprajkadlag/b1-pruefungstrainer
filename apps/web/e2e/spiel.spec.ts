@@ -228,6 +228,126 @@ test.describe('Sprachschatz', () => {
     await expect(page.locator('.karte-spiel__frage')).toHaveText(runde[1]!.frage);
   });
 
+  test('marks answered stations as the way back, and unanswered ones not', async ({
+    page,
+  }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await expect(page.locator('button.pfad__halt')).toHaveCount(0);
+
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+    await beantworten(page, runde[1]!, true);
+    await naechsteKarte(page, 2);
+
+    // Two answered, ten still to come.
+    await expect(page.locator('button.pfad__halt')).toHaveCount(2);
+    await expect(page.locator('.pfad__halt')).toHaveCount(12);
+  });
+
+  test('reopens an answered card with its explanation', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+
+    await page.locator('button.pfad__halt').first().click();
+    const schau = page.locator('.schau');
+    await expect(schau).toBeVisible();
+    await expect(schau.locator('.karte-spiel__frage')).toHaveText(runde[0]!.frage);
+    await expect(schau).toContainText(runde[0]!.erklaerung.split('\n')[0]!);
+    await expect(schau).toContainText(runde[0]!.loesung);
+    // Reading, not re-answering: the live card is out of the way and there is
+    // nothing here to click an answer with.
+    await expect(page.locator('.option')).toHaveCount(0);
+  });
+
+  test('shows a wrong answer next to the right one', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    const falsch = runde[0]!.optionen.find((o) => o !== runde[0]!.loesung)!;
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, false);
+    await naechsteKarte(page, 1);
+
+    await page.locator('button.pfad__halt').first().click();
+    await expect(page.locator('.schau--daneben')).toBeVisible();
+    await expect(page.locator('.schau__antworten')).toContainText(falsch);
+    await expect(page.locator('.schau__antworten')).toContainText(runde[0]!.loesung);
+  });
+
+  test('looking back does not move the round on behind you', async ({ page }) => {
+    // The failure this prevents: you answer, step back to read the last card,
+    // and the pending auto-advance quietly carries the round forward while you
+    // are not looking — so you lose your place in the act of keeping it.
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+    await beantworten(page, runde[1]!, true);
+
+    await page.locator('button.pfad__halt').first().click();
+    await page.waitForTimeout(9000); // well past any pause that was pending
+    await expect(page.locator('.pfad__halt--fertig')).toHaveCount(2);
+
+    await page.getByRole('button', { name: 'Zurück zur Runde' }).click();
+    // Back on the card that was open, still answered, still waiting.
+    await expect(page.locator('.karte-spiel__frage')).toHaveText(runde[1]!.frage);
+    await expect(page.locator('.weiter')).toBeVisible();
+  });
+
+  test('looking back changes neither the score nor the lives', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    await beantworten(page, runde[0]!, true);
+    await naechsteKarte(page, 1);
+
+    await page.locator('button.pfad__halt').first().click();
+    await page.locator('button.pfad__halt').first().click();
+    await page.getByRole('button', { name: 'Zurück zur Runde' }).click();
+
+    await expect(page.locator('.punktestand__zahl')).toHaveText('10');
+    await expect(page.locator('.herz--weg')).toHaveCount(0);
+  });
+
+  test('pages through the cards already answered', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    for (let i = 0; i < 3; i++) {
+      await beantworten(page, runde[i]!, true);
+      await naechsteKarte(page, i + 1);
+    }
+
+    await page.locator('button.pfad__halt').first().click();
+    await expect(page.getByRole('button', { name: /Vorige/ })).toBeDisabled();
+
+    await page.getByRole('button', { name: /Nächste/ }).click();
+    await expect(page.locator('.schau .karte-spiel__frage')).toHaveText(runde[1]!.frage);
+    await page.getByRole('button', { name: /Nächste/ }).click();
+    await expect(page.locator('.schau .karte-spiel__frage')).toHaveText(runde[2]!.frage);
+    // Three answered, so there is nothing after the third.
+    await expect(page.getByRole('button', { name: /Nächste/ })).toBeDisabled();
+
+    await page.getByRole('button', { name: /Vorige/ }).click();
+    await expect(page.locator('.schau .karte-spiel__frage')).toHaveText(runde[1]!.frage);
+  });
+
+  test('lists the whole round at the end, with every reason', async ({ page }) => {
+    const runde = rundeVorhersagen('B1', 'wortschatz');
+    await rundeStarten(page, 'B1', 'wortschatz');
+    for (const [i, frage] of runde.entries()) {
+      await beantworten(page, frage, true);
+      if (i < runde.length - 1) await naechsteKarte(page, i + 1);
+      else await page.locator('.weiter').click();
+    }
+
+    await expect(page.locator('.durchsicht details')).toHaveCount(12);
+    const erste = page.locator('.durchsicht details').first();
+    await expect(erste).toContainText(runde[0]!.frage);
+    // Collapsed until asked for, so the summary stays readable.
+    await erste.locator('summary').click();
+    await expect(erste).toContainText(runde[0]!.erklaerung.split('\n')[0]!);
+  });
+
   test('colours der, die and das apart', async ({ page }) => {
     // The one memory device the whole game is built around. If these three
     // ever render in the same colour the point of it is gone.
