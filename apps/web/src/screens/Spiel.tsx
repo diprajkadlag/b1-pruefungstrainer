@@ -9,16 +9,26 @@ import {
   leererStand,
   lesepause,
   naechsteBox,
+  VERLAUF_MAX,
+  verlaufKarten,
+  verlaufZahlen,
   punkteFuer,
   rundeBauen,
   urteil,
   type Frage,
+  type Antwortnotiz,
   type Kategorie,
   type Lernhilfe,
   type Stand,
 } from '@pruefung/core';
 import { Szene } from '../components/Szene';
-import { fortschrittLesen, fortschrittSchreiben } from '../lib/fortschritt';
+import {
+  fortschrittLesen,
+  fortschrittSchreiben,
+  verlaufLesen,
+  verlaufLoeschen,
+  verlaufNotieren,
+} from '../lib/fortschritt';
 
 /**
  * Sprachschatz — the learning game.
@@ -88,6 +98,11 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
   const [verlauf, setVerlauf] = useState<Protokoll[]>([]);
   /** Which past card is open, or null while playing. */
   const [rueckschau, setRueckschau] = useState<number | null>(null);
+  /** Answers from every round at this level, newest first. */
+  const [verlaufAlt, setVerlaufAlt] = useState<Antwortnotiz[]>(() =>
+    verlaufLesen(lernhilfe.stufe),
+  );
+  const [nurFalsche, setNurFalsche] = useState(false);
 
   // Every pending "next card" timer, so leaving mid-round cannot fire a state
   // update into an unmounted screen.
@@ -103,6 +118,13 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
   const pool = useMemo(
     () => alleFragen(lernhilfe, kategorie, lernhilfe.titel.length),
     [lernhilfe, kategorie],
+  );
+
+  // Every card the level can produce, in any category: the history stores ids
+  // and this is what turns them back into questions.
+  const alleKarten = useMemo(
+    () => alleFragen(lernhilfe, 'gemischt', lernhilfe.titel.length),
+    [lernhilfe],
   );
 
   function rundeStarten(k: Kategorie) {
@@ -163,6 +185,18 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
     });
 
     setVerlauf((v) => [...v, { frage, antwort, richtig }]);
+    // Kept past the round as well, so a card answered last week can still be
+    // looked up. Only the record is stored; the card itself is found again by
+    // id from the same cheat sheet that generated it.
+    const notiz: Antwortnotiz = {
+      id: frage.id,
+      kategorie: frage.kategorie,
+      antwort,
+      richtig,
+      zeit: Date.now(),
+    };
+    verlaufNotieren(stufe, notiz);
+    setVerlaufAlt((v) => [notiz, ...v]);
     setGewaehlt(antwort);
     setStand(neuerStand);
     setZuletzt(richtig ? punkteFuer(neuerStand.serie) : null);
@@ -232,6 +266,100 @@ export function Spiel({ lernhilfe, onZurueck }: Props) {
             );
           })}
         </div>
+
+        {verlaufAlt.length > 0 && (
+          <section className="verlauf">
+            <h2>Frühere Karten</h2>
+            {(() => {
+              const zahlen = verlaufZahlen(verlaufAlt);
+              const karten = verlaufKarten(
+                nurFalsche ? verlaufAlt.filter((n) => !n.richtig) : verlaufAlt,
+                alleKarten,
+              );
+              return (
+                <>
+                  <p className="notiz">
+                    {zahlen.gesamt} beantwortet, davon{' '}
+                    <b className="schau--schlecht">{zahlen.falsch} falsch</b> —{' '}
+                    {Math.round(zahlen.quote * 100)} % richtig. Auch aus früheren Runden,
+                    auf diesem Gerät.
+                  </p>
+
+                  <div className="verlauf__leiste">
+                    <label className="verlauf__filter">
+                      <input
+                        type="checkbox"
+                        checked={nurFalsche}
+                        onChange={(e) => setNurFalsche(e.target.checked)}
+                      />
+                      Nur die falschen zeigen
+                    </label>
+                    <button
+                      type="button"
+                      className="knopf knopf--sekundaer"
+                      onClick={() => {
+                        verlaufLoeschen(stufe);
+                        setVerlaufAlt([]);
+                      }}
+                    >
+                      Verlauf löschen
+                    </button>
+                  </div>
+
+                  {karten.length === 0 ? (
+                    <p className="notiz">
+                      Keine falschen Karten — in diesem Verlauf sitzt alles.
+                    </p>
+                  ) : (
+                    <ol className="durchsicht__liste">
+                      {karten.slice(0, 40).map(({ notiz, frage }) => (
+                        <li key={`${notiz.id}:${notiz.zeit}`}>
+                          <details className={notiz.richtig ? '' : 'durchsicht--daneben'}>
+                            <summary>
+                              <span className="durchsicht__frage">{frage.frage}</span>
+                              <span
+                                className={`durchsicht__urteil ${
+                                  notiz.richtig ? 'schau--gut' : 'schau--schlecht'
+                                }`}
+                              >
+                                {notiz.richtig ? '✓' : '✗'}
+                              </span>
+                            </summary>
+                            {frage.vorlage && <p className="vorlage">{frage.vorlage}</p>}
+                            <p className="durchsicht__zeile">
+                              Ihre Antwort:{' '}
+                              <b
+                                className={
+                                  notiz.richtig ? 'schau--gut' : 'schau--schlecht'
+                                }
+                              >
+                                {notiz.antwort || '—'}
+                              </b>
+                              {!notiz.richtig && (
+                                <>
+                                  {' '}
+                                  · richtig: <b className="schau--gut">{frage.loesung}</b>
+                                </>
+                              )}
+                            </p>
+                            <p className="durchsicht__grund">{frage.erklaerung}</p>
+                          </details>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+
+                  {karten.length > 40 && (
+                    <p className="notiz">
+                      Die letzten 40 von {karten.length}. Ältere werden nach {VERLAUF_MAX}{' '}
+                      Karten vergessen.
+                    </p>
+                  )}
+                </>
+              );
+            })()}
+          </section>
+        )}
 
         <p className="notiz spiel__farbnotiz">
           Nomen tragen im ganzen Spiel dieselbe Farbe wie ihr Artikel:{' '}

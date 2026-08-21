@@ -24,6 +24,11 @@ import {
   kategorieTitel,
   leererFortschritt,
   leererStand,
+  VERLAUF_MAX,
+  verlaufErgaenzen,
+  verlaufKarten,
+  verlaufSchluessel,
+  verlaufZahlen,
   lesepause,
   mische,
   naechsteBox,
@@ -40,6 +45,7 @@ import {
   verschraenken,
   zufall,
   type Frage,
+  type Antwortnotiz,
   type Kategorie,
 } from './spiel.js';
 import type { Lernhilfe, Stufe } from './types.js';
@@ -644,6 +650,92 @@ describe('lesepause', () => {
     expect(lesepause('x '.repeat(35), true)).toBeGreaterThan(
       lesepause('x '.repeat(7), true) * 2,
     );
+  });
+});
+
+describe('the history that outlives the round', () => {
+  const notiz = (id: string, richtig: boolean, zeit = 0): Antwortnotiz => ({
+    id,
+    kategorie: 'wortschatz',
+    antwort: 'x',
+    richtig,
+    zeit,
+  });
+
+  it('puts the newest answer first', () => {
+    const v = verlaufErgaenzen([notiz('a', true), notiz('b', false)], notiz('c', true));
+    expect(v.map((n) => n.id)).toEqual(['c', 'a', 'b']);
+  });
+
+  it('drops the oldest once it is full', () => {
+    const voll = Array.from({ length: 5 }, (_, i) => notiz(`alt${i}`, true));
+    const v = verlaufErgaenzen(voll, notiz('neu', true), 5);
+    expect(v).toHaveLength(5);
+    expect(v[0]!.id).toBe('neu');
+    expect(v.map((n) => n.id)).not.toContain('alt4');
+  });
+
+  it('keeps the same card more than once, because each attempt counts', () => {
+    // Answering "der Vorteil" wrong in March and right in April is two facts,
+    // and collapsing them would hide exactly the improvement worth seeing.
+    const v = verlaufErgaenzen(
+      [notiz('artikel:Vorteil', false, 1)],
+      notiz('artikel:Vorteil', true, 2),
+    );
+    expect(v).toHaveLength(2);
+  });
+
+  it('counts right and wrong, and does not divide by zero', () => {
+    expect(
+      verlaufZahlen([notiz('a', true), notiz('b', false), notiz('c', true)]),
+    ).toEqual({
+      gesamt: 3,
+      richtig: 2,
+      falsch: 1,
+      quote: 2 / 3,
+    });
+    expect(verlaufZahlen([])).toEqual({ gesamt: 0, richtig: 0, falsch: 0, quote: 0 });
+  });
+
+  it('finds the card behind an id, in the order answered', () => {
+    const pool = alleFragen(ECHT.B1, 'gemischt', 7);
+    const zwei = [pool[10]!, pool[3]!];
+    const karten = verlaufKarten(
+      zwei.map((f) => notiz(f.id, true)),
+      pool,
+    );
+    expect(karten.map((k) => k.frage.id)).toEqual(zwei.map((f) => f.id));
+    // The explanation comes from the content, not from the stored record —
+    // which is the whole reason only the record is stored.
+    expect(karten[0]!.frage.erklaerung).toBe(zwei[0]!.erklaerung);
+  });
+
+  it('drops an entry whose card no longer exists', () => {
+    // Cheat sheets get edited. A card that has been written out of the content
+    // should leave the history quietly rather than render an empty row.
+    const pool = alleFragen(ECHT.B1, 'gemischt', 7);
+    const karten = verlaufKarten(
+      [notiz(pool[0]!.id, true), notiz('artikel:GibtesNichtMehr', false)],
+      pool,
+    );
+    expect(karten).toHaveLength(1);
+    expect(karten[0]!.frage.id).toBe(pool[0]!.id);
+  });
+
+  it('is capped low enough to stay well inside localStorage', () => {
+    // Each entry is a short record rather than a copy of the card, so the
+    // whole cap is a few tens of kilobytes against a budget of megabytes.
+    const voll = Array.from({ length: VERLAUF_MAX }, (_, i) =>
+      notiz(`phrasenluecke:Sprechen Teil 2 — Präsentation:Folie 4:${i}`, i % 2 === 0, i),
+    );
+    expect(JSON.stringify(voll).length).toBeLessThan(64 * 1024);
+  });
+
+  it('keys the history per level, so the levels never mix', () => {
+    expect(verlaufSchluessel('A1')).not.toBe(verlaufSchluessel('B1'));
+    expect(verlaufSchluessel('B2')).toContain('B2');
+    // And it is a different key from the per-category scoreboard.
+    expect(verlaufSchluessel('B1')).not.toBe(spielSchluessel('B1', 'wortschatz'));
   });
 });
 
