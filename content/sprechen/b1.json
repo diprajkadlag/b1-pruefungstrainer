@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "12 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "21 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -1341,6 +1341,987 @@
         "antwort": "Ich glaube ja, das wäre mir angenehmer. Es fühlt sich freundlicher an. Aber wichtig ist mir vor allem, dass man respektvoll miteinander umgeht. Das geht mit „Sie\" genauso gut."
       },
       "nummer": 12
+    },
+    {
+      "kurz": "Handys in der Schule",
+      "teil1": {
+        "situation": "Die Schule Ihres Kindes plant ein Sommerfest. Sie und Ihr Partner / Ihre Partnerin helfen im Elternbeirat bei der Planung.",
+        "punkte": [
+          "Wann und wo soll das Fest sein?",
+          "Welche Stände und Spiele bieten Sie an?",
+          "Wer hilft mit?",
+          "Was gibt es zu essen und zu trinken?",
+          "Wofür soll das Geld verwendet werden?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Samstag Ende Juni vor, auf dem Schulhof, von 14 bis 18 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Bei den Ständen denke ich an Kinderschminken, Dosenwerfen und eine Hüpfburg."
+          },
+          {
+            "wer": "A",
+            "text": "Die Hüpfburg ist teuer. Vielleicht lieber ein Fußballturnier zwischen den Klassen?"
+          },
+          {
+            "wer": "B",
+            "text": "Das ist günstiger und macht auch Spaß. Wer hilft mit? Wir brauchen viele Hände."
+          },
+          {
+            "wer": "A",
+            "text": "Jede Klasse übernimmt einen Stand. Die Eltern machen einen Plan mit Schichten."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Essen: Kuchen bringen die Familien mit, dazu Würstchen vom Grill und Getränke."
+          },
+          {
+            "wer": "A",
+            "text": "Bitte auch etwas ohne Fleisch. Bei uns essen mehrere Kinder vegetarisch."
+          },
+          {
+            "wer": "B",
+            "text": "Selbstverständlich. Das Geld würde ich für neue Bücher in der Schulbibliothek nehmen."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Also Samstag Ende Juni, Stände pro Klasse, Turnier, Kuchen und Grill, Geld für Bücher."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Handys in der Schule verboten werden?",
+        "kultur": {
+          "de": "In Deutschland entscheidet jedes Bundesland selbst über die Schule. Deshalb gibt es keine einheitliche Regel für Handys. Viele Schulen haben eine eigene Hausordnung. Oft gilt: In der Grundschule bleibt das Handy in der Tasche. In höheren Klassen darf man es in der Pause benutzen, aber nicht im Unterricht. Manche Schulen sammeln die Handys morgens ein. Ein wichtiger Punkt ist der Datenschutz: Fotos und Videos von Mitschülern ohne Erlaubnis sind verboten, und das wird ernst genommen. Gleichzeitig arbeiten viele Schulen digital, mit Tablets und Lernprogrammen. Es geht also nicht um Technik gegen Schule, sondern um die Frage, wann welches Gerät sinnvoll ist. Eltern diskutieren darüber im Elternbeirat mit.",
+          "en": "Education in Germany is run by each federal state, so there is no single national rule on phones — most schools set their own house rules. Typically primary pupils keep phones in their bags; older pupils may use them at break but not in lessons, and some schools collect them in the morning. Data protection is taken seriously: photographing or filming classmates without consent is prohibited and treated as a real offence. At the same time many schools teach with tablets and learning software, so the argument is not technology versus school but which device belongs where. Parents have a formal voice through the Elternbeirat, the elected parents' council."
+        },
+        "wortschatz": [
+          {
+            "de": "das Verbot, -e",
+            "en": "ban"
+          },
+          {
+            "de": "die Hausordnung",
+            "en": "house rules"
+          },
+          {
+            "de": "der Unterricht",
+            "en": "lessons, teaching"
+          },
+          {
+            "de": "die Pause, -n",
+            "en": "break"
+          },
+          {
+            "de": "ablenken",
+            "en": "to distract"
+          },
+          {
+            "de": "der Elternbeirat",
+            "en": "parents' council"
+          },
+          {
+            "de": "der Datenschutz",
+            "en": "data protection"
+          },
+          {
+            "de": "sich konzentrieren",
+            "en": "to concentrate"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Handys in der Schule verboten werden? In Deutschland entscheidet das jede Schule oder jedes Bundesland selbst. Es gibt also keine einheitliche Regel. Ich möchte beide Seiten zeigen und am Ende meine Meinung sagen.",
+          "Ich erzähle zuerst von meiner Familie. Mein Neffe geht hier in die sechste Klasse. An seiner Schule müssen die Handys während des Unterrichts in der Tasche bleiben. In der Pause dürfen die älteren Kinder sie benutzen. Am Anfang fand er das streng. Heute sagt er selbst, dass es ruhiger ist. Die Kinder reden in der Pause wieder mehr miteinander.",
+          "In meinem Heimatland Indien ist es an vielen Schulen noch strenger. Dort dürfen Schüler das Handy oft gar nicht mitbringen. Gleichzeitig lernen aber sehr viele Kinder mit Videos und Apps auf dem Handy, weil es nicht überall genug Lehrer gibt. Das Handy ist also Problem und Hilfe zugleich. Genau das macht die Frage so schwierig.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil eines Verbots ist: Die Schüler sind weniger abgelenkt und lernen besser. Außerdem gibt es weniger Streit wegen Fotos und Videos. Ein Nachteil ist: Im Notfall können Kinder ihre Eltern nicht erreichen. Und man lernt nicht, richtig mit dem Handy umzugehen. Meiner Meinung nach sollte man Handys im Unterricht verbieten, aber in der Pause erlauben. Wichtig ist, dass die Schule den guten Umgang damit auch unterrichtet.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist ein komplettes Verbot keine Lösung. Kinder müssen den Umgang mit dem Handy lernen, und die Schule ist dafür ein guter Ort. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 266,
+          "sprechzeitSekunden": 177
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Interessant fand ich, dass das Handy in Indien auch beim Lernen hilft. Das ist ein anderer Blick.",
+        "frage": "Sollten Lehrer im Unterricht ihr Handy auch weglegen?",
+        "antwort": "Ja, das finde ich nur fair. Wenn die Lehrerin während des Unterrichts auf ihr Handy schaut, wirkt jede Regel unglaubwürdig. Vorbild ist bei Kindern wichtiger als jede Vorschrift."
+      },
+      "nummer": 13
+    },
+    {
+      "kurz": "Trinkgeld",
+      "teil1": {
+        "situation": "Ihre Abteilung möchte zum Jahresende gemeinsam essen gehen. Sie und Ihr Partner / Ihre Partnerin organisieren den Abend.",
+        "punkte": [
+          "Wann gehen Sie essen?",
+          "In welches Restaurant?",
+          "Wie viele Personen kommen?",
+          "Wer bezahlt was?",
+          "Wie kommen alle nach Hause?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Donnerstag Mitte Dezember vor. Freitags sind alle Lokale voll."
+          },
+          {
+            "wer": "B",
+            "text": "Guter Punkt. Beim Restaurant denke ich an das italienische in der Altstadt."
+          },
+          {
+            "wer": "A",
+            "text": "Da gibt es auch vegetarische Gerichte. Zwei Kollegen essen kein Fleisch."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr wichtig. Wie viele sind wir? Ich schätze etwa achtzehn Personen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann müssen wir früh reservieren. Ich rufe morgen an und frage nach einem langen Tisch."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Bezahlen: Die Firma gibt zwanzig Euro pro Person dazu, den Rest zahlt jeder selbst."
+          },
+          {
+            "wer": "A",
+            "text": "Wir sollten getrennte Rechnungen bestellen. Sonst dauert das Bezahlen ewig."
+          },
+          {
+            "wer": "B",
+            "text": "Und Trinkgeld nicht vergessen, etwa zehn Prozent. Das sammle ich am Ende ein."
+          },
+          {
+            "wer": "A",
+            "text": "Gut. Nach Hause fahren die meisten mit der Bahn. Also Donnerstag, Italiener, achtzehn Personen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Trinkgeld noch zeitgemäß?",
+        "kultur": {
+          "de": "In Deutschland gibt man Trinkgeld, aber weniger als in manchen anderen Ländern. Üblich sind etwa fünf bis zehn Prozent. Oft rundet man einfach auf. Wichtig ist die Art, wie man es gibt: Man legt das Geld nicht auf den Tisch, sondern sagt beim Bezahlen den Gesamtbetrag. Wenn die Rechnung 27 Euro ist, sagt man „Machen Sie 30\". Das Personal hat einen festen Lohn, den Mindestlohn, und lebt nicht nur vom Trinkgeld. Deshalb ist Trinkgeld hier eine Anerkennung und keine Pflicht. Man gibt es auch beim Friseur, beim Taxi und bei Lieferungen. In vielen Lokalen kann man mittlerweile auch beim Kartenzahlen Trinkgeld angeben. Wer sehr unzufrieden war, darf ohne schlechtes Gewissen nichts geben.",
+          "en": "Tipping in Germany is real but modest — roughly five to ten per cent, often just rounding up. The mechanics matter: you do not leave money on the table, you state the total when paying. If the bill is €27 you say „Machen Sie 30\". Staff are on a proper wage (the statutory minimum wage) rather than living on tips, so a tip is recognition, not an obligation, and leaving nothing after genuinely bad service is acceptable. The same modest tipping applies at the hairdresser, in taxis and for deliveries, and card machines now usually let you add it. Visitors from tipping-heavy cultures routinely over-tip here."
+        },
+        "wortschatz": [
+          {
+            "de": "das Trinkgeld",
+            "en": "tip"
+          },
+          {
+            "de": "aufrunden",
+            "en": "to round up"
+          },
+          {
+            "de": "die Rechnung, -en",
+            "en": "bill"
+          },
+          {
+            "de": "getrennt zahlen",
+            "en": "to pay separately"
+          },
+          {
+            "de": "der Mindestlohn",
+            "en": "minimum wage"
+          },
+          {
+            "de": "die Bedienung",
+            "en": "waiting staff"
+          },
+          {
+            "de": "die Anerkennung",
+            "en": "recognition"
+          },
+          {
+            "de": "zufrieden sein",
+            "en": "to be satisfied"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema heute ist die Frage: Ist Trinkgeld noch zeitgemäß? In Deutschland gibt man meistens fünf bis zehn Prozent. In anderen Ländern ist das ganz anders. Ich möchte erklären, wie es hier funktioniert und was ich davon halte.",
+          "Ich beginne mit einer eigenen Erfahrung. Bei meinem ersten Restaurantbesuch hier wollte ich Trinkgeld auf den Tisch legen, so wie ich es kannte. Ein Freund hat mich gestoppt. Er hat erklärt: Man sagt beim Bezahlen den Gesamtbetrag. Die Rechnung war 27 Euro, und ich habe gesagt: „Machen Sie 30.\" Die Kellnerin hat sich gefreut. Seitdem mache ich es immer so.",
+          "In meinem Heimatland Indien ist Trinkgeld auch üblich, aber die Regeln sind unterschiedlich. In vielen Restaurants steht schon eine Servicegebühr auf der Rechnung. Dann gibt man oft nichts mehr extra. In kleinen Läden und bei Fahrern ist Trinkgeld dagegen sehr wichtig, weil die Löhne niedrig sind. Genau das ist der große Unterschied zu Deutschland, wo es einen Mindestlohn gibt.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Trinkgeld zeigt Anerkennung für gute Arbeit. Das Personal freut sich, und der Gast kann danke sagen. Ein Nachteil ist: Das Einkommen wird unsicher, und manche Gäste geben aus Druck und nicht aus Freude. Manche sagen deshalb: Besser wären höhere Löhne und feste Preise. Meiner Meinung nach sollte Trinkgeld freiwillig bleiben, aber der Lohn muss zum Leben reichen.",
+          "Damit komme ich zum Schluss. Für mich ist Trinkgeld in Ordnung, solange es ein Dank ist und kein Ersatz für einen fairen Lohn. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 251,
+          "sprechzeitSekunden": 167
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Das Beispiel mit dem Betrag beim Bezahlen war sehr praktisch. Das wissen viele Neue nicht.",
+        "frage": "Geben Sie auch Trinkgeld, wenn Sie mit dem Essen unzufrieden waren?",
+        "antwort": "Wenn das Essen schlecht war, aber die Bedienung freundlich, gebe ich trotzdem etwas. Die Kellnerin kann ja nichts für die Küche. War der Service selbst schlecht, gebe ich weniger oder nichts."
+      },
+      "nummer": 14
+    },
+    {
+      "kurz": "Schrebergarten",
+      "teil1": {
+        "situation": "Im Hof Ihres Wohnhauses ist eine freie Fläche. Sie und Ihr Partner / Ihre Partnerin möchten dort einen Gemeinschaftsgarten anlegen.",
+        "punkte": [
+          "Was soll dort wachsen?",
+          "Wer darf mitmachen?",
+          "Wie teilen Sie die Arbeit auf?",
+          "Woher bekommen Sie Erde, Pflanzen und Werkzeug?",
+          "Welche Regeln brauchen Sie?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde mit Kräutern und Salat anfangen. Das wächst schnell und macht Freude."
+          },
+          {
+            "wer": "B",
+            "text": "Dazu ein paar Blumen für die Insekten. Tomaten wären auch schön, aber die brauchen viel Sonne."
+          },
+          {
+            "wer": "A",
+            "text": "Mitmachen darf jeder aus dem Haus. Wer keine Zeit hat, kann trotzdem ernten."
+          },
+          {
+            "wer": "B",
+            "text": "Das finde ich fair. Für die Arbeit schlage ich einen Plan vor: Jede Woche ist eine Partei dran."
+          },
+          {
+            "wer": "A",
+            "text": "Und im Sommer gießen wir öfter. Da machen wir eine extra Liste."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Material frage ich die Hausverwaltung. Vielleicht zahlt sie die Erde."
+          },
+          {
+            "wer": "A",
+            "text": "Werkzeug hat sicher jemand im Keller. Ich frage im Treppenhaus herum."
+          },
+          {
+            "wer": "B",
+            "text": "An Regeln brauchen wir: keine Chemie, nach 20 Uhr leise, und Kinder nur mit Erwachsenen."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gut. Also Kräuter, Salat und Blumen, Wochenplan, Hausverwaltung fragen, drei Regeln."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist ein eigener Garten heute noch wichtig?",
+        "kultur": {
+          "de": "In Deutschland gibt es eine besondere Gartenform: den Schrebergarten, auch Kleingarten genannt. Das sind kleine Gärten am Rand der Stadt, oft nur 300 bis 400 Quadratmeter groß. Sie liegen in einer Anlage mit vielen Gärten nebeneinander und gehören einem Verein. Man kauft den Garten nicht, sondern pachtet ihn für wenig Geld im Jahr. Dafür gibt es Regeln: Ein Teil der Fläche muss für Obst und Gemüse genutzt werden, die Laube darf nicht zu groß sein, und wohnen darf man dort nicht. Früher galten Kleingärten als altmodisch. Heute sind sie sehr beliebt, besonders bei jungen Familien in der Stadt. In manchen Städten wartet man Jahre auf einen freien Garten.",
+          "en": "Germany has a distinctive institution here: the Schrebergarten or Kleingarten — a small allotment, often just 300–400 m², in a colony of many such plots run by an association. You do not buy it, you lease it cheaply for the year, and in return you accept rules: a share of the plot must grow fruit and vegetables, the hut may not exceed a set size, and you may not live there. These were once seen as old-fashioned; they are now sought after, especially by young urban families, and in some cities the waiting list runs to several years."
+        },
+        "wortschatz": [
+          {
+            "de": "der Schrebergarten, -gärten",
+            "en": "allotment garden"
+          },
+          {
+            "de": "die Kleingartenanlage",
+            "en": "allotment colony"
+          },
+          {
+            "de": "pachten",
+            "en": "to lease"
+          },
+          {
+            "de": "die Laube, -n",
+            "en": "garden hut"
+          },
+          {
+            "de": "das Gemüse",
+            "en": "vegetables"
+          },
+          {
+            "de": "die Warteliste, -n",
+            "en": "waiting list"
+          },
+          {
+            "de": "die Erholung",
+            "en": "relaxation"
+          },
+          {
+            "de": "gießen",
+            "en": "to water (plants)"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist ein eigener Garten heute noch wichtig? In Deutschland gibt es dafür etwas Besonderes: den Schrebergarten. Das sind kleine Gärten in einer großen Anlage. Ich möchte erzählen, wie das funktioniert.",
+          "Ich habe selbst eine Erfahrung damit gemacht. Freunde von mir haben seit zwei Jahren einen Kleingarten. Sie mussten drei Jahre auf einen freien Platz warten. Der Garten ist etwa dreihundert Quadratmeter groß und kostet im Jahr weniger als eine Monatsmiete. Ich war überrascht, wie viele Regeln es gibt. Zum Beispiel muss ein Teil für Gemüse genutzt werden, und übernachten darf man dort nicht.",
+          "In meinem Heimatland Indien ist das anders. In den Städten haben nur wenige Familien einen Garten, weil der Platz fehlt. Viele Leute haben aber Pflanzen auf dem Balkon oder auf dem Dach. Auf dem Land gehört ein Stück Land oft direkt zum Haus. Eine Anlage mit gemeinsamen Regeln und einem Verein kennen wir so nicht.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Man ist an der frischen Luft und bewegt sich. Man erntet eigenes Gemüse und weiß, woher es kommt. Für Kinder in der Stadt ist es ein sicherer Platz zum Spielen. Ein Nachteil ist: Ein Garten macht viel Arbeit, besonders im Sommer. Und die vielen Vorschriften stören manche Leute. Meiner Meinung nach lohnt sich ein Garten, wenn man Zeit hat und die Arbeit teilen kann.",
+          "Damit bin ich am Ende. Für mich ist ein Garten in der Stadt ein kleines Stück Ruhe. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 252,
+          "sprechzeitSekunden": 168
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Die Warteliste von drei Jahren hat mich überrascht. Das zeigt, wie beliebt das ist.",
+        "frage": "Würden Sie selbst gern einen Schrebergarten haben?",
+        "antwort": "Ja, sehr gern. Aber ich habe im Moment wenig Zeit, und ein Garten braucht regelmäßige Pflege. Vielleicht würde ich mir einen mit Freunden teilen. Dann ist die Arbeit für alle machbar."
+      },
+      "nummer": 15
+    },
+    {
+      "kurz": "Rundfunkbeitrag",
+      "teil1": {
+        "situation": "Im Gemeinschaftsraum Ihres Hauses soll einmal im Monat ein Filmabend stattfinden. Sie und Ihr Partner / Ihre Partnerin organisieren ihn.",
+        "punkte": [
+          "An welchem Tag und wie oft?",
+          "Wer sucht die Filme aus?",
+          "Wie richten Sie den Raum ein?",
+          "Was gibt es zu essen und zu trinken?",
+          "Wie informieren Sie die Nachbarn?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den letzten Freitag im Monat vor, ab 19 Uhr. Am Wochenende müssen die meisten nicht früh raus."
+          },
+          {
+            "wer": "B",
+            "text": "Freitag ist gut. Wer sucht die Filme aus? Der Geschmack ist ja sehr verschieden."
+          },
+          {
+            "wer": "A",
+            "text": "Wir könnten reihum gehen. Jeden Monat darf eine andere Partei einen Film vorschlagen."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr fair. Vielleicht auch mal einen Film mit Untertiteln, damit alle mitkommen."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Für den Raum brauchen wir einen Beamer und ein paar bequeme Stühle."
+          },
+          {
+            "wer": "B",
+            "text": "Einen Beamer hat Herr Weber. Ich frage ihn. Zu essen würde ich einfach Popcorn machen."
+          },
+          {
+            "wer": "A",
+            "text": "Und jeder bringt sein Getränk selbst mit. Dann müssen wir nichts abrechnen."
+          },
+          {
+            "wer": "B",
+            "text": "Informieren würde ich mit einem Zettel im Treppenhaus und in den Briefkästen."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also letzter Freitag, Filme reihum, Beamer von Herrn Weber, Popcorn, Zettel."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man für Fernsehen und Radio bezahlen müssen?",
+        "kultur": {
+          "de": "In Deutschland zahlt fast jeder Haushalt den Rundfunkbeitrag. Er kostet zurzeit etwa 18,36 Euro im Monat. Man zahlt pro Wohnung, nicht pro Person und nicht pro Gerät. Auch wer keinen Fernseher hat, muss zahlen. Mit dem Geld werden ARD, ZDF und das Deutschlandradio finanziert. Der Gedanke dahinter: Nachrichten und Bildung sollen unabhängig vom Staat und von Firmen sein. Deshalb kommt das Geld direkt von den Bürgern und nicht aus Steuern. Wer sehr wenig verdient, zum Beispiel mit Bürgergeld oder BAföG, kann sich befreien lassen. Man muss das aber selbst beantragen. Über die Höhe des Beitrags wird regelmäßig gestritten.",
+          "en": "Almost every German household pays the Rundfunkbeitrag, currently about €18.36 a month. It is charged per dwelling — not per person, not per device — and you owe it even with no television at all. It funds the public broadcasters ARD, ZDF and Deutschlandradio. The reasoning is deliberate: news and education should be independent of both the government and advertisers, so the money comes straight from citizens rather than from tax. People on very low incomes (Bürgergeld, BAföG) can be exempted, but must apply themselves. The level of the fee is a recurring political argument."
+        },
+        "wortschatz": [
+          {
+            "de": "der Rundfunkbeitrag",
+            "en": "broadcasting fee"
+          },
+          {
+            "de": "der Haushalt, -e",
+            "en": "household"
+          },
+          {
+            "de": "unabhängig",
+            "en": "independent"
+          },
+          {
+            "de": "die Nachrichten",
+            "en": "the news"
+          },
+          {
+            "de": "sich befreien lassen",
+            "en": "to get an exemption"
+          },
+          {
+            "de": "die Gebühr, -en",
+            "en": "fee"
+          },
+          {
+            "de": "die Werbung",
+            "en": "advertising"
+          },
+          {
+            "de": "der Sender, -",
+            "en": "broadcaster, channel"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man für Fernsehen und Radio bezahlen müssen? In Deutschland zahlt fast jeder Haushalt den Rundfunkbeitrag, etwa achtzehn Euro im Monat. Ich möchte erklären, warum das so ist und was ich davon halte.",
+          "Ich erzähle von meiner eigenen Erfahrung. Kurz nach meinem Umzug kam ein Brief. Darin stand, dass ich den Rundfunkbeitrag zahlen muss. Ich war überrascht, denn ich hatte gar keinen Fernseher. Ein Kollege hat mir erklärt: Man zahlt pro Wohnung, nicht pro Gerät. Am Anfang fand ich das unfair. Heute verstehe ich den Gedanken dahinter besser.",
+          "In meinem Heimatland Indien ist das anders. Bei uns finanzieren sich die meisten Sender über Werbung oder über ein Abo, das man freiwillig abschließt. Wer nicht zahlt, sieht die Sender einfach nicht. Es gibt zwar auch staatliche Sender, aber keinen festen Beitrag für jeden Haushalt. Deshalb war dieses System für mich ganz neu.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Die Sender sind unabhängig von Werbung und vom Staat. Nachrichten müssen niemandem gefallen, und es gibt Programme für kleine Gruppen. Ein Nachteil ist: Auch Menschen, die den Sender nie nutzen, müssen zahlen. Für Leute mit wenig Geld ist der Betrag spürbar. Meiner Meinung nach ist unabhängige Information viel wert. Der Beitrag sollte aber niedriger sein, und die Befreiung sollte einfacher gehen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist unabhängiger Journalismus wichtig für eine Demokratie. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 240,
+          "sprechzeitSekunden": 160
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Der Brief nach dem Umzug ist ein gutes Beispiel. Das kennen wohl alle, die neu hier sind.",
+        "frage": "Würden Sie freiwillig für unabhängige Nachrichten bezahlen?",
+        "antwort": "Ich glaube ja, einen kleinen Betrag schon. Aber ich fürchte, viele würden es nicht tun. Dann hätten am Ende nur noch Sender mit Werbung Geld, und genau das wollte man ja vermeiden."
+      },
+      "nummer": 16
+    },
+    {
+      "kurz": "Fahrrad in der Stadt",
+      "teil1": {
+        "situation": "Sie und Ihr Partner / Ihre Partnerin planen mit Freunden eine Fahrradtour am Wochenende.",
+        "punkte": [
+          "Wohin soll die Tour gehen?",
+          "Wie lang soll die Strecke sein?",
+          "Wann treffen Sie sich?",
+          "Was nehmen Sie mit?",
+          "Was machen Sie, wenn es regnet?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage die Strecke am Fluss entlang vor. Da gibt es einen guten Radweg ohne Autos."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Wie weit wollen wir fahren? Nicht alle sind geübt."
+          },
+          {
+            "wer": "A",
+            "text": "Etwa dreißig Kilometer hin und zurück. Mit Pausen schaffen das alle."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Treffen wir uns um neun am Bahnhof? Dann sind wir mittags am Ziel."
+          },
+          {
+            "wer": "A",
+            "text": "Ja. Jeder bringt Wasser und etwas zu essen mit. Unterwegs gibt es wenig."
+          },
+          {
+            "wer": "B",
+            "text": "Ich nehme Flickzeug und eine Luftpumpe mit. Ein platter Reifen kommt immer."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Und Helme, das ist sicherer, auch wenn sie nicht Pflicht sind."
+          },
+          {
+            "wer": "B",
+            "text": "Wenn es regnet, verschieben wir auf den Sonntag. Ich schreibe am Samstagabend in die Gruppe."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also neun Uhr Bahnhof, dreißig Kilometer am Fluss, Proviant, Flickzeug, Ersatztermin Sonntag."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Fahrradfahren in der Stadt zu gefährlich?",
+        "kultur": {
+          "de": "Das Fahrrad ist in Deutschland ein normales Verkehrsmittel, nicht nur ein Sportgerät. Viele Menschen fahren damit zur Arbeit, auch bei Wind und Regen. In Städten wie Münster oder Freiburg fährt fast jeder Zweite Rad. Es gibt Radwege, Fahrradstraßen und Ampeln nur für Räder. Wichtig sind die Regeln: Licht vorn und hinten ist Pflicht, und ohne Licht kann es teuer werden. Auf dem Gehweg darf man als Erwachsener nicht fahren. Ein Helm ist nicht vorgeschrieben, wird aber empfohlen. Auch Alkohol gilt auf dem Rad: Wer betrunken fährt, kann den Autoführerschein verlieren. Fahrraddiebstahl ist ein großes Problem, deshalb braucht man ein gutes Schloss.",
+          "en": "In Germany a bicycle is ordinary transport, not just sports equipment: people commute by bike in wind and rain, and in cities like Münster or Freiburg close to half the population cycles. There are dedicated cycle paths, bicycle streets and bike traffic lights. The rules matter: lights front and rear are compulsory and riding without them is fined; adults may not ride on the pavement; a helmet is recommended but not required. Drink-driving law applies on a bike too — cycling drunk can cost you your car licence. Bike theft is widespread, so a serious lock is not optional."
+        },
+        "wortschatz": [
+          {
+            "de": "der Radweg, -e",
+            "en": "cycle path"
+          },
+          {
+            "de": "der Helm, -e",
+            "en": "helmet"
+          },
+          {
+            "de": "das Fahrradschloss",
+            "en": "bike lock"
+          },
+          {
+            "de": "der Verkehr",
+            "en": "traffic"
+          },
+          {
+            "de": "die Ampel, -n",
+            "en": "traffic light"
+          },
+          {
+            "de": "vorsichtig",
+            "en": "careful"
+          },
+          {
+            "de": "der Unfall, -fälle",
+            "en": "accident"
+          },
+          {
+            "de": "die Pflicht",
+            "en": "obligation, duty"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Ist Fahrradfahren in der Stadt zu gefährlich? In Deutschland fahren sehr viele Menschen mit dem Rad zur Arbeit. Trotzdem haben manche Angst im Verkehr. Ich möchte zeigen, wie die Situation aussieht.",
+          "Ich beginne mit meiner eigenen Erfahrung. Ich fahre seit einem Jahr jeden Tag mit dem Rad ins Büro. Am Anfang hatte ich Respekt vor den Autos, besonders an großen Kreuzungen. Dann habe ich gemerkt, dass es fast überall Radwege gibt. Einmal ist mir trotzdem ein Auto sehr eng überholt. Seitdem fahre ich lieber einen Umweg über ruhige Straßen.",
+          "In meinem Heimatland Indien ist Radfahren in der Stadt schwieriger. Bei uns gibt es kaum Radwege, und der Verkehr ist sehr dicht. Viele Leute nehmen deshalb lieber das Motorrad oder den Bus. Fahrrad fahren die meisten eher auf dem Land. In Deutschland habe ich zum ersten Mal gesehen, dass ein Radweg genauso selbstverständlich ist wie eine Straße.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Radfahren ist gesund, günstig und gut für die Umwelt. In der Stadt ist man oft sogar schneller als mit dem Auto. Ein Nachteil ist: Bei Regen und Dunkelheit wird es unangenehm, und man ist im Unfall schlechter geschützt. Meiner Meinung nach ist Radfahren nicht zu gefährlich, wenn die Wege gut gebaut sind. Die Städte müssen dafür aber mehr investieren.",
+          "Damit komme ich zum Schluss. Für mich überwiegen die Vorteile klar. Mit Licht, Schloss und etwas Vorsicht fahre ich gern weiter. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 246,
+          "sprechzeitSekunden": 164
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Der Vergleich der Radwege war interessant. Das nimmt man hier als selbstverständlich.",
+        "frage": "Sollte ein Helm für alle Pflicht werden?",
+        "antwort": "Ich trage selbst immer einen Helm. Eine Pflicht für alle finde ich trotzdem schwierig, weil dann viele weniger Rad fahren würden. Besser wären sichere Radwege. Die helfen mehr als jede Vorschrift."
+      },
+      "nummer": 17
+    },
+    {
+      "kurz": "Lebensmittel retten",
+      "teil1": {
+        "situation": "Ihre Firma möchte einmal im Monat einen gemeinsamen Mittagstisch anbieten. Sie und Ihr Partner / Ihre Partnerin planen ihn.",
+        "punkte": [
+          "An welchem Tag soll das sein?",
+          "Wer kocht?",
+          "Was soll es zu essen geben?",
+          "Wie viel soll es kosten?",
+          "Wo essen alle zusammen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den ersten Mittwoch im Monat vor. Da sind fast alle im Haus."
+          },
+          {
+            "wer": "B",
+            "text": "Mittwoch passt. Wer kocht? Wir könnten es reihum machen, jede Abteilung einmal."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Dann lernt man auch Kollegen aus anderen Bereichen kennen."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Essen sollten wir immer etwas Vegetarisches anbieten. Und auf Allergien achten."
+          },
+          {
+            "wer": "A",
+            "text": "Wichtig. Wir schreiben die Zutaten auf ein Schild neben den Topf."
+          },
+          {
+            "wer": "B",
+            "text": "Zum Preis: Ich würde drei Euro pro Person nehmen. Das deckt den Einkauf."
+          },
+          {
+            "wer": "A",
+            "text": "Und wer wenig verdient, zahlt weniger. Darüber redet niemand, das regeln wir still."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Essen können wir in der großen Küche im dritten Stock. Da passen zwanzig Leute hin."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also erster Mittwoch, Abteilungen reihum, immer vegetarisch dabei, drei Euro."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man Lebensmittel retten statt wegwerfen?",
+        "kultur": {
+          "de": "In Deutschland wirft jeder Mensch im Schnitt fast achtzig Kilogramm Lebensmittel im Jahr weg. Dagegen gibt es viele Initiativen. Die bekannteste ist die Tafel: Ehrenamtliche sammeln Lebensmittel, die Supermärkte nicht mehr verkaufen, und geben sie günstig an Menschen mit wenig Geld weiter. Es gibt über 900 Tafeln im Land. Daneben gibt es Foodsharing: Privatleute holen Essen ab und stellen es in einen öffentlichen Kühlschrank oder ein Regal. Wichtig ist der Unterschied zwischen Mindesthaltbarkeitsdatum und Verbrauchsdatum. Das Mindesthaltbarkeitsdatum sagt nur, bis wann die Qualität sicher gut ist. Danach ist vieles noch essbar. Beim Verbrauchsdatum auf Fleisch und Fisch ist das anders: Danach sollte man es wirklich nicht mehr essen.",
+          "en": "Germans throw away nearly eighty kilos of food per person per year, and a lot of organised effort pushes back. The best-known is the Tafel: volunteers collect food supermarkets can no longer sell and pass it on cheaply to people on low incomes — there are over 900 across the country. Alongside it, Foodsharing volunteers collect surplus and leave it in public fridges or shelves. One practical distinction is worth learning: the Mindesthaltbarkeitsdatum is a best-before date and much food is fine after it, whereas the Verbrauchsdatum on meat and fish is a use-by date and should be respected."
+        },
+        "wortschatz": [
+          {
+            "de": "die Lebensmittel",
+            "en": "food, groceries"
+          },
+          {
+            "de": "wegwerfen",
+            "en": "to throw away"
+          },
+          {
+            "de": "die Tafel, -n",
+            "en": "food bank"
+          },
+          {
+            "de": "das Foodsharing",
+            "en": "food sharing"
+          },
+          {
+            "de": "haltbar",
+            "en": "keeps, does not spoil"
+          },
+          {
+            "de": "die Verschwendung",
+            "en": "waste"
+          },
+          {
+            "de": "spenden",
+            "en": "to donate"
+          },
+          {
+            "de": "der Vorrat, -räte",
+            "en": "supply, stock"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man Lebensmittel retten statt wegwerfen? In Deutschland wirft jede Person im Schnitt fast achtzig Kilogramm Essen im Jahr weg. Das ist sehr viel. Ich möchte zeigen, was man dagegen tut.",
+          "Ich erzähle von einer eigenen Erfahrung. Eine Nachbarin nimmt bei Foodsharing teil. Sie holt zweimal in der Woche Brot und Gemüse ab, das Läden nicht mehr verkaufen. Einmal bin ich mitgegangen. Ich war erschrocken, wie viel gutes Essen da stand. Vieles war nur einen Tag alt. Seitdem achte ich beim Einkaufen mehr darauf, wie viel ich wirklich brauche.",
+          "In meinem Heimatland Indien ist der Umgang mit Essen anders. Bei uns wirft man in der Familie sehr wenig weg. Reste isst man am nächsten Tag, oder man gibt sie weiter. Gleichzeitig geht auf dem Weg vom Feld zum Markt viel verloren, weil Kühlung und Transport fehlen. Das Problem ist also da, aber es liegt an einer anderen Stelle.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil des Rettens ist: Man spart Geld und schont die Umwelt. Für die Herstellung von Essen braucht man Wasser, Energie und Land. Ein Nachteil ist: Man muss aufpassen, dass nichts verdorben ist. Außerdem kostet das Abholen Zeit. Meiner Meinung nach sollte man vor allem besser einkaufen und planen. Retten ist gut, aber gar nicht erst wegwerfen ist besser.",
+          "Damit komme ich zum Schluss. Für mich ist der wichtigste Satz: Erst schauen, was da ist, dann einkaufen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 244,
+          "sprechzeitSekunden": 163
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ihr Besuch beim Foodsharing war ein starkes Beispiel. Man stellt es sich nicht so vor.",
+        "frage": "Sollten Supermärkte gezwungen werden, Essen zu spenden statt wegzuwerfen?",
+        "antwort": "Ich finde die Idee gut. In Frankreich gibt es so ein Gesetz. Wichtig wäre aber, dass die Läden dabei Hilfe bekommen, zum Beispiel bei Transport und Kühlung. Sonst funktioniert es in der Praxis nicht."
+      },
+      "nummer": 18
+    },
+    {
+      "kurz": "Bio-Lebensmittel",
+      "teil1": {
+        "situation": "Ihre Nachbarn möchten gemeinsam beim Bauernhof einkaufen. Sie und Ihr Partner / Ihre Partnerin organisieren die erste Sammelbestellung.",
+        "punkte": [
+          "Bei welchem Hof bestellen Sie?",
+          "Wie oft soll geliefert werden?",
+          "Wer sammelt die Bestellungen?",
+          "Wo werden die Kisten abgestellt?",
+          "Wie wird abgerechnet?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich kenne einen Biohof zwanzig Kilometer außerhalb. Der liefert schon in unsere Straße."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Wie oft? Ich würde alle zwei Wochen vorschlagen, sonst wird es zu viel."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden, alle zwei Wochen freitags. Dann hat man am Wochenende frisches Gemüse."
+          },
+          {
+            "wer": "B",
+            "text": "Wer sammelt die Bestellungen? Das muss jemand fest machen, sonst wird es chaotisch."
+          },
+          {
+            "wer": "A",
+            "text": "Ich lege eine Liste im Hausflur aus. Bis Mittwoch trägt jeder ein, was er möchte."
+          },
+          {
+            "wer": "B",
+            "text": "Die Kisten könnten wir in den Fahrradkeller stellen. Der ist abgeschlossen und kühl."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Beim Geld schlage ich vor: Jeder zahlt vorher per Überweisung an mich."
+          },
+          {
+            "wer": "B",
+            "text": "Dann führe ich die Abrechnung. So sieht jeder, was er bezahlt hat."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Bio-Essen den höheren Preis wert?",
+        "kultur": {
+          "de": "Bio-Lebensmittel sind in Deutschland überall zu finden, nicht nur im teuren Laden. Jeder Supermarkt hat eine eigene Bio-Marke, und es gibt Bio-Supermärkte in fast jeder größeren Stadt. Wichtig ist das Siegel: Das sechseckige deutsche Bio-Siegel und das grüne EU-Blatt sind gesetzlich geschützt. Wer sie benutzt, wird kontrolliert. Daneben gibt es strengere Verbände wie Demeter oder Bioland. Bio bedeutet vor allem: keine chemischen Pflanzenschutzmittel, mehr Platz für die Tiere, kein Gentechnik-Futter. Viele Menschen kaufen außerdem gern regional und saisonal, also Erdbeeren im Juni und nicht im Dezember. Auf dem Wochenmarkt kann man den Bauern direkt fragen, woher etwas kommt.",
+          "en": "Organic food is mainstream in Germany, not a niche: every supermarket chain has its own Bio range and most cities have dedicated organic supermarkets. The labels are the thing to know — the hexagonal German Bio-Siegel and the green EU leaf are legally protected and inspected, and stricter private associations like Demeter and Bioland go beyond them. Bio mainly means no chemical pesticides, more space for animals and no GM feed. Alongside it runs a strong preference for regional and seasonal buying — strawberries in June, not December — and at a weekly market you can ask the grower directly where something came from."
+        },
+        "wortschatz": [
+          {
+            "de": "das Bio-Siegel",
+            "en": "organic certification label"
+          },
+          {
+            "de": "regional / saisonal",
+            "en": "regional / seasonal"
+          },
+          {
+            "de": "der Bauernhof, -höfe",
+            "en": "farm"
+          },
+          {
+            "de": "das Pflanzenschutzmittel",
+            "en": "pesticide"
+          },
+          {
+            "de": "die Tierhaltung",
+            "en": "animal husbandry"
+          },
+          {
+            "de": "der Wochenmarkt",
+            "en": "weekly market"
+          },
+          {
+            "de": "sich leisten können",
+            "en": "to be able to afford"
+          },
+          {
+            "de": "die Qualität",
+            "en": "quality"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist Bio-Essen den höheren Preis wert? In Deutschland gibt es Bio-Produkte in jedem Supermarkt. Sie kosten oft deutlich mehr. Ich möchte zeigen, was dahintersteckt und wie ich darüber denke.",
+          "Ich fange mit meiner eigenen Erfahrung an. Ich habe eine Zeit lang nur Bio-Gemüse gekauft. Nach zwei Monaten habe ich gemerkt, dass mein Einkauf fast dreißig Prozent teurer war. Dann habe ich es geändert: Bei Obst und Gemüse kaufe ich Bio, bei anderen Sachen nicht immer. Auf dem Wochenmarkt frage ich die Bauern direkt. Dort ist es oft günstiger als im Laden.",
+          "In meinem Heimatland Indien ist Bio etwas für wenige. Bei uns ist es sehr teuer und meistens nur in großen Städten zu finden. Gleichzeitig kaufen viele Familien beim kleinen Händler um die Ecke, und das Gemüse kommt oft aus der Region. Ein Siegel gibt es dafür nicht, aber man kennt den Verkäufer persönlich. Vertrauen ersetzt dort ein Stück weit das Zertifikat.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Weniger Chemie auf dem Feld, bessere Bedingungen für die Tiere und oft mehr Geschmack. Auch das Grundwasser wird geschont. Ein Nachteil ist der Preis. Familien mit wenig Geld können sich das nicht immer leisten. Außerdem ist Bio aus einem fernen Land nicht unbedingt besser als regionale Ware ohne Siegel. Meiner Meinung nach ist regional und saisonal fast genauso wichtig wie Bio.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich lautet die Antwort: Bio lohnt sich, aber man muss nicht alles Bio kaufen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 258,
+          "sprechzeitSekunden": 172
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Gut fand ich, dass Sie zwischen Bio und regional unterschieden haben. Das wird oft vermischt.",
+        "frage": "Was ist Ihnen wichtiger: Bio oder aus der Region?",
+        "antwort": "Wenn ich wählen muss, nehme ich regional. Kurze Wege sparen viel Energie, und ich kann den Bauern fragen, wie er arbeitet. Am liebsten hätte ich natürlich beides zusammen."
+      },
+      "nummer": 19
+    },
+    {
+      "kurz": "Vier-Tage-Woche",
+      "teil1": {
+        "situation": "Ihr Team hat ein großes Projekt beendet. Sie und Ihr Partner / Ihre Partnerin planen eine kleine Feier im Büro.",
+        "punkte": [
+          "Wann soll gefeiert werden?",
+          "Wo im Haus?",
+          "Was gibt es zu essen und zu trinken?",
+          "Wer wird eingeladen?",
+          "Wie lange soll es dauern?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage Freitagnachmittag ab 15 Uhr vor. Dann geht es danach direkt ins Wochenende."
+          },
+          {
+            "wer": "B",
+            "text": "Freitag ist gut. Wo? Der Besprechungsraum ist groß genug für uns alle."
+          },
+          {
+            "wer": "A",
+            "text": "Ja, und wir stellen die Tische an die Seite. Dann kann man stehen und reden."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Essen würde ich belegte Brötchen und Obst bestellen. Nichts Kompliziertes."
+          },
+          {
+            "wer": "A",
+            "text": "Und Kaffee, Wasser und Saft. Alkohol würde ich im Büro weglassen."
+          },
+          {
+            "wer": "B",
+            "text": "Sehe ich auch so. Einladen sollten wir das ganze Team und die zwei Kollegen aus der IT."
+          },
+          {
+            "wer": "A",
+            "text": "Die haben viel geholfen, unbedingt. Wie lange? Zwei Stunden reichen, denke ich."
+          },
+          {
+            "wer": "B",
+            "text": "Ja, bis 17 Uhr. Ich kümmere mich um die Bestellung, wenn du den Raum reservierst."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Wäre eine Vier-Tage-Woche eine gute Idee?",
+        "kultur": {
+          "de": "Die normale Arbeitswoche in Deutschland hat 38 bis 40 Stunden. In manchen Branchen ist sie kürzer, weil Gewerkschaften das ausgehandelt haben. In der Metallindustrie sind zum Beispiel 35 Stunden üblich. Das Arbeitszeitgesetz erlaubt höchstens acht Stunden am Tag, in Ausnahmen zehn. Überstunden müssen ausgeglichen werden, oft durch freie Tage. Viele Firmen haben ein Arbeitszeitkonto: Man sammelt Stunden und nimmt sie später als Freizeit. In den letzten Jahren probieren einige Betriebe die Vier-Tage-Woche aus, meistens bei gleichem Lohn. Die Ergebnisse sind unterschiedlich. In Berufen mit Schichtdienst, etwa in der Pflege oder im Verkauf, ist das viel schwieriger als im Büro.",
+          "en": "A standard German working week is 38–40 hours, and shorter in sectors where unions negotiated it — 35 hours is normal in metalworking. The Arbeitszeitgesetz caps the day at eight hours, ten by exception, and overtime must be compensated, often as time off. Many firms run an Arbeitszeitkonto, a running balance of hours you later take as leave. Several employers have trialled a four-day week in recent years, usually at unchanged pay, with mixed results. It is far harder in shift-based work — care, retail, manufacturing — than in an office, which is the crux of the argument."
+        },
+        "wortschatz": [
+          {
+            "de": "die Arbeitszeit",
+            "en": "working hours"
+          },
+          {
+            "de": "die Überstunde, -n",
+            "en": "hour of overtime"
+          },
+          {
+            "de": "die Gewerkschaft, -en",
+            "en": "trade union"
+          },
+          {
+            "de": "das Arbeitszeitkonto",
+            "en": "working-time account"
+          },
+          {
+            "de": "der Schichtdienst",
+            "en": "shift work"
+          },
+          {
+            "de": "die Produktivität",
+            "en": "productivity"
+          },
+          {
+            "de": "der Ausgleich",
+            "en": "compensation, balance"
+          },
+          {
+            "de": "erschöpft",
+            "en": "exhausted"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Wäre eine Vier-Tage-Woche eine gute Idee? In Deutschland arbeitet man normalerweise 38 bis 40 Stunden in fünf Tagen. Einige Firmen testen jetzt vier Tage bei gleichem Lohn. Ich möchte zeigen, was dafür und was dagegen spricht.",
+          "Ich erzähle von einer eigenen Erfahrung. In meiner Firma haben wir ein Arbeitszeitkonto. Ich sammle Überstunden und nehme sie später als freie Tage. Im letzten Sommer hatte ich dadurch drei Wochen am Stück frei. Danach war ich viel erholter als sonst. Das hat mir gezeigt, wie viel längere Pausen wirklich bringen.",
+          "In meinem Heimatland Indien ist die Arbeitswoche oft länger. In vielen Firmen arbeitet man sechs Tage, und der Samstag ist ein normaler Arbeitstag. In der IT gibt es inzwischen die Fünf-Tage-Woche, aber Überstunden sind sehr verbreitet. Eine Vier-Tage-Woche wäre dort für die meisten Menschen kaum vorstellbar.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Die Menschen sind erholter und weniger krank. Wer ausgeruht ist, macht weniger Fehler. Auch für Familien wäre ein freier Tag sehr wertvoll. Ein Nachteil ist: In manchen Berufen geht es nicht. Ein Krankenhaus oder ein Supermarkt kann nicht einfach einen Tag schließen. Außerdem muss die gleiche Arbeit in weniger Zeit geschafft werden, und das kann Stress machen. Meiner Meinung nach sollte man es dort einführen, wo es möglich ist.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist wichtig, dass weniger Tage nicht einfach mehr Druck an vier Tagen bedeuten. Sonst gewinnt niemand etwas. Ein Versuch über ein Jahr wäre der beste Weg, um das ehrlich zu prüfen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 261,
+          "sprechzeitSekunden": 174
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ihr Beispiel mit dem Arbeitszeitkonto war sehr konkret. So etwas kannte ich noch nicht.",
+        "frage": "Würden Sie für einen freien Tag auch weniger verdienen wollen?",
+        "antwort": "Ein bisschen weniger vielleicht schon. Zeit ist mir wichtig, und ich hätte mehr davon für meine Familie. Aber es darf nicht so viel sein, dass die Miete knapp wird."
+      },
+      "nummer": 20
+    },
+    {
+      "kurz": "Heizen und Energie",
+      "teil1": {
+        "situation": "In Ihrem Haus sind die Nebenkosten stark gestiegen. Sie und Ihr Partner / Ihre Partnerin sollen einen Informationsabend zum Energiesparen vorbereiten.",
+        "punkte": [
+          "Wann und wo soll der Abend sein?",
+          "Welche Tipps möchten Sie geben?",
+          "Wen laden Sie als Fachmann oder Fachfrau ein?",
+          "Was verteilen Sie an die Nachbarn?",
+          "Wie erreichen Sie auch die älteren Mieter?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Dienstagabend im Oktober vor, wenn die Heizperiode anfängt."
+          },
+          {
+            "wer": "B",
+            "text": "Guter Zeitpunkt. Im Gemeinschaftsraum haben wir Platz und es ist warm."
+          },
+          {
+            "wer": "A",
+            "text": "Bei den Tipps würde ich mit Lüften anfangen. Viele lassen das Fenster stundenlang gekippt."
+          },
+          {
+            "wer": "B",
+            "text": "Ja, Stoßlüften ist besser: fünf Minuten ganz auf, dann wieder zu."
+          },
+          {
+            "wer": "A",
+            "text": "Dazu die Heizung nicht ganz abdrehen, sonst wird die Wohnung feucht und es gibt Schimmel."
+          },
+          {
+            "wer": "B",
+            "text": "Ich frage bei der Verbraucherzentrale, ob jemand kommt. Die machen so etwas oft kostenlos."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gut. Wir verteilen dazu einen Zettel mit fünf einfachen Tipps."
+          },
+          {
+            "wer": "B",
+            "text": "Für die älteren Nachbarn klingele ich persönlich. Ein Zettel allein reicht da oft nicht."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man im Winter weniger heizen?",
+        "kultur": {
+          "de": "Heizen ist in Deutschland ein großes Thema, weil die Winter lang und die Kosten hoch sind. Die Heizkosten stehen in den Nebenkosten, die man zusätzlich zur Kaltmiete zahlt. Einmal im Jahr kommt die Nebenkostenabrechnung. Dann bekommt man Geld zurück oder muss nachzahlen. Wichtig ist richtiges Lüften: Man macht das Fenster kurz ganz auf, statt es lange zu kippen. Das nennt man Stoßlüften. Wer zu wenig heizt und zu wenig lüftet, bekommt Schimmel an den Wänden, und darüber gibt es oft Streit mit dem Vermieter. Als Mieter muss man die Wohnung so temperieren, dass kein Schaden entsteht. Seit den hohen Energiepreisen sind Wärmepumpe und Dämmung ein ständiges Gesprächs- und Politikthema.",
+          "en": "Heating is a big topic in Germany: long winters and high costs. Heating sits in the Nebenkosten, the service charges paid on top of the cold rent, and once a year a reconciliation statement either refunds you or asks for more. The practical skill is ventilation: open a window fully for a few minutes (Stoßlüften) rather than leaving it tilted for hours. Under-heating plus under-ventilating produces mould, a very common source of landlord disputes — as a tenant you are obliged to keep the flat warm enough to avoid damage. Since energy prices rose, heat pumps and insulation have been constant political talking points."
+        },
+        "wortschatz": [
+          {
+            "de": "die Heizung, -en",
+            "en": "heating"
+          },
+          {
+            "de": "die Nebenkosten",
+            "en": "service charges"
+          },
+          {
+            "de": "lüften / das Stoßlüften",
+            "en": "to air a room / burst airing"
+          },
+          {
+            "de": "der Schimmel",
+            "en": "mould"
+          },
+          {
+            "de": "die Dämmung",
+            "en": "insulation"
+          },
+          {
+            "de": "der Energieverbrauch",
+            "en": "energy consumption"
+          },
+          {
+            "de": "sparen",
+            "en": "to save"
+          },
+          {
+            "de": "die Abrechnung, -en",
+            "en": "statement of costs"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man im Winter weniger heizen? In Deutschland sind die Winter lang und die Energie ist teuer. Viele Menschen möchten sparen. Ich möchte zeigen, wo die Grenze liegt.",
+          "Ich beginne mit einer eigenen Erfahrung. In meinem ersten Winter habe ich sehr wenig geheizt, weil ich Angst vor der Rechnung hatte. Nach einigen Wochen kamen dunkle Flecken an der Wand hinter dem Schrank. Das war Schimmel. Mein Vermieter hat mir erklärt, dass man auch lüften und ein bisschen heizen muss. Seitdem mache ich dreimal am Tag das Fenster kurz ganz auf.",
+          "In meinem Heimatland Indien ist das kein Thema. Bei uns ist es in den meisten Regionen warm, und viele Wohnungen haben gar keine Heizung. Wir sparen eher Strom für die Klimaanlage im Sommer. Der deutsche Winter war für mich deshalb eine ganz neue Erfahrung. Wörter wie Stoßlüften oder Nebenkostenabrechnung musste ich erst lernen.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil vom Sparen ist klar: Man zahlt weniger und schont die Umwelt. Schon ein Grad weniger spart spürbar Energie. Ein Nachteil ist: Wenn man zu wenig heizt, wird die Wohnung feucht und es entsteht Schaden. Kalte Räume sind außerdem ungesund, besonders für Kinder und ältere Menschen. Meiner Meinung nach sollte man klug heizen statt einfach wenig: Räume unterschiedlich warm halten und richtig lüften.",
+          "Damit komme ich zum Schluss. Für mich heißt sparen nicht frieren, sondern richtig heizen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 241,
+          "sprechzeitSekunden": 161
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Die Geschichte mit dem Schimmel war sehr lehrreich. Daran denkt man am Anfang nicht.",
+        "frage": "Sollte der Staat den Menschen beim Heizen helfen?",
+        "antwort": "Ich finde ja, vor allem Familien mit wenig Geld. Sonst sitzen manche im Kalten. Am besten wäre Hilfe bei der Dämmung. Dann sinken die Kosten dauerhaft und nicht nur für einen Winter."
+      },
+      "nummer": 21
     }
   ]
 }
