@@ -377,3 +377,42 @@ export interface Lernhilfe {
     kleineWoerter: { gruppe: string; woerter: string }[];
   };
 }
+
+// --- the speaking trainer ---------------------------------------------------
+// Fifty practice tasks with the German background a candidate from outside the
+// country cannot invent, and model answers timed to the three minutes the exam
+// actually gives. Not an exam, so no public/keyed split: the answers are the
+// second half of the book, not something to withhold.
+
+export interface Sprechaufgabe {
+  nummer: number;
+  /** Short label for the list — the topic in three or four words. */
+  kurz: string;
+  teil1: {
+    situation: string;
+    punkte: string[];
+    musterdialog: { wer: string; text: string }[];
+  };
+  teil2: {
+    titel: string;
+    /** How the topic really works in Germany, in German and in English. */
+    kultur: { de: string; en: string };
+    wortschatz: { de: string; en: string }[];
+    /** One block per slide, five in all. */
+    musterloesung: string[];
+    umfang: { woerter: number; sprechzeitSekunden: number };
+  };
+  teil3: { rueckmeldung: string; frage: string; antwort: string };
+}
+
+export interface Sprechtraining {
+  titel: string;
+  untertitel: string;
+  stufe: Stufe;
+  version: string;
+  hinweis: string;
+  vorbereitungMinuten: number;
+  teile: { nummer: number; titel: string; dauerMinuten: number; anweisung: string }[];
+  folien: string[];
+  aufgaben: Sprechaufgabe[];
+}

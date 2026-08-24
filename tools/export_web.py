@@ -32,6 +32,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
 LERNHILFE = ROOT / "content" / "lernhilfe"
+SPRECHEN = ROOT / "content" / "sprechen"
 TARGET = ROOT / "apps" / "web" / "public" / "content"
 
 # Anything that reveals or justifies an answer, plus metadata the app does not
@@ -239,6 +240,24 @@ def export(exam_id: str, exam: dict[str, Any], with_audio: bool,
     }
 
 
+def export_sprechtraining(stufe: str) -> bool:
+    """Copy the speaking trainer for a level into the web content.
+
+    Nothing is stripped. The exam split exists because a candidate must not see
+    an answer key before submitting; this is a practice book whose whole second
+    half is answers, and hiding them would defeat it.
+    """
+    quelle = SPRECHEN / f"{stufe.lower()}.json"
+    if not quelle.exists():
+        return False
+
+    daten = json.loads(quelle.read_text(encoding="utf-8"))
+    daten.pop("$schema", None)
+    (TARGET / f"sprechen-{stufe.lower()}.json").write_text(
+        json.dumps(daten, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def lernhilfe_quelle(stufe: str) -> Path:
     """Where a level's cheat sheet lives.
 
@@ -313,13 +332,17 @@ def main(argv: Iterable[str] | None = None) -> int:
         # one so it can offer the button only where it leads somewhere.
         # In level order, so the app's tabs and this list agree.
         stufen = [s for s in ("A1", "A2", "B1", "B2") if export_lernhilfe(s)]
+        sprechen = [s for s in ("A1", "A2", "B1", "B2") if export_sprechtraining(s)]
         (TARGET / "index.json").write_text(
-            json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen},
+            json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen,
+                        "sprechenStufen": sprechen},
                        ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8")
         print(f"\nRegistry: {len(registry)} Prüfung(en) → {TARGET / 'index.json'}")
         for s in stufen:
             print(f"Spickzettel {s} → {TARGET / lernhilfe_datei(s)}")
+        for s in sprechen:
+            print(f"Sprechtraining {s} → {TARGET / f'sprechen-{s.lower()}.json'}")
     return 0
 
 

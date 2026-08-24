@@ -10,6 +10,7 @@
 import type {
   AudioManifest,
   Lernhilfe,
+  Sprechtraining,
   Niveau,
   OeffentlichePruefung,
   Schluesseldaten,
@@ -68,12 +69,17 @@ export const registryLaden = (): Promise<{
   pruefungen: RegistryEintrag[];
   /** Levels that actually ship a cheat sheet; the others hide the button. */
   lernhilfeStufen?: Stufe[];
+  /** Levels that ship a speaking trainer. Only B1 has one so far. */
+  sprechenStufen?: Stufe[];
 }> => holen(`${BASIS}/index.json`);
 
 export const lernhilfeLaden = (stufe: Stufe): Promise<Lernhilfe> =>
   holen(
     `${BASIS}/${stufe === 'B1' ? 'lernhilfe' : `lernhilfe-${stufe.toLowerCase()}`}.json`,
   );
+
+export const sprechtrainingLaden = (stufe: Stufe): Promise<Sprechtraining> =>
+  holen(`${BASIS}/sprechen-${stufe.toLowerCase()}.json`);
 
 export const pruefungLaden = (id: string): Promise<OeffentlichePruefung> =>
   holen(`${BASIS}/${id}/exam.public.json`);

@@ -1965,6 +1965,178 @@ button.pfad__halt:focus-visible {
   border: 0;
 }
 
+/* --- the speaking trainer -------------------------------------------------- */
+/* Fifty tasks with the German background behind each topic. The answers open
+   on a tab rather than on the page, because a model answer read before you
+   have spoken is a text you agree with, not something you produced. */
+.sprech__einstieg {
+  border-left: 5px solid var(--mark);
+}
+
+.sprech__seite {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.sprech__seite > .knopf {
+  align-self: flex-start;
+}
+.sprech__seite h1 {
+  margin: 0;
+}
+
+.sprech__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sprech__eintrag {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--edge);
+  border-left: 4px solid var(--mark);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.14s ease;
+}
+.sprech__eintrag:hover {
+  transform: translateY(-2px);
+  background: var(--soft);
+}
+
+.sprech__nr {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 99px;
+  background: var(--rule);
+  color: var(--bg);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sprech__kurz {
+  display: block;
+  color: var(--mute);
+  font-size: 0.9rem;
+}
+
+.sprech {
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  background: var(--bg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.sprech__kopf {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.sprech__kopf h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.sprech__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.sprech__inhalt h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1rem;
+  color: var(--mark);
+}
+.sprech__inhalt h3:first-child {
+  margin-top: 0;
+}
+.sprech__punkte {
+  margin: 0.3rem 0 0;
+  padding-left: 1.3rem;
+}
+.sprech__punkte li {
+  margin-bottom: 0.2rem;
+}
+.sprech__thema {
+  font-weight: 700;
+}
+.sprech__folie {
+  margin: 0.6rem 0 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.sprech__umfang {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--mute);
+}
+.sprech__dialog p {
+  margin: 0 0 0.35rem;
+}
+
+/* The whole reason this document exists: what is normal in Germany, which a
+   candidate who did not grow up here cannot invent under exam pressure. */
+.kulturkasten {
+  border-left: 3px solid var(--mark);
+  background: var(--soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.8rem 0.95rem;
+}
+.kulturkasten p {
+  margin: 0;
+}
+.kulturkasten__en {
+  margin-top: 0.6rem !important;
+  color: var(--mute);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.sprech__wortschatz {
+  border-collapse: collapse;
+  width: 100%;
+}
+.sprech__wortschatz td {
+  padding: 0.3rem 0.6rem 0.3rem 0;
+  vertical-align: top;
+}
+.sprech__gloss {
+  color: var(--mute);
+}
+
+.sprech__blaettern {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sprech__eintrag,
+  .sprech__eintrag:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
 /* --- motion --------------------------------------------------------------- */
 @keyframes karte-rein {
   from {

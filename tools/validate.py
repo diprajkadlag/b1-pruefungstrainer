@@ -32,6 +32,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
 LERNHILFE = ROOT / "content" / "lernhilfe"
+SPRECHEN = ROOT / "content" / "sprechen"
 SCHEMA = ROOT / "packages" / "schema" / "exam.schema.json"
 
 MODULNAMEN = ("Lesen", "Hören", "Schreiben", "Sprechen")
@@ -1404,6 +1405,97 @@ def load_exams(only: str | None) -> dict[str, dict[str, Any]]:
     return out
 
 
+def check_sprechtraining(rep: Report, stufe: str = "B1") -> None:
+    """Validate the speaking trainer.
+
+    Like the cheat sheet it has no schema of its own: it is one long document,
+    not a repeated form. But it drives a 116-page LaTeX build and an app screen,
+    and the failure modes are specific enough to be worth naming. The word
+    window is the interesting one — a model answer that does not fit the three
+    minutes it claims teaches the wrong pace, which is the whole point of
+    printing a time next to it.
+    """
+    quelle = SPRECHEN / f"{stufe.lower()}.json"
+    if not quelle.exists():
+        return
+
+    daten = json.loads(quelle.read_text(encoding="utf-8"))
+    for feld in ("titel", "untertitel", "stufe", "hinweis", "teile", "folien",
+                 "vorbereitungMinuten", "aufgaben"):
+        if feld not in daten:
+            rep.error("sprechtraining", f"missing top-level field {feld!r}")
+    if rep.errors:
+        return
+
+    if len(daten["folien"]) != 5:
+        rep.error("sprechtraining.folien",
+                  f"B1 Teil 2 has five slides, found {len(daten['folien'])}")
+    if len(daten["teile"]) != 3:
+        rep.error("sprechtraining.teile",
+                  f"B1 Sprechen has three parts, found {len(daten['teile'])}")
+
+    themen: dict[str, int] = {}
+    situationen: dict[str, int] = {}
+
+    for a in daten["aufgaben"]:
+        nr = a.get("nummer", "?")
+        ort = f"sprechtraining[{nr}]"
+        t1, t2, t3 = a.get("teil1", {}), a.get("teil2", {}), a.get("teil3", {})
+
+        if len(t1.get("punkte", [])) != 5:
+            rep.error(f"{ort}.teil1", "Teil 1 needs exactly five planning points")
+        if len(t1.get("musterdialog", [])) < 6:
+            rep.error(f"{ort}.teil1", "the model dialogue is too short to show a "
+                                      "negotiation reaching a decision")
+
+        titel = t2.get("titel", "")
+        if not titel.endswith("?"):
+            rep.error(f"{ort}.teil2", "the presentation topic should be a question")
+        themen[titel] = themen.get(titel, 0) + 1
+        sit = t1.get("situation", "")
+        situationen[sit] = situationen.get(sit, 0) + 1
+
+        loesung = t2.get("musterloesung", [])
+        if len(loesung) != 5:
+            rep.error(f"{ort}.teil2", f"one model answer per slide, found {len(loesung)}")
+        woerter = sum(len(b.split()) for b in loesung)
+        # 90 words a minute for a learner reading a prepared presentation: this
+        # window is 2:40 to 4:20 against a three-minute slot.
+        if not 240 <= woerter <= 390:
+            rep.error(f"{ort}.teil2",
+                      f"model answer is {woerter} words - outside the 240-390 that "
+                      f"fits 'ca. 3 Minuten'")
+        gemeldet = t2.get("umfang", {}).get("woerter")
+        if gemeldet is not None and gemeldet != woerter:
+            rep.error(f"{ort}.teil2",
+                      f"printed word count {gemeldet} does not match the text ({woerter})")
+
+        kultur = t2.get("kultur", {})
+        for sprache in ("de", "en"):
+            if len(kultur.get(sprache, "")) < 200:
+                rep.error(f"{ort}.teil2.kultur",
+                          f"the {sprache} culture note is too short to explain the "
+                          f"German context a newcomer is missing")
+        if len(t2.get("wortschatz", [])) < 6:
+            rep.error(f"{ort}.teil2", "too little topic vocabulary")
+        for w in t2.get("wortschatz", []):
+            # The printed table is two plain columns and cannot wrap.
+            if len(w.get("de", "")) > 34 or len(w.get("en", "")) > 46:
+                rep.error(f"{ort}.teil2.wortschatz",
+                          f"entry too long for the printed table: {w.get('de')!r}")
+
+        for feld in ("rueckmeldung", "frage", "antwort"):
+            if not t3.get(feld, "").strip():
+                rep.error(f"{ort}.teil3", f"missing {feld}")
+
+    for titel, n in themen.items():
+        if n > 1:
+            rep.error("sprechtraining", f"presentation topic used {n} times: {titel!r}")
+    for sit, n in situationen.items():
+        if n > 1:
+            rep.error("sprechtraining", f"planning situation used {n} times: {sit[:50]!r}")
+
+
 def lernhilfe_ordner(stufe: str) -> Path:
     """Where a level's cheat sheet lives.
 
@@ -1548,6 +1640,15 @@ def main(argv: Iterable[str] | None = None) -> int:
             if rep.findings:
                 reports[rep.exam_id] = rep
 
+        for stufe in FORMATE:
+            if not (SPRECHEN / f"{stufe.lower()}.json").exists():
+                continue
+            rep = Report(f"sprechtraining-{stufe.lower()}")
+            check_sprechtraining(rep, stufe)
+            lernhilfe_reps[f"sprechen-{stufe}"] = rep
+            if rep.findings:
+                reports[rep.exam_id] = rep
+
     n_err = n_warn = 0
     for exam_id in sorted(reports):
         rep = reports[exam_id]
@@ -1565,10 +1666,23 @@ def main(argv: Iterable[str] | None = None) -> int:
         for f in rep.findings:
             print(f)
 
-    for stufe, rep in lernhilfe_reps.items():
-        if not rep.findings:
-            print(f"\n{rep.exam_id}  [ok]")
-            print(f"  Spickzettel {stufe}: four modules, Redemittel, grammar "
+    # Two different documents share this dict, so the summary line has to say
+    # which one it is describing rather than calling everything a Spickzettel.
+    for schluessel, rep in lernhilfe_reps.items():
+        if rep.findings:
+            continue
+        print(f"\n{rep.exam_id}  [ok]")
+        if schluessel.startswith("sprechen-"):
+            stufe = schluessel.removeprefix("sprechen-")
+            n = len(
+                json.loads((SPRECHEN / f"{stufe.lower()}.json").read_text(encoding="utf-8"))[
+                    "aufgaben"
+                ]
+            )
+            print(f"  Sprechtraining {stufe}: {n} tasks, each with a culture note, "
+                  f"topic vocabulary and timed model answers.")
+        else:
+            print(f"  Spickzettel {schluessel}: four modules, Redemittel, grammar "
                   f"tables, word lists.")
 
     print(f"\n{'-' * 60}")
