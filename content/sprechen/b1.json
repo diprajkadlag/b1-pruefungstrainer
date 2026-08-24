@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "45 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "50 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -4938,6 +4938,551 @@
         "antwort": "Bei kleinen Kindern auf jeden Fall. Bei Jugendlichen würde ich lieber gemeinsam Regeln vereinbaren. Ein striktes Verbot führt meist nur dazu, dass sie es heimlich machen."
       },
       "nummer": 45
+    },
+    {
+      "kurz": "Werbung und Kinder",
+      "teil1": {
+        "situation": "Der Kindergarten Ihres Viertels braucht Geld für einen neuen Spielplatz. Sie und Ihr Partner / Ihre Partnerin planen eine Aktion dafür.",
+        "punkte": [
+          "Welche Aktion schlagen Sie vor?",
+          "Wann und wo soll sie stattfinden?",
+          "Wen sprechen Sie um Unterstützung an?",
+          "Wie viel Geld brauchen Sie?",
+          "Wer hilft bei der Organisation?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Basar mit Kuchen und Spielzeug vor. Die Eltern spenden die Sachen."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Als Termin würde ich einen Samstag im September nehmen, im Hof des Kindergartens."
+          },
+          {
+            "wer": "A",
+            "text": "Um Unterstützung könnten wir die Geschäfte in der Straße bitten. Viele geben gern etwas."
+          },
+          {
+            "wer": "B",
+            "text": "Und die Stadt hat einen Topf für Spielplätze. Ich frage im Rathaus nach."
+          },
+          {
+            "wer": "A",
+            "text": "Wir brauchen etwa fünftausend Euro. Das schaffen wir nicht allein mit Kuchen."
+          },
+          {
+            "wer": "B",
+            "text": "Deshalb sollten wir beides machen: Basar und Antrag bei der Stadt."
+          },
+          {
+            "wer": "A",
+            "text": "Bei der Organisation helfen sicher die Eltern. Ich mache eine Liste mit Schichten."
+          },
+          {
+            "wer": "B",
+            "text": "Ich kümmere mich um die Geschäfte und den Antrag. Zusammen sollte das reichen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man Werbung für Kinder verbieten?",
+        "kultur": {
+          "de": "Werbung ist in Deutschland recht streng geregelt. Im Fernsehen darf eine Kindersendung nicht durch Werbung unterbrochen werden. Schleichwerbung ist verboten, deshalb steht bei Videos im Internet oft groß das Wort „Werbung\" oder „Anzeige\". Auch Influencer müssen bezahlte Beiträge kennzeichnen; wer das nicht tut, bekommt Ärger. In Schulen ist Werbung meistens verboten, denn die Schule soll ein neutraler Ort sein. Für Lebensmittel gibt es den Nutri-Score, eine farbige Skala von A bis E. Sie ist freiwillig, aber viele Hersteller benutzen sie. Diskutiert wird gerade, ob Werbung für sehr süße Produkte im Kinderfernsehen ganz verboten werden soll.",
+          "en": "Advertising is fairly tightly regulated in Germany. Children's television programmes may not be interrupted by ads, and hidden advertising is illegal — which is why online videos carry a prominent „Werbung\" or „Anzeige\" label and influencers must mark paid posts or face penalties. Advertising in schools is generally banned, on the principle that school is a neutral space. Food carries the voluntary Nutri-Score, a colour scale from A to E that many manufacturers now use. A live political debate is whether advertising very sugary products during children's programming should be prohibited outright."
+        },
+        "wortschatz": [
+          {
+            "de": "die Werbung",
+            "en": "advertising"
+          },
+          {
+            "de": "die Anzeige, -n",
+            "en": "advertisement"
+          },
+          {
+            "de": "beeinflussen",
+            "en": "to influence"
+          },
+          {
+            "de": "die Zielgruppe, -n",
+            "en": "target group"
+          },
+          {
+            "de": "kennzeichnen",
+            "en": "to label, to mark"
+          },
+          {
+            "de": "der Verbraucherschutz",
+            "en": "consumer protection"
+          },
+          {
+            "de": "kritisch",
+            "en": "critical"
+          },
+          {
+            "de": "der Einfluss",
+            "en": "influence"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man Werbung für Kinder verbieten? In Deutschland gibt es dafür schon viele Regeln. Trotzdem sehen Kinder jeden Tag sehr viel Werbung, vor allem im Internet. Ich möchte zeigen, was dafür und dagegen spricht.",
+          "Ich erzähle von meiner Nichte. Sie ist neun Jahre alt und schaut gern Videos auf dem Tablet. Vor einigen Monaten wollte sie unbedingt ein bestimmtes Getränk haben. Ihre Lieblingsvideos hatten es gezeigt. Sie hat gar nicht gemerkt, dass das Werbung war. Ihre Mutter hat ihr dann erklärt, woran man Werbung erkennt. Heute sagt sie selbst: „Das ist doch nur Werbung.\"",
+          "In meinem Heimatland Indien ist Werbung noch stärker präsent. Bei uns läuft im Fernsehen sehr viel Werbung, auch zwischen Kindersendungen. Es gibt zwar Regeln, aber sie werden weniger streng kontrolliert. Viele Familien reden auch nicht darüber. Deshalb finde ich die deutschen Regeln gut, besonders die Pflicht, bezahlte Beiträge zu kennzeichnen.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil eines Verbots wäre: Kinder werden weniger beeinflusst, und es gibt weniger Streit in der Familie beim Einkaufen. Besonders bei Süßigkeiten wäre das gesünder. Ein Nachteil ist: Ein komplettes Verbot ist im Internet kaum zu kontrollieren. Außerdem finanzieren sich viele Angebote über Werbung. Meiner Meinung nach ist Aufklärung wichtiger als ein Verbot. Kinder sollten in der Schule lernen, Werbung zu erkennen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist das Ziel nicht, Kinder von Werbung fernzuhalten, sondern sie stark dagegen zu machen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 249,
+          "sprechzeitSekunden": 166
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank für Ihre Präsentation. Das Beispiel mit Ihrer Nichte war sehr konkret. Genau so passiert das im Alltag.",
+        "frage": "Ab welchem Alter sollten Kinder lernen, Werbung zu erkennen?",
+        "antwort": "Ich würde sagen, schon in der Grundschule, etwa ab sieben Jahren. Man muss es einfach erklären, mit Beispielen aus ihren eigenen Videos. Je früher sie es merken, desto besser."
+      },
+      "nummer": 46
+    },
+    {
+      "kurz": "Schwimmen lernen",
+      "teil1": {
+        "situation": "Das Schwimmbad in Ihrem Ort soll aus Kostengründen geschlossen werden. Sie und Ihr Partner / Ihre Partnerin planen eine Aktion dagegen.",
+        "punkte": [
+          "Was für eine Aktion machen Sie?",
+          "Wann und wo?",
+          "Wen möchten Sie erreichen?",
+          "Welche Argumente nennen Sie?",
+          "Wie geht es nach der Aktion weiter?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage eine Unterschriftensammlung vor, dazu einen Aktionstag am Schwimmbad."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Als Termin würde ich einen Samstagvormittag nehmen, wenn viele Familien da sind."
+          },
+          {
+            "wer": "A",
+            "text": "Erreichen möchten wir vor allem Eltern, Vereine und den Stadtrat."
+          },
+          {
+            "wer": "B",
+            "text": "Der Stadtrat entscheidet ja. Wir sollten die Unterschriften dort direkt übergeben."
+          },
+          {
+            "wer": "A",
+            "text": "Als Argument nenne ich: Jedes Kind muss schwimmen lernen. Das ist Sicherheit, kein Luxus."
+          },
+          {
+            "wer": "B",
+            "text": "Und die Schule braucht das Bad für den Sportunterricht. Ohne Bad fällt der aus."
+          },
+          {
+            "wer": "A",
+            "text": "Danach sollten wir am Ball bleiben und in die nächste Ratssitzung gehen."
+          },
+          {
+            "wer": "B",
+            "text": "Ich melde uns dort an. Machst du die Listen und sprichst mit der Zeitung?"
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte jedes Kind schwimmen lernen müssen?",
+        "kultur": {
+          "de": "Schwimmen hat in Deutschland einen hohen Stellenwert. In den meisten Bundesländern gehört Schwimmunterricht zum Lehrplan der Grundschule. Es gibt ein festes System von Abzeichen: Seepferdchen für Anfänger, danach Bronze, Silber und Gold. Das Seepferdchen bedeutet aber noch nicht, dass ein Kind sicher schwimmen kann; dafür gilt erst Bronze. Viele Kinder lernen es im Verein oder bei der DLRG, der Deutschen Lebens-Rettungs-Gesellschaft, die zum großen Teil ehrenamtlich arbeitet. Ein Problem ist, dass viele Städte ihre Bäder aus Kostengründen schließen. Deshalb können immer mehr Kinder am Ende der Grundschule nicht sicher schwimmen. Im Sommer warnt die DLRG jedes Jahr vor dem Baden in Flüssen und Seen.",
+          "en": "Swimming is taken seriously in Germany: in most federal states it is part of the primary curriculum. There is a formal badge system — Seepferdchen for beginners, then Bronze, Silver and Gold — and it is worth knowing that Seepferdchen does not yet mean a child swims safely; Bronze is the real threshold. Many children learn through a club or the DLRG, the largely volunteer-run lifesaving organisation. The pressing problem is that councils keep closing pools to save money, so a growing share of children leave primary school unable to swim safely — the DLRG issues warnings about rivers and lakes every summer."
+        },
+        "wortschatz": [
+          {
+            "de": "das Schwimmbad, -bäder",
+            "en": "swimming pool"
+          },
+          {
+            "de": "der Schwimmunterricht",
+            "en": "swimming lessons"
+          },
+          {
+            "de": "das Abzeichen, -",
+            "en": "badge, certificate"
+          },
+          {
+            "de": "die Sicherheit",
+            "en": "safety"
+          },
+          {
+            "de": "ertrinken",
+            "en": "to drown"
+          },
+          {
+            "de": "der Nichtschwimmer, -",
+            "en": "non-swimmer"
+          },
+          {
+            "de": "die Gemeinde, -n",
+            "en": "municipality"
+          },
+          {
+            "de": "schließen",
+            "en": "to close down"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Sollte jedes Kind schwimmen lernen müssen? In Deutschland gehört Schwimmen in den meisten Bundesländern zum Unterricht. Trotzdem können viele Kinder es am Ende der Grundschule nicht sicher. Ich möchte zeigen, warum das ein Problem ist.",
+          "Ich erzähle von meiner eigenen Erfahrung. Ich habe erst mit fünfundzwanzig Jahren schwimmen gelernt, hier in Deutschland. In einem Kurs für Erwachsene waren wir zehn Personen. Am Anfang hatte ich große Angst vor dem tiefen Wasser. Nach drei Monaten konnte ich zwei Bahnen schwimmen. Ich war sehr stolz, aber ich habe auch gedacht: Als Kind wäre das viel leichter gewesen.",
+          "In meinem Heimatland Indien lernen viele Menschen nie schwimmen. Bei uns gibt es wenige öffentliche Schwimmbäder, und in der Schule steht Schwimmen nicht auf dem Plan. Wer am Meer oder an einem Fluss wohnt, lernt es von der Familie. Für Mädchen ist der Zugang oft noch schwieriger. Deshalb finde ich den deutschen Schwimmunterricht sehr wertvoll.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist klar: Schwimmen rettet Leben. Jedes Jahr ertrinken Menschen in Seen und Flüssen. Außerdem ist Schwimmen ein gesunder Sport für den ganzen Körper. Ein Nachteil ist: Es kostet Geld und Zeit, und viele Städte schließen ihre Bäder. Manche Kinder haben auch große Angst vor Wasser. Meiner Meinung nach sollte Schwimmen für alle Kinder Pflicht sein, aber dann müssen die Städte auch die Bäder erhalten.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Schwimmen keine Sportart wie jede andere, sondern eine Frage der Sicherheit. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 253,
+          "sprechzeitSekunden": 169
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Dass Sie es erst als Erwachsener gelernt haben, macht Ihr Argument sehr glaubwürdig.",
+        "frage": "Was könnten Städte tun, wenn sie kein eigenes Bad bezahlen können?",
+        "antwort": "Sie könnten sich mit Nachbargemeinden zusammentun und ein Bad gemeinsam betreiben. Außerdem helfen Vereine und die DLRG viel. Wichtig wäre ein Bus, der die Kinder aus dem Ort dorthin bringt."
+      },
+      "nummer": 47
+    },
+    {
+      "kurz": "Freundschaft im Internet",
+      "teil1": {
+        "situation": "Ihr Deutschkurs möchte auch nach dem Kursende in Kontakt bleiben. Sie und Ihr Partner / Ihre Partnerin planen, wie das gehen kann.",
+        "punkte": [
+          "Wie halten Sie Kontakt?",
+          "Wie oft treffen Sie sich?",
+          "Wo könnten Sie sich treffen?",
+          "Was machen Sie bei den Treffen?",
+          "Wer organisiert die Termine?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde eine Gruppe im Messenger machen. Da sind alle sowieso jeden Tag."
+          },
+          {
+            "wer": "B",
+            "text": "Gut, aber wir sollten fragen, ob alle einverstanden sind. Nicht jeder gibt gern seine Nummer."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Wer nicht möchte, bekommt die Termine per E-Mail."
+          },
+          {
+            "wer": "B",
+            "text": "Treffen würde ich einmal im Monat vorschlagen. Öfter schafft niemand."
+          },
+          {
+            "wer": "A",
+            "text": "Als Ort passt ein Café in der Innenstadt. Das erreichen alle gut mit der Bahn."
+          },
+          {
+            "wer": "B",
+            "text": "Bei den Treffen sollten wir nur Deutsch sprechen. Sonst wechseln wir sofort ins Englische."
+          },
+          {
+            "wer": "A",
+            "text": "Vielleicht bringt jeder ein Thema mit. Dann gibt es immer etwas zu reden."
+          },
+          {
+            "wer": "B",
+            "text": "Ich mache die Gruppe und erinnere an die Termine. Suchst du das Café aus?"
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sind Freundschaften im Internet echte Freundschaften?",
+        "kultur": {
+          "de": "Freundschaft bedeutet in Deutschland etwas anderes als in vielen anderen Ländern. Man unterscheidet klar zwischen Bekannten und Freunden. „Freund\" sagt man erst nach längerer Zeit, und ein echter Freundeskreis ist oft klein. Dafür halten diese Freundschaften meistens sehr lange, manchmal seit der Schulzeit. Neue Kontakte entstehen vor allem über feste Strukturen: Verein, Arbeit, Kurs oder Nachbarschaft. Spontan jemanden auf der Straße anzusprechen, ist eher unüblich. Auch bei Verabredungen ist man genau: Man fragt vorher und kommt nicht einfach vorbei. Online-Kontakte sind normal, aber die meisten Menschen trennen zwischen Netzwerken für den Beruf und privaten Freundschaften.",
+          "en": "Friendship works differently here than in many countries. Germans distinguish sharply between Bekannte (acquaintances) and Freunde; the word Freund is used only after considerable time, and a real circle of friends is often small — but those friendships tend to last decades, sometimes from school. New ones form through structures: a club, work, a course, the neighbourhood. Striking up conversation with strangers in the street is unusual, and visits are arranged in advance rather than spontaneous. Online contact is normal, but most people keep professional networks separate from private friendships."
+        },
+        "wortschatz": [
+          {
+            "de": "die Freundschaft, -en",
+            "en": "friendship"
+          },
+          {
+            "de": "der Bekannte, -n",
+            "en": "acquaintance"
+          },
+          {
+            "de": "der Kontakt, -e",
+            "en": "contact"
+          },
+          {
+            "de": "sich verabreden",
+            "en": "to arrange to meet"
+          },
+          {
+            "de": "vertrauen",
+            "en": "to trust"
+          },
+          {
+            "de": "das soziale Netzwerk",
+            "en": "social network"
+          },
+          {
+            "de": "oberflächlich",
+            "en": "superficial"
+          },
+          {
+            "de": "sich melden",
+            "en": "to get in touch"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sind Freundschaften im Internet echte Freundschaften? Heute lernen sich viele Menschen zuerst online kennen. Ich möchte zeigen, was das für die Freundschaft bedeutet.",
+          "Ich erzähle von meiner eigenen Erfahrung. Als ich neu in Deutschland war, hatte ich hier niemanden. Ich habe jeden Abend mit meinen Freunden in Indien telefoniert. Das hat mir sehr geholfen. Aber wenn ich krank war, konnte mir niemand von ihnen eine Suppe bringen. Deshalb habe ich angefangen, auch hier Leute zu suchen, im Kurs und im Verein.",
+          "In meinem Heimatland Indien ist Freundschaft oft sehr schnell und sehr eng. Man sagt schon nach kurzer Zeit „mein Freund\" und besucht sich ohne Anmeldung. In Deutschland habe ich gelernt, dass man zwischen Bekannten und Freunden unterscheidet. Am Anfang fand ich das kalt. Heute finde ich es ehrlich: Wer hier „Freund\" sagt, meint es auch so.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil von Online-Kontakten ist: Entfernung spielt keine Rolle. Man bleibt mit der Familie und mit alten Freunden in Verbindung, auch über Tausende Kilometer. Man findet Menschen mit denselben Interessen. Ein Nachteil ist: Vieles bleibt oberflächlich. Man sieht meistens nur die schönen Momente, und im Notfall ist niemand da. Meiner Meinung nach sind Online-Freundschaften echt, aber sie ersetzen keine Menschen vor Ort.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich braucht man beides: alte Freunde am Telefon und neue Freunde in der Nähe. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 241,
+          "sprechzeitSekunden": 161
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Der Satz mit der Suppe hat mir gefallen. Das bringt den Unterschied sehr gut auf den Punkt.",
+        "frage": "Wie findet man als Erwachsener neue Freunde?",
+        "antwort": "Am besten über etwas Regelmäßiges: einen Kurs, einen Verein oder einen Chor. Wenn man dieselben Leute jede Woche sieht, entsteht mit der Zeit Vertrauen. Einmalige Treffen führen selten zu einer Freundschaft."
+      },
+      "nummer": 48
+    },
+    {
+      "kurz": "Lernen ein Leben lang",
+      "teil1": {
+        "situation": "Ihre Volkshochschule möchte neue Kurse anbieten und fragt die Teilnehmer nach Ideen. Sie und Ihr Partner / Ihre Partnerin machen einen Vorschlag.",
+        "punkte": [
+          "Welchen Kurs schlagen Sie vor?",
+          "Für welche Zielgruppe?",
+          "Wann soll der Kurs stattfinden?",
+          "Wer könnte ihn leiten?",
+          "Wie machen Sie ihn bekannt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Kurs „Digitale Behörden\" vor. Viele verstehen die Online-Formulare nicht."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gute Idee. Zielgruppe wären vor allem ältere Menschen und Neuzugewanderte."
+          },
+          {
+            "wer": "A",
+            "text": "Der Kurs sollte am Vormittag sein, dann können Rentner gut kommen."
+          },
+          {
+            "wer": "B",
+            "text": "Und ein zweiter Termin am Abend für Berufstätige. Sechs Wochen, jeweils zwei Stunden."
+          },
+          {
+            "wer": "A",
+            "text": "Leiten könnte das jemand von der Stadtverwaltung, zusammen mit einem Kursleiter."
+          },
+          {
+            "wer": "B",
+            "text": "Wichtig ist, dass man eigene Geräte mitbringen darf und daran übt."
+          },
+          {
+            "wer": "A",
+            "text": "Bekannt machen würde ich es über die Zeitung, das Rathaus und die Arztpraxen."
+          },
+          {
+            "wer": "B",
+            "text": "Ich spreche mit der Stadt, du machst den Text für die Zeitung."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Muss man heute sein Leben lang weiterlernen?",
+        "kultur": {
+          "de": "Lebenslanges Lernen ist in Deutschland ein fester Begriff. Die Volkshochschulen, kurz VHS, gibt es in fast jeder Stadt. Sie bieten günstige Kurse für alle Altersgruppen an: Sprachen, Computer, Handwerk, Gesundheit. Ein Kurs kostet oft nur wenige Euro pro Abend, und wer wenig verdient, bekommt eine Ermäßigung. Wichtig ist auch das Thema Digitalisierung: Immer mehr Behördengänge laufen online, zum Beispiel Anträge und Termine. Für ältere Menschen ist das oft schwierig, deshalb gibt es viele Angebote wie „Digital-Lotsen\" oder Sprechstunden in Bibliotheken. Auch im Beruf ist Weiterbildung normal: Wer sich nicht regelmäßig fortbildet, hat es bei einem Jobwechsel schwerer.",
+          "en": "Lifelong learning is an established idea here, and the Volkshochschule (VHS) in almost every town is its main vehicle: cheap courses for all ages in languages, computing, crafts and health, often a few euros an evening with reductions for low incomes. Digitalisation makes this pressing — more and more dealings with authorities happen online, which is hard for older people, so libraries and councils run „Digital-Lotsen\" schemes and drop-in help. Professionally, continuing training is simply expected; not keeping up makes changing jobs noticeably harder."
+        },
+        "wortschatz": [
+          {
+            "de": "lebenslanges Lernen",
+            "en": "lifelong learning"
+          },
+          {
+            "de": "die Volkshochschule",
+            "en": "adult education centre"
+          },
+          {
+            "de": "die Digitalisierung",
+            "en": "digitalisation"
+          },
+          {
+            "de": "der Kursleiter, -",
+            "en": "course leader"
+          },
+          {
+            "de": "die Neugier",
+            "en": "curiosity"
+          },
+          {
+            "de": "sich anmelden",
+            "en": "to register"
+          },
+          {
+            "de": "veraltet",
+            "en": "outdated"
+          },
+          {
+            "de": "die Fähigkeit, -en",
+            "en": "skill, ability"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Muss man heute sein Leben lang weiterlernen? Die Welt verändert sich schnell, besonders durch die Digitalisierung. Ich möchte zeigen, was das für uns alle bedeutet.",
+          "Ich erzähle von meiner eigenen Erfahrung. Vor zwei Jahren wurde in meiner Firma eine neue Software eingeführt. Ich habe am Anfang gedacht: Das brauche ich nicht, ich arbeite seit Jahren gut so. Nach ein paar Wochen war ich der Einzige, der langsam war. Dann habe ich einen Abendkurs besucht. Heute helfe ich sogar neuen Kollegen. Das hat mir gezeigt, dass Lernen nie aufhört.",
+          "In meinem Heimatland Indien ist Lernen sehr stark mit der Jugend verbunden. Bei uns lernt man in der Schule und im Studium, und danach arbeitet man. Kurse für Erwachsene gibt es vor allem in großen Städten und meistens privat. Ein System wie die Volkshochschule, das günstig und für alle offen ist, kannte ich nicht. Ich finde es sehr gut.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Man bleibt im Beruf sicher und kann sich verändern. Lernen hält außerdem geistig fit und macht oft Spaß. Man trifft neue Menschen. Ein Nachteil ist: Es kostet Zeit neben Arbeit und Familie, und manche fühlen sich unter Druck. Nicht jeder kann sich Kurse leisten. Meiner Meinung nach sollte Weiterbildung ein Angebot sein und keine Drohung.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist der wichtigste Punkt: Neugier bleibt, wenn man klein anfängt. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 243,
+          "sprechzeitSekunden": 162
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Ihre Geschichte mit der neuen Software war sehr ehrlich. So geht es vielen.",
+        "frage": "Wie könnte man ältere Menschen beim digitalen Lernen unterstützen?",
+        "antwort": "Ich würde kleine Gruppen machen, höchstens sechs Personen, und in Ruhe üben lassen. Wichtig ist, dass man das eigene Handy benutzt. Und es darf keine dummen Fragen geben."
+      },
+      "nummer": 49
+    },
+    {
+      "kurz": "Leitungswasser statt Flaschen",
+      "teil1": {
+        "situation": "Ihre Firma möchte weniger Plastikmüll produzieren. Sie und Ihr Partner / Ihre Partnerin sollen Vorschläge für das Büro machen.",
+        "punkte": [
+          "Was möchten Sie ändern?",
+          "Was brauchen Sie dafür?",
+          "Wie überzeugen Sie die Kollegen?",
+          "Was kostet es?",
+          "Wie prüfen Sie später, ob es funktioniert hat?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde die Wasserflaschen abschaffen und stattdessen Leitungswasser anbieten."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Dafür brauchen wir einen Wasserspender mit Sprudel und Gläser oder Flaschen."
+          },
+          {
+            "wer": "A",
+            "text": "Jeder Mitarbeiter bekommt einmal eine eigene Flasche mit dem Firmennamen."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Überzeugen hilft eine Zahl: Wir werfen im Jahr fast zehntausend Plastikflaschen weg."
+          },
+          {
+            "wer": "A",
+            "text": "Auch die Kaffeebecher könnten wir ersetzen, durch feste Tassen in der Küche."
+          },
+          {
+            "wer": "B",
+            "text": "Der Spender kostet etwa dreitausend Euro im Jahr. Das ist ungefähr so viel wie die Flaschen jetzt."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gut, dann kostet es nichts extra. Nach sechs Monaten sollten wir nachrechnen."
+          },
+          {
+            "wer": "B",
+            "text": "Ich hole Angebote ein, du schreibst den Vorschlag für die Leitung."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man Leitungswasser statt Wasser aus Flaschen trinken?",
+        "kultur": {
+          "de": "Leitungswasser hat in Deutschland eine sehr gute Qualität. Es ist das am strengsten kontrollierte Lebensmittel im Land, und man kann es überall bedenkenlos trinken. Trotzdem kaufen viele Menschen Wasser in Flaschen, oft aus Gewohnheit oder weil sie Sprudel mögen. Deutschland trinkt besonders gern Wasser mit Kohlensäure, was in vielen Ländern ungewöhnlich ist. Wer in einem Restaurant „ein Wasser\" bestellt, bekommt meistens eine Flasche und zahlt dafür; Leitungswasser gratis zu bekommen, ist unüblich, auch wenn manche Lokale mitmachen. Für Flaschen gibt es Pfand: 25 Cent auf Einwegflaschen und weniger auf Mehrwegflaschen. Mehrweg ist deutlich besser für die Umwelt.",
+          "en": "Tap water in Germany is excellent — the most strictly monitored foodstuff in the country and safe to drink anywhere. People still buy bottled water, largely from habit or because Germany has an unusually strong taste for sparkling water. One practical point that catches visitors out: order „ein Wasser\" in a restaurant and you get a bottle and a bill — free tap water is not customary, though some places now offer it. Bottles carry Pfand, 25 cents on single-use and less on refillable ones; the refillable Mehrweg system is markedly better for the environment."
+        },
+        "wortschatz": [
+          {
+            "de": "das Leitungswasser",
+            "en": "tap water"
+          },
+          {
+            "de": "die Kohlensäure",
+            "en": "carbonation, fizz"
+          },
+          {
+            "de": "das Pfand",
+            "en": "deposit"
+          },
+          {
+            "de": "die Einwegflasche, -n",
+            "en": "single-use bottle"
+          },
+          {
+            "de": "die Mehrwegflasche, -n",
+            "en": "returnable bottle"
+          },
+          {
+            "de": "der Plastikmüll",
+            "en": "plastic waste"
+          },
+          {
+            "de": "die Qualität",
+            "en": "quality"
+          },
+          {
+            "de": "schleppen",
+            "en": "to lug, to carry"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man Leitungswasser statt Wasser aus Flaschen trinken? In Deutschland ist Leitungswasser sehr streng kontrolliert. Trotzdem kaufen viele Menschen Flaschen. Ich möchte zeigen, warum das so ist.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meinem ersten Jahr habe ich jede Woche Wasserkisten aus dem Supermarkt nach Hause getragen. Ich wohne im dritten Stock ohne Aufzug, das war anstrengend. Ein Kollege hat mich gefragt, warum ich das mache. Er trinkt seit Jahren nur Leitungswasser. Ich habe es probiert und keinen Unterschied geschmeckt. Seitdem spare ich Geld und viel Arbeit.",
+          "In meinem Heimatland Indien ist das anders. Bei uns kann man das Wasser aus der Leitung meistens nicht direkt trinken. Fast jede Familie hat einen Filter zu Hause, oder man kauft große Kanister. Deshalb ist es für viele Inder ungewohnt, einfach ein Glas am Wasserhahn zu füllen. Ich musste mich wirklich daran gewöhnen.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil von Leitungswasser ist: Es ist sehr günstig, es entsteht kein Müll, und man muss nichts schleppen. Der Transport von Flaschen verbraucht außerdem viel Energie. Ein Nachteil ist: Manche mögen lieber Sprudel, und in sehr alten Häusern machen sich Leute Sorgen wegen der Rohre. Meiner Meinung nach sollte man zu Hause Leitungswasser trinken und den Sprudel selbst machen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich war das eine der einfachsten Änderungen mit der größten Wirkung. Es kostet nichts und man muss nichts lernen. Man dreht einfach den Hahn auf. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 253,
+          "sprechzeitSekunden": 169
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Das Bild mit den Kisten im dritten Stock war sehr anschaulich. Das kennen viele.",
+        "frage": "Sollten Restaurants kostenlos Leitungswasser anbieten müssen?",
+        "antwort": "Eine Pflicht fände ich zu streng, denn die Lokale müssen ja auch verdienen. Aber ich finde, es sollte normal werden, ein Glas Wasser zum Essen zu bekommen. In einigen Ländern ist das selbstverständlich."
+      },
+      "nummer": 50
     }
   ]
 }
