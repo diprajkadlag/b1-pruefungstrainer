@@ -1,0 +1,1346 @@
+{
+  "$schema": "../../packages/schema/sprechtraining.schema.json",
+  "titel": "Sprechtraining B1",
+  "stufe": "B1",
+  "version": "1.0.0",
+  "hinweis": "Diese Sammlung ist kein Prüfungssatz, sondern ein Übungsbuch. Teil A enthält 50 vollständige Sprechaufgaben — arbeiten Sie damit wie in der Prüfung: 15 Minuten Vorbereitung, dann sprechen. Teil B enthält zu jeder Aufgabe erst das Hintergrundwissen zum Thema und dann eine Musterlösung. Lesen Sie Teil B erst, nachdem Sie selbst gesprochen haben.",
+  "vorbereitungMinuten": 15,
+  "teile": [
+    {
+      "nummer": 1,
+      "titel": "Gemeinsam etwas planen",
+      "dauerMinuten": 3,
+      "anweisung": "Sie sollen zusammen mit Ihrem Partner / Ihrer Partnerin etwas planen. Sprechen Sie über die fünf Punkte, machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihres Partners / Ihrer Partnerin und kommen Sie am Ende zu einer gemeinsamen Entscheidung."
+    },
+    {
+      "nummer": 2,
+      "titel": "Ein Thema präsentieren",
+      "dauerMinuten": 3,
+      "anweisung": "Präsentieren Sie Ihr Thema in fünf Schritten. Halten Sie sich an die Reihenfolge der Folien und sprechen Sie frei."
+    },
+    {
+      "nummer": 3,
+      "titel": "Über ein Thema sprechen",
+      "dauerMinuten": 2,
+      "anweisung": "Geben Sie Ihrem Partner / Ihrer Partnerin eine kurze Rückmeldung zur Präsentation und stellen Sie eine Frage dazu. Beantworten Sie danach die Frage zu Ihrer eigenen Präsentation."
+    }
+  ],
+  "folien": [
+    "Folie 1 — Nennen Sie das Thema und sagen Sie kurz, worum es geht.",
+    "Folie 2 — Berichten Sie von Ihren eigenen Erfahrungen oder von einem Erlebnis.",
+    "Folie 3 — Beschreiben Sie die Situation in Ihrem Heimatland. Geben Sie Beispiele.",
+    "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
+    "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
+  ],
+  "untertitel": "12 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "aufgaben": [
+    {
+      "kurz": "Urlaub und Erreichbarkeit",
+      "teil1": {
+        "situation": "Ihr Deutschkurs endet in zwei Wochen. Die Gruppe möchte am letzten Kurstag ein kleines Abschlussfest feiern. Sie und Ihr Partner / Ihre Partnerin sollen das Fest organisieren.",
+        "punkte": [
+          "Wann und wo soll das Fest stattfinden?",
+          "Wen laden Sie ein?",
+          "Was soll es zu essen und zu trinken geben?",
+          "Welches Programm oder welche Musik planen Sie?",
+          "Wer kauft ein und wer räumt am Ende auf?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Sollen wir mit dem Termin anfangen? Ich schlage den letzten Freitag vor, direkt nach dem Unterricht."
+          },
+          {
+            "wer": "B",
+            "text": "Freitag finde ich gut. Aber vielleicht lieber ab 17 Uhr? Dann können auch die Kollegen kommen, die arbeiten."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden, 17 Uhr. Und wo? Der Kursraum ist klein. Wie wäre es im Hof hinter der Schule?"
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Wenn es regnet, gehen wir in den Kursraum. Wen laden wir ein?"
+          },
+          {
+            "wer": "A",
+            "text": "Alle aus dem Kurs und unsere Lehrerin. Und vielleicht die Gruppe aus dem A2-Kurs?"
+          },
+          {
+            "wer": "B",
+            "text": "Das sind dann etwa fünfundzwanzig Personen. Beim Essen schlage ich ein Büfett vor. Jeder bringt etwas aus seinem Land mit."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr schön. Getränke kaufen wir zusammen. Wasser, Saft und vielleicht ein paar Flaschen Bier."
+          },
+          {
+            "wer": "B",
+            "text": "Ich übernehme den Einkauf, wenn du die Einladung schreibst. Und aufräumen machen wir alle zusammen, sonst dauert es zu lange."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Dann haben wir alles: Freitag, 17 Uhr, Hof, Büfett, ich schreibe die Einladung, du kaufst ein."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man im Urlaub für die Arbeit erreichbar sein?",
+        "kultur": {
+          "de": "In Deutschland haben Angestellte viel Urlaub. Das Gesetz garantiert mindestens 20 Tage im Jahr bei einer Fünf-Tage-Woche. In der Praxis geben die meisten Firmen 28 bis 30 Tage. Urlaub gilt als Erholung und nicht als Luxus. Deshalb denken viele Deutsche: Im Urlaub arbeitet man nicht. Man liest keine E-Mails und geht nicht ans Diensthandy. Vor dem Urlaub schreibt man eine Abwesenheitsnotiz. Darin steht, wer die Arbeit übernimmt. Diesen Kollegen nennt man die Vertretung. Ein Recht auf Unerreichbarkeit steht aber nicht im Gesetz. Jede Firma regelt es selbst. Einige große Betriebe halten die E-Mails im Urlaub sogar zurück. In anderen Firmen ruft der Chef trotzdem an. Über dieses Thema wird in Deutschland viel diskutiert.",
+          "en": "German employees get a lot of leave: the legal minimum is 20 days a year on a five-day week, and most employers actually give 28 to 30. Holiday is treated as recovery, not as a perk, so the common view is that you simply do not work during it — no email, no work phone. Before going away you set an out-of-office message naming the colleague who covers your work; that person is called your Vertretung. There is no legal right to be unreachable, so each company decides. Some large employers hold back email during leave; elsewhere managers still call. It is an active public debate, which is exactly why it makes a good exam topic."
+        },
+        "wortschatz": [
+          {
+            "de": "der Jahresurlaub",
+            "en": "annual leave"
+          },
+          {
+            "de": "die Vertretung, -en",
+            "en": "the colleague covering for you"
+          },
+          {
+            "de": "die Abwesenheitsnotiz, -en",
+            "en": "out-of-office message"
+          },
+          {
+            "de": "erreichbar sein",
+            "en": "to be reachable"
+          },
+          {
+            "de": "die Erholung",
+            "en": "rest, recovery"
+          },
+          {
+            "de": "das Diensthandy, -s",
+            "en": "work phone"
+          },
+          {
+            "de": "abschalten",
+            "en": "to switch off (also mentally)"
+          },
+          {
+            "de": "der Notfall, -fälle",
+            "en": "emergency"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man im Urlaub für die Arbeit erreichbar sein? Das heißt: Soll man im Urlaub E-Mails lesen und ans Telefon gehen? Ich finde das Thema wichtig, denn fast jeder Berufstätige kennt diese Situation.",
+          "Ich erzähle zuerst von mir. Letztes Jahr hatte ich zwei Wochen Urlaub. Ich war am Meer. Trotzdem habe ich jeden Morgen meine E-Mails gelesen. Danach war ich oft nervös. Erst in der zweiten Woche habe ich das Handy weggelegt. Dann konnte ich mich endlich erholen. Heute weiß ich: Für mich ist es besser, wenn ich ganz abschalte.",
+          "Jetzt spreche ich über mein Heimatland Indien. Bei uns ist es oft anders. Viele Leute haben weniger Urlaubstage, oft nur zwölf oder fünfzehn im Jahr. Außerdem ist es normal, dass der Chef auch im Urlaub anruft. Viele Kollegen antworten sofort, denn sie wollen zeigen, dass sie zuverlässig sind. In Deutschland ist der Urlaub dagegen meistens geschützt. Man schreibt eine Abwesenheitsnotiz und nennt eine Vertretung.",
+          "Nun nenne ich Vor- und Nachteile. Ein Vorteil ist: Wenn man erreichbar ist, gibt es weniger Probleme in der Firma. Man kann eine wichtige Frage schnell beantworten. Ein Nachteil ist aber: Man erholt sich nicht richtig. Der Kopf bleibt bei der Arbeit. Auf Dauer macht das krank. Meiner Meinung nach sollte man im Urlaub nicht erreichbar sein. Nur in einem echten Notfall finde ich einen Anruf in Ordnung.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Urlaub Zeit für Erholung, und Erholung braucht Ruhe. Eine gute Vertretung im Büro ist deshalb besser als ein Chef, der im Urlaub anruft. Wer wirklich abschaltet, kommt danach mit mehr Energie zurück. Davon hat am Ende auch die Firma etwas. Vielen Dank für Ihre Aufmerksamkeit. Haben Sie noch Fragen?"
+        ],
+        "umfang": {
+          "woerter": 289,
+          "sprechzeitSekunden": 193
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank für Ihre Präsentation. Mir hat besonders gefallen, dass Sie von Ihrem eigenen Urlaub erzählt haben. Das Beispiel war sehr klar.",
+        "frage": "Glauben Sie, dass Firmen die Erreichbarkeit im Urlaub verbieten sollten?",
+        "antwort": "Das ist eine gute Frage. Ich glaube ja, ein Verbot wäre hilfreich. Wenn es eine klare Regel gibt, hat niemand ein schlechtes Gewissen. Ohne Regel schauen die meisten Leute doch heimlich auf ihr Handy."
+      },
+      "nummer": 1
+    },
+    {
+      "kurz": "Sonntag und Ladenschluss",
+      "teil1": {
+        "situation": "Eine neue Familie ist in Ihr Haus eingezogen. Sie kommt aus dem Ausland und kennt die Stadt noch nicht. Sie und Ihr Partner / Ihre Partnerin möchten die Familie begrüßen und ihr helfen.",
+        "punkte": [
+          "Wann besuchen Sie die Familie?",
+          "Was bringen Sie als Willkommensgeschenk mit?",
+          "Welche Informationen über das Haus sind wichtig?",
+          "Was zeigen Sie der Familie im Stadtteil?",
+          "Wer kümmert sich um was?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Wollen wir die neuen Nachbarn am Samstagnachmittag besuchen? Am Wochenende haben die meisten Leute Zeit."
+          },
+          {
+            "wer": "B",
+            "text": "Samstag passt gut. Aber nicht zu früh. Ich schlage 15 Uhr vor. Vorher schreiben wir einen kleinen Zettel."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Als Geschenk könnten wir Brot und Salz mitbringen. Das ist hier ein alter Brauch für neue Wohnungen."
+          },
+          {
+            "wer": "B",
+            "text": "Schön. Dazu vielleicht noch einen Kuchen. Was sollen wir über das Haus erzählen?"
+          },
+          {
+            "wer": "A",
+            "text": "Auf jeden Fall die Mülltrennung. Und die Ruhezeiten: nach 22 Uhr und am Sonntag soll es leise sein."
+          },
+          {
+            "wer": "B",
+            "text": "Stimmt, das ist wichtig. Und dass die Geschäfte am Sonntag geschlossen sind. Das wissen viele am Anfang nicht."
+          },
+          {
+            "wer": "A",
+            "text": "Danach zeigen wir ihnen den Supermarkt, die Apotheke und die Haltestelle. Das reicht für den Anfang."
+          },
+          {
+            "wer": "B",
+            "text": "Ich backe den Kuchen. Übernimmst du den Zettel und den Spaziergang durch den Stadtteil?"
+          },
+          {
+            "wer": "A",
+            "text": "Mache ich gern. Dann steht der Plan: Samstag 15 Uhr, Brot, Salz und Kuchen, Hausregeln und ein kleiner Rundgang."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Geschäfte auch am Sonntag öffnen dürfen?",
+        "kultur": {
+          "de": "In Deutschland sind fast alle Geschäfte am Sonntag geschlossen. Das ist keine Gewohnheit, sondern Gesetz. Der Sonntag ist im Grundgesetz als Tag der Ruhe geschützt. Nur wenige Läden dürfen öffnen: Bäckereien für ein paar Stunden, Tankstellen, Apotheken mit Notdienst und Geschäfte an Bahnhöfen und Flughäfen. Ein paar Mal im Jahr gibt es einen verkaufsoffenen Sonntag. Die Städte müssen das vorher erlauben. Deshalb kaufen die Leute am Samstag für das ganze Wochenende ein. Am Sonntag ist es in der Stadt sehr ruhig. Viele Familien machen einen Spaziergang oder besuchen Verwandte. Auch laute Arbeit ist am Sonntag nicht erlaubt. Man wäscht kein Auto und benutzt keine Bohrmaschine.",
+          "en": "Nearly every shop in Germany is shut on Sunday, and that is law, not habit — Sunday is protected as a day of rest in the constitution. Only a few businesses may open: bakeries for a couple of hours, petrol stations, on-call pharmacies, and shops inside stations and airports. A handful of Sundays a year are declared verkaufsoffen (open for trading) by the city. So people do a big shop on Saturday for the whole weekend, and Sunday is genuinely quiet. Noisy activity is restricted too: no washing the car, no drilling. Newcomers usually discover this the hard way, standing outside a closed supermarket."
+        },
+        "wortschatz": [
+          {
+            "de": "der Ladenschluss",
+            "en": "shop closing (rules)"
+          },
+          {
+            "de": "der verkaufsoffene Sonntag",
+            "en": "a Sunday when shops may open"
+          },
+          {
+            "de": "die Ruhezeit, -en",
+            "en": "quiet hours"
+          },
+          {
+            "de": "der Notdienst",
+            "en": "emergency/on-call service"
+          },
+          {
+            "de": "geöffnet / geschlossen",
+            "en": "open / closed"
+          },
+          {
+            "de": "der Feiertag, -e",
+            "en": "public holiday"
+          },
+          {
+            "de": "einkaufen gehen",
+            "en": "to go shopping"
+          },
+          {
+            "de": "die Ausnahme, -n",
+            "en": "exception"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Geschäfte auch am Sonntag öffnen dürfen? In Deutschland sind sie fast immer geschlossen. Ich möchte zeigen, welche Gründe dafür und dagegen sprechen.",
+          "Zuerst ein Beispiel aus meinem Leben. In meiner ersten Woche in Deutschland bin ich am Sonntag zum Supermarkt gegangen. Der Laden war zu. Ich war sehr überrascht. Danach hatte ich fast nichts zu essen im Haus. Seitdem kaufe ich immer am Samstag ein. Inzwischen finde ich den ruhigen Sonntag sogar angenehm.",
+          "In meinem Heimatland Indien ist das ganz anders. Dort sind viele Läden sieben Tage in der Woche offen, oft bis spät am Abend. Man kann fast immer schnell etwas kaufen, auch am Sonntag um neun Uhr abends. Der Sonntag ist kein besonderer Einkaufstag. Dafür arbeiten viele Verkäufer auch am Wochenende. Freie Tage sind bei uns seltener als hier. Meine Mutter hat zum Beispiel am Sonntag immer eingekauft, weil sie unter der Woche gearbeitet hat.",
+          "Jetzt nenne ich Vor- und Nachteile. Ein Vorteil von offenen Sonntagen wäre: Berufstätige hätten mehr Zeit zum Einkaufen. Wer die ganze Woche arbeitet, hat es oft eilig. Auch für Touristen wäre es praktisch. Ein Nachteil ist aber: Dann müssten viele Menschen am Sonntag arbeiten. Vor allem im Verkauf verdient man nicht viel, und die Familien hätten weniger gemeinsame Zeit. Kleine Läden könnten außerdem nicht mithalten, weil sie kein Personal für sieben Tage haben. Meiner Meinung nach sollte der Sonntag geschlossen bleiben. Ein ruhiger Tag für alle ist mehr wert als ein weiterer Einkaufstag.",
+          "Damit bin ich am Ende meiner Präsentation. Für mich ist der stille Sonntag inzwischen etwas Schönes an Deutschland. Vielen Dank fürs Zuhören."
+        ],
+        "umfang": {
+          "woerter": 271,
+          "sprechzeitSekunden": 181
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Ihr Beispiel aus der ersten Woche in Deutschland fand ich sehr anschaulich. Das kennen sicher viele.",
+        "frage": "Würden Sie am Sonntag arbeiten wollen, wenn Sie dafür mehr Geld bekämen?",
+        "antwort": "Ehrlich gesagt nein. Am Sonntag haben meine Freunde frei. Wenn ich arbeite, sehe ich sie nicht. Mehr Geld gleicht das für mich nicht aus. Ein paar Sonntage im Jahr wären aber in Ordnung."
+      },
+      "nummer": 2
+    },
+    {
+      "kurz": "Mülltrennung",
+      "teil1": {
+        "situation": "In Ihrem Wohnhaus gibt es oft Streit um den Müll. Die Hausverwaltung bittet Sie und Ihren Partner / Ihre Partnerin, einen Informationsabend für alle Mieter zu organisieren.",
+        "punkte": [
+          "Wann und wo soll der Abend stattfinden?",
+          "Wie laden Sie die Nachbarn ein?",
+          "Welche Themen sprechen Sie an?",
+          "Wer soll etwas erklären?",
+          "Was machen Sie, damit viele Leute kommen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Mittwochabend vor, so gegen 19 Uhr. Da haben die meisten Leute schon Feierabend."
+          },
+          {
+            "wer": "B",
+            "text": "Mittwoch ist gut. Wo treffen wir uns? Im Hof ist es im Herbst zu kalt."
+          },
+          {
+            "wer": "A",
+            "text": "Dann im Gemeinschaftsraum im Keller. Der ist groß genug für zwanzig Personen."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Für die Einladung hänge ich einen Zettel ins Treppenhaus. Zusätzlich stecken wir jedem einen Zettel in den Briefkasten."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gut. Beim Inhalt sollten wir die vier Tonnen erklären: Restmüll, Biomüll, Papier und der Gelbe Sack."
+          },
+          {
+            "wer": "B",
+            "text": "Und das Glas. Das kommt ja nicht in die Tonne, sondern in den Container an der Straße."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Vielleicht kann jemand von der Stadt kommen und es kurz erklären. Ich rufe morgen dort an."
+          },
+          {
+            "wer": "B",
+            "text": "Damit viele kommen, mache ich Kaffee und Kuchen. Das hilft immer."
+          },
+          {
+            "wer": "A",
+            "text": "Also: Mittwoch 19 Uhr, Gemeinschaftsraum, Zettel im Treppenhaus, ich frage bei der Stadt, du machst Kaffee."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Mülltrennung wirklich sinnvoll?",
+        "kultur": {
+          "de": "Mülltrennung gehört in Deutschland zum Alltag. In fast jedem Haus stehen mehrere Tonnen. Der Restmüll ist meistens schwarz oder grau. Der Biomüll ist braun; dort kommen Essensreste und Gartenabfälle hinein. Papier hat eine blaue Tonne. Verpackungen aus Plastik und Metall kommen in den Gelben Sack oder die Gelbe Tonne. Glas bringt man zum Container und sortiert es nach Farben: weiß, grün und braun. Alte Möbel heißen Sperrmüll und werden extra abgeholt. Für Flaschen gibt es außerdem Pfand. Man zahlt beim Kauf etwas mehr und bekommt das Geld im Supermarkt zurück. Wer falsch trennt, bekommt manchmal Ärger mit den Nachbarn oder der Hausverwaltung.",
+          "en": "Separating waste is ordinary daily life in Germany. Most buildings have several bins: black or grey for general waste, brown for food and garden waste, blue for paper, and a yellow bin or sack for plastic and metal packaging. Glass goes to street containers and is sorted by colour — clear, green, brown. Old furniture is Sperrmüll and is collected separately on request. On top of that, most drinks bottles and cans carry Pfand, a deposit you pay at the till and get back when you return the empties to a machine in the supermarket. Getting the sorting wrong is a common cause of friction with neighbours or the building management."
+        },
+        "wortschatz": [
+          {
+            "de": "die Mülltrennung",
+            "en": "waste separation"
+          },
+          {
+            "de": "der Restmüll",
+            "en": "general/residual waste"
+          },
+          {
+            "de": "der Biomüll",
+            "en": "food and garden waste"
+          },
+          {
+            "de": "der Gelbe Sack",
+            "en": "yellow sack (packaging)"
+          },
+          {
+            "de": "das Pfand",
+            "en": "bottle deposit"
+          },
+          {
+            "de": "der Sperrmüll",
+            "en": "bulky waste"
+          },
+          {
+            "de": "die Verpackung, -en",
+            "en": "packaging"
+          },
+          {
+            "de": "wiederverwerten",
+            "en": "to recycle"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema heute ist die Frage: Ist Mülltrennung wirklich sinnvoll? In Deutschland trennt fast jeder Haushalt seinen Müll. Ich möchte erzählen, wie das funktioniert und was ich davon halte.",
+          "Am Anfang war das für mich schwierig. In meiner ersten Wohnung standen vier verschiedene Tonnen im Hof, dazu noch der Glascontainer an der Straße. Ich wusste nicht, was wohin gehört. Einmal habe ich Papier in den Restmüll geworfen. Meine Nachbarin hat es gesehen und mir freundlich alles erklärt. Sie hat mir sogar einen kleinen Zettel für die Küche geschrieben. Heute mache ich es automatisch richtig und muss nicht mehr nachdenken.",
+          "In meinem Heimatland Indien ist das anders. Bei uns wird der Müll oft nicht zu Hause getrennt. Viele Familien geben alles in einen Eimer. Trotzdem geht wenig verloren, denn viele Menschen sammeln Papier, Metall und Plastik und verkaufen es weiter. Das System ist also da, aber es funktioniert anders als hier: Es lebt von der Arbeit einzelner Menschen und nicht von Tonnen im Hof. Ein Pfand auf Flaschen kennt man bei uns nicht.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist klar: Man kann Material wiederverwerten und spart Rohstoffe. Beim Pfandsystem liegen kaum Flaschen auf der Straße. Ein Nachteil ist: Es kostet Zeit und Platz in der Küche. Manche Leute sagen auch, am Ende werde doch alles zusammen verbrannt. Ich glaube das nicht. Meiner Meinung nach ist Mülltrennung sinnvoll, wenn die Regeln einfach und für alle klar sind.",
+          "Damit komme ich zum Schluss meiner Präsentation. Kurz gesagt: Mülltrennung kostet ein bisschen Mühe und ein bisschen Platz, aber sie lohnt sich. Wichtig ist nur, dass man am Anfang Hilfe bekommt. Mir hat damals eine Nachbarin geholfen, und seitdem ist es kein Problem mehr. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 288,
+          "sprechzeitSekunden": 192
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ich fand interessant, dass Sie das System in Indien verglichen haben. Daran hatte ich vorher nicht gedacht.",
+        "frage": "Was würden Sie ändern, damit mehr Menschen richtig trennen?",
+        "antwort": "Ich würde die Bilder auf den Tonnen größer machen und in mehreren Sprachen beschriften. Viele Leute trennen nicht falsch, weil sie faul sind, sondern weil sie es nicht genau wissen."
+      },
+      "nummer": 3
+    },
+    {
+      "kurz": "Bar oder mit Karte",
+      "teil1": {
+        "situation": "Ihre Abteilung plant den jährlichen Betriebsausflug. Sie und Ihr Partner / Ihre Partnerin sollen einen Vorschlag machen.",
+        "punkte": [
+          "Wohin soll der Ausflug gehen?",
+          "Wann und wie lange?",
+          "Wie fahren Sie dorthin?",
+          "Was machen Sie vor Ort?",
+          "Wie viel darf es pro Person kosten?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Tagesausflug an den See vor. Da kann man wandern und auch nur sitzen und reden."
+          },
+          {
+            "wer": "B",
+            "text": "Der See gefällt mir. Aber wäre eine Stadtführung nicht interessanter? Nicht alle wandern gern."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Machen wir beides: vormittags eine kurze Führung, nachmittags Zeit am See."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Als Termin schlage ich einen Freitag im Juni vor. Dann ist das Wetter meistens gut."
+          },
+          {
+            "wer": "A",
+            "text": "Gut. Fahren wir mit dem Zug? Dann darf jeder auch etwas trinken."
+          },
+          {
+            "wer": "B",
+            "text": "Ja, mit dem Zug. Mit dem Deutschlandticket ist das für viele Kollegen sogar kostenlos."
+          },
+          {
+            "wer": "A",
+            "text": "Zum Essen: Mittags ein Restaurant, abends vielleicht nur eine Kleinigkeit."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Preis würde ich sagen: höchstens vierzig Euro pro Person. Mehr geben nicht alle gern aus."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan: Freitag im Juni, Zug, Führung und See, etwa vierzig Euro."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man in Deutschland mehr mit Karte statt bar bezahlen?",
+        "kultur": {
+          "de": "Deutschland zahlt gern bar. Lange war Bargeld das normale Zahlungsmittel, auch für große Beträge. Erst in den letzten Jahren ist die Karte wichtiger geworden. Heute kann man in fast jedem Supermarkt mit Karte zahlen. Trotzdem gibt es viele kleine Läden, Bäckereien, Kioske und Restaurants mit dem Schild „Nur Bargeld\". Auf dem Wochenmarkt braucht man fast immer Münzen. Viele Menschen sagen: Mit Bargeld behält man den Überblick, und niemand kann sehen, was man kauft. Datenschutz ist hier ein starkes Argument. Wichtig ist auch der Unterschied zwischen EC-Karte (Girocard) und Kreditkarte. Die Girocard nehmen fast alle, eine Kreditkarte nicht überall. Als Neuankömmling sollte man immer etwas Bargeld dabeihaben.",
+          "en": "Germany still likes cash. For a long time it was simply how you paid, even for large amounts, and cards only became normal recently. Supermarkets take cards now, but plenty of small shops, bakeries, kiosks and restaurants display „Nur Bargeld\" — cash only — and market stalls almost always need coins. A common argument is control and privacy: with cash you see what you spend and nobody records it. Note the difference between the Girocard (the domestic debit card, accepted nearly everywhere) and a credit card, which is not. Newcomers should carry cash as a matter of course."
+        },
+        "wortschatz": [
+          {
+            "de": "das Bargeld",
+            "en": "cash"
+          },
+          {
+            "de": "die Girocard / EC-Karte",
+            "en": "German debit card"
+          },
+          {
+            "de": "bar bezahlen",
+            "en": "to pay cash"
+          },
+          {
+            "de": "der Betrag, -träge",
+            "en": "amount"
+          },
+          {
+            "de": "der Datenschutz",
+            "en": "data protection, privacy"
+          },
+          {
+            "de": "die Münze, -n",
+            "en": "coin"
+          },
+          {
+            "de": "der Überblick",
+            "en": "overview, sense of control"
+          },
+          {
+            "de": "die Rechnung, -en",
+            "en": "bill, invoice"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man in Deutschland mehr mit Karte statt bar bezahlen? Viele Länder zahlen fast nur noch digital. In Deutschland ist Bargeld dagegen immer noch sehr wichtig. Ich möchte zeigen, warum das so ist.",
+          "Zuerst ein Beispiel von mir. In meiner ersten Woche wollte ich in einer Bäckerei mit Karte zahlen. Die Verkäuferin sagte: „Nur Bargeld.\" Ich hatte kein Geld dabei und musste erst zum Automaten gehen. Das war mir unangenehm. Seitdem habe ich immer zwanzig oder dreißig Euro in bar in der Tasche.",
+          "In meinem Heimatland Indien ist das heute anders. Bei uns bezahlen sehr viele Menschen mit dem Handy. Man scannt einen Code, und das Geld ist sofort weg. Das geht sogar beim kleinen Gemüsehändler auf der Straße und beim Fahrer einer Rikscha. Viele Leute haben kaum noch Bargeld dabei. Deshalb war ich überrascht, dass ein reiches Land wie Deutschland so oft Bargeld benutzt. Ein Freund hat mir erklärt: Es geht nicht um Technik, sondern um Gewohnheit und um Misstrauen gegenüber Banken und Firmen.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil der Karte ist: Es geht schnell und man muss kein Geld zählen. Auch im Ausland ist es praktisch. Ein Nachteil ist: Man gibt leichter zu viel aus, weil man das Geld nicht sieht. Außerdem speichert die Bank jeden Einkauf. Vielen Deutschen ist dieser Datenschutz sehr wichtig. Meiner Meinung nach sollte man beides anbieten. Der Kunde soll selbst entscheiden.",
+          "Damit komme ich zum Schluss meiner Präsentation. Kurz gesagt: Die Karte ist bequem, das Bargeld gibt Kontrolle. Beides hat seinen Platz, und ich glaube, beides wird noch lange nebeneinander existieren. Wichtig ist nur, dass niemand ohne Karte oder ohne Bargeld plötzlich nicht mehr bezahlen kann. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 289,
+          "sprechzeitSekunden": 193
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Das Beispiel mit der Bäckerei war sehr typisch. Genau das ist mir am Anfang auch passiert.",
+        "frage": "Glauben Sie, dass Bargeld in zwanzig Jahren verschwunden sein wird?",
+        "antwort": "Ganz verschwinden wird es wohl nicht. Für kleine Beträge und auf dem Markt bleibt es praktisch. Aber ich denke, die meisten Menschen werden dann normalerweise mit Karte oder Handy zahlen."
+      },
+      "nummer": 4
+    },
+    {
+      "kurz": "Ausbildung oder Studium",
+      "teil1": {
+        "situation": "Ihre Sprachschule macht einen Tag der offenen Tür. Sie und Ihr Partner / Ihre Partnerin sollen den Tag mitplanen.",
+        "punkte": [
+          "Wann soll der Tag stattfinden?",
+          "Wie machen Sie Werbung dafür?",
+          "Was zeigen Sie den Besuchern?",
+          "Wer hilft an diesem Tag mit?",
+          "Was bieten Sie zu essen und zu trinken an?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Samstag vor, so von 11 bis 16 Uhr. Da haben Familien Zeit."
+          },
+          {
+            "wer": "B",
+            "text": "Samstag ist gut. Für die Werbung könnten wir Plakate in der Stadtbibliothek und im Rathaus aufhängen."
+          },
+          {
+            "wer": "A",
+            "text": "Und im Internet. Viele suchen zuerst online nach einem Kurs."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Was zeigen wir den Besuchern? Vielleicht einen kurzen Probeunterricht?"
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Zwanzig Minuten Deutsch zum Ausprobieren. Dazu ein Tisch mit Informationen über die Prüfungen."
+          },
+          {
+            "wer": "B",
+            "text": "Ich frage ein paar Teilnehmer, ob sie von ihren Erfahrungen erzählen. Das wirkt echter als jede Broschüre."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr schön. Beim Essen würde ich Kaffee, Tee und Kuchen anbieten. Das ist einfach und günstig."
+          },
+          {
+            "wer": "B",
+            "text": "Dann übernehme ich die Plakate und den Probeunterricht. Machst du die Getränke und den Infotisch?"
+          },
+          {
+            "wer": "A",
+            "text": "Ja, gern. Also: Samstag, 11 bis 16 Uhr, Plakate und Internet, Probeunterricht, Kaffee und Kuchen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist eine Ausbildung besser als ein Studium?",
+        "kultur": {
+          "de": "Deutschland hat ein besonderes System: die duale Ausbildung. Man arbeitet in einer Firma und geht gleichzeitig in die Berufsschule. Die Ausbildung dauert meistens drei Jahre. Man bekommt dabei schon Geld, oft 800 bis 1200 Euro im Monat. Es gibt über 300 anerkannte Ausbildungsberufe, zum Beispiel Elektroniker, Bankkaufmann oder Pflegefachkraft. Am Ende steht eine Prüfung bei der Industrie- und Handelskammer. Wichtig ist: Eine Ausbildung gilt hier nicht als schlechterer Weg. Viele Handwerker verdienen gut, und Fachkräfte werden überall gesucht. Nach der Ausbildung kann man den Meister machen und eine eigene Firma gründen. Man kann auch später noch studieren. Der Weg ist also nicht zu Ende.",
+          "en": "Germany's distinctive route is the duale Ausbildung: a three-year apprenticeship where you work in a company and attend a vocational school at the same time, and are paid throughout — often €800–1200 a month. There are over 300 recognised trades, from electrician to bank clerk to nurse, ending in an exam set by the chamber of commerce. The key cultural point is that this is not seen as the lesser path. Skilled trades pay well and are in demand, and afterwards you can take the Meister qualification, run your own firm, or still go to university. In many countries a degree is the only respected route; here it is genuinely one of two."
+        },
+        "wortschatz": [
+          {
+            "de": "die Ausbildung, -en",
+            "en": "vocational training"
+          },
+          {
+            "de": "die Berufsschule, -n",
+            "en": "vocational school"
+          },
+          {
+            "de": "der Azubi, -s",
+            "en": "apprentice"
+          },
+          {
+            "de": "die Fachkraft, -kräfte",
+            "en": "skilled worker"
+          },
+          {
+            "de": "der Meister, -",
+            "en": "master craftsman"
+          },
+          {
+            "de": "das Gehalt, -hälter",
+            "en": "salary"
+          },
+          {
+            "de": "der Abschluss, -schlüsse",
+            "en": "qualification"
+          },
+          {
+            "de": "praktische Erfahrung",
+            "en": "practical experience"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Ist eine Ausbildung besser als ein Studium? In Deutschland gibt es die duale Ausbildung. Man arbeitet in einer Firma und lernt gleichzeitig in der Schule. Ich möchte beide Wege vergleichen.",
+          "Ich beginne mit einer eigenen Erfahrung. Ein Freund von mir hat hier eine Ausbildung als Elektroniker gemacht. Er hat drei Jahre gelernt, zwei Tage in der Woche in der Berufsschule und drei Tage im Betrieb. Dabei hat er schon Geld verdient, am Anfang etwa 900 Euro im Monat. Heute hat er eine feste Stelle und muss nie lange nach Arbeit suchen. Ich war überrascht, wie sicher sein Beruf ist und wie früh er selbstständig wurde.",
+          "In meinem Heimatland Indien ist das anders. Bei uns wollen fast alle Familien, dass die Kinder studieren. Ein Universitätsabschluss bringt Ansehen. Handwerkliche Berufe haben leider einen schlechteren Ruf, obwohl sie sehr wichtig sind. Ein System wie die duale Ausbildung kennen wir so nicht.",
+          "Jetzt die Vor- und Nachteile. Ein Vorteil der Ausbildung ist: Man verdient früh eigenes Geld und lernt sofort die Praxis. Man weiß nach drei Jahren genau, was der Beruf bedeutet. Ein Vorteil des Studiums ist: Man kann später leichter in die Forschung oder ins Management gehen, und man ist flexibler bei der Wahl des Fachs. Ein Nachteil des Studiums sind die langen Jahre ohne Einkommen. Ein Nachteil der Ausbildung ist, dass man sich früh festlegen muss. Meiner Meinung nach ist keiner der Wege besser als der andere. Es kommt auf den Menschen an. Wichtig ist nur, dass beide Wege den gleichen Respekt bekommen.",
+          "Damit bin ich am Ende meiner Präsentation. Für mich zeigt Deutschland, dass man mit einer Ausbildung sehr gut leben kann. Vielleicht sollten andere Länder von diesem System lernen. Vielen Dank für Ihre Aufmerksamkeit. Ich beantworte gern Ihre Fragen."
+        ],
+        "umfang": {
+          "woerter": 294,
+          "sprechzeitSekunden": 196
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Interessant fand ich den Vergleich mit dem Ansehen von Berufen. Darüber denkt man selten nach.",
+        "frage": "Was würden Sie einem jungen Menschen heute raten?",
+        "antwort": "Ich würde ihm raten, zuerst ein Praktikum zu machen. Danach weiß man meistens, ob man lieber mit den Händen oder mit Büchern arbeitet. Diese Erfahrung ist mehr wert als jeder Rat von mir."
+      },
+      "nummer": 5
+    },
+    {
+      "kurz": "Auto oder öffentliche Verkehrsmittel",
+      "teil1": {
+        "situation": "Eine Kollegin heiratet in einer anderen Stadt. Sie und Ihr Partner / Ihre Partnerin sollen die gemeinsame Fahrt für acht Kollegen organisieren.",
+        "punkte": [
+          "Wie fahren Sie hin?",
+          "Wann fahren Sie los und wann zurück?",
+          "Wo übernachten Sie?",
+          "Was schenken Sie der Kollegin?",
+          "Wie teilen Sie die Kosten?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Bei acht Personen würde ich den Zug nehmen. Mit einem Gruppenticket wird es günstiger."
+          },
+          {
+            "wer": "B",
+            "text": "Der Zug ist gut. Autos müssten wir sonst parken, und in der Innenstadt ist das teuer."
+          },
+          {
+            "wer": "A",
+            "text": "Die Hochzeit beginnt um 14 Uhr. Ich schlage vor, wir fahren um neun los."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Zurück würde ich am nächsten Morgen fahren, dann kann man abends bleiben."
+          },
+          {
+            "wer": "A",
+            "text": "Dann brauchen wir Zimmer. Vielleicht eine kleine Pension in der Nähe?"
+          },
+          {
+            "wer": "B",
+            "text": "Ja, ich suche etwas mit acht Betten. Was schenken wir?"
+          },
+          {
+            "wer": "A",
+            "text": "Wie wäre es mit einem Gutschein für ein Wochenende? Dazu eine Karte, die alle unterschreiben."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr schön. Die Kosten teilen wir einfach durch acht. Ich mache eine Liste."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also Zug um neun, Pension, Gutschein, und du führst die Liste."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Braucht man in Deutschland ein eigenes Auto?",
+        "kultur": {
+          "de": "Deutschland ist als Autoland bekannt. Trotzdem leben viele Menschen in Städten ohne eigenes Auto. Busse, Straßenbahnen und Züge fahren regelmäßig, auch abends. Seit 2023 gibt es das Deutschlandticket: Für einen festen Preis im Monat fährt man in ganz Deutschland mit Bus und Nahverkehrszug. Ein eigenes Auto ist teuer. Man zahlt Versicherung, Steuer, TÜV und Parkplatz. Der TÜV ist eine Pflichtuntersuchung alle zwei Jahre. In vielen Innenstädten gibt es außerdem wenig Parkplätze und Umweltzonen. Auf dem Land ist es anders: Dort fährt der Bus oft nur wenige Male am Tag, und ohne Auto wird es schwierig. Viele Familien nutzen deshalb Carsharing oder haben nur ein Auto zusammen.",
+          "en": "Germany is famous for cars, yet a lot of city residents do not own one. Buses, trams and trains run frequently, including evenings, and since 2023 the Deutschlandticket gives nationwide local transport for one flat monthly fee. Owning a car is expensive: insurance, road tax, parking, and the compulsory TÜV safety inspection every two years. Many city centres have low-emission zones and little parking. The countryside is the opposite — a bus a few times a day — so rural life usually does need a car. Carsharing and one-car households are common middle grounds."
+        },
+        "wortschatz": [
+          {
+            "de": "die öffentlichen Verkehrsmittel",
+            "en": "public transport"
+          },
+          {
+            "de": "das Deutschlandticket",
+            "en": "nationwide monthly travel pass"
+          },
+          {
+            "de": "die Versicherung, -en",
+            "en": "insurance"
+          },
+          {
+            "de": "der TÜV",
+            "en": "compulsory vehicle inspection"
+          },
+          {
+            "de": "das Carsharing",
+            "en": "car sharing"
+          },
+          {
+            "de": "der Parkplatz, -plätze",
+            "en": "parking space"
+          },
+          {
+            "de": "der Nahverkehr",
+            "en": "local transport"
+          },
+          {
+            "de": "die Umweltzone, -n",
+            "en": "low-emission zone"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Braucht man in Deutschland ein eigenes Auto? Deutschland ist ein Autoland. Trotzdem leben viele Menschen in der Stadt ohne Auto. Ich möchte erklären, warum.",
+          "Ich erzähle kurz von mir. Als ich hierhergekommen bin, wollte ich sofort ein Auto kaufen. Dann habe ich die Kosten gerechnet: Versicherung, Steuer, TÜV und Parkplatz. Das war mehr, als ich dachte. Heute fahre ich mit dem Deutschlandticket und mit dem Fahrrad. Ich vermisse das Auto fast nie.",
+          "In meinem Heimatland Indien ist ein eigenes Fahrzeug wichtiger. Viele Familien haben ein Motorrad oder ein Auto, weil Busse oft voll sind und nicht pünktlich kommen. Ein Auto bedeutet dort auch ein bisschen Ansehen. In deutschen Städten ist das nicht mehr so. Manche Leute sagen sogar mit Stolz, dass sie kein Auto haben.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil des Autos ist: Man ist unabhängig. Man fährt los, wann man will, und ein großer Einkauf ist kein Problem. Mit kleinen Kindern ist das viel wert. Ein Nachteil sind die hohen Kosten und die lange Suche nach einem Parkplatz. Dazu kommt die Umwelt: Ein Auto in der Stadt braucht viel Platz für nur eine Person. Der Nahverkehr ist günstiger und man kann unterwegs lesen. Aber am späten Abend oder auf dem Dorf fährt eben wenig. Meiner Meinung nach braucht man in der Stadt kein eigenes Auto. Auf dem Land sieht das ganz anders aus.",
+          "Damit komme ich zum Schluss. Für mich hängt die Antwort vor allem vom Wohnort ab. In der Stadt ist ein Auto heute eher Luxus, auf dem Land ist es Alltag. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 271,
+          "sprechzeitSekunden": 181
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Gut fand ich, dass Sie Stadt und Land getrennt haben. Das wird oft vergessen.",
+        "frage": "Würden Sie ein Auto kaufen, wenn Sie aufs Land ziehen würden?",
+        "antwort": "Ja, wahrscheinlich schon. Auf dem Land fährt der Bus nur wenige Male am Tag. Ohne Auto könnte ich weder einkaufen noch zur Arbeit kommen. In der Stadt bleibe ich aber gern ohne."
+      },
+      "nummer": 6
+    },
+    {
+      "kurz": "Haustiere in der Mietwohnung",
+      "teil1": {
+        "situation": "In Ihrem Haus soll ein Hausflohmarkt im Hof stattfinden. Sie und Ihr Partner / Ihre Partnerin organisieren ihn.",
+        "punkte": [
+          "Wann soll der Flohmarkt sein?",
+          "Wie sagen Sie es den Nachbarn?",
+          "Wer darf einen Tisch aufstellen?",
+          "Was machen Sie mit den Sachen, die übrig bleiben?",
+          "Wer kümmert sich um Tische, Kaffee und Aufräumen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Samstagvormittag im Mai vor, von zehn bis zwei. Sonntags dürfen wir das nicht machen."
+          },
+          {
+            "wer": "B",
+            "text": "Stimmt, sonntags wäre es zu laut. Samstag passt. Sagen wir es über einen Aushang im Treppenhaus?"
+          },
+          {
+            "wer": "A",
+            "text": "Ja, und zusätzlich in die Briefkästen. Dann erreichen wir wirklich alle."
+          },
+          {
+            "wer": "B",
+            "text": "Einen Tisch darf jeder aus dem Haus aufstellen. Wer mitmachen will, trägt sich in eine Liste ein."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Sonst wird es im Hof zu eng. Was machen wir mit den Sachen, die niemand kauft?"
+          },
+          {
+            "wer": "B",
+            "text": "Ich würde am Ende alles zum Sozialkaufhaus bringen. Was kaputt ist, kommt in den Sperrmüll."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Ich frage nach Tischen und mache Kaffee für alle."
+          },
+          {
+            "wer": "B",
+            "text": "Dann übernehme ich Aushang, Liste und den Transport am Ende."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also Samstag im Mai, zehn bis zwei, Liste im Treppenhaus, Rest zum Sozialkaufhaus."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Mieter immer Haustiere halten dürfen?",
+        "kultur": {
+          "de": "In Deutschland wohnen sehr viele Menschen zur Miete, in großen Städten mehr als die Hälfte. Deshalb ist das Mietrecht wichtig und sehr genau. Kleine Tiere wie Hamster, Vögel oder Fische darf man immer halten. Der Vermieter muss nicht gefragt werden. Bei Hunden und Katzen ist es anders: Hier darf der Vermieter mitreden. Ein Satz im Vertrag wie „Tierhaltung ist verboten\" ist aber oft ungültig. Gerichte sagen: Der Vermieter muss jeden Fall einzeln prüfen. Wichtig sind außerdem die Ruhezeiten. Ein Hund, der nachts bellt, führt schnell zu Streit. Für Hunde zahlt man in fast jeder Stadt eine Hundesteuer, oft 100 bis 150 Euro im Jahr. Katzen sind steuerfrei.",
+          "en": "Renting is the norm in Germany — over half of households in big cities — so tenancy law is detailed and matters. Small animals like hamsters, birds or fish are always allowed and need no permission. Dogs and cats are different: the landlord has a say, but a blanket „no pets\" clause in the contract is often invalid, because courts have ruled the landlord must weigh each case individually. Quiet hours matter too — a dog barking at night is a fast route to a dispute with neighbours. Dogs carry a municipal Hundesteuer of roughly €100–150 a year; cats are not taxed."
+        },
+        "wortschatz": [
+          {
+            "de": "der Mieter, - / die Mieterin",
+            "en": "tenant"
+          },
+          {
+            "de": "der Vermieter, -",
+            "en": "landlord"
+          },
+          {
+            "de": "der Mietvertrag, -verträge",
+            "en": "tenancy agreement"
+          },
+          {
+            "de": "die Tierhaltung",
+            "en": "keeping animals"
+          },
+          {
+            "de": "die Hundesteuer",
+            "en": "dog tax"
+          },
+          {
+            "de": "die Ruhezeit, -en",
+            "en": "quiet hours"
+          },
+          {
+            "de": "die Erlaubnis",
+            "en": "permission"
+          },
+          {
+            "de": "sich beschweren",
+            "en": "to complain"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Mieter immer Haustiere halten dürfen? In Deutschland wohnen sehr viele Menschen zur Miete. Deshalb ist diese Frage für viele Familien wichtig. Ich möchte zeigen, wie die Regeln sind und was ich davon halte.",
+          "Ich fange mit einer Geschichte an. Eine Freundin von mir wollte eine Katze aus dem Tierheim holen. In ihrem Mietvertrag stand: „Tierhaltung ist verboten.\" Sie war sehr traurig. Dann hat sie sich beim Mieterverein beraten lassen. Dort hat man ihr gesagt, dass so ein Satz oft nicht gültig ist. Am Ende hat der Vermieter die Katze erlaubt. Sie war sehr erleichtert.",
+          "In meinem Heimatland Indien ist das lockerer geregelt. Bei uns gibt es weniger schriftliche Verträge und weniger Gerichte für solche Fragen. Man spricht direkt mit dem Vermieter. Oft entscheidet er allein, und man kann wenig machen. Dafür leben viele Tiere frei in der Nachbarschaft, und die Leute füttern sie gemeinsam. Eine Hundesteuer kennen wir nicht.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil einer klaren Erlaubnis wäre: Mieter hätten Sicherheit und müssten keine Angst vor einer Kündigung haben. Tiere sind außerdem gut gegen Einsamkeit. Ein Nachteil ist: Manche Tiere machen Lärm oder Schmutz im Treppenhaus. Nicht jede Wohnung ist für einen großen Hund geeignet. Meiner Meinung nach sollte man kleine Tiere immer erlauben. Bei Hunden sollte man auf die Größe der Wohnung schauen.",
+          "Damit komme ich zum Schluss. Für mich ist wichtig, dass beide Seiten miteinander reden, bevor es Streit gibt. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 249,
+          "sprechzeitSekunden": 166
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Die Geschichte von Ihrer Freundin war ein gutes Beispiel. So etwas hört man oft.",
+        "frage": "Was sollte ein Vermieter tun, wenn sich Nachbarn über ein Tier beschweren?",
+        "antwort": "Ich finde, er sollte zuerst mit beiden Seiten sprechen. Oft gibt es eine einfache Lösung, zum Beispiel andere Zeiten für den Hund. Erst wenn wirklich nichts hilft, sollte er strenger werden."
+      },
+      "nummer": 7
+    },
+    {
+      "kurz": "Vereine",
+      "teil1": {
+        "situation": "Ihr Sportverein feiert sein fünfzigjähriges Bestehen. Sie und Ihr Partner / Ihre Partnerin planen ein Sportfest für alle Mitglieder.",
+        "punkte": [
+          "Wann und wo soll das Fest sein?",
+          "Welche Sportarten bieten Sie an?",
+          "Wie feiern Sie am Abend?",
+          "Wen laden Sie außerdem ein?",
+          "Wie finanzieren Sie das Fest?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Sonntag im Juli vor, auf dem Sportplatz des Vereins."
+          },
+          {
+            "wer": "B",
+            "text": "Sonntag ist gut, da haben Familien Zeit. Beim Sport würde ich Fußball und Volleyball anbieten."
+          },
+          {
+            "wer": "A",
+            "text": "Und etwas für Kinder, zum Beispiel einen kleinen Lauf mit Urkunde. Dann kommen auch die Eltern."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Am Abend könnten wir grillen und Musik machen. Vielleicht spielt eine Band aus dem Ort."
+          },
+          {
+            "wer": "A",
+            "text": "Einladen würde ich auch den Bürgermeister und die alten Mitglieder von früher."
+          },
+          {
+            "wer": "B",
+            "text": "Ja, gerade die Gründer. Das gehört zu einem fünfzigsten Geburtstag dazu."
+          },
+          {
+            "wer": "A",
+            "text": "Zur Finanzierung: Der Verein zahlt einen Teil, und wir fragen zwei Firmen als Sponsoren."
+          },
+          {
+            "wer": "B",
+            "text": "Dazu verkaufen wir Essen und Getränke gegen einen kleinen Preis. Ich kümmere mich um die Sponsoren."
+          },
+          {
+            "wer": "A",
+            "text": "Dann mache ich das Programm und die Einladungen. Also: Sonntag im Juli, Sportplatz, Grillen am Abend."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Wie wichtig sind Vereine für das Zusammenleben?",
+        "kultur": {
+          "de": "Der Verein ist eine sehr deutsche Einrichtung. Es gibt in Deutschland mehr als 600.000 eingetragene Vereine. Fast jeder zweite Mensch ist Mitglied in mindestens einem. Am bekanntesten sind Sportvereine, aber es gibt auch Musikvereine, Gartenvereine, Feuerwehr und Chöre. Ein Verein hat eine Satzung, einen Vorstand und eine Mitgliederversammlung. Der Beitrag ist meistens niedrig, oft nur wenige Euro im Monat. Viele Aufgaben machen die Mitglieder freiwillig, ohne Geld. Das nennt man Ehrenamt. Für neue Leute in einer Stadt ist ein Verein oft der einfachste Weg, Kontakte zu finden. Man muss nicht besonders gut sein; wichtig ist, dass man regelmäßig kommt und mithilft.",
+          "en": "The Verein — a registered club — is a deeply German institution. There are over 600,000 of them, and roughly half the population belongs to at least one: sports clubs above all, but also music societies, allotment associations, volunteer fire brigades and choirs. Each has a constitution, an elected committee and a members' meeting; fees are usually only a few euros a month, and much of the work is done unpaid, as Ehrenamt (voluntary service). For a newcomer this is often the single easiest route to a social circle. You do not need to be good at the activity — turning up regularly and helping out is what counts."
+        },
+        "wortschatz": [
+          {
+            "de": "der Verein, -e",
+            "en": "club, registered association"
+          },
+          {
+            "de": "das Mitglied, -er",
+            "en": "member"
+          },
+          {
+            "de": "der Mitgliedsbeitrag",
+            "en": "membership fee"
+          },
+          {
+            "de": "das Ehrenamt",
+            "en": "unpaid voluntary work"
+          },
+          {
+            "de": "der Vorstand",
+            "en": "committee, board"
+          },
+          {
+            "de": "freiwillig",
+            "en": "voluntary"
+          },
+          {
+            "de": "die Gemeinschaft",
+            "en": "community"
+          },
+          {
+            "de": "beitreten",
+            "en": "to join"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Wie wichtig sind Vereine für das Zusammenleben? In Deutschland gibt es über 600.000 Vereine. Fast jeder Zweite ist Mitglied in einem. Ich möchte erklären, was ein Verein ist und warum er hier so eine große Rolle spielt.",
+          "Ich erzähle von meiner eigenen Erfahrung. Als ich neu in der Stadt war, kannte ich niemanden. Ein Kollege hat mich in seinen Sportverein mitgenommen. Ich war nicht besonders gut im Volleyball, aber das war egal. Nach dem Training sind alle noch zusammen sitzen geblieben. So habe ich meine ersten Freunde in Deutschland gefunden. Der Beitrag war nur zehn Euro im Monat.",
+          "In meinem Heimatland Indien gibt es so etwas in dieser Form kaum. Bei uns trifft man sich eher in der Familie, in der Nachbarschaft oder im Tempel. Das ist auch schön, aber es ist weniger organisiert. Man tritt nicht offiziell bei und zahlt keinen Beitrag. In Deutschland ist der Verein dagegen eine feste Struktur mit Vorstand und Versammlung.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Vereine bringen Menschen aus verschiedenen Berufen und Altersgruppen zusammen. Sie sind günstig, und man lernt schnell Leute kennen. Außerdem funktionieren viele Dinge nur, weil Mitglieder ehrenamtlich helfen. Ein Nachteil ist: Manche Vereine sind sehr traditionell, und Neue fühlen sich am Anfang fremd. Auch die vielen Regeln können abschrecken. Meiner Meinung nach sind Vereine trotzdem sehr wertvoll, gerade für Zugewanderte.",
+          "Damit komme ich zum Schluss. Für mich war der Verein der beste Weg, wirklich anzukommen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 250,
+          "sprechzeitSekunden": 167
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Mir hat gefallen, dass Sie vom eigenen Anfang erzählt haben. Das macht das Thema sehr konkret.",
+        "frage": "Was könnten Vereine tun, damit mehr neue Leute mitmachen?",
+        "antwort": "Ich glaube, sie sollten offener einladen, zum Beispiel mit einem Schnuppertraining ohne Anmeldung. Und die Informationen sollten auch auf Englisch da sein. Viele trauen sich sonst nicht."
+      },
+      "nummer": 8
+    },
+    {
+      "kurz": "Homeoffice",
+      "teil1": {
+        "situation": "Ihre Firma richtet eine neue Gemeinschaftsküche für die Mitarbeiter ein. Sie und Ihr Partner / Ihre Partnerin sollen Vorschläge machen.",
+        "punkte": [
+          "Was soll in die Küche kommen?",
+          "Wie soll der Raum aussehen?",
+          "Welche Regeln braucht man?",
+          "Wer putzt die Küche?",
+          "Wie viel Geld möchten Sie ausgeben?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Auf jeden Fall brauchen wir einen guten Kühlschrank, eine Mikrowelle und eine Spülmaschine."
+          },
+          {
+            "wer": "B",
+            "text": "Und eine Kaffeemaschine. Ohne Kaffee kommt hier niemand durch den Vormittag."
+          },
+          {
+            "wer": "A",
+            "text": "Der Raum sollte hell sein, mit einem großen Tisch. Dann kann man auch zusammen essen."
+          },
+          {
+            "wer": "B",
+            "text": "Vielleicht noch ein paar Pflanzen und ein Sofa in der Ecke."
+          },
+          {
+            "wer": "A",
+            "text": "Bei den Regeln finde ich wichtig: Jeder räumt sein Geschirr sofort weg."
+          },
+          {
+            "wer": "B",
+            "text": "Und einmal in der Woche wird der Kühlschrank leer gemacht. Sonst steht dort alles Mögliche."
+          },
+          {
+            "wer": "A",
+            "text": "Für das Putzen würde ich eine Firma nehmen. Ein Plan unter Kollegen funktioniert selten."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Beim Geld schlage ich höchstens dreitausend Euro vor. Ich schreibe den Vorschlag."
+          },
+          {
+            "wer": "A",
+            "text": "Gut, dann hole ich drei Angebote für die Geräte. Also: helle Küche, feste Regeln, Reinigungsfirma."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Homeoffice besser als die Arbeit im Büro?",
+        "kultur": {
+          "de": "Vor 2020 war Homeoffice in Deutschland selten. Viele Chefs wollten ihre Mitarbeiter im Büro sehen. Seit der Pandemie hat sich das stark verändert. Heute arbeiten viele Angestellte zwei oder drei Tage in der Woche zu Hause. Ein gesetzliches Recht auf Homeoffice gibt es aber nicht. Es steht im Arbeitsvertrag oder in einer Betriebsvereinbarung. Der Betriebsrat, also die Vertretung der Mitarbeiter, redet dabei oft mit. Wichtig ist auch der Arbeitsschutz: Der Arbeitsplatz zu Hause soll ergonomisch sein, und die Arbeitszeit muss dokumentiert werden. Viele Firmen zahlen einen Zuschuss für Schreibtisch oder Internet. Typisch deutsch ist die klare Trennung von Arbeit und Feierabend.",
+          "en": "Before 2020 home working was rare in Germany; managers expected people in the office. The pandemic changed that sharply, and two or three days a week at home is now common. There is still no legal right to it — it is set in the employment contract or a works agreement, usually negotiated with the Betriebsrat, the elected staff council. Health-and-safety rules still apply at home: the desk should be ergonomic and hours must be recorded. Many employers pay a contribution towards a desk or internet. The strong cultural expectation is a clean line between work and Feierabend, the end of the working day."
+        },
+        "wortschatz": [
+          {
+            "de": "das Homeoffice",
+            "en": "working from home"
+          },
+          {
+            "de": "der Arbeitsvertrag",
+            "en": "employment contract"
+          },
+          {
+            "de": "der Betriebsrat",
+            "en": "works council"
+          },
+          {
+            "de": "die Arbeitszeit",
+            "en": "working hours"
+          },
+          {
+            "de": "der Feierabend",
+            "en": "end of the working day"
+          },
+          {
+            "de": "der Zuschuss, -schüsse",
+            "en": "allowance, contribution"
+          },
+          {
+            "de": "sich konzentrieren",
+            "en": "to concentrate"
+          },
+          {
+            "de": "der Austausch",
+            "en": "exchange, contact"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist Homeoffice besser als die Arbeit im Büro? Vor einigen Jahren war Homeoffice in Deutschland noch selten. Heute ist es für viele normal. Ich möchte beide Seiten zeigen.",
+          "Zuerst meine eigene Erfahrung. Ich arbeite zwei Tage in der Woche zu Hause. Am Anfang fand ich das großartig. Ich musste nicht pendeln und konnte in Ruhe arbeiten. Nach ein paar Monaten habe ich aber gemerkt, dass mir die Kollegen fehlen. Kleine Fragen dauern per E-Mail viel länger. Heute finde ich die Mischung am besten.",
+          "In meinem Heimatland Indien ist Homeoffice in der IT sehr verbreitet. Viele meiner Freunde arbeiten für Firmen im Ausland und sind fast immer zu Hause. Ein Problem ist dort oft der Platz. Die Wohnungen sind kleiner, und mehrere Personen sind gleichzeitig zu Hause. Ein ruhiges Zimmer nur zum Arbeiten hat nicht jeder.",
+          "Jetzt die Vor- und Nachteile. Ein Vorteil ist: Man spart Zeit und Geld für den Weg zur Arbeit. Man kann konzentrierter arbeiten und die Familie besser organisieren. Ein Nachteil ist: Der Austausch mit den Kollegen fehlt, und neue Mitarbeiter lernen weniger. Außerdem trennt man Arbeit und Feierabend schlechter, wenn der Laptop im Wohnzimmer steht. Meiner Meinung nach ist eine Mischung am besten, etwa zwei Tage zu Hause und drei im Büro.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist nicht der Ort entscheidend, sondern die klare Regel dazu. Wenn alle wissen, wer wann wo arbeitet, funktioniert beides gut. Vielen Dank für Ihre Aufmerksamkeit. Ich beantworte gern Ihre Fragen."
+        ],
+        "umfang": {
+          "woerter": 253,
+          "sprechzeitSekunden": 169
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Interessant war der Punkt mit dem Platz in der Wohnung. Daran denkt man hier selten.",
+        "frage": "Sollten Firmen Homeoffice für alle erlauben, die es möchten?",
+        "antwort": "In Berufen, die am Computer stattfinden, würde ich sagen ja. Aber es geht nicht überall. Eine Pflegekraft oder eine Verkäuferin kann nicht von zu Hause arbeiten. Deshalb braucht man faire Regeln für beide Gruppen."
+      },
+      "nummer": 9
+    },
+    {
+      "kurz": "Elternzeit für Väter",
+      "teil1": {
+        "situation": "Eine Kollegin bekommt in zwei Monaten ein Kind. Die Abteilung möchte sich verabschieden und etwas schenken. Sie und Ihr Partner / Ihre Partnerin organisieren das.",
+        "punkte": [
+          "Wann und wie verabschieden Sie die Kollegin?",
+          "Was schenken Sie?",
+          "Wie sammeln Sie das Geld?",
+          "Wer sagt ein paar Worte?",
+          "Wie halten Sie später Kontakt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage ihren letzten Arbeitstag vor, nachmittags in der Kaffeepause. Dann sind alle da."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Beim Geschenk denke ich an etwas Praktisches. Vielleicht einen Gutschein für einen Babyladen?"
+          },
+          {
+            "wer": "A",
+            "text": "Ja, und dazu etwas Persönliches. Ein Fotobuch von der Abteilung wäre schön."
+          },
+          {
+            "wer": "B",
+            "text": "Für das Geld gehe ich mit einem Umschlag herum. Jeder gibt, was er möchte."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Wer hält die kleine Rede? Ich mache das nicht gern."
+          },
+          {
+            "wer": "B",
+            "text": "Dann frage ich unseren Teamleiter. Er kennt sie am längsten."
+          },
+          {
+            "wer": "A",
+            "text": "Und den Kontakt danach? Sie ist ja über ein Jahr weg."
+          },
+          {
+            "wer": "B",
+            "text": "Wir laden sie zu den Festen ein und schreiben ab und zu. Aber ohne Druck, sie hat genug zu tun."
+          },
+          {
+            "wer": "A",
+            "text": "Perfekt. Also letzter Arbeitstag, Gutschein und Fotobuch, Umschlag, der Teamleiter spricht."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Väter länger Elternzeit nehmen?",
+        "kultur": {
+          "de": "In Deutschland können beide Eltern Elternzeit nehmen. Man darf bis zu drei Jahre zu Hause bleiben, und der Arbeitsplatz bleibt in dieser Zeit sicher. Der Staat zahlt Elterngeld, meistens 65 Prozent vom letzten Nettolohn. Elterngeld gibt es zwölf Monate. Wenn auch der zweite Elternteil mindestens zwei Monate nimmt, sind es vierzehn Monate. Diese zwei Monate nennt man oft „Partnermonate\". Sie wurden eingeführt, damit mehr Väter zu Hause bleiben. Das hat gewirkt: Heute nimmt etwa jeder vierte Vater Elternzeit. Aber die meisten nehmen genau zwei Monate, nicht mehr. Frauen bleiben im Schnitt deutlich länger weg. Darüber wird viel diskutiert, weil lange Pausen später das Gehalt und die Rente verringern.",
+          "en": "Both parents in Germany can take Elternzeit — up to three years off with the job protected. The state pays Elterngeld, usually 65% of previous net pay, for twelve months, extended to fourteen if the second parent takes at least two months. Those two are widely called Partnermonate and exist specifically to get fathers to stay home. It worked in part: about one father in four now takes leave — but most take exactly two months and no more, while mothers take far longer. The debate is live, because a long career break lowers later pay and pension, and that cost still falls mainly on women."
+        },
+        "wortschatz": [
+          {
+            "de": "die Elternzeit",
+            "en": "parental leave"
+          },
+          {
+            "de": "das Elterngeld",
+            "en": "state parental allowance"
+          },
+          {
+            "de": "die Partnermonate",
+            "en": "the two 'partner months'"
+          },
+          {
+            "de": "die Betreuung",
+            "en": "childcare"
+          },
+          {
+            "de": "der Arbeitsplatz",
+            "en": "job, position"
+          },
+          {
+            "de": "die Karriere",
+            "en": "career"
+          },
+          {
+            "de": "die Rente",
+            "en": "pension"
+          },
+          {
+            "de": "sich kümmern um",
+            "en": "to look after"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Väter länger Elternzeit nehmen? In Deutschland können beide Eltern zu Hause bleiben. Trotzdem nehmen Väter meistens nur zwei Monate. Ich möchte erklären, woran das liegt und was ich davon halte.",
+          "Zuerst ein Beispiel aus meinem Umfeld. Ein Kollege hat nach der Geburt seiner Tochter sechs Monate Elternzeit genommen. Das war in unserer Abteilung ungewöhnlich. Manche haben gefragt, ob das seiner Karriere schadet. Er hat gesagt: Diese Zeit bekommt er nie wieder. Heute erzählt er, dass er seine Tochter dadurch viel besser kennt. Ich fand das sehr beeindruckend.",
+          "In meinem Heimatland Indien ist das noch selten. Bei uns gibt es meistens nur wenige Tage frei für den Vater. Die Mutter bleibt zu Hause, oder eine Großmutter hilft in der Familie. Eine lange bezahlte Elternzeit für Väter kennen die meisten Firmen nicht. Deshalb war ich überrascht, wie normal das hier inzwischen ist.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Der Vater baut früh eine enge Beziehung zum Kind auf. Die Mutter kann früher zurück in den Beruf, und die Arbeit zu Hause wird gerechter verteilt. Ein Nachteil ist: In manchen Firmen fehlt Verständnis, und man verdient in dieser Zeit weniger Geld. Meiner Meinung nach sollten Väter deutlich länger als zwei Monate nehmen. Gut wäre, wenn beide Eltern ungefähr gleich lange zu Hause bleiben.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Elternzeit keine Pause, sondern Arbeit für die Familie. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 245,
+          "sprechzeitSekunden": 163
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Das Beispiel von Ihrem Kollegen hat mir gefallen. Solche Geschichten ändern oft mehr als Zahlen.",
+        "frage": "Was könnten Firmen tun, damit mehr Väter Elternzeit nehmen?",
+        "antwort": "Ich glaube, der Chef müsste selbst mit gutem Beispiel vorangehen. Wenn Führungskräfte Elternzeit nehmen, trauen sich die anderen auch. Außerdem sollte klar sein, dass niemand deswegen Nachteile bekommt."
+      },
+      "nummer": 10
+    },
+    {
+      "kurz": "Pünktlichkeit",
+      "teil1": {
+        "situation": "Ein guter Freund von Ihnen wird vierzig. Sie und Ihr Partner / Ihre Partnerin möchten eine Überraschungsfeier organisieren.",
+        "punkte": [
+          "Wann und wo soll die Feier sein?",
+          "Wie halten Sie es geheim?",
+          "Wen laden Sie ein?",
+          "Was gibt es zu essen?",
+          "Wer macht was?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Sein Geburtstag ist an einem Dienstag. Ich würde am Samstag danach feiern."
+          },
+          {
+            "wer": "B",
+            "text": "Samstag ist besser, da können mehr Leute kommen. Wo denn? Seine Wohnung ist zu klein."
+          },
+          {
+            "wer": "A",
+            "text": "Wie wäre der Hinterraum in unserem Stammlokal? Den kann man mieten."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Aber wie halten wir es geheim? Er merkt so etwas schnell."
+          },
+          {
+            "wer": "A",
+            "text": "Seine Frau lockt ihn zum Essen dorthin. Wir sind vorher da und warten."
+          },
+          {
+            "wer": "B",
+            "text": "Für die Einladungen schreibe ich eine Nachrichtengruppe ohne ihn. Etwa dreißig Personen."
+          },
+          {
+            "wer": "A",
+            "text": "Beim Essen würde ich ein Büfett nehmen. Das Lokal macht das für einen festen Preis."
+          },
+          {
+            "wer": "B",
+            "text": "Ich rede mit dem Wirt und mit seiner Frau. Kümmerst du dich um Dekoration und Musik?"
+          },
+          {
+            "wer": "A",
+            "text": "Mache ich. Also: Samstag, Stammlokal, seine Frau bringt ihn, Büfett, dreißig Gäste."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Pünktlichkeit wirklich so wichtig?",
+        "kultur": {
+          "de": "Pünktlichkeit hat in Deutschland einen hohen Wert. Wer einen Termin hat, kommt pünktlich oder ein paar Minuten früher. Das gilt beim Arzt, im Amt, in der Schule und im Beruf. Wenn man sich verspätet, ruft man vorher an und sagt Bescheid. Zu einem Termin ohne Anruf zu spät zu kommen, wirkt schnell unhöflich. Bei einem Amt kann es sogar bedeuten, dass man einen neuen Termin braucht. Interessant ist eine Ausnahme: Bei einer privaten Einladung nach Hause kommt man oft fünf bis fünfzehn Minuten später, damit die Gastgeber fertig werden. Man nennt das „akademisches Viertel\". Zu früh zu erscheinen, ist dort auch nicht gern gesehen.",
+          "en": "Punctuality carries real weight in Germany. For any appointment you arrive on time or a few minutes early — at the doctor, an office, school or work — and if you are going to be late you ring ahead. Turning up late without a call reads as rude, and at a government office it can cost you the slot entirely. One useful exception: for a private invitation to someone's home, arriving five to fifteen minutes after the stated time is normal, so the hosts can finish; turning up early there is unwelcome. Knowing which situation you are in is the whole skill."
+        },
+        "wortschatz": [
+          {
+            "de": "pünktlich",
+            "en": "punctual, on time"
+          },
+          {
+            "de": "die Verspätung, -en",
+            "en": "delay, lateness"
+          },
+          {
+            "de": "der Termin, -e",
+            "en": "appointment"
+          },
+          {
+            "de": "Bescheid sagen",
+            "en": "to let someone know"
+          },
+          {
+            "de": "zuverlässig",
+            "en": "reliable"
+          },
+          {
+            "de": "sich verspäten",
+            "en": "to be late"
+          },
+          {
+            "de": "der Gastgeber, -",
+            "en": "host"
+          },
+          {
+            "de": "unhöflich",
+            "en": "impolite"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Ist Pünktlichkeit wirklich so wichtig? In Deutschland hört man oft, dass Pünktlichkeit eine Tugend ist. Ich möchte zeigen, was das im Alltag bedeutet und ob ich das gut finde.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meinem ersten Monat hier hatte ich einen Termin beim Amt um neun Uhr. Ich kam zehn Minuten zu spät. Die Mitarbeiterin sagte freundlich, aber bestimmt: Ich müsse einen neuen Termin machen. Der nächste freie Termin war erst in drei Wochen. Das hat mich viel gelehrt. Heute bin ich immer zehn Minuten früher da.",
+          "In meinem Heimatland Indien geht man damit lockerer um. Wenn eine Einladung um sieben Uhr ist, kommen viele Gäste um halb acht oder später. Das ist normal und niemand ärgert sich. Bei Bussen und Zügen rechnet man ebenfalls mit Verspätung. Termine bei Behörden sind aber auch bei uns wichtig. Der Unterschied liegt vor allem im privaten Bereich.",
+          "Nun die Vor- und Nachteile. Ein Vorteil der Pünktlichkeit ist: Man kann planen, und alle sparen Zeit. Wer pünktlich ist, wirkt zuverlässig, und das hilft im Beruf sehr. Ein Nachteil ist: Manchmal entsteht Stress und Ärger wegen fünf Minuten. Das Leben wird ein bisschen unentspannt. Meiner Meinung nach ist Pünktlichkeit bei Terminen sehr wichtig. Privat darf man ruhig etwas großzügiger sein.",
+          "Damit bin ich am Ende meiner Präsentation. Für mich ist Pünktlichkeit vor allem ein Zeichen von Respekt für die Zeit der anderen. Wer wartet, verliert Zeit, die er nicht zurückbekommt. Deshalb versuche ich, mich hier anzupassen, auch wenn es am Anfang schwer war. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 260,
+          "sprechzeitSekunden": 173
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Die Geschichte mit dem Amt war sehr lehrreich. So etwas vergisst man nicht.",
+        "frage": "Finden Sie es unhöflich, wenn jemand ohne Nachricht zu spät kommt?",
+        "antwort": "Ja, das finde ich schon. Ein kurzer Anruf oder eine Nachricht kostet nichts. Wenn man nichts hört, wartet man und weiß nicht, was los ist. Die Verspätung selbst stört mich weniger als das Schweigen."
+      },
+      "nummer": 11
+    },
+    {
+      "kurz": "Siezen oder duzen",
+      "teil1": {
+        "situation": "In Ihrer Firma fangen im nächsten Monat fünf neue Kollegen an. Sie und Ihr Partner / Ihre Partnerin planen einen Willkommensabend.",
+        "punkte": [
+          "Wann und wo findet der Abend statt?",
+          "Wie stellen Sie die neuen Kollegen vor?",
+          "Was machen Sie an dem Abend?",
+          "Wer aus der Firma soll dabei sein?",
+          "Was bekommen die neuen Kollegen mit?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den ersten Donnerstag vor, ab 18 Uhr. Nach der Arbeit, aber nicht am Freitag."
+          },
+          {
+            "wer": "B",
+            "text": "Donnerstag passt. Wo? Ich würde nicht in die Firma gehen, sondern in ein Lokal in der Nähe."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee, das ist lockerer. Zum Vorstellen könnte jeder kurz etwas über sich sagen."
+          },
+          {
+            "wer": "B",
+            "text": "Aber bitte ohne lange Reden. Vielleicht drei Sätze: Name, Abteilung und ein Hobby."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Danach einfach zusammen essen und reden. Kein Programm."
+          },
+          {
+            "wer": "B",
+            "text": "Dabei sein sollten das ganze Team und die Abteilungsleiterin. Aber nicht zu viele Leute."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt, sonst ist es unübersichtlich. Als Mitgebsel finde ich eine kleine Mappe gut."
+          },
+          {
+            "wer": "B",
+            "text": "Mit Telefonliste, Plan vom Gebäude und den wichtigsten Regeln. Ich mache die Mappe."
+          },
+          {
+            "wer": "A",
+            "text": "Dann reserviere ich das Lokal. Also Donnerstag 18 Uhr, kurze Vorstellung, Essen, Mappe."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man im Beruf lieber siezen oder duzen?",
+        "kultur": {
+          "de": "Deutsch hat zwei Formen der Anrede: „du\" und „Sie\". Das ist für viele Lernende schwierig. Die Grundregel lautet: Erwachsene, die man nicht kennt, siezt man. Man sagt „Frau Müller\" und „Herr Schmidt\", nicht den Vornamen. In vielen Firmen gilt das auch unter Kollegen, besonders in Banken, Ämtern und älteren Betrieben. Wichtig ist: Das „Du\" bietet die ältere oder ranghöhere Person an. Man fragt nicht selbst danach. Wenn jemand sagt „Wir können uns gerne duzen\", dann ist das ein kleines Ereignis. In Start-ups, in der IT und bei jungen Teams duzen sich dagegen fast alle sofort. Auch im Sportverein und unter Studierenden ist „du\" normal. Wer unsicher ist, siezt lieber. Das ist nie falsch.",
+          "en": "German has two ways of saying „you\": informal du and formal Sie, and choosing wrongly is a real social stumble. The default with adults you do not know is Sie, plus surname — Frau Müller, Herr Schmidt, never the first name. Many workplaces keep Sie between colleagues, especially banks, public offices and older firms. Crucially, the switch to du is *offered* by the older or more senior person; you do not ask for it, and being offered it is a small milestone. Start-ups, IT and young teams usually use du from day one, as do sports clubs and students. When unsure, use Sie — it is never wrong."
+        },
+        "wortschatz": [
+          {
+            "de": "die Anrede",
+            "en": "form of address"
+          },
+          {
+            "de": "siezen / duzen",
+            "en": "to use Sie / to use du"
+          },
+          {
+            "de": "der Nachname, -n",
+            "en": "surname"
+          },
+          {
+            "de": "höflich",
+            "en": "polite"
+          },
+          {
+            "de": "der Vorgesetzte, -n",
+            "en": "superior, boss"
+          },
+          {
+            "de": "das Du anbieten",
+            "en": "to offer the informal form"
+          },
+          {
+            "de": "die Distanz",
+            "en": "distance"
+          },
+          {
+            "de": "die Hierarchie",
+            "en": "hierarchy"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man im Beruf lieber siezen oder duzen? Im Deutschen gibt es „du\" und „Sie\". Für Lernende ist das oft schwierig. Ich möchte zeigen, welche Regeln gelten und was ich davon halte.",
+          "Ich erzähle von einem eigenen Fehler. An meinem ersten Arbeitstag habe ich einen älteren Kollegen geduzt, weil alle jungen Kollegen sich duzten. Er hat nichts gesagt, aber ich habe gemerkt, dass es ihm unangenehm war. Später hat mir eine Kollegin erklärt: Das „Du\" bietet die ältere Person an. Seitdem warte ich lieber ab.",
+          "In meinem Heimatland Indien gibt es etwas Ähnliches. In Hindi und in anderen Sprachen haben wir auch höfliche Formen. Wir benutzen außerdem oft Wörter wie „ji\" hinter dem Namen, um Respekt zu zeigen. Im englischen Arbeitsalltag sagt man dagegen fast immer den Vornamen. Deshalb war das deutsche „Sie\" für mich am Anfang sehr ungewohnt.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil des „Sie\" ist: Es schafft eine höfliche Distanz. Man kann sachlich streiten, ohne persönlich zu werden. Ein Vorteil des „Du\" ist: Das Team wirkt offener, und man traut sich eher, etwas zu sagen. Ein Nachteil des „Du\" kann sein, dass Hierarchien trotzdem bleiben, nur unsichtbar. Meiner Meinung nach sollte jede Firma eine klare Regel haben und sie den Neuen am ersten Tag sagen.",
+          "Damit komme ich zum Schluss. Mein Rat an alle Lernenden: Im Zweifel siezen, das ist nie falsch. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 240,
+          "sprechzeitSekunden": 160
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ihr Beispiel vom ersten Arbeitstag war sehr ehrlich. Diesen Fehler machen viele.",
+        "frage": "Würden Sie lieber in einer Firma arbeiten, in der sich alle duzen?",
+        "antwort": "Ich glaube ja, das wäre mir angenehmer. Es fühlt sich freundlicher an. Aber wichtig ist mir vor allem, dass man respektvoll miteinander umgeht. Das geht mit „Sie\" genauso gut."
+      },
+      "nummer": 12
+    }
+  ]
+}

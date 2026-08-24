@@ -37,6 +37,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "exams"
 LERNHILFE = ROOT / "content" / "lernhilfe"
+SPRECHEN = ROOT / "content" / "sprechen"
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 
 DOKUMENTE = ["kandidatenblaetter", "antwortbogen", "sprechen_karten", "loesungen"]
@@ -547,6 +548,31 @@ def build_exam(exam_id: str, keep_tex: bool, only: str | None) -> bool:
     return ok
 
 
+def build_sprechtraining(keep_tex: bool, stufe: str = "B1") -> bool:
+    """The speaking trainer: one book of tasks with answers, per level.
+
+    Separate from the exam documents because it is not a paper. Nothing here is
+    sat under time in one sitting; it is worked through over weeks, and the
+    answers belong in the same file as the tasks rather than behind the
+    submission gate an exam has.
+    """
+    quelle = SPRECHEN / f"{stufe.lower()}.json"
+    if not quelle.exists():
+        return True
+
+    daten = json.loads(quelle.read_text(encoding="utf-8"))
+    ziel = SPRECHEN / "pdf"
+    print(f"\nsprechtraining {stufe}")
+    try:
+        pdf, n_pages = build_document("sprechtraining", daten, ziel, keep_tex)
+        print(f"    {'sprechtraining':22} {n_pages:3d} Seiten  "
+              f"{pdf.stat().st_size / 1024:6.0f} kB")
+        return True
+    except Exception as exc:  # noqa: BLE001 - reported, not swallowed
+        print(f"    {'sprechtraining':22} FAILED\n{exc}")
+        return False
+
+
 def lernhilfe_ordner(stufe: str) -> Path:
     """Where a level's cheat sheet lives. B1's stayed at the top of the tree."""
     return LERNHILFE if stufe == "B1" else LERNHILFE / stufe.lower()
@@ -588,7 +614,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     ap.add_argument("exam", nargs="?", help="exam id, e.g. pruefung-01")
     ap.add_argument("--keep-tex", action="store_true",
                     help="write the generated .tex next to the PDF")
-    ap.add_argument("--only", choices=[*DOKUMENTE, "spickzettel"],
+    ap.add_argument("--only", choices=[*DOKUMENTE, "spickzettel", "sprechtraining"],
                     help="build a single document")
     args = ap.parse_args(list(argv) if argv is not None else None)
 
@@ -605,6 +631,9 @@ def main(argv: Iterable[str] | None = None) -> int:
     if not CONTENT.exists():
         print("No content/exams directory.")
         return 1
+
+    if args.only == "sprechtraining":
+        return 0 if build_sprechtraining(args.keep_tex) else 1
 
     if args.only == "spickzettel":
         ok = all(build_lernhilfe(args.keep_tex, s) for s in STUFEN)
