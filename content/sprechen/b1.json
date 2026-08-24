@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "30 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "36 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -3303,6 +3303,660 @@
         "antwort": "Etwa alle zwei Monate, meistens am freien Sonntag. Ich gehe am liebsten allein, dann kann ich in meinem Tempo lesen. Danach erzähle ich einem Freund davon, das hilft mir beim Sprechen."
       },
       "nummer": 30
+    },
+    {
+      "kurz": "Nachbarschaft",
+      "teil1": {
+        "situation": "In Ihrem Haus kennen sich die Mieter kaum. Sie und Ihr Partner / Ihre Partnerin möchten ein Nachbarschaftsfest im Hof organisieren.",
+        "punkte": [
+          "Wann soll das Fest sein?",
+          "Wie laden Sie alle ein?",
+          "Was gibt es zu essen und zu trinken?",
+          "Was machen Sie mit den Kindern?",
+          "Wer räumt danach auf?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Samstagnachmittag im Juni vor, ab 15 Uhr. Dann ist es noch hell und warm."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Wichtig ist, dass wir vorher der Hausverwaltung Bescheid sagen."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Einladen würde ich mit einem bunten Zettel im Treppenhaus und in jedem Briefkasten."
+          },
+          {
+            "wer": "B",
+            "text": "Vielleicht auf Deutsch und Englisch. In unserem Haus wohnen Leute aus vielen Ländern."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gute Idee. Beim Essen schlage ich vor: Jeder bringt etwas mit, ein internationales Büfett."
+          },
+          {
+            "wer": "B",
+            "text": "Dann lernt man auch das Essen der Nachbarn kennen. Getränke kaufen wir gemeinsam."
+          },
+          {
+            "wer": "A",
+            "text": "Für die Kinder könnten wir Straßenkreide und ein paar Bälle besorgen. Das reicht schon."
+          },
+          {
+            "wer": "B",
+            "text": "Und um 21 Uhr ist Schluss, wegen der Ruhezeit. Aufräumen machen alle zusammen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Nachbarn mehr miteinander unternehmen?",
+        "kultur": {
+          "de": "Nachbarschaft funktioniert in Deutschland nach ziemlich klaren Regeln. Man grüßt sich im Treppenhaus, aber man klingelt nicht einfach ohne Grund. Privatsphäre wird respektiert. Gleichzeitig gibt es viele gemeinsame Pflichten. In manchen Häusern gibt es einen Putzplan für das Treppenhaus. Im Winter muss der Gehweg geräumt und gestreut werden; das nennt man Streupflicht und steht oft im Mietvertrag. Wichtig sind die Ruhezeiten: meistens von 22 bis 6 Uhr, mittags und den ganzen Sonntag. Wer feiern will, hängt vorher einen Zettel auf. Viele Städte haben inzwischen einen Nachbarschaftstag oder ein Hoffest, damit sich die Leute besser kennenlernen.",
+          "en": "Neighbourliness in Germany follows fairly clear rules. You greet people on the stairs but you do not ring someone's bell without a reason — privacy is respected. Yet shared duties are real: some buildings run a rota for cleaning the stairwell, and in winter the pavement must be cleared and gritted (Streupflicht), often written into the tenancy. Quiet hours matter — usually 22:00 to 06:00, sometimes midday, and all of Sunday — and the polite move before a party is a note in the entrance hall. Many cities now hold a neighbourhood day or courtyard party to get people talking."
+        },
+        "wortschatz": [
+          {
+            "de": "die Nachbarschaft",
+            "en": "neighbourhood"
+          },
+          {
+            "de": "das Treppenhaus",
+            "en": "stairwell"
+          },
+          {
+            "de": "die Ruhezeit, -en",
+            "en": "quiet hours"
+          },
+          {
+            "de": "der Putzplan",
+            "en": "cleaning rota"
+          },
+          {
+            "de": "die Hausverwaltung",
+            "en": "building management"
+          },
+          {
+            "de": "sich kennenlernen",
+            "en": "to get to know each other"
+          },
+          {
+            "de": "die Privatsphäre",
+            "en": "privacy"
+          },
+          {
+            "de": "Rücksicht nehmen",
+            "en": "to be considerate"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Nachbarn mehr miteinander unternehmen? In Deutschland grüßt man sich im Treppenhaus, aber viele kennen ihre Nachbarn kaum. Ich möchte zeigen, warum das so ist und was man ändern könnte.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meinem ersten Jahr kannte ich niemanden im Haus. Ich habe nur „Guten Tag\" gesagt und bin weiter gegangen. Dann hat eine Nachbarin ein kleines Hoffest organisiert. Wir haben alle etwas zu essen mitgebracht. An diesem Nachmittag habe ich mehr Leute kennengelernt als in zwölf Monaten davor. Heute helfen wir uns oft gegenseitig, zum Beispiel mit Paketen.",
+          "In meinem Heimatland Indien ist die Nachbarschaft viel enger. Bei uns kommt man ohne Anmeldung vorbei, und die Türen stehen oft offen. Man teilt Essen und feiert Feste zusammen. Das ist sehr schön, aber es gibt auch weniger Privatsphäre. Jeder weiß viel über die anderen. In Deutschland ist es umgekehrt: mehr Ruhe, aber am Anfang mehr Einsamkeit.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil von mehr Kontakt ist: Man hilft sich im Alltag, bei Paketen, bei Blumen im Urlaub oder wenn jemand krank ist. Ältere Menschen sind weniger allein. Ein Nachteil ist: Zu viel Nähe kann stören, und nicht jeder möchte Kontakt. Manche Leute brauchen nach der Arbeit einfach Ruhe. Meiner Meinung nach reicht schon ein Fest im Jahr. Dann weiß man, wer im Haus wohnt, ohne sich täglich zu sehen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist das Wichtigste: Man muss nicht befreundet sein, aber man sollte sich kennen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 261,
+          "sprechzeitSekunden": 174
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Der Vergleich von Nähe und Privatsphäre war sehr fair. Beides hat ja etwas.",
+        "frage": "Was würden Sie tun, wenn ein Nachbar oft zu laut ist?",
+        "antwort": "Ich würde zuerst freundlich klingeln und mit ihm reden. Vielleicht merkt er es gar nicht. Erst wenn das mehrmals nichts bringt, würde ich die Hausverwaltung informieren."
+      },
+      "nummer": 31
+    },
+    {
+      "kurz": "Verein oder Fitnessstudio",
+      "teil1": {
+        "situation": "Ihre Firma möchte etwas für die Gesundheit der Mitarbeiter tun. Sie und Ihr Partner / Ihre Partnerin sollen ein Sportangebot vorschlagen.",
+        "punkte": [
+          "Welchen Sport bieten Sie an?",
+          "Wann soll trainiert werden?",
+          "Wo findet es statt?",
+          "Wer leitet das Training?",
+          "Wie viel zahlt die Firma dazu?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage Rückengymnastik vor. Fast alle sitzen den ganzen Tag am Schreibtisch."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr sinnvoll. Dazu vielleicht eine Laufgruppe für alle, die lieber draußen sind."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Ich würde direkt nach der Arbeit trainieren, so um 17 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Zweimal in der Woche, Dienstag und Donnerstag. Dann kann man auch mal fehlen."
+          },
+          {
+            "wer": "A",
+            "text": "Für die Gymnastik brauchen wir einen Raum. Der große Besprechungsraum wäre möglich."
+          },
+          {
+            "wer": "B",
+            "text": "Die Leitung sollte ein ausgebildeter Trainer machen. Bei Rücken ist das wichtig."
+          },
+          {
+            "wer": "A",
+            "text": "Ich frage bei zwei Sportvereinen nach einem Trainer und nach Preisen."
+          },
+          {
+            "wer": "B",
+            "text": "Die Firma könnte die Hälfte zahlen. Ich rechne das aus und schreibe den Vorschlag."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Sport im Verein besser als im Fitnessstudio?",
+        "kultur": {
+          "de": "In Deutschland treiben sehr viele Menschen Sport im Verein. Der Deutsche Olympische Sportbund hat rund 27 Millionen Mitgliedschaften. Ein Verein ist günstig: Der Beitrag liegt oft zwischen fünf und zwanzig Euro im Monat. Dafür trainiert man in einer festen Gruppe, meistens mit ehrenamtlichen Trainern. Man verpflichtet sich aber auch ein bisschen: Man kommt zu festen Zeiten und hilft manchmal bei Festen mit. Fitnessstudios sind teurer, oft dreißig bis sechzig Euro im Monat, dafür kann man kommen, wann man will. Wichtig: Bei Studios sollte man auf die Vertragslaufzeit achten, oft zwölf oder vierundzwanzig Monate. Manche Krankenkassen zahlen einen Zuschuss zu Kursen, zum Beispiel für den Rücken.",
+          "en": "Club sport is huge in Germany — the national sports federation counts around 27 million memberships. A club is cheap, often €5–20 a month, and you train with a fixed group, usually under volunteer coaches; in exchange you commit a little, turning up at set times and sometimes helping at events. Gyms cost more, typically €30–60, and you go when you like — but watch the contract term, commonly twelve or twenty-four months, which surprises newcomers. Health insurers often subsidise recognised courses such as back-strengthening classes, which is worth asking about."
+        },
+        "wortschatz": [
+          {
+            "de": "der Sportverein, -e",
+            "en": "sports club"
+          },
+          {
+            "de": "das Fitnessstudio, -s",
+            "en": "gym"
+          },
+          {
+            "de": "der Mitgliedsbeitrag",
+            "en": "membership fee"
+          },
+          {
+            "de": "die Vertragslaufzeit",
+            "en": "contract term"
+          },
+          {
+            "de": "das Training",
+            "en": "training session"
+          },
+          {
+            "de": "sich bewegen",
+            "en": "to exercise, to move"
+          },
+          {
+            "de": "die Mannschaft, -en",
+            "en": "team"
+          },
+          {
+            "de": "der Zuschuss, -schüsse",
+            "en": "subsidy"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Ist Sport im Verein besser als im Fitnessstudio? In Deutschland gibt es rund siebenundzwanzig Millionen Mitgliedschaften in Sportvereinen. Trotzdem gehen viele lieber ins Studio. Ich möchte beide Möglichkeiten vergleichen.",
+          "Ich erzähle von meiner eigenen Erfahrung. Zuerst hatte ich einen Vertrag im Fitnessstudio für zwölf Monate. Am Anfang bin ich dreimal die Woche gegangen. Nach zwei Monaten immer seltener, weil niemand auf mich gewartet hat. Danach bin ich in einen Volleyballverein eingetreten. Dort gehe ich jetzt regelmäßig, weil die Mannschaft mich braucht. Das hat mich sehr überrascht.",
+          "In meinem Heimatland Indien ist Sport im Verein weniger organisiert. Bei uns spielt man Cricket auf der Straße oder im Park, oft ohne feste Gruppe. In den Städten gibt es viele Fitnessstudios, und die sind bei jungen Leuten sehr beliebt. Ein System mit günstigen Vereinen für alle Altersgruppen kenne ich von dort nicht.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil des Vereins ist: Er ist günstig, man hat feste Termine und trifft Menschen. Für Kinder und ältere Menschen ist er oft der beste Weg. Ein Nachteil ist: Die Zeiten sind fest, und mit Schichtarbeit passt das schlecht. Ein Vorteil des Studios ist die Freiheit: offen von morgens bis spät. Ein Nachteil sind der Preis und die lange Vertragsbindung. Meiner Meinung nach hält man im Verein länger durch, weil andere auf einen warten.",
+          "Damit komme ich zum Schluss. Für mich ist die Gruppe wichtiger als die Geräte. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 243,
+          "sprechzeitSekunden": 162
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Der Punkt, dass die Mannschaft auf einen wartet, war sehr überzeugend.",
+        "frage": "Was raten Sie jemandem, der wenig Zeit für Sport hat?",
+        "antwort": "Ich würde mit etwas Kleinem anfangen, zum Beispiel mit dem Rad zur Arbeit. Das kostet keine extra Zeit. Wer zwei feste Termine in der Woche schafft, hat schon viel gewonnen."
+      },
+      "nummer": 32
+    },
+    {
+      "kurz": "Kinderbetreuung",
+      "teil1": {
+        "situation": "Ihre Firma möchte für die Ferien eine Betreuung für die Kinder der Mitarbeiter anbieten. Sie und Ihr Partner / Ihre Partnerin planen sie.",
+        "punkte": [
+          "In welchen Ferien und wie lange?",
+          "Für welches Alter?",
+          "Wer betreut die Kinder?",
+          "Was machen die Kinder den Tag über?",
+          "Was kostet es für die Eltern?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde mit zwei Wochen in den Sommerferien anfangen. Die sind für Eltern am schwierigsten."
+          },
+          {
+            "wer": "B",
+            "text": "Guter Punkt, sechs Wochen Ferien schafft kaum jemand mit Urlaub. Für welches Alter?"
+          },
+          {
+            "wer": "A",
+            "text": "Sechs bis zwölf Jahre. Kleinere Kinder brauchen mehr Betreuung, als wir leisten können."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Betreuen sollten ausgebildete Erzieher, nicht die Kollegen nebenbei."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Ich frage bei einem Jugendverein, ob sie das übernehmen können."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Programm denke ich an Ausflüge, Basteln und Sport. Nicht den ganzen Tag drinnen."
+          },
+          {
+            "wer": "A",
+            "text": "Und einmal dürfen die Kinder sehen, wo ihre Eltern arbeiten. Das finden sie meistens spannend."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Preis würde ich fünfzig Euro pro Woche nehmen. Den Rest zahlt die Firma."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Firmen Kinderbetreuung anbieten?",
+        "kultur": {
+          "de": "In Deutschland hat jedes Kind ab einem Jahr einen Rechtsanspruch auf einen Betreuungsplatz. Trotzdem fehlen in vielen Städten Plätze, und Eltern melden ihr Kind oft schon während der Schwangerschaft an. Die Kita kostet je nach Bundesland unterschiedlich viel; in einigen Ländern ist sie ganz kostenlos, in anderen richtet sich der Beitrag nach dem Einkommen. Ein großes Problem sind die Öffnungszeiten und die Schulferien: Kitas schließen im Sommer oft für zwei bis drei Wochen, und Schulkinder haben zwölf Wochen Ferien im Jahr. Eltern haben aber nur etwa dreißig Urlaubstage. Deshalb bieten manche Firmen eine eigene Betreuung oder Ferienprogramme an. Das gilt als wichtiger Vorteil im Wettbewerb um Fachkräfte.",
+          "en": "Every child in Germany has a legal right to a childcare place from age one — yet places are genuinely scarce in many cities, and parents commonly register during pregnancy. Costs vary by state: free in some, income-scaled in others. The practical crunch is hours and holidays: nurseries often close for two or three weeks in summer, school children have around twelve weeks of holiday a year, and parents have roughly thirty days of leave. That arithmetic does not work, which is why some employers now run their own childcare or holiday schemes — and treat it as a serious advantage in recruiting."
+        },
+        "wortschatz": [
+          {
+            "de": "die Kita / der Kindergarten",
+            "en": "nursery / kindergarten"
+          },
+          {
+            "de": "der Betreuungsplatz",
+            "en": "childcare place"
+          },
+          {
+            "de": "der Rechtsanspruch",
+            "en": "legal entitlement"
+          },
+          {
+            "de": "die Öffnungszeiten",
+            "en": "opening hours"
+          },
+          {
+            "de": "die Ferienbetreuung",
+            "en": "holiday childcare"
+          },
+          {
+            "de": "der Erzieher, -",
+            "en": "childcare worker"
+          },
+          {
+            "de": "vereinbaren",
+            "en": "to reconcile, to combine"
+          },
+          {
+            "de": "berufstätig",
+            "en": "in employment"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Firmen Kinderbetreuung anbieten? In Deutschland hat jedes Kind ab einem Jahr ein Recht auf einen Platz. Trotzdem ist es für berufstätige Eltern oft schwierig. Ich möchte zeigen, woran das liegt.",
+          "Ich erzähle von einer Kollegin. Sie hat zwei Kinder in der Grundschule. Die Schule hat zwölf Wochen Ferien im Jahr, aber sie hat nur dreißig Urlaubstage. Jedes Jahr überlegt die Familie neu, wer wann freinimmt. Letzten Sommer sind zum Schluss die Großeltern aus einer anderen Stadt gekommen. Ohne sie hätte es nicht funktioniert.",
+          "In meinem Heimatland Indien ist die Familie meistens die Lösung. Bei uns wohnen Großeltern oft im selben Haus oder ganz in der Nähe. Sie passen auf die Kinder auf, wenn die Eltern arbeiten. Öffentliche Kitas gibt es auch, aber viele Familien nutzen sie nicht. In Deutschland wohnt die Familie dagegen oft weit auseinander, deshalb braucht man eine andere Lösung.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil einer Betreuung durch die Firma ist: Eltern können ruhiger arbeiten und fallen seltener aus. Die Firma findet leichter gute Leute. Ein Nachteil ist: Es kostet Geld, und kleine Betriebe können das nicht leisten. Außerdem sollte Betreuung eine öffentliche Aufgabe sein und nicht vom Arbeitgeber abhängen. Meiner Meinung nach ist ein Ferienprogramm ein sehr guter Anfang.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich zeigt das Thema vor allem eines: Gute Betreuung ist keine Familiensache allein. Wenn beide Eltern arbeiten sollen, muss die Betreuung zu den Arbeitszeiten passen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 253,
+          "sprechzeitSekunden": 169
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Die Rechnung mit zwölf Wochen Ferien und dreißig Urlaubstagen war sehr eindrücklich.",
+        "frage": "Wer sollte die Kinderbetreuung bezahlen: der Staat oder die Firma?",
+        "antwort": "Ich finde, in erster Linie der Staat. Dann haben alle Kinder die gleichen Chancen, egal wo die Eltern arbeiten. Firmen können aber gern zusätzlich etwas anbieten, besonders in den Ferien."
+      },
+      "nummer": 33
+    },
+    {
+      "kurz": "Umzug in eine andere Stadt",
+      "teil1": {
+        "situation": "Eine Freundin zieht für eine neue Stelle in eine andere Stadt. Sie und Ihr Partner / Ihre Partnerin organisieren einen Abschiedsabend.",
+        "punkte": [
+          "Wann und wo feiern Sie?",
+          "Wen laden Sie ein?",
+          "Was schenken Sie ihr?",
+          "Was machen Sie an dem Abend?",
+          "Wie bleiben Sie in Kontakt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den Samstag vor ihrem Umzug vor. Danach hat sie keine Zeit mehr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Bei ihr zu Hause ist alles in Kisten. Gehen wir lieber in unser Stammlokal."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Einladen würde ich den engen Freundeskreis, etwa fünfzehn Leute."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Geschenk denke ich an etwas Praktisches für die neue Wohnung."
+          },
+          {
+            "wer": "A",
+            "text": "Vielleicht einen Gutschein und ein Fotobuch mit Bildern von uns allen."
+          },
+          {
+            "wer": "B",
+            "text": "Schöne Idee. Ich sammle die Fotos ein, wenn du das Lokal reservierst."
+          },
+          {
+            "wer": "A",
+            "text": "Am Abend könnte jeder eine kurze Geschichte über sie erzählen. Nichts Langes."
+          },
+          {
+            "wer": "B",
+            "text": "Und für den Kontakt machen wir feste Termine aus: einmal im Quartal besuchen wir sie."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist ein Umzug in eine andere Stadt eine Chance?",
+        "kultur": {
+          "de": "Umziehen ist in Deutschland gut organisiert und mit vielen Regeln verbunden. Innerhalb von zwei Wochen muss man sich beim Einwohnermeldeamt anmelden. Das nennt man Anmeldung, und man braucht dafür eine Wohnungsgeberbestätigung vom Vermieter. Ohne Anmeldung bekommt man kein Bankkonto und keine Steuer-Identifikationsnummer. Die alte Wohnung kündigt man meistens drei Monate vorher, schriftlich. Beim Auszug macht man eine Übergabe mit Protokoll, damit es später keinen Streit um die Kaution gibt. Wer für einen Job umzieht, kann die Umzugskosten oft von der Steuer absetzen. Beruflich ist Mobilität normal: Viele Menschen ziehen für die Ausbildung, das Studium oder die erste Stelle in eine andere Stadt.",
+          "en": "Moving house in Germany is heavily procedural. Within two weeks you must register your new address at the Einwohnermeldeamt — the Anmeldung — for which you need a Wohnungsgeberbestätigung from your landlord. Without it you cannot open a bank account or get a tax ID. You normally give three months' written notice on the old flat, and hand it back with a written Übergabeprotokoll so the deposit is not disputed later. Relocating for work often makes the costs tax-deductible. Moving city for training, study or a first job is entirely normal here, which is one reason families end up spread out."
+        },
+        "wortschatz": [
+          {
+            "de": "der Umzug, -züge",
+            "en": "house move"
+          },
+          {
+            "de": "die Anmeldung",
+            "en": "address registration"
+          },
+          {
+            "de": "die Kündigungsfrist",
+            "en": "notice period"
+          },
+          {
+            "de": "die Kaution",
+            "en": "deposit"
+          },
+          {
+            "de": "das Übergabeprotokoll",
+            "en": "handover record"
+          },
+          {
+            "de": "sich einleben",
+            "en": "to settle in"
+          },
+          {
+            "de": "der Neuanfang",
+            "en": "fresh start"
+          },
+          {
+            "de": "das Heimweh",
+            "en": "homesickness"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist ein Umzug in eine andere Stadt eine Chance? In Deutschland ziehen viele Menschen für die Ausbildung oder für die Arbeit um. Ich möchte zeigen, was das bedeutet.",
+          "Ich erzähle von meiner eigenen Erfahrung. Vor drei Jahren bin ich für eine Stelle in eine neue Stadt gezogen. Ich kannte dort niemanden. Die ersten zwei Monate waren schwer, besonders am Wochenende. Dann bin ich in einen Verein gegangen und habe einen Sprachkurs besucht. Nach einem halben Jahr hatte ich einen kleinen Freundeskreis. Heute möchte ich nicht mehr zurück.",
+          "In meinem Heimatland Indien ist ein Umzug eine größere Sache. Bei uns wohnen viele Familien über Generationen am selben Ort. Wer wegzieht, verlässt oft auch das Netz aus Verwandten und Nachbarn. Für die Arbeit ziehen trotzdem viele junge Leute in große Städte. Sie schicken dann Geld nach Hause und besuchen die Familie zu den Festen.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Man bekommt bessere berufliche Möglichkeiten und lernt viel über sich selbst. Man wird selbstständiger. Ein Nachteil ist: Freunde und Familie sind weit weg, und am Anfang ist man oft allein. Auch die Bürokratie kostet Kraft, zum Beispiel die Anmeldung und die Wohnungssuche. Meiner Meinung nach ist ein Umzug eine große Chance, wenn man aktiv auf Menschen zugeht.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich war der Umzug schwer, aber rückblickend die beste Entscheidung. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 240,
+          "sprechzeitSekunden": 160
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Dass die ersten zwei Monate schwer waren, klingt sehr ehrlich. Das hört man selten so offen.",
+        "frage": "Was raten Sie jemandem, der neu in einer Stadt ist?",
+        "antwort": "Ich würde raten, sofort etwas Regelmäßiges zu suchen: einen Kurs, einen Verein oder ein Ehrenamt. Wenn man jede Woche dieselben Leute trifft, entstehen Freundschaften fast von allein."
+      },
+      "nummer": 34
+    },
+    {
+      "kurz": "Sprachen lernen",
+      "teil1": {
+        "situation": "Ihre Firma möchte einen Deutschkurs für ausländische Mitarbeiter anbieten. Sie und Ihr Partner / Ihre Partnerin planen ihn.",
+        "punkte": [
+          "Wann soll der Kurs stattfinden?",
+          "Wie oft und wie lange?",
+          "Wer unterrichtet?",
+          "Welches Niveau bieten Sie an?",
+          "Wer bezahlt den Kurs?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde den Kurs direkt nach der Arbeit machen, so um 16.30 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Oder besser: eine Stunde während der Arbeitszeit und eine danach. Dann kommen mehr."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr guter Vorschlag. Zweimal in der Woche, jeweils neunzig Minuten."
+          },
+          {
+            "wer": "B",
+            "text": "Unterrichten sollte eine ausgebildete Lehrkraft von einer Sprachschule."
+          },
+          {
+            "wer": "A",
+            "text": "Ja, nicht ein Kollege nebenbei. Beim Niveau brauchen wir mindestens zwei Gruppen."
+          },
+          {
+            "wer": "B",
+            "text": "A2 und B1. Vorher machen wir einen kurzen Einstufungstest."
+          },
+          {
+            "wer": "A",
+            "text": "Beim Geld schlage ich vor: Die Firma zahlt achtzig Prozent, die Teilnehmer zwanzig."
+          },
+          {
+            "wer": "B",
+            "text": "Ein kleiner Eigenanteil ist gut, dann kommen die Leute auch wirklich. Ich hole Angebote ein."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Kann man eine Sprache allein mit einer App lernen?",
+        "kultur": {
+          "de": "Deutschlernen ist in Deutschland gut organisiert. Für viele Zugewanderte gibt es den Integrationskurs: 600 Stunden Sprache und 100 Stunden Orientierung über Recht, Geschichte und Alltag. Am Ende steht der Test „Leben in Deutschland\" und die Prüfung auf B1. Der Kurs wird staatlich gefördert und kostet nur einen kleinen Eigenanteil, manchmal gar nichts. Ein B1-Zertifikat ist für die Einbürgerung wichtig. Daneben gibt es überall Volkshochschulen, kurz VHS. Sie bieten günstige Kurse in fast jeder Stadt an, auch abends. Apps sind beliebt für Vokabeln, ersetzen aber kein Sprechen. Viele Städte haben außerdem ein Sprachcafé, wo man kostenlos üben kann.",
+          "en": "Learning German is institutionally supported here. Many migrants take the Integrationskurs: 600 hours of language plus 100 hours of orientation covering law, history and everyday life, ending in the „Leben in Deutschland\" test and a B1 exam. It is state-funded, with a small contribution or none at all, and a B1 certificate matters for naturalisation. Alongside that, the Volkshochschule (VHS) in almost every town runs cheap evening courses. Apps are popular for vocabulary but do not replace speaking — which is why many cities also run a free Sprachcafé for conversation practice."
+        },
+        "wortschatz": [
+          {
+            "de": "der Integrationskurs",
+            "en": "state integration course"
+          },
+          {
+            "de": "die Volkshochschule (VHS)",
+            "en": "adult education centre"
+          },
+          {
+            "de": "das Zertifikat, -e",
+            "en": "certificate"
+          },
+          {
+            "de": "die Aussprache",
+            "en": "pronunciation"
+          },
+          {
+            "de": "der Wortschatz",
+            "en": "vocabulary"
+          },
+          {
+            "de": "üben",
+            "en": "to practise"
+          },
+          {
+            "de": "die Lehrkraft, -kräfte",
+            "en": "teacher"
+          },
+          {
+            "de": "das Sprachcafé",
+            "en": "conversation café"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Kann man eine Sprache allein mit einer App lernen? Heute gibt es viele Programme für das Handy. Trotzdem gehen sehr viele Menschen in einen Kurs. Ich möchte beide Wege vergleichen.",
+          "Ich erzähle von meiner eigenen Erfahrung. Ich habe mit einer App angefangen und jeden Tag zehn Minuten geübt. Nach einem halben Jahr konnte ich viele Wörter lesen. Aber beim ersten Gespräch im Supermarkt habe ich fast nichts verstanden. Die Leute sprechen schneller und anders als die App. Danach habe ich einen Kurs an der Volkshochschule besucht. Erst dort habe ich sprechen gelernt.",
+          "In meinem Heimatland Indien lernen die meisten Menschen mehrere Sprachen gleichzeitig, oft ohne Kurs. Man hört sie zu Hause, auf der Straße und im Fernsehen. Dadurch lernt man sehr natürlich. Deutsch ist bei uns anders: Man hört es nirgends im Alltag. Deshalb braucht man dafür einen Kurs oder Kontakt zu Muttersprachlern.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil der App ist: Sie ist billig, immer dabei und man übt in kleinen Pausen. Für Vokabeln und Grammatik ist sie sehr gut. Ein Nachteil ist: Niemand korrigiert die Aussprache, und man spricht nicht frei. Im Kurs bekommt man Rückmeldung und übt mit anderen Menschen. Meiner Meinung nach ist die Mischung am besten: die App für Wörter, der Kurs oder ein Sprachcafé für das Sprechen.",
+          "Damit komme ich zum Schluss. Für mich gilt: Eine Sprache lernt man erst richtig, wenn man sie benutzt. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 243,
+          "sprechzeitSekunden": 162
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Ihr Beispiel vom Supermarkt kennen sicher alle im Raum.",
+        "frage": "Wie üben Sie heute Ihr Deutsch im Alltag?",
+        "antwort": "Ich höre morgens Radio auf dem Weg zur Arbeit, auch wenn ich nicht alles verstehe. Und ich zwinge mich, im Laden Fragen auf Deutsch zu stellen. Jedes kleine Gespräch hilft."
+      },
+      "nummer": 35
+    },
+    {
+      "kurz": "Second-Hand und Reparieren",
+      "teil1": {
+        "situation": "In Ihrem Stadtteil soll ein Repair-Café entstehen, wo man kaputte Dinge reparieren kann. Sie und Ihr Partner / Ihre Partnerin planen den ersten Termin.",
+        "punkte": [
+          "Wann und wo soll es stattfinden?",
+          "Wer repariert?",
+          "Welche Sachen nehmen Sie an?",
+          "Was kostet es?",
+          "Wie machen Sie es bekannt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Samstagnachmittag im Monat vor, von 14 bis 17 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Als Ort wäre das Gemeindezentrum passend, dort gibt es Tische und Strom."
+          },
+          {
+            "wer": "A",
+            "text": "Wer repariert? Wir bräuchten Leute, die sich mit Elektrik und mit Nähen auskennen."
+          },
+          {
+            "wer": "B",
+            "text": "Ich frage im Seniorenclub. Dort sind einige gelernte Handwerker im Ruhestand."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr gute Idee. Annehmen würde ich kleine Geräte, Kleidung und Fahrräder."
+          },
+          {
+            "wer": "B",
+            "text": "Aber nichts Großes wie Waschmaschinen. Dafür fehlt uns der Platz."
+          },
+          {
+            "wer": "A",
+            "text": "Kosten soll es nichts. Wir stellen eine Spendenkasse auf, freiwillig."
+          },
+          {
+            "wer": "B",
+            "text": "Bekannt machen wir es über Plakate, die Stadtteilzeitung und die Schulen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist gebrauchte Kleidung eine gute Idee?",
+        "kultur": {
+          "de": "Gebrauchtes hat in Deutschland kein schlechtes Image. Flohmärkte gehören zum Wochenende dazu, und in fast jeder Stadt gibt es Second-Hand-Läden. Beliebt sind auch Kleiderkreisel im Internet und die Kleiderkammer von Hilfsorganisationen. Für Kinderkleidung gibt es oft einen Kinderbasar in Schulen oder Kirchen. Wichtig ist der Unterschied bei Altkleidercontainern: Manche gehören Hilfsorganisationen, andere Firmen, die damit Geld verdienen. Beim Kauf gilt: Auch privat gekaufte Ware kann man nicht einfach zurückgeben, denn Privatleute dürfen die Gewährleistung ausschließen. Neben Kleidung gibt es Repair-Cafés, wo Ehrenamtliche beim Reparieren helfen, statt Dinge wegzuwerfen.",
+          "en": "Buying used carries no stigma in Germany. Flea markets are a weekend fixture, second-hand shops are everywhere, online clothes-swapping is popular, and charities run Kleiderkammern. Children's clothing often changes hands at a Kinderbasar in a school or church hall. One thing to know about clothing banks on the street: some belong to charities, others to commercial operators. And when buying privately you generally cannot return goods — private sellers may exclude the warranty. Alongside all this, Repair-Cafés staffed by volunteers help people mend things instead of discarding them."
+        },
+        "wortschatz": [
+          {
+            "de": "gebraucht / secondhand",
+            "en": "used / second-hand"
+          },
+          {
+            "de": "der Flohmarkt, -märkte",
+            "en": "flea market"
+          },
+          {
+            "de": "die Kleidung",
+            "en": "clothing"
+          },
+          {
+            "de": "reparieren",
+            "en": "to repair"
+          },
+          {
+            "de": "die Umwelt schonen",
+            "en": "to spare the environment"
+          },
+          {
+            "de": "die Qualität",
+            "en": "quality"
+          },
+          {
+            "de": "der Altkleidercontainer",
+            "en": "clothing bank"
+          },
+          {
+            "de": "sparsam",
+            "en": "thrifty"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist gebrauchte Kleidung eine gute Idee? In Deutschland ist Second-Hand sehr verbreitet, auch bei Menschen, die genug Geld haben. Ich möchte zeigen, warum das so ist.",
+          "Ich erzähle von meiner eigenen Erfahrung. Am Anfang war mir gebrauchte Kleidung unangenehm. In meiner Familie kauft man neu, wenn man es sich leisten kann. Dann bin ich mit einer Kollegin auf einen Flohmarkt gegangen. Ich habe eine sehr gute Jacke für zwölf Euro gefunden. Sie sieht bis heute gut aus. Seitdem schaue ich immer zuerst gebraucht.",
+          "In meinem Heimatland Indien ist das anders. Bei uns gibt man Kleidung innerhalb der Familie weiter, von den älteren zu den jüngeren Geschwistern. Das ist völlig normal. Aber in einem Laden gebrauchte Kleidung von Fremden zu kaufen, ist selten. Viele Menschen lassen stattdessen Kleidung beim Schneider ändern oder reparieren, und das ist sehr günstig.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Es ist günstig und gut für die Umwelt, denn die Herstellung von Kleidung braucht sehr viel Wasser. Man findet außerdem Sachen, die es neu nicht mehr gibt. Ein Nachteil ist: Man muss Zeit zum Suchen haben, und die Größen sind zufällig. Nicht alles ist in gutem Zustand. Meiner Meinung nach lohnt sich Second-Hand besonders bei Kinderkleidung, weil Kinder so schnell wachsen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Reparieren und Weitergeben besser als jedes Mal neu zu kaufen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 241,
+          "sprechzeitSekunden": 161
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Der Hinweis auf den Schneider war interessant. Reparieren ist ja auch eine Form von Nachhaltigkeit.",
+        "frage": "Würden Sie auch ein gebrauchtes Handy oder einen Laptop kaufen?",
+        "antwort": "Ja, aber nur mit Garantie von einem Händler. Bei Technik ist mir das Risiko privat zu groß. Bei Kleidung und Möbeln kaufe ich dagegen ohne Bedenken privat."
+      },
+      "nummer": 36
     }
   ]
 }
