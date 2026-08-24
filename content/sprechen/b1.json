@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "36 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "42 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -3957,6 +3957,660 @@
         "antwort": "Ja, aber nur mit Garantie von einem Händler. Bei Technik ist mir das Risiko privat zu groß. Bei Kleidung und Möbeln kaufe ich dagegen ohne Bedenken privat."
       },
       "nummer": 36
+    },
+    {
+      "kurz": "Autofreie Innenstadt",
+      "teil1": {
+        "situation": "In Ihrer Straße soll für einen Tag die Fahrbahn für Kinder gesperrt werden. Sie und Ihr Partner / Ihre Partnerin organisieren diesen Spielstraßentag.",
+        "punkte": [
+          "An welchem Tag und zu welcher Zeit?",
+          "Wie bekommen Sie die Erlaubnis?",
+          "Was bieten Sie den Kindern an?",
+          "Wie informieren Sie die Autofahrer?",
+          "Wer passt auf?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Sonntagnachmittag vor, von 14 bis 18 Uhr. Da ist wenig Verkehr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Für die Sperrung brauchen wir eine Genehmigung vom Ordnungsamt."
+          },
+          {
+            "wer": "A",
+            "text": "Die muss man mehrere Wochen vorher beantragen. Ich kümmere mich darum."
+          },
+          {
+            "wer": "B",
+            "text": "Für die Kinder würde ich Kreide, Seile und ein paar Bälle besorgen."
+          },
+          {
+            "wer": "A",
+            "text": "Vielleicht auch einen Tisch zum Basteln. Nicht alle Kinder wollen rennen."
+          },
+          {
+            "wer": "B",
+            "text": "Die Autofahrer informieren wir mit Zetteln an den Autos, eine Woche vorher."
+          },
+          {
+            "wer": "A",
+            "text": "Und mit Schildern an beiden Enden der Straße am Tag selbst."
+          },
+          {
+            "wer": "B",
+            "text": "Aufpassen sollten immer zwei Erwachsene an den Absperrungen. Ich mache einen Schichtplan."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Innenstädte autofrei werden?",
+        "kultur": {
+          "de": "Viele deutsche Städte haben eine Fußgängerzone im Zentrum. Dort darf man nur zu bestimmten Zeiten liefern. Dazu kommen Umweltzonen: In vielen Innenstädten braucht ein Auto eine grüne Plakette an der Windschutzscheibe, sonst darf es nicht hineinfahren. Parken ist meist gebührenpflichtig, und Anwohner brauchen einen eigenen Ausweis. In den letzten Jahren wandeln Städte Parkplätze in Radwege oder in Flächen für Cafés um. Das führt oft zu heftigen Diskussionen: Geschäfte fürchten weniger Kunden, Anwohner wünschen sich weniger Lärm. Ein Kompromiss sind Park-and-Ride-Plätze am Stadtrand: Man stellt das Auto ab und fährt mit Bus oder Bahn weiter.",
+          "en": "Most German cities have a pedestrianised core where deliveries are allowed only at set hours, plus Umweltzonen requiring a green emissions sticker on the windscreen to drive in at all. Parking is usually charged and residents need a permit. In recent years cities have been converting parking spaces into cycle lanes and café terraces, which reliably produces fierce argument — shops fear losing customers, residents want less noise. The standard compromise is Park-and-Ride on the edge of town: leave the car and continue by bus or tram."
+        },
+        "wortschatz": [
+          {
+            "de": "die Fußgängerzone, -n",
+            "en": "pedestrian zone"
+          },
+          {
+            "de": "die Umweltzone, -n",
+            "en": "low-emission zone"
+          },
+          {
+            "de": "der Anwohner, -",
+            "en": "resident"
+          },
+          {
+            "de": "die Luftqualität",
+            "en": "air quality"
+          },
+          {
+            "de": "der Lärm",
+            "en": "noise"
+          },
+          {
+            "de": "die Lieferung, -en",
+            "en": "delivery"
+          },
+          {
+            "de": "der Einzelhandel",
+            "en": "retail trade"
+          },
+          {
+            "de": "erreichbar",
+            "en": "accessible"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Innenstädte autofrei werden? In Deutschland haben fast alle Städte eine Fußgängerzone. Jetzt diskutiert man, ob noch mehr Straßen frei von Autos werden sollen. Ich möchte beide Seiten zeigen.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meiner Stadt wurde vor einem Jahr eine große Straße für Autos gesperrt. Am Anfang haben sich viele Leute geärgert, auch ich. Ich musste einen Umweg fahren. Heute sind dort Bänke und kleine Cafés. Am Wochenende sitzen Familien draußen. Ich gehe jetzt gern dorthin, obwohl ich am Anfang dagegen war.",
+          "In meinem Heimatland Indien sind die Innenstädte oft sehr voll. Autos, Motorräder, Fahrräder und Fußgänger benutzen dieselbe Straße. Das ist laut und manchmal gefährlich. Es gibt einzelne Märkte nur für Fußgänger, aber große autofreie Zonen sind selten. Deshalb finde ich die deutsche Fußgängerzone sehr angenehm.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: bessere Luft, weniger Lärm und mehr Platz für Menschen. Kinder können sicherer laufen. Ein Nachteil ist: Handwerker und Lieferanten brauchen Zufahrt, und ältere oder kranke Menschen kommen schlechter hin. Auch Geschäfte haben Angst vor weniger Kunden. Meiner Meinung nach sollte man Innenstädte schrittweise autofrei machen, aber gleichzeitig Busse und Bahnen besser und günstiger machen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich zeigt das Beispiel aus meiner Stadt vor allem eines: Man muss so etwas ausprobieren, um es wirklich beurteilen zu können. Viele Gegner von gestern sitzen heute in diesen Cafés. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 244,
+          "sprechzeitSekunden": 163
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Schön war, dass Sie zugegeben haben, zuerst dagegen gewesen zu sein.",
+        "frage": "Wie sollten Menschen ohne Auto ihre Einkäufe nach Hause bringen?",
+        "antwort": "Viele Läden liefern heute nach Hause, oft für wenige Euro. Außerdem helfen Lastenräder, die man in manchen Städten kostenlos ausleihen kann. Für große Einkäufe braucht man das aber nur selten."
+      },
+      "nummer": 37
+    },
+    {
+      "kurz": "Wohnen im Alter",
+      "teil1": {
+        "situation": "Eine ältere Nachbarin kann nicht mehr gut allein einkaufen. Sie und Ihr Partner / Ihre Partnerin möchten im Haus eine Nachbarschaftshilfe organisieren.",
+        "punkte": [
+          "Wie finden Sie heraus, wer Hilfe braucht?",
+          "Wer könnte helfen?",
+          "Welche Aufgaben übernehmen Sie?",
+          "Wie oft und wann?",
+          "Wie regeln Sie das Geld beim Einkaufen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde einen Zettel in alle Briefkästen legen und direkt fragen, wer Hilfe braucht."
+          },
+          {
+            "wer": "B",
+            "text": "Gut, aber manche schämen sich zu fragen. Besser gehen wir persönlich vorbei."
+          },
+          {
+            "wer": "A",
+            "text": "Da hast du recht. Helfen könnten die jüngeren Familien und die Studenten im dritten Stock."
+          },
+          {
+            "wer": "B",
+            "text": "Bei den Aufgaben denke ich an Einkaufen, Post holen und Müll runterbringen."
+          },
+          {
+            "wer": "A",
+            "text": "Und im Winter Schnee räumen. Das ist für ältere Menschen wirklich schwer."
+          },
+          {
+            "wer": "B",
+            "text": "Einmal in der Woche zu festen Zeiten wäre gut. Dann kann man sich darauf verlassen."
+          },
+          {
+            "wer": "A",
+            "text": "Beim Geld ist mir wichtig: Immer mit Kassenzettel abrechnen. Sonst gibt es Missverständnisse."
+          },
+          {
+            "wer": "B",
+            "text": "Genau, und niemals im Voraus Geld annehmen. Ich schreibe die Regeln kurz auf."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man im Alter in eine Wohngemeinschaft ziehen?",
+        "kultur": {
+          "de": "In Deutschland leben die meisten älteren Menschen allein oder zu zweit in der eigenen Wohnung. Mehrere Generationen unter einem Dach sind eher selten geworden. Wenn jemand Hilfe braucht, gibt es gestufte Angebote. Ein ambulanter Pflegedienst kommt nach Hause. Es gibt betreutes Wohnen, wo man eine eigene Wohnung hat und Hilfe rufen kann. Erst danach kommt das Pflegeheim. Bezahlt wird das zum Teil aus der Pflegeversicherung, in die alle einzahlen. Sie deckt aber nicht alles. Neu und beliebt sind Senioren-WGs und Mehrgenerationenhäuser: Dort wohnen mehrere ältere Menschen oder auch junge und alte zusammen und helfen sich gegenseitig.",
+          "en": "Most older people in Germany live alone or as a couple in their own flat; multi-generational households have become uncommon. Support is tiered: a visiting care service (ambulanter Pflegedienst) comes to you; betreutes Wohnen gives you your own flat with help on call; a care home is the last step. Costs are partly covered by the Pflegeversicherung, a compulsory insurance everyone pays into, though it does not cover everything. Newer and increasingly popular are senior flat-shares and Mehrgenerationenhäuser, where older people — or old and young together — live under one roof and help each other."
+        },
+        "wortschatz": [
+          {
+            "de": "die Wohngemeinschaft (WG)",
+            "en": "shared flat"
+          },
+          {
+            "de": "das Pflegeheim, -e",
+            "en": "care home"
+          },
+          {
+            "de": "das betreute Wohnen",
+            "en": "assisted living"
+          },
+          {
+            "de": "die Pflegeversicherung",
+            "en": "long-term care insurance"
+          },
+          {
+            "de": "die Einsamkeit",
+            "en": "loneliness"
+          },
+          {
+            "de": "selbstständig",
+            "en": "independent"
+          },
+          {
+            "de": "sich gegenseitig helfen",
+            "en": "to help each other"
+          },
+          {
+            "de": "der Pflegedienst",
+            "en": "care service"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Sollte man im Alter in eine Wohngemeinschaft ziehen? In Deutschland leben die meisten älteren Menschen allein in ihrer Wohnung. Neue Formen wie Senioren-WGs werden aber beliebter. Ich möchte zeigen, was dafür spricht.",
+          "Ich erzähle von einer Nachbarin. Sie ist über achtzig und lebt allein in einer großen Wohnung. Ihre Kinder wohnen weit weg. Manchmal spricht sie den ganzen Tag mit niemandem. Vor einem Jahr ist eine Freundin bei ihr eingezogen. Seitdem geht es ihr deutlich besser. Sie kochen zusammen und gehen spazieren. Die Wohnung ist für zwei Personen sowieso groß genug.",
+          "In meinem Heimatland Indien ist das anders. Bei uns leben die Eltern oft bei einem ihrer Kinder, meistens beim Sohn. Drei Generationen in einem Haus sind normal. Das gibt Sicherheit, aber es kann auch schwierig sein, wenn die Wohnung klein ist. Ein Pflegeheim gilt bei uns oft als letzte Lösung und wird eher vermieden.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil der WG ist: Man ist nicht allein, teilt die Kosten und hilft sich im Alltag. Wenn jemand stürzt, ist sofort jemand da. Ein Nachteil ist: Man muss sich einigen, und im Alter ändert man Gewohnheiten nicht mehr gern. Nicht jeder möchte sein Bad teilen. Meiner Meinung nach ist eine WG eine gute Lösung zwischen dem Alleinleben und dem Heim.",
+          "Damit komme ich zum Schluss. Für mich ist wichtig, dass man selbst entscheidet, solange man es kann. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 240,
+          "sprechzeitSekunden": 160
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Die Geschichte Ihrer Nachbarin war sehr berührend und sehr konkret.",
+        "frage": "Könnten Sie sich vorstellen, im Alter mit Freunden zusammenzuwohnen?",
+        "antwort": "Ja, das könnte ich mir gut vorstellen. Wichtig wäre mir aber ein eigenes Zimmer und ein eigenes Bad. Gemeinsame Küche und Wohnzimmer würden mir reichen, um nicht allein zu sein."
+      },
+      "nummer": 38
+    },
+    {
+      "kurz": "Schulbeginn und Schlaf",
+      "teil1": {
+        "situation": "Die Klasse Ihres Kindes plant einen Ausflug. Sie und Ihr Partner / Ihre Partnerin helfen als Eltern bei der Organisation.",
+        "punkte": [
+          "Wohin soll der Ausflug gehen?",
+          "Wann und wie lange?",
+          "Wie fahren die Kinder?",
+          "Wer begleitet die Klasse?",
+          "Was kostet es und wie helfen Sie Familien mit wenig Geld?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den Zoo vor. Das passt zum Unterrichtsthema Tiere."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Ein Tag reicht, von acht bis fünfzehn Uhr."
+          },
+          {
+            "wer": "A",
+            "text": "Fahren würde ich mit der S-Bahn. Ein Bus wäre viel teurer."
+          },
+          {
+            "wer": "B",
+            "text": "Einverstanden. Begleiten sollten neben der Lehrerin drei Eltern mitkommen."
+          },
+          {
+            "wer": "A",
+            "text": "Bei fünfundzwanzig Kindern ist das nötig. Ich frage in der Elterngruppe."
+          },
+          {
+            "wer": "B",
+            "text": "Der Eintritt kostet acht Euro pro Kind, dazu die Fahrkarte."
+          },
+          {
+            "wer": "A",
+            "text": "Für Familien mit wenig Geld gibt es einen Zuschuss vom Förderverein."
+          },
+          {
+            "wer": "B",
+            "text": "Das muss man aber diskret regeln. Kein Kind soll sich schämen. Ich spreche mit der Lehrerin."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte die Schule später beginnen?",
+        "kultur": {
+          "de": "In Deutschland beginnt die Schule sehr früh, meistens zwischen 7.30 und 8.00 Uhr. Das hat historische Gründe: Früher sollten die Kinder nachmittags zu Hause helfen. Viele Schulen sind deshalb Halbtagsschulen und enden gegen 13 Uhr. Immer mehr Schulen werden aber Ganztagsschulen mit Mittagessen und Angeboten am Nachmittag. Die Schulpflicht ist streng: Kinder müssen zur Schule, Hausunterricht ist in Deutschland nicht erlaubt. Wer krank ist, muss sich am selben Morgen abmelden. Über den frühen Beginn wird viel diskutiert, weil Studien zeigen, dass Jugendliche später müde werden und morgens schlecht lernen. Einzelne Schulen haben deshalb den Start nach hinten verschoben.",
+          "en": "German schools start early — usually between 7.30 and 8.00 — a leftover from when children were expected home to help in the afternoon. Many are still Halbtagsschulen finishing around 1pm, though full-day schools with lunch and afternoon activities are spreading. Attendance law is strict: children must attend, home-schooling is not permitted in Germany, and illness must be reported the same morning. The early start is genuinely contested, since research shows teenagers fall asleep later and learn poorly first thing, and a few schools have shifted their start time back."
+        },
+        "wortschatz": [
+          {
+            "de": "der Unterricht",
+            "en": "lessons"
+          },
+          {
+            "de": "die Schulpflicht",
+            "en": "compulsory schooling"
+          },
+          {
+            "de": "die Ganztagsschule, -n",
+            "en": "all-day school"
+          },
+          {
+            "de": "der Stundenplan",
+            "en": "timetable"
+          },
+          {
+            "de": "ausgeschlafen",
+            "en": "well rested"
+          },
+          {
+            "de": "sich konzentrieren",
+            "en": "to concentrate"
+          },
+          {
+            "de": "die Betreuung",
+            "en": "supervision, care"
+          },
+          {
+            "de": "müde",
+            "en": "tired"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte die Schule später beginnen? In Deutschland fängt der Unterricht meistens um halb acht an. Viele Jugendliche sind dann noch müde. Ich möchte zeigen, was dafür und dagegen spricht.",
+          "Ich erzähle von meiner Familie. Mein Neffe geht in die achte Klasse. Er muss um Viertel nach sechs aufstehen, weil sein Schulweg lang ist. In der ersten Stunde ist er kaum wach. Am Wochenende schläft er dagegen bis zehn. Seine Mutter sagt, er lerne nachmittags viel besser. Das hat mich nachdenklich gemacht.",
+          "In meinem Heimatland Indien beginnt die Schule auch früh, oft um halb acht oder acht. Dafür ist der Schultag länger, und viele Kinder gehen danach noch zum Nachhilfeunterricht. Die Schulwege sind manchmal sehr weit, und der Bus fährt schon vor sieben. Ausschlafen kennen die meisten Schüler bei uns also auch nicht.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil eines späteren Beginns ist: Die Kinder sind ausgeschlafen und lernen besser. Es gäbe weniger Stress am Morgen für die ganze Familie. Ein Nachteil ist: Der Unterricht endet später, und das passt schlecht zu den Arbeitszeiten der Eltern. Auch Busse und Bahnen müssten anders fahren. Meiner Meinung nach wäre ein Beginn um neun Uhr besser, aber dann braucht man eine Betreuung ab acht.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Schlaf ein Teil des Lernens und kein Luxus. Wer müde im Unterricht sitzt, verliert die erste Stunde ohnehin. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 243,
+          "sprechzeitSekunden": 162
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Das Beispiel mit Ihrem Neffen war sehr anschaulich.",
+        "frage": "Sollten Kinder am Nachmittag lieber Hausaufgaben machen oder Sport?",
+        "antwort": "Am liebsten beides, aber Sport zuerst. Nach dem Sitzen in der Schule brauchen Kinder Bewegung. Danach lernen sie meiner Erfahrung nach auch konzentrierter."
+      },
+      "nummer": 39
+    },
+    {
+      "kurz": "Kochen lernen",
+      "teil1": {
+        "situation": "Ihre Nachbarn möchten einen internationalen Kochabend machen, bei dem jeder ein Gericht aus seinem Land kocht. Sie und Ihr Partner / Ihre Partnerin organisieren ihn.",
+        "punkte": [
+          "Wann und wo soll der Abend sein?",
+          "Wie viele Personen laden Sie ein?",
+          "Wie teilen Sie die Gerichte auf?",
+          "Wer kauft ein und wer bezahlt?",
+          "Wie berücksichtigen Sie Allergien und Essgewohnheiten?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Freitagabend im Gemeinschaftsraum vor, ab 18 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Freitag ist gut. Zwölf bis fünfzehn Personen wären ideal, sonst wird die Küche zu voll."
+          },
+          {
+            "wer": "A",
+            "text": "Bei den Gerichten würde ich aufteilen: zwei machen Vorspeisen, drei Hauptgerichte, zwei Nachtisch."
+          },
+          {
+            "wer": "B",
+            "text": "Wir sollten vorher eine Liste machen, sonst kochen alle dasselbe."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Jeder kauft für sein Gericht selbst ein und schreibt die Kosten auf."
+          },
+          {
+            "wer": "B",
+            "text": "Am Ende teilen wir die Summe durch alle. Das ist am fairsten."
+          },
+          {
+            "wer": "A",
+            "text": "Wichtig sind noch Allergien. Jeder schreibt die Zutaten auf ein Schild."
+          },
+          {
+            "wer": "B",
+            "text": "Und wir achten darauf, dass genug ohne Fleisch dabei ist. Ich mache die Liste."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Kochen lernen heute noch wichtig?",
+        "kultur": {
+          "de": "In Deutschland ist die warme Mahlzeit traditionell mittags. Viele Menschen essen abends kalt: Brot, Käse und Wurst. Das nennt man Abendbrot. In Betrieben gibt es oft eine Kantine mit einem warmen Mittagessen für wenige Euro. Kochen lernen die meisten Kinder zu Hause; in manchen Schulen gibt es aber auch das Fach Hauswirtschaft. Wichtig für den Einkauf: Im Supermarkt findet man auf jeder Verpackung eine Nährwerttabelle und die Zutatenliste, und Allergene müssen hervorgehoben sein. Auf dem Wochenmarkt kauft man frisch und saisonal. Lieferdienste sind in Städten verbreitet, aber deutlich teurer als selbst zu kochen. Ein einfaches Mittagessen zu Hause kostet oft nur zwei bis drei Euro.",
+          "en": "The hot meal in Germany is traditionally at midday, with a cold evening meal of bread, cheese and cold cuts — Abendbrot. Workplaces often have a canteen serving a hot lunch for a few euros. Most people learn to cook at home, though some schools teach Hauswirtschaft (home economics). For shopping, every package carries a nutrition table and ingredient list, with allergens legally highlighted, and weekly markets sell fresh and seasonal. Delivery services are common in cities but markedly more expensive: a simple home-cooked lunch often costs only two or three euros."
+        },
+        "wortschatz": [
+          {
+            "de": "das Abendbrot",
+            "en": "cold evening meal"
+          },
+          {
+            "de": "die Kantine, -n",
+            "en": "canteen"
+          },
+          {
+            "de": "die Zutat, -en",
+            "en": "ingredient"
+          },
+          {
+            "de": "das Rezept, -e",
+            "en": "recipe"
+          },
+          {
+            "de": "der Lieferdienst, -e",
+            "en": "delivery service"
+          },
+          {
+            "de": "sich ernähren",
+            "en": "to eat, to feed oneself"
+          },
+          {
+            "de": "frisch / haltbar",
+            "en": "fresh / long-lasting"
+          },
+          {
+            "de": "die Mahlzeit, -en",
+            "en": "meal"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist Kochen lernen heute noch wichtig? Man kann sich fast alles nach Hause liefern lassen. Trotzdem kochen viele Menschen selbst. Ich möchte zeigen, warum sich das lohnt.",
+          "Ich erzähle von meiner eigenen Erfahrung. Als ich hierhergekommen bin, konnte ich fast nicht kochen. In den ersten Wochen habe ich oft bestellt. Nach einem Monat habe ich gemerkt, wie teuer das war: fast dreihundert Euro. Dann hat mir eine Kollegin drei einfache Rezepte gezeigt. Heute koche ich fast jeden Abend und brauche dafür nur zwanzig Minuten.",
+          "In meinem Heimatland Indien wird sehr viel zu Hause gekocht. Das Essen ist ein wichtiger Teil der Familie, und oft kocht man frisch für jeden Tag. Viele Gerichte brauchen aber lange und viele Gewürze. In Deutschland habe ich gelernt, dass auch ein einfaches Essen gut sein kann. Das deutsche Abendbrot mit Brot und Käse war für mich am Anfang sehr ungewohnt.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil vom Kochen ist: Es ist viel günstiger und man weiß genau, was im Essen ist. Man kann auf Allergien achten und sich gesünder ernähren. Ein Nachteil ist: Es kostet Zeit, und nach einem langen Arbeitstag hat man oft keine Lust. Nicht jeder hat eine gute Küche. Meiner Meinung nach sollte jeder wenigstens fünf einfache Gerichte kochen können.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Kochen keine Pflicht, sondern eine Freiheit: Man ist nicht auf andere angewiesen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 246,
+          "sprechzeitSekunden": 164
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Die Zahl von dreihundert Euro im Monat war sehr eindrücklich. Das rechnet man selten nach.",
+        "frage": "Sollte Kochen ein Schulfach für alle sein?",
+        "antwort": "Ich finde ja, wenigstens für ein Jahr. Es geht ja nicht nur ums Kochen, sondern auch ums Einkaufen und Planen. Das braucht später wirklich jeder, egal welchen Beruf er hat."
+      },
+      "nummer": 40
+    },
+    {
+      "kurz": "Taschengeld",
+      "teil1": {
+        "situation": "Der Förderverein der Schule möchte Geld für neue Sportgeräte sammeln. Sie und Ihr Partner / Ihre Partnerin planen eine Spendenaktion.",
+        "punkte": [
+          "Welche Aktion schlagen Sie vor?",
+          "Wann soll sie stattfinden?",
+          "Wer hilft mit?",
+          "Wie viel Geld möchten Sie sammeln?",
+          "Wie zeigen Sie später, wofür das Geld verwendet wurde?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage einen Sponsorenlauf vor. Die Kinder laufen Runden, und Sponsoren zahlen pro Runde."
+          },
+          {
+            "wer": "B",
+            "text": "Das ist eine gute Idee, weil alle Kinder mitmachen können, auch die langsamen."
+          },
+          {
+            "wer": "A",
+            "text": "Als Termin würde ich einen Freitag im Mai nehmen, auf dem Sportplatz."
+          },
+          {
+            "wer": "B",
+            "text": "Mithelfen sollten Eltern beim Zählen der Runden und beim Getränkestand."
+          },
+          {
+            "wer": "A",
+            "text": "Ich schreibe die Sponsorenzettel, die die Kinder mit nach Hause nehmen."
+          },
+          {
+            "wer": "B",
+            "text": "Als Ziel würde ich zweitausend Euro nennen. Das reicht für Bälle und Matten."
+          },
+          {
+            "wer": "A",
+            "text": "Und danach hängen wir Fotos von den neuen Geräten in der Aula auf."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee, dazu eine kurze Abrechnung. Dann sehen alle, wohin das Geld gegangen ist."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Kinder Taschengeld bekommen?",
+        "kultur": {
+          "de": "Taschengeld ist in Deutschland üblich und wird ziemlich systematisch gehandhabt. Jugendämter geben sogar Empfehlungen heraus, wie viel Kinder in welchem Alter bekommen sollten, zum Beispiel wenige Euro pro Woche für Grundschulkinder und ein monatlicher Betrag ab etwa zehn Jahren. Das Geld ist zur freien Verfügung: Die Kinder dürfen selbst entscheiden, auch wenn sie es für Unsinn ausgeben. Genau das gilt als Lerneffekt. Es gibt sogar den sogenannten Taschengeldparagraphen: Kinder ab sieben Jahren dürfen mit ihrem eigenen Geld kleine Sachen selbst kaufen. Viele Jugendliche verdienen ab 13 Jahren mit Erlaubnis der Eltern etwas dazu, zum Beispiel mit Zeitungen austragen oder Babysitten.",
+          "en": "Pocket money in Germany is normal and surprisingly systematised: youth welfare offices publish recommended amounts by age — a few euros a week for primary-school children, a monthly sum from about ten. The money is genuinely the child's to spend, even unwisely; that is treated as the point of it. There is even a Taschengeldparagraph in civil law letting children from seven buy small things with their own money. From thirteen many teenagers earn a little on top, with parental permission — delivering newspapers, babysitting — under strict limits on hours."
+        },
+        "wortschatz": [
+          {
+            "de": "das Taschengeld",
+            "en": "pocket money"
+          },
+          {
+            "de": "sparen",
+            "en": "to save"
+          },
+          {
+            "de": "ausgeben",
+            "en": "to spend"
+          },
+          {
+            "de": "der Umgang mit Geld",
+            "en": "handling money"
+          },
+          {
+            "de": "sich etwas leisten",
+            "en": "to afford something"
+          },
+          {
+            "de": "verantwortungsvoll",
+            "en": "responsible"
+          },
+          {
+            "de": "der Nebenjob, -s",
+            "en": "side job"
+          },
+          {
+            "de": "das Konto, Konten",
+            "en": "bank account"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Sollten Kinder Taschengeld bekommen? In Deutschland ist das sehr üblich, und es gibt sogar offizielle Empfehlungen, wie viel angemessen ist. Ich möchte zeigen, was dafür und dagegen spricht.",
+          "Ich erzähle von meiner Nichte. Sie ist zehn und bekommt zwanzig Euro im Monat. Am Anfang hat sie alles in der ersten Woche ausgegeben, meistens für Süßigkeiten. Danach war der Monat lang und langweilig. Beim dritten Mal hat sie angefangen zu sparen, weil sie ein Buch wollte. Ihre Eltern haben nichts gesagt, sondern sie einfach lernen lassen.",
+          "In meinem Heimatland Indien ist Taschengeld weniger verbreitet. Bei uns geben die Eltern Geld, wenn das Kind etwas braucht. Man fragt also jedes Mal neu, und die Eltern entscheiden mit. Zu Festen bekommen Kinder oft Geld von Verwandten, manchmal recht viel auf einmal. Ein festes monatliches Taschengeld mit eigener Entscheidung kannte ich aus meiner Kindheit nicht. Ich habe erst als Student gelernt, ein Budget zu planen, und das war am Anfang schwierig.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Kinder lernen früh, mit Geld umzugehen, zu planen und zu sparen. Sie machen kleine Fehler, solange die Beträge klein sind. Ein Nachteil ist: Es kann Druck entstehen, wenn Freunde mehr bekommen. Manche Familien können sich Taschengeld auch schlicht nicht leisten. Meiner Meinung nach ist Taschengeld sehr sinnvoll, wenn die Eltern nicht ständig hineinreden.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Taschengeld ein kleiner, sicherer Übungsplatz für später. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 246,
+          "sprechzeitSekunden": 164
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Die Geschichte Ihrer Nichte hat das Thema sehr schön gezeigt.",
+        "frage": "Sollten Eltern bestimmen, wofür das Taschengeld ausgegeben wird?",
+        "antwort": "Ich finde nein, sonst ist es kein richtiges Taschengeld. Grenzen sind bei gefährlichen Dingen natürlich nötig. Aber wer nie selbst entscheiden darf, lernt auch nichts daraus."
+      },
+      "nummer": 41
+    },
+    {
+      "kurz": "Weiterbildung",
+      "teil1": {
+        "situation": "In Ihrer Abteilung wird eine neue Software eingeführt. Sie und Ihr Partner / Ihre Partnerin sollen die Schulung für die Kollegen planen.",
+        "punkte": [
+          "Wann und wie lange soll geschult werden?",
+          "In welchen Gruppen?",
+          "Wer schult?",
+          "Wie helfen Sie danach weiter?",
+          "Was machen Sie mit Kollegen, die Angst vor der Technik haben?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage drei Termine zu je zwei Stunden vor, verteilt über zwei Wochen."
+          },
+          {
+            "wer": "B",
+            "text": "Besser als ein langer Tag. Nach zwei Stunden kann sich niemand mehr etwas merken."
+          },
+          {
+            "wer": "A",
+            "text": "In Gruppen von höchstens acht Personen. Dann kann jeder Fragen stellen."
+          },
+          {
+            "wer": "B",
+            "text": "Schulen sollte jemand vom Anbieter, aber ein Kollege sollte dabei sein."
+          },
+          {
+            "wer": "A",
+            "text": "Ja, damit wir später jemanden im Haus haben, den man fragen kann."
+          },
+          {
+            "wer": "B",
+            "text": "Danach würde ich eine Sprechstunde anbieten, jeden Donnerstag eine Stunde."
+          },
+          {
+            "wer": "A",
+            "text": "Für unsichere Kollegen könnten wir eine kurze Anleitung mit Bildern schreiben."
+          },
+          {
+            "wer": "B",
+            "text": "Und niemand soll sich blamieren. Fragen sind erlaubt, das sagen wir am Anfang deutlich."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Weiterbildung Aufgabe der Firma oder des Einzelnen?",
+        "kultur": {
+          "de": "Weiterbildung hat in Deutschland einen festen Platz. Viele Bundesländer haben ein Gesetz zum Bildungsurlaub: Arbeitnehmer dürfen meistens fünf Tage im Jahr für eine anerkannte Weiterbildung freinehmen, bei vollem Lohn. Man muss den Kurs vorher beantragen, und er muss anerkannt sein. Daneben gibt es staatliche Förderung, zum Beispiel den Bildungsgutschein von der Agentur für Arbeit oder das Aufstiegs-BAföG für den Meister. Volkshochschulen und Kammern bieten günstige Kurse an. Viele Firmen zahlen Fortbildungen, verlangen aber manchmal eine Rückzahlung, wenn man kurz danach kündigt. Das steht dann in einer Rückzahlungsvereinbarung im Vertrag.",
+          "en": "Continuing education is institutionalised in Germany. Most federal states have a Bildungsurlaub law: employees may usually take five days a year on full pay for an approved course, applied for in advance. There is also public funding — the Bildungsgutschein from the employment agency, or Aufstiegs-BAföG towards a master craftsman qualification — and cheap courses at adult education centres and chambers of commerce. Employers often pay for training, but sometimes attach a repayment clause if you leave soon afterwards, so it is worth reading that part of the contract."
+        },
+        "wortschatz": [
+          {
+            "de": "die Weiterbildung",
+            "en": "further training"
+          },
+          {
+            "de": "der Bildungsurlaub",
+            "en": "paid educational leave"
+          },
+          {
+            "de": "die Fortbildung, -en",
+            "en": "professional development"
+          },
+          {
+            "de": "der Arbeitgeber, -",
+            "en": "employer"
+          },
+          {
+            "de": "die Kenntnisse",
+            "en": "knowledge, skills"
+          },
+          {
+            "de": "sich qualifizieren",
+            "en": "to gain qualifications"
+          },
+          {
+            "de": "die Förderung",
+            "en": "funding, support"
+          },
+          {
+            "de": "auf dem Laufenden bleiben",
+            "en": "to keep up to date"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist Weiterbildung Aufgabe der Firma oder des Einzelnen? In Deutschland gibt es dafür sogar Gesetze, zum Beispiel den Bildungsurlaub. Ich möchte zeigen, wer welche Verantwortung hat.",
+          "Ich erzähle von meiner eigenen Erfahrung. Letztes Jahr habe ich zum ersten Mal Bildungsurlaub genommen. Ich wusste vorher gar nicht, dass es das gibt. Eine Kollegin hat mich darauf aufmerksam gemacht. Ich habe fünf Tage einen Deutschkurs besucht und dabei mein Gehalt weiterbekommen. Beantragen musste ich es acht Wochen vorher. Der Aufwand hat sich sehr gelohnt.",
+          "In meinem Heimatland Indien ist Weiterbildung meistens Privatsache. Wer vorwärtskommen will, macht abends oder am Wochenende einen Kurs und zahlt ihn selbst. Große IT-Firmen bieten interne Schulungen an, aber ein Recht auf bezahlte Bildungstage kenne ich von dort nicht. Deshalb war der Bildungsurlaub für mich eine echte Überraschung.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Argument für die Firma ist: Sie profitiert direkt von den neuen Kenntnissen, also sollte sie zahlen. Ein Argument für den Einzelnen ist: Die Qualifikation bleibt einem auch beim Jobwechsel. Ein Nachteil für kleine Firmen ist, dass sie sich das kaum leisten können. Meiner Meinung nach sollten beide etwas beitragen: die Firma die Zeit, der Mitarbeiter die Motivation.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist Lernen keine einmalige Sache am Anfang, sondern gehört das ganze Berufsleben dazu. Wer stehen bleibt, hat es später schwerer. Deshalb würde ich jedem raten, einmal nach Bildungsurlaub zu fragen. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 247,
+          "sprechzeitSekunden": 165
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Dass Sie den Bildungsurlaub erst durch eine Kollegin erfahren haben, ist ein wichtiger Hinweis.",
+        "frage": "Wie könnte man Weiterbildung für alle einfacher machen?",
+        "antwort": "Ich würde die Informationen dorthin bringen, wo die Leute sind. Ein kurzer Hinweis am schwarzen Brett hilft mehr als eine Broschüre. Und die Anträge müssten einfacher werden."
+      },
+      "nummer": 42
     }
   ]
 }
