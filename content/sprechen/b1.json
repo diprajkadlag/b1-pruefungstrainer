@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "42 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "45 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -4611,6 +4611,333 @@
         "antwort": "Ich würde die Informationen dorthin bringen, wo die Leute sind. Ein kurzer Hinweis am schwarzen Brett hilft mehr als eine Broschüre. Und die Anträge müssten einfacher werden."
       },
       "nummer": 42
+    },
+    {
+      "kurz": "Feste und Traditionen",
+      "teil1": {
+        "situation": "Ihre Firma möchte im Dezember eine Weihnachtsfeier machen. Im Team arbeiten Menschen aus vielen Ländern und Religionen. Sie und Ihr Partner / Ihre Partnerin planen die Feier.",
+        "punkte": [
+          "Wann und wo feiern Sie?",
+          "Wie nennen Sie die Feier?",
+          "Was gibt es zu essen und zu trinken?",
+          "Welches Programm planen Sie?",
+          "Wie sorgen Sie dafür, dass sich alle wohlfühlen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage den zweiten Donnerstag im Dezember vor, abends ab 18 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Beim Namen würde ich „Jahresabschlussfeier\" sagen statt Weihnachtsfeier."
+          },
+          {
+            "wer": "A",
+            "text": "Sehr guter Punkt. Dann fühlt sich niemand ausgeschlossen, der nicht Weihnachten feiert."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Essen brauchen wir vegetarische Gerichte und Fleisch ohne Schwein."
+          },
+          {
+            "wer": "A",
+            "text": "Und alkoholfreie Getränke, die nicht nur Wasser sind. Guter Punsch ohne Alkohol geht immer."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Programm würde ich auf Wichteln verzichten. Nicht jeder mag Geschenke im Team."
+          },
+          {
+            "wer": "A",
+            "text": "Lieber ein kurzer Rückblick auf das Jahr und dann Zeit zum Reden."
+          },
+          {
+            "wer": "B",
+            "text": "Wir könnten alle fragen, ob jemand ein Fest aus seinem Land vorstellen möchte."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man Feste aus anderen Ländern mitfeiern?",
+        "kultur": {
+          "de": "Feiertage sind in Deutschland Ländersache, deshalb gibt es regionale Unterschiede. Bayern hat mehr Feiertage als Berlin. Viele Feiertage sind christlich, zum Beispiel Ostern, Pfingsten und Weihnachten. An den sogenannten stillen Feiertagen, etwa am Karfreitag, sind laute Feiern und Tanzveranstaltungen sogar verboten. Regional gibt es sehr unterschiedliche Traditionen: Karneval im Rheinland, das Oktoberfest in München, Sankt Martin mit Laternen für Kinder. Am 24. Dezember schließen die Geschäfte oft schon mittags, und der Abend ist reine Familienzeit. Gleichzeitig leben in Deutschland Menschen vieler Religionen, und viele Städte feiern inzwischen auch andere Feste öffentlich mit.",
+          "en": "Public holidays in Germany are set by each state, so Bavaria has more than Berlin. Many are Christian — Easter, Whitsun, Christmas — and on „silent\" holidays such as Good Friday, loud celebrations and dance events are actually prohibited. Regional traditions differ sharply: carnival in the Rhineland, Oktoberfest in Munich, Sankt Martin lantern processions for children. On 24 December shops often shut at midday and the evening is strictly family time. At the same time Germany is religiously mixed, and many cities now mark other communities' festivals publicly too."
+        },
+        "wortschatz": [
+          {
+            "de": "der Feiertag, -e",
+            "en": "public holiday"
+          },
+          {
+            "de": "die Tradition, -en",
+            "en": "tradition"
+          },
+          {
+            "de": "der Brauch, Bräuche",
+            "en": "custom"
+          },
+          {
+            "de": "feiern",
+            "en": "to celebrate"
+          },
+          {
+            "de": "die Herkunft",
+            "en": "origin, background"
+          },
+          {
+            "de": "der Respekt",
+            "en": "respect"
+          },
+          {
+            "de": "gemeinsam",
+            "en": "together, joint"
+          },
+          {
+            "de": "sich wohlfühlen",
+            "en": "to feel comfortable"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man Feste aus anderen Ländern mitfeiern? In Deutschland leben Menschen aus sehr vielen Ländern. Trotzdem sind die meisten Feiertage christlich geprägt. Ich möchte zeigen, wie beides zusammengehen kann.",
+          "Ich erzähle von meiner eigenen Erfahrung. Im letzten Jahr habe ich meine Nachbarn zu Diwali eingeladen, dem Lichterfest aus meinem Land. Ich hatte Angst, dass niemand kommt. Am Ende waren zwölf Leute da. Ich habe erklärt, warum wir Lichter anzünden, und wir haben zusammen gegessen. Im Dezember haben mich dieselben Nachbarn zum Adventskaffee eingeladen.",
+          "In meinem Heimatland Indien ist das Mitfeiern ganz normal. Bei uns leben Menschen verschiedener Religionen als Nachbarn nebeneinander. Freunde gratulieren sich gegenseitig zu ihren Festen und bringen Süßigkeiten vorbei. Man muss nicht dieselbe Religion haben, um mitzufeiern; oft reicht es, dass man sich kennt. Genau diese Erfahrung habe ich hier weitergegeben.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Man lernt einander kennen, und Fremdheit verschwindet. Kinder wachsen selbstverständlicher mit Vielfalt auf. Ein Nachteil kann sein: Manche Menschen fühlen sich unter Druck gesetzt, wenn sie überall mitmachen sollen. Und ein Fest verliert seinen Sinn, wenn man nichts darüber weiß. Meiner Meinung nach sollte man einladen, aber niemanden drängen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist ein gemeinsames Fest der einfachste Weg, Nachbarn wirklich kennenzulernen. Man redet dabei ganz von selbst, und niemand muss ein schwieriges Gespräch beginnen. Ich würde mir wünschen, dass mehr Menschen das einfach ausprobieren. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 248,
+          "sprechzeitSekunden": 165
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Die Geschichte mit dem Lichterfest und dem Adventskaffee war ein sehr schönes Beispiel.",
+        "frage": "Sollten Schulen Feste aus verschiedenen Kulturen behandeln?",
+        "antwort": "Ja, das finde ich sinnvoll. Kinder fragen ohnehin, warum ein Mitschüler an einem Tag nicht isst. Wenn die Schule es erklärt, entsteht Neugier statt Unsicherheit."
+      },
+      "nummer": 43
+    },
+    {
+      "kurz": "Versicherungen",
+      "teil1": {
+        "situation": "Ein Freund zieht neu nach Deutschland und kennt sich mit Formularen nicht aus. Sie und Ihr Partner / Ihre Partnerin möchten ihm in den ersten Wochen helfen.",
+        "punkte": [
+          "Welche Behördengänge sind zuerst wichtig?",
+          "Wie bereiten Sie ihn darauf vor?",
+          "Wer begleitet ihn wohin?",
+          "Welche Unterlagen braucht er?",
+          "Wie helfen Sie ihm langfristig?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Als Erstes die Anmeldung beim Bürgeramt. Das muss innerhalb von zwei Wochen passieren."
+          },
+          {
+            "wer": "B",
+            "text": "Genau, und dafür braucht er die Wohnungsgeberbestätigung vom Vermieter."
+          },
+          {
+            "wer": "A",
+            "text": "Danach das Bankkonto und die Krankenversicherung. Ohne Konto geht gar nichts."
+          },
+          {
+            "wer": "B",
+            "text": "Ich würde vorher mit ihm eine Liste machen, welche Papiere er mitnehmen muss."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee: Pass, Mietvertrag, Bestätigung und die Steuer-Identifikationsnummer, sobald sie kommt."
+          },
+          {
+            "wer": "B",
+            "text": "Zum Bürgeramt begleite ich ihn, mein Deutsch ist besser. Übernimmst du die Bank?"
+          },
+          {
+            "wer": "A",
+            "text": "Mache ich. Termine muss man online buchen, oft Wochen im Voraus."
+          },
+          {
+            "wer": "B",
+            "text": "Langfristig würde ich ihm die Migrationsberatung zeigen. Die helfen kostenlos und dauerhaft."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Braucht man wirklich so viele Versicherungen?",
+        "kultur": {
+          "de": "Deutschland ist ein Land der Versicherungen. Einige sind Pflicht: die Krankenversicherung für alle, die Kfz-Haftpflicht für jedes Auto und die Pflegeversicherung. Andere sind freiwillig, gelten aber fast als selbstverständlich. Die wichtigste ist die private Haftpflichtversicherung: Sie zahlt, wenn man aus Versehen einen Schaden bei anderen verursacht, zum Beispiel wenn man das Handy eines Freundes fallen lässt. Sie kostet oft weniger als sechs Euro im Monat, und viele Vermieter fragen danach. Weit verbreitet sind auch Hausratversicherung und Rechtsschutzversicherung. Wichtig ist die Kündigungsfrist: Viele Verträge laufen ein Jahr und verlängern sich automatisch, wenn man nicht rechtzeitig kündigt.",
+          "en": "Germany runs on insurance. Some is compulsory — health cover for everyone, third-party motor cover, long-term care insurance. Much of the rest is optional but treated as basic common sense, above all private liability insurance (Haftpflichtversicherung), which pays when you accidentally damage someone else's property — dropping a friend's phone, say. It often costs under six euros a month and landlords sometimes ask about it. Contents insurance and legal-expenses cover are also widespread. Watch the notice period: many policies run a year and renew automatically unless cancelled in time."
+        },
+        "wortschatz": [
+          {
+            "de": "die Versicherung, -en",
+            "en": "insurance"
+          },
+          {
+            "de": "die Haftpflicht",
+            "en": "personal liability cover"
+          },
+          {
+            "de": "der Schaden, Schäden",
+            "en": "damage"
+          },
+          {
+            "de": "der Beitrag, -träge",
+            "en": "premium, contribution"
+          },
+          {
+            "de": "die Kündigungsfrist",
+            "en": "notice period"
+          },
+          {
+            "de": "abschließen",
+            "en": "to take out (a contract)"
+          },
+          {
+            "de": "absichern",
+            "en": "to insure, to protect"
+          },
+          {
+            "de": "die Pflicht",
+            "en": "obligation"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Braucht man wirklich so viele Versicherungen? Deutschland gilt als Land der Versicherungen. Manche sind Pflicht, viele andere freiwillig. Ich möchte zeigen, welche wirklich sinnvoll sind.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meinem ersten Jahr fand ich das übertrieben. Ein Kollege hat mir trotzdem geraten, eine Haftpflichtversicherung abzuschließen, für fünf Euro im Monat. Ein Jahr später habe ich beim Umzug aus Versehen ein Fenster im Treppenhaus kaputt gemacht. Die Reparatur hat sechshundert Euro gekostet. Die Versicherung hat alles bezahlt. Seitdem verstehe ich den Sinn.",
+          "In meinem Heimatland Indien ist das anders. Bei uns hat man meistens eine Lebensversicherung und vielleicht eine für das Auto. Für kleinere Schäden kommt die Familie auf oder man einigt sich direkt. Eine Versicherung für ein kaputtes Fenster kennt kaum jemand. Man vertraut eher auf das persönliche Netz.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Man ist bei großen Schäden geschützt und muss nicht plötzlich viel Geld zahlen. Das gibt Ruhe. Ein Nachteil ist: Viele Menschen schließen zu viele Verträge ab und zahlen jeden Monat für Dinge, die selten passieren. Manche Verträge sind schwer zu kündigen. Meiner Meinung nach braucht jeder die Haftpflicht, und alles andere sollte man einzeln prüfen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich gilt: wenige, aber die richtigen Versicherungen. Man sollte sich fragen, ob man den Schaden allein bezahlen könnte. Wenn nicht, lohnt sich eine Versicherung. Bei kleinen Beträgen lohnt sie sich meistens nicht. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 246,
+          "sprechzeitSekunden": 164
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Ihr Beispiel mit dem Fenster zeigt sehr gut, warum sich das lohnen kann.",
+        "frage": "Wie findet man heraus, welche Versicherung man wirklich braucht?",
+        "antwort": "Ich würde zur Verbraucherzentrale gehen. Die beraten unabhängig und verkaufen nichts. Bei einem Vertreter besteht immer die Gefahr, dass er vor allem seine eigenen Produkte empfiehlt."
+      },
+      "nummer": 44
+    },
+    {
+      "kurz": "Zeit ohne Handy",
+      "teil1": {
+        "situation": "Ihre Freundesgruppe möchte ein gemeinsames Wochenende ohne Handys machen. Sie und Ihr Partner / Ihre Partnerin planen es.",
+        "punkte": [
+          "Wohin fahren Sie?",
+          "Wann und wie lange?",
+          "Welche Regeln gelten für die Handys?",
+          "Was machen Sie stattdessen?",
+          "Wie erreicht man Sie im Notfall?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage eine Hütte im Wald vor. Dort ist der Empfang sowieso schlecht."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr passend. Ein Wochenende von Freitagabend bis Sonntagnachmittag reicht."
+          },
+          {
+            "wer": "A",
+            "text": "Bei den Regeln würde ich sagen: Die Handys kommen am Freitag in eine Kiste."
+          },
+          {
+            "wer": "B",
+            "text": "Und einer behält ein Handy für den Notfall, aber ausgeschaltet in der Tasche."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Lösung. Stattdessen könnten wir wandern, kochen und Karten spielen."
+          },
+          {
+            "wer": "B",
+            "text": "Abends vielleicht jemand mit Gitarre. Und niemand muss etwas fotografieren."
+          },
+          {
+            "wer": "A",
+            "text": "Die Familien sollten vorher die Nummer der Hütte bekommen. Dann sind alle beruhigt."
+          },
+          {
+            "wer": "B",
+            "text": "Ich buche die Hütte, wenn du den Einkauf und die Spiele organisierst."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man mehr Zeit ohne Handy verbringen?",
+        "kultur": {
+          "de": "Das Handy gehört in Deutschland zum Alltag, aber es gibt klare ungeschriebene Regeln. Beim Essen legt man es weg, in einer Besprechung ebenfalls. Laut telefonieren im Zug gilt als unhöflich, und in vielen Zügen gibt es sogar Ruhebereiche, wo Telefonieren nicht erwünscht ist. Beim Autofahren ist das Handy in der Hand verboten und kostet Bußgeld und Punkte. Fotos von anderen Menschen darf man nicht einfach machen und schon gar nicht veröffentlichen. Gleichzeitig läuft vieles digital: Fahrkarten, Termine bei Behörden und Bankgeschäfte. Viele Menschen sprechen inzwischen über „digitale Auszeit\" und legen das Handy am Wochenende bewusst weg.",
+          "en": "Phones are everywhere in Germany but governed by firm unwritten rules: you put it away at meals and in meetings, and loud calls on a train are considered rude — many trains have designated quiet zones. Holding a phone while driving is an offence carrying a fine and licence points. Photographing other people without consent, and above all publishing such photos, is not acceptable. At the same time much of daily life is now digital — tickets, government appointments, banking — and „digitale Auszeit\", deliberately putting the phone aside at weekends, has become a common idea."
+        },
+        "wortschatz": [
+          {
+            "de": "das Handy, -s",
+            "en": "mobile phone"
+          },
+          {
+            "de": "die Bildschirmzeit",
+            "en": "screen time"
+          },
+          {
+            "de": "ablenken",
+            "en": "to distract"
+          },
+          {
+            "de": "erreichbar sein",
+            "en": "to be reachable"
+          },
+          {
+            "de": "die Auszeit",
+            "en": "time out, break"
+          },
+          {
+            "de": "die Sucht",
+            "en": "addiction"
+          },
+          {
+            "de": "sich unterhalten",
+            "en": "to have a conversation"
+          },
+          {
+            "de": "der Ruhebereich",
+            "en": "quiet zone"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man mehr Zeit ohne Handy verbringen? Viele Menschen schauen mehrere Stunden am Tag auf den Bildschirm. Ich möchte zeigen, warum das ein Thema ist und was hilft.",
+          "Ich erzähle von meiner eigenen Erfahrung. Vor einem halben Jahr habe ich meine Bildschirmzeit angeschaut. Es waren fast vier Stunden am Tag. Das hat mich erschreckt. Seitdem lade ich das Handy nachts in der Küche und nicht mehr neben dem Bett. Am Anfang war das ungewohnt, aber ich schlafe besser und lese wieder mehr Bücher.",
+          "In meinem Heimatland Indien ist das Handy noch wichtiger für den Alltag. Bei uns bezahlt man damit, bucht Fahrten und spricht mit der Familie in anderen Städten. Sehr viele Menschen haben kein zweites Gerät und keinen Computer. Deshalb ist es dort schwieriger, das Handy einfach wegzulegen. Auch hier wird es aber immer wichtiger, zum Beispiel für Fahrkarten.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil von Pausen ist: Man schläft besser, kann sich länger konzentrieren und spricht mehr mit anderen Menschen. Ein Nachteil ist: Man verpasst vielleicht wichtige Nachrichten, und manche Dinge gehen ohne Handy gar nicht mehr. Meiner Meinung nach braucht man keine strengen Verbote. Feste handyfreie Zeiten reichen schon, zum Beispiel beim Essen und in der Nacht.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist der beste Trick ganz einfach: das Handy in ein anderes Zimmer legen. Was man nicht sieht, nimmt man auch nicht in die Hand. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 249,
+          "sprechzeitSekunden": 166
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Der Tipp mit dem Laden in der Küche ist einfach und praktisch. Das kann jeder sofort machen.",
+        "frage": "Sollten Eltern die Handyzeit ihrer Kinder begrenzen?",
+        "antwort": "Bei kleinen Kindern auf jeden Fall. Bei Jugendlichen würde ich lieber gemeinsam Regeln vereinbaren. Ein striktes Verbot führt meist nur dazu, dass sie es heimlich machen."
+      },
+      "nummer": 45
     }
   ]
 }
