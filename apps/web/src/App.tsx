@@ -3,12 +3,14 @@ import type {
   AudioManifest,
   Lernhilfe,
   OeffentlichePruefung,
+  Sprechtraining as SprechtrainingDaten,
   Schluesseldaten,
   Stufe,
 } from '@pruefung/core';
 import {
   audioManifestLaden,
   lernhilfeLaden,
+  sprechtrainingLaden,
   pruefungLaden,
   registryLaden,
   schluesselLaden,
@@ -25,8 +27,16 @@ import { Sprechen } from './screens/Sprechen';
 import { Ergebnis } from './screens/Ergebnis';
 import { Spickzettel } from './screens/Spickzettel';
 import { Spiel } from './screens/Spiel';
+import { Sprechtraining } from './screens/Sprechtraining';
 
-type Phase = 'start' | 'laden' | 'pruefung' | 'ergebnis' | 'spickzettel' | 'spiel';
+type Phase =
+  | 'start'
+  | 'laden'
+  | 'pruefung'
+  | 'ergebnis'
+  | 'spickzettel'
+  | 'spiel'
+  | 'sprechtraining';
 
 /**
  * How long the current module runs, taken from the paper itself rather than a
@@ -66,6 +76,7 @@ export default function App() {
   const [fehler, setFehler] = useState<string | null>(null);
   const [serverHinweis, setServerHinweis] = useState<string | null>(null);
   const [lernhilfe, setLernhilfe] = useState<Lernhilfe | null>(null);
+  const [sprechen, setSprechen] = useState<SprechtrainingDaten | null>(null);
   // Which printables exist for the current paper. Kept here rather than in the
   // result screen so the solution booklet is looked up on the same path as the
   // answer key, and cannot appear before the attempt is closed.
@@ -206,6 +217,19 @@ export default function App() {
     }
   }
 
+  async function sprechtrainingOeffnen(stufe: Stufe) {
+    setFehler(null);
+    try {
+      const geladen =
+        sprechen?.stufe === stufe ? sprechen : await sprechtrainingLaden(stufe);
+      setSprechen(geladen);
+      setPhase('sprechtraining');
+      window.scrollTo({ top: 0 });
+    } catch {
+      setFehler('Das Sprechtraining konnte nicht geladen werden.');
+    }
+  }
+
   async function spielOeffnen(stufe: Stufe) {
     setFehler(null);
     try {
@@ -274,6 +298,7 @@ export default function App() {
             onErgebnis={ergebnisAnsehen}
             onSpickzettel={spickzettelOeffnen}
             onSpiel={spielOeffnen}
+            onSprechtraining={sprechtrainingOeffnen}
           />
         )}
 
@@ -283,6 +308,10 @@ export default function App() {
 
         {phase === 'spiel' && lernhilfe && (
           <Spiel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
+        )}
+
+        {phase === 'sprechtraining' && sprechen && (
+          <Sprechtraining daten={sprechen} onZurueck={() => setPhase('start')} />
         )}
 
         {phase === 'pruefung' && pruefung && versuch && aktuellesModul && (

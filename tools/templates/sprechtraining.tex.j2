@@ -1,0 +1,183 @@
+% sprechtraining.tex — the speaking trainer, generated from content/sprechen/.
+%
+% Two halves on purpose. Teil A is the tasks, set like exam paper so they can be
+% worked cold. Teil B is what the task alone cannot teach: how the topic
+% actually works in Germany, and a model answer that fits the three minutes.
+% Reading Teil B first would spoil the practice, so it lives at the back.
+\documentclass[11pt,a4paper]{article}
+\usepackage{pruefung}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\geometry{top=2.2cm,bottom=2.0cm,left=2.0cm,right=2.0cm,headheight=22pt}
+
+\pruefungstitel{<< stufe >> Sprechtraining}
+\modulname{<< aufgaben | length >> Sprechaufgaben \textperiodcentered{} Kulturwissen \textperiodcentered{} Musterlösungen}
+\niveaustufe{<< stufe >>}
+
+\setlength{\parskip}{0.45em}
+\linespread{1.04}
+
+% --- furniture --------------------------------------------------------------
+\newcommand{\trainingteil}[2]{%
+  \clearpage
+  \begin{tcolorbox}[colback=pruefrule,colframe=pruefrule,boxrule=0pt,arc=2pt,
+                    left=10pt,right=10pt,top=7pt,bottom=7pt]
+    {\LARGE\bfseries\color{white}#1}\par\vspace{2pt}
+    {\small\color{pruefedge}#2}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}
+
+% One task's banner. Kept on one line so the eye can find a number quickly.
+\newcommand{\aufgabenkopf}[2]{%
+  \needspace{7\baselineskip}
+  \vspace{0.7em}
+  \begin{tcolorbox}[colback=pruefsoft,colframe=pruefrule,boxrule=0pt,arc=1pt,
+                    leftrule=3pt,left=8pt,right=8pt,top=4pt,bottom=4pt]
+    {\bfseries\color{pruefrule}Aufgabe #1}\hfill{\small\color{pruefmute}#2}
+  \end{tcolorbox}
+  \vspace{0.15em}
+}
+
+\newcommand{\teilkopf}[2]{%
+  \needspace{4\baselineskip}
+  \vspace{0.45em}
+  {\bfseries\color{pruefmark}#1}~{\small\color{pruefmute}#2}\par
+  \vspace{0.05em}{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
+}
+
+% The German-culture note. The whole reason this document exists: a candidate
+% who has never lived here cannot invent what is normal in a German office or
+% a German block of flats, and no amount of grammar fixes that.
+\newcommand{\kulturkasten}[2]{%
+  \begin{tcolorbox}[colback=pruefsoft,colframe=pruefmark,boxrule=0pt,arc=1pt,
+                    leftrule=2.5pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+                    before skip=6pt,after skip=7pt]
+    {\small\bfseries\color{pruefmark}So ist es in Deutschland}\par\vspace{2pt}
+    \small #1\par\vspace{4pt}
+    {\footnotesize\color{pruefmute}\textit{#2}}
+  \end{tcolorbox}
+}
+
+\newcommand{\dialogzeile}[2]{%
+  \par\vspace{1pt}\noindent
+  \makebox[1.5em][l]{\bfseries\color{pruefrule}#1}%
+  \begin{minipage}[t]{\dimexpr\linewidth-1.6em\relax}#2\end{minipage}\par
+}
+
+\newcommand{\folienantwort}[2]{%
+  \par\vspace{0.35em}
+  {\small\bfseries\color{pruefrule}#1}\par\vspace{1pt}
+  #2\par
+}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  {\Huge\bfseries << titel | tex >>}\par\vspace{6pt}
+  {\large\color{pruefmute}<< untertitel | tex >>}\par\vspace{18pt}
+\end{center}
+
+\begin{tcolorbox}[colback=pruefsoft,colframe=pruefedge,boxrule=0.6pt,arc=2pt,
+                  left=12pt,right=12pt,top=10pt,bottom=10pt]
+  << hinweis | tex >>
+\end{tcolorbox}
+
+\vspace{10pt}
+\noindent\textbf{So läuft die mündliche Prüfung ab}\par\vspace{3pt}
+\begin{tabularx}{\linewidth}{@{}l l X@{}}
+  \toprule
+  \textbf{Teil} & \textbf{Zeit} & \textbf{Aufgabe} \\
+  \midrule
+<% for t in teile %>
+  << t.nummer >>. << t.titel | tex >> & ca. << t.dauerMinuten >> Min. & << t.anweisung | tex >> \\
+<% endfor %>
+  \midrule
+  Vorbereitung & << vorbereitungMinuten >> Min. & Vor der Prüfung, mit Notizen. Die Notizen dürfen Sie mitnehmen. \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{10pt}
+\noindent\textbf{Die fünf Folien in Teil 2} — bei jedem Thema gleich, also lernen Sie sie einmal richtig:\par\vspace{2pt}
+\begin{enumerate}\itemsep2pt
+<% for f in folien %>
+  \item << f | tex >>
+<% endfor %>
+\end{enumerate}
+
+% ---------------------------------------------------------------- Teil A
+\trainingteil{Teil A \textemdash{} Die Aufgaben}{%
+  << aufgaben | length >> vollständige Sprechaufgaben. Arbeiten Sie wie in der
+  Prüfung: erst 15 Minuten vorbereiten, dann laut sprechen. Die Lösungen stehen
+  hinten in Teil B.}
+
+<% for a in aufgaben %>
+\aufgabenkopf{<< a.nummer >>}{<< a.kurz | tex >>}
+
+\teilkopf{Teil 1 — Gemeinsam etwas planen}{ca. 3 Minuten}
+<< a.teil1.situation | tex >>
+\begin{enumerate}\itemsep1pt
+<% for p in a.teil1.punkte %>
+  \item << p | tex >>
+<% endfor %>
+\end{enumerate}
+
+\teilkopf{Teil 2 — Ein Thema präsentieren}{ca. 3 Minuten}
+\textbf{<< a.teil2.titel | tex >>}\par
+{\small\color{pruefmute}Präsentieren Sie das Thema in den fünf Folien von Seite 1.}
+
+\teilkopf{Teil 3 — Über ein Thema sprechen}{ca. 2 Minuten}
+Geben Sie eine Rückmeldung zur Präsentation Ihres Partners / Ihrer Partnerin,
+stellen Sie eine Frage und beantworten Sie danach seine / ihre Frage.
+
+<% endfor %>
+
+% ---------------------------------------------------------------- Teil B
+\trainingteil{Teil B \textemdash{} Kulturwissen und Musterlösungen}{%
+  Zu jeder Aufgabe zuerst das Hintergrundwissen zum Thema, dann der Wortschatz,
+  dann die Musterlösungen. Lesen Sie das erst, nachdem Sie selbst gesprochen
+  haben.}
+
+<% for a in aufgaben %>
+\aufgabenkopf{<< a.nummer >>}{<< a.teil2.titel | tex >>}
+
+\kulturkasten{<< a.teil2.kultur.de | tex >>}{<< a.teil2.kultur.en | tex >>}
+
+\teilkopf{Wortschatz zum Thema}{}
+% A plain tabular with two `l` columns, not tabularx.
+%
+% An X column is a parbox, and against this document's \linespread its first
+% baseline sits a full line below the `l` cell beside it — the gloss printed one
+% line under its own term, in every row. Zeroing \parskip does not help; it is
+% the parbox, not the paragraph skip. Both cells being `l` puts them on the same
+% row baseline. Nothing here needs to wrap: the builder caps the term at 34
+% characters and the gloss at 46, so a long entry fails the build rather than
+% running off the page.
+{\renewcommand{\arraystretch}{1.3}%
+\begin{tabular}{@{}l@{\hspace{2em}}l@{}}
+<% for w in a.teil2.wortschatz %>
+  << w.de | tex >> & {\color{pruefmute}<< w.en | tex >>} \\
+<% endfor %>
+\end{tabular}}
+
+\teilkopf{Musterlösung Teil 1}{ein möglicher Dialog}
+<% for z in a.teil1.musterdialog %>
+\dialogzeile{<< z.wer >>:}{<< z.text | tex >>}
+<% endfor %>
+
+\teilkopf{Musterlösung Teil 2}{<< a.teil2.umfang.woerter >> Wörter \textperiodcentered{} etwa << a.teil2.umfang.sprechzeitSekunden >> Sekunden gesprochen}
+\textbf{<< a.teil2.titel | tex >>}
+<% for block in a.teil2.musterloesung %>
+\folienantwort{Folie << loop.index >>}{<< block | tex >>}
+<% endfor %>
+
+\teilkopf{Musterlösung Teil 3}{Rückmeldung, Frage, Antwort}
+\dialogzeile{1.}{<< a.teil3.rueckmeldung | tex >>}
+\dialogzeile{2.}{<< a.teil3.frage | tex >>}
+\dialogzeile{3.}{<< a.teil3.antwort | tex >>}
+
+<% endfor %>
+
+\end{document}

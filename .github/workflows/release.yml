@@ -52,6 +52,8 @@ jobs:
         run: python tools/generate_audio.py
       - name: Build PDFs
         run: python tools/build_pdf.py
+      - name: Build the speaking trainer
+        run: python tools/build_pdf.py --only sprechtraining
       - name: Export content
         run: python tools/export_web.py
       - name: Verify no answer leak
@@ -63,7 +65,8 @@ jobs:
       - name: Package assets
         run: |
           mkdir -p release
-          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf \n            content/lernhilfe/*/pdf
+          zip -rq release/pdfs.zip content/exams/*/pdf content/lernhilfe/pdf \
+            content/lernhilfe/*/pdf content/sprechen/pdf
           # Also on their own: most people want a cheat sheet without
           # downloading two dozen exam PDFs to find it.
           # B1's sheet sits at the top of content/lernhilfe/ because it was
@@ -75,6 +78,16 @@ jobs:
             stufe=$(basename "$(dirname "$(dirname "$d")")")
             cp "$d" "release/spickzettel-$stufe.pdf"
           done
+          # The speaking trainer is a 116-page book, so it goes out on its own
+          # rather than buried in pdfs.zip: it is the one document someone
+          # prints to work through over weeks.
+          #
+          # The `if`, not `[ -f ... ] && cp`: the test is the last command in
+          # the block, so a missing file would leave a non-zero status and take
+          # the whole release step down with it under `set -e`.
+          if [ -f content/sprechen/pdf/sprechtraining.pdf ]; then
+            cp content/sprechen/pdf/sprechtraining.pdf release/sprechtraining-b1.pdf
+          fi
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
@@ -100,8 +113,12 @@ jobs:
               cheat sheet for each of the four levels: strategy for all four modules, Redemittel
               for Sprechen and Schreiben, grammar in tables, and the core
               vocabulary with every verb form.
+            - **`sprechtraining-b1.pdf`** — 50 complete B1 speaking tasks to
+              practise offline, each with the German background behind the
+              topic (in German and English) and model answers timed to the
+              three minutes the exam gives.
             - **`pdfs.zip`** — printable papers, answer sheets, speaking cards
-              and solution booklets, for both levels.
+              and solution booklets, for every level.
             - **`audio-<paper>.zip`** — the listening tracks for one paper.
 
             Or just use the hosted app, no download needed:

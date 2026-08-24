@@ -7,6 +7,52 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.11.0] — 2026-08-24
+
+### Added
+
+- **Sprechtraining B1: fifty complete speaking tasks**, in the app and as a
+  116-page PDF to work through offline. Each one is a whole examination's worth
+  of Sprechen — a planning situation with five points, a presentation topic,
+  and the feedback round — with fifty different topics and fifty different
+  planning situations.
+- **A culture note on every topic, which is the point of the collection.** A
+  candidate who did not grow up in Germany cannot invent what is normal here,
+  and no amount of grammar fixes that. Asked whether one should be reachable for
+  work on holiday, you need to know that the legal minimum is 20 days' leave,
+  that most employers give 28 to 30, that you name a *Vertretung* before you go,
+  and that there is no legal right to be unreachable — which is exactly why
+  the question is contested. Every note is written in simple German and repeated
+  as an English gloss, and covers things like the Sunday closing law, the
+  *duale Ausbildung*, Pfand and the four bins, *Sie* and *du*, Elternzeit and
+  the Partnermonate, Bildungsurlaub, the Rundfunkbeitrag and the
+  Haftpflichtversicherung.
+- **Model answers that actually fit the time.** Each presentation answer is
+  written to the five slides and checked to land between 240 and 390 words —
+  at 90 words a minute, the pace of a learner reading a prepared presentation,
+  that is 2:40 to 4:20 against a three-minute slot. The word count and the
+  estimated speaking time are printed next to every answer, so a learner can see
+  whether what *they* wrote fits. There is also a full model dialogue for Teil 1
+  and the three turns of Teil 3, plus eight topic words with English glosses.
+
+### Changed
+
+- The trainer opens on the **task**, not on the answers. They are not secret —
+  the second half of the book is solutions — but a model answer read before
+  you have spoken is a text you agree with rather than something you produced,
+  so the culture note and the answers sit one tab away.
+- `validate.py --strict` now gates the trainer with the same checks the builder
+  runs: five planning points, five slide answers, the word window, matching
+  printed word counts, culture notes long enough to be worth reading, no
+  repeated topic and no repeated planning situation.
+
+### Fixed
+
+- `release.yml` packaged `pdfs.zip` with a literal `\n` in the middle of the
+  file list, so the shell was passed `\n` as a path. The command still
+  succeeded, which is why it went unnoticed — zip skipped the bad argument
+  and the archive was built from the remaining paths.
+
 ## [1.10.0] — 2026-08-21
 
 ### Added

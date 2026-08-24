@@ -80,6 +80,18 @@ gone. Only the record is stored, never the card: the question and its
 explanation are generated again from the cheat sheet, so the history stays tiny
 and never goes stale. Pin a round with `?saat=12345` to replay it exactly.
 
+**And it trains the part that is hardest to practise alone.** Sprechen is the
+module you cannot mark yourself, and for a candidate who did not grow up in
+Germany it hides a second difficulty: the topics assume you know how things
+work here. Asked whether one should be reachable for work on holiday, a good
+answer needs the 20-day legal minimum, the 28 to 30 days most firms actually
+give, the *Vertretung* you name before you go, and the fact that no law makes
+you unreachable. **Sprechtraining B1** is fifty complete speaking tasks —
+fifty planning situations, fifty presentation topics, the feedback round —
+and every one carries that background in simple German with an English gloss,
+plus a model answer written to the five slides and checked to fit the three
+minutes you actually get. In the app and as a 116-page PDF for offline work.
+
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 
 ---

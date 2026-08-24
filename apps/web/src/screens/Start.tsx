@@ -22,11 +22,20 @@ interface Props {
   onErgebnis: (versuchId: string) => void;
   onSpickzettel: (stufe: Stufe) => void;
   onSpiel: (stufe: Stufe) => void;
+  onSprechtraining: (stufe: Stufe) => void;
 }
 
-export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel, onSpiel }: Props) {
+export function Start({
+  onStart,
+  onWeiter,
+  onErgebnis,
+  onSpickzettel,
+  onSpiel,
+  onSprechtraining,
+}: Props) {
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
   const [lernhilfeStufen, setLernhilfeStufen] = useState<Stufe[]>([]);
+  const [sprechenStufen, setSprechenStufen] = useState<Stufe[]>([]);
   const [versuche, setVersuche] = useState<GespeicherterVersuch[]>([]);
   const [fehler, setFehler] = useState<string | null>(null);
   // 'b1-name' is what the key was called before the app grew a second level.
@@ -44,6 +53,7 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel, onSpiel }:
       .then((r) => {
         setPruefungen(r.pruefungen);
         setLernhilfeStufen(r.lernhilfeStufen ?? []);
+        setSprechenStufen(r.sprechenStufen ?? []);
       })
       .catch(() =>
         setFehler(
@@ -156,6 +166,29 @@ export function Start({ onStart, onWeiter, onErgebnis, onSpickzettel, onSpiel }:
             onClick={() => onSpiel(stufe)}
           >
             Spiel starten
+          </button>
+        </section>
+      )}
+
+      {sprechenStufen.includes(stufe) && (
+        <section className="teil spick__einstieg sprech__einstieg">
+          <div>
+            <h2>
+              <span aria-hidden="true">🎤</span> Sprechtraining {stufe}
+            </h2>
+            <p className="notiz">
+              50 vollständige Sprechaufgaben zum Üben — mit dem Hintergrundwissen, das man
+              für ein deutsches Thema braucht, wenn man nicht hier aufgewachsen ist, und
+              mit Musterlösungen, die wirklich in die drei Minuten passen. Erst sprechen,
+              dann nachlesen.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="knopf knopf--primaer"
+            onClick={() => onSprechtraining(stufe)}
+          >
+            Sprechtraining öffnen
           </button>
         </section>
       )}
