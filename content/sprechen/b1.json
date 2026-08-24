@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "27 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "30 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -2976,6 +2976,333 @@
         "antwort": "Das ist schwierig. Ein höherer Preis würde vor allem Familien mit wenig Geld treffen. Ich fände es besser, wenn gutes Gemüse günstiger würde. Dann entscheidet man sich freiwillig anders."
       },
       "nummer": 27
+    },
+    {
+      "kurz": "Praktikum und Noten",
+      "teil1": {
+        "situation": "Ihre Firma bietet zum ersten Mal Praktikumsplätze für Schüler an. Sie und Ihr Partner / Ihre Partnerin sollen die Woche vorbereiten.",
+        "punkte": [
+          "Wie viele Schüler nehmen Sie auf?",
+          "Was sollen sie in der Woche machen?",
+          "Wer betreut sie?",
+          "Was zeigen Sie ihnen vom Betrieb?",
+          "Wie schließen Sie die Woche ab?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde mit vier Schülern anfangen. Mehr können wir am Anfang nicht gut betreuen."
+          },
+          {
+            "wer": "B",
+            "text": "Vier ist realistisch. Sie sollten nicht nur zuschauen, sondern wirklich etwas machen."
+          },
+          {
+            "wer": "A",
+            "text": "Genau. Jeder bekommt eine kleine eigene Aufgabe, die am Ende fertig ist."
+          },
+          {
+            "wer": "B",
+            "text": "Zur Betreuung schlage ich vor: Jeder Schüler bekommt einen festen Kollegen als Ansprechpartner."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Am ersten Tag machen wir einen Rundgang durch alle Abteilungen."
+          },
+          {
+            "wer": "B",
+            "text": "Und ein Gespräch über Ausbildungsberufe. Viele wissen gar nicht, was es alles gibt."
+          },
+          {
+            "wer": "A",
+            "text": "Am Freitag stellt jeder kurz vor, was er gemacht hat. Fünf Minuten reichen."
+          },
+          {
+            "wer": "B",
+            "text": "Dazu ein Zertifikat für die Bewerbungsmappe. Ich kümmere mich um die Urkunden."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist ein Praktikum wichtiger als gute Noten?",
+        "kultur": {
+          "de": "Praktika gehören in Deutschland fest zur Ausbildung. Schon in der Schule machen fast alle ein Betriebspraktikum, meistens in der achten oder neunten Klasse und ein bis drei Wochen lang. Später im Studium sind Praktika oft Pflicht. Wichtig ist die Bewerbungsmappe: Man sammelt alle Zeugnisse und Praktikumsbescheinigungen. Bei einer Bewerbung schickt man Lebenslauf, Anschreiben und diese Zeugnisse. Wer ein längeres Praktikum macht, hat Anspruch auf Mindestlohn; ein Pflichtpraktikum in der Ausbildung ist davon ausgenommen. Firmen schauen nicht nur auf Noten, sondern fragen, ob jemand schon in einem Betrieb gearbeitet hat. Ein gutes Arbeitszeugnis ist hier oft mehr wert als eine Eins.",
+          "en": "Work placements are built into German education. Almost every pupil does a Betriebspraktikum, usually in year eight or nine for one to three weeks, and university courses often require them too. The Bewerbungsmappe matters: you keep every certificate and placement reference, and an application consists of a CV, a covering letter and those documents. Longer placements must be paid at the minimum wage, though compulsory ones inside a course are exempt. Employers do look at grades, but they ask first whether you have actually worked in a company — a strong reference frequently counts for more than a top mark."
+        },
+        "wortschatz": [
+          {
+            "de": "das Praktikum, Praktika",
+            "en": "work placement"
+          },
+          {
+            "de": "die Bewerbung, -en",
+            "en": "job application"
+          },
+          {
+            "de": "der Lebenslauf",
+            "en": "CV"
+          },
+          {
+            "de": "das Zeugnis, -se",
+            "en": "certificate, reference"
+          },
+          {
+            "de": "die Erfahrung sammeln",
+            "en": "to gain experience"
+          },
+          {
+            "de": "der Betrieb, -e",
+            "en": "company, works"
+          },
+          {
+            "de": "die Note, -n",
+            "en": "grade, mark"
+          },
+          {
+            "de": "sich bewerben",
+            "en": "to apply"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist ein Praktikum wichtiger als gute Noten? In Deutschland macht fast jeder Schüler ein Praktikum. Firmen fragen bei einer Bewerbung oft zuerst danach. Ich möchte beide Seiten vergleichen.",
+          "Ich erzähle von meiner eigenen Erfahrung. Ich hatte im Studium gute Noten, aber wenig Praxis. Bei meiner ersten Bewerbung hier hat man mich gefragt, was ich schon konkret gemacht habe. Da hatte ich wenig zu erzählen. Danach habe ich ein dreimonatiges Praktikum gemacht. Beim nächsten Gespräch konnte ich von echten Projekten berichten, und es lief viel besser.",
+          "In meinem Heimatland Indien sind Noten sehr wichtig. Viele Firmen setzen eine bestimmte Prozentzahl voraus, bevor man überhaupt eingeladen wird. Praktika gibt es auch, aber sie sind oft kurz und unbezahlt. Die Familie schaut vor allem auf das Abschlusszeugnis. Deshalb war es für mich neu, dass hier so stark nach Erfahrung gefragt wird.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil des Praktikums ist: Man lernt den Alltag im Beruf kennen und merkt früh, ob er passt. Man knüpft Kontakte, und viele bekommen danach eine Stelle. Ein Nachteil ist: Nicht jeder findet einen guten Platz, und manche Firmen nutzen Praktikanten als billige Hilfe. Gute Noten zeigen dagegen, dass man lernen kann und durchhält. Meiner Meinung nach braucht man beides, aber die Erfahrung zählt im Gespräch mehr.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist die beste Kombination: solide Noten und ein Praktikum, über das man erzählen kann. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 247,
+          "sprechzeitSekunden": 165
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ihre Geschichte vom ersten Bewerbungsgespräch war sehr ehrlich und einleuchtend.",
+        "frage": "Sollten alle Praktika bezahlt werden?",
+        "antwort": "Bei längeren Praktika finde ich ja. Wer drei Monate richtig mitarbeitet, soll auch Geld bekommen. Bei einer Schulwoche zum Reinschauen ist das etwas anderes. Da geht es wirklich nur ums Kennenlernen."
+      },
+      "nummer": 28
+    },
+    {
+      "kurz": "Zug oder Flugzeug",
+      "teil1": {
+        "situation": "Sie und Ihr Partner / Ihre Partnerin planen eine gemeinsame Reise mit vier Freunden nach Berlin.",
+        "punkte": [
+          "Wann und wie lange fahren Sie?",
+          "Wie reisen Sie hin?",
+          "Wo übernachten Sie?",
+          "Was möchten Sie dort sehen?",
+          "Wie viel soll die Reise kosten?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage ein langes Wochenende im Mai vor, von Donnerstag bis Sonntag."
+          },
+          {
+            "wer": "B",
+            "text": "Vier Tage sind gut. Fahren wir mit dem Zug? Vom Bahnhof ist man direkt in der Stadt."
+          },
+          {
+            "wer": "A",
+            "text": "Ja, und wenn wir früh buchen, sind die Sparpreise günstig. Fliegen lohnt sich innerhalb Deutschlands kaum."
+          },
+          {
+            "wer": "B",
+            "text": "Für die Übernachtung würde ich eine Ferienwohnung nehmen. Für sechs Personen ist das billiger als Hotelzimmer."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee, dann können wir auch selbst frühstücken. Was wollen wir sehen?"
+          },
+          {
+            "wer": "B",
+            "text": "Auf jeden Fall das Brandenburger Tor und ein Museum. Aber nicht zu viel an einem Tag."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Ein Tag für Museen, ein Tag zum Spazieren, ein Tag frei für jeden."
+          },
+          {
+            "wer": "B",
+            "text": "Beim Geld würde ich mit etwa zweihundertfünfzig Euro pro Person rechnen. Ich buche die Zugtickets."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man lieber mit dem Zug als mit dem Flugzeug reisen?",
+        "kultur": {
+          "de": "Bahnfahren ist in Deutschland ein großes Thema, im Guten wie im Schlechten. Das Netz ist dicht, und der ICE fährt bis zu 300 Kilometer pro Stunde. Wer früh bucht, bekommt Sparpreise, die deutlich günstiger sind als der Normalpreis. Mit der BahnCard bekommt man dauerhaft Rabatt. Gleichzeitig klagen viele über Verspätungen. Ab 60 Minuten Verspätung bekommt man einen Teil des Fahrpreises zurück, das ist gesetzlich geregelt. Beim Umweltthema ist der Unterschied klar: Der Zug verursacht pro Person viel weniger CO2 als das Flugzeug. Inlandsflüge sind deshalb in der Diskussion, und einige Firmen erlauben ihren Mitarbeitern auf kurzen Strecken nur noch die Bahn.",
+          "en": "Rail is a national talking point in Germany, admired and complained about in equal measure. The network is dense and ICE trains run up to 300 km/h; booking early gets Sparpreise far below the flexible fare, and a BahnCard gives a standing discount. Punctuality is the standing grievance — but passenger rights are statutory: 60 minutes late and you are owed part of the fare back. On emissions the comparison is not close: rail produces far less CO2 per passenger than flying, which is why domestic flights are politically contested and some employers now require rail for shorter business trips."
+        },
+        "wortschatz": [
+          {
+            "de": "der Fernverkehr",
+            "en": "long-distance transport"
+          },
+          {
+            "de": "die Verspätung, -en",
+            "en": "delay"
+          },
+          {
+            "de": "der Sparpreis, -e",
+            "en": "discounted advance fare"
+          },
+          {
+            "de": "die BahnCard",
+            "en": "rail discount card"
+          },
+          {
+            "de": "umsteigen",
+            "en": "to change trains"
+          },
+          {
+            "de": "der Inlandsflug, -flüge",
+            "en": "domestic flight"
+          },
+          {
+            "de": "die Umwelt schonen",
+            "en": "to spare the environment"
+          },
+          {
+            "de": "die Strecke, -n",
+            "en": "route, distance"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Sollte man lieber mit dem Zug als mit dem Flugzeug reisen? In Deutschland gibt es ein dichtes Bahnnetz. Trotzdem fliegen viele Menschen auch innerhalb des Landes. Ich möchte beide Möglichkeiten vergleichen.",
+          "Ich erzähle von meiner eigenen Erfahrung. Letztes Jahr bin ich von München nach Hamburg gefahren, etwa sechs Stunden mit dem Zug. Ich habe die ganze Zeit gelesen und gearbeitet. Der Zug hatte zwar zwanzig Minuten Verspätung, aber ich war entspannt. Beim Fliegen hätte ich zweimal zum Flughafen fahren und lange warten müssen. Am Ende wäre ich kaum schneller gewesen.",
+          "In meinem Heimatland Indien fahre ich auch sehr gern Zug. Bei uns sind die Strecken viel länger, oft über Nacht. Man schläft im Zug und kommt morgens an. Fliegen ist in den letzten Jahren billiger geworden, deshalb nehmen viele Leute für lange Strecken das Flugzeug. Für kurze Wege ist der Zug aber immer noch das normale Verkehrsmittel.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil des Zuges ist: Er fährt von Zentrum zu Zentrum, man kann arbeiten und schlafen, und er schont die Umwelt deutlich. Ein Nachteil sind Verspätungen und teure Preise, wenn man kurzfristig bucht. Das Flugzeug ist bei sehr langen Strecken schneller. Meiner Meinung nach sollte man innerhalb Deutschlands immer den Zug nehmen. Bei Reisen über mehrere Länder sieht es anders aus.",
+          "Damit komme ich zum Schluss. Für mich ist der Zug fast immer die angenehmere Wahl. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 240,
+          "sprechzeitSekunden": 160
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für die Präsentation. Ihr Vergleich mit der Zeit zum Flughafen war sehr überzeugend.",
+        "frage": "Sollte man kurze Inlandsflüge ganz verbieten?",
+        "antwort": "Ein Verbot finde ich schwierig. Ich würde lieber die Bahn günstiger und pünktlicher machen. Wenn der Zug wirklich besser ist, entscheiden sich die meisten Menschen von selbst dafür."
+      },
+      "nummer": 29
+    },
+    {
+      "kurz": "Museen und Kultur",
+      "teil1": {
+        "situation": "Ihre Deutschkursgruppe möchte einen kulturellen Ausflug machen. Sie und Ihr Partner / Ihre Partnerin planen ihn.",
+        "punkte": [
+          "Wohin gehen Sie?",
+          "Wann und wie lange?",
+          "Wie kommen Sie hin?",
+          "Was kostet es und wer zahlt?",
+          "Was machen Sie danach?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage das Stadtmuseum vor. Dort gibt es eine Führung auf einfachem Deutsch."
+          },
+          {
+            "wer": "B",
+            "text": "Das passt gut zu unserem Kurs. Wann? Ich würde einen Samstagvormittag nehmen."
+          },
+          {
+            "wer": "A",
+            "text": "Samstag um zehn. Die Führung dauert etwa neunzig Minuten, das reicht."
+          },
+          {
+            "wer": "B",
+            "text": "Hinkommen können wir mit der Straßenbahn. Treffpunkt direkt vor dem Eingang."
+          },
+          {
+            "wer": "A",
+            "text": "Beim Preis: Der Eintritt kostet fünf Euro, für Studenten drei."
+          },
+          {
+            "wer": "B",
+            "text": "Ich frage, ob es eine Gruppenermäßigung gibt. Oft ist der erste Sonntag im Monat sogar frei."
+          },
+          {
+            "wer": "A",
+            "text": "Das wäre ideal. Danach könnten wir noch zusammen einen Kaffee trinken."
+          },
+          {
+            "wer": "B",
+            "text": "Ja, und dabei auf Deutsch über die Ausstellung sprechen. Das ist gute Übung."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Museen für alle kostenlos sein?",
+        "kultur": {
+          "de": "Deutschland hat über 6.500 Museen, mehr als fast jedes andere Land. Viele gehören der Stadt oder dem Bundesland und werden mit Steuergeld finanziert. Der Eintritt kostet trotzdem meistens etwas, oft zwischen fünf und fünfzehn Euro. Es gibt aber viele Ermäßigungen: für Schüler, Studenten, Arbeitslose und Familien. In manchen Städten ist ein Tag im Monat kostenlos, oft der erste Sonntag. Kinder und Jugendliche kommen in staatlichen Museen häufig gratis hinein. Neben Museen gibt es sehr viele Stadtbibliotheken; ein Jahresausweis kostet oft nur zehn bis zwanzig Euro und Jugendliche zahlen nichts. Kultur gilt hier als öffentliche Aufgabe und nicht nur als Geschäft.",
+          "en": "Germany has over 6,500 museums, among the highest number anywhere. Most are municipal or state-owned and funded from taxes, yet still charge — typically five to fifteen euros — with wide concessions for pupils, students, the unemployed and families. Many cities make one day a month free, often the first Sunday, and children and teenagers usually enter public museums free. The same public-service logic applies to libraries: an annual card in a city library often costs only ten to twenty euros and is free for young people. Culture is treated as public infrastructure rather than as a business."
+        },
+        "wortschatz": [
+          {
+            "de": "das Museum, Museen",
+            "en": "museum"
+          },
+          {
+            "de": "der Eintritt",
+            "en": "admission"
+          },
+          {
+            "de": "die Ermäßigung, -en",
+            "en": "concession, discount"
+          },
+          {
+            "de": "die Ausstellung, -en",
+            "en": "exhibition"
+          },
+          {
+            "de": "die Führung, -en",
+            "en": "guided tour"
+          },
+          {
+            "de": "die Bildung",
+            "en": "education"
+          },
+          {
+            "de": "der Steuerzahler",
+            "en": "taxpayer"
+          },
+          {
+            "de": "die Sammlung, -en",
+            "en": "collection"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Museen für alle kostenlos sein? Deutschland hat über sechstausendfünfhundert Museen. Die meisten kosten Eintritt, obwohl sie mit Steuergeld finanziert werden. Ich möchte zeigen, was dafür und dagegen spricht.",
+          "Ich erzähle von meiner eigenen Erfahrung. In meinem ersten Jahr hier bin ich selten ins Museum gegangen, weil ich sparen musste. Dann habe ich gelernt, dass in meiner Stadt der erste Sonntag im Monat frei ist. Seitdem gehe ich regelmäßig. Beim ersten Besuch habe ich fast nichts verstanden. Nach einigen Malen konnte ich die Texte lesen, und es hat mir auch beim Deutschlernen geholfen.",
+          "In meinem Heimatland Indien ist der Eintritt in staatliche Museen sehr günstig, oft nur wenige Rupien für Einheimische. Für Touristen kostet es mehr. Trotzdem gehen nicht viele Menschen hin, weil Museen als etwas für Schulklassen gelten. Der Zugang ist also billig, aber das Interesse ist das eigentliche Problem.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil des freien Eintritts wäre: Alle Menschen könnten hingehen, auch Familien mit wenig Geld. Bildung sollte nicht vom Einkommen abhängen. Ein Nachteil ist: Museen brauchen Geld für Personal, Sicherheit und neue Ausstellungen. Wenn der Eintritt wegfällt, muss die Stadt mehr zahlen. Meiner Meinung nach sollte wenigstens die Dauerausstellung frei sein, und für Sonderausstellungen darf man zahlen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist ein kostenloser Tag im Monat schon ein sehr guter Kompromiss. Wichtig wäre nur, dass alle davon wissen. Ich habe zwei Jahre gebraucht, um es herauszufinden. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 252,
+          "sprechzeitSekunden": 168
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Dass Museen beim Deutschlernen helfen, ist ein schöner Gedanke. Daran hatte ich nicht gedacht.",
+        "frage": "Wie oft gehen Sie selbst ins Museum?",
+        "antwort": "Etwa alle zwei Monate, meistens am freien Sonntag. Ich gehe am liebsten allein, dann kann ich in meinem Tempo lesen. Danach erzähle ich einem Freund davon, das hilft mir beim Sprechen."
+      },
+      "nummer": 30
     }
   ]
 }
