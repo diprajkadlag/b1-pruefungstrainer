@@ -32,7 +32,7 @@
     "Folie 4 — Nennen Sie Vor- und Nachteile und sagen Sie Ihre eigene Meinung.",
     "Folie 5 — Beenden Sie die Präsentation und bedanken Sie sich."
   ],
-  "untertitel": "21 Sprechaufgaben mit Kulturwissen und Musterlösungen",
+  "untertitel": "27 Sprechaufgaben mit Kulturwissen und Musterlösungen",
   "aufgaben": [
     {
       "kurz": "Urlaub und Erreichbarkeit",
@@ -2322,6 +2322,660 @@
         "antwort": "Ich finde ja, vor allem Familien mit wenig Geld. Sonst sitzen manche im Kalten. Am besten wäre Hilfe bei der Dämmung. Dann sinken die Kosten dauerhaft und nicht nur für einen Winter."
       },
       "nummer": 21
+    },
+    {
+      "kurz": "Ehrenamt",
+      "teil1": {
+        "situation": "Die Stadtbibliothek in Ihrem Viertel sucht ehrenamtliche Helfer. Sie und Ihr Partner / Ihre Partnerin planen eine Vorlesestunde für Kinder.",
+        "punkte": [
+          "Wann soll die Vorlesestunde sein?",
+          "Für welches Alter?",
+          "Wer liest vor?",
+          "Welche Bücher wählen Sie aus?",
+          "Wie machen Sie die Aktion bekannt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage jeden Samstag um elf Uhr vor. Da kommen Familien sowieso in die Bibliothek."
+          },
+          {
+            "wer": "B",
+            "text": "Samstag ist gut. Für welches Alter? Ich würde vier bis acht Jahre sagen."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Größere Kinder lesen meistens schon selbst."
+          },
+          {
+            "wer": "B",
+            "text": "Wer liest vor? Wir könnten Freiwillige suchen, jeder einmal im Monat."
+          },
+          {
+            "wer": "A",
+            "text": "Gute Idee. Vielleicht auch Leute, die in anderen Sprachen vorlesen. Das wäre schön für alle."
+          },
+          {
+            "wer": "B",
+            "text": "Bei den Büchern nehmen wir kurze Geschichten mit vielen Bildern. Höchstens zwanzig Minuten."
+          },
+          {
+            "wer": "A",
+            "text": "Bekannt machen würde ich es über die Kitas und mit einem Plakat in der Bibliothek."
+          },
+          {
+            "wer": "B",
+            "text": "Ich spreche mit den Kitas, du machst das Plakat und die Liste der Freiwilligen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Wie wichtig ist ehrenamtliche Arbeit?",
+        "kultur": {
+          "de": "In Deutschland arbeiten sehr viele Menschen ehrenamtlich, also freiwillig und ohne Bezahlung. Etwa jeder Dritte engagiert sich regelmäßig. Besonders bekannt ist die Freiwillige Feuerwehr: In den meisten kleinen Orten gibt es keine Berufsfeuerwehr, sondern Nachbarn, die im Notfall alles stehen lassen und losfahren. Auch das Deutsche Rote Kreuz, die Tafeln und der Sport funktionieren so. In Sportvereinen sind fast alle Trainer ehrenamtlich. Wer ein Ehrenamt hat, bekommt manchmal eine kleine Aufwandsentschädigung, aber keinen Lohn. Es gibt sogar eine Ehrenamtskarte: Damit bekommt man in manchen Bundesländern Vergünstigungen. Für Zugewanderte ist ein Ehrenamt oft ein sehr guter Weg, Sprache zu üben und Kontakte zu knüpfen.",
+          "en": "Volunteering is widespread in Germany — roughly one person in three does something regularly. The clearest example is the Freiwillige Feuerwehr: most small towns have no professional fire service, just neighbours who drop everything and drive out when the alarm goes. The Red Cross, the food banks and organised sport run the same way; almost every club coach is unpaid. Volunteers may receive a small expenses allowance but not a wage, and several states issue an Ehrenamtskarte giving discounts. For newcomers it is one of the most effective routes into both the language and a social network."
+        },
+        "wortschatz": [
+          {
+            "de": "das Ehrenamt, -ämter",
+            "en": "voluntary position"
+          },
+          {
+            "de": "ehrenamtlich",
+            "en": "voluntary, unpaid"
+          },
+          {
+            "de": "die Freiwillige Feuerwehr",
+            "en": "volunteer fire brigade"
+          },
+          {
+            "de": "sich engagieren",
+            "en": "to get involved"
+          },
+          {
+            "de": "die Gesellschaft",
+            "en": "society"
+          },
+          {
+            "de": "unterstützen",
+            "en": "to support"
+          },
+          {
+            "de": "die Erfahrung, -en",
+            "en": "experience"
+          },
+          {
+            "de": "der Einsatz",
+            "en": "commitment, deployment"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Wie wichtig ist ehrenamtliche Arbeit? In Deutschland engagiert sich etwa jeder Dritte freiwillig und ohne Bezahlung. Ich möchte zeigen, was das bedeutet und warum es hier so verbreitet ist.",
+          "Ich erzähle von meiner eigenen Erfahrung. Seit einem halben Jahr helfe ich einmal in der Woche bei einer Hausaufgabenhilfe. Ich unterstütze Kinder in Mathematik. Am Anfang habe ich es gemacht, um mein Deutsch zu üben. Heute freue ich mich vor allem auf die Kinder. Ich bekomme kein Geld dafür, aber ich habe dadurch viele Leute kennengelernt.",
+          "In meinem Heimatland Indien hilft man auch sehr viel, aber anders. Bei uns läuft es meistens über die Familie, die Nachbarschaft oder religiöse Gemeinschaften. Man organisiert Essen bei Festen oder hilft bei einer Hochzeit. Feste Vereine mit Mitgliedsliste und Vorstand sind seltener. In Deutschland ist das Helfen stärker organisiert.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil ist: Viele wichtige Dinge funktionieren nur durch Ehrenamt, zum Beispiel die Feuerwehr in kleinen Orten. Man lernt außerdem neue Menschen und neue Fähigkeiten kennen. Ein Nachteil ist: Manchmal übernimmt der Staat zu wenig Verantwortung und verlässt sich auf Freiwillige. Außerdem kostet es Zeit, die nicht jeder hat. Meiner Meinung nach ist Ehrenamt sehr wertvoll, darf aber bezahlte Arbeit nicht ersetzen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich war das Ehrenamt der schnellste Weg, hier wirklich anzukommen. Ich kann es jedem empfehlen, der neu in einer Stadt ist. Man gibt etwas und bekommt dabei mehr zurück, als man denkt. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 255,
+          "sprechzeitSekunden": 170
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Schön fand ich, dass Sie von Ihrer Hausaufgabenhilfe erzählt haben. Das klingt sehr sinnvoll.",
+        "frage": "Sollte ehrenamtliche Arbeit bezahlt werden?",
+        "antwort": "Dann wäre es kein Ehrenamt mehr. Ich finde aber, die Kosten sollte man ersetzen, zum Beispiel Fahrkarten. Und ein bisschen Anerkennung tut gut, etwa eine Feier einmal im Jahr."
+      },
+      "nummer": 22
+    },
+    {
+      "kurz": "Rente und Arbeit im Alter",
+      "teil1": {
+        "situation": "Ein Kollege geht nach dreißig Jahren in Rente. Sie und Ihr Partner / Ihre Partnerin organisieren seine Verabschiedung.",
+        "punkte": [
+          "Wann und wo verabschieden Sie ihn?",
+          "Wen laden Sie ein?",
+          "Was schenken Sie ihm?",
+          "Wer hält eine Rede?",
+          "Wie bleiben Sie in Kontakt?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage seinen letzten Arbeitstag vor, nachmittags in der Kantine."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Einladen sollten wir die ganze Abteilung und auch ehemalige Kollegen."
+          },
+          {
+            "wer": "A",
+            "text": "Seine Frau vielleicht auch? Sie kennt viele von uns von den Sommerfesten."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr schöne Idee. Beim Geschenk denke ich an etwas für seine Hobbys."
+          },
+          {
+            "wer": "A",
+            "text": "Er wandert gern. Ein Gutschein für ein Wanderhotel wäre passend."
+          },
+          {
+            "wer": "B",
+            "text": "Dazu ein Buch mit Fotos und Grüßen von allen. Ich sammle die Beiträge ein."
+          },
+          {
+            "wer": "A",
+            "text": "Die Rede sollte die Abteilungsleiterin halten. Sie hat lange mit ihm gearbeitet."
+          },
+          {
+            "wer": "B",
+            "text": "Und in Kontakt bleiben wir über das jährliche Ehemaligentreffen. Da laden wir ihn ein."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten ältere Menschen länger arbeiten dürfen?",
+        "kultur": {
+          "de": "Das gesetzliche Renteneintrittsalter steigt in Deutschland schrittweise auf 67 Jahre. Wer 45 Jahre gearbeitet hat, kann etwas früher gehen. Man kann auch vorzeitig in Rente gehen, bekommt dann aber dauerhaft weniger Geld. Die Rente kommt aus der gesetzlichen Rentenversicherung: Die Beiträge der heutigen Arbeitnehmer bezahlen die heutigen Rentner. Deshalb ist der demografische Wandel ein großes Thema. Es gibt immer mehr ältere und weniger junge Menschen. Viele sorgen zusätzlich privat vor. Wichtig zu wissen: Wer in Rente ist, darf weiterarbeiten und dazuverdienen. Manche Firmen holen erfahrene Fachleute nach der Rente stundenweise zurück, weil Fachkräfte fehlen.",
+          "en": "The statutory retirement age in Germany is rising in steps to 67, with an earlier option after 45 years of contributions. You can retire early but permanently receive less. The state pension is pay-as-you-go: today's workers' contributions fund today's pensioners, which is why the ageing population is such a persistent political issue, and why many people also save privately. Worth knowing: being retired does not stop you working — pensioners may earn on top, and with skilled labour scarce, some firms bring experienced people back part-time after retirement."
+        },
+        "wortschatz": [
+          {
+            "de": "die Rente",
+            "en": "pension"
+          },
+          {
+            "de": "in Rente gehen",
+            "en": "to retire"
+          },
+          {
+            "de": "das Renteneintrittsalter",
+            "en": "retirement age"
+          },
+          {
+            "de": "die Rentenversicherung",
+            "en": "state pension insurance"
+          },
+          {
+            "de": "der Fachkräftemangel",
+            "en": "shortage of skilled workers"
+          },
+          {
+            "de": "die Erfahrung weitergeben",
+            "en": "to pass on experience"
+          },
+          {
+            "de": "körperlich anstrengend",
+            "en": "physically demanding"
+          },
+          {
+            "de": "der Ruhestand",
+            "en": "retirement"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema ist die Frage: Sollten ältere Menschen länger arbeiten dürfen? In Deutschland steigt das Renteneintrittsalter auf 67 Jahre. Gleichzeitig fehlen überall Fachkräfte. Ich möchte zeigen, was das für die Menschen bedeutet.",
+          "Ich erzähle von einem Kollegen. Er ist mit 65 in Rente gegangen. Nach drei Monaten hat ihn die Firma gefragt, ob er zwei Tage in der Woche zurückkommt. Er hat zugesagt. Heute bildet er junge Kollegen aus und arbeitet nur noch, wann er möchte. Er sagt, das sei die beste Lösung: genug Zeit für sich, aber nicht plötzlich ganz raus.",
+          "In meinem Heimatland Indien ist das anders geregelt. Bei uns gibt es für viele Menschen keine feste staatliche Rente, vor allem nicht für Leute ohne Vertrag. Ältere Menschen leben oft bei ihren Kindern, und die Familie sorgt für sie. Wer eine Firma oder ein Geschäft hat, arbeitet meistens weiter, solange es geht. Ein festes Alter zum Aufhören kennen viele gar nicht.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Ältere geben Erfahrung weiter, und Firmen finden schwer Ersatz. Wer gern arbeitet, bleibt aktiv und trifft Menschen. Ein Nachteil ist: Nicht jeder kann das. Auf dem Bau oder in der Pflege ist die Arbeit körperlich sehr schwer. Für diese Menschen ist ein späterer Rentenbeginn ungerecht. Meiner Meinung nach sollte man länger arbeiten dürfen, aber nicht müssen.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist die Freiwilligkeit der wichtigste Punkt. Wer weiterarbeiten möchte, soll das dürfen. Wer nach vierzig harten Jahren aufhören will, soll das ohne Verlust können. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 257,
+          "sprechzeitSekunden": 171
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Der Unterschied zwischen Büro und Baustelle war ein sehr guter Punkt.",
+        "frage": "Ab welchem Alter möchten Sie selbst aufhören zu arbeiten?",
+        "antwort": "Ich stelle mir etwa 65 vor. Aber ich würde gern langsam aufhören, zum Beispiel erst drei Tage, dann zwei. Ein harter Schnitt von hundert auf null wäre nichts für mich."
+      },
+      "nummer": 23
+    },
+    {
+      "kurz": "Mieten oder kaufen",
+      "teil1": {
+        "situation": "Freunde von Ihnen ziehen in eine andere Wohnung um. Sie und Ihr Partner / Ihre Partnerin organisieren den Umzug mit Helfern.",
+        "punkte": [
+          "Wann soll der Umzug stattfinden?",
+          "Wie viele Helfer brauchen Sie?",
+          "Wie transportieren Sie die Möbel?",
+          "Wie versorgen Sie die Helfer?",
+          "Was muss vorher erledigt werden?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ein Samstag wäre gut, dann haben die meisten Zeit. Am besten früh um acht."
+          },
+          {
+            "wer": "B",
+            "text": "Acht Uhr ist gut, aber nicht früher. Sonst beschweren sich die Nachbarn."
+          },
+          {
+            "wer": "A",
+            "text": "Stimmt. Ich rechne mit sechs Helfern. Dann ist es in vier oder fünf Stunden geschafft."
+          },
+          {
+            "wer": "B",
+            "text": "Für die Möbel würde ich einen Transporter mieten. Zwei Fahrten sollten reichen."
+          },
+          {
+            "wer": "A",
+            "text": "Wir sollten Halteverbotsschilder beantragen. Sonst finden wir keinen Parkplatz vor der Tür."
+          },
+          {
+            "wer": "B",
+            "text": "Guter Hinweis, das muss man zwei Wochen vorher machen. Ich kümmere mich darum."
+          },
+          {
+            "wer": "A",
+            "text": "Zu essen gibt es mittags Pizza und genug Wasser. Am Abend laden sie alle zum Essen ein."
+          },
+          {
+            "wer": "B",
+            "text": "Vorher müssen noch Kartons besorgt und der Strom ummeldet werden. Machst du die Kartons?"
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Wohnen zur Miete besser als Kaufen?",
+        "kultur": {
+          "de": "Deutschland ist ein Land der Mieter. Nur etwa die Hälfte der Haushalte wohnt im Eigentum, in Städten deutlich weniger. In vielen anderen Ländern ist Kaufen normal, hier nicht. Das hat Gründe: Mieter sind gut geschützt. Der Vermieter kann nicht einfach kündigen, und Mieterhöhungen sind begrenzt. Viele Menschen wohnen zwanzig Jahre in derselben Wohnung. Beim Kaufen kommen zu dem Preis noch hohe Nebenkosten: Grunderwerbsteuer, Notar und oft Maklergebühr. Zusammen sind das schnell zehn Prozent. Banken verlangen außerdem viel Eigenkapital, oft zwanzig Prozent. Deshalb kaufen die meisten Menschen erst spät oder gar nicht. Wichtig ist auch der Unterschied zwischen Kaltmiete und Warmmiete.",
+          "en": "Germany is a nation of renters: only about half of households own their home, and far fewer in cities. This is not an accident. Tenants are strongly protected — a landlord cannot simply end a tenancy, and rent increases are capped — so staying twenty years in one flat is normal. Buying carries heavy extra costs on top of the price: transfer tax, notary, often an agent's fee, easily ten per cent together, and banks expect a large deposit, often twenty per cent. Hence most people buy late or never. Learn the difference between Kaltmiete (bare rent) and Warmmiete (rent including service charges)."
+        },
+        "wortschatz": [
+          {
+            "de": "die Miete / das Eigentum",
+            "en": "rent / ownership"
+          },
+          {
+            "de": "die Kaltmiete / Warmmiete",
+            "en": "rent without / with charges"
+          },
+          {
+            "de": "die Kaution",
+            "en": "deposit"
+          },
+          {
+            "de": "der Mieterschutz",
+            "en": "tenant protection"
+          },
+          {
+            "de": "das Eigenkapital",
+            "en": "own capital, deposit"
+          },
+          {
+            "de": "der Kredit, -e",
+            "en": "loan"
+          },
+          {
+            "de": "die Nebenkosten",
+            "en": "service charges"
+          },
+          {
+            "de": "kündigen",
+            "en": "to terminate (a contract)"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Ist Wohnen zur Miete besser als Kaufen? Deutschland ist ein Land der Mieter. Nur etwa die Hälfte der Haushalte wohnt im Eigentum. Ich möchte erklären, warum das so ist.",
+          "Ich erzähle von meiner eigenen Situation. Ich wohne seit drei Jahren zur Miete. Am Anfang wollte ich schnell kaufen, weil ich das aus meiner Familie so kenne. Dann habe ich mit einer Bank gesprochen. Ich brauchte zwanzig Prozent Eigenkapital, und dazu kamen noch Steuer und Notar. Das war viel mehr, als ich gedacht hatte. Deshalb miete ich weiter und spare.",
+          "In meinem Heimatland Indien ist ein eigenes Haus ein sehr wichtiges Ziel. Viele Familien sparen jahrelang dafür oder bauen selbst. Ein Haus gibt Sicherheit im Alter, weil die staatliche Rente oft klein ist. Mieten sehen viele nur als Übergang. In Deutschland ist Mieten dagegen eine ganz normale Dauerlösung.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil der Miete ist: Man ist flexibel und kann für einen neuen Job leicht umziehen. Reparaturen zahlt der Vermieter. Ein Vorteil vom Kaufen ist: Im Alter zahlt man keine Miete mehr, und man kann alles selbst gestalten. Ein Nachteil vom Kaufen sind die hohen Kosten am Anfang und der lange Kredit. Meiner Meinung nach kommt es auf das Leben an: Wer oft umzieht, sollte mieten.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist der gute Mieterschutz in Deutschland ein echter Vorteil. Er macht das Mieten zu einer sicheren Lösung und nicht nur zu einer Notlösung. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 254,
+          "sprechzeitSekunden": 169
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Ihre Rechnung mit dem Eigenkapital war sehr anschaulich. Das unterschätzen viele.",
+        "frage": "Würden Sie in Deutschland eine Wohnung kaufen wollen?",
+        "antwort": "Vielleicht später einmal, wenn ich sicher bin, dass ich in dieser Stadt bleibe. Im Moment ist mir die Freiheit wichtiger. Ein Kredit über dreißig Jahre ist eine große Entscheidung."
+      },
+      "nummer": 24
+    },
+    {
+      "kurz": "Arzt und Videosprechstunde",
+      "teil1": {
+        "situation": "Ein Kollege liegt seit zwei Wochen im Krankenhaus. Sie und Ihr Partner / Ihre Partnerin möchten ihn im Namen der Abteilung besuchen.",
+        "punkte": [
+          "Wann besuchen Sie ihn?",
+          "Wer geht mit?",
+          "Was bringen Sie mit?",
+          "Wie helfen Sie ihm nach der Entlassung?",
+          "Wie informieren Sie die anderen Kollegen?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich würde am Mittwochnachmittag gehen. Die Besuchszeit ist dort von 15 bis 18 Uhr."
+          },
+          {
+            "wer": "B",
+            "text": "Gut. Wir sollten aber nicht zu viele sein. Zwei oder drei Personen reichen."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Ich frage vorher seine Frau, ob er überhaupt Besuch möchte."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr wichtig. Als Mitbringsel würde ich keine Blumen nehmen, die sind auf manchen Stationen verboten."
+          },
+          {
+            "wer": "A",
+            "text": "Dann lieber Obst und eine Karte von allen Kollegen. Und vielleicht ein Buch."
+          },
+          {
+            "wer": "B",
+            "text": "Nach der Entlassung kann er sicher Hilfe beim Einkaufen brauchen. Wir könnten einen Plan machen."
+          },
+          {
+            "wer": "A",
+            "text": "Ja, jeder übernimmt eine Woche. Ich schreibe eine Liste ins Büro."
+          },
+          {
+            "wer": "B",
+            "text": "Die Kollegen informiere ich in der Teamsitzung, aber nur das Nötigste. Krankheit ist privat."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollten Ärzte mehr Videosprechstunden anbieten?",
+        "kultur": {
+          "de": "In Deutschland sind fast alle Menschen krankenversichert. Etwa neunzig Prozent sind gesetzlich versichert, der Rest privat. Man geht zuerst zum Hausarzt. Für einen Facharzt, etwa beim Auge oder bei der Haut, wartet man oft Wochen oder Monate auf einen Termin. Seit einigen Jahren gibt es Videosprechstunden, und die Krankenkassen bezahlen sie. Auch die Krankmeldung hat sich geändert: Der Arzt schickt sie heute elektronisch an die Krankenkasse, und der Arbeitgeber ruft sie dort ab. Wichtig ist noch der Unterschied zwischen Notaufnahme und Bereitschaftsdienst. Die Notaufnahme ist für echte Notfälle. Bei leichteren Problemen am Wochenende ruft man die Nummer 116117 an.",
+          "en": "Health insurance is effectively universal in Germany: around ninety per cent are in the statutory system, the rest private. You start with a Hausarzt (GP); for a specialist — eyes, skin — the wait for an appointment is often weeks or months, which is the practical driver behind video consultations, now covered by the insurers. Sick notes went digital too: the doctor files them electronically with your insurer and the employer retrieves them. Learn one distinction: the Notaufnahme is for genuine emergencies, while for something minor at the weekend you ring 116117, the on-call medical service."
+        },
+        "wortschatz": [
+          {
+            "de": "der Hausarzt, -ärzte",
+            "en": "general practitioner"
+          },
+          {
+            "de": "der Facharzt, -ärzte",
+            "en": "specialist"
+          },
+          {
+            "de": "die Krankenkasse, -n",
+            "en": "health insurer"
+          },
+          {
+            "de": "die Videosprechstunde",
+            "en": "video consultation"
+          },
+          {
+            "de": "der Termin, -e",
+            "en": "appointment"
+          },
+          {
+            "de": "die Krankmeldung",
+            "en": "sick note"
+          },
+          {
+            "de": "die Untersuchung, -en",
+            "en": "examination"
+          },
+          {
+            "de": "die Notaufnahme",
+            "en": "accident and emergency"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollten Ärzte mehr Videosprechstunden anbieten? In Deutschland wartet man auf einen Termin beim Facharzt oft sehr lange. Eine Sprechstunde per Video könnte helfen. Ich möchte zeigen, wo das gut funktioniert und wo nicht.",
+          "Ich erzähle von meiner eigenen Erfahrung. Im letzten Winter hatte ich eine starke Erkältung. Ich wollte eine Krankmeldung und habe eine Videosprechstunde gemacht. Nach zwanzig Minuten Wartezeit war ich dran. Der Arzt hat mir Fragen gestellt und dann die Krankmeldung elektronisch geschickt. Ich musste nicht mit Fieber in ein volles Wartezimmer fahren. Das fand ich sehr angenehm.",
+          "In meinem Heimatland Indien ist die Situation anders. Bei uns gibt es in den Städten viele Ärzte, und man bekommt oft am selben Tag einen Termin. Auf dem Land fehlen dagegen Ärzte, und die Wege sind weit. Deshalb sind Videosprechstunden dort schon länger verbreitet. Viele Menschen schicken sogar Fotos über das Handy an einen Arzt in der Stadt.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil ist: Man spart Zeit und Fahrt, und ansteckende Patienten bleiben zu Hause. Für Menschen auf dem Land oder ohne Auto ist das ein großer Gewinn. Ein Nachteil ist: Der Arzt kann nicht untersuchen und nichts abtasten. Manche Krankheiten erkennt man nur persönlich. Ältere Menschen haben außerdem oft Probleme mit der Technik. Meiner Meinung nach ist Video eine gute Ergänzung, aber kein Ersatz für den Besuch in der Praxis.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich gilt: Beim ersten Verdacht Video, bei ernsten Sachen persönlich. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 256,
+          "sprechzeitSekunden": 171
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für Ihre Präsentation. Der Punkt mit den weiten Wegen auf dem Land hat mich überzeugt.",
+        "frage": "Würden Sie einem Arzt per Video genauso vertrauen wie in der Praxis?",
+        "antwort": "Bei einer Erkältung ja, ohne Probleme. Bei Schmerzen, die ich nicht erklären kann, möchte ich lieber persönlich hin. Da ist mir wichtig, dass der Arzt mich wirklich untersucht."
+      },
+      "nummer": 25
+    },
+    {
+      "kurz": "Datenschutz",
+      "teil1": {
+        "situation": "Ihre Abteilung bekommt neue Handys und Laptops. Sie und Ihr Partner / Ihre Partnerin sollen eine kurze Einführung für die Kollegen vorbereiten.",
+        "punkte": [
+          "Wann und wie lange soll die Einführung dauern?",
+          "Welche Themen sind wichtig?",
+          "Wer erklärt was?",
+          "Welche Unterlagen bekommen die Kollegen?",
+          "Was machen Sie mit den alten Geräten?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage zwei Termine vor, jeweils eine Stunde. Dann muss nicht die ganze Abteilung gleichzeitig weg."
+          },
+          {
+            "wer": "B",
+            "text": "Gute Idee. Beim Inhalt sind Passwörter und die Verschlüsselung am wichtigsten."
+          },
+          {
+            "wer": "A",
+            "text": "Und wie man mit Kundendaten umgeht. Da gibt es klare Regeln."
+          },
+          {
+            "wer": "B",
+            "text": "Stimmt. Ich könnte die Technik erklären, wenn du den Teil zum Datenschutz übernimmst."
+          },
+          {
+            "wer": "A",
+            "text": "Mache ich gern. Als Unterlage würde ich eine kurze Karte mit den fünf wichtigsten Regeln verteilen."
+          },
+          {
+            "wer": "B",
+            "text": "Besser als ein langes Handbuch, das niemand liest. Und die alten Geräte?"
+          },
+          {
+            "wer": "A",
+            "text": "Die Festplatten müssen sicher gelöscht werden. Das macht die IT-Abteilung."
+          },
+          {
+            "wer": "B",
+            "text": "Danach könnte man sie spenden, zum Beispiel an eine Schule. Ich frage nach."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Ist Datenschutz wichtiger als Bequemlichkeit?",
+        "kultur": {
+          "de": "Datenschutz hat in Deutschland einen sehr hohen Stellenwert. Das hat historische Gründe: Im zwanzigsten Jahrhundert haben zwei Diktaturen Daten über Menschen gesammelt und gegen sie benutzt. Deshalb sind viele Menschen hier vorsichtig. Seit 2018 gilt in der ganzen EU die Datenschutz-Grundverordnung, kurz DSGVO. Sie sagt: Jeder darf wissen, welche Daten über ihn gespeichert sind, und darf sie löschen lassen. Firmen dürfen Daten nur mit Erlaubnis nutzen. Deshalb fragt jede Webseite nach Cookies. Auch im Alltag merkt man es: Fotos von anderen Menschen darf man nicht einfach veröffentlichen, und viele Leute zahlen lieber bar, damit niemand ihre Einkäufe sieht.",
+          "en": "Data protection carries unusual weight in Germany, and the reason is historical: two twentieth-century dictatorships collected information about people and used it against them, so caution here is inherited, not abstract. Since 2018 the EU-wide GDPR (DSGVO) has applied: you may ask what is stored about you and demand deletion, and companies need consent to use your data — which is why every website asks about cookies. It shows up in daily life too: you may not simply publish photographs of other people, and one reason many still pay cash is that nobody then has a record of what they bought."
+        },
+        "wortschatz": [
+          {
+            "de": "der Datenschutz",
+            "en": "data protection"
+          },
+          {
+            "de": "die DSGVO",
+            "en": "GDPR"
+          },
+          {
+            "de": "speichern / löschen",
+            "en": "to store / to delete"
+          },
+          {
+            "de": "die Einwilligung",
+            "en": "consent"
+          },
+          {
+            "de": "die Privatsphäre",
+            "en": "privacy"
+          },
+          {
+            "de": "das Passwort, -wörter",
+            "en": "password"
+          },
+          {
+            "de": "missbrauchen",
+            "en": "to misuse"
+          },
+          {
+            "de": "die Bequemlichkeit",
+            "en": "convenience"
+          }
+        ],
+        "musterloesung": [
+          "Mein Thema heute ist die Frage: Ist Datenschutz wichtiger als Bequemlichkeit? In Deutschland ist Datenschutz ein sehr großes Thema. In vielen anderen Ländern spricht man weniger darüber. Ich möchte erklären, warum das hier so ist.",
+          "Ich fange mit einer eigenen Erfahrung an. In meiner Firma wollte ich für ein Team-Foto ein Bild ins Intranet stellen. Eine Kollegin hat gesagt: Bitte erst alle fragen. Ich war überrascht, denn bei uns macht man das einfach. Sie hat mir erklärt, dass jeder selbst über sein Bild entscheidet. Heute frage ich immer vorher, und das finde ich richtig.",
+          "In meinem Heimatland Indien geht man lockerer damit um. Fotos von Festen und Familien landen sehr schnell in Gruppen und in sozialen Netzwerken. Auch beim Einkaufen mit dem Handy denkt kaum jemand darüber nach, welche Daten dabei entstehen. Gleichzeitig gibt es inzwischen auch bei uns Diskussionen über den Schutz persönlicher Daten.",
+          "Nun zu den Vor- und Nachteilen. Ein Vorteil von strengem Datenschutz ist: Man behält die Kontrolle über die eigenen Informationen. Firmen können nicht alles über uns wissen und damit Geld verdienen. Ein Nachteil ist: Vieles wird langsamer und komplizierter. Man muss ständig Formulare unterschreiben und Cookies wegklicken. Manche digitalen Dienste kommen später zu uns als anderswo. Meiner Meinung nach ist der Schutz wichtiger, aber die Umsetzung muss einfacher werden.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich gilt: Bequemlichkeit ist schön, aber verlorene Daten bekommt man nie zurück. Ein Passwort kann man ändern, seine Krankengeschichte nicht. Deshalb nehme ich lieber einen Klick mehr in Kauf. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 256,
+          "sprechzeitSekunden": 171
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Vielen Dank. Das Beispiel mit dem Team-Foto war sehr passend. Genau da merkt man den Unterschied.",
+        "frage": "Lesen Sie eigentlich die Datenschutzerklärungen, bevor Sie zustimmen?",
+        "antwort": "Ehrlich gesagt fast nie, sie sind viel zu lang. Ich schaue nur, ob ich einzelne Dinge ablehnen kann. Ich fände es besser, wenn dort drei kurze Sätze in einfacher Sprache stünden."
+      },
+      "nummer": 26
+    },
+    {
+      "kurz": "Weniger Fleisch essen",
+      "teil1": {
+        "situation": "Ihr Verein macht ein Sommerfest mit gemeinsamem Essen. Sie und Ihr Partner / Ihre Partnerin planen das Essen für sechzig Personen.",
+        "punkte": [
+          "Was soll es zu essen geben?",
+          "Wie berücksichtigen Sie verschiedene Essgewohnheiten?",
+          "Wer kocht oder wer liefert?",
+          "Wie viel darf es kosten?",
+          "Wie vermeiden Sie Reste?"
+        ],
+        "musterdialog": [
+          {
+            "wer": "A",
+            "text": "Ich schlage ein Büfett vor. Dann kann sich jeder nehmen, was er möchte."
+          },
+          {
+            "wer": "B",
+            "text": "Sehr gut. Wichtig ist, dass es genug ohne Fleisch gibt. Nicht nur Beilagen."
+          },
+          {
+            "wer": "A",
+            "text": "Einverstanden. Zwei warme vegetarische Gerichte und dazu Salate."
+          },
+          {
+            "wer": "B",
+            "text": "Und ein Schild an jedem Topf mit den Zutaten. Wegen Allergien und wegen Schwein."
+          },
+          {
+            "wer": "A",
+            "text": "Guter Punkt. Kochen wir selbst oder bestellen wir?"
+          },
+          {
+            "wer": "B",
+            "text": "Bei sechzig Personen würde ich bestellen. Selbst kochen ist zu viel Arbeit."
+          },
+          {
+            "wer": "A",
+            "text": "Beim Preis denke ich an zwölf Euro pro Person. Der Verein zahlt die Hälfte."
+          },
+          {
+            "wer": "B",
+            "text": "Gegen Reste sammeln wir vorher Anmeldungen. Und was übrig bleibt, darf jeder mitnehmen."
+          },
+          {
+            "wer": "A",
+            "text": "Dann steht der Plan. Ich fasse noch einmal zusammen, damit wir nichts vergessen."
+          }
+        ]
+      },
+      "teil2": {
+        "titel": "Sollte man weniger Fleisch essen?",
+        "kultur": {
+          "de": "Deutschland gilt als Land der Wurst, aber das ändert sich. Der Fleischkonsum sinkt seit Jahren. Heute isst jede Person im Schnitt etwa 52 Kilogramm im Jahr, deutlich weniger als vor zwanzig Jahren. Etwa jeder Zehnte lebt vegetarisch, viele weitere nennen sich Flexitarier: Sie essen Fleisch, aber selten und lieber in guter Qualität. In jedem Supermarkt gibt es große Regale mit Ersatzprodukten. In Kantinen und bei Festen ist mindestens ein vegetarisches Gericht heute selbstverständlich. Wichtig ist auch die Tierhaltungskennzeichnung auf der Verpackung: Sie zeigt in Stufen, wie viel Platz das Tier hatte. Diskutiert wird, ob der niedrige Fleischpreis die wahren Kosten für Umwelt und Tiere zeigt.",
+          "en": "Germany's reputation for sausage is real but dated: meat consumption has fallen for years, to around 52 kg per person annually, well below twenty years ago. Roughly one person in ten is vegetarian, and many more describe themselves as Flexitarier — eating meat rarely and choosing better quality. Supermarkets carry large ranges of substitutes, and at a canteen or a club party at least one meat-free dish is now taken for granted. Packaging carries a Tierhaltungskennzeichnung, a tiered label showing how much space the animal had. The live debate is whether cheap meat reflects its real environmental cost."
+        },
+        "wortschatz": [
+          {
+            "de": "vegetarisch / vegan",
+            "en": "vegetarian / vegan"
+          },
+          {
+            "de": "der Fleischkonsum",
+            "en": "meat consumption"
+          },
+          {
+            "de": "die Tierhaltung",
+            "en": "animal husbandry"
+          },
+          {
+            "de": "der Ersatz",
+            "en": "substitute"
+          },
+          {
+            "de": "die Umwelt",
+            "en": "environment"
+          },
+          {
+            "de": "verzichten auf",
+            "en": "to do without"
+          },
+          {
+            "de": "die Gewohnheit, -en",
+            "en": "habit"
+          },
+          {
+            "de": "die Kennzeichnung",
+            "en": "labelling"
+          }
+        ],
+        "musterloesung": [
+          "In meiner Präsentation geht es um die Frage: Sollte man weniger Fleisch essen? Deutschland gilt als Land der Wurst. Trotzdem sinkt der Fleischkonsum seit Jahren. Ich möchte zeigen, warum das so ist und was ich davon halte.",
+          "Ich erzähle von meiner eigenen Erfahrung. Vor zwei Jahren habe ich angefangen, an drei Tagen in der Woche kein Fleisch zu essen. Am Anfang war das schwierig, weil mir Ideen fehlten. Dann habe ich Rezepte von Kollegen bekommen. Heute merke ich den Unterschied kaum noch. Mein Einkauf ist außerdem günstiger geworden, obwohl ich bessere Qualität kaufe.",
+          "In meinem Heimatland Indien ist vegetarisches Essen völlig normal. Sehr viele Menschen essen aus religiösen oder familiären Gründen kein Fleisch. In jedem Restaurant gibt es eine große Auswahl, und niemand findet das besonders. Als ich nach Deutschland kam, war ich überrascht, wie oft Fleisch hier im Mittelpunkt eines Gerichts steht. Inzwischen hat sich das aber deutlich verändert.",
+          "Kommen wir zu den Vor- und Nachteilen. Ein Vorteil von weniger Fleisch ist: Es ist besser für die Umwelt, weil die Tierhaltung viel Wasser und Fläche braucht. Auch die Gesundheit profitiert. Ein Nachteil ist: Für manche Menschen gehört Fleisch zur Tradition und zum Fest. Und Ersatzprodukte sind oft teuer und stark verarbeitet. Meiner Meinung nach muss niemand ganz verzichten. Weniger, dafür besser, ist der bessere Weg.",
+          "Damit komme ich zum Schluss meiner Präsentation. Für mich ist wichtig, dass jeder frei entscheidet, aber die Auswahl überall da ist. Vielen Dank für Ihre Aufmerksamkeit."
+        ],
+        "umfang": {
+          "woerter": 242,
+          "sprechzeitSekunden": 161
+        }
+      },
+      "teil3": {
+        "rueckmeldung": "Danke für den Vortrag. Interessant war, dass Ihr Einkauf günstiger geworden ist. Das erwartet man nicht.",
+        "frage": "Sollte Fleisch teurer werden, damit weniger gegessen wird?",
+        "antwort": "Das ist schwierig. Ein höherer Preis würde vor allem Familien mit wenig Geld treffen. Ich fände es besser, wenn gutes Gemüse günstiger würde. Dann entscheidet man sich freiwillig anders."
+      },
+      "nummer": 27
     }
   ]
 }
