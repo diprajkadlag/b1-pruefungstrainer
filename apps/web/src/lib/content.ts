@@ -51,6 +51,23 @@ export const PDF_BESCHREIBUNG: Record<PdfName, string> = {
   loesungen: 'Lösungen, Hörtexte, Musterantworten, Glossar und Grammatik.',
 };
 
+/**
+ * Printables that belong to a level rather than to one paper: the cheat sheet
+ * and the speaking trainer. Both are books in their own right, which is why
+ * they sit beside the papers rather than inside one.
+ */
+export type StufenPdfName = 'spickzettel' | 'sprechtraining';
+
+export const STUFEN_PDF_TITEL: Record<StufenPdfName, string> = {
+  spickzettel: 'Spickzettel',
+  sprechtraining: 'Sprechtraining',
+};
+
+export const STUFEN_PDF_BESCHREIBUNG: Record<StufenPdfName, string> = {
+  spickzettel: 'Strategie, Redemittel, Grammatik und Grundwortschatz — zum Nachschlagen.',
+  sprechtraining: '50 Sprechaufgaben mit deutschem Hintergrundwissen und Musterlösungen.',
+};
+
 /** Where a release download lives, for when the PDFs were not built locally. */
 export const RELEASE_URL =
   'https://github.com/diprajkadlag/german-exam-trainer/releases/latest';
@@ -69,8 +86,10 @@ export const registryLaden = (): Promise<{
   pruefungen: RegistryEintrag[];
   /** Levels that actually ship a cheat sheet; the others hide the button. */
   lernhilfeStufen?: Stufe[];
-  /** Levels that ship a speaking trainer. Only B1 has one so far. */
+  /** Levels that ship a speaking trainer. */
   sprechenStufen?: Stufe[];
+  /** Which level-wide PDFs were built, per level. Empty without LaTeX. */
+  stufenPdfs?: Partial<Record<Stufe, StufenPdfName[]>>;
 }> => holen(`${BASIS}/index.json`);
 
 export const lernhilfeLaden = (stufe: Stufe): Promise<Lernhilfe> =>
@@ -95,6 +114,9 @@ export const audioUrl = (id: string, datei: string): string =>
 
 export const pdfUrl = (id: string, name: PdfName): string =>
   `${BASIS}/${id}/pdf/${name}.pdf`;
+
+export const stufenPdfUrl = (stufe: Stufe, name: StufenPdfName): string =>
+  `${BASIS}/pdf/${name}-${stufe.toLowerCase()}.pdf`;
 
 /**
  * Pull an exam's audio into the service worker cache so the module can be sat

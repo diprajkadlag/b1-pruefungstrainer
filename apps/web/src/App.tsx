@@ -17,7 +17,6 @@ import {
   type PdfName,
 } from './lib/content';
 import { laden, neuerVersuch, speichern, type GespeicherterVersuch } from './lib/db';
-import { abgabeSenden } from './lib/server';
 import { Timer, useCountdown } from './components/Timer';
 import { Start, type ModulWahl } from './screens/Start';
 import { Lesen } from './screens/Lesen';
@@ -41,8 +40,9 @@ type Phase =
 /**
  * How long the current module runs, taken from the paper itself rather than a
  * table: Schreiben is 60 minutes at B1 and 75 at B2, and the file that is open
- * is the only thing that knows which. Sprechen has no single countdown — its
- * parts are timed by the recorder.
+ * is the only thing that knows which. Sprechen has no countdown: you work
+ * through its parts aloud at your own pace and compare against the model
+ * answers afterwards.
  */
 function modulDauer(pruefung: OeffentlichePruefung, modul: ModulWahl): number | null {
   switch (modul) {
@@ -74,7 +74,6 @@ export default function App() {
   const [deadline, setDeadline] = useState<number | null>(null);
   const [abgelaufen, setAbgelaufen] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
-  const [serverHinweis, setServerHinweis] = useState<string | null>(null);
   const [lernhilfe, setLernhilfe] = useState<Lernhilfe | null>(null);
   const [sprechen, setSprechen] = useState<SprechtrainingDaten | null>(null);
   // Which printables exist for the current paper. Kept here rather than in the
@@ -93,23 +92,12 @@ export default function App() {
     timer.current = window.setTimeout(() => void speichern(v), 800);
   }, []);
 
-  const abgeben = useCallback(async () => {
+  const auswerten = useCallback(async () => {
     if (!versuch || !pruefung) return;
     window.clearTimeout(timer.current);
     const fertig = { ...versuch, abgegeben: new Date().toISOString() };
     await speichern(fertig);
     setVersuch(fertig);
-
-    // If a local server is hosting the app, hand the submission over so the
-    // examiner finds it on disk. On GitHub Pages this simply does nothing.
-    const gesendet = await abgabeSenden(fertig);
-    if (gesendet) {
-      setServerHinweis(
-        gesendet.ok
-          ? 'Die Abgabe wurde an den Prüfer-Server übermittelt.'
-          : (gesendet.fehler ?? 'Die Abgabe konnte nicht übermittelt werden.'),
-      );
-    }
 
     try {
       // Only now is the key material fetched — never while the exam is open.
@@ -126,9 +114,9 @@ export default function App() {
       setModulIndex((i) => i + 1);
       setAbgelaufen(false);
     } else {
-      void abgeben();
+      void auswerten();
     }
-  }, [versuch, modulIndex, abgeben]);
+  }, [versuch, modulIndex, auswerten]);
 
   // Hard auto-submit: when the clock hits zero the module closes itself.
   const restMs = useCountdown(deadline, () => {
@@ -173,10 +161,10 @@ export default function App() {
     return p;
   }
 
-  async function starten(examId: string, name: string, module: ModulWahl[]) {
+  async function starten(examId: string, module: ModulWahl[]) {
     try {
       await inhalteLaden(examId);
-      const v = neuerVersuch(examId, name, module);
+      const v = neuerVersuch(examId, module);
       await speichern(v);
       setVersuch(v);
       setModulIndex(0);
@@ -379,17 +367,7 @@ export default function App() {
             )}
 
             {aktuellesModul === 'sprechen' && (
-              <Sprechen
-                pruefung={pruefung}
-                manifest={manifest}
-                aufnahmen={versuch.sprechen}
-                onAufnahme={(teil, blob) =>
-                  merken({
-                    ...versuch,
-                    sprechen: { ...versuch.sprechen, [teil]: blob },
-                  })
-                }
-              />
+              <Sprechen pruefung={pruefung} manifest={manifest} />
             )}
 
             <div className="abschluss">
@@ -399,20 +377,14 @@ export default function App() {
                 onClick={modulBeenden}
               >
                 {modulIndex + 1 < versuch.module.length
-                  ? `Modul abgeben und weiter zu ${TITEL[versuch.module[modulIndex + 1] as ModulWahl]}`
-                  : 'Prüfung abgeben und auswerten'}
+                  ? `Fertig — weiter zu ${TITEL[versuch.module[modulIndex + 1] as ModulWahl]}`
+                  : 'Fertig — Auswertung ansehen'}
               </button>
               <p className="notiz">
-                Nach der Abgabe können Sie in diesem Modul nichts mehr ändern.
+                Danach können Sie in diesem Modul nichts mehr ändern.
               </p>
             </div>
           </>
-        )}
-
-        {phase === 'ergebnis' && serverHinweis && (
-          <p className="notiz" role="status">
-            {serverHinweis}
-          </p>
         )}
 
         {phase === 'ergebnis' && pruefung && schluessel && versuch && (

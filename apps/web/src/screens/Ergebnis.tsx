@@ -8,7 +8,7 @@ import {
 } from '@pruefung/core';
 import type { GespeicherterVersuch } from '../lib/db';
 import { ankiTsv } from '../lib/anki';
-import { blobZuBytes, herunterladen, zipErstellen, type ZipEintrag } from '../lib/zip';
+import { herunterladen } from '../lib/datei';
 import type { PdfName } from '../lib/content';
 import { Druckbogen } from '../components/Druckbogen';
 
@@ -84,51 +84,6 @@ export function Ergebnis({
   ].filter((m): m is ModulErgebnis => m !== null);
 
   const schwach = useMemo(() => schwachstellen(gemacht), [gemacht]);
-
-  async function abgabeHerunterladen() {
-    const dateien: ZipEintrag[] = [];
-    const stamp = versuch.gestartet.slice(0, 16).replace(/[:T]/g, '-');
-    const ordner = `${versuch.name || 'kandidat'}_${pruefung.meta.id}_${stamp}`;
-
-    for (const [nr, text] of Object.entries(versuch.schreiben)) {
-      if (text.trim())
-        dateien.push({ name: `${ordner}/schreiben_aufgabe${nr}.txt`, data: text });
-    }
-    for (const [nr, blob] of Object.entries(versuch.sprechen)) {
-      dateien.push({
-        name: `${ordner}/sprechen_teil${nr}.webm`,
-        data: await blobZuBytes(blob),
-      });
-    }
-
-    dateien.push({
-      name: `${ordner}/ergebnis.txt`,
-      data: [
-        `Kandidat:  ${versuch.name || '(ohne Namen)'}`,
-        `Prüfung:   ${pruefung.meta.titel}`,
-        `Begonnen:  ${new Date(versuch.gestartet).toLocaleString('de-DE')}`,
-        `Module:    ${versuch.module.join(', ')}`,
-        '',
-        ...gemacht.map((m) => {
-          const kopf = `${m.modul.padEnd(10)} ${m.richtig}/${m.gesamt} richtig  = ${m.punkte}/${m.maximum}`;
-          return m.bestanden === null
-            ? kopf
-            : `${kopf} (${m.note}) ${m.bestanden ? 'bestanden' : 'nicht bestanden'}`;
-        }),
-        '',
-        'Schreiben und Sprechen werden von einer Lehrkraft bewertet.',
-        ...(stufe === 'A2'
-          ? [
-              'A2 wird als eine Prüfung bewertet: 60 von 100 Punkten insgesamt,',
-              'davon mindestens 45 von 75 in Lesen, Hören und Schreiben zusammen',
-              'und mindestens 15 von 25 im Sprechen.',
-            ]
-          : []),
-      ].join('\n'),
-    });
-
-    herunterladen(await zipErstellen(dateien), `${ordner}.zip`);
-  }
 
   function ankiHerunterladen() {
     const tsv = ankiTsv(
@@ -247,13 +202,6 @@ export function Ergebnis({
           />
 
           <div className="aktionen">
-            <button
-              type="button"
-              className="knopf knopf--gross"
-              onClick={abgabeHerunterladen}
-            >
-              ⬇ Abgabe herunterladen (ZIP)
-            </button>
             <button type="button" className="knopf" onClick={ankiHerunterladen}>
               ⬇ Anki-Deck ({schluessel.glossar.length} Karten)
             </button>

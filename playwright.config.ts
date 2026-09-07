@@ -10,9 +10,6 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4173',
     trace: 'on-first-retry',
-    // The speaking module needs a microphone; grant it so the recorder can be
-    // exercised without a prompt blocking the run.
-    permissions: ['microphone'],
     locale: 'de-DE',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],

@@ -1,6 +1,16 @@
-/* Deliberately plain: an exam paper should not compete with itself for
-   attention. One accent colour, generous line length limits for German prose,
-   and controls large enough to hit on a phone. */
+/* Two registers in one stylesheet.
+
+   While a paper is open it stays quiet: an exam should not compete with itself
+   for attention, so the modules keep one accent, long measures for German
+   prose and controls big enough for a thumb.
+
+   Everything around the paper is a coursebook instead, and coursebooks teach
+   partly by colour. Each level owns a hue the way a Netzwerk or Menschen band
+   does, so B1 and B2 are told apart before a word is read; der/die/das keep
+   the blue, red and green that German classrooms have used for decades; and
+   the boxes are colour-coded by what they hold rather than decorated —
+   yellow remembers, blue explains, green is worked-through, red is the rule
+   you must not break. */
 
 :root {
   --rule: #2f3e4e;
@@ -14,6 +24,54 @@
   --bg: #ffffff;
   --radius: 8px;
   --breite: 46rem;
+
+  /* One band per level, in the order they are sat. */
+  --a1: #1f8a4c;
+  --a2: #1a6fa8;
+  --b1: #c2620a;
+  --b2: #6d3bbf;
+  --a1-weich: #e7f5ec;
+  --a2-weich: #e6f1f9;
+  --b1-weich: #fdf0e2;
+  --b2-weich: #f0eafb;
+
+  /* The colour of the level currently being studied. Set on <html> by the
+     start screen, so the header, the buttons and the cards all agree without
+     any of them being told which level is open. */
+  --stufe: var(--rule);
+  --stufe-weich: var(--soft);
+
+  /* Der, die, das — the one piece of colour a German learner already reads
+     fluently. Lifted out of the game so the whole app can speak it. */
+  --der: #1f5fa9;
+  --die: #b3253c;
+  --das: #1d7a4f;
+  --der-weich: #e8f0fa;
+  --die-weich: #fdecef;
+  --das-weich: #e6f5ed;
+
+  /* Coursebook boxes, by job. */
+  --merk: #b8860b;
+  --merk-weich: #fdf6e3;
+  --tipp: #1a6fa8;
+  --tipp-weich: #e9f2f9;
+}
+
+html[data-stufe='A1'] {
+  --stufe: var(--a1);
+  --stufe-weich: var(--a1-weich);
+}
+html[data-stufe='A2'] {
+  --stufe: var(--a2);
+  --stufe-weich: var(--a2-weich);
+}
+html[data-stufe='B1'] {
+  --stufe: var(--b1);
+  --stufe-weich: var(--b1-weich);
+}
+html[data-stufe='B2'] {
+  --stufe: var(--b2);
+  --stufe-weich: var(--b2-weich);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +85,22 @@
     --bad: #ef6b73;
     --text: #e6eaee;
     --bg: #12161b;
+
+    /* Lifted and desaturated: the printed hues go muddy on a dark ground. */
+    --a1: #52c07f;
+    --a2: #5aa8dd;
+    --b1: #e79a4a;
+    --b2: #a888ee;
+    --a1-weich: #12301f;
+    --a2-weich: #12283a;
+    --b1-weich: #33240f;
+    --b2-weich: #241a3a;
+    --stufe: var(--rule);
+    --stufe-weich: var(--soft);
+    --merk: #e0b64a;
+    --merk-weich: #2b2412;
+    --tipp: #5aa8dd;
+    --tipp-weich: #12283a;
   }
 }
 
@@ -548,9 +622,13 @@ audio {
   font-size: 1.02rem;
   padding: 0.8rem 1rem;
 }
+/* The main action wears the level's colour, so the page a learner works on
+   and the button that moves them forward belong to the same band. Before a
+   level is picked --stufe is still the neutral rule colour. */
 .knopf--primaer {
-  background: var(--rule);
-  color: var(--bg);
+  background: var(--stufe);
+  border-color: var(--stufe);
+  color: #fff;
 }
 .knopf--primaer:hover:not(:disabled) {
   filter: brightness(1.12);
@@ -2247,4 +2325,300 @@ button.pfad__halt:focus-visible {
   .gutschrift {
     opacity: 1;
   }
+}
+
+/* --- the way in: level, then screen or paper ---------------------------- */
+/* A coursebook opens on a contents page, not on chapter one. These are the
+   two questions that decide everything after them, so they get a page each
+   and nothing else competes for the tap. */
+
+.wahl {
+  margin: 2rem 0;
+}
+.wahl__frage {
+  margin: 0 0 0.2rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.wahl__karten {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  margin-top: 1.2rem;
+}
+.wahl__karten--zwei {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.wahlkarte {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.1rem 1rem 1rem;
+  border: 1px solid var(--edge);
+  /* The coloured spine is the whole point: four cards, four bands, and the
+     level is legible before the label is read. */
+  border-top: 5px solid var(--karte, var(--rule));
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+.wahlkarte:hover,
+.wahlkarte:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+  background: var(--karte-weich, var(--soft));
+}
+.wahlkarte__titel {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: var(--karte, var(--rule));
+}
+.wahl__karten--zwei .wahlkarte__titel {
+  font-size: 1.2rem;
+}
+.wahlkarte__text {
+  color: var(--mute);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.wahlkarte[data-stufe='A1'] {
+  --karte: var(--a1);
+  --karte-weich: var(--a1-weich);
+}
+.wahlkarte[data-stufe='A2'] {
+  --karte: var(--a2);
+  --karte-weich: var(--a2-weich);
+}
+.wahlkarte[data-stufe='B1'] {
+  --karte: var(--b1);
+  --karte-weich: var(--b1-weich);
+}
+.wahlkarte[data-stufe='B2'] {
+  --karte: var(--b2);
+  --karte-weich: var(--b2-weich);
+}
+
+/* --- where you are, and how to leave ------------------------------------ */
+.wegweiser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 1.4rem;
+}
+.wegweiser__chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--stufe);
+  border-radius: 999px;
+  background: var(--stufe-weich);
+  color: var(--stufe);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.wegweiser__chip:hover,
+.wegweiser__chip:focus-visible {
+  background: var(--stufe);
+  color: #fff;
+}
+.wegweiser__wechsel {
+  font-weight: 400;
+  font-size: 0.78rem;
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* --- the three study tools ---------------------------------------------- */
+.werkzeuge {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0 0 1.8rem;
+}
+.werkzeug {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border: 1px solid var(--edge);
+  border-left: 5px solid var(--stufe);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    transform 0.12s ease;
+}
+.werkzeug:hover,
+.werkzeug:focus-visible {
+  background: var(--stufe-weich);
+  transform: translateX(2px);
+}
+.werkzeug__zeichen {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.werkzeug__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.werkzeug__text strong {
+  font-size: 1.05rem;
+}
+
+/* --- on paper ------------------------------------------------------------ */
+.papier__kopf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.papier__gruppe {
+  margin: 0 0 0.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--stufe);
+  color: var(--stufe);
+}
+.papier__liste {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.papier__zeile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+.papier__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 12rem;
+  flex: 1 1 16rem;
+}
+.papier__knoepfe {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+/* The download is an anchor so the browser saves rather than navigates; it
+   still has to sit level with the button beside it. */
+.papier__knoepfe .knopf {
+  text-decoration: none;
+}
+.papier__leser {
+  margin-top: 0.5rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--soft);
+}
+.papier__leser object {
+  display: block;
+  width: 100%;
+  height: min(78vh, 46rem);
+  border: 0;
+}
+.papier__leser > p {
+  margin: 0;
+  padding: 1rem;
+}
+.papier__vollbild {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  border-top: 1px solid var(--edge);
+  font-size: 0.9rem;
+}
+.papier__loesung {
+  margin-top: 1rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px dashed var(--bad);
+  border-radius: var(--radius);
+  background: var(--die-weich);
+}
+.papier__loesung > .notiz {
+  margin: 0 0 0.2rem;
+}
+
+/* --- speaking is spoken, not recorded ----------------------------------- */
+.sprechhinweis {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border-left: 4px solid var(--merk);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--merk-weich);
+}
+
+/* --- coursebook typography ---------------------------------------------- */
+/* Bold names a thing worth remembering, italic quotes German being used. The
+   distinction is only useful if it is kept, so it is set once here. */
+.teil h2 {
+  color: var(--stufe);
+}
+.teil__anweisung em,
+.wahlkarte__text em,
+.notiz em {
+  font-style: italic;
+  color: var(--stufe);
+}
+
+/* On a phone an embedded PDF is either blank or a download prompt, so it is
+   not embedded at all there: the link that actually works takes its place. */
+.papier__mobil {
+  display: none;
+  margin: 0;
+  padding: 1rem;
+}
+@media (max-width: 48rem) {
+  .papier__leser object {
+    display: none;
+  }
+  .papier__mobil {
+    display: block;
+  }
+}
+
+/* Five papers with four sheets each is a shelf, not a page. Closed by default
+   so the level's own books stay visible without scrolling past everything. */
+.papier__pruefung > summary {
+  cursor: pointer;
+  padding: 0.6rem 0;
+  font-weight: 700;
+  color: var(--stufe);
+  border-bottom: 2px solid var(--stufe);
+}
+.papier__pruefung > summary::marker {
+  color: var(--stufe);
+}
+.papier__pruefung[open] > summary {
+  margin-bottom: 0.4rem;
+}
+.papier__pruefung + .papier__pruefung {
+  margin-top: 0.6rem;
 }

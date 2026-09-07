@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { STUFEN, type AudioManifest, type OeffentlichePruefung } from '@pruefung/core';
 import { audioUrl } from '../lib/content';
-import { Rekorder } from '../components/Rekorder';
 import { formatiereZeit, useCountdown } from '../components/Timer';
 
 /**
@@ -24,11 +23,18 @@ function gliederungLabel(punkt: string, index: number): [string, string] {
 interface Props {
   pruefung: OeffentlichePruefung;
   manifest: AudioManifest | null;
-  aufnahmen: Record<string, Blob>;
-  onAufnahme: (teil: number, blob: Blob) => void;
 }
 
-export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
+/**
+ * Speaking, spoken aloud.
+ *
+ * Nothing here records or is marked: no software can tell a candidate whether
+ * their pronunciation would pass, and pretending otherwise teaches a false
+ * confidence. So the screen does what an examiner's card does — sets the task,
+ * runs the preparation clock, plays the partner — and the model answers wait
+ * on the result page for the learner to judge themselves against.
+ */
+export function Sprechen({ pruefung, manifest }: Props) {
   const [vorbereitungBis, setVorbereitungBis] = useState<number | null>(null);
   const rest = useCountdown(vorbereitungBis, () => undefined);
   const [gewaehltesThema, setGewaehltesThema] = useState(0);
@@ -83,7 +89,6 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
 
       {pruefung.sprechen.teile.map((teil) => {
         const partner = manifest?.sprechen.filter((s) => s.teil === teil.nummer) ?? [];
-        const aufnahme = aufnahmen[String(teil.nummer)];
 
         return (
           <section className="teil" key={teil.nummer}>
@@ -164,8 +169,8 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
               <div className="partner">
                 <h3>Simulierter Partner</h3>
                 <p className="notiz">
-                  Sie legen die Prüfung allein ab. Spielen Sie den Beitrag ab und
-                  antworten Sie danach — die Aufnahme läuft weiter.
+                  Sie üben allein. Spielen Sie den Beitrag ab und antworten Sie danach
+                  laut, so wie Sie es in der Prüfung tun würden.
                 </p>
                 <ol className="partner__liste">
                   {partner.map((p) => (
@@ -179,11 +184,10 @@ export function Sprechen({ pruefung, manifest, aufnahmen, onAufnahme }: Props) {
               </div>
             )}
 
-            <Rekorder
-              maxSekunden={Math.round(teil.dauerMinuten * 60)}
-              vorhanden={aufnahme}
-              onFertig={(blob) => onAufnahme(teil.nummer, blob)}
-            />
+            <p className="sprechhinweis">
+              <strong>Sprechen Sie diesen Teil laut</strong> — etwa {teil.dauerMinuten}{' '}
+              Minuten. Die Musterantwort steht danach in der Auswertung.
+            </p>
           </section>
         );
       })}

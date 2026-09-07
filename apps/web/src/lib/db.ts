@@ -1,9 +1,11 @@
 /**
  * Local persistence for an attempt.
  *
- * IndexedDB rather than localStorage for one reason: speaking recordings are
- * Blobs of several megabytes, and localStorage only stores strings and caps
- * out around 5 MB. IndexedDB stores Blobs natively.
+ * IndexedDB rather than localStorage because a written module can run to a few
+ * thousand characters per task and localStorage caps out around 5 MB across
+ * the whole origin. The store keeps answers and written text, nothing else:
+ * there is no name, no recording and no submission, so an attempt identifies
+ * a paper and never a person.
  *
  * Nothing here ever leaves the device. See docs/PRIVACY.md.
  */
@@ -53,36 +55,29 @@ function run<T>(
 export interface GespeicherterVersuch {
   id: string;
   examId: string;
-  name: string;
   gestartet: string;
   abgegeben?: string;
   module: string[];
   antworten: { lesen: Record<string, string>; hoeren: Record<string, string> };
   schreiben: Record<string, string>;
-  sprechen: Record<string, Blob>;
   /** Listening parts already played. A part may never be replayed. */
   gehoerteTeile: number[];
   ergebnis?: unknown;
 }
 
-export function neuerVersuch(
-  examId: string,
-  name: string,
-  module: string[],
-): GespeicherterVersuch {
+export function neuerVersuch(examId: string, module: string[]): GespeicherterVersuch {
   return {
-    // crypto.randomUUID needs a secure context; the app already requires one
-    // for the microphone, but fall back so the written modules still work.
+    // crypto.randomUUID needs a secure context, which a page served over plain
+    // http on a LAN address is not. Fall back rather than fail: practising is
+    // not worth breaking over an id.
     id:
       globalThis.crypto?.randomUUID?.() ??
       `v-${Date.now()}-${Math.random().toString(36).slice(2)}`,
     examId,
-    name,
     gestartet: new Date().toISOString(),
     module,
     antworten: { lesen: {}, hoeren: {} },
     schreiben: {},
-    sprechen: {},
     gehoerteTeile: [],
   };
 }

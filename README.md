@@ -1,6 +1,6 @@
 # GermanExamTrainer
 
-**Free, open-source practice examinations for German A1, A2, B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking, a speaking recorder, and a post-exam glossary you can export to Anki — plus a printable cheat sheet of strategy, Redemittel, grammar and core vocabulary.
+**Free, open-source practice examinations for German A1, A2, B1 and B2 certificate exams** — full mock papers with generated listening audio, exam-accurate timers, automatic marking of reading and listening, model answers for writing and speaking, and a post-exam glossary you can export to Anki — plus printable cheat sheets and speaking trainers for working away from the screen.
 
 [![CI](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/ci.yml)
 [![Content](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml/badge.svg)](https://github.com/diprajkadlag/german-exam-trainer/actions/workflows/content-validate.yml)
@@ -16,16 +16,18 @@
 
 |  |  |
 |---|---|
-| ![Start screen](docs/screenshots/01-start.png) | ![Reading module](docs/screenshots/02-lesen.png) |
-| Pick a paper and the modules to sit | The reading module, with the timer running |
-| ![Result](docs/screenshots/03-ergebnis.png) | ![Solutions](docs/screenshots/04-loesungen.png) |
-| Marked instantly, with what to work on next | Every item with its evidence and rationale |
-| ![Glossary](docs/screenshots/05-glossar.png) | ![Grammar](docs/screenshots/06-grammatik.png) |
-| Vocabulary with all word forms → Anki | The grammar the paper actually tested |
-| ![Cheat sheet](docs/screenshots/07-spickzettel.png) | ![Core vocabulary](docs/screenshots/08-wortschatz.png) |
-| Redemittel for every part of Sprechen and Schreiben | The core vocabulary, searchable, with every verb form |
-| ![Sprachschatz](docs/screenshots/09-spiel.png) | ![Article colours](docs/screenshots/10-spiel-artikel.png) |
-| **Sprachschatz** — the same material, asked instead of read | der is blue, die is red, das is green — everywhere, every time |
+| ![Level chooser](docs/screenshots/00-niveau.png) | ![Start screen](docs/screenshots/01-start.png) |
+| Two questions and nothing else: which level, then screen or paper | Everything that answer makes usable, in the level's own colour |
+| ![Reading module](docs/screenshots/02-lesen.png) | ![Result](docs/screenshots/03-ergebnis.png) |
+| The reading module, with the timer running | Marked instantly, with what to work on next |
+| ![Solutions](docs/screenshots/04-loesungen.png) | ![Glossary](docs/screenshots/05-glossar.png) |
+| Every item with its evidence and rationale | Vocabulary with all word forms → Anki |
+| ![Grammar](docs/screenshots/06-grammatik.png) | ![Cheat sheet](docs/screenshots/07-spickzettel.png) |
+| The grammar the paper actually tested | Redemittel for every part of Sprechen and Schreiben |
+| ![Core vocabulary](docs/screenshots/08-wortschatz.png) | ![Sprachschatz](docs/screenshots/09-spiel.png) |
+| The core vocabulary, searchable, with every verb form | **Sprachschatz** — the same material, asked instead of read |
+| ![Article colours](docs/screenshots/10-spiel-artikel.png) | |
+| der is blue, die is red, das is green — everywhere, every time | |
 
 ---
 
@@ -41,7 +43,7 @@
 
 **Turns the result into a lesson.** Every item is shown with the sentence that proves the answer, why the key is right in German, and why each distractor is wrong in English. Plus full listening transcripts, annotated model answers at two grades, the grammar the paper tested with exercises, and a vocabulary list carrying article and plural for every noun and all principal parts for every verb — exportable to Anki in one click.
 
-**Handles writing and speaking properly.** Those two are marked by a human, so the app records the speaking parts in the browser, keeps everything on your device, and packages the writing plus the recordings into a ZIP you hand to a teacher. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer.
+**Handles writing and speaking honestly.** No software can tell you whether your German would pass, so the app does not pretend to. Those two modules set the task the way an examiner's card does, then give you a model answer to measure yourself against. Nothing is recorded and nothing is submitted. A candidate with no partner still gets a realistic Sprechen: a synthesised partner plays its turns and leaves gaps for you to answer aloud.
 
 **Gives you something to revise from.** One cheat sheet per level — in the app and as a PDF — carries strategy for all four modules, Redemittel weighted towards Sprechen and Schreiben, grammar as tables, and the core vocabulary with every verb form. A2: 83 Redemittel, 10 grammar tables covering the whole of what the level tests — Perfekt, word order, separable verbs, the two cases, Konjunktiv for politeness — plus 103 verbs with all principal parts and 100 nouns with article and plural. B1: 185 Redemittel, 18 grammar topics, 123 verbs and 101 nouns. B2: 105 Redemittel for the talk, the debate and the two written tasks, 16 grammar topics aimed at what the level actually tests — concessives, extended participles, Konjunktiv I, passive substitutes — plus 112 verbs and 106 nouns of the abstract vocabulary B2 texts are built from. Searchable in the app, printable for the train.
 
@@ -105,11 +107,9 @@ minutes at a B2 pace — in the app and as its own PDF on the release.
 
 ### For learners — nothing to install
 
-Open **[the hosted app](https://diprajkadlag.github.io/german-exam-trainer/)** and press *Prüfung starten*. Your browser will offer to **install** it; accept, and it lands in your Start menu or home screen and works with no connection.
+Open **[the hosted app](https://diprajkadlag.github.io/german-exam-trainer/)**. It asks two things — which level, and whether you want to work at the screen or on paper — and then shows only what that answer makes usable. Your browser will offer to **install** it; accept, and it lands in your Start menu or home screen and works with no connection.
 
-Nothing you do is uploaded anywhere. See [docs/PRIVACY.md](docs/PRIVACY.md).
-
-> Microphone recording needs a secure context. The hosted app is HTTPS, so it works. If you self-host over plain `http://` on a LAN address, browsers will block the microphone — see below.
+It never asks for your name or your microphone, and nothing you do is uploaded anywhere. See [docs/PRIVACY.md](docs/PRIVACY.md).
 
 ### For developers — clone and run
 
@@ -136,34 +136,12 @@ npm run build --workspace=@pruefung/web
 npm run preview --workspace=@pruefung/web
 ```
 
-### For teachers — keep submissions on disk
-
-```bash
-git clone https://github.com/diprajkadlag/german-exam-trainer.git
-cd german-exam-trainer
-npm install
-npm run content:export      # prepare the exams for the app
-npm run serve               # http://localhost:8130
-```
-
-Your student sits the exam at `http://localhost:8130`; you mark at **`http://localhost:8130/pruefer`**, which shows the writing beside the official criteria and the recordings with inline players, and computes the overall result. Everything lands under `apps/server/submissions/`.
-
-For a phone or tablet on the same network, the microphone needs TLS:
-
-```bash
-npm run serve -- --https --lan
-```
-
-That generates a self-signed certificate; the browser warns once, then remembers. **Never put this server on the public internet** — it has no authentication.
-
 ### Other ways to run it
 
 | Route | Needs | Good for |
 |---|---|---|
 | [Hosted app](https://diprajkadlag.github.io/german-exam-trainer/) | nothing | most people |
 | `Start-Trainer.cmd` from a [release](../../releases) | nothing | Windows, offline, no terminal |
-| `npm run serve` | Node 20+ | teachers marking work |
-| `docker compose up` | Docker | classrooms |
 
 ---
 
@@ -241,8 +219,8 @@ build_pdf.py  generate_audio  export_web.py   validate.py
  4 PDFs      MP3 tracks   public + keyed     CI gate
                             halves
                                │
-                          apps/web (PWA)  ←→  apps/server (optional)
-                               └── @pruefung/core: scoring shared by both
+                          apps/web (PWA)
+                               └── @pruefung/core: scoring
 
 content/lernhilfe/*.json              ← the B1 cheat sheet, belonging to no paper
 content/lernhilfe/a1/*.json           ← the A1 one
