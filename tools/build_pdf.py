@@ -564,8 +564,12 @@ def build_sprechtraining(keep_tex: bool, stufe: str = "B1") -> bool:
     ziel = SPRECHEN / "pdf"
     print(f"\nsprechtraining {stufe}")
     try:
-        pdf, n_pages = build_document("sprechtraining", daten, ziel, keep_tex)
-        print(f"    {'sprechtraining':22} {n_pages:3d} Seiten  "
+        # One template per level: B2 Sprechen is a different examination, not
+        # B1 with harder words. Two parts rather than three, a choice of two
+        # topics, and a debate where the partner argues back.
+        name = f"sprechtraining_{stufe.lower()}"
+        pdf, n_pages = build_document(name, daten, ziel, keep_tex)
+        print(f"    {name:22} {n_pages:3d} Seiten  "
               f"{pdf.stat().st_size / 1024:6.0f} kB")
         return True
     except Exception as exc:  # noqa: BLE001 - reported, not swallowed
@@ -633,7 +637,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         return 1
 
     if args.only == "sprechtraining":
-        return 0 if build_sprechtraining(args.keep_tex) else 1
+        return 0 if all(build_sprechtraining(args.keep_tex, s) for s in STUFEN) else 1
 
     if args.only == "spickzettel":
         ok = all(build_lernhilfe(args.keep_tex, s) for s in STUFEN)

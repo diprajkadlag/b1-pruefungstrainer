@@ -1,0 +1,197 @@
+% sprechtraining_b2.tex — the B2 speaking trainer.
+%
+% Not the B1 book with harder words. B2 Sprechen has two parts, not three: a
+% four-minute solo Vortrag where the candidate picks one of two offered topics,
+% then a five-minute Debatte where the partner actually argues back. The layout
+% follows that — in particular Teil A must print BOTH offered topics, because
+% choosing between them under time pressure is part of what is being practised.
+\documentclass[11pt,a4paper]{article}
+\usepackage{pruefung}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\geometry{top=2.2cm,bottom=2.0cm,left=2.0cm,right=2.0cm,headheight=22pt}
+
+\pruefungstitel{<< stufe >> Sprechtraining}
+\modulname{<< aufgaben | length >> Sprechaufgaben \textperiodcentered{} Kulturwissen \textperiodcentered{} Musterlösungen}
+\niveaustufe{<< stufe >>}
+
+\setlength{\parskip}{0.45em}
+\linespread{1.04}
+
+% --- furniture --------------------------------------------------------------
+\newcommand{\trainingteil}[2]{%
+  \clearpage
+  \begin{tcolorbox}[colback=pruefrule,colframe=pruefrule,boxrule=0pt,arc=2pt,
+                    left=10pt,right=10pt,top=7pt,bottom=7pt]
+    {\LARGE\bfseries\color{white}#1}\par\vspace{2pt}
+    {\small\color{pruefedge}#2}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}
+
+\newcommand{\aufgabenkopf}[2]{%
+  \needspace{7\baselineskip}
+  \vspace{0.7em}
+  \begin{tcolorbox}[colback=pruefsoft,colframe=pruefrule,boxrule=0pt,arc=1pt,
+                    leftrule=3pt,left=8pt,right=8pt,top=4pt,bottom=4pt]
+    {\bfseries\color{pruefrule}Aufgabe #1}\hfill{\small\color{pruefmute}#2}
+  \end{tcolorbox}
+  \vspace{0.15em}
+}
+
+\newcommand{\teilkopf}[2]{%
+  \needspace{4\baselineskip}
+  \vspace{0.45em}
+  {\bfseries\color{pruefmark}#1}~{\small\color{pruefmute}#2}\par
+  \vspace{0.05em}{\color{pruefedge}\hrule height 0.6pt}\vspace{0.3em}
+}
+
+% The two offered topics, boxed so the choice is visible as a choice.
+\newcommand{\wahlthema}[2]{%
+  \needspace{3\baselineskip}
+  \begin{tcolorbox}[colback=white,colframe=pruefedge,boxrule=0.6pt,arc=1pt,
+                    left=8pt,right=8pt,top=5pt,bottom=5pt,
+                    before skip=4pt,after skip=4pt]
+    {\small\bfseries\color{pruefmute}Thema #1}\par\vspace{1pt}
+    \textbf{#2}
+  \end{tcolorbox}
+}
+
+% The German-culture note. The whole reason this document exists: a candidate
+% who has never lived here cannot invent what a Betriebsrat does or how long a
+% Kündigungsfrist runs, and at B2 the topics assume exactly that knowledge.
+\newcommand{\kulturkasten}[2]{%
+  \begin{tcolorbox}[colback=pruefsoft,colframe=pruefmark,boxrule=0pt,arc=1pt,
+                    leftrule=2.5pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+                    before skip=6pt,after skip=7pt]
+    {\small\bfseries\color{pruefmark}So ist es in Deutschland}\par\vspace{2pt}
+    \small #1\par\vspace{4pt}
+    {\footnotesize\color{pruefmute}\textit{#2}}
+  \end{tcolorbox}
+}
+
+\newcommand{\dialogzeile}[2]{%
+  \par\vspace{1pt}\noindent
+  \makebox[1.5em][l]{\bfseries\color{pruefrule}#1}%
+  \begin{minipage}[t]{\dimexpr\linewidth-1.6em\relax}#2\end{minipage}\par
+}
+
+\newcommand{\vortragsblock}[2]{%
+  \par\vspace{0.35em}
+  {\small\bfseries\color{pruefrule}#1}\par\vspace{1pt}
+  #2\par
+}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  {\Huge\bfseries << titel | tex >>}\par\vspace{6pt}
+  {\large\color{pruefmute}<< untertitel | tex >>}\par\vspace{18pt}
+\end{center}
+
+\begin{tcolorbox}[colback=pruefsoft,colframe=pruefedge,boxrule=0.6pt,arc=2pt,
+                  left=12pt,right=12pt,top=10pt,bottom=10pt]
+  << hinweis | tex >>
+\end{tcolorbox}
+
+\vspace{10pt}
+\noindent\textbf{So läuft die mündliche B2-Prüfung ab} — zwei Teile, nicht drei wie bei B1:\par\vspace{3pt}
+\begin{tabularx}{\linewidth}{@{}l l l X@{}}
+  \toprule
+  \textbf{Teil} & \textbf{Zeit} & \textbf{Punkte} & \textbf{Aufgabe} \\
+  \midrule
+<% for t in teile %>
+  << t.nummer >>. << t.titel | tex >> & ca. << t.dauerMinuten >> Min. & << t.punkte >> & << t.anweisung | tex >> \\
+<% endfor %>
+  \midrule
+  Vorbereitung & << vorbereitungMinuten >> Min. & — & Für beide Teile zusammen, mit Notizen. Die Notizen dürfen Sie mitnehmen. \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{10pt}
+\noindent\textbf{Die Gliederung des Vortrags} — bei jedem Thema gleich, also lernen Sie sie einmal richtig:\par\vspace{2pt}
+\begin{enumerate}\itemsep2pt
+<% for g in gliederung %>
+  \item << g | tex >>
+<% endfor %>
+\end{enumerate}
+
+\vspace{6pt}
+\noindent{\small\color{pruefmute}In Teil 1 werden Ihnen \textbf{zwei} Themen vorgelegt. Sie wählen eines aus — die Wahl gehört zur Aufgabe und kostet Vorbereitungszeit, also entscheiden Sie schnell und bleiben Sie dann dabei.}
+
+% ---------------------------------------------------------------- Teil A
+\trainingteil{Teil A \textemdash{} Die Aufgaben}{%
+  << aufgaben | length >> vollständige Sprechaufgaben. Arbeiten Sie wie in der
+  Prüfung: 15 Minuten vorbereiten, dann sprechen. Die Lösungen stehen hinten in
+  Teil B.}
+
+<% for a in aufgaben %>
+\aufgabenkopf{<< a.nummer >>}{<< a.kurz | tex >>}
+
+\teilkopf{Teil 1 — Einen Vortrag halten}{ca. 4 Minuten · wählen Sie ein Thema}
+<% for th in a.teil1.themen %>
+\wahlthema{<< loop.index >>}{<< th.titel | tex >>}
+<% endfor %>
+{\small\color{pruefmute}Gliedern Sie den Vortrag nach den vier Punkten von Seite 1. Ihre Gesprächspartnerin stellt Ihnen danach Fragen.}
+
+\teilkopf{Teil 2 — Eine Debatte führen}{ca. 5 Minuten}
+\textbf{<< a.teil2.frage | tex >>}
+\begin{enumerate}\itemsep1pt
+<% for p in a.teil2.punkte %>
+  \item << p | tex >>
+<% endfor %>
+\end{enumerate}
+
+<% endfor %>
+
+% ---------------------------------------------------------------- Teil B
+\trainingteil{Teil B \textemdash{} Kulturwissen und Musterlösungen}{%
+  Zu jedem Thema zuerst das Hintergrundwissen, dann der Wortschatz, dann die
+  Musterlösung. Lesen Sie das erst, nachdem Sie selbst gesprochen haben.}
+
+<% for a in aufgaben %>
+\aufgabenkopf{<< a.nummer >>}{<< a.kurz | tex >>}
+
+<% for th in a.teil1.themen %>
+\teilkopf{Teil 1 · Thema << loop.index >>}{<< th.titel | tex >>}
+
+\kulturkasten{<< th.kultur.de | tex >>}{<< th.kultur.en | tex >>}
+
+% `l` for the German term, not a paragraph column: two parbox columns in one
+% row put the term and its gloss on visibly different baselines. The builder
+% caps the lengths so nothing needs to wrap.
+{\renewcommand{\arraystretch}{1.3}%
+\begin{tabular}{@{}l@{\hspace{2em}}l@{}}
+<% for w in th.wortschatz %>
+  << w.de | tex >> & {\color{pruefmute}<< w.en | tex >>} \\
+<% endfor %>
+\end{tabular}}
+
+\par\vspace{0.5em}
+{\small\bfseries\color{pruefmark}Musterlösung}~{\small\color{pruefmute}<< th.umfang.woerter >> Wörter \textperiodcentered{} etwa << th.umfang.sprechzeitSekunden >> Sekunden gesprochen}
+<% for block in th.musterloesung %>
+\vortragsblock{<< gliederung[loop.index0].split(' — ')[0] | tex >>}{<< block | tex >>}
+<% endfor %>
+
+<% endfor %>
+
+\teilkopf{Teil 1 · Die Nachfragen}{was die Prüferin danach fragt}
+<% for f in a.teil1.fragen %>
+\dialogzeile{<< loop.index >>.}{\textit{<< f | tex >>}\par\vspace{2pt}<< a.teil1.antwortenAufFragen[loop.index0] | tex >>}
+<% endfor %>
+
+\teilkopf{Teil 2 · Die Debatte}{<< a.teil2.frage | tex >>}
+
+\kulturkasten{<< a.teil2.kultur.de | tex >>}{<< a.teil2.kultur.en | tex >>}
+
+\par\vspace{0.3em}
+{\small\bfseries\color{pruefmark}Musterdiskussion}~{\small\color{pruefmute}<< a.teil2.umfang.woerter >> Wörter zu zweit}
+<% for z in a.teil2.musterdialog %>
+\dialogzeile{<< z.wer >>:}{<< z.text | tex >>}
+<% endfor %>
+
+<% endfor %>
+
+\end{document}

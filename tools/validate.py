@@ -1405,26 +1405,53 @@ def load_exams(only: str | None) -> dict[str, dict[str, Any]]:
     return out
 
 
+def _wortschatz_pruefen(rep: Report, ort: str, eintraege: list, mindestens: int) -> None:
+    """The printed vocabulary table is two plain columns and cannot wrap."""
+    if len(eintraege) < mindestens:
+        rep.error(ort, f"too little topic vocabulary ({len(eintraege)} < {mindestens})")
+    for w in eintraege:
+        if len(w.get("de", "")) > 34 or len(w.get("en", "")) > 46:
+            rep.error(f"{ort}.wortschatz",
+                      f"entry too long for the printed table: {w.get('de')!r}")
+
+
+def _kultur_pruefen(rep: Report, ort: str, kultur: dict, de_min: int, en_min: int) -> None:
+    """The culture note is the reason the collection exists; a stub is a bug."""
+    for sprache, minimum in (("de", de_min), ("en", en_min)):
+        if len(kultur.get(sprache, "")) < minimum:
+            rep.error(f"{ort}.kultur",
+                      f"the {sprache} culture note is too short to explain the "
+                      f"German context a newcomer is missing")
+
+
 def check_sprechtraining(rep: Report, stufe: str = "B1") -> None:
-    """Validate the speaking trainer.
+    """Validate the speaking trainer for one level.
 
     Like the cheat sheet it has no schema of its own: it is one long document,
-    not a repeated form. But it drives a 116-page LaTeX build and an app screen,
-    and the failure modes are specific enough to be worth naming. The word
-    window is the interesting one — a model answer that does not fit the three
-    minutes it claims teaches the wrong pace, which is the whole point of
-    printing a time next to it.
+    not a repeated form. But it drives a LaTeX book and an app screen, and the
+    failure modes are specific enough to be worth naming. The word window is
+    the interesting one — a model answer that does not fit the time it claims
+    teaches the wrong pace, which is the whole point of printing a time by it.
+
+    B1 and B2 are checked separately because they are different examinations,
+    not the same one at two difficulties.
     """
     quelle = SPRECHEN / f"{stufe.lower()}.json"
     if not quelle.exists():
         return
 
     daten = json.loads(quelle.read_text(encoding="utf-8"))
-    for feld in ("titel", "untertitel", "stufe", "hinweis", "teile", "folien",
-                 "vorbereitungMinuten", "aufgaben"):
+    gemeinsam = ("titel", "untertitel", "stufe", "hinweis", "teile",
+                 "vorbereitungMinuten", "aufgaben")
+    eigen = ("folien",) if stufe == "B1" else ("gliederung",)
+    for feld in gemeinsam + eigen:
         if feld not in daten:
             rep.error("sprechtraining", f"missing top-level field {feld!r}")
     if rep.errors:
+        return
+
+    if stufe == "B2":
+        _check_sprechtraining_b2(rep, daten)
         return
 
     if len(daten["folien"]) != 5:
@@ -1494,6 +1521,94 @@ def check_sprechtraining(rep: Report, stufe: str = "B1") -> None:
     for sit, n in situationen.items():
         if n > 1:
             rep.error("sprechtraining", f"planning situation used {n} times: {sit[:50]!r}")
+
+
+def _check_sprechtraining_b2(rep: Report, daten: dict) -> None:
+    """B2's shape: two parts, a choice of two Vortrag topics, and a debate.
+
+    The differences from B1 that matter here: `themen` is a *pair* the candidate
+    chooses between, so both need a culture note and a model talk and they must
+    not be near-copies; the talk runs to four minutes rather than three, so the
+    word window sits higher; and Teil 2 is an argument rather than a feedback
+    turn, so the model dialogue has to alternate speakers and be long enough to
+    contain a real exchange.
+    """
+    if len(daten["gliederung"]) != 4:
+        rep.error("sprechtraining.gliederung",
+                  f"B2 Teil 1 has a four-point outline, found {len(daten['gliederung'])}")
+    if len(daten["teile"]) != 2:
+        rep.error("sprechtraining.teile",
+                  f"B2 Sprechen has two parts, found {len(daten['teile'])}")
+
+    themen: dict[str, int] = {}
+    debatten: dict[str, int] = {}
+
+    for a in daten["aufgaben"]:
+        nr = a.get("nummer", "?")
+        ort = f"sprechtraining[{nr}]"
+        t1, t2 = a.get("teil1", {}), a.get("teil2", {})
+
+        angebot = t1.get("themen", [])
+        if len(angebot) != 2:
+            rep.error(f"{ort}.teil1",
+                      f"Teil 1 offers the candidate two topics, found {len(angebot)}")
+        if len(t1.get("fragen", [])) != 3:
+            rep.error(f"{ort}.teil1", "three follow-up questions expected")
+        if len(t1.get("antwortenAufFragen", [])) != 3:
+            rep.error(f"{ort}.teil1", "three model answers to the follow-up questions expected")
+
+        for j, th in enumerate(angebot):
+            wo = f"{ort}.thema{j + 1}"
+            if not th.get("titel", "").endswith("?"):
+                rep.error(wo, "the Vortrag topic should be an arguable question")
+            themen[th.get("titel", "")] = themen.get(th.get("titel", ""), 0) + 1
+
+            bloecke = th.get("musterloesung", [])
+            if len(bloecke) != 4:
+                rep.error(wo, f"one block per outline point, found {len(bloecke)}")
+            woerter = sum(len(b.split()) for b in bloecke)
+            # 110 words a minute for a fluent B2 candidate delivering a prepared
+            # talk: this window is 3:38 to 4:33 against "ca. 4 Minuten".
+            if not 400 <= woerter <= 500:
+                rep.error(wo, f"talk is {woerter} words - outside the 400-500 that "
+                              f"fits 'ca. 4 Minuten'")
+            gemeldet = th.get("umfang", {}).get("woerter")
+            if gemeldet is not None and gemeldet != woerter:
+                rep.error(wo, f"printed word count {gemeldet} does not match "
+                              f"the text ({woerter})")
+            _kultur_pruefen(rep, wo, th.get("kultur", {}), 300, 250)
+            _wortschatz_pruefen(rep, wo, th.get("wortschatz", []), 8)
+
+        if len(angebot) == 2 and angebot[0].get("titel") == angebot[1].get("titel"):
+            rep.error(f"{ort}.teil1", "the two offered topics are identical")
+
+        frage = t2.get("frage", "")
+        if not frage.endswith("?"):
+            rep.error(f"{ort}.teil2", "the debate prompt should be a question")
+        debatten[frage] = debatten.get(frage, 0) + 1
+        if len(t2.get("punkte", [])) != 4:
+            rep.error(f"{ort}.teil2", "four discussion points expected")
+        _kultur_pruefen(rep, f"{ort}.teil2", t2.get("kultur", {}), 300, 250)
+
+        dialog = t2.get("musterdialog", [])
+        if not 10 <= len(dialog) <= 14:
+            rep.error(f"{ort}.teil2",
+                      f"the model debate has {len(dialog)} turns - outside 10-14")
+        rollen = [z.get("wer") for z in dialog]
+        if any(rollen[i] == rollen[i + 1] for i in range(len(rollen) - 1)):
+            rep.error(f"{ort}.teil2", "the model debate does not alternate A and B")
+        nd = sum(len(z.get("text", "").split()) for z in dialog)
+        if not 380 <= nd <= 560:
+            rep.error(f"{ort}.teil2",
+                      f"the model debate is {nd} words - outside the 380-560 that "
+                      f"fits 'ca. 5 Minuten' between two speakers")
+
+    for titel, n in themen.items():
+        if n > 1:
+            rep.error("sprechtraining", f"Vortrag topic used {n} times: {titel!r}")
+    for frage, n in debatten.items():
+        if n > 1:
+            rep.error("sprechtraining", f"debate question used {n} times: {frage!r}")
 
 
 def lernhilfe_ordner(stufe: str) -> Path:

@@ -7,6 +7,50 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [1.12.0] — 2026-09-07
+
+### Added
+
+- **Sprechtraining B2: fifty complete speaking tasks in the B2 format.** B2
+  Sprechen is a different examination from B1's, so this is not the B1 trainer
+  with the numbers changed. Each task is a four-minute *Vortrag* with a choice
+  of two topics and the four-part outline the exam prescribes (Einleitung, two
+  Hauptteile, Schluss), followed by a five-minute debate on a contested
+  question with four discussion points — each part worth 50 points. That is a
+  hundred different talk topics and fifty different debates, no two alike
+  across the collection.
+- **Three culture notes per task**, one for each offered topic and one for the
+  debate, each in German with an English gloss — a candidate who picks the
+  second topic needs its background just as much as one who picks the first.
+  The notes name the actual institutions and rules: Tarifautonomie under
+  Art. 9 Abs. 3 GG and the *Allgemeinverbindlicherklärung*, the Betriebsrat's
+  rights under the BetrVG, the 2024 Bürgergeld sanctions, which questions the
+  Länder decide and which the Bund. Every task was reviewed by three
+  independent adversarial passes — language and register, facts about Germany
+  as of 2026, exam format — and then revised against the review sheets.
+- **Model answers at B2 pace.** Both talks are written to the outline and
+  checked to land between 400 and 500 words — at 110 words a minute, 3:38 to
+  4:33 against the four-minute slot — with the count and the estimated time
+  printed next to each, and the two talks built as two different ways of
+  arguing rather than one template twice. The examiner's three follow-up
+  questions are phrased to work after either talk, with model answers; the
+  debate is a full model dialogue of 10 to 14 alternating turns in which the
+  partner argues back to the end, timed for two speakers. Eight topic words
+  with English glosses per topic.
+- In the app under B2 → Sprechtraining, and as `sprechtraining-b2.pdf` on the
+  release for offline work.
+
+### Changed
+
+- The speaking trainer is now one document per level. The B1 template became
+  `sprechtraining_b1.tex.j2` and B2 has its own; the release attaches
+  `sprechtraining-b1.pdf` and `sprechtraining-b2.pdf`, derived from what was
+  built rather than named one by one — naming things one by one is what left
+  A1 and A2 out of earlier releases. The `Sprechtraining` type is a union of
+  the B1 and B2 shapes, and the validator checks each level's own format
+  (five slides at B1, a four-point outline and a debate at B2) instead of B1's
+  numbers nudged.
+
 ## [1.11.0] — 2026-08-24
 
 ### Added

@@ -405,14 +405,70 @@ export interface Sprechaufgabe {
   teil3: { rueckmeldung: string; frage: string; antwort: string };
 }
 
-export interface Sprechtraining {
+/** One offered Vortrag topic at B2. Teil 1 offers two; the candidate picks one. */
+export interface SprechthemaB2 {
+  titel: string;
+  kultur: { de: string; en: string };
+  wortschatz: { de: string; en: string }[];
+  /** One block per outline point: Einleitung, Hauptteil, Hauptteil, Schluss. */
+  musterloesung: string[];
+  umfang: { woerter: number; sprechzeitSekunden: number };
+}
+
+/**
+ * A B2 speaking task.
+ *
+ * Deliberately not the B1 shape with different numbers: B2 Sprechen is two
+ * parts rather than three, the candidate chooses between two Vortrag topics
+ * rather than presenting one, and Teil 2 is an argument rather than a feedback
+ * turn — so the partner has to actually take the other side.
+ */
+export interface SprechaufgabeB2 {
+  nummer: number;
+  kurz: string;
+  teil1: {
+    themen: SprechthemaB2[];
+    /** What the examiner asks after the talk. */
+    fragen: string[];
+    antwortenAufFragen: string[];
+  };
+  teil2: {
+    frage: string;
+    punkte: string[];
+    kultur: { de: string; en: string };
+    musterdialog: { wer: string; text: string }[];
+    umfang: { woerter: number; sprechzeitSekunden: number };
+  };
+}
+
+interface SprechtrainingKopf {
   titel: string;
   untertitel: string;
-  stufe: Stufe;
   version: string;
   hinweis: string;
   vorbereitungMinuten: number;
-  teile: { nummer: number; titel: string; dauerMinuten: number; anweisung: string }[];
+  teile: {
+    nummer: number;
+    titel: string;
+    dauerMinuten: number;
+    anweisung: string;
+    punkte?: number;
+  }[];
+}
+
+export interface SprechtrainingB1 extends SprechtrainingKopf {
+  stufe: 'B1';
+  /** The five slides of a B1 presentation, identical in every task. */
   folien: string[];
   aufgaben: Sprechaufgabe[];
 }
+
+export interface SprechtrainingB2 extends SprechtrainingKopf {
+  stufe: 'B2';
+  /** The four-point outline of a B2 Vortrag, identical in every task. */
+  gliederung: string[];
+  aufgaben: SprechaufgabeB2[];
+}
+
+/** Discriminated on `stufe`, because the two levels are different exams. */
+export type Sprechtraining = SprechtrainingB1 | SprechtrainingB2;
