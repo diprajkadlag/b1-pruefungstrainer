@@ -1,6 +1,7 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import { durchDenEingang, oeffnen } from './hilfe';
 
 /**
  * End-to-end: the cheat sheet.
@@ -8,6 +9,10 @@ import { fileURLToPath, URL } from 'node:url';
  * Like the exam spec, the expectations come from the source content rather
  * than from the app, so a screen that silently renders half the data fails
  * here instead of shipping.
+ *
+ * The cheat sheet lives on the B1 on-screen shelf, behind the two entry
+ * questions. Only the first test walks through them; the rest arrive with both
+ * answers already given, because they are about the sheet, not the door.
  */
 
 const lade = (name: string) =>
@@ -25,18 +30,32 @@ const verben: { inf: string; en: string }[] = wortschatz.verben.flatMap(
   (g: { eintraege: { inf: string; en: string }[] }) => g.eintraege,
 );
 
-test('opens from the start screen without starting an exam', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+/** The study-tool button: its accessible name starts with the tool's title. */
+const knopf = (page: Page) => page.getByRole('button', { name: /^Spickzettel/ });
+
+/** Straight to the open cheat sheet, for the tests that start inside it. */
+async function spickzettel(page: Page) {
+  await oeffnen(page, 'B1');
+  await knopf(page).click();
+}
+
+test('opens from the B1 shelf without starting an exam', async ({ page }) => {
+  // The long way in, as a newcomer: level, then screen or paper.
+  await durchDenEingang(page, 'B1');
+  await knopf(page).click();
 
   await expect(page.getByRole('heading', { name: lernhilfe.titel })).toBeVisible();
   // No attempt was created, so no timer may be running.
   await expect(page.getByText('Verbleibend')).toHaveCount(0);
+
+  // And it is a detour, not a one-way street: back on the shelf the exam is
+  // still waiting to be started.
+  await page.getByRole('button', { name: 'Zurück zur Übersicht' }).click();
+  await expect(page.getByRole('button', { name: /^Prüfung starten/ })).toBeVisible();
 });
 
 test('every tab renders its content', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  await spickzettel(page);
 
   // Überblick is the default tab.
   await expect(page.getByRole('cell', { name: '65 Min.' })).toBeVisible();
@@ -63,8 +82,7 @@ test('every tab renders its content', async ({ page }) => {
 });
 
 test('grammar tables are as wide as their headers', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  await spickzettel(page);
   await page.getByRole('tab', { name: 'Grammatik' }).click();
 
   const tabellen = page.locator('.spick__tabelle');
@@ -77,8 +95,7 @@ test('grammar tables are as wide as their headers', async ({ page }) => {
 });
 
 test('search narrows the vocabulary to matching entries', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  await spickzettel(page);
   await page.getByRole('tab', { name: 'Wortschatz' }).click();
 
   await page.getByRole('searchbox').fill('to remember');
@@ -91,8 +108,7 @@ test('search narrows the vocabulary to matching entries', async ({ page }) => {
 });
 
 test('a Redemittel search finds the phrase for making a suggestion', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  await spickzettel(page);
   await page.getByRole('tab', { name: 'Redemittel' }).click();
 
   await page.getByRole('searchbox').fill('Wie wäre es');

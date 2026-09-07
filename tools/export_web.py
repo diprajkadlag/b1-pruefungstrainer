@@ -293,6 +293,32 @@ def export_lernhilfe(stufe: str) -> bool:
     return True
 
 
+def export_stufen_pdfs(stufe: str) -> list[str]:
+    """Copy a level's own books into the app: the cheat sheet and the trainer.
+
+    These belong to a level rather than to one paper, so they sit in a shared
+    pdf/ folder instead of under an exam id. They are what "offline" means for
+    someone who is not sitting a paper at all, and without them that half of
+    the app would send people to the release page for the two documents they
+    are most likely to want.
+
+    Returns the names that were copied, so the registry can tell the app which
+    buttons lead somewhere. A build without LaTeX simply copies none.
+    """
+    ziel = TARGET / "pdf"
+    ziel.mkdir(parents=True, exist_ok=True)
+    quellen = {
+        "spickzettel": lernhilfe_quelle(stufe) / "pdf" / "spickzettel.pdf",
+        "sprechtraining": SPRECHEN / "pdf" / f"sprechtraining_{stufe.lower()}.pdf",
+    }
+    gefunden = []
+    for name, quelle in quellen.items():
+        if quelle.exists():
+            shutil.copyfile(quelle, ziel / f"{name}-{stufe.lower()}.pdf")
+            gefunden.append(name)
+    return gefunden
+
+
 def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -333,9 +359,11 @@ def main(argv: Iterable[str] | None = None) -> int:
         # In level order, so the app's tabs and this list agree.
         stufen = [s for s in ("A1", "A2", "B1", "B2") if export_lernhilfe(s)]
         sprechen = [s for s in ("A1", "A2", "B1", "B2") if export_sprechtraining(s)]
+        stufen_pdfs = {s: p for s in ("A1", "A2", "B1", "B2")
+                       if (p := export_stufen_pdfs(s))}
         (TARGET / "index.json").write_text(
             json.dumps({"pruefungen": registry, "lernhilfeStufen": stufen,
-                        "sprechenStufen": sprechen},
+                        "sprechenStufen": sprechen, "stufenPdfs": stufen_pdfs},
                        ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8")
         print(f"\nRegistry: {len(registry)} Prüfung(en) → {TARGET / 'index.json'}")
@@ -343,6 +371,8 @@ def main(argv: Iterable[str] | None = None) -> int:
             print(f"Spickzettel {s} → {TARGET / lernhilfe_datei(s)}")
         for s in sprechen:
             print(f"Sprechtraining {s} → {TARGET / f'sprechen-{s.lower()}.json'}")
+        for s, namen in stufen_pdfs.items():
+            print(f"PDFs {s}: {', '.join(namen)} → {TARGET / 'pdf'}")
     return 0
 
 

@@ -1,13 +1,19 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import { alleFragen, leererFortschritt, rundeBauen } from '@pruefung/core';
+import { ersterBesuch, oeffnen } from './hilfe';
 
 /**
  * Not a test — this drives the app through its main screens and saves the
  * images the README uses, so the screenshots can never drift from the UI.
  *
  *   npx playwright test screenshots --update-snapshots
+ *
+ * Every shot starts from the B1 shelf on screen, which is where a returning
+ * learner lands: the two entry questions are answered ahead of time, exactly
+ * as the browser would answer them from its own memory. The README shows what
+ * people spend their time on, not the two clicks they make once.
  */
 
 const exam = JSON.parse(
@@ -22,15 +28,35 @@ const OUT = fileURLToPath(new URL('../../../docs/screenshots/', import.meta.url)
 
 test.use({ viewport: { width: 1180, height: 900 } });
 
+/**
+ * One shot, taken the same way every time: from the top of the page, and with
+ * the fade-ins fast-forwarded. The game deals each card with a 0.28 s
+ * animation, and without that a rebuild can commit a card caught halfway
+ * through it — which is how the article colours came to be invisible in the
+ * one image that exists to show them.
+ */
+async function schuss(page: Page, datei: string) {
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({
+    path: `${OUT}${datei}`,
+    fullPage: false,
+    animations: 'disabled',
+  });
+}
+
 test('Screenshots erzeugen', async ({ page }) => {
-  await page.goto('/');
-  await page.getByPlaceholder('z. B. Ravi').fill('Ravi');
+  // The front door first, since it is the one screen every learner meets and
+  // the one place the level colours are all visible at once.
+  await ersterBesuch(page);
+  await page.getByRole('button', { name: /^B2/ }).waitFor();
+  await schuss(page, '00-niveau.png');
+
+  await oeffnen(page, 'B1');
   // The registry arrives over the network, and the paper list is the whole
   // point of this shot. Without the wait it is a race that gets slower to win
   // with every paper added — and loses silently, into a committed image.
   await page.getByRole('button', { name: /Übungsprüfung 1/ }).waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}01-start.png`, fullPage: false });
+  await schuss(page, '01-start.png');
 
   await page.getByRole('button', { name: /Übungsprüfung 1/ }).click();
   for (const label of ['Hören', 'Schreiben', 'Sprechen']) {
@@ -39,8 +65,7 @@ test('Screenshots erzeugen', async ({ page }) => {
   }
   await page.getByRole('button', { name: /Prüfung starten/ }).click();
   await page.locator('.lesetext').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}02-lesen.png`, fullPage: false });
+  await schuss(page, '02-lesen.png');
 
   // Answer most items correctly and leave a few blank, so the result screen
   // shows a realistic mixed score rather than a perfect or empty one.
@@ -53,40 +78,35 @@ test('Screenshots erzeugen', async ({ page }) => {
       .locator(`input[name="item-${item.nr}"][value="${item.loesung}"]`)
       .check({ force: true });
   }
-  await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+  // One module was chosen, so the closing button goes straight to the result.
+  await page.getByRole('button', { name: /Auswertung ansehen/ }).click();
   await page.locator('.karte').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}03-ergebnis.png`, fullPage: false });
+  await schuss(page, '03-ergebnis.png');
 
   await page.getByRole('tab', { name: 'Lösungen' }).click();
   await page.locator('.loesung').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}04-loesungen.png`, fullPage: false });
+  await schuss(page, '04-loesungen.png');
 
   await page.getByRole('tab', { name: 'Wortschatz' }).click();
   await page.locator('.glossartabelle').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}05-glossar.png`, fullPage: false });
+  await schuss(page, '05-glossar.png');
 
   await page.getByRole('tab', { name: 'Grammatik' }).click();
   await page.locator('.grammatikpunkt').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}06-grammatik.png`, fullPage: false });
+  await schuss(page, '06-grammatik.png');
 });
 
 test('Spickzettel-Screenshots erzeugen', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  await oeffnen(page, 'B1');
+  await page.getByRole('button', { name: /Spickzettel/ }).click();
 
   await page.getByRole('tab', { name: 'Redemittel' }).click();
   await page.locator('.spick__karte').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}07-spickzettel.png`, fullPage: false });
+  await schuss(page, '07-spickzettel.png');
 
   await page.getByRole('tab', { name: 'Wortschatz' }).click();
   await page.locator('.spick__tabelle').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}08-wortschatz.png`, fullPage: false });
+  await schuss(page, '08-wortschatz.png');
 });
 
 test('Spiel-Screenshots erzeugen', async ({ page }) => {
@@ -94,11 +114,10 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
   test.setTimeout(120_000);
   // Pinned seed, so the card in the README is the same card every time and a
   // rebuild does not produce a diff for no reason.
-  await page.goto('/?saat=20260820');
-  await page.getByRole('button', { name: /Spiel starten/ }).click();
+  await oeffnen(page, 'B1', 'online', '/?saat=20260820');
+  await page.getByRole('button', { name: /Sprachschatz/ }).click();
   await page.locator('.kachel').first().waitFor();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}09-spiel.png`, fullPage: false });
+  await schuss(page, '09-spiel.png');
 
   // Play forward to the first article card: the colour coding is the thing
   // worth showing, and it only appears on that kind of question. The answers
@@ -134,6 +153,5 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
       timeout: 15_000,
     });
   }
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `${OUT}10-spiel-artikel.png`, fullPage: false });
+  await schuss(page, '10-spiel-artikel.png');
 });

@@ -25,15 +25,15 @@ runtime. The only network requests the app ever makes are to fetch exam JSON and
 audio files, and after the first visit the service worker serves those from
 cache so it works fully offline.
 
-**Microphone.** The browser asks for permission before the speaking module.
-Recording starts only when you press record and stops on the timer. The audio
-stays in IndexedDB on your machine. Denying microphone access disables only the
-speaking module; everything else works.
+**No microphone, no name.** The app never asks for either. The speaking module
+sets the task and plays the simulated partner; you speak aloud in the room and
+compare yourself against the model answers afterwards. Nothing is recorded,
+because nothing here could mark a recording anyway, and an attempt is tied to a
+paper rather than to a person.
 
-**Getting your work out.** The "Abgabe herunterladen" button packages your
-writing and recordings into a ZIP that your browser saves locally. What you then
-do with that file — email it to a teacher, put it on a USB stick — is entirely
-your choice and outside this app.
+**Nothing is submitted.** There is no upload, no examiner view and no server to
+receive work. Your writing stays in the browser store on this device, and the
+result screen computes your Lesen and Hören score locally from the answer key.
 
 **The learning game.** Sprachschatz keeps rather more than a score: which cards
 you have answered, what you answered, and whether it was right, so you can look
@@ -49,27 +49,8 @@ store and the service worker caches. "Verlauf löschen" in Sprachschatz clears
 that level's answer history on its own, without touching anything else. Clearing
 site data in your browser does the lot.
 
-## Server mode (self-hosted, optional)
-
-If *you* run `apps/server` on your own machine, submissions are written to disk
-under `submissions/` so a teacher can mark them. That server:
-
-- is **not** hosted by this project — it runs where you start it
-- binds to `localhost` by default, so nothing is exposed to your network
-- has no authentication, because it is designed for a single household or
-  classroom on a trusted machine
-
-> **Do not put the server on the public internet.** It has no auth and would
-> expose recordings and written work to anyone who found it. If you need LAN
-> access for a phone or tablet, use the documented self-signed-HTTPS flag and
-> keep it on your own network.
-
-Whoever runs that server is the data controller for anything it stores. If you
-run it for other people's children or students, that is a responsibility you are
-taking on, and local data-protection law applies to you, not to this project.
-
 ## Children
 
 The app collects no personal data and requires no account, so it is usable by
-minors. The only free-text identifier is a name you type to label your own
-attempt, stored only on your device. A pseudonym works just as well.
+minors. It never asks for a name, and there is no field anywhere that identifies
+the person using it.

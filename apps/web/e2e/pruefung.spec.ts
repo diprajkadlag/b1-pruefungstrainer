@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import { oeffnen } from './hilfe';
 
 /**
  * End-to-end: sit a paper and check that it is marked correctly.
@@ -19,9 +20,14 @@ type Item = { nr: number; loesung: string; typ: string };
 const itemsVon = (modul: 'lesen' | 'hoeren'): Item[] =>
   exam[modul].teile.flatMap((t: { items: Item[] }) => t.items);
 
+/** The control that closes the last module and hands the sheet to the marking. */
+const auswerten = (page: Page) =>
+  page.getByRole('button', { name: /Auswertung ansehen/ });
+
 async function pruefungStarten(page: Page, module: string[]) {
-  await page.goto('/');
-  await page.getByPlaceholder('z. B. Ravi').fill('Testkandidat');
+  // Level and mode arrive answered, the way a returning learner has them
+  // answered already: this suite is about sitting the paper, not the front door.
+  await oeffnen(page, 'B1');
   await page.getByRole('button', { name: /Übungsprüfung 1/ }).click();
 
   for (const label of ['Lesen', 'Hören', 'Schreiben', 'Sprechen']) {
@@ -60,7 +66,7 @@ test.describe('Prüfung ablegen', () => {
     const items = itemsVon('lesen');
     await pruefungStarten(page, ['Lesen']);
     await beantworten(page, items, new Set());
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await auswerten(page).click();
 
     const karte = page.locator('.karte--bestanden').first();
     await expect(karte).toContainText('100');
@@ -78,7 +84,7 @@ test.describe('Prüfung ablegen', () => {
 
     await pruefungStarten(page, ['Lesen']);
     await beantworten(page, items, falsch);
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await auswerten(page).click();
 
     await expect(page.locator('.karte').first()).toContainText(String(erwartet));
     await expect(page.locator('.karte').first()).toContainText('gut');
@@ -94,9 +100,9 @@ test.describe('Prüfung ablegen', () => {
   test('treats unanswered items as wrong, not as absent', async ({ page }) => {
     const items = itemsVon('lesen');
     await pruefungStarten(page, ['Lesen']);
-    // Answer only the first five and submit.
+    // Answer only the first five and hand it in.
     await beantworten(page, items.slice(0, 5), new Set());
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await auswerten(page).click();
 
     const karte = page.locator('.karte').first();
     await expect(karte).toContainText(`5 von ${items.length}`);
@@ -156,7 +162,7 @@ test.describe('Prüfung ablegen', () => {
 
   test('offers the glossary and grammar with real word forms', async ({ page }) => {
     await pruefungStarten(page, ['Lesen']);
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await auswerten(page).click();
 
     await page.getByRole('tab', { name: 'Wortschatz' }).click();
     await expect(page.locator('.glossartabelle tbody tr').first()).toBeVisible();

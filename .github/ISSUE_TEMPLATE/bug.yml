@@ -15,7 +15,6 @@ body:
       options:
         - Hosted app (GitHub Pages)
         - Portable ZIP
-        - Local server (npm run serve)
         - Content tools (Python)
     validations: { required: true }
   - type: input

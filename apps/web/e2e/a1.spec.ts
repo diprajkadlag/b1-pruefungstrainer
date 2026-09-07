@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import { ersterBesuch, oeffnen } from './hilfe';
 
 /**
  * End-to-end for the A1 paper.
@@ -24,9 +25,7 @@ type Item = { nr: number; loesung: string; typ: string };
 const lesenItems: Item[] = exam.lesen.teile.flatMap((t: { items: Item[] }) => t.items);
 
 async function a1Starten(page: Page, module: string[]) {
-  await page.goto('/');
-  await page.getByRole('tab', { name: 'A1' }).click();
-  await page.getByPlaceholder('z. B. Ravi').fill('Testkandidat');
+  await oeffnen(page, 'A1');
   await page.getByRole('button', { name: /Übungsprüfung A1 1/ }).click();
 
   for (const label of ['Lesen', 'Hören', 'Schreiben', 'Sprechen']) {
@@ -35,6 +34,11 @@ async function a1Starten(page: Page, module: string[]) {
     if ((await box.isChecked()) !== soll) await box.click();
   }
   await page.getByRole('button', { name: /Prüfung starten/ }).click();
+}
+
+/** Closing the last module is what hands the paper over to the marking. */
+async function abgeben(page: Page) {
+  await page.getByRole('button', { name: /Auswertung ansehen/ }).click();
 }
 
 async function beantworten(page: Page, items: Item[], falsch: Set<number>) {
@@ -57,9 +61,25 @@ async function beantworten(page: Page, items: Item[], falsch: Set<number>) {
 }
 
 test.describe('A1', () => {
-  test('offers four level tabs and lists only that level’s papers', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'A1' }).click();
+  test('asks for the level first, then lists only that level’s papers', async ({
+    page,
+  }) => {
+    // The four levels used to be tabs above one long page. They are now the
+    // first of the two questions at the door, and the answer still decides the
+    // whole shelf behind it.
+    await ersterBesuch(page);
+    await expect(page.getByRole('heading', { name: 'Welches Niveau?' })).toBeVisible();
+    for (const stufe of ['A1', 'A2', 'B1', 'B2']) {
+      await expect(
+        page.getByRole('button', { name: new RegExp(`^${stufe}`) }),
+      ).toBeVisible();
+    }
+
+    await page.getByRole('button', { name: /^A1/ }).click();
+    await page.getByRole('button', { name: /Am Bildschirm/ }).click();
+
+    // The chip reports the answer back, and the papers below belong to it.
+    await expect(page.getByRole('button', { name: 'A1 ändern' })).toBeVisible();
     await expect(page.getByRole('button', { name: /Übungsprüfung A1 1/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /Übungsprüfung A2 1/ })).toHaveCount(0);
     await expect(page.getByRole('button', { name: /Übungsprüfung 1 —/ })).toHaveCount(0);
@@ -88,7 +108,7 @@ test.describe('A1', () => {
   test('marks a fully correct reading module as 15 raw points', async ({ page }) => {
     await a1Starten(page, ['Lesen']);
     await beantworten(page, lesenItems, new Set());
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await abgeben(page);
 
     const karte = page.locator('.karte').first();
     await expect(karte).toContainText('15');
@@ -99,7 +119,7 @@ test.describe('A1', () => {
   test('shows no per-part verdict, because A1 has none to show', async ({ page }) => {
     await a1Starten(page, ['Lesen']);
     await beantworten(page, lesenItems, new Set());
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await abgeben(page);
 
     await expect(page.locator('.karte--bestanden')).toHaveCount(0);
     await expect(page.locator('.karte--gefallen')).toHaveCount(0);
@@ -111,7 +131,7 @@ test.describe('A1', () => {
     const falsch = new Set([2, 8, 14]);
     await a1Starten(page, ['Lesen']);
     await beantworten(page, lesenItems, falsch);
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await abgeben(page);
 
     await expect(page.locator('.karte').first()).toContainText('12');
     await page.getByRole('tab', { name: 'Lösungen' }).click();
@@ -163,10 +183,9 @@ test.describe('A1', () => {
 });
 
 test.describe('A1 Spickzettel', () => {
-  test('the level tab decides which sheet opens', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'A1' }).click();
-    await page.getByRole('button', { name: /Spickzettel öffnen/ }).click();
+  test('the chosen level decides which sheet opens', async ({ page }) => {
+    await oeffnen(page, 'A1');
+    await page.getByRole('button', { name: /Spickzettel/ }).click();
 
     await expect(page.getByRole('heading', { name: /A1 Spickzettel/ })).toBeVisible();
   });
@@ -174,9 +193,8 @@ test.describe('A1 Spickzettel', () => {
   test('states the one pass condition A1 actually has', async ({ page }) => {
     // A1 sets a single condition where A2 sets three, and saying otherwise
     // would send a candidate into the exam with the wrong plan.
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'A1' }).click();
-    await page.getByRole('button', { name: /Spickzettel öffnen/ }).click();
+    await oeffnen(page, 'A1');
+    await page.getByRole('button', { name: /Spickzettel/ }).click();
 
     await expect(page.getByText(/60 von 100 Punkten/)).toBeVisible();
     await expect(page.getByText(/1,66/)).toBeVisible();

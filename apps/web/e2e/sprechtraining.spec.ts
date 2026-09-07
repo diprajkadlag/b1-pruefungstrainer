@@ -2,6 +2,7 @@ import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import type { SprechtrainingB1, SprechtrainingB2 } from '@pruefung/core';
+import { oeffnen } from './hilfe';
 
 /**
  * End-to-end for the speaking trainer, at both levels.
@@ -14,6 +15,11 @@ import type { SprechtrainingB1, SprechtrainingB2 } from '@pruefung/core';
  * B1 and B2 share the shell and not the card. B1 presents one topic over five
  * slides; B2 offers two topics to choose from and then a debate. The tests
  * that touch the card are therefore written per level rather than looped.
+ *
+ * Getting in is not this file's subject: the start screen now asks for a level
+ * and for screen-or-paper before it shows anything, so these tests seed both
+ * answers through `oeffnen` and land on the online shelf, where the trainer is
+ * one of the three study-tool buttons.
  */
 
 function laden<T>(datei: string): T {
@@ -28,52 +34,58 @@ function laden<T>(datei: string): T {
 const b1 = laden<SprechtrainingB1>('sprechen-b1.json');
 const b2 = laden<SprechtrainingB2>('sprechen-b2.json');
 
-async function oeffnen(page: Page, stufe: 'B1' | 'B2') {
-  await page.goto('/');
-  await page.getByRole('tab', { name: stufe }).click();
-  await page.getByRole('button', { name: /Sprechtraining öffnen/ }).click();
+/** The online shelf of that level, and from there into the trainer. */
+async function trainer(page: Page, stufe: 'B1' | 'B2') {
+  await oeffnen(page, stufe);
+  await page.getByRole('button', { name: /^Sprechtraining/ }).click();
   await page.locator('.sprech__liste').waitFor();
 }
 
 test.describe('Sprechtraining — the shared shell', () => {
   test('lists all fifty tasks at each level', async ({ page }) => {
-    await oeffnen(page, 'B1');
+    await trainer(page, 'B1');
     await expect(page.locator('.sprech__eintrag')).toHaveCount(50);
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await expect(page.locator('.sprech__eintrag')).toHaveCount(50);
     expect(b1.aufgaben).toHaveLength(50);
     expect(b2.aufgaben).toHaveLength(50);
   });
 
   test('is offered where a trainer exists and nowhere else', async ({ page }) => {
-    await page.goto('/');
-    for (const stufe of ['A1', 'A2']) {
-      await page.getByRole('tab', { name: stufe }).click();
-      await expect(
-        page.getByRole('button', { name: /Sprechtraining öffnen/ }),
-      ).toHaveCount(0);
+    for (const stufe of ['A1', 'A2'] as const) {
+      await oeffnen(page, stufe);
+      // The shelf really did render — otherwise the missing button below would
+      // prove nothing.
+      await expect(page.locator('.werkzeug')).toHaveCount(2);
+      await expect(page.getByRole('button', { name: /^Sprechtraining/ })).toHaveCount(0);
     }
-    for (const stufe of ['B1', 'B2']) {
-      await page.getByRole('tab', { name: stufe }).click();
-      await expect(
-        page.getByRole('button', { name: /Sprechtraining öffnen/ }),
-      ).toBeVisible();
+    for (const stufe of ['B1', 'B2'] as const) {
+      await oeffnen(page, stufe);
+      await expect(page.getByRole('button', { name: /^Sprechtraining/ })).toBeVisible();
     }
   });
 
-  test('the entry card describes the right exam at each level', async ({ page }) => {
-    // B2 Sprechen is a different examination; the card must not promise
-    // B1's shape.
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'B2' }).click();
-    await expect(page.locator('.sprech__einstieg')).toContainText('zwei Themen zur Wahl');
-    await expect(page.locator('.sprech__einstieg')).toContainText('Debatte');
-    await page.getByRole('tab', { name: 'B1' }).click();
-    await expect(page.locator('.sprech__einstieg')).not.toContainText('Debatte');
+  test('the trainer announces the right exam at each level', async ({ page }) => {
+    // B2 Sprechen is a different examination, and nothing on the way in may
+    // promise B1's shape. The level-specific card that used to say so on the
+    // start screen is gone — the shelf now describes the trainer once, in the
+    // same words for both levels — so the promise is made by the trainer's own
+    // opening: its title, its note, and the list of tasks underneath.
+    await trainer(page, 'B2');
+    await expect(page.locator('.sprech__seite h1')).toHaveText(b2.titel);
+    await expect(page.locator('.sprech__seite')).toContainText('eines der beiden Themen');
+    await expect(page.locator('.sprech__eintrag').first()).toContainText('Debatte');
+
+    await trainer(page, 'B1');
+    await expect(page.locator('.sprech__seite h1')).toHaveText(b1.titel);
+    await expect(page.locator('.sprech__seite')).not.toContainText('Debatte');
+    await expect(page.locator('.sprech__seite')).not.toContainText(
+      'eines der beiden Themen',
+    );
   });
 
   test('pages between tasks and stops at the ends', async ({ page }) => {
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await page.locator('.sprech__eintrag').first().click();
     await expect(page.getByRole('button', { name: /← Aufgabe/ })).toBeDisabled();
     await page.getByRole('button', { name: /Aufgabe 2 →/ }).click();
@@ -82,7 +94,7 @@ test.describe('Sprechtraining — the shared shell', () => {
   });
 
   test('searches by topic and by vocabulary', async ({ page }) => {
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await page.getByPlaceholder('Thema oder Wort suchen …').fill('Tarif');
     const treffer = await page.locator('.sprech__eintrag').count();
     expect(treffer).toBeGreaterThan(0);
@@ -96,7 +108,7 @@ test.describe('Sprechtraining B1', () => {
   test('opens a task on the task, not on the answers', async ({ page }) => {
     // A model answer read before speaking is a text you agree with rather than
     // something you produced, so the card must not open on it.
-    await oeffnen(page, 'B1');
+    await trainer(page, 'B1');
     await page.locator('.sprech__eintrag').first().click();
 
     const erste = b1.aufgaben[0]!;
@@ -110,7 +122,7 @@ test.describe('Sprechtraining B1', () => {
   });
 
   test('shows the context and the timed model answer on request', async ({ page }) => {
-    await oeffnen(page, 'B1');
+    await trainer(page, 'B1');
     await page.locator('.sprech__eintrag').first().click();
     const erste = b1.aufgaben[0]!;
 
@@ -136,7 +148,7 @@ test.describe('Sprechtraining B2', () => {
   test('opens on the choice of two topics and the debate, without answers', async ({
     page,
   }) => {
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await page.locator('.sprech__eintrag').first().click();
 
     // The choice is the task: both offered topics are on the card.
@@ -162,7 +174,7 @@ test.describe('Sprechtraining B2', () => {
   }) => {
     // Three notes, not one: a candidate who picks topic 2 needs its context
     // just as much, and the debate has its own.
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await page.locator('.sprech__eintrag').first().click();
     await page.getByRole('tab', { name: 'So ist es in Deutschland' }).click();
 
@@ -182,7 +194,7 @@ test.describe('Sprechtraining B2', () => {
   test('shows both model talks timed to four minutes, the questions, and the debate', async ({
     page,
   }) => {
-    await oeffnen(page, 'B2');
+    await trainer(page, 'B2');
     await page.locator('.sprech__eintrag').first().click();
     await page.getByRole('tab', { name: 'Musterlösung' }).click();
 

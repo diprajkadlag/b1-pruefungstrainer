@@ -10,6 +10,7 @@ import {
   type Lernhilfe,
   type Stufe,
 } from '@pruefung/core';
+import { durchDenEingang, oeffnen } from './hilfe';
 
 /**
  * End-to-end for Sprachschatz.
@@ -79,11 +80,33 @@ async function toeneMitschneiden(page: Page) {
 const toene = (page: Page) =>
   page.evaluate(() => (window as unknown as { __toene: number[] }).__toene);
 
+/**
+ * Land on the game with the round pinned.
+ *
+ * The start screen asks two questions now — which level, then screen or paper
+ * — and the game is one of the three study tools behind the "Am Bildschirm"
+ * answer. A test about the round itself is not testing those two questions, so
+ * it arrives with them already answered, the way a returning learner does.
+ */
 async function spielOeffnen(page: Page, stufe: Stufe) {
-  await page.goto(`/?saat=${SAAT}`);
-  await page.getByRole('tab', { name: stufe }).click();
-  await page.getByRole('button', { name: /Spiel starten/ }).click();
+  await oeffnen(page, stufe, 'online', `/?saat=${SAAT}`);
+  await sprachschatzOeffnen(page);
+}
+
+/** Open the game from the shelf the start screen is already showing. */
+async function sprachschatzOeffnen(page: Page) {
+  await page.getByRole('button', { name: /Sprachschatz/ }).click();
   await page.locator('.kachel').first().waitFor();
+}
+
+/**
+ * Change level the way the app now offers it: the chip at the top naming the
+ * level asks the first question again. The screen-or-paper answer is kept, so
+ * this lands on the same shelf one level over.
+ */
+async function stufeWechseln(page: Page, von: Stufe, nach: Stufe) {
+  await page.getByRole('button', { name: `${von} ändern` }).click();
+  await page.getByRole('button', { name: new RegExp(`^${nach}`) }).click();
 }
 
 async function rundeStarten(page: Page, stufe: Stufe, kategorie: Kategorie) {
@@ -131,7 +154,9 @@ async function beantworten(page: Page, frage: Frage, richtig: boolean) {
 test.describe('Sprachschatz', () => {
   test('opens from the start screen at every level', async ({ page }) => {
     for (const stufe of ['A1', 'A2', 'B1', 'B2'] as Stufe[]) {
-      await spielOeffnen(page, stufe);
+      // As a newcomer does it: pick the level, pick the screen, take the game.
+      await durchDenEingang(page, stufe);
+      await sprachschatzOeffnen(page);
       await expect(page.getByRole('heading', { name: /Sprachschatz/ })).toBeVisible();
       await expect(page.locator('.spiel__stufe')).toHaveText(stufe);
     }
@@ -389,7 +414,7 @@ test.describe('Sprachschatz', () => {
     }
 
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
 
     const verlauf = page.locator('.verlauf');
     await expect(verlauf).toBeVisible();
@@ -411,7 +436,7 @@ test.describe('Sprachschatz', () => {
     await naechsteKarte(page, 1);
 
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     const erste = page.locator('.verlauf details').first();
     await erste.locator('summary').click();
     await expect(erste).toContainText(runde[0]!.erklaerung.split('\n')[0]!);
@@ -427,7 +452,7 @@ test.describe('Sprachschatz', () => {
     }
 
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf details')).toHaveCount(4);
 
     await page.getByText('Nur die falschen zeigen').click();
@@ -441,12 +466,12 @@ test.describe('Sprachschatz', () => {
     await naechsteKarte(page, 1);
 
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     await page.getByRole('button', { name: 'Verlauf löschen' }).click();
     await expect(page.locator('.verlauf')).toHaveCount(0);
 
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf')).toHaveCount(0);
   });
 
@@ -457,13 +482,13 @@ test.describe('Sprachschatz', () => {
     await naechsteKarte(page, 1);
 
     await page.reload();
-    await page.getByRole('tab', { name: 'A2' }).click();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await stufeWechseln(page, 'B1', 'A2');
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf')).toHaveCount(0);
 
     await page.getByRole('button', { name: /Zurück/ }).click();
-    await page.getByRole('tab', { name: 'B1' }).click();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await stufeWechseln(page, 'A2', 'B1');
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf details')).toHaveCount(1);
   });
 
@@ -550,7 +575,7 @@ test.describe('Sprachschatz', () => {
 
     // Still off after a reload.
     await page.reload();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     await page.getByRole('button', { name: /Wortschatz/ }).click();
     await expect(page.locator('.tonknopf')).toHaveAttribute('aria-pressed', 'false');
   });
@@ -633,8 +658,8 @@ test.describe('Sprachschatz', () => {
     await expect(page.locator('.kachel--wortschatz')).toContainText('Bestwert 420');
 
     await page.getByRole('button', { name: /Zurück/ }).click();
-    await page.getByRole('tab', { name: 'A2' }).click();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await stufeWechseln(page, 'B1', 'A2');
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.kachel--wortschatz')).not.toContainText('Bestwert');
   });
 
@@ -650,8 +675,7 @@ test.describe('Sprachschatz', () => {
     await expect(page.getByRole('heading', { name: 'Alles richtig!' })).toBeVisible();
 
     await page.reload();
-    await page.getByRole('tab', { name: 'A2' }).click();
-    await page.getByRole('button', { name: /Spiel starten/ }).click();
+    await sprachschatzOeffnen(page);
     await expect(page.locator('.kachel--grammatik')).toContainText('Bestwert');
   });
 

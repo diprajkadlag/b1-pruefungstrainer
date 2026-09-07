@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { STUFEN, STUFEN_REIHE, kursstufe, type Stufe } from '@pruefung/core';
-import { registryLaden, type RegistryEintrag } from '../lib/content';
+import { registryLaden, type RegistryEintrag, type StufenPdfName } from '../lib/content';
 import { alleVersuche, loeschen, type GespeicherterVersuch } from '../lib/db';
-import { Druckbogen } from '../components/Druckbogen';
+import { Offline } from './Offline';
 
 export type ModulWahl = 'lesen' | 'hoeren' | 'schreiben' | 'sprechen';
+export type Modus = 'online' | 'offline';
 
 /** Official order, which is also the order a candidate sits them in. */
 const MODULE: { id: ModulWahl; label: string }[] = [
@@ -15,9 +16,10 @@ const MODULE: { id: ModulWahl; label: string }[] = [
 ];
 
 const STUFE_GESPEICHERT = 'pruefung-stufe';
+const MODUS_GESPEICHERT = 'pruefung-modus';
 
 interface Props {
-  onStart: (examId: string, name: string, module: ModulWahl[]) => void;
+  onStart: (examId: string, module: ModulWahl[]) => void;
   onWeiter: (versuchId: string) => void;
   onErgebnis: (versuchId: string) => void;
   onSpickzettel: (stufe: Stufe) => void;
@@ -25,6 +27,20 @@ interface Props {
   onSprechtraining: (stufe: Stufe) => void;
 }
 
+/**
+ * The way in.
+ *
+ * Two questions before anything else: which level, and on screen or on paper.
+ * Everything after that belongs to one of those answers, so the page only ever
+ * shows what the person can actually use. Both answers are remembered, so a
+ * returning learner lands straight on their own shelf and the two chips at the
+ * top are the only thing standing between them and a different one.
+ *
+ * The previous version put all of it on a single page — four levels, three
+ * study tools, five papers, the module picker and the printables — which ran
+ * past three thousand pixels on a phone and buried the level tabs at the top
+ * where nobody scrolled back to find them.
+ */
 export function Start({
   onStart,
   onWeiter,
@@ -36,14 +52,18 @@ export function Start({
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
   const [lernhilfeStufen, setLernhilfeStufen] = useState<Stufe[]>([]);
   const [sprechenStufen, setSprechenStufen] = useState<Stufe[]>([]);
+  const [stufenPdfs, setStufenPdfs] = useState<Partial<Record<Stufe, StufenPdfName[]>>>(
+    {},
+  );
   const [versuche, setVersuche] = useState<GespeicherterVersuch[]>([]);
   const [fehler, setFehler] = useState<string | null>(null);
-  // 'b1-name' is what the key was called before the app grew a second level.
-  const [name, setName] = useState(
-    localStorage.getItem('pruefung-name') ?? localStorage.getItem('b1-name') ?? '',
+  const [geladen, setGeladen] = useState(false);
+
+  const [stufe, setStufe] = useState<Stufe | null>(
+    () => (localStorage.getItem(STUFE_GESPEICHERT) as Stufe | null) ?? null,
   );
-  const [stufe, setStufe] = useState<Stufe>(
-    (localStorage.getItem(STUFE_GESPEICHERT) as Stufe | null) ?? 'B1',
+  const [modus, setModus] = useState<Modus | null>(
+    () => (localStorage.getItem(MODUS_GESPEICHERT) as Modus | null) ?? null,
   );
   const [examId, setExamId] = useState('');
   const [module, setModule] = useState<ModulWahl[]>(['lesen', 'hoeren']);
@@ -54,15 +74,24 @@ export function Start({
         setPruefungen(r.pruefungen);
         setLernhilfeStufen(r.lernhilfeStufen ?? []);
         setSprechenStufen(r.sprechenStufen ?? []);
+        setStufenPdfs(r.stufenPdfs ?? {});
       })
       .catch(() =>
         setFehler(
           'Die Prüfungen konnten nicht geladen werden. Wurde ' +
             '„python tools/export_web.py“ ausgeführt?',
         ),
-      );
+      )
+      .finally(() => setGeladen(true));
     void alleVersuche().then(setVersuche);
   }, []);
+
+  // The level's colour is published on <html>, so the header, the buttons and
+  // every card downstream pick it up without being handed the level.
+  useEffect(() => {
+    if (stufe) document.documentElement.dataset.stufe = stufe;
+    else delete document.documentElement.dataset.stufe;
+  }, [stufe]);
 
   // Only papers of the chosen level, and never a selection left over from the
   // other one — switching level must not silently start a B1 paper from a B2 tab.
@@ -73,8 +102,6 @@ export function Start({
     );
   }, [stufe, pruefungen.length]);
 
-  const gewaehlt = sichtbar.find((p) => p.id === examId);
-  const format = STUFEN[stufe];
   const angeboteneStufen = STUFEN_REIHE.filter((s) =>
     pruefungen.some((p) => p.stufe === s),
   );
@@ -84,183 +111,228 @@ export function Start({
     localStorage.setItem(STUFE_GESPEICHERT, neu);
   }
 
+  function modusWaehlen(neu: Modus) {
+    setModus(neu);
+    localStorage.setItem(MODUS_GESPEICHERT, neu);
+  }
+
   function umschalten(id: ModulWahl) {
     setModule((m) => (m.includes(id) ? m.filter((x) => x !== id) : [...m, id]));
   }
 
-  function starten() {
-    if (!examId || module.length === 0) return;
-    localStorage.setItem('pruefung-name', name);
-    onStart(
-      examId,
-      name,
-      // Keep the official module order regardless of the click order.
-      MODULE.filter((m) => module.includes(m.id)).map((m) => m.id),
+  const disclaimer = (
+    <section className="hinweis-box">
+      <strong>Keine offizielle Prüfung.</strong> Dieses Übungsmaterial steht in keiner
+      Verbindung zum Goethe-Institut e.&nbsp;V., zur telc gGmbH oder zum ÖSD. Alle Texte
+      und Aufgaben sind eigens für dieses Projekt verfasst.
+    </section>
+  );
+
+  // ---- Step 1: which level ------------------------------------------------
+  // Held back until the registry answers, because a level list built from an
+  // empty registry would flash one wrong set of choices and then replace it.
+  if (!geladen && !fehler) {
+    return <p className="laden">Wird geladen …</p>;
+  }
+
+  if (stufe === null || !angeboteneStufen.includes(stufe)) {
+    return (
+      <div className="start">
+        {disclaimer}
+        {fehler && <p className="fehler">{fehler}</p>}
+        <section className="wahl">
+          <h2 className="wahl__frage">Welches Niveau?</h2>
+          <p className="notiz">Sie können das später jederzeit wechseln.</p>
+          <div className="wahl__karten">
+            {angeboteneStufen.map((s) => (
+              <button
+                key={s}
+                type="button"
+                className="wahlkarte"
+                data-stufe={s}
+                onClick={() => stufeWaehlen(s)}
+              >
+                <strong className="wahlkarte__titel">{s}</strong>
+                <span className="wahlkarte__text">{STUFEN[s].kurz}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      </div>
     );
   }
 
+  // ---- Step 2: on screen or on paper --------------------------------------
+  if (modus === null) {
+    return (
+      <div className="start">
+        {disclaimer}
+        <Wegweiser
+          stufe={stufe}
+          modus={null}
+          onStufe={() => setStufe(null)}
+          onModus={() => setModus(null)}
+        />
+        <section className="wahl">
+          <h2 className="wahl__frage">Wie möchten Sie üben?</h2>
+          <div className="wahl__karten wahl__karten--zwei">
+            <button
+              type="button"
+              className="wahlkarte"
+              onClick={() => modusWaehlen('online')}
+            >
+              <strong className="wahlkarte__titel">Am Bildschirm</strong>
+              <span className="wahlkarte__text">
+                Prüfung ablegen mit Zeit und Punkten, Spickzettel nachschlagen, Wörter
+                spielen, Sprechen üben.
+              </span>
+            </button>
+            <button
+              type="button"
+              className="wahlkarte"
+              onClick={() => modusWaehlen('offline')}
+            >
+              <strong className="wahlkarte__titel">Auf Papier</strong>
+              <span className="wahlkarte__text">
+                Alle Hefte als PDF — hier lesen oder herunterladen und ausdrucken.
+              </span>
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // ---- Step 3: what that answer makes available ---------------------------
+  const kopf = (
+    <>
+      <Wegweiser
+        stufe={stufe}
+        modus={modus}
+        onStufe={() => setStufe(null)}
+        onModus={() => setModus(null)}
+      />
+      {fehler && <p className="fehler">{fehler}</p>}
+    </>
+  );
+
+  if (modus === 'offline') {
+    return (
+      <div className="start">
+        {kopf}
+        <Offline
+          stufe={stufe}
+          pruefungen={sichtbar}
+          stufenPdfs={stufenPdfs[stufe] ?? []}
+        />
+      </div>
+    );
+  }
+
+  const offen = versuche.filter((v) => !v.abgegeben);
+  const fertig = versuche.filter((v) => v.abgegeben);
+
   return (
     <div className="start">
-      <section className="hinweis-box">
-        <strong>Keine offizielle Prüfung.</strong> Dieses Übungsmaterial steht in keiner
-        Verbindung zum Goethe-Institut e.&nbsp;V., zur telc gGmbH oder zum ÖSD. Alle Texte
-        und Aufgaben sind eigens für dieses Projekt verfasst.
-      </section>
+      {kopf}
 
-      {fehler && <p className="fehler">{fehler}</p>}
-
-      {angeboteneStufen.length > 1 && (
-        <div className="stufenwahl" role="tablist" aria-label="Prüfungsniveau">
-          {angeboteneStufen.map((s) => (
-            <button
-              key={s}
-              type="button"
-              role="tab"
-              aria-selected={stufe === s}
-              className={`stufe ${stufe === s ? 'stufe--aktiv' : ''}`}
-              onClick={() => stufeWaehlen(s)}
-            >
-              <strong>{s}</strong>
-              <span className="stufe__kurz">{STUFEN[s].kurz}</span>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {lernhilfeStufen.includes(stufe) && (
-        <section className="teil spick__einstieg">
-          <div>
-            <h2>Spickzettel {stufe}</h2>
-            <p className="notiz">
-              Strategie für alle vier Module, Redemittel für Sprechen und Schreiben,
-              Grammatik in Tabellen und der Grundwortschatz mit allen Verbformen. Zum
-              Nachschlagen, ohne eine Prüfung zu starten.
-            </p>
-          </div>
-          <button
-            type="button"
-            className="knopf knopf--primaer"
-            onClick={() => onSpickzettel(stufe)}
-          >
-            Spickzettel öffnen
+      <section className="werkzeuge">
+        {lernhilfeStufen.includes(stufe) && (
+          <button type="button" className="werkzeug" onClick={() => onSpickzettel(stufe)}>
+            <span className="werkzeug__zeichen" aria-hidden="true">
+              📘
+            </span>
+            <span className="werkzeug__text">
+              <strong>Spickzettel</strong>
+              <span className="notiz">
+                Strategie, Redemittel, Grammatik und Wortschatz zum Nachschlagen.
+              </span>
+            </span>
           </button>
-        </section>
-      )}
-
-      {lernhilfeStufen.includes(stufe) && (
-        <section className="teil spick__einstieg spiel__einstieg">
-          <div>
-            <h2>
-              <span aria-hidden="true">✨</span> Sprachschatz {stufe}
-            </h2>
-            <p className="notiz">
-              Dieselben Redemittel, Grammatiktabellen und Wörter — aber gefragt statt
-              nachgeschlagen. Zwölf Karten pro Runde, drei Leben, und was danebengeht,
-              kommt zuerst zurück. Abgefragt zu werden bleibt deutlich besser hängen als
-              noch einmal zu lesen.
-            </p>
-          </div>
-          <button
-            type="button"
-            className="knopf knopf--primaer"
-            onClick={() => onSpiel(stufe)}
-          >
-            Spiel starten
+        )}
+        {lernhilfeStufen.includes(stufe) && (
+          <button type="button" className="werkzeug" onClick={() => onSpiel(stufe)}>
+            <span className="werkzeug__zeichen" aria-hidden="true">
+              ✨
+            </span>
+            <span className="werkzeug__text">
+              <strong>Sprachschatz</strong>
+              <span className="notiz">
+                Dieselben Wörter und Regeln, aber abgefragt statt nachgeschlagen.
+              </span>
+            </span>
           </button>
-        </section>
-      )}
-
-      {sprechenStufen.includes(stufe) && (
-        <section className="teil spick__einstieg sprech__einstieg">
-          <div>
-            <h2>
-              <span aria-hidden="true">🎤</span> Sprechtraining {stufe}
-            </h2>
-            <p className="notiz">
-              {stufe === 'B2'
-                ? '50 vollständige Sprechaufgaben im B2-Format: ein Vortrag von vier ' +
-                  'Minuten mit zwei Themen zur Wahl, danach eine Debatte. Mit dem ' +
-                  'Hintergrundwissen, das man für ein deutsches Thema braucht, wenn man ' +
-                  'nicht hier aufgewachsen ist, und mit Musterlösungen, die wirklich in ' +
-                  'die Zeit passen. Erst sprechen, dann nachlesen.'
-                : '50 vollständige Sprechaufgaben zum Üben — mit dem Hintergrundwissen, ' +
-                  'das man für ein deutsches Thema braucht, wenn man nicht hier ' +
-                  'aufgewachsen ist, und mit Musterlösungen, die wirklich in die drei ' +
-                  'Minuten passen. Erst sprechen, dann nachlesen.'}
-            </p>
-          </div>
+        )}
+        {sprechenStufen.includes(stufe) && (
           <button
             type="button"
-            className="knopf knopf--primaer"
+            className="werkzeug"
             onClick={() => onSprechtraining(stufe)}
           >
-            Sprechtraining öffnen
+            <span className="werkzeug__zeichen" aria-hidden="true">
+              🎤
+            </span>
+            <span className="werkzeug__text">
+              <strong>Sprechtraining</strong>
+              <span className="notiz">
+                50 Sprechaufgaben mit deutschem Hintergrundwissen und Musterlösungen.
+              </span>
+            </span>
           </button>
-        </section>
-      )}
+        )}
+      </section>
 
-      {versuche.some((v) => !v.abgegeben) && (
+      {offen.length > 0 && (
         <section className="teil">
-          <h2>Nicht abgeschlossene Versuche</h2>
-          {versuche
-            .filter((v) => !v.abgegeben)
-            .map((v) => (
-              <div className="versuchszeile" key={v.id}>
-                <span>
-                  {v.examId} · {new Date(v.gestartet).toLocaleString('de-DE')} ·{' '}
-                  {v.module.join(', ')}
-                </span>
-                <span className="versuchszeile__knoepfe">
-                  <button type="button" className="knopf" onClick={() => onWeiter(v.id)}>
-                    Fortsetzen
-                  </button>
-                  <button
-                    type="button"
-                    className="knopf knopf--sekundaer"
-                    onClick={() =>
-                      void loeschen(v.id).then(() => alleVersuche().then(setVersuche))
-                    }
-                  >
-                    Löschen
-                  </button>
-                </span>
-              </div>
-            ))}
+          <h2>Angefangen</h2>
+          {offen.map((v) => (
+            <div className="versuchszeile" key={v.id}>
+              <span>
+                {v.examId} · {new Date(v.gestartet).toLocaleDateString('de-DE')} ·{' '}
+                {v.module.join(', ')}
+              </span>
+              <span className="versuchszeile__knoepfe">
+                <button type="button" className="knopf" onClick={() => onWeiter(v.id)}>
+                  Fortsetzen
+                </button>
+                <button
+                  type="button"
+                  className="knopf knopf--sekundaer"
+                  onClick={() =>
+                    void loeschen(v.id).then(() => alleVersuche().then(setVersuche))
+                  }
+                >
+                  Löschen
+                </button>
+              </span>
+            </div>
+          ))}
         </section>
       )}
 
-      {versuche.some((v) => v.abgegeben) && (
+      {fertig.length > 0 && (
         <section className="teil">
           <h2>Frühere Ergebnisse</h2>
-          {versuche
-            .filter((v) => v.abgegeben)
-            .slice(0, 8)
-            .map((v) => (
-              <div className="versuchszeile" key={v.id}>
-                <span>
-                  {v.examId} · {new Date(v.gestartet).toLocaleDateString('de-DE')} ·{' '}
-                  {v.module.join(', ')}
-                </span>
-                <button type="button" className="knopf" onClick={() => onErgebnis(v.id)}>
-                  Ergebnis ansehen
-                </button>
-              </div>
-            ))}
+          {fertig.slice(0, 8).map((v) => (
+            <div className="versuchszeile" key={v.id}>
+              <span>
+                {v.examId} · {new Date(v.gestartet).toLocaleDateString('de-DE')} ·{' '}
+                {v.module.join(', ')}
+              </span>
+              <button type="button" className="knopf" onClick={() => onErgebnis(v.id)}>
+                Ergebnis ansehen
+              </button>
+            </div>
+          ))}
         </section>
       )}
 
       <section className="teil">
-        <h2>Neue Prüfung beginnen</h2>
-
-        <label className="feld">
-          <span>Name (nur für Ihre Abgabe, bleibt auf diesem Gerät)</span>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="z. B. Ravi"
-          />
-        </label>
+        <h2>Prüfung ablegen</h2>
+        <p className="notiz">
+          Mit Uhr und Auswertung. Lesen und Hören werden automatisch bewertet; für
+          Schreiben und Sprechen bekommen Sie am Ende Musterlösungen zum Vergleichen.
+        </p>
 
         <div className="pruefungswahl">
           {sichtbar.map((p) => (
@@ -281,18 +353,8 @@ export function Start({
           ))}
         </div>
 
-        {sichtbar.length > 0 && (
-          <p className="notiz kursstufe">
-            <strong>{stufe}.1</strong> und <strong>{stufe}.2</strong> sind Kursstufen,
-            keine Prüfungsteile: Das Zertifikat {stufe} ist <em>eine</em> Prüfung aus vier
-            Modulen, die man zusammen oder einzeln ablegen kann. Ein {stufe}.1-Satz ist
-            etwas langsamer gesprochen und stellt die falschen Antworten durchsichtiger,
-            ein {stufe}.2-Satz entspricht dem Prüfungstag.
-          </p>
-        )}
-
         <fieldset className="modulwahl">
-          <legend>Welche Module möchten Sie ablegen?</legend>
+          <legend>Welche Module?</legend>
           {MODULE.map((m) => (
             <label
               key={m.id}
@@ -304,27 +366,29 @@ export function Start({
                 onChange={() => umschalten(m.id)}
               />
               <span className="modulkarte__name">{m.label}</span>
-              <span className="modulkarte__dauer">{format.module[m.id].anzeige}</span>
+              <span className="modulkarte__dauer">
+                {STUFEN[stufe].module[m.id].anzeige}
+              </span>
             </label>
           ))}
         </fieldset>
-
-        {module.includes('sprechen') && !window.isSecureContext && (
-          <p className="fehler">
-            Für das Modul Sprechen braucht der Browser eine sichere Verbindung. Über
-            <code> http://localhost </code> funktioniert es; über eine IP-Adresse im
-            Netzwerk sperrt der Browser das Mikrofon.
-          </p>
-        )}
 
         <button
           type="button"
           className="knopf knopf--gross knopf--primaer"
           disabled={!examId || module.length === 0}
-          onClick={starten}
+          onClick={() =>
+            examId &&
+            module.length > 0 &&
+            // Keep the official module order regardless of the click order.
+            onStart(
+              examId,
+              MODULE.filter((m) => module.includes(m.id)).map((m) => m.id),
+            )
+          }
         >
           Prüfung starten
-          {gewaehlt && module.length > 0 && (
+          {module.length > 0 && (
             <span className="knopf__zusatz">
               {' '}
               — {module.length} Modul{module.length > 1 ? 'e' : ''}
@@ -332,23 +396,51 @@ export function Start({
           )}
         </button>
 
-        {gewaehlt && (
-          <Druckbogen
-            examId={gewaehlt.id}
-            dateien={gewaehlt.pdfsVorAbgabe}
-            titel="Lieber auf Papier?"
-            hinweis={
-              'Diese Prüfung als PDF — zum Ausdrucken und offline Schreiben. ' +
-              'Das Lösungsheft erscheint nach der Abgabe auf der Ergebnisseite.'
-            }
-          />
-        )}
+        <details className="kursstufe">
+          <summary>
+            Was bedeuten {stufe}.1 und {stufe}.2?
+          </summary>
+          <p className="notiz">
+            Kursstufen, keine Prüfungsteile: Das Zertifikat {stufe} ist <em>eine</em>{' '}
+            Prüfung aus vier Modulen, die man zusammen oder einzeln ablegen kann. Ein{' '}
+            {stufe}.1-Satz ist etwas langsamer gesprochen und stellt die falschen
+            Antworten durchsichtiger, ein {stufe}.2-Satz entspricht dem Prüfungstag.
+          </p>
+        </details>
 
         <p className="notiz">
-          Der Timer läuft ab dem Start und lässt sich nicht anhalten. Ihre Antworten
-          werden laufend auf diesem Gerät gespeichert — ein Neuladen verliert nichts.
+          Die Uhr läuft ab dem Start und lässt sich nicht anhalten. Ihre Antworten bleiben
+          auf diesem Gerät — ein Neuladen verliert nichts.
         </p>
       </section>
     </div>
+  );
+}
+
+/** The two chips that say where you are and are the way to somewhere else. */
+function Wegweiser({
+  stufe,
+  modus,
+  onStufe,
+  onModus,
+}: {
+  stufe: Stufe;
+  modus: Modus | null;
+  onStufe: () => void;
+  onModus: () => void;
+}) {
+  return (
+    <nav className="wegweiser" aria-label="Auswahl">
+      <button type="button" className="wegweiser__chip" onClick={onStufe}>
+        {stufe}
+        <span className="wegweiser__wechsel">ändern</span>
+      </button>
+      {modus && (
+        <button type="button" className="wegweiser__chip" onClick={onModus}>
+          {modus === 'online' ? 'Am Bildschirm' : 'Auf Papier'}
+          <span className="wegweiser__wechsel">ändern</span>
+        </button>
+      )}
+    </nav>
   );
 }

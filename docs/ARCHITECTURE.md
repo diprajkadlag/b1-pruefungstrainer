@@ -15,7 +15,7 @@ validate  build_pdf  generate_audio  export_web   check_no_leak
  CI gate  4 PDFs      MP3 + cues    public + keyed   CI gate
                                         halves
                                           │
-                              apps/web (PWA)  ←→  apps/server (optional)
+                                    apps/web (PWA)
                                           └── @pruefung/core: shared scoring
 ```
 
@@ -69,10 +69,9 @@ itself — the table only covers the gap before that.
 
 ### `packages/core`
 
-Scoring, grade bands, the level table and the shared types. Imported by both
-the web app and the server, so a result cannot be computed two different ways
-depending on where it was calculated. The types mirror
-`packages/schema/exam.schema.json`, which is the authority.
+Scoring, grade bands, the level table and the shared types. Kept out of the app
+so a result is computed in one place and can be tested without a browser. The
+types mirror `packages/schema/exam.schema.json`, which is the authority.
 
 Raw items convert to the 100-point scale with a deliberate rounding rule: 30
 items do not divide 100 evenly, so 18/30 must become exactly 60 and pass while
@@ -113,20 +112,19 @@ React and TypeScript, an installable PWA. Notable behaviour:
   seek, no second listen. Parts heard twice contain the repeat inside the audio.
 - Answers autosave to IndexedDB on a debounce, so a crash costs a second of
   typing rather than a module.
-- Speaking is recorded in the browser. Nothing is uploaded; the writing and the
-  recordings package into a ZIP the candidate hands to a teacher.
+- Speaking sets the task, runs the preparation clock and plays the simulated
+  partner. It does not record: no software here can judge whether a candidate's
+  German would pass, and a score that pretended to would teach a false
+  confidence. The model answers on the result screen are what the learner
+  measures themselves against instead.
 
-### `apps/server`
+### The way in
 
-Optional. When the app is served by it, submissions are pushed there too, so a
-teacher finds the work on disk instead of waiting for an emailed ZIP. It also
-serves an examiner view at `/pruefer` that shows the writing beside the marking
-criteria **for that paper's level** and the recordings with inline players.
-
-Detection is a probe rather than a build flag, so the same bundle works on
-GitHub Pages and behind the server without being rebuilt.
-
-Never put it on the public internet — it has no authentication.
+The start screen asks two questions — which level, and screen or paper — and
+remembers both in `localStorage`. Everything else belongs to one of those two
+answers, so the page shows only what the answer makes usable, and the level's
+colour is published on `<html>` so the rest of the interface inherits it
+without being told which level is open.
 
 ---
 

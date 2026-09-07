@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import { ersterBesuch, oeffnen } from './hilfe';
 
 /**
  * End-to-end for the B2 paper.
@@ -11,6 +12,10 @@ import { fileURLToPath, URL } from 'node:url';
  * rather than on the item. Nothing else in the suite would notice if those
  * controls rendered but scored against the wrong key, so this sits the module
  * and marks it against the source content.
+ *
+ * The B2 shelf now sits behind the two entry questions. Only the first test
+ * walks through them, because it is the one about which level the shelf
+ * belongs to; the rest arrive with both answers already given.
  */
 
 const examPfad = fileURLToPath(
@@ -22,9 +27,7 @@ type Item = { nr: number; loesung: string; typ: string };
 const lesenItems: Item[] = exam.lesen.teile.flatMap((t: { items: Item[] }) => t.items);
 
 async function b2Starten(page: Page, module: string[]) {
-  await page.goto('/');
-  await page.getByRole('tab', { name: 'B2' }).click();
-  await page.getByPlaceholder('z. B. Ravi').fill('Testkandidat');
+  await oeffnen(page, 'B2');
   await page.getByRole('button', { name: /Übungsprüfung B2 1/ }).click();
 
   for (const label of ['Lesen', 'Hören', 'Schreiben', 'Sprechen']) {
@@ -32,7 +35,7 @@ async function b2Starten(page: Page, module: string[]) {
     const soll = module.includes(label);
     if ((await box.isChecked()) !== soll) await box.click();
   }
-  await page.getByRole('button', { name: /Prüfung starten/ }).click();
+  await page.getByRole('button', { name: /^Prüfung starten/ }).click();
 }
 
 async function beantworten(page: Page, items: Item[], falsch: Set<number>) {
@@ -45,16 +48,40 @@ async function beantworten(page: Page, items: Item[], falsch: Set<number>) {
 }
 
 test.describe('B2', () => {
-  test('offers the level tabs and lists only that level’s papers', async ({ page }) => {
-    await page.goto('/');
-    await expect(page.getByRole('button', { name: /Übungsprüfung 1/ })).toBeVisible();
+  test('asks for the level first and then lists only that level’s papers', async ({
+    page,
+  }) => {
+    await ersterBesuch(page);
 
-    await page.getByRole('tab', { name: 'B2' }).click();
+    // Nothing is on offer until the level is settled — the old start screen
+    // showed every paper at once and hoped the tabs were noticed.
+    await expect(page.getByRole('heading', { name: 'Welches Niveau?' })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Übungsprüfung/ })).toHaveCount(0);
+    for (const stufe of ['A1', 'A2', 'B1', 'B2']) {
+      await expect(
+        page.getByRole('button', { name: new RegExp(`^${stufe}`) }),
+      ).toBeVisible();
+    }
+
+    await page.getByRole('button', { name: /^B2/ }).click();
+    await expect(
+      page.getByRole('heading', { name: 'Wie möchten Sie üben?' }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Am Bildschirm/ }).click();
+
     await expect(page.getByRole('button', { name: /Übungsprüfung B2 1/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /Übungsprüfung 1 —/ })).toHaveCount(0);
 
-    // Writing is 75 minutes at B2 and 60 at B1; the card must follow the tab.
+    // Writing is 75 minutes at B2 and 60 at B1; the cards must follow the level.
     await expect(page.getByText('75 Min.')).toBeVisible();
+
+    // And the chip is the way back to a different level, mode still answered.
+    await page.getByRole('button', { name: 'B2 ändern' }).click();
+    await page.getByRole('button', { name: /^B1/ }).click();
+
+    await expect(page.getByRole('button', { name: /Übungsprüfung 1 —/ })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Übungsprüfung B2 1/ })).toHaveCount(0);
+    await expect(page.getByText('75 Min.')).toHaveCount(0);
   });
 
   test('renders the new task types with their own answer letters', async ({ page }) => {
@@ -81,7 +108,7 @@ test.describe('B2', () => {
   test('marks a fully correct reading module as 100 / sehr gut', async ({ page }) => {
     await b2Starten(page, ['Lesen']);
     await beantworten(page, lesenItems, new Set());
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await page.getByRole('button', { name: /Auswertung ansehen/ }).click();
 
     const karte = page.locator('.karte--bestanden').first();
     await expect(karte).toContainText('100');
@@ -99,7 +126,7 @@ test.describe('B2', () => {
 
     await b2Starten(page, ['Lesen']);
     await beantworten(page, lesenItems, falsch);
-    await page.getByRole('button', { name: /Prüfung abgeben/ }).click();
+    await page.getByRole('button', { name: /Auswertung ansehen/ }).click();
 
     await expect(page.locator('.karte').first()).toContainText(String(erwartet));
     await page.getByRole('tab', { name: 'Lösungen' }).click();
@@ -139,10 +166,12 @@ test.describe('B2 Spickzettel', () => {
     ),
   );
 
-  test('the level tab decides which sheet opens', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'B2' }).click();
-    await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+  /** The study-tool button: its accessible name starts with the tool's title. */
+  const knopf = (page: Page) => page.getByRole('button', { name: /^Spickzettel/ });
+
+  test('the chosen level decides which sheet opens', async ({ page }) => {
+    await oeffnen(page, 'B2');
+    await knopf(page).click();
 
     await expect(page.getByRole('heading', { name: b2Lernhilfe.titel })).toBeVisible();
     // 75 minutes for writing is the B2 number; B1's sheet says 60.
@@ -150,9 +179,8 @@ test.describe('B2 Spickzettel', () => {
   });
 
   test('carries the full B2 word list', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('tab', { name: 'B2' }).click();
-    await page.getByRole('button', { name: 'Spickzettel öffnen' }).click();
+    await oeffnen(page, 'B2');
+    await knopf(page).click();
     await page.getByRole('tab', { name: 'Wortschatz' }).click();
 
     const verben = b2Wortschatz.verben.flatMap(

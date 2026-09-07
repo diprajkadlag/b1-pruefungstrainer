@@ -7,6 +7,46 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
+## [Unreleased]
+
+### Changed
+
+- **The app asks two questions and then gets out of the way.** Which level, and
+  screen or paper. Everything after that belongs to one of those answers, so a
+  page only ever shows what the answer makes usable. Both are remembered, so a
+  returning learner lands on their own shelf and two chips at the top are the
+  whole distance to a different one. The old start screen stacked four levels,
+  three study tools, five papers, the module picker and the printables onto one
+  page that ran past three thousand pixels on a phone — and put the level tabs
+  at the very top, where they only appeared once the content file had loaded.
+  Anyone arriving in that first moment saw an exam form with no levels at all.
+- **It looks like a coursebook now.** Each level owns a colour the way a band of
+  Netzwerk or Menschen does — A1 green, A2 blue, B1 orange, B2 violet — and the
+  chosen one is published on the document root, so the headings, the buttons and
+  the cards all pick it up without being told which level is open. *der*, *die*
+  and *das* keep the blue, red and green that German classrooms have used for
+  decades, lifted out of the word game so the whole app can speak it.
+- **Paper mode is a shelf, not a footnote.** Every printable for the level in
+  one place: the cheat sheet and the speaking trainer at the top, then each
+  paper with its Kandidatenblätter, Antwortbogen and Sprechen-Karten, and the
+  Lösungsheft set apart under its own warning. Each sheet can be read in the
+  page or downloaded, and one button pulls the whole shelf into the offline
+  cache. The cheat sheet and speaking trainer PDFs are now exported to the app
+  at all; before this they existed only as release downloads.
+
+### Removed
+
+- **Recording, submissions and examiner marking.** The speaking module no longer
+  records: no software here can judge whether a candidate's German would pass,
+  and a score that pretended to would teach a false confidence. Writing and
+  speaking now set the task and offer a model answer to measure yourself
+  against, which is what a learner working alone can actually use. With them go
+  the submission ZIP, the optional `apps/server` that received submissions and
+  showed an examiner view, and the name field — an attempt is tied to a paper
+  and never to a person. The app now asks for neither a name nor a microphone.
+- Lesen and Hören are still timed and still marked automatically. That part was
+  never the problem.
+
 ## [1.12.0] — 2026-09-07
 
 ### Added
