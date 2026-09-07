@@ -642,3 +642,213 @@ class TestSchluesselverteilung:
                     rep = validate.Report(exam["meta"]["id"])
                     validate.check_schluesselverteilung(teil, f"{modul}/{teil['nummer']}", rep)
                     assert rep.errors == [], "\n".join(str(f) for f in rep.errors)
+
+
+# --------------------------------------------------------------------------
+# The speaking trainer, per level
+# --------------------------------------------------------------------------
+
+
+def _thema(titel: str = "Sollte man das wirklich tun?", woerter: int = 110) -> dict:
+    """One Vortrag topic whose model talk lands inside the four-minute window."""
+    return {
+        "titel": titel,
+        "kultur": {"de": "Deutscher Hintergrund. " * 20, "en": "German background. " * 20},
+        "wortschatz": [{"de": f"das Wort {i}", "en": f"the word {i}"} for i in range(8)],
+        "musterloesung": [" ".join(["Wort"] * woerter) for _ in range(4)],
+    }
+
+
+def _b2_trainer(aufgaben: int = 1) -> dict:
+    """A minimal speaking trainer that the B2 rules accept."""
+    return {
+        "titel": "Sprechtraining B2",
+        "untertitel": "Aufgaben",
+        "stufe": "B2",
+        "hinweis": "Erst sprechen, dann nachlesen.",
+        "vorbereitungMinuten": 15,
+        "teile": [{"nummer": 1}, {"nummer": 2}],
+        "gliederung": ["Einleitung", "Hauptteil", "Hauptteil", "Schluss"],
+        "aufgaben": [
+            {
+                "nummer": n + 1,
+                "kurz": f"Thema {n + 1}",
+                "teil1": {
+                    "themen": [_thema(f"Sollte A{n} gelten?"), _thema(f"Sollte B{n} gelten?")],
+                    "fragen": ["Und Sie?", "Warum?", "Und sonst?"],
+                    "antwortenAufFragen": ["Ja, weil das so ist.", "Darum.", "Sonst nichts."],
+                },
+                "teil2": {
+                    "frage": f"Sollte man D{n} verbieten?",
+                    "punkte": ["a", "b", "c", "d"],
+                    "kultur": {"de": "Deutscher Hintergrund. " * 20,
+                               "en": "German background. " * 20},
+                    "musterdialog": [{"wer": "A" if i % 2 == 0 else "B",
+                                      "text": " ".join(["Wort"] * 40)} for i in range(12)],
+                },
+            }
+            for n in range(aufgaben)
+        ],
+    }
+
+
+class TestSprechtrainingB2:
+    """B2 Sprechen is a different examination, so it gets its own rules.
+
+    Each test breaks exactly one thing in a trainer that otherwise passes.
+    """
+
+    def pruefen(self, daten: dict, tmp_path, monkeypatch, stufe: str = "B2") -> list:
+        (tmp_path / f"{stufe.lower()}.json").write_text(
+            json.dumps(daten, ensure_ascii=False), encoding="utf-8")
+        monkeypatch.setattr(validate, "SPRECHEN", tmp_path)
+        rep = validate.Report(f"sprechen-{stufe}")
+        validate.check_sprechtraining(rep, stufe)
+        return rep.errors
+
+    def test_a_sound_trainer_passes(self, tmp_path, monkeypatch):
+        assert self.pruefen(_b2_trainer(), tmp_path, monkeypatch) == []
+
+    def test_one_topic_instead_of_a_choice_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"].pop()
+        assert any("two topics" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_the_same_topic_offered_twice_is_an_error(self, tmp_path, monkeypatch):
+        """A choice between a thing and itself is not a choice."""
+        daten = _b2_trainer()
+        themen = daten["aufgaben"][0]["teil1"]["themen"]
+        themen[1]["titel"] = themen[0]["titel"]
+        assert any("identical" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_topic_reused_across_tasks_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer(aufgaben=2)
+        daten["aufgaben"][1]["teil1"]["themen"][0]["titel"] = (
+            daten["aufgaben"][0]["teil1"]["themen"][0]["titel"])
+        assert any("Vortrag topic used 2 times" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_debate_question_reused_across_tasks_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer(aufgaben=2)
+        daten["aufgaben"][1]["teil2"]["frage"] = daten["aufgaben"][0]["teil2"]["frage"]
+        assert any("debate question used 2 times" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_topic_that_is_not_a_question_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0]["titel"] = "Homeoffice"
+        assert any("arguable question" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_five_blocks_is_an_error_because_b2_has_a_four_point_outline(
+            self, tmp_path, monkeypatch):
+        """Five blocks is the B1 presentation; at B2 the outline has four points."""
+        daten = _b2_trainer()
+        thema = daten["aufgaben"][0]["teil1"]["themen"][0]
+        thema["musterloesung"] = [" ".join(["Wort"] * 88) for _ in range(5)]
+        assert any("one block per outline point" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_talk_too_short_for_four_minutes_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0] = _thema(woerter=60)
+        assert any("outside the 400-500" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_talk_too_long_for_four_minutes_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0] = _thema(woerter=140)
+        assert any("outside the 400-500" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_printed_word_count_that_lies_is_an_error(self, tmp_path, monkeypatch):
+        """The count is printed by the talk, so a stale one teaches a false pace."""
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0]["umfang"] = {"woerter": 999}
+        assert any("does not match" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_stub_culture_note_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][1]["kultur"]["de"] = "Kurz."
+        assert any("too short" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_missing_english_gloss_is_an_error(self, tmp_path, monkeypatch):
+        """The English note is what the learner without German context reads."""
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil2"]["kultur"]["en"] = ""
+        assert any("too short" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_too_little_topic_vocabulary_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0]["wortschatz"] = [
+            {"de": "das Wort", "en": "the word"}]
+        assert any("too little topic vocabulary" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_vocabulary_entry_too_wide_for_the_printed_table_is_an_error(
+            self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil1"]["themen"][0]["wortschatz"][0]["de"] = "d" * 40
+        assert any("too long for the printed table" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_debate_that_does_not_alternate_is_an_error(self, tmp_path, monkeypatch):
+        """Two turns by the same speaker is a monologue, not a debate."""
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil2"]["musterdialog"][1]["wer"] = "A"
+        assert any("does not alternate" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_too_few_debate_turns_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil2"]["musterdialog"] = (
+            daten["aufgaben"][0]["teil2"]["musterdialog"][:8])
+        assert any("outside 10-14" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_debate_too_long_for_five_minutes_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        for zug in daten["aufgaben"][0]["teil2"]["musterdialog"]:
+            zug["text"] = " ".join(["Wort"] * 60)
+        assert any("outside the 380-560" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_three_discussion_points_is_an_error(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["aufgaben"][0]["teil2"]["punkte"].pop()
+        assert any("four discussion points" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_five_point_outline_is_an_error_at_b2(self, tmp_path, monkeypatch):
+        daten = _b2_trainer()
+        daten["gliederung"] = ["Einleitung", "Hauptteil", "Hauptteil", "Schluss", "Extra"]
+        assert any("gliederung" in f.where
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_the_b1_field_is_not_accepted_at_b2(self, tmp_path, monkeypatch):
+        """B1 carries `folien`, B2 `gliederung`; swapping them must not pass."""
+        daten = _b2_trainer()
+        daten["folien"] = daten.pop("gliederung")
+        assert any("gliederung" in f.message
+                   for f in self.pruefen(daten, tmp_path, monkeypatch))
+
+    def test_a_missing_level_file_is_not_an_error(self, tmp_path, monkeypatch):
+        """A level with no trainer yet must not fail the whole content build."""
+        monkeypatch.setattr(validate, "SPRECHEN", tmp_path)
+        rep = validate.Report("sprechen-A1")
+        validate.check_sprechtraining(rep, "A1")
+        assert rep.errors == []
+
+    def test_every_shipped_trainer_passes(self):
+        """The rules are worth nothing if the shipped books do not meet them."""
+        for stufe in ("B1", "B2"):
+            if not (validate.SPRECHEN / f"{stufe.lower()}.json").exists():
+                continue
+            rep = validate.Report(f"sprechen-{stufe}")
+            validate.check_sprechtraining(rep, stufe)
+            assert rep.errors == [], "\n".join(str(f) for f in rep.errors)

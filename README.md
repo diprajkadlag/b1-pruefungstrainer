@@ -91,6 +91,11 @@ fifty planning situations, fifty presentation topics, the feedback round —
 and every one carries that background in simple German with an English gloss,
 plus a model answer written to the five slides and checked to fit the three
 minutes you actually get. In the app and as a 116-page PDF for offline work.
+**Sprechtraining B2** does the same for the B2 examination, which has a
+different shape: a four-minute talk with a choice of two topics, then a
+five-minute debate in which the partner argues back. Fifty tasks, a hundred
+talk topics, three culture notes each, and model answers checked to fit four
+minutes at a B2 pace — in the app and as its own PDF on the release.
 
 **Prints.** Every paper also builds to PDF — candidate sheets, an answer sheet, speaking cards, and a full solution booklet — and the app links them directly, so you can sit a paper on paper and cross-check afterwards. The booklet follows the same rule as the answer key: it appears on the result screen, never before. Opened PDFs are cached for offline use.
 

@@ -177,10 +177,16 @@ export function Start({
               <span aria-hidden="true">🎤</span> Sprechtraining {stufe}
             </h2>
             <p className="notiz">
-              50 vollständige Sprechaufgaben zum Üben — mit dem Hintergrundwissen, das man
-              für ein deutsches Thema braucht, wenn man nicht hier aufgewachsen ist, und
-              mit Musterlösungen, die wirklich in die drei Minuten passen. Erst sprechen,
-              dann nachlesen.
+              {stufe === 'B2'
+                ? '50 vollständige Sprechaufgaben im B2-Format: ein Vortrag von vier ' +
+                  'Minuten mit zwei Themen zur Wahl, danach eine Debatte. Mit dem ' +
+                  'Hintergrundwissen, das man für ein deutsches Thema braucht, wenn man ' +
+                  'nicht hier aufgewachsen ist, und mit Musterlösungen, die wirklich in ' +
+                  'die Zeit passen. Erst sprechen, dann nachlesen.'
+                : '50 vollständige Sprechaufgaben zum Üben — mit dem Hintergrundwissen, ' +
+                  'das man für ein deutsches Thema braucht, wenn man nicht hier ' +
+                  'aufgewachsen ist, und mit Musterlösungen, die wirklich in die drei ' +
+                  'Minuten passen. Erst sprechen, dann nachlesen.'}
             </p>
           </div>
           <button

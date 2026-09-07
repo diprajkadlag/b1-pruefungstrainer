@@ -78,16 +78,17 @@ jobs:
             stufe=$(basename "$(dirname "$(dirname "$d")")")
             cp "$d" "release/spickzettel-$stufe.pdf"
           done
-          # The speaking trainer is a 116-page book, so it goes out on its own
-          # rather than buried in pdfs.zip: it is the one document someone
-          # prints to work through over weeks.
-          #
-          # The `if`, not `[ -f ... ] && cp`: the test is the last command in
-          # the block, so a missing file would leave a non-zero status and take
-          # the whole release step down with it under `set -e`.
-          if [ -f content/sprechen/pdf/sprechtraining.pdf ]; then
-            cp content/sprechen/pdf/sprechtraining.pdf release/sprechtraining-b1.pdf
-          fi
+          # The speaking trainers are books of over a hundred pages, so they go
+          # out on their own rather than buried in pdfs.zip: they are what
+          # someone prints to work through over weeks. One per level, derived
+          # rather than named — naming them one by one is what left A1 and A2
+          # out of earlier releases.
+          for d in content/sprechen/pdf/sprechtraining_*.pdf; do
+            if [ -f "$d" ]; then
+              stufe=$(basename "$d" .pdf | sed 's/^sprechtraining_//')
+              cp "$d" "release/sprechtraining-$stufe.pdf"
+            fi
+          done
           for d in content/exams/*/; do
             id=$(basename "$d")
             if [ -d "$d/audio" ]; then
@@ -113,10 +114,12 @@ jobs:
               cheat sheet for each of the four levels: strategy for all four modules, Redemittel
               for Sprechen and Schreiben, grammar in tables, and the core
               vocabulary with every verb form.
-            - **`sprechtraining-b1.pdf`** — 50 complete B1 speaking tasks to
-              practise offline, each with the German background behind the
-              topic (in German and English) and model answers timed to the
-              three minutes the exam gives.
+            - **`sprechtraining-b1.pdf`** and **`sprechtraining-b2.pdf`** — 50
+              complete speaking tasks per level, to practise offline. Each
+              carries the German background behind the topic (in German and
+              English) and model answers timed to the minutes the exam actually
+              gives. B2 follows the B2 format: a four-minute Vortrag with a
+              choice of two topics, then a five-minute debate.
             - **`pdfs.zip`** — printable papers, answer sheets, speaking cards
               and solution booklets, for every level.
             - **`audio-<paper>.zip`** — the listening tracks for one paper.
