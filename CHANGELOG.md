@@ -7,7 +7,12 @@ Notable changes to this project. Format based on
 Exam content is versioned separately, per paper, in each `exam.json`
 (`meta.contentVersion`).
 
-## [Unreleased]
+## [2.0.0] — 2026-09-08
+
+A major version because something documented is gone: the optional
+submission server, the recorder and the examiner view. Anyone who deployed
+`apps/server` has nothing to deploy any more. Everything a learner uses is
+still here and simpler to reach.
 
 ### Added
 
