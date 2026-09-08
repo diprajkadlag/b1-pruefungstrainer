@@ -9,6 +9,40 @@ Exam content is versioned separately, per paper, in each `exam.json`
 
 ## [Unreleased]
 
+### Added
+
+- **Wortsprung: Sprachschatz, answered with the feet.** A second game over the
+  same cards. Each question is a station in a side-scrolling world: the options
+  hang above it as question-mark boxes to head from below, or waddle along it
+  as ducks to land on. The right one rings like a coin and the hero runs on;
+  the wrong one costs a heart. Twelve stations, three hearts, the same streak
+  scoring, and the same Leitner boxes and history as Sprachschatz — a word
+  missed in one comes back sooner in the other. Arrow keys or A/D and Space on
+  a keyboard; thumb buttons under the field on a phone; and tapping an option
+  makes the hero run there and jump, so the answer is still given by the
+  character. The world is simulated in fixed slices in `@pruefung/core`, with
+  its physics and hit rules unit-tested, and only drawn in the browser. The
+  option texts are DOM rather than canvas, so they wrap, carry the article
+  colours and can be read by a screen reader. Six new synthesised sounds —
+  jump, coin, stomp, hit, finish, game over — from the same tone tables as
+  before; nothing is fetched.
+- **Spiele.** The Sprachschatz card on the start shelf became a games shelf
+  holding both games, with the level's record on it.
+- **Previous results can be deleted**, one at a time or all at once. Until now
+  a finished attempt stayed on the start screen for good.
+
+### Fixed
+
+- **Every PDF link opened the start screen.** The service worker's app-shell
+  fallback answered any navigation it did not recognise with `index.html`, and
+  an embedded `<object>`, a new tab and a download link are all navigations.
+  So "Ansehen", "In neuem Tab öffnen" and the Lösungsheft link all showed the
+  app with the PDF's URL in the address bar. Everything under `/content/` is
+  now excluded from the fallback. A browser test navigates to a PDF through
+  the worker and fails without the fix.
+- The result screen still told candidates to download their submission and
+  send it to a teacher. It now points at the model answers instead.
+
 ### Changed
 
 - **The app asks two questions and then gets out of the way.** Which level, and

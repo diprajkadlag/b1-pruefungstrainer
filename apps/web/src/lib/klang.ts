@@ -77,8 +77,12 @@ function tonSpielen(ctx: AudioContext, ton: Ton, start: number): void {
   quelle.stop(start + ton.dauer + 0.02);
 }
 
-/** Play the sound for an answer. Does nothing if sound is off. */
-export function antwortKlang(richtig: boolean): void {
+/**
+ * Play any sequence of tones. Does nothing if sound is off. The platformer
+ * has a handful of its own — a jump, a coin, a stomp, a hit — and they are
+ * all just tone tables from the core played through this one path.
+ */
+export function klangSpielen(toene: readonly Ton[]): void {
   if (!klangAn()) return;
   const ctx = holen();
   if (!ctx) return;
@@ -88,8 +92,13 @@ export function antwortKlang(richtig: boolean): void {
     // for the rest of the session.
     if (ctx.state === 'suspended') void ctx.resume();
     const jetzt = ctx.currentTime;
-    for (const ton of klangFuer(richtig)) tonSpielen(ctx, ton, jetzt + ton.ab);
+    for (const ton of toene) tonSpielen(ctx, ton, jetzt + ton.ab);
   } catch {
     // Nothing here is worth interrupting a round for.
   }
+}
+
+/** Play the sound for an answer. Does nothing if sound is off. */
+export function antwortKlang(richtig: boolean): void {
+  klangSpielen(klangFuer(richtig));
 }

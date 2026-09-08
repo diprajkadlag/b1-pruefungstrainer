@@ -82,6 +82,19 @@ gone. Only the record is stored, never the card: the question and its
 explanation are generated again from the cheat sheet, so the history stays tiny
 and never goes stale. Pin a round with `?saat=12345` to replay it exactly.
 
+**And, since v1.13, lets you answer with your feet.** *Wortsprung* is the same
+twelve cards played as a side-scrolling platformer. Each question is a station:
+its options hang above the ground as question-mark boxes to head from below, or
+waddle along it as ducks to land on. The right one rings like a coin and the
+hero runs on; the wrong one costs one of three hearts. Arrow keys or A/D and
+Space on a keyboard, thumb buttons under the field on a phone — and tapping an
+option makes the hero run there and jump, so the answer is still given by the
+character. It shares the Leitner boxes and the history with Sprachschatz, so a
+word missed while jumping comes back sooner while tapping, and the other way
+round. The physics and the hit rules live in `@pruefung/core`, unit-tested and
+deterministic, and only the drawing happens in the browser. Both games sit on
+one **Spiele** shelf per level.
+
 **And it trains the part that is hardest to practise alone.** Sprechen is the
 module you cannot mark yourself, and for a candidate who did not grow up in
 Germany it hides a second difficulty: the topics assume you know how things

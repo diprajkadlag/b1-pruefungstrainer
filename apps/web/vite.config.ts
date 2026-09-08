@@ -49,6 +49,12 @@ export default defineConfig({
         // must be cacheable for the listening module to work offline.
         maximumFileSizeToCacheInBytes: 12 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,svg,png,json}'],
+        // Everything under /content/ is a real file, never a client route.
+        // Without this the app-shell fallback answers navigations to a PDF
+        // with index.html — and an <object>, a new tab and a download link
+        // are all navigations — so every "open the Lösungsheft" landed on
+        // the start screen with the PDF's URL in the address bar.
+        navigateFallbackDenylist: [/\/content\//],
         runtimeCaching: [
           {
             urlPattern: /\/content\/.*\.(mp3|ogg|wav)$/,

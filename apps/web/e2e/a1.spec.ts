@@ -200,3 +200,38 @@ test.describe('A1 Spickzettel', () => {
     await expect(page.getByText(/1,66/)).toBeVisible();
   });
 });
+
+test.describe('Frühere Ergebnisse', () => {
+  test('a finished attempt can be deleted from the shelf, one or all', async ({
+    page,
+  }) => {
+    // Two quick attempts, closed without answering: what matters here is the
+    // shelf afterwards, not the score.
+    for (let i = 0; i < 2; i++) {
+      await a1Starten(page, ['Lesen']);
+      await abgeben(page);
+      await page.locator('.karte').first().waitFor();
+      await page.getByRole('button', { name: /Zurück zur Übersicht/ }).click();
+    }
+    await expect(page.getByRole('heading', { name: 'Frühere Ergebnisse' })).toBeVisible();
+    await expect(page.locator('.versuchszeile')).toHaveCount(2);
+
+    await page
+      .getByRole('button', { name: /Ergebnis vom .* löschen/ })
+      .first()
+      .click();
+    await expect(page.locator('.versuchszeile')).toHaveCount(1);
+
+    await page.getByRole('button', { name: 'Alle löschen' }).click();
+    await expect(page.getByRole('heading', { name: 'Frühere Ergebnisse' })).toHaveCount(
+      0,
+    );
+
+    // Gone for good, not just hidden.
+    await page.reload();
+    await page.getByRole('heading', { name: 'Prüfung ablegen' }).waitFor();
+    await expect(page.getByRole('heading', { name: 'Frühere Ergebnisse' })).toHaveCount(
+      0,
+    );
+  });
+});

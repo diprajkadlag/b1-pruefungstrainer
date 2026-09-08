@@ -2622,3 +2622,331 @@ button.pfad__halt:focus-visible {
 .papier__pruefung + .papier__pruefung {
   margin-top: 0.6rem;
 }
+
+/* --- the games shelf ----------------------------------------------------- */
+.spiele__karten {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin-top: 1rem;
+}
+.spielkarte {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1rem 1rem 1.1rem;
+  border: 1px solid var(--edge);
+  border-top: 5px solid var(--stufe);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+.spielkarte:hover,
+.spielkarte:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+}
+.spielkarte__zeichen {
+  font-size: 2rem;
+  line-height: 1;
+}
+.spielkarte__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.spielkarte__text strong {
+  font-size: 1.15rem;
+}
+.spielkarte__rekord {
+  font-size: 0.85rem;
+  color: var(--stufe);
+  font-weight: 700;
+}
+.spielkarte__neu {
+  align-self: flex-start;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--stufe);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Wortsprung ------------------------------------------------------------- */
+/* The playfield is a canvas; everything a person reads or presses is DOM on
+   top of it, so it wraps, carries the article colours and can be found. */
+.ws__kopf,
+.ws__leiste {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+.ws__kopf h2 {
+  margin: 0;
+}
+.ws__leiste {
+  justify-content: space-between;
+}
+.ws__pfad {
+  font-weight: 700;
+  color: var(--mute);
+}
+.ws__punkte {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.ws__steuerung {
+  margin-top: 1rem;
+}
+
+.ws__frage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0 0 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 5px solid var(--stufe);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--stufe-weich);
+}
+.ws__frage strong {
+  font-size: 1.1rem;
+}
+.ws__hinweis {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.ws__vorlage {
+  font-style: italic;
+  color: var(--mute);
+}
+
+.ws__buehne {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  background: #bfe0ff;
+  /* A tap on the field must not scroll the page or select text. */
+  touch-action: none;
+  user-select: none;
+}
+.ws__leinwand {
+  display: block;
+}
+
+/* An option label rides above its box or duck; the game loop moves it. */
+.ws__etikett {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 11rem;
+  padding: 0.25rem 0.55rem;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 94%);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
+  will-change: transform;
+}
+.ws__etikett::after {
+  /* The little pointer down to the thing it labels. */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 8px;
+  height: 8px;
+  transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+  border-right: 2px solid var(--rule);
+  border-bottom: 2px solid var(--rule);
+}
+.ws__etikett:disabled {
+  cursor: default;
+}
+.ws__etikett--der {
+  color: var(--der);
+  border-color: var(--der);
+}
+.ws__etikett--die {
+  color: var(--die);
+  border-color: var(--die);
+}
+.ws__etikett--das {
+  color: var(--das);
+  border-color: var(--das);
+}
+.ws__etikett--der::after {
+  border-color: var(--der);
+}
+.ws__etikett--die::after {
+  border-color: var(--die);
+}
+.ws__etikett--das::after {
+  border-color: var(--das);
+}
+.ws__etikett--richtig,
+.ws__etikett--richtig::after {
+  border-color: var(--mark);
+}
+.ws__etikett--richtig {
+  background: var(--das-weich);
+  color: var(--mark);
+}
+.ws__etikett--falsch,
+.ws__etikett--falsch::after {
+  border-color: var(--bad);
+}
+.ws__etikett--falsch {
+  background: var(--die-weich);
+  color: var(--bad);
+  animation: ws-wackeln 0.4s ease;
+}
+.ws__etikett--benutzt {
+  opacity: 0.45;
+}
+@keyframes ws-wackeln {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -6px;
+  }
+  75% {
+    margin-left: 6px;
+  }
+}
+
+/* The verdict, laid over the field so the scene stays behind it. */
+.ws__karte {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  width: min(92%, 30rem);
+  transform: translateX(-50%);
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / 96%);
+  color: var(--text);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 22%);
+  animation: ws-auftauchen 0.25s ease;
+}
+.ws__karte--richtig {
+  border-top: 5px solid var(--mark);
+}
+.ws__karte--falsch {
+  border-top: 5px solid var(--bad);
+}
+.ws__karte strong {
+  font-size: 1.1rem;
+}
+.ws__karte p {
+  margin: 0.35rem 0;
+}
+.ws__karte em {
+  font-style: italic;
+  color: var(--stufe);
+  font-weight: 700;
+}
+.ws__karte .weiter {
+  margin-top: 0.4rem;
+}
+@keyframes ws-auftauchen {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Thumb controls. Big, at the bottom, and there on every device — a laptop
+   with a touchscreen is a real thing. */
+.ws__steuer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+.ws__knopf {
+  min-height: 3.4rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--soft);
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ws__knopf:active {
+  background: var(--stufe-weich);
+  border-color: var(--stufe);
+}
+.ws__knopf--sprung {
+  background: var(--stufe);
+  border-color: var(--stufe);
+  color: #fff;
+}
+.ws__knopf--sprung:active {
+  filter: brightness(1.15);
+}
+
+.ws__bilanz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+.ws__fehler ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.ws__fehler li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.8rem;
+  border-left: 4px solid var(--bad);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--soft);
+}
+.ws__fehler em {
+  color: var(--mark);
+  font-weight: 700;
+}
+.ws__karte {
+  z-index: 2;
+}
