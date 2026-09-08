@@ -23,7 +23,10 @@ Exam content is versioned separately, per paper, in each `exam.json`
   character. The world is simulated in fixed slices in `@pruefung/core`, with
   its physics and hit rules unit-tested, and only drawn in the browser. The
   option texts are DOM rather than canvas, so they wrap, carry the article
-  colours and can be read by a screen reader. Six new synthesised sounds —
+  colours and can be read by a screen reader. The stage is a picture of a
+  sunny day and keeps its daylight ink when the page is in dark mode, so the
+  labels on their white cards stay readable there too. Six new synthesised
+  sounds —
   jump, coin, stomp, hit, finish, game over — from the same tone tables as
   before; nothing is fetched.
 - **Spiele.** The Sprachschatz card on the start shelf became a games shelf
@@ -33,6 +36,15 @@ Exam content is versioned separately, per paper, in each `exam.json`
 
 ### Fixed
 
+- **The main button could not be read in dark mode, or under the pointer.**
+  Its label was white on the level's colour, and in dark mode that colour is
+  lifted to a pastel: about 2:1. And the generic hover rule painted its pale
+  grey under the white label, so in either mode the button you were about to
+  press went blank as the pointer reached it. The label is now the colour of
+  the page's ground, and hovering keeps the level's colour. Same for the
+  jump button, the streak badge, the "Neu" badge and the hovered signpost
+  chips. A browser test checks the contrast in both schemes, at rest and
+  hovered.
 - **Every PDF link opened the start screen.** The service worker's app-shell
   fallback answered any navigation it did not recognise with `index.html`, and
   an embedded `<object>`, a new tab and a download link are all navigations.
