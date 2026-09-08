@@ -26,7 +26,9 @@ import { Sprechen } from './screens/Sprechen';
 import { Ergebnis } from './screens/Ergebnis';
 import { Spickzettel } from './screens/Spickzettel';
 import { Spiel } from './screens/Spiel';
+import { Spiele } from './screens/Spiele';
 import { Sprechtraining } from './screens/Sprechtraining';
+import { Wortsprung } from './screens/Wortsprung';
 
 type Phase =
   | 'start'
@@ -34,7 +36,9 @@ type Phase =
   | 'pruefung'
   | 'ergebnis'
   | 'spickzettel'
+  | 'spiele'
   | 'spiel'
+  | 'wortsprung'
   | 'sprechtraining';
 
 /**
@@ -218,16 +222,16 @@ export default function App() {
     }
   }
 
-  async function spielOeffnen(stufe: Stufe) {
+  async function spieleOeffnen(stufe: Stufe) {
     setFehler(null);
     try {
       const geladen =
         lernhilfe?.stufe === stufe ? lernhilfe : await lernhilfeLaden(stufe);
       setLernhilfe(geladen);
-      setPhase('spiel');
+      setPhase('spiele');
       window.scrollTo({ top: 0 });
     } catch {
-      setFehler('Das Spiel konnte nicht geladen werden.');
+      setFehler('Die Spiele konnten nicht geladen werden.');
     }
   }
 
@@ -285,7 +289,7 @@ export default function App() {
             onWeiter={fortsetzen}
             onErgebnis={ergebnisAnsehen}
             onSpickzettel={spickzettelOeffnen}
-            onSpiel={spielOeffnen}
+            onSpiele={spieleOeffnen}
             onSprechtraining={sprechtrainingOeffnen}
           />
         )}
@@ -294,8 +298,21 @@ export default function App() {
           <Spickzettel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
         )}
 
+        {phase === 'spiele' && lernhilfe && (
+          <Spiele
+            lernhilfe={lernhilfe}
+            onSprachschatz={() => setPhase('spiel')}
+            onWortsprung={() => setPhase('wortsprung')}
+            onZurueck={() => setPhase('start')}
+          />
+        )}
+
         {phase === 'spiel' && lernhilfe && (
-          <Spiel lernhilfe={lernhilfe} onZurueck={() => setPhase('start')} />
+          <Spiel lernhilfe={lernhilfe} onZurueck={() => setPhase('spiele')} />
+        )}
+
+        {phase === 'wortsprung' && lernhilfe && (
+          <Wortsprung lernhilfe={lernhilfe} onZurueck={() => setPhase('spiele')} />
         )}
 
         {phase === 'sprechtraining' && sprechen && (

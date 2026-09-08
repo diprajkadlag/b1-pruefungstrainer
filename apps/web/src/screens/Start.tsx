@@ -23,7 +23,7 @@ interface Props {
   onWeiter: (versuchId: string) => void;
   onErgebnis: (versuchId: string) => void;
   onSpickzettel: (stufe: Stufe) => void;
-  onSpiel: (stufe: Stufe) => void;
+  onSpiele: (stufe: Stufe) => void;
   onSprechtraining: (stufe: Stufe) => void;
 }
 
@@ -46,7 +46,7 @@ export function Start({
   onWeiter,
   onErgebnis,
   onSpickzettel,
-  onSpiel,
+  onSpiele,
   onSprechtraining,
 }: Props) {
   const [pruefungen, setPruefungen] = useState<RegistryEintrag[]>([]);
@@ -251,14 +251,15 @@ export function Start({
           </button>
         )}
         {lernhilfeStufen.includes(stufe) && (
-          <button type="button" className="werkzeug" onClick={() => onSpiel(stufe)}>
+          <button type="button" className="werkzeug" onClick={() => onSpiele(stufe)}>
             <span className="werkzeug__zeichen" aria-hidden="true">
-              ✨
+              🎮
             </span>
             <span className="werkzeug__text">
-              <strong>Sprachschatz</strong>
+              <strong>Spiele</strong>
               <span className="notiz">
-                Dieselben Wörter und Regeln, aber abgefragt statt nachgeschlagen.
+                Sprachschatz zum Tippen und Wortsprung zum Springen — dieselben Wörter und
+                Regeln, abgefragt statt nachgeschlagen.
               </span>
             </span>
           </button>
@@ -312,16 +313,41 @@ export function Start({
 
       {fertig.length > 0 && (
         <section className="teil">
-          <h2>Frühere Ergebnisse</h2>
+          <div className="teil__kopf">
+            <h2>Frühere Ergebnisse</h2>
+            <button
+              type="button"
+              className="knopf knopf--sekundaer"
+              onClick={() =>
+                void Promise.all(fertig.map((v) => loeschen(v.id))).then(() =>
+                  alleVersuche().then(setVersuche),
+                )
+              }
+            >
+              Alle löschen
+            </button>
+          </div>
           {fertig.slice(0, 8).map((v) => (
             <div className="versuchszeile" key={v.id}>
               <span>
                 {v.examId} · {new Date(v.gestartet).toLocaleDateString('de-DE')} ·{' '}
                 {v.module.join(', ')}
               </span>
-              <button type="button" className="knopf" onClick={() => onErgebnis(v.id)}>
-                Ergebnis ansehen
-              </button>
+              <span className="versuchszeile__knoepfe">
+                <button type="button" className="knopf" onClick={() => onErgebnis(v.id)}>
+                  Ergebnis ansehen
+                </button>
+                <button
+                  type="button"
+                  className="knopf knopf--sekundaer"
+                  aria-label={`Ergebnis vom ${new Date(v.gestartet).toLocaleDateString('de-DE')} löschen`}
+                  onClick={() =>
+                    void loeschen(v.id).then(() => alleVersuche().then(setVersuche))
+                  }
+                >
+                  Löschen
+                </button>
+              </span>
             </div>
           ))}
         </section>

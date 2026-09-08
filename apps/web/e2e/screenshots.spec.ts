@@ -115,7 +115,8 @@ test('Spiel-Screenshots erzeugen', async ({ page }) => {
   // Pinned seed, so the card in the README is the same card every time and a
   // rebuild does not produce a diff for no reason.
   await oeffnen(page, 'B1', 'online', '/?saat=20260820');
-  await page.getByRole('button', { name: /Sprachschatz/ }).click();
+  await page.getByRole('button', { name: /^Spiele/ }).click();
+  await page.getByRole('button', { name: /^Sprachschatz/ }).click();
   await page.locator('.kachel').first().waitFor();
   await schuss(page, '09-spiel.png');
 

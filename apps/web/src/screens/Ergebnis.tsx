@@ -154,9 +154,10 @@ export function Ergebnis({
               versuch.module.includes('sprechen')) && (
               <article className="karte karte--offen">
                 <h3>Schreiben &amp; Sprechen</h3>
-                <p className="karte__note">wird von einer Lehrkraft bewertet</p>
+                <p className="karte__note">korrigieren Sie selbst</p>
                 <p className="karte__roh">
-                  Laden Sie die Abgabe herunter und schicken Sie sie weiter.
+                  Musterlösungen und Redemittel stehen unten — vergleichen Sie Ihren Text
+                  und das, was Sie gesagt haben, damit.
                 </p>
               </article>
             )}

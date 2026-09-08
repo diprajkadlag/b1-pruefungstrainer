@@ -93,10 +93,21 @@ async function spielOeffnen(page: Page, stufe: Stufe) {
   await sprachschatzOeffnen(page);
 }
 
-/** Open the game from the shelf the start screen is already showing. */
+/**
+ * Open the game from the shelf the start screen is already showing. Two taps
+ * now: the shelf's Spiele card opens the games hub, where Sprachschatz sits
+ * beside Wortsprung.
+ */
 async function sprachschatzOeffnen(page: Page) {
-  await page.getByRole('button', { name: /Sprachschatz/ }).click();
+  await page.getByRole('button', { name: /^Spiele/ }).click();
+  await page.getByRole('button', { name: /^Sprachschatz/ }).click();
   await page.locator('.kachel').first().waitFor();
+}
+
+/** Back out of the game and the hub, onto the start shelf. */
+async function zumRegal(page: Page) {
+  await page.getByRole('button', { name: /Zurück/ }).click();
+  await page.getByRole('button', { name: /Zurück/ }).click();
 }
 
 /**
@@ -486,7 +497,7 @@ test.describe('Sprachschatz', () => {
     await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf')).toHaveCount(0);
 
-    await page.getByRole('button', { name: /Zurück/ }).click();
+    await zumRegal(page);
     await stufeWechseln(page, 'A2', 'B1');
     await sprachschatzOeffnen(page);
     await expect(page.locator('.verlauf details')).toHaveCount(1);
@@ -657,7 +668,7 @@ test.describe('Sprachschatz', () => {
     await spielOeffnen(page, 'B1');
     await expect(page.locator('.kachel--wortschatz')).toContainText('Bestwert 420');
 
-    await page.getByRole('button', { name: /Zurück/ }).click();
+    await zumRegal(page);
     await stufeWechseln(page, 'B1', 'A2');
     await sprachschatzOeffnen(page);
     await expect(page.locator('.kachel--wortschatz')).not.toContainText('Bestwert');
