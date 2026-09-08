@@ -165,8 +165,15 @@ export function Wortsprung({ lernhilfe, onZurueck }: Props) {
 
   // --- building a round ---------------------------------------------------------
 
-  function farben() {
-    const stil = getComputedStyle(document.documentElement);
+  /**
+   * The level's colours as the stage prints them. Read from the stage, not
+   * the page: the stage keeps its daylight palette when the page goes dark,
+   * and the hero and the hills are drawn in the stage's ink, not the page's.
+   * Before the stage exists the page has to do, and the size effect below
+   * corrects it the moment the stage mounts.
+   */
+  function farben(el: Element | null = buehne.current) {
+    const stil = getComputedStyle(el ?? document.documentElement);
     return {
       farbe: stil.getPropertyValue('--stufe').trim() || '#2f3e4e',
       farbeWeich: stil.getPropertyValue('--stufe-weich').trim() || '#f4f6f8',
@@ -391,6 +398,9 @@ export function Wortsprung({ lernhilfe, onZurueck }: Props) {
   useEffect(() => {
     const el = buehne.current;
     if (!el || phase !== 'spiel') return;
+    // The first world was built before the stage existed, from the page's
+    // palette. Now the stage is here, take its colours instead.
+    if (welt.current) Object.assign(welt.current, farben(el));
     const messen = () => {
       const b = el.clientWidth || SICHT_MAX;
       const s = Math.max(SICHT_MIN, Math.min(SICHT_MAX, b));

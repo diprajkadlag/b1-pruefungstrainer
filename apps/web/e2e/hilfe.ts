@@ -1,4 +1,4 @@
-import type { Page } from '@playwright/test';
+import type { Locator, Page } from '@playwright/test';
 
 /**
  * Getting past the front door.
@@ -51,4 +51,40 @@ export async function durchDenEingang(
   await page
     .getByRole('button', { name: modus === 'online' ? /Am Bildschirm/ : /Auf Papier/ })
     .click();
+}
+
+/**
+ * WCAG contrast between two computed colours, as Chromium serialises them
+ * (`rgb(r, g, b)` or `rgba(r, g, b, a)`). A translucent ground is laid over
+ * `unter` first, because that is what the eye sees. Anything else throws:
+ * a colour that silently parsed as black would pass every check.
+ */
+export function kontrast(vorne: string, hinten: string, unter = [255, 255, 255]): number {
+  const lesen = (s: string): [number, number, number, number] => {
+    const m = /^rgba?\(([^)]+)\)$/.exec(s.trim());
+    if (!m) throw new Error(`Farbe nicht lesbar: ${s}`);
+    const t = m[1]!
+      .split(/[\s,/]+/)
+      .filter(Boolean)
+      .map(Number);
+    return [t[0]!, t[1]!, t[2]!, t[3] ?? 1];
+  };
+  const kanal = (c: number) => {
+    const x = c / 255;
+    return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
+  };
+  const leuchte = ([r, g, b]: readonly number[]) =>
+    0.2126 * kanal(r!) + 0.7152 * kanal(g!) + 0.0722 * kanal(b!);
+  const [hr, hg, hb, ha] = lesen(hinten);
+  const grund = [hr, hg, hb].map((c, i) => ha * c + (1 - ha) * unter[i]!);
+  const [l1, l2] = [leuchte(lesen(vorne)), leuchte(grund)];
+  return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+}
+
+/** Text and ground of an element as the browser computed them. */
+export async function farben(el: Locator): Promise<{ farbe: string; grund: string }> {
+  return el.evaluate((e) => {
+    const s = getComputedStyle(e);
+    return { farbe: s.color, grund: s.backgroundColor };
+  });
 }

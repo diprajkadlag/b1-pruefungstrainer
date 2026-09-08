@@ -9,7 +9,7 @@ import {
   type Frage,
   type Lernhilfe,
 } from '@pruefung/core';
-import { oeffnen } from './hilfe';
+import { farben, kontrast, oeffnen } from './hilfe';
 
 /**
  * End-to-end: Wortsprung, the platformer over the Sprachschatz cards.
@@ -179,4 +179,69 @@ test.describe('Wortsprung', () => {
     await expect(page.getByRole('button', { name: 'nach rechts' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'springen' })).toBeVisible();
   });
+});
+
+test.describe('Wortsprung bei Tag und Nacht', () => {
+  for (const schema of ['light', 'dark'] as const) {
+    test(`keeps its daylight ink in ${schema} mode, so every option can be read`, async ({
+      page,
+    }) => {
+      // The stage is a picture of a sunny day; the labels on it are white
+      // cards. In dark mode the page's text goes pale, and the first release
+      // let that pale text onto the white cards — the options were there,
+      // and could not be seen.
+      await page.emulateMedia({ colorScheme: schema });
+      await zumSpiel(page);
+
+      // The page follows the scheme; the stage must not.
+      const seite = await page.evaluate(
+        () => getComputedStyle(document.body).backgroundColor,
+      );
+      expect(seite).toBe(schema === 'dark' ? 'rgb(18, 22, 27)' : 'rgb(255, 255, 255)');
+
+      const etiketten = await page.locator('.ws__etikett').evaluateAll((els) =>
+        els.map((el) => {
+          const s = getComputedStyle(el);
+          return { text: el.textContent ?? '', farbe: s.color, grund: s.backgroundColor };
+        }),
+      );
+      expect(etiketten.length).toBeGreaterThan(1);
+      const HIMMEL = [191, 224, 255];
+      for (const e of etiketten) {
+        expect(kontrast(e.farbe, e.grund, HIMMEL), e.text).toBeGreaterThanOrEqual(4.5);
+      }
+
+      // The jump button sits outside the stage and follows the page.
+      const sprung = page.getByRole('button', { name: 'springen' });
+      const s = await farben(sprung);
+      expect(kontrast(s.farbe, s.grund)).toBeGreaterThanOrEqual(3);
+
+      // The verdict card too: the explanation, the right answer in the
+      // level's colour, and the button that closes it.
+      await etikett(page, await falscheOption(0)).click();
+      const karte = page.locator('.ws__karte--falsch');
+      await expect(karte).toBeVisible({ timeout: 15_000 });
+      const k = await karte.evaluate((el) => {
+        const farbe = (e: Element | null) => getComputedStyle(e!).color;
+        const grund = (e: Element | null) => getComputedStyle(e!).backgroundColor;
+        const knopf = el.querySelector('button');
+        return {
+          grund: grund(el),
+          text: farbe(el.querySelector('p')),
+          loesung: farbe(el.querySelector('em')),
+          knopfText: farbe(knopf),
+          knopfGrund: grund(knopf),
+        };
+      });
+      expect(kontrast(k.text, k.grund)).toBeGreaterThanOrEqual(4.5);
+      expect(kontrast(k.loesung, k.grund)).toBeGreaterThanOrEqual(3);
+      expect(kontrast(k.knopfText, k.knopfGrund)).toBeGreaterThanOrEqual(3);
+
+      // Hovered too: the button reads the page's --bg for its label there.
+      const weiter = karte.getByRole('button', { name: /Weiter/ });
+      await weiter.hover();
+      const h = await farben(weiter);
+      expect(kontrast(h.farbe, h.grund)).toBeGreaterThanOrEqual(3);
+    });
+  }
 });
